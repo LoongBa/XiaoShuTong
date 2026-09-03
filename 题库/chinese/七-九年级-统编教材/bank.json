@@ -1,0 +1,29 @@
+{
+  "bank_id": "chinese-7to9-pep",
+  "subject": "chinese",
+  "name": "七-九年级-统编教材",
+  "version": "V1.0",
+  "source": "人教社统编版 2024 修订",
+  "purpose_tags": [
+    "memorize",
+    "assess",
+    "play"
+  ],
+  "supported_types": [
+    "R1",
+    "R2",
+    "R3a",
+    "R3b",
+    "R4"
+  ],
+  "knowledge_card_template": "author_card",
+  "default_prompt": "通用判题",
+  "type_overrides": {
+    "R1": "题型-R1-补全记忆",
+    "R2": "题型-R2-逆向补全",
+    "R3a": "题型-R3a-段落默写",
+    "R3b": "题型-R3b-整篇默写"
+  },
+  "privacy": "private",
+  "owner": "system"
+}

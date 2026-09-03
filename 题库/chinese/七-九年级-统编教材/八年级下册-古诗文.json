@@ -1,0 +1,2302 @@
+[
+  {
+    "id": "Q-chinese-8b-0705",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》的作者是？",
+      "answer": "陶渊明，东晋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0706",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》中\"芳草鲜美\"的后一句是？",
+      "answer": "落英缤纷",
+      "keywords": [
+        {
+          "aliases": [
+            "落英缤纷"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0707",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》中\"土地平旷\"的后一句是？",
+      "answer": "屋舍俨然",
+      "keywords": [
+        {
+          "aliases": [
+            "屋舍俨然"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0708",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》中\"阡陌交通\"的后一句是？",
+      "answer": "鸡犬相闻",
+      "keywords": [
+        {
+          "aliases": [
+            "鸡犬相闻"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0709",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》中\"黄发垂髫\"的后一句是？",
+      "answer": "并怡然自乐",
+      "keywords": [
+        {
+          "aliases": [
+            "并怡然自乐"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0710",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》中\"问今是何世\"的后一句是？",
+      "answer": "乃不知有汉，无论魏晋",
+      "keywords": [
+        {
+          "aliases": [
+            "乃不知有汉",
+            "无论魏晋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0711",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "桃花源记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《桃花源记》中\"不足为外人道也\"是桃花源人说的？",
+      "answer": "是的（此中人语云：\"不足为外人道也。\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "是的（此中人语云：\"不足为外人道也",
+            "\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-桃花源记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0712",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "小石潭记"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小石潭记》的作者是？",
+      "answer": "柳宗元，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-小石潭记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0713",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "小石潭记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小石潭记》中\"潭中鱼可百许头\"的后一句是？",
+      "answer": "皆若空游无所依",
+      "keywords": [
+        {
+          "aliases": [
+            "皆若空游无所依"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-小石潭记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0714",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "小石潭记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小石潭记》中\"日光下澈\"的后一句是？",
+      "answer": "影布石上",
+      "keywords": [
+        {
+          "aliases": [
+            "影布石上"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-小石潭记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0715",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "小石潭记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小石潭记》中\"俶尔远逝\"的后一句是？",
+      "answer": "往来翕忽",
+      "keywords": [
+        {
+          "aliases": [
+            "往来翕忽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-小石潭记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0716",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "小石潭记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小石潭记》中\"潭西南而望\"的后一句是？",
+      "answer": "斗折蛇行，明灭可见",
+      "keywords": [
+        {
+          "aliases": [
+            "斗折蛇行",
+            "明灭可见"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-小石潭记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0717",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "小石潭记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小石潭记》中\"凄神寒骨\"的后一句是？",
+      "answer": "悄怆幽邃",
+      "keywords": [
+        {
+          "aliases": [
+            "悄怆幽邃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-小石潭记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0718",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "核舟记"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《核舟记》的作者是？",
+      "answer": "魏学洢，明",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-核舟记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0719",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "核舟记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《核舟记》中\"罔不因势象形\"的后一句是？",
+      "answer": "各具情态",
+      "keywords": [
+        {
+          "aliases": [
+            "各具情态"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-核舟记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0720",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "核舟记"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《核舟记》中\"苏、黄共阅一手卷\"中的\"苏黄\"指？",
+      "answer": "苏轼、黄庭坚",
+      "keywords": [
+        {
+          "aliases": [
+            "苏轼、黄庭坚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-核舟记"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0721",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "关雎"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《关雎》选自？",
+      "answer": "《诗经·周南》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-关雎"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0722",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "关雎"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《关雎》中\"关关雎鸠\"的后一句是？",
+      "answer": "在河之洲",
+      "keywords": [
+        {
+          "aliases": [
+            "在河之洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-关雎"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0723",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "关雎"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《关雎》中\"窈窕淑女\"的后一句是？",
+      "answer": "君子好逑",
+      "keywords": [
+        {
+          "aliases": [
+            "君子好逑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-关雎"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0724",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "关雎"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《关雎》中\"求之不得\"的后一句是？",
+      "answer": "寤寐思服",
+      "keywords": [
+        {
+          "aliases": [
+            "寤寐思服"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-关雎"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0725",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "蒹葭"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《蒹葭》选自？",
+      "answer": "《诗经·秦风》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-蒹葭"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0726",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "蒹葭"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《蒹葭》中\"蒹葭苍苍\"的后一句是？",
+      "answer": "白露为霜",
+      "keywords": [
+        {
+          "aliases": [
+            "白露为霜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-蒹葭"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0727",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "蒹葭"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《蒹葭》中\"所谓伊人\"的后一句是？",
+      "answer": "在水一方",
+      "keywords": [
+        {
+          "aliases": [
+            "在水一方"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-蒹葭"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0728",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "蒹葭"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《蒹葭》中\"溯洄从之\"的后一句是？",
+      "answer": "道阻且长",
+      "keywords": [
+        {
+          "aliases": [
+            "道阻且长"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-蒹葭"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0729",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "北冥有鱼"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《北冥有鱼》选自？",
+      "answer": "《庄子·逍遥游》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-北冥有鱼"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0730",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "北冥有鱼"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《北冥有鱼》中\"北冥有鱼\"的后一句是？",
+      "answer": "其名为鲲",
+      "keywords": [
+        {
+          "aliases": [
+            "其名为鲲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-北冥有鱼"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0731",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "北冥有鱼"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《北冥有鱼》中\"鲲之大\"的后一句是？",
+      "answer": "不知其几千里也",
+      "keywords": [
+        {
+          "aliases": [
+            "不知其几千里也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-北冥有鱼"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0732",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "北冥有鱼"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《北冥有鱼》中\"化而为鸟\"的后一句是？",
+      "answer": "其名为鹏",
+      "keywords": [
+        {
+          "aliases": [
+            "其名为鹏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-北冥有鱼"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0733",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "庄子与惠子游于濠梁之上"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《庄子与惠子游于濠梁之上》中庄子认为\"鲦鱼出游从容\"是？",
+      "answer": "鱼之乐也",
+      "keywords": [
+        {
+          "aliases": [
+            "鱼之乐也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-庄子与惠子游于濠梁之上"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0734",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "庄子与惠子游于濠梁之上"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《庄子与惠子游于濠梁之上》中\"子非鱼\"的后一句是？",
+      "answer": "安知鱼之乐",
+      "keywords": [
+        {
+          "aliases": [
+            "安知鱼之乐"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-庄子与惠子游于濠梁之上"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0735",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "虽有嘉肴"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《虽有嘉肴》选自？",
+      "answer": "《礼记·学记》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-虽有嘉肴"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0736",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "虽有嘉肴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《虽有嘉肴》中\"虽有嘉肴，弗食\"的后一句是？",
+      "answer": "不知其旨也",
+      "keywords": [
+        {
+          "aliases": [
+            "不知其旨也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-虽有嘉肴"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0737",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "虽有嘉肴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《虽有嘉肴》中\"教学相长\"的完整句子是？",
+      "answer": "是故学然后知不足，教然后知困。知不足，然后能自反也；知困，然后能自强也。故曰：教学相长也。",
+      "keywords": [
+        {
+          "aliases": [
+            "是故学然后知不足",
+            "教然后知困"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-虽有嘉肴"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0738",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "大道之行也"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《大道之行也》选自？",
+      "answer": "《礼记·礼运》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-大道之行也"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0739",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "大道之行也"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《大道之行也》中\"天下为公\"的前一句是？",
+      "answer": "大道之行也",
+      "keywords": [
+        {
+          "aliases": [
+            "大道之行也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-大道之行也"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0740",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "大道之行也"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《大道之行也》中\"选贤与能\"的后一句是？",
+      "answer": "讲信修睦",
+      "keywords": [
+        {
+          "aliases": [
+            "讲信修睦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-大道之行也"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0741",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "大道之行也"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《大道之行也》中\"老有所终，壮有所用\"的后一句是？",
+      "answer": "幼有所长",
+      "keywords": [
+        {
+          "aliases": [
+            "幼有所长"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-大道之行也"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0742",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "马说"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《马说》的作者是？",
+      "answer": "韩愈，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-马说"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0743",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "马说"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《马说》中\"世有伯乐\"的后一句是？",
+      "answer": "然后有千里马",
+      "keywords": [
+        {
+          "aliases": [
+            "然后有千里马"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-马说"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0744",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "马说"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《马说》中\"千里马常有\"的后一句是？",
+      "answer": "而伯乐不常有",
+      "keywords": [
+        {
+          "aliases": [
+            "而伯乐不常有"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-马说"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0745",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "马说"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《马说》中\"食马者不知其能千里而食也\"的后果是？",
+      "answer": "是马也，虽有千里之能，食不饱，力不足，才美不外见，且欲与常马等不可得，安求其能千里也",
+      "keywords": [
+        {
+          "aliases": [
+            "是马也",
+            "虽有千里之能"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-马说"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0746",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "石壕吏"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石壕吏》的作者是？",
+      "answer": "杜甫，唐（2024 修订版新增入\"唐诗三首\"）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-石壕吏"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0747",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "石壕吏"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石壕吏》中\"吏呼一何怒\"的后一句是？",
+      "answer": "妇啼一何苦",
+      "keywords": [
+        {
+          "aliases": [
+            "妇啼一何苦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-石壕吏"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0748",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "石壕吏"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石壕吏》中\"老妪力虽衰\"的后一句是？",
+      "answer": "请从吏夜归",
+      "keywords": [
+        {
+          "aliases": [
+            "请从吏夜归"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-石壕吏"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0749",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "石壕吏"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石壕吏》中\"夜久语声绝\"的后一句是？",
+      "answer": "如闻泣幽咽",
+      "keywords": [
+        {
+          "aliases": [
+            "如闻泣幽咽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-石壕吏"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0750",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "茅屋为秋风所破歌"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《茅屋为秋风所破歌》的作者是？",
+      "answer": "杜甫，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-茅屋为秋风所破歌"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0751",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "茅屋为秋风所破歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《茅屋为秋风所破歌》中\"安得广厦千万间\"的后一句是？",
+      "answer": "大庇天下寒士俱欢颜",
+      "keywords": [
+        {
+          "aliases": [
+            "大庇天下寒士俱欢颜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-茅屋为秋风所破歌"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0752",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "茅屋为秋风所破歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《茅屋为秋风所破歌》中\"何时眼前突兀见此屋\"的后一句是？",
+      "answer": "吾庐独破受冻死亦足",
+      "keywords": [
+        {
+          "aliases": [
+            "吾庐独破受冻死亦足"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-茅屋为秋风所破歌"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0753",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "茅屋为秋风所破歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《茅屋为秋风所破歌》中\"唇焦口燥呼不得\"的前一句是？",
+      "answer": "公然抱茅入竹去",
+      "keywords": [
+        {
+          "aliases": [
+            "公然抱茅入竹去"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-茅屋为秋风所破歌"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0754",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卖炭翁"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卖炭翁》的作者是？",
+      "answer": "白居易，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卖炭翁"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0755",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卖炭翁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卖炭翁》中\"满面尘灰烟火色\"的后一句是？",
+      "answer": "两鬓苍苍十指黑",
+      "keywords": [
+        {
+          "aliases": [
+            "两鬓苍苍十指黑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卖炭翁"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0756",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卖炭翁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卖炭翁》中\"可怜身上衣正单\"的后一句是？",
+      "answer": "心忧炭贱愿天寒",
+      "keywords": [
+        {
+          "aliases": [
+            "心忧炭贱愿天寒"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卖炭翁"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0757",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卖炭翁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卖炭翁》中\"手把文书口称敕\"的后一句是？",
+      "answer": "回车叱牛牵向北",
+      "keywords": [
+        {
+          "aliases": [
+            "回车叱牛牵向北"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卖炭翁"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0758",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "式微"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《式微》选自？",
+      "answer": "《诗经·邶风》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-式微"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0759",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "式微"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《式微》中\"式微式微\"的后一句是？",
+      "answer": "胡不归",
+      "keywords": [
+        {
+          "aliases": [
+            "胡不归"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-式微"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0760",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "子衿"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《子衿》选自？",
+      "answer": "《诗经·郑风》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-子衿"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0761",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "子衿"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《子衿》中\"青青子衿\"的后一句是？",
+      "answer": "悠悠我心",
+      "keywords": [
+        {
+          "aliases": [
+            "悠悠我心"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-子衿"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0762",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "子衿"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《子衿》中\"一日不见\"的后一句是？",
+      "answer": "如三月兮",
+      "keywords": [
+        {
+          "aliases": [
+            "如三月兮"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-子衿"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0763",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "送杜少府之任蜀州"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《送杜少府之任蜀州》的作者是？",
+      "answer": "王勃，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-送杜少府之任蜀州"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0764",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "送杜少府之任蜀州"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《送杜少府之任蜀州》中\"海内存知己\"的后一句是？",
+      "answer": "天涯若比邻",
+      "keywords": [
+        {
+          "aliases": [
+            "天涯若比邻"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-送杜少府之任蜀州"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0765",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "送杜少府之任蜀州"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《送杜少府之任蜀州》中\"无为在歧路\"的后一句是？",
+      "answer": "儿女共沾巾",
+      "keywords": [
+        {
+          "aliases": [
+            "儿女共沾巾"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-送杜少府之任蜀州"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0766",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "望洞庭湖赠张丞相"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望洞庭湖赠张丞相》的作者是？",
+      "answer": "孟浩然，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-望洞庭湖赠张丞相"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0767",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "望洞庭湖赠张丞相"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望洞庭湖赠张丞相》中\"气蒸云梦泽\"的后一句是？",
+      "answer": "波撼岳阳城",
+      "keywords": [
+        {
+          "aliases": [
+            "波撼岳阳城"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-望洞庭湖赠张丞相"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0768",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "望洞庭湖赠张丞相"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望洞庭湖赠张丞相》中\"欲济无舟楫\"的后一句是？",
+      "answer": "端居耻圣明",
+      "keywords": [
+        {
+          "aliases": [
+            "端居耻圣明"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-望洞庭湖赠张丞相"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0769",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "题破山寺后禅院"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题破山寺后禅院》的作者是？",
+      "answer": "常建，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-题破山寺后禅院"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0770",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "题破山寺后禅院"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题破山寺后禅院》中\"曲径通幽处\"的后一句是？",
+      "answer": "禅房花木深",
+      "keywords": [
+        {
+          "aliases": [
+            "禅房花木深"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-题破山寺后禅院"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0771",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "题破山寺后禅院"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题破山寺后禅院》中\"山光悦鸟性\"的后一句是？",
+      "answer": "潭影空人心",
+      "keywords": [
+        {
+          "aliases": [
+            "潭影空人心"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-题破山寺后禅院"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0772",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "送友人"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《送友人》的作者是？",
+      "answer": "李白，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-送友人"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0773",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "送友人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《送友人》中\"浮云游子意\"的后一句是？",
+      "answer": "落日故人情",
+      "keywords": [
+        {
+          "aliases": [
+            "落日故人情"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-送友人"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0774",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "送友人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《送友人》中\"青山横北郭\"的后一句是？",
+      "answer": "白水绕东城",
+      "keywords": [
+        {
+          "aliases": [
+            "白水绕东城"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-送友人"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0775",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卜算子·黄州定慧院寓居作"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卜算子·黄州定慧院寓居作》的作者是？",
+      "answer": "苏轼，北宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卜算子·黄州定慧院寓居作"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0776",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卜算子·黄州定慧院寓居作"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卜算子·黄州定慧院寓居作》中\"拣尽寒枝不肯栖\"的后一句是？",
+      "answer": "寂寞沙洲冷",
+      "keywords": [
+        {
+          "aliases": [
+            "寂寞沙洲冷"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卜算子·黄州定慧院寓居作"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0777",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卜算子·咏梅"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卜算子·咏梅》的作者是？",
+      "answer": "陆游，南宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卜算子·咏梅"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0778",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卜算子·咏梅"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卜算子·咏梅》中\"无意苦争春\"的后一句是？",
+      "answer": "一任群芳妒",
+      "keywords": [
+        {
+          "aliases": [
+            "一任群芳妒"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卜算子·咏梅"
+    }
+  },
+  {
+    "id": "Q-chinese-8b-0779",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "七-九年级/8年级b册",
+    "knowledge_points": [
+      "卜算子·咏梅"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《卜算子·咏梅》中\"零落成泥碾作尘\"的后一句是？",
+      "answer": "只有香如故",
+      "keywords": [
+        {
+          "aliases": [
+            "只有香如故"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024/2026 修订",
+      "knowledge_card_id": "KC-chinese-卜算子·咏梅"
+    }
+  }
+]
