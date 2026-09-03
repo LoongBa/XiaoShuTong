@@ -23,6 +23,7 @@ RANGES = [
     {
         "name": "七-九年级-统编教材",
         "bank_id": "chinese-7to9-pep",
+        "bank_code": "7to9",
         "grades": {
             "七年级": {"prefix": "7", "dir": "七年级"},
             "八年级": {"prefix": "8", "dir": "八年级"},
@@ -35,6 +36,7 @@ RANGES = [
     {
         "name": "小学1-6年级-统编教材",
         "bank_id": "chinese-p1to6-pep",
+        "bank_code": "p1to6",
         "grades": {
             "一年级": {"prefix": "1", "dir": "一年级"},
             "二年级": {"prefix": "2", "dir": "二年级"},
@@ -81,7 +83,7 @@ def infer_qtype(question: str) -> str:
         return "R1"
     return "R1"
 
-def parse_raw_txt(file: Path, subject: str, bank: str, grade_prefix: str, vol: str, raw_suffix: str) -> list:
+def parse_raw_txt(file: Path, subject: str, bank_id: str, bank_code: str, grade_prefix: str, vol: str, raw_suffix: str) -> list:
     items = []
     content = file.read_text(encoding="utf-8-sig")
     for line in content.splitlines():
@@ -96,8 +98,8 @@ def parse_raw_txt(file: Path, subject: str, bank: str, grade_prefix: str, vol: s
         titles = extract_title(q)
         seq["n"] += 1
         item = {
-            "id": f"Q-{subject}-{bank}-{seq['n']:05d}",
-            "bank_id": bank,
+            "id": f"Q-{subject}-{bank_code}-{seq['n']:04d}",
+            "bank_id": bank_id,
             "subject": subject,
             "topic": f"{grade_prefix}年级{vol}册",
             "knowledge_points": titles or ["未分类"],
@@ -120,7 +122,7 @@ def parse_raw_txt(file: Path, subject: str, bank: str, grade_prefix: str, vol: s
         items.append(item)
     return items
 
-def parse_training_txt(file: Path, subject: str, bank: str) -> list:
+def parse_training_txt(file: Path, subject: str, bank_id: str, bank_code: str) -> list:
     items = []
     content = file.read_text(encoding="utf-8-sig")
     current_type = None
@@ -146,8 +148,8 @@ def parse_training_txt(file: Path, subject: str, bank: str) -> list:
         titles = extract_title(q)
         seq["n"] += 1
         item = {
-            "id": f"Q-{subject}-{bank}-{seq['n']:05d}",
-            "bank_id": bank,
+            "id": f"Q-{subject}-{bank_code}-{seq['n']:04d}",
+            "bank_id": bank_id,
             "subject": subject,
             "topic": "背诵训练",
             "knowledge_points": titles or ["未分类"],
@@ -215,7 +217,7 @@ def migrate_range(cfg: dict):
             raw_name = f"{grade}{vol_key}册-{cfg['raw_suffix']}.txt"
             raw_file = gdir / raw_name
             if raw_file.exists():
-                items = parse_raw_txt(raw_file, "chinese", cfg["bank_id"], info["prefix"], vol, cfg["raw_suffix"])
+                items = parse_raw_txt(raw_file, "chinese", cfg["bank_id"], cfg["bank_code"], info["prefix"], vol, cfg["raw_suffix"])
                 (out / f"{grade}{vol_key}册-背诵内容.json").write_text(
                     json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
                 summary[f"{grade}{vol_key}原始"] = len(items)
@@ -223,7 +225,7 @@ def migrate_range(cfg: dict):
             train_name = f"{grade}{vol_key}册-背诵训练.txt"
             train_file = BASE / "背诵训练" / info["dir"] / train_name
             if train_file.exists():
-                items = parse_training_txt(train_file, "chinese", cfg["bank_id"])
+                items = parse_training_txt(train_file, "chinese", cfg["bank_id"], cfg["bank_code"])
                 (out / f"{grade}{vol_key}册-背诵训练.json").write_text(
                     json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
                 summary[f"{grade}{vol_key}训练"] = len(items)
