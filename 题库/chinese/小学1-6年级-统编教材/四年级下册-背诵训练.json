@@ -1,0 +1,3757 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01334",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "有些人家，还在门前的场地上种几株花，芍药，凤仙，鸡冠花，大丽菊",
+      "answer": "它们依着时令，顺序开放",
+      "keywords": [
+        {
+          "aliases": [
+            "它们依着时令",
+            "顺序开放"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01335",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "还有些人家，在屋后种几十枝竹，绿的叶，青的竿",
+      "answer": "投下一片浓浓的绿荫",
+      "keywords": [
+        {
+          "aliases": [
+            "投下一片浓浓的绿荫"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01336",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "几场春雨过后，到那里走走",
+      "answer": "你常常会看见许多鲜嫩的笋，成群地从土里探出头来",
+      "keywords": [
+        {
+          "aliases": [
+            "你常常会看见许多鲜嫩的笋",
+            "成群地从土里探出头来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01337",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "它们依着时令，顺序开放",
+      "answer": "有些人家，还在门前的场地上种几株花，芍药，凤仙，鸡冠花，大丽菊",
+      "keywords": [
+        {
+          "aliases": [
+            "有些人家",
+            "还在门前的场地上种几株花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01338",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "投下一片浓浓的绿荫",
+      "answer": "还有些人家，在屋后种几十枝竹，绿的叶，青的竿",
+      "keywords": [
+        {
+          "aliases": [
+            "还有些人家",
+            "在屋后种几十枝竹"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01339",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "你常常会看见许多鲜嫩的笋，成群地从土里探出头来",
+      "answer": "几场春雨过后，到那里走走",
+      "keywords": [
+        {
+          "aliases": [
+            "几场春雨过后",
+            "到那里走走"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01340",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "乡下人家"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《乡下人家》第2-3自然段",
+      "answer": "有些人家，还在门前的场地上种几株花，芍药，凤仙，鸡冠花，大丽菊，它们依着时令，顺序开放，朴素中带着几分华丽，显出一派独特的农家风光。还有些人家，在屋后种几十枝竹，绿的叶，青的竿，投下一片浓浓的绿荫。几场春雨过后，到那里走走，你常常会看见许多鲜嫩的笋，成群地从土里探出头来。",
+      "keywords": [
+        {
+          "aliases": [
+            "有些人家",
+            "还在门前的场地上种几株花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-乡下人家"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01341",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "乡下人家"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《乡下人家》第2-3自然段",
+      "answer": "有些人家，还在门前的场地上种几株花，芍药，凤仙，鸡冠花，大丽菊，它们依着时令，顺序开放，朴素中带着几分华丽，显出一派独特的农家风光。还有些人家，在屋后种几十枝竹，绿的叶，青的竿，投下一片浓浓的绿荫。几场春雨过后，到那里走走，你常常会看见许多鲜嫩的笋，成群地从土里探出头来。",
+      "keywords": [
+        {
+          "aliases": [
+            "有些人家",
+            "还在门前的场地上种几株花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-乡下人家"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01342",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "夏天阵雨来了时，孩子们顶喜欢在雨里跑跳，仰着脸看闪电",
+      "answer": "然而大人们偏就不许",
+      "keywords": [
+        {
+          "aliases": [
+            "然而大人们偏就不许"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01343",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "这时候，小小的天窗是",
+      "answer": "你唯一的慰藉",
+      "keywords": [
+        {
+          "aliases": [
+            "你唯一的慰藉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01344",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "从那小小的玻璃，你会看见雨脚在那里卜落卜落跳",
+      "answer": "你会看见带子似的闪电一瞥",
+      "keywords": [
+        {
+          "aliases": [
+            "你会看见带子似的闪电一瞥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01345",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "然而大人们偏就不许",
+      "answer": "夏天阵雨来了时，孩子们顶喜欢在雨里跑跳，仰着脸看闪电",
+      "keywords": [
+        {
+          "aliases": [
+            "夏天阵雨来了时",
+            "孩子们顶喜欢在雨里跑跳"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01346",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "你唯一的慰藉",
+      "answer": "这时候，小小的天窗是",
+      "keywords": [
+        {
+          "aliases": [
+            "这时候",
+            "小小的天窗是"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01347",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "你会看见带子似的闪电一瞥",
+      "answer": "从那小小的玻璃，你会看见雨脚在那里卜落卜落跳",
+      "keywords": [
+        {
+          "aliases": [
+            "从那小小的玻璃",
+            "你会看见雨脚在那里卜落卜落跳"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01348",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "天窗"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《天窗》第4自然段",
+      "answer": "从那小小的玻璃，你会看见雨脚在那里卜落卜落跳，你会看见带子似的闪电一瞥；你想象到这雨，这风，这雷，这电，怎样猛厉地扫荡了这世界，你想象它们的威力比你在露天真实感到的要大这么十倍百倍。",
+      "keywords": [
+        {
+          "aliases": [
+            "从那小小的玻璃",
+            "你会看见雨脚在那里卜落卜落跳"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-天窗"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01349",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "天窗"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《天窗》第3-4自然段",
+      "answer": "夏天阵雨来了时，孩子们顶喜欢在雨里跑跳，仰着脸看闪电，然而大人们偏就不许。\"到屋里来呀！\"随着木板窗的关闭，孩子们也就被关在地洞似的屋里了。这时候，小小的天窗是你唯一的慰藉。从那小小的玻璃，你会看见雨脚在那里卜落卜落跳，你会看见带子似的闪电一瞥；你想象到这雨，这风，这雷，这电，怎样猛厉地扫荡了这世界，你想象它们的威力比你在露天真实感到的要大这么十倍百倍。",
+      "keywords": [
+        {
+          "aliases": [
+            "夏天阵雨来了时",
+            "孩子们顶喜欢在雨里跑跳"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-天窗"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01350",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "这些事——是永不漫灭的回忆",
+      "answer": "月明的园中，藤萝的叶下，母亲的膝上",
+      "keywords": [
+        {
+          "aliases": [
+            "月明的园中",
+            "藤萝的叶下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01351",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "月明的园中，藤萝的叶下，母亲的膝上",
+      "answer": "这些事——是永不漫灭的回忆",
+      "keywords": [
+        {
+          "aliases": [
+            "这些事——是永不漫灭的回忆"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01352",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "繁星（七一）"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《繁星（七一）》",
+      "answer": "这些事——是永不漫灭的回忆：月明的园中，藤萝的叶下，母亲的膝上。",
+      "keywords": [
+        {
+          "aliases": [
+            "这些事——是永不漫灭的回忆：月明的园中",
+            "藤萝的叶下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-繁星（七一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01353",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "母亲啊！天上的风雨来了",
+      "answer": "鸟儿躲到它的巢里",
+      "keywords": [
+        {
+          "aliases": [
+            "鸟儿躲到它的巢里"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01354",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "心中的风雨来了",
+      "answer": "我只躲到你的怀里",
+      "keywords": [
+        {
+          "aliases": [
+            "我只躲到你的怀里"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01355",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "鸟儿躲到它的巢里",
+      "answer": "母亲啊！天上的风雨来了",
+      "keywords": [
+        {
+          "aliases": [
+            "母亲啊！天上的风雨来了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01356",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我只躲到你的怀里",
+      "answer": "心中的风雨来了",
+      "keywords": [
+        {
+          "aliases": [
+            "心中的风雨来了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01357",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "繁星（一五九）"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《繁星（一五九）》",
+      "answer": "母亲啊！天上的风雨来了，鸟儿躲到它的巢里；心中的风雨来了，我只躲到你的怀里。",
+      "keywords": [
+        {
+          "aliases": [
+            "母亲啊！天上的风雨来了",
+            "鸟儿躲到它的巢里"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-繁星（一五九）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01358",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "好像绿色的墨水瓶倒翻了",
+      "answer": "到处是绿的……",
+      "keywords": [
+        {
+          "aliases": [
+            "到处是绿的……"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01359",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "到哪儿去找这么多的绿",
+      "answer": "墨绿、浅绿、嫩绿、翠绿、淡绿、粉绿……",
+      "keywords": [
+        {
+          "aliases": [
+            "墨绿、浅绿、嫩绿、翠绿、淡绿、粉绿……"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01360",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "刮的风是绿的",
+      "answer": "下的雨是绿的",
+      "keywords": [
+        {
+          "aliases": [
+            "下的雨是绿的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01361",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "流的水是绿的",
+      "answer": "阳光也是绿的",
+      "keywords": [
+        {
+          "aliases": [
+            "阳光也是绿的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01362",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "所有的绿集中起来，挤在一起",
+      "answer": "重叠在一起",
+      "keywords": [
+        {
+          "aliases": [
+            "重叠在一起"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01363",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "突然一阵风，好像舞蹈教练在指挥",
+      "answer": "所有的绿就整齐地按着节拍飘动在一起",
+      "keywords": [
+        {
+          "aliases": [
+            "所有的绿就整齐地按着节拍飘动在一起"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01364",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "到处是绿的……",
+      "answer": "好像绿色的墨水瓶倒翻了",
+      "keywords": [
+        {
+          "aliases": [
+            "好像绿色的墨水瓶倒翻了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01365",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "墨绿、浅绿、嫩绿、翠绿、淡绿、粉绿……",
+      "answer": "到哪儿去找这么多的绿",
+      "keywords": [
+        {
+          "aliases": [
+            "到哪儿去找这么多的绿"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01366",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "下的雨是绿的",
+      "answer": "刮的风是绿的",
+      "keywords": [
+        {
+          "aliases": [
+            "刮的风是绿的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01367",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "阳光也是绿的",
+      "answer": "流的水是绿的",
+      "keywords": [
+        {
+          "aliases": [
+            "流的水是绿的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01368",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "重叠在一起",
+      "answer": "所有的绿集中起来，挤在一起",
+      "keywords": [
+        {
+          "aliases": [
+            "所有的绿集中起来",
+            "挤在一起"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01369",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "所有的绿就整齐地按着节拍飘动在一起",
+      "answer": "突然一阵风，好像舞蹈教练在指挥",
+      "keywords": [
+        {
+          "aliases": [
+            "突然一阵风",
+            "好像舞蹈教练在指挥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01370",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "绿"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《绿》",
+      "answer": "好像绿色的墨水瓶倒翻了，到处是绿的……到哪儿去找这么多的绿：墨绿、浅绿、嫩绿、翠绿、淡绿、粉绿……绿得发黑、绿得出奇。刮的风是绿的，下的雨是绿的，流的水是绿的，阳光也是绿的。所有的绿集中起来，挤在一起，重叠在一起，静静地交叉在一起。突然一阵风，好像舞蹈教练在指挥，所有的绿就整齐地按着节拍飘动在一起。",
+      "keywords": [
+        {
+          "aliases": [
+            "好像绿色的墨水瓶倒翻了",
+            "到处是绿的……到哪儿去找这么多的绿：墨绿、浅绿、嫩绿、翠绿、淡绿、粉绿……绿得发黑、绿得出奇"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-绿"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01371",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "在我的窗前，有一棵白桦",
+      "answer": "仿佛涂上银霜，披了一身雪花",
+      "keywords": [
+        {
+          "aliases": [
+            "仿佛涂上银霜",
+            "披了一身雪花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01372",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "毛茸茸的枝头，雪绣的花边潇洒",
+      "answer": "串串花穗齐绽，洁白的流苏如画",
+      "keywords": [
+        {
+          "aliases": [
+            "串串花穗齐绽",
+            "洁白的流苏如画"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01373",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "在朦胧的寂静中，玉立着这棵白桦",
+      "answer": "在灿灿的金晖里，闪着晶亮的雪花",
+      "keywords": [
+        {
+          "aliases": [
+            "在灿灿的金晖里",
+            "闪着晶亮的雪花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01374",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "仿佛涂上银霜，披了一身雪花",
+      "answer": "在我的窗前，有一棵白桦",
+      "keywords": [
+        {
+          "aliases": [
+            "在我的窗前",
+            "有一棵白桦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01375",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "串串花穗齐绽，洁白的流苏如画",
+      "answer": "毛茸茸的枝头，雪绣的花边潇洒",
+      "keywords": [
+        {
+          "aliases": [
+            "毛茸茸的枝头",
+            "雪绣的花边潇洒"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01376",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "在灿灿的金晖里，闪着晶亮的雪花",
+      "answer": "在朦胧的寂静中，玉立着这棵白桦",
+      "keywords": [
+        {
+          "aliases": [
+            "在朦胧的寂静中",
+            "玉立着这棵白桦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01377",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "白桦"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《白桦》",
+      "answer": "在我的窗前，有一棵白桦，仿佛涂上银霜，披了一身雪花。毛茸茸的枝头，雪绣的花边潇洒，串串花穗齐绽，洁白的流苏如画。在朦胧的寂静中，玉立着这棵白桦，在灿灿的金晖里，闪着晶亮的雪花。白桦四周徜徉着姗姗来迟的朝霞，它向白雪皑皑的树枝又抹一层银色的光华。",
+      "keywords": [
+        {
+          "aliases": [
+            "在我的窗前",
+            "有一棵白桦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-白桦"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01378",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "昼出耘田夜绩麻",
+      "answer": "村庄儿女各当家",
+      "keywords": [
+        {
+          "aliases": [
+            "村庄儿女各当家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01379",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "童孙未解供耕织",
+      "answer": "也傍桑阴学种瓜",
+      "keywords": [
+        {
+          "aliases": [
+            "也傍桑阴学种瓜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01380",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "村庄儿女各当家",
+      "answer": "昼出耘田夜绩麻",
+      "keywords": [
+        {
+          "aliases": [
+            "昼出耘田夜绩麻"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01381",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "也傍桑阴学种瓜",
+      "answer": "童孙未解供耕织",
+      "keywords": [
+        {
+          "aliases": [
+            "童孙未解供耕织"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01382",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "四时田园杂兴（其二十五）"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《四时田园杂兴（其二十五）》",
+      "answer": "昼出耘田夜绩麻，村庄儿女各当家。童孙未解供耕织，也傍桑阴学种瓜。",
+      "keywords": [
+        {
+          "aliases": [
+            "昼出耘田夜绩麻",
+            "村庄儿女各当家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-四时田园杂兴（其二十五）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01383",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "篱落疏疏一径深",
+      "answer": "树头新绿未成阴",
+      "keywords": [
+        {
+          "aliases": [
+            "树头新绿未成阴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01384",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "儿童急走追黄蝶",
+      "answer": "飞入菜花无处寻",
+      "keywords": [
+        {
+          "aliases": [
+            "飞入菜花无处寻"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01385",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "树头新绿未成阴",
+      "answer": "篱落疏疏一径深",
+      "keywords": [
+        {
+          "aliases": [
+            "篱落疏疏一径深"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01386",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "飞入菜花无处寻",
+      "answer": "儿童急走追黄蝶",
+      "keywords": [
+        {
+          "aliases": [
+            "儿童急走追黄蝶"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01387",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "宿新市徐公店"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《宿新市徐公店》",
+      "answer": "篱落疏疏一径深，树头新绿未成阴。儿童急走追黄蝶，飞入菜花无处寻。",
+      "keywords": [
+        {
+          "aliases": [
+            "篱落疏疏一径深",
+            "树头新绿未成阴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-宿新市徐公店"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01388",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "茅檐低小",
+      "answer": "溪上青青草",
+      "keywords": [
+        {
+          "aliases": [
+            "溪上青青草"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01389",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "醉里吴音相媚好",
+      "answer": "白发谁家翁媪",
+      "keywords": [
+        {
+          "aliases": [
+            "白发谁家翁媪"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01390",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "大儿锄豆溪东",
+      "answer": "中儿正织鸡笼",
+      "keywords": [
+        {
+          "aliases": [
+            "中儿正织鸡笼"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01391",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "最喜小儿亡赖",
+      "answer": "溪头卧剥莲蓬",
+      "keywords": [
+        {
+          "aliases": [
+            "溪头卧剥莲蓬"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01392",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "溪上青青草",
+      "answer": "茅檐低小",
+      "keywords": [
+        {
+          "aliases": [
+            "茅檐低小"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01393",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "白发谁家翁媪",
+      "answer": "醉里吴音相媚好",
+      "keywords": [
+        {
+          "aliases": [
+            "醉里吴音相媚好"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01394",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中儿正织鸡笼",
+      "answer": "大儿锄豆溪东",
+      "keywords": [
+        {
+          "aliases": [
+            "大儿锄豆溪东"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01395",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "溪头卧剥莲蓬",
+      "answer": "最喜小儿亡赖",
+      "keywords": [
+        {
+          "aliases": [
+            "最喜小儿亡赖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01396",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "清平乐·村居"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《清平乐·村居》",
+      "answer": "茅檐低小，溪上青青草。醉里吴音相媚好，白发谁家翁媪？大儿锄豆溪东，中儿正织鸡笼。最喜小儿亡赖，溪头卧剥莲蓬。",
+      "keywords": [
+        {
+          "aliases": [
+            "茅檐低小",
+            "溪上青青草"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-清平乐·村居"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01397",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "寒雨连江夜入吴",
+      "answer": "平明送客楚山孤",
+      "keywords": [
+        {
+          "aliases": [
+            "平明送客楚山孤"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01398",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "洛阳亲友如相问",
+      "answer": "一片冰心在玉壶",
+      "keywords": [
+        {
+          "aliases": [
+            "一片冰心在玉壶"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01399",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "平明送客楚山孤",
+      "answer": "寒雨连江夜入吴",
+      "keywords": [
+        {
+          "aliases": [
+            "寒雨连江夜入吴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01400",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "一片冰心在玉壶",
+      "answer": "洛阳亲友如相问",
+      "keywords": [
+        {
+          "aliases": [
+            "洛阳亲友如相问"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01401",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "芙蓉楼送辛渐"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《芙蓉楼送辛渐》",
+      "answer": "寒雨连江夜入吴，平明送客楚山孤。洛阳亲友如相问，一片冰心在玉壶。",
+      "keywords": [
+        {
+          "aliases": [
+            "寒雨连江夜入吴",
+            "平明送客楚山孤"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-芙蓉楼送辛渐"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01402",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "月黑雁飞高",
+      "answer": "单于夜遁逃",
+      "keywords": [
+        {
+          "aliases": [
+            "单于夜遁逃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01403",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "欲将轻骑逐",
+      "answer": "大雪满弓刀",
+      "keywords": [
+        {
+          "aliases": [
+            "大雪满弓刀"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01404",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "单于夜遁逃",
+      "answer": "月黑雁飞高",
+      "keywords": [
+        {
+          "aliases": [
+            "月黑雁飞高"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01405",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "大雪满弓刀",
+      "answer": "欲将轻骑逐",
+      "keywords": [
+        {
+          "aliases": [
+            "欲将轻骑逐"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01406",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "塞下曲"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《塞下曲》",
+      "answer": "月黑雁飞高，单于夜遁逃。欲将轻骑逐，大雪满弓刀。",
+      "keywords": [
+        {
+          "aliases": [
+            "月黑雁飞高",
+            "单于夜遁逃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-塞下曲"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01407",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我家洗砚池头树",
+      "answer": "朵朵花开淡墨痕",
+      "keywords": [
+        {
+          "aliases": [
+            "朵朵花开淡墨痕"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01408",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "不要人夸好颜色",
+      "answer": "只留清气满乾坤",
+      "keywords": [
+        {
+          "aliases": [
+            "只留清气满乾坤"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01409",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "朵朵花开淡墨痕",
+      "answer": "我家洗砚池头树",
+      "keywords": [
+        {
+          "aliases": [
+            "我家洗砚池头树"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01410",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "只留清气满乾坤",
+      "answer": "不要人夸好颜色",
+      "keywords": [
+        {
+          "aliases": [
+            "不要人夸好颜色"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01411",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "墨梅"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《墨梅》",
+      "answer": "我家洗砚池头树，朵朵花开淡墨痕。不要人夸好颜色，只留清气满乾坤。",
+      "keywords": [
+        {
+          "aliases": [
+            "我家洗砚池头树",
+            "朵朵花开淡墨痕"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-墨梅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01412",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "胤恭勤不倦",
+      "answer": "博学多通",
+      "keywords": [
+        {
+          "aliases": [
+            "博学多通"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01413",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "家贫不常得油",
+      "answer": "夏月则练囊盛数十萤火以照书",
+      "keywords": [
+        {
+          "aliases": [
+            "夏月则练囊盛数十萤火以照书"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01414",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "博学多通",
+      "answer": "胤恭勤不倦",
+      "keywords": [
+        {
+          "aliases": [
+            "胤恭勤不倦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01415",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "夏月则练囊盛数十萤火以照书",
+      "answer": "家贫不常得油",
+      "keywords": [
+        {
+          "aliases": [
+            "家贫不常得油"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01416",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "囊萤夜读"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《囊萤夜读》",
+      "answer": "胤恭勤不倦，博学多通。家贫不常得油，夏月则练囊盛数十萤火以照书，以夜继日焉。",
+      "keywords": [
+        {
+          "aliases": [
+            "胤恭勤不倦",
+            "博学多通"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-囊萤夜读"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01417",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "囊萤夜读"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《囊萤夜读》",
+      "answer": "胤恭勤不倦，博学多通。家贫不常得油，夏月则练囊盛数十萤火以照书，以夜继日焉。",
+      "keywords": [
+        {
+          "aliases": [
+            "胤恭勤不倦",
+            "博学多通"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-囊萤夜读"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01418",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "磨针溪，在象耳山下",
+      "answer": "世传李太白读书山中，未成，弃去",
+      "keywords": [
+        {
+          "aliases": [
+            "世传李太白读书山中",
+            "未成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01419",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "过是溪，逢老媪方磨铁杵",
+      "answer": "问之，曰：\"欲作针。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "问之",
+            "曰：\"欲作针"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01420",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "太白感其意",
+      "answer": "还卒业",
+      "keywords": [
+        {
+          "aliases": [
+            "还卒业"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01421",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世传李太白读书山中，未成，弃去",
+      "answer": "磨针溪，在象耳山下",
+      "keywords": [
+        {
+          "aliases": [
+            "磨针溪",
+            "在象耳山下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01422",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "问之，曰：\"欲作针。\"",
+      "answer": "过是溪，逢老媪方磨铁杵",
+      "keywords": [
+        {
+          "aliases": [
+            "过是溪",
+            "逢老媪方磨铁杵"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01423",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "还卒业",
+      "answer": "太白感其意",
+      "keywords": [
+        {
+          "aliases": [
+            "太白感其意"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01424",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "铁杵成针"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《铁杵成针》",
+      "answer": "磨针溪，在象耳山下。世传李太白读书山中，未成，弃去。过是溪，逢老媪方磨铁杵。问之，曰：\"欲作针。\"太白感其意，还卒业。",
+      "keywords": [
+        {
+          "aliases": [
+            "磨针溪",
+            "在象耳山下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-铁杵成针"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01425",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "铁杵成针"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《铁杵成针》",
+      "answer": "磨针溪，在象耳山下。世传李太白读书山中，未成，弃去。过是溪，逢老媪方磨铁杵。问之，曰：\"欲作针。\"太白感其意，还卒业。",
+      "keywords": [
+        {
+          "aliases": [
+            "磨针溪",
+            "在象耳山下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-铁杵成针"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01426",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "风雨送春归",
+      "answer": "飞雪迎春到",
+      "keywords": [
+        {
+          "aliases": [
+            "飞雪迎春到"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01427",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "已是悬崖百丈冰",
+      "answer": "犹有花枝俏",
+      "keywords": [
+        {
+          "aliases": [
+            "犹有花枝俏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01428",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "俏也不争春",
+      "answer": "只把春来报",
+      "keywords": [
+        {
+          "aliases": [
+            "只把春来报"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01429",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "待到山花烂漫时",
+      "answer": "她在丛中笑",
+      "keywords": [
+        {
+          "aliases": [
+            "她在丛中笑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01430",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "飞雪迎春到",
+      "answer": "风雨送春归",
+      "keywords": [
+        {
+          "aliases": [
+            "风雨送春归"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01431",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "犹有花枝俏",
+      "answer": "已是悬崖百丈冰",
+      "keywords": [
+        {
+          "aliases": [
+            "已是悬崖百丈冰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01432",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "只把春来报",
+      "answer": "俏也不争春",
+      "keywords": [
+        {
+          "aliases": [
+            "俏也不争春"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01433",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "她在丛中笑",
+      "answer": "待到山花烂漫时",
+      "keywords": [
+        {
+          "aliases": [
+            "待到山花烂漫时"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01434",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "卜算子·咏梅"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《卜算子·咏梅》",
+      "answer": "风雨送春归，飞雪迎春到。已是悬崖百丈冰，犹有花枝俏。俏也不争春，只把春来报。待到山花烂漫时，她在丛中笑。",
+      "keywords": [
+        {
+          "aliases": [
+            "风雨送春归",
+            "飞雪迎春到"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-卜算子·咏梅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01435",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "黄四娘家花满蹊",
+      "answer": "千朵万朵压枝低",
+      "keywords": [
+        {
+          "aliases": [
+            "千朵万朵压枝低"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01436",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "留连戏蝶时时舞",
+      "answer": "自在娇莺恰恰啼",
+      "keywords": [
+        {
+          "aliases": [
+            "自在娇莺恰恰啼"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01437",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "千朵万朵压枝低",
+      "answer": "黄四娘家花满蹊",
+      "keywords": [
+        {
+          "aliases": [
+            "黄四娘家花满蹊"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01438",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "自在娇莺恰恰啼",
+      "answer": "留连戏蝶时时舞",
+      "keywords": [
+        {
+          "aliases": [
+            "留连戏蝶时时舞"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01439",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "江畔独步寻花"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《江畔独步寻花》",
+      "answer": "黄四娘家花满蹊，千朵万朵压枝低。留连戏蝶时时舞，自在娇莺恰恰啼。",
+      "keywords": [
+        {
+          "aliases": [
+            "黄四娘家花满蹊",
+            "千朵万朵压枝低"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-江畔独步寻花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01440",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "不论平地与山尖",
+      "answer": "无限风光尽被占",
+      "keywords": [
+        {
+          "aliases": [
+            "无限风光尽被占"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01441",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "采得百花成蜜后",
+      "answer": "为谁辛苦为谁甜",
+      "keywords": [
+        {
+          "aliases": [
+            "为谁辛苦为谁甜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01442",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "无限风光尽被占",
+      "answer": "不论平地与山尖",
+      "keywords": [
+        {
+          "aliases": [
+            "不论平地与山尖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01443",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "为谁辛苦为谁甜",
+      "answer": "采得百花成蜜后",
+      "keywords": [
+        {
+          "aliases": [
+            "采得百花成蜜后"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01444",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "蜂"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《蜂》",
+      "answer": "不论平地与山尖，无限风光尽被占。采得百花成蜜后，为谁辛苦为谁甜？",
+      "keywords": [
+        {
+          "aliases": [
+            "不论平地与山尖",
+            "无限风光尽被占"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-蜂"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01445",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "众鸟高飞尽",
+      "answer": "孤云独去闲",
+      "keywords": [
+        {
+          "aliases": [
+            "孤云独去闲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01446",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "相看两不厌",
+      "answer": "只有敬亭山",
+      "keywords": [
+        {
+          "aliases": [
+            "只有敬亭山"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01447",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "孤云独去闲",
+      "answer": "众鸟高飞尽",
+      "keywords": [
+        {
+          "aliases": [
+            "众鸟高飞尽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01448",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "只有敬亭山",
+      "answer": "相看两不厌",
+      "keywords": [
+        {
+          "aliases": [
+            "相看两不厌"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01449",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独坐敬亭山"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《独坐敬亭山》",
+      "answer": "众鸟高飞尽，孤云独去闲。相看两不厌，只有敬亭山。",
+      "keywords": [
+        {
+          "aliases": [
+            "众鸟高飞尽",
+            "孤云独去闲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-chinese-独坐敬亭山"
+    }
+  }
+]

@@ -1,0 +1,1873 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01843",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《匆匆》的作者是？",
+      "answer": "朱自清（字佩弦，现代著名散文家、诗人）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01844",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《匆匆》中\"燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了\"的后一句是？",
+      "answer": "有再开的时候",
+      "keywords": [
+        {
+          "aliases": [
+            "有再开的时候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01845",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《匆匆》中\"但是，聪明的，你告诉我\"的后一句是？",
+      "answer": "我们的日子为什么一去不复返呢？",
+      "keywords": [
+        {
+          "aliases": [
+            "我们的日子为什么一去不复返呢？"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01846",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《匆匆》中形象写出日子无声无息溜走的句子是？",
+      "answer": "像针尖上一滴水滴在大海里，我的日子滴在时间的流里，没有声音，也没有影子",
+      "keywords": [
+        {
+          "aliases": [
+            "像针尖上一滴水滴在大海里",
+            "我的日子滴在时间的流里"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01847",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《匆匆》中\"洗手的时候，日子从水盆里过去；吃饭的时候\"的后一句是？",
+      "answer": "日子从饭碗里过去",
+      "keywords": [
+        {
+          "aliases": [
+            "日子从饭碗里过去"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01848",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《匆匆》表达了作者怎样的思想感情？",
+      "answer": "对时光匆匆流逝的无奈与惋惜，以及不甘虚度年华、奋发进取的心愿",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01849",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "匆匆"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《匆匆》",
+      "answer": "燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。但是，聪明的，你告诉我，我们的日子为什么一去不复返呢？——是有人偷了他们罢：那是谁？又藏在何处呢？是他们自己逃走了罢：现在又到了哪里呢？我不知道他们给了我多少日子，但我的手确乎是渐渐空虚了。在默默里算着，八千多日子已经从我手中溜去，像针尖上一滴水滴在大海里，我的日子滴在时间的流里，没有声音，也没有影子。我不禁头涔涔而泪潸潸了。去的尽管去了，来的尽管来着；去来的中间，又是怎样地匆匆呢？早上我起来的时候，小屋里射进两三方斜斜的太阳。太阳他有脚啊，轻轻悄悄地挪移了；我也茫茫然跟着旋转。于是——洗手的时候，日子从水盆里过去；吃饭的时候，日子从饭碗里过去；默默时，便从凝然的双眼前过去。我觉察他去的匆匆了，伸出手遮挽时，他又从遮挽着的手边过去。天黑时，我躺在床上，他便伶伶俐俐地从我身上跨过，从我脚边飞去了。等我睁开眼和太阳再见，这算又溜走了一日。我掩着面叹息。但是新来的日子的影儿又开始在叹息里闪过了。在逃去如飞的日子里，在千门万户的世界里的我能做些什么呢？只有徘徊罢了，只有匆匆罢了；在八千多日的匆匆里，除徘徊外，又剩些什么呢？过去的日子如轻烟，被微风吹散了，如薄雾，被初阳蒸融了；我留着些什么痕迹呢？我何曾留着像游丝样的痕迹呢？我赤裸裸来到这世界，转眼间也将赤裸裸的回去罢？但不能平的，为什么偏要白白走这一遭啊？你聪明的，告诉我，我们的日子为什么一去不复返呢？",
+      "keywords": [
+        {
+          "aliases": [
+            "燕子去了",
+            "有再来的时候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-匆匆"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01850",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "腊八粥"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《腊八粥》的作者是？",
+      "answer": "沈从文（现代著名作家，代表作《边城》）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-腊八粥"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01851",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "腊八粥"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《腊八粥》第2自然段中\"住方家大院的八儿，今天喜得\"的后一句是？",
+      "answer": "快要发疯了",
+      "keywords": [
+        {
+          "aliases": [
+            "快要发疯了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-腊八粥"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01852",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "腊八粥"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《腊八粥》第3自然段中八儿问\"妈，妈，要到什么时候才……\"表现了八儿怎样的心情？",
+      "answer": "急切盼望喝粥、等不及的心情",
+      "keywords": [
+        {
+          "aliases": [
+            "急切盼望喝粥、等不及的心情"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-腊八粥"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01853",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "腊八粥"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《腊八粥》第3自然段结尾\"锅中的粥，有声无力的叹气\"的后一句是？",
+      "answer": "还在继续",
+      "keywords": [
+        {
+          "aliases": [
+            "还在继续"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-腊八粥"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01854",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "腊八粥"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《腊八粥》第2-3自然段",
+      "answer": "住方家大院的八儿，今天喜得快要发疯了。他一个人进进出出灶房，看到那一大锅正在叹气的粥，碗盏都已预备得整整齐齐，摆到灶边好久了，但他妈妈总是说时候还早。\"妈，妈，要到什么时候才……\"\"要到夜里！\"其实他妈所说的夜里，并不是上灯以后。但八儿听了这种松劲的话，眼睛可急红了。锅中的粥，有声无力的叹气还在继续。",
+      "keywords": [
+        {
+          "aliases": [
+            "住方家大院的八儿",
+            "今天喜得快要发疯了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-腊八粥"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01855",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "为人民服务"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《为人民服务》的作者是？",
+      "answer": "毛泽东，本文是他1944年9月8日在张思德同志追悼会上所作的演讲",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-为人民服务"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01856",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "为人民服务"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《为人民服务》第1自然段的中心句是？",
+      "answer": "我们这个队伍完全是为着解放人民的，是彻底地为人民的利益工作的",
+      "keywords": [
+        {
+          "aliases": [
+            "我们这个队伍完全是为着解放人民的",
+            "是彻底地为人民的利益工作的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-为人民服务"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01857",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "为人民服务"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《为人民服务》中\"人固有一死，或重于泰山\"的后一句是？",
+      "answer": "或轻于鸿毛",
+      "keywords": [
+        {
+          "aliases": [
+            "或轻于鸿毛"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-为人民服务"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01858",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "为人民服务"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《为人民服务》中\"为人民利益而死，就比泰山还重；替法西斯卖力\"的后一句是？",
+      "answer": "替剥削人民和压迫人民的人去死，就比鸿毛还轻",
+      "keywords": [
+        {
+          "aliases": [
+            "替剥削人民和压迫人民的人去死",
+            "就比鸿毛还轻"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-为人民服务"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01859",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "为人民服务"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《为人民服务》第1-2自然段",
+      "answer": "我们的共产党和共产党所领导的八路军、新四军，是革命的队伍。我们这个队伍完全是为着解放人民的，是彻底地为人民的利益工作的。张思德同志就是我们这个队伍中的一个同志。人总是要死的，但死的意义有不同。中国古时候有个文学家叫做司马迁的说过：\"人固有一死，或重于泰山，或轻于鸿毛。\"为人民利益而死，就比泰山还重；替法西斯卖力，替剥削人民和压迫人民的人去死，就比鸿毛还轻。张思德同志是为人民利益而死的，他的死是比泰山还要重的。",
+      "keywords": [
+        {
+          "aliases": [
+            "我们的共产党和共产党所领导的八路军、新四军",
+            "是革命的队伍"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-为人民服务"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01860",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "迢迢牵牛星"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《迢迢牵牛星》的体裁及作者是？",
+      "answer": "五言古诗，汉乐府（选自《古诗十九首》）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-迢迢牵牛星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01861",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "迢迢牵牛星"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《迢迢牵牛星》中\"迢迢牵牛星\"的后一句是？",
+      "answer": "皎皎河汉女",
+      "keywords": [
+        {
+          "aliases": [
+            "皎皎河汉女"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-迢迢牵牛星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01862",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "迢迢牵牛星"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《迢迢牵牛星》中\"纤纤擢素手\"的后一句是？",
+      "answer": "札札弄机杼",
+      "keywords": [
+        {
+          "aliases": [
+            "札札弄机杼"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-迢迢牵牛星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01863",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "迢迢牵牛星"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《迢迢牵牛星》中\"盈盈一水间\"的后一句是？",
+      "answer": "脉脉不得语",
+      "keywords": [
+        {
+          "aliases": [
+            "脉脉不得语"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-迢迢牵牛星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01864",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "迢迢牵牛星"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《迢迢牵牛星》中写牛郎织女隔河相望、不得相语的句子是？",
+      "answer": "盈盈一水间，脉脉不得语",
+      "keywords": [
+        {
+          "aliases": [
+            "盈盈一水间",
+            "脉脉不得语"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-迢迢牵牛星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01865",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "迢迢牵牛星"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《迢迢牵牛星》",
+      "answer": "迢迢牵牛星，皎皎河汉女。纤纤擢素手，札札弄机杼。终日不成章，泣涕零如雨。河汉清且浅，相去复几许。盈盈一水间，脉脉不得语。",
+      "keywords": [
+        {
+          "aliases": [
+            "迢迢牵牛星",
+            "皎皎河汉女"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-迢迢牵牛星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01866",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "寒食"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《寒食》的作者及朝代是？",
+      "answer": "韩翃（hóng），唐（\"大历十才子\"之一）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-寒食"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01867",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "寒食"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《寒食》中\"春城无处不飞花\"的后一句是？",
+      "answer": "寒食东风御柳斜",
+      "keywords": [
+        {
+          "aliases": [
+            "寒食东风御柳斜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-寒食"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01868",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "寒食"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《寒食》中\"日暮汉宫传蜡烛\"的后一句是？",
+      "answer": "轻烟散入五侯家",
+      "keywords": [
+        {
+          "aliases": [
+            "轻烟散入五侯家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-寒食"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01869",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "寒食"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《寒食》中借寒食节传赐蜡烛的习俗暗含讽意的诗句是？",
+      "answer": "日暮汉宫传蜡烛，轻烟散入五侯家",
+      "keywords": [
+        {
+          "aliases": [
+            "日暮汉宫传蜡烛",
+            "轻烟散入五侯家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-寒食"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01870",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "寒食"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《寒食》",
+      "answer": "春城无处不飞花，寒食东风御柳斜。日暮汉宫传蜡烛，轻烟散入五侯家。",
+      "keywords": [
+        {
+          "aliases": [
+            "春城无处不飞花",
+            "寒食东风御柳斜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-寒食"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01871",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "十五夜望月"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《十五夜望月》的作者及朝代是？",
+      "answer": "王建，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-十五夜望月"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01872",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "十五夜望月"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《十五夜望月》中\"中庭地白树栖鸦\"的后一句是？",
+      "answer": "冷露无声湿桂花",
+      "keywords": [
+        {
+          "aliases": [
+            "冷露无声湿桂花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-十五夜望月"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01873",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "十五夜望月"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《十五夜望月》中\"今夜月明人尽望\"的后一句是？",
+      "answer": "不知秋思落谁家",
+      "keywords": [
+        {
+          "aliases": [
+            "不知秋思落谁家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-十五夜望月"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01874",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "十五夜望月"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《十五夜望月》中表达望月思亲、为全诗点睛的句子是？",
+      "answer": "今夜月明人尽望，不知秋思落谁家",
+      "keywords": [
+        {
+          "aliases": [
+            "今夜月明人尽望",
+            "不知秋思落谁家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-十五夜望月"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01875",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "十五夜望月"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《十五夜望月》",
+      "answer": "中庭地白树栖鸦，冷露无声湿桂花。今夜月明人尽望，不知秋思落谁家。",
+      "keywords": [
+        {
+          "aliases": [
+            "中庭地白树栖鸦",
+            "冷露无声湿桂花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-十五夜望月"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01876",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "学弈"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《学弈》选自哪部典籍？",
+      "answer": "《孟子》（《孟子·告子上》）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-学弈"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01877",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "学弈"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《学弈》中\"弈秋，通国之善弈者也\"的后一句是？",
+      "answer": "使弈秋诲二人弈",
+      "keywords": [
+        {
+          "aliases": [
+            "使弈秋诲二人弈"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-学弈"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01878",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "学弈"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《学弈》中\"其一人专心致志\"的后一句是？",
+      "answer": "惟弈秋之为听",
+      "keywords": [
+        {
+          "aliases": [
+            "惟弈秋之为听"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-学弈"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01879",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "学弈"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《学弈》中\"为是其智弗若与？曰：非然也。\"是什么意思？",
+      "answer": "难道是因为他的智力不如别人吗？回答说：不是这样的（差别在是否专心致志，不在智力）",
+      "keywords": [
+        {
+          "aliases": [
+            "难道是因为他的智力不如别人吗？回答说：不是这样的（差别在是否专心致志",
+            "不在智力）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-学弈"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01880",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "学弈"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《学弈》告诉我们什么道理？",
+      "answer": "学习、做事必须专心致志、一心一意，不能三心二意",
+      "keywords": [
+        {
+          "aliases": [
+            "学习、做事必须专心致志、一心一意",
+            "不能三心二意"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-学弈"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01881",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "学弈"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《学弈》",
+      "answer": "弈秋，通国之善弈者也。使弈秋诲二人弈，其一人专心致志，惟弈秋之为听；一人虽听之，一心以为有鸿鹄将至，思援弓缴而射之。虽与之俱学，弗若之矣。为是其智弗若与？曰：非然也。",
+      "keywords": [
+        {
+          "aliases": [
+            "弈秋",
+            "通国之善弈者也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-学弈"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01882",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "两小儿辩日"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两小儿辩日》选自哪部典籍？",
+      "answer": "《列子·汤问》（道家典籍）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两小儿辩日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01883",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "两小儿辩日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两小儿辩日》中\"孔子东游，见两小儿辩斗\"的后一句是？",
+      "answer": "问其故",
+      "keywords": [
+        {
+          "aliases": [
+            "问其故"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两小儿辩日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01884",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "两小儿辩日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两小儿辩日》中\"日初出大如车盖\"的后一句是？",
+      "answer": "及日中则如盘盂",
+      "keywords": [
+        {
+          "aliases": [
+            "及日中则如盘盂"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两小儿辩日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01885",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "两小儿辩日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两小儿辩日》结尾两小儿的问话是？",
+      "answer": "\"孰为汝多知乎？\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"孰为汝多知乎？\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两小儿辩日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01886",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "两小儿辩日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两小儿辩日》中两小儿分别从什么角度说明道理？",
+      "answer": "一儿从视觉（初出大如车盖，日中则如盘盂——远者小而近者大），一儿从触觉（初出沧沧凉凉，日中如探汤——近者热而远者凉）",
+      "keywords": [
+        {
+          "aliases": [
+            "一儿从视觉（初出大如车盖",
+            "日中则如盘盂——远者小而近者大）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两小儿辩日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01887",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "两小儿辩日"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《两小儿辩日》",
+      "answer": "孔子东游，见两小儿辩斗，问其故。一儿曰：\"我以日始出时去人近，而日中时远也。\"一儿曰：\"我以日初出远，而日中时近也。\"一儿曰：\"日初出大如车盖，及日中则如盘盂，此不为远者小而近者大乎？\"一儿曰：\"日初出沧沧凉凉，及其日中如探汤，此不为近者热而远者凉乎？\"孔子不能决也。两小儿笑曰：\"孰为汝多知乎？\"",
+      "keywords": [
+        {
+          "aliases": [
+            "孔子东游",
+            "见两小儿辩斗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两小儿辩日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01888",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "石灰吟"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石灰吟》的作者及朝代是？",
+      "answer": "于谦，明（\"吟\"是古代诗歌的一种名称）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-石灰吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01889",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "石灰吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石灰吟》中\"千锤万凿出深山\"的后一句是？",
+      "answer": "烈火焚烧若等闲",
+      "keywords": [
+        {
+          "aliases": [
+            "烈火焚烧若等闲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-石灰吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01890",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "石灰吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石灰吟》中\"粉骨碎身浑不怕\"的后一句是？",
+      "answer": "要留清白在人间",
+      "keywords": [
+        {
+          "aliases": [
+            "要留清白在人间"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-石灰吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01891",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "石灰吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《石灰吟》借石灰表达诗人怎样的人生志向？",
+      "answer": "不怕艰难牺牲、清白做人、保持正直节操（托物言志）",
+      "keywords": [
+        {
+          "aliases": [
+            "不怕艰难牺牲、清白做人、保持正直节操（托物言志）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-石灰吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01892",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "石灰吟"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《石灰吟》",
+      "answer": "千锤万凿出深山，烈火焚烧若等闲。粉骨碎身浑不怕，要留清白在人间。",
+      "keywords": [
+        {
+          "aliases": [
+            "千锤万凿出深山",
+            "烈火焚烧若等闲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-石灰吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01893",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "竹石"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《竹石》的作者及朝代是？",
+      "answer": "郑燮（号板桥），清（题画诗）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-竹石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01894",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "竹石"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《竹石》中\"咬定青山不放松\"的后一句是？",
+      "answer": "立根原在破岩中",
+      "keywords": [
+        {
+          "aliases": [
+            "立根原在破岩中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-竹石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01895",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "竹石"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《竹石》中\"千磨万击还坚劲\"的后一句是？",
+      "answer": "任尔东西南北风",
+      "keywords": [
+        {
+          "aliases": [
+            "任尔东西南北风"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-竹石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01896",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "竹石"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《竹石》中表现竹子坚定顽强、无所畏惧的诗句是？",
+      "answer": "千磨万击还坚劲，任尔东西南北风",
+      "keywords": [
+        {
+          "aliases": [
+            "千磨万击还坚劲",
+            "任尔东西南北风"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-竹石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01897",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "竹石"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《竹石》",
+      "answer": "咬定青山不放松，立根原在破岩中。千磨万击还坚劲，任尔东西南北风。",
+      "keywords": [
+        {
+          "aliases": [
+            "咬定青山不放松",
+            "立根原在破岩中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-竹石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01898",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "周易"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《周易》中\"穷则变\"的后一句是？",
+      "answer": "变则通，通则久",
+      "keywords": [
+        {
+          "aliases": [
+            "变则通",
+            "通则久"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-周易"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01899",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"苟日新\"的后一句是？",
+      "answer": "日日新，又日新",
+      "keywords": [
+        {
+          "aliases": [
+            "日日新",
+            "又日新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01900",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"苟日新，日日新，又日新\"出自哪部典籍？",
+      "answer": "《礼记》",
+      "keywords": [
+        {
+          "aliases": [
+            "《礼记》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01901",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写\"穷则变，变则通，通则久\"并注明出处",
+      "answer": "穷则变，变则通，通则久。——《周易》",
+      "keywords": [
+        {
+          "aliases": [
+            "穷则变",
+            "变则通"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  }
+]

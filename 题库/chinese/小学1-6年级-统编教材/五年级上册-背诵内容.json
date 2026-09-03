@@ -1,0 +1,2110 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01450",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "白鹭"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《白鹭》的作者是？",
+      "answer": "郭沫若",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-白鹭"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01451",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：白鹭是一首",
+      "answer": "精巧的诗",
+      "keywords": [
+        {
+          "aliases": [
+            "精巧的诗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01452",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：色素的配合，身段的大小，",
+      "answer": "一切都很适宜",
+      "keywords": [
+        {
+          "aliases": [
+            "一切都很适宜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01453",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：那雪白的蓑毛，那全身的流线型结构，那铁色的长喙，那青色的脚，",
+      "answer": "增之一分则嫌长，减之一分则嫌短，素之一忽则嫌白，黛之一忽则嫌黑",
+      "keywords": [
+        {
+          "aliases": [
+            "增之一分则嫌长",
+            "减之一分则嫌短"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01454",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：在清水田里，时有一只两只白鹭站着钓鱼，",
+      "answer": "整个的田便成了一幅嵌在玻璃框里的画",
+      "keywords": [
+        {
+          "aliases": [
+            "整个的田便成了一幅嵌在玻璃框里的画"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01455",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句填空：白鹭实在是一首诗，",
+      "answer": "一首韵在骨子里的散文诗",
+      "keywords": [
+        {
+          "aliases": [
+            "一首韵在骨子里的散文诗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01456",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "白鹭"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写题目答案衔接：《白鹭》全文的起句和结句分别是？",
+      "answer": "起句\"白鹭是一首精巧的诗\"；结句\"白鹭实在是一首诗，一首韵在骨子里的散文诗\"",
+      "keywords": [
+        {
+          "aliases": [
+            "起句\"白鹭是一首精巧的诗\"",
+            "结句\"白鹭实在是一首诗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-白鹭"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01457",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "落花生"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《落花生》的作者是？",
+      "answer": "许地山（笔名落华生）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-落花生"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01458",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：父亲说花生最可贵的是什么？",
+      "answer": "它的果实埋在地里，不像桃子、石榴、苹果那样把鲜红嫩绿的果实高高挂在枝头上，让人一见就生爱慕之心",
+      "keywords": [
+        {
+          "aliases": [
+            "它的果实埋在地里",
+            "不像桃子、石榴、苹果那样把鲜红嫩绿的果实高高挂在枝头上"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01459",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：所以你们要像花生，",
+      "answer": "它虽然不好看，可是很有用",
+      "keywords": [
+        {
+          "aliases": [
+            "它虽然不好看",
+            "可是很有用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01460",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"人要做有用的人\"的后一句是？",
+      "answer": "不要做只讲体面，而对别人没有好处的人",
+      "keywords": [
+        {
+          "aliases": [
+            "不要做只讲体面",
+            "而对别人没有好处的人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01461",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "课文理解：课文借花生告诉我们什么道理？",
+      "answer": "要做默默奉献、对他人有用的人",
+      "keywords": [
+        {
+          "aliases": [
+            "要做默默奉献、对他人有用的人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01462",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "桂花雨"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《桂花雨》的作者是？",
+      "answer": "琦君",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-桂花雨"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01463",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：桂花树的样子笨笨的，",
+      "answer": "不像梅树那样有姿态",
+      "keywords": [
+        {
+          "aliases": [
+            "不像梅树那样有姿态"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01464",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：母亲说的那句\"这里的桂花再香，也比不上家乡院子里的桂花\"表达什么？",
+      "answer": "对故乡的思念之情",
+      "keywords": [
+        {
+          "aliases": [
+            "对故乡的思念之情"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01465",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "课文理解：为什么\"我\"喊\"真像下雨，好香的雨呀\"？",
+      "answer": "摇桂花时桂花纷纷落下来，像下雨一样香",
+      "keywords": [
+        {
+          "aliases": [
+            "摇桂花时桂花纷纷落下来",
+            "像下雨一样香"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01466",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "少年中国说"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《少年中国说》的作者是？",
+      "answer": "梁启超",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-少年中国说"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01467",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：故今日之责任，不在他人，而全在我少年。少年智则国智，少年富则国富，少年强则国强，",
+      "answer": "少年独立则国独立，少年自由则国自由，少年进步则国进步",
+      "keywords": [
+        {
+          "aliases": [
+            "少年独立则国独立",
+            "少年自由则国自由"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01468",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：红日初升，",
+      "answer": "其道大光",
+      "keywords": [
+        {
+          "aliases": [
+            "其道大光"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01469",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：河出伏流，",
+      "answer": "一泻汪洋",
+      "keywords": [
+        {
+          "aliases": [
+            "一泻汪洋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01470",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：潜龙腾渊，",
+      "answer": "鳞爪飞扬",
+      "keywords": [
+        {
+          "aliases": [
+            "鳞爪飞扬"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01471",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：乳虎啸谷，",
+      "answer": "百兽震惶",
+      "keywords": [
+        {
+          "aliases": [
+            "百兽震惶"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01472",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：天戴其苍，",
+      "answer": "地履其黄",
+      "keywords": [
+        {
+          "aliases": [
+            "地履其黄"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01473",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：纵有千古，",
+      "answer": "横有八荒",
+      "keywords": [
+        {
+          "aliases": [
+            "横有八荒"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01474",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"美哉，我少年中国，与天不老！壮哉，我中国少年，与国无疆！\"表达了什么？",
+      "answer": "对少年中国的赞美和期待",
+      "keywords": [
+        {
+          "aliases": [
+            "对少年中国的赞美和期待"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01475",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "少年中国说（节选）"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《少年中国说（节选）》",
+      "answer": "故今日之责任，不在他人，而全在我少年。少年智则国智，少年富则国富，少年强则国强，少年独立则国独立，少年自由则国自由，少年进步则国进步，少年胜于欧洲，则国胜于欧洲，少年雄于地球，则国雄于地球。红日初升，其道大光。河出伏流，一泻汪洋。潜龙腾渊，鳞爪飞扬。乳虎啸谷，百兽震惶。鹰隼试翼，风尘吸张。奇花初胎，矞矞皇皇。干将发硎，有作其芒。天戴其苍，地履其黄。纵有千古，横有八荒。前途似海，来日方长。美哉，我少年中国，与天不老！壮哉，我中国少年，与国无疆！",
+      "keywords": [
+        {
+          "aliases": [
+            "故今日之责任",
+            "不在他人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-少年中国说（节选）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01476",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "古人谈读书"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《古人谈读书》选自哪些著作？",
+      "answer": "《论语》、朱熹《童蒙须知》、曾国藩家书等",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-古人谈读书"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01477",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"敏而好学\"的后一句是？",
+      "answer": "不耻下问",
+      "keywords": [
+        {
+          "aliases": [
+            "不耻下问"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01478",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：知之为知之，不知为不知，",
+      "answer": "是知也",
+      "keywords": [
+        {
+          "aliases": [
+            "是知也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01479",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写第一则",
+      "answer": "敏而好学，不耻下问。知之为知之，不知为不知，是知也。",
+      "keywords": [
+        {
+          "aliases": [
+            "敏而好学",
+            "不耻下问"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01480",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"读书有三到\"是哪三到？",
+      "answer": "心到、眼到、口到",
+      "keywords": [
+        {
+          "aliases": [
+            "心到、眼到、口到"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01481",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：三到之中，",
+      "answer": "心到最急",
+      "keywords": [
+        {
+          "aliases": [
+            "心到最急"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01482",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：心既到矣，",
+      "answer": "眼口岂不到乎",
+      "keywords": [
+        {
+          "aliases": [
+            "眼口岂不到乎"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01483",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写第二则",
+      "answer": "余尝谓：读书有三到，谓心到、眼到、口到。心不在此，则眼不看仔细，心眼既不专一，却只漫浪诵读，决不能记，记亦不能久也。三到之中，心到最急。心既到矣，眼口岂不到乎？",
+      "keywords": [
+        {
+          "aliases": [
+            "余尝谓：读书有三到",
+            "谓心到、眼到、口到"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01484",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：士人读书，第一要有志，第二要有识，第三要有？",
+      "answer": "恒",
+      "keywords": [
+        {
+          "aliases": [
+            "恒"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01485",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：有志则断不甘为下流；有识则知学问无尽；",
+      "answer": "有恒则断无不成之事",
+      "keywords": [
+        {
+          "aliases": [
+            "有恒则断无不成之事"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01486",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写第三则",
+      "answer": "盖士人读书，第一要有志，第二要有识，第三要有恒。有志则断不甘为下流；有识则知学问无尽，不敢以一得自足，如河伯之观海，如井蛙之窥天，皆无识者也；有恒则断无不成之事。此三者缺一不可。",
+      "keywords": [
+        {
+          "aliases": [
+            "盖士人读书",
+            "第一要有志"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01487",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "山居秋暝"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《山居秋暝》的作者及朝代是？",
+      "answer": "王维，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-山居秋暝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01488",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "山居秋暝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《山居秋暝》中\"空山新雨后\"的后一句是？",
+      "answer": "天气晚来秋",
+      "keywords": [
+        {
+          "aliases": [
+            "天气晚来秋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-山居秋暝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01489",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "山居秋暝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《山居秋暝》中\"明月松间照\"的后一句是？",
+      "answer": "清泉石上流",
+      "keywords": [
+        {
+          "aliases": [
+            "清泉石上流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-山居秋暝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01490",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "山居秋暝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《山居秋暝》中\"竹喧归浣女\"的后一句是？",
+      "answer": "莲动下渔舟",
+      "keywords": [
+        {
+          "aliases": [
+            "莲动下渔舟"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-山居秋暝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01491",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "山居秋暝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《山居秋暝》中描写月照松林、清澈泉水的名句是？",
+      "answer": "明月松间照，清泉石上流。",
+      "keywords": [
+        {
+          "aliases": [
+            "明月松间照",
+            "清泉石上流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-山居秋暝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01492",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "山居秋暝"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《山居秋暝》",
+      "answer": "空山新雨后，天气晚来秋。明月松间照，清泉石上流。竹喧归浣女，莲动下渔舟。随意春芳歇，王孙自可留。",
+      "keywords": [
+        {
+          "aliases": [
+            "空山新雨后",
+            "天气晚来秋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-山居秋暝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01493",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "枫桥夜泊"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《枫桥夜泊》的作者及朝代是？",
+      "answer": "张继，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-枫桥夜泊"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01494",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "枫桥夜泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《枫桥夜泊》中\"月落乌啼霜满天\"的后一句是？",
+      "answer": "江枫渔火对愁眠",
+      "keywords": [
+        {
+          "aliases": [
+            "江枫渔火对愁眠"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-枫桥夜泊"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01495",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "枫桥夜泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《枫桥夜泊》中\"姑苏城外寒山寺\"的后一句是？",
+      "answer": "夜半钟声到客船",
+      "keywords": [
+        {
+          "aliases": [
+            "夜半钟声到客船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-枫桥夜泊"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01496",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "枫桥夜泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《枫桥夜泊》中描写羁旅愁思的名句是？",
+      "answer": "月落乌啼霜满天，江枫渔火对愁眠。",
+      "keywords": [
+        {
+          "aliases": [
+            "月落乌啼霜满天",
+            "江枫渔火对愁眠"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-枫桥夜泊"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01497",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "枫桥夜泊"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《枫桥夜泊》",
+      "answer": "月落乌啼霜满天，江枫渔火对愁眠。姑苏城外寒山寺，夜半钟声到客船。",
+      "keywords": [
+        {
+          "aliases": [
+            "月落乌啼霜满天",
+            "江枫渔火对愁眠"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-枫桥夜泊"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01498",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "长相思·山一程"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《长相思·山一程》的作者及朝代是？",
+      "answer": "纳兰性德，清",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-长相思·山一程"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01499",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "长相思·山一程"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《长相思·山一程》中\"山一程，水一程\"的后一句是？",
+      "answer": "身向榆关那畔行",
+      "keywords": [
+        {
+          "aliases": [
+            "身向榆关那畔行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-长相思·山一程"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01500",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "长相思·山一程"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《长相思·山一程》中\"夜深千帐灯\"的上一句是？",
+      "answer": "身向榆关那畔行",
+      "keywords": [
+        {
+          "aliases": [
+            "身向榆关那畔行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-长相思·山一程"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01501",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "长相思·山一程"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《长相思·山一程》中\"风一更，雪一更\"的后一句是？",
+      "answer": "聒碎乡心梦不成",
+      "keywords": [
+        {
+          "aliases": [
+            "聒碎乡心梦不成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-长相思·山一程"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01502",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "长相思·山一程"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《长相思·山一程》中表达思乡之情的名句是？",
+      "answer": "聒碎乡心梦不成，故园无此声。",
+      "keywords": [
+        {
+          "aliases": [
+            "聒碎乡心梦不成",
+            "故园无此声"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-长相思·山一程"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01503",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "长相思·山一程"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《长相思·山一程》",
+      "answer": "山一程，水一程，身向榆关那畔行，夜深千帐灯。风一更，雪一更，聒碎乡心梦不成，故园无此声。",
+      "keywords": [
+        {
+          "aliases": [
+            "山一程",
+            "水一程"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-长相思·山一程"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01504",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "观书有感（其一）"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《观书有感（其一）》的作者及朝代是？",
+      "answer": "朱熹，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-观书有感（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01505",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "观书有感（其一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《观书有感（其一）》中\"半亩方塘一鉴开\"的后一句是？",
+      "answer": "天光云影共徘徊",
+      "keywords": [
+        {
+          "aliases": [
+            "天光云影共徘徊"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-观书有感（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01506",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "观书有感（其一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《观书有感（其一）》中\"问渠那得清如许\"的后一句是？",
+      "answer": "为有源头活水来",
+      "keywords": [
+        {
+          "aliases": [
+            "为有源头活水来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-观书有感（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01507",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "观书有感（其一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《观书有感（其一）》中蕴含\"不断学习才有新知识\"哲理的名句是？",
+      "answer": "问渠那得清如许？为有源头活水来。",
+      "keywords": [
+        {
+          "aliases": [
+            "问渠那得清如许？为有源头活水来。"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-观书有感（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01508",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "观书有感（其一）"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《观书有感（其一）》",
+      "answer": "半亩方塘一鉴开，天光云影共徘徊。问渠那得清如许？为有源头活水来。",
+      "keywords": [
+        {
+          "aliases": [
+            "半亩方塘一鉴开",
+            "天光云影共徘徊"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-观书有感（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01509",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "渔歌子"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《渔歌子》的作者及朝代是？",
+      "answer": "张志和，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-渔歌子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01510",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "渔歌子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《渔歌子》中\"西塞山前白鹭飞\"的后一句是？",
+      "answer": "桃花流水鳜鱼肥",
+      "keywords": [
+        {
+          "aliases": [
+            "桃花流水鳜鱼肥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-渔歌子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01511",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "渔歌子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《渔歌子》中\"青箬笠，绿蓑衣\"的后一句是？",
+      "answer": "斜风细雨不须归",
+      "keywords": [
+        {
+          "aliases": [
+            "斜风细雨不须归"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-渔歌子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01512",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "渔歌子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《渔歌子》中描写渔夫悠闲自得的名句是？",
+      "answer": "青箬笠，绿蓑衣，斜风细雨不须归。",
+      "keywords": [
+        {
+          "aliases": [
+            "青箬笠",
+            "绿蓑衣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-渔歌子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01513",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "渔歌子"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《渔歌子》",
+      "answer": "西塞山前白鹭飞，桃花流水鳜鱼肥。青箬笠，绿蓑衣，斜风细雨不须归。",
+      "keywords": [
+        {
+          "aliases": [
+            "西塞山前白鹭飞",
+            "桃花流水鳜鱼肥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-渔歌子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01514",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"敏而好学\"的后一句是？",
+      "answer": "不耻下问",
+      "keywords": [
+        {
+          "aliases": [
+            "不耻下问"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01515",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"读书破万卷\"的后一句是？",
+      "answer": "下笔如有神",
+      "keywords": [
+        {
+          "aliases": [
+            "下笔如有神"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  }
+]

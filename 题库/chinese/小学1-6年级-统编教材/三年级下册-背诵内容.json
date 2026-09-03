@@ -1,0 +1,2824 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00888",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：海里的动物，",
+      "answer": "各有各的活动方法",
+      "keywords": [
+        {
+          "aliases": [
+            "各有各的活动方法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00889",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：海参靠肌肉伸缩爬行，",
+      "answer": "每小时只能前进四米",
+      "keywords": [
+        {
+          "aliases": [
+            "每小时只能前进四米"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00890",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：有一种鱼身体像梭子，",
+      "answer": "每小时能游几十千米，攻击其他动物的时候，比普通的火车还快",
+      "keywords": [
+        {
+          "aliases": [
+            "每小时能游几十千米",
+            "攻击其他动物的时候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00891",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：乌贼和章鱼是怎样前进的？",
+      "answer": "能突然向前方喷水，利用水的反推力迅速后退",
+      "keywords": [
+        {
+          "aliases": [
+            "能突然向前方喷水",
+            "利用水的反推力迅速后退"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00892",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：还有些贝类自己不动，",
+      "answer": "却能巴在轮船底下做免费的长途旅行",
+      "keywords": [
+        {
+          "aliases": [
+            "却能巴在轮船底下做免费的长途旅行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00893",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"免费的长途旅行\"写出了贝类怎样的活动方式？",
+      "answer": "贝类借助轮船四处活动，好像搭便车旅行，生动有趣",
+      "keywords": [
+        {
+          "aliases": [
+            "贝类借助轮船四处活动",
+            "好像搭便车旅行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00894",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：海底的植物差异也很大，",
+      "answer": "它们的色彩多种多样，有褐色的，有紫色的，还有红色的",
+      "keywords": [
+        {
+          "aliases": [
+            "它们的色彩多种多样",
+            "有褐色的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00895",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：最小的单细胞海藻，",
+      "answer": "要用显微镜才能看清楚",
+      "keywords": [
+        {
+          "aliases": [
+            "要用显微镜才能看清楚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00896",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：晚饭过后，",
+      "answer": "火烧云上来了",
+      "keywords": [
+        {
+          "aliases": [
+            "火烧云上来了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00897",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：天上的云从西边一直烧到东边，",
+      "answer": "红彤彤的，好像是天空着了火",
+      "keywords": [
+        {
+          "aliases": [
+            "红彤彤的",
+            "好像是天空着了火"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00898",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "课文理解：霞光下，哪几种动物变成了什么颜色？",
+      "answer": "大白狗变红，红公鸡变金，黑母鸡变紫檀色，小白猪变小金猪",
+      "keywords": [
+        {
+          "aliases": [
+            "大白狗变红",
+            "红公鸡变金"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00899",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：为什么叫\"火烧云\"？",
+      "answer": "因为天上的云从西边一直烧到东边，红彤彤的，好像是天空着了火",
+      "keywords": [
+        {
+          "aliases": [
+            "因为天上的云从西边一直烧到东边",
+            "红彤彤的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00900",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "绝句"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《绝句》（迟日江山丽）的作者及朝代是？",
+      "answer": "杜甫，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-绝句"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00901",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：杜甫被人们称为？",
+      "answer": "诗圣",
+      "keywords": [
+        {
+          "aliases": [
+            "诗圣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00902",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：迟日江山丽，",
+      "answer": "春风花草香",
+      "keywords": [
+        {
+          "aliases": [
+            "春风花草香"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00903",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "绝句"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《绝句》中\"泥融飞燕子\"的后一句是？",
+      "answer": "沙暖睡鸳鸯",
+      "keywords": [
+        {
+          "aliases": [
+            "沙暖睡鸳鸯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-绝句"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00904",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "绝句"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：《绝句》中写燕子筑巢、鸳鸯安睡春日图景的句子是？",
+      "answer": "泥融飞燕子，沙暖睡鸳鸯。",
+      "keywords": [
+        {
+          "aliases": [
+            "泥融飞燕子",
+            "沙暖睡鸳鸯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-绝句"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00905",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "绝句"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《绝句》",
+      "answer": "迟日江山丽，春风花草香。泥融飞燕子，沙暖睡鸳鸯。",
+      "keywords": [
+        {
+          "aliases": [
+            "迟日江山丽",
+            "春风花草香"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-绝句"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00906",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "惠崇春江晚景"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《惠崇春江晚景》的作者及朝代是？",
+      "answer": "苏轼，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-惠崇春江晚景"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00907",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：诗中的\"惠崇\"是什么人？",
+      "answer": "北宋著名僧人、画家，（这幅《春江晚景》图是惠崇画的）",
+      "keywords": [
+        {
+          "aliases": [
+            "北宋著名僧人、画家",
+            "（这幅《春江晚景》图是惠崇画的）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00908",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：竹外桃花三两枝，",
+      "answer": "春江水暖鸭先知",
+      "keywords": [
+        {
+          "aliases": [
+            "春江水暖鸭先知"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00909",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "惠崇春江晚景"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《惠崇春江晚景》中\"蒌蒿满地芦芽短\"的后一句是？",
+      "answer": "正是河豚欲上时",
+      "keywords": [
+        {
+          "aliases": [
+            "正是河豚欲上时"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-惠崇春江晚景"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00910",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：诗中最能表现\"春江水暖\"、先知春意的名句是？",
+      "answer": "春江水暖鸭先知。",
+      "keywords": [
+        {
+          "aliases": [
+            "春江水暖鸭先知。"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00911",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "惠崇春江晚景"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《惠崇春江晚景》",
+      "answer": "竹外桃花三两枝，春江水暖鸭先知。蒌蒿满地芦芽短，正是河豚欲上时。",
+      "keywords": [
+        {
+          "aliases": [
+            "竹外桃花三两枝",
+            "春江水暖鸭先知"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-惠崇春江晚景"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00912",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "三衢道中"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《三衢道中》的作者及朝代是？",
+      "answer": "曾几，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-三衢道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00913",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：诗题中的\"三衢\"指的是哪里？",
+      "answer": "今浙江衢州一带（三衢山）",
+      "keywords": [
+        {
+          "aliases": [
+            "今浙江衢州一带（三衢山）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00914",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：梅子黄时日日晴，",
+      "answer": "小溪泛尽却山行",
+      "keywords": [
+        {
+          "aliases": [
+            "小溪泛尽却山行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00915",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "三衢道中"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《三衢道中》中\"绿阴不减来时路\"的后一句是？",
+      "answer": "添得黄鹂四五声",
+      "keywords": [
+        {
+          "aliases": [
+            "添得黄鹂四五声"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-三衢道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00916",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"绿阴不减来时路，添得黄鹂四五声\"中的\"添得\"写出了什么？",
+      "answer": "山路上传来黄鹂的叫声，给旅途增添了快乐（表现诗人愉快的心情）",
+      "keywords": [
+        {
+          "aliases": [
+            "山路上传来黄鹂的叫声",
+            "给旅途增添了快乐（表现诗人愉快的心情）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00917",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "三衢道中"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《三衢道中》",
+      "answer": "梅子黄时日日晴，小溪泛尽却山行。绿阴不减来时路，添得黄鹂四五声。",
+      "keywords": [
+        {
+          "aliases": [
+            "梅子黄时日日晴",
+            "小溪泛尽却山行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-三衢道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00918",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "元日"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《元日》的作者及朝代是？",
+      "answer": "王安石，宋（北宋）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-元日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00919",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：\"元日\"指的是什么节日？",
+      "answer": "春节（农历正月初一）",
+      "keywords": [
+        {
+          "aliases": [
+            "春节（农历正月初一）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00920",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：爆竹声中一岁除，",
+      "answer": "春风送暖入屠苏",
+      "keywords": [
+        {
+          "aliases": [
+            "春风送暖入屠苏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00921",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "元日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《元日》中\"千门万户曈曈日\"的后一句是？",
+      "answer": "总把新桃换旧符",
+      "keywords": [
+        {
+          "aliases": [
+            "总把新桃换旧符"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-元日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00922",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"总把新桃换旧符\"写的是哪种习俗？",
+      "answer": "春节换桃符的习俗（象征除旧迎新）",
+      "keywords": [
+        {
+          "aliases": [
+            "春节换桃符的习俗（象征除旧迎新）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00923",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "元日"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《元日》",
+      "answer": "爆竹声中一岁除，春风送暖入屠苏。千门万户曈曈日，总把新桃换旧符。",
+      "keywords": [
+        {
+          "aliases": [
+            "爆竹声中一岁除",
+            "春风送暖入屠苏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-元日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00924",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "清明"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《清明》的作者及朝代是？",
+      "answer": "杜牧，唐（晚唐）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-清明"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00925",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：\"清明\"是什么？",
+      "answer": "二十四节气之一，也是纪念先人、踏青的节日",
+      "keywords": [
+        {
+          "aliases": [
+            "二十四节气之一",
+            "也是纪念先人、踏青的节日"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00926",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：清明时节雨纷纷，",
+      "answer": "路上行人欲断魂",
+      "keywords": [
+        {
+          "aliases": [
+            "路上行人欲断魂"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00927",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "清明"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《清明》中\"借问酒家何处有\"的后一句是？",
+      "answer": "牧童遥指杏花村",
+      "keywords": [
+        {
+          "aliases": [
+            "牧童遥指杏花村"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-清明"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00928",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"路上行人欲断魂\"写出了行人怎样的心情？",
+      "answer": "清明时节思念亲人、心情忧伤",
+      "keywords": [
+        {
+          "aliases": [
+            "清明时节思念亲人、心情忧伤"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00929",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "清明"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《清明》",
+      "answer": "清明时节雨纷纷，路上行人欲断魂。借问酒家何处有？牧童遥指杏花村。",
+      "keywords": [
+        {
+          "aliases": [
+            "清明时节雨纷纷",
+            "路上行人欲断魂"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-清明"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00930",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "九月九日忆山东兄弟"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《九月九日忆山东兄弟》的作者及朝代是？",
+      "answer": "王维，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-九月九日忆山东兄弟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00931",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：王维被人们称为？",
+      "answer": "诗佛（他的诗\"诗中有画\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "诗佛（他的诗\"诗中有画\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00932",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：\"九月九日\"是什么节日？",
+      "answer": "重阳节",
+      "keywords": [
+        {
+          "aliases": [
+            "重阳节"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00933",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：独在异乡为异客，",
+      "answer": "每逢佳节倍思亲",
+      "keywords": [
+        {
+          "aliases": [
+            "每逢佳节倍思亲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00934",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "九月九日忆山东兄弟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《九月九日忆山东兄弟》中\"遥知兄弟登高处\"的后一句是？",
+      "answer": "遍插茱萸少一人",
+      "keywords": [
+        {
+          "aliases": [
+            "遍插茱萸少一人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-九月九日忆山东兄弟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00935",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：表达游子节日思念亲人的千古名句是？",
+      "answer": "独在异乡为异客，每逢佳节倍思亲。",
+      "keywords": [
+        {
+          "aliases": [
+            "独在异乡为异客",
+            "每逢佳节倍思亲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00936",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "九月九日忆山东兄弟"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《九月九日忆山东兄弟》",
+      "answer": "独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。",
+      "keywords": [
+        {
+          "aliases": [
+            "独在异乡为异客",
+            "每逢佳节倍思亲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-九月九日忆山东兄弟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00937",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "忆江南"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《忆江南》的作者及朝代是？",
+      "answer": "白居易，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-忆江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00938",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "忆江南"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《忆江南》的体裁是什么？",
+      "answer": "词（\"忆江南\"是词牌名）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-忆江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00939",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：江南好，",
+      "answer": "风景旧曾谙",
+      "keywords": [
+        {
+          "aliases": [
+            "风景旧曾谙"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00940",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "忆江南"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《忆江南》中\"日出江花红胜火\"的后一句是？",
+      "answer": "春来江水绿如蓝",
+      "keywords": [
+        {
+          "aliases": [
+            "春来江水绿如蓝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-忆江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00941",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "忆江南"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：《忆江南》中写江南春景色彩明丽的名句是？",
+      "answer": "日出江花红胜火，春来江水绿如蓝。",
+      "keywords": [
+        {
+          "aliases": [
+            "日出江花红胜火",
+            "春来江水绿如蓝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-忆江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00942",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "忆江南"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《忆江南》",
+      "answer": "江南好，风景旧曾谙。日出江花红胜火，春来江水绿如蓝。能不忆江南？",
+      "keywords": [
+        {
+          "aliases": [
+            "江南好",
+            "风景旧曾谙"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-忆江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00943",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "滁州西涧"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《滁州西涧》的作者及朝代是？",
+      "answer": "韦应物，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-滁州西涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00944",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：独怜幽草涧边生，",
+      "answer": "上有黄鹂深树鸣",
+      "keywords": [
+        {
+          "aliases": [
+            "上有黄鹂深树鸣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00945",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "滁州西涧"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《滁州西涧》中\"春潮带雨晚来急\"的后一句是？",
+      "answer": "野渡无人舟自横",
+      "keywords": [
+        {
+          "aliases": [
+            "野渡无人舟自横"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-滁州西涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00946",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"野渡无人舟自横\"描绘了一幅怎样的画面？",
+      "answer": "傍晚渡口静悄悄没有人，一只小船随意横在水面上（一幅幽静恬淡的山水画）",
+      "keywords": [
+        {
+          "aliases": [
+            "傍晚渡口静悄悄没有人",
+            "一只小船随意横在水面上（一幅幽静恬淡的山水画）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00947",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "滁州西涧"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《滁州西涧》",
+      "answer": "独怜幽草涧边生，上有黄鹂深树鸣。春潮带雨晚来急，野渡无人舟自横。",
+      "keywords": [
+        {
+          "aliases": [
+            "独怜幽草涧边生",
+            "上有黄鹂深树鸣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-滁州西涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00948",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "大林寺桃花"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《大林寺桃花》的作者及朝代是？",
+      "answer": "白居易，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-大林寺桃花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00949",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：诗中的大林寺在哪里？",
+      "answer": "庐山",
+      "keywords": [
+        {
+          "aliases": [
+            "庐山"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00950",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：人间四月芳菲尽，",
+      "answer": "山寺桃花始盛开",
+      "keywords": [
+        {
+          "aliases": [
+            "山寺桃花始盛开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00951",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "大林寺桃花"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：《大林寺桃花》中\"长恨春归无觅处\"的后一句是？",
+      "answer": "不知转入此中来",
+      "keywords": [
+        {
+          "aliases": [
+            "不知转入此中来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-大林寺桃花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00952",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"人间四月芳菲尽，山寺桃花始盛开\"蕴含了什么地理知识？",
+      "answer": "山上地势高、气温低，花开得晚（春天在高山上还有）",
+      "keywords": [
+        {
+          "aliases": [
+            "山上地势高、气温低",
+            "花开得晚（春天在高山上还有）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00953",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "大林寺桃花"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《大林寺桃花》",
+      "answer": "人间四月芳菲尽，山寺桃花始盛开。长恨春归无觅处，不知转入此中来。",
+      "keywords": [
+        {
+          "aliases": [
+            "人间四月芳菲尽",
+            "山寺桃花始盛开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-大林寺桃花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00954",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "守株待兔"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《守株待兔》选自哪部书？",
+      "answer": "《韩非子·五蠹》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-守株待兔"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00955",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：韩非是哪个学派的代表？",
+      "answer": "法家（战国末期思想家）",
+      "keywords": [
+        {
+          "aliases": [
+            "法家（战国末期思想家）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00956",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文言文理解：\"兔走触株\"中\"走\"的意思是什么？",
+      "answer": "跑（古文中\"走\"指跑）",
+      "keywords": [
+        {
+          "aliases": [
+            "跑（古文中\"走\"指跑）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00957",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文言文理解：农民为什么放下农具守在树桩旁？",
+      "answer": "因释其耒而守株，冀复得兔（希望再捡到撞死的兔子）",
+      "keywords": [
+        {
+          "aliases": [
+            "因释其耒而守株",
+            "冀复得兔（希望再捡到撞死的兔子）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00958",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：兔走触株，",
+      "answer": "折颈而死",
+      "keywords": [
+        {
+          "aliases": [
+            "折颈而死"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00959",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全：因释其耒而守株，",
+      "answer": "冀复得兔",
+      "keywords": [
+        {
+          "aliases": [
+            "冀复得兔"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00960",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文言文理解：故事的结局是怎样的？",
+      "answer": "兔不可复得，而身为宋国笑（兔子没等到，自己反被宋国人笑话）",
+      "keywords": [
+        {
+          "aliases": [
+            "兔不可复得",
+            "而身为宋国笑（兔子没等到"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00961",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：成语\"守株待兔\"现在比喻什么？",
+      "answer": "死守经验、不知变通，妄想不劳而获",
+      "keywords": [
+        {
+          "aliases": [
+            "死守经验、不知变通",
+            "妄想不劳而获"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00962",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "守株待兔"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "整篇默写：默写《守株待兔》",
+      "answer": "宋人有耕者。田中有株。兔走触株，折颈而死。因释其耒而守株，冀复得兔。兔不可复得，而身为宋国笑。",
+      "keywords": [
+        {
+          "aliases": [
+            "宋人有耕者",
+            "田中有株"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-守株待兔"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00963",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语题：语文园地二日积月累中的九个寓言成语是？",
+      "answer": "邯郸学步、滥竽充数、掩耳盗铃、自相矛盾、刻舟求剑、画蛇添足、杞人忧天、井底之蛙、杯弓蛇影",
+      "keywords": [
+        {
+          "aliases": [
+            "邯郸学步、滥竽充数、掩耳盗铃、自相矛盾、刻舟求剑、画蛇添足、杞人忧天、井底之蛙、杯弓蛇影"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00964",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语出处：\"滥竽充数\"出自哪部书？",
+      "answer": "《韩非子》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00965",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语出处：\"自相矛盾\"出自哪部书？",
+      "answer": "《韩非子》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00966",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语出处：\"刻舟求剑\"出自哪部书？",
+      "answer": "《吕氏春秋》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00967",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语出处：\"画蛇添足\"出自哪部书？",
+      "answer": "《战国策》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00968",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语出处：\"邯郸学步\"出自哪部书？",
+      "answer": "《庄子》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00969",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语理解：\"掩耳盗铃\"比喻什么？",
+      "answer": "自己欺骗自己（明明掩盖不住，偏要自己想办法掩饰）",
+      "keywords": [
+        {
+          "aliases": [
+            "自己欺骗自己（明明掩盖不住",
+            "偏要自己想办法掩饰）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00970",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "成语理解：\"杯弓蛇影\"比喻什么？",
+      "answer": "疑神疑鬼、自己吓自己（因多疑而自相惊扰）",
+      "keywords": [
+        {
+          "aliases": [
+            "疑神疑鬼、自己吓自己（因多疑而自相惊扰）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00971",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全歇后语：小葱拌豆腐，",
+      "answer": "一清（青）二白",
+      "keywords": [
+        {
+          "aliases": [
+            "一清（青）二白"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00972",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全歇后语：竹篮子打水，",
+      "answer": "一场空",
+      "keywords": [
+        {
+          "aliases": [
+            "一场空"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00973",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全歇后语：芝麻开花，",
+      "answer": "节节高",
+      "keywords": [
+        {
+          "aliases": [
+            "节节高"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00974",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "补全歇后语：十五个吊桶打水，",
+      "answer": "七上八下",
+      "keywords": [
+        {
+          "aliases": [
+            "七上八下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00975",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "歇后语理解：用哪个歇后语形容做事清清楚楚、明明白白？",
+      "answer": "小葱拌豆腐——一清（青）二白",
+      "keywords": [
+        {
+          "aliases": [
+            "小葱拌豆腐——一清（青）二白"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00976",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "3年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "歇后语理解：用哪个歇后语形容心情慌慌张张、心神不定？",
+      "answer": "十五个吊桶打水——七上八下",
+      "keywords": [
+        {
+          "aliases": [
+            "十五个吊桶打水——七上八下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  }
+]

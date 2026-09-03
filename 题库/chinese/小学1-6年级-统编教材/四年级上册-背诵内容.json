@@ -1,0 +1,2364 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01063",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：那条白线很快地向我们移来，",
+      "answer": "逐渐拉长，变粗，横贯江面",
+      "keywords": [
+        {
+          "aliases": [
+            "逐渐拉长",
+            "变粗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01064",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：再近些，只见白浪翻滚，",
+      "answer": "形成一堵两丈多高的水墙",
+      "keywords": [
+        {
+          "aliases": [
+            "形成一堵两丈多高的水墙"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01065",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：浪潮越来越近，犹如千万匹白色战马齐头并进，",
+      "answer": "浩浩荡荡地飞奔而来；那声音如同山崩地裂，好像大地都被震得颤动起来",
+      "keywords": [
+        {
+          "aliases": [
+            "浩浩荡荡地飞奔而来",
+            "那声音如同山崩地裂"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01066",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "课文理解：浪潮来时的声音是怎样的？",
+      "answer": "那声音如同山崩地裂，好像大地都被震得颤动起来",
+      "keywords": [
+        {
+          "aliases": [
+            "那声音如同山崩地裂",
+            "好像大地都被震得颤动起来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01067",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "观潮"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《观潮》第3-4自然段",
+      "answer": "那条白线很快地向我们移来，逐渐拉长，变粗，横贯江面。再近些，只见白浪翻滚，形成一堵两丈多高的水墙。浪潮越来越近，犹如千万匹白色战马齐头并进，浩浩荡荡地飞奔而来；那声音如同山崩地裂，好像大地都被震得颤动起来。霎时，潮头奔腾西去，可是余波还在漫天卷地般涌来，江面上依旧风号浪吼。过了好久，钱塘江才恢复了平静。",
+      "keywords": [
+        {
+          "aliases": [
+            "那条白线很快地向我们移来",
+            "逐渐拉长"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-观潮"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01068",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：细细的溪水，",
+      "answer": "流着山草和野花的香味，流着月光",
+      "keywords": [
+        {
+          "aliases": [
+            "流着山草和野花的香味",
+            "流着月光"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01069",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：灰白色的鹅卵石，",
+      "answer": "布满河床",
+      "keywords": [
+        {
+          "aliases": [
+            "布满河床"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01070",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：哟，卵石间有多少可爱的小水塘啊，",
+      "answer": "每个小水塘都抱着一个月亮",
+      "keywords": [
+        {
+          "aliases": [
+            "每个小水塘都抱着一个月亮"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01071",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：哦，阿妈，白天你在溪里洗衣裳，",
+      "answer": "而我，用树叶做小船，运载许多新鲜的花瓣",
+      "keywords": [
+        {
+          "aliases": [
+            "而我",
+            "用树叶做小船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01072",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "走月亮"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《走月亮》第4自然段",
+      "answer": "细细的溪水，流着山草和野花的香味，流着月光。灰白色的鹅卵石，布满河床。哟，卵石间有多少可爱的小水塘啊，每个小水塘都抱着一个月亮！",
+      "keywords": [
+        {
+          "aliases": [
+            "细细的溪水",
+            "流着山草和野花的香味"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-走月亮"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01073",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "秋晚的江上"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《秋晚的江上》的作者是？",
+      "answer": "刘大白",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋晚的江上"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01074",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：归巢的鸟儿，尽管是倦了，",
+      "answer": "还驮着斜阳回去",
+      "keywords": [
+        {
+          "aliases": [
+            "还驮着斜阳回去"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01075",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：双翅一翻，把斜阳掉在江上；",
+      "answer": "头白的芦苇，也妆成一瞬的红颜了",
+      "keywords": [
+        {
+          "aliases": [
+            "头白的芦苇",
+            "也妆成一瞬的红颜了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01076",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "秋晚的江上"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《秋晚的江上》",
+      "answer": "归巢的鸟儿，尽管是倦了，还驮着斜阳回去。双翅一翻，把斜阳掉在江上；头白的芦苇，也妆成一瞬的红颜了。",
+      "keywords": [
+        {
+          "aliases": [
+            "归巢的鸟儿",
+            "尽管是倦了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋晚的江上"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01077",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "花牛歌"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《花牛歌》的作者是？",
+      "answer": "徐志摩",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-花牛歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01078",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：花牛在草地里坐，",
+      "answer": "压扁了一穗剪秋萝",
+      "keywords": [
+        {
+          "aliases": [
+            "压扁了一穗剪秋萝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01079",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：花牛在草地里眠，",
+      "answer": "白云霸占了半个天",
+      "keywords": [
+        {
+          "aliases": [
+            "白云霸占了半个天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01080",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：花牛在草地里走，",
+      "answer": "小尾巴甩得的溜溜",
+      "keywords": [
+        {
+          "aliases": [
+            "小尾巴甩得的溜溜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01081",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：花牛在草地里做梦，",
+      "answer": "太阳偷渡了西山的青峰",
+      "keywords": [
+        {
+          "aliases": [
+            "太阳偷渡了西山的青峰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01082",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "花牛歌"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《花牛歌》",
+      "answer": "花牛在草地里坐，压扁了一穗剪秋萝。花牛在草地里眠，白云霸占了半个天。花牛在草地里走，小尾巴甩得的溜溜。花牛在草地里做梦，太阳偷渡了西山的青峰。",
+      "keywords": [
+        {
+          "aliases": [
+            "花牛在草地里坐",
+            "压扁了一穗剪秋萝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-花牛歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01083",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "繁星"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《繁星》的作者是？",
+      "answer": "巴金",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-繁星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01084",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：我爱月夜，但我也爱星天。从前在家乡，七八月的夜晚，在庭院里纳凉的时候，",
+      "answer": "我最爱看天上密密麻麻的繁星",
+      "keywords": [
+        {
+          "aliases": [
+            "我最爱看天上密密麻麻的繁星"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01085",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：望着星天，我就会忘记一切，",
+      "answer": "仿佛回到了母亲的怀里似的",
+      "keywords": [
+        {
+          "aliases": [
+            "仿佛回到了母亲的怀里似的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01086",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：为什么说\"望着星天，我就会忘记一切，仿佛回到了母亲的怀里似的\"？",
+      "answer": "星星给作者带来温暖与亲切的感觉，像回到母亲怀抱一样安宁",
+      "keywords": [
+        {
+          "aliases": [
+            "星星给作者带来温暖与亲切的感觉",
+            "像回到母亲怀抱一样安宁"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01087",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "繁星"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《繁星》第1自然段",
+      "answer": "我爱月夜，但我也爱星天。从前在家乡，七八月的夜晚，在庭院里纳凉的时候，我最爱看天上密密麻麻的繁星。望着星天，我就会忘记一切，仿佛回到了母亲的怀里似的。",
+      "keywords": [
+        {
+          "aliases": [
+            "我爱月夜",
+            "但我也爱星天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-繁星"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01088",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：爬山虎的叶子绿得那么新鲜，看着非常舒服。叶尖一顺儿朝下，在墙上铺得那么均匀，",
+      "answer": "没有重叠起来的，也不留一点儿空隙",
+      "keywords": [
+        {
+          "aliases": [
+            "没有重叠起来的",
+            "也不留一点儿空隙"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01089",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：一阵风拂过，一墙的叶子就漾起波纹，",
+      "answer": "好看得很",
+      "keywords": [
+        {
+          "aliases": [
+            "好看得很"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01090",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：爬山虎的脚长在茎上。茎上长叶柄的地方，反面伸出枝状的六七根细丝，",
+      "answer": "每根细丝像蜗牛的触角",
+      "keywords": [
+        {
+          "aliases": [
+            "每根细丝像蜗牛的触角"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01091",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "爬山虎的脚"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《爬山虎的脚》第3自然段",
+      "answer": "爬山虎的脚长在茎上。茎上长叶柄的地方，反面伸出枝状的六七根细丝，每根细丝像蜗牛的触角。细丝跟新叶子一样，也是嫩红的。这就是爬山虎的脚。",
+      "keywords": [
+        {
+          "aliases": [
+            "爬山虎的脚长在茎上",
+            "茎上长叶柄的地方"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-爬山虎的脚"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01092",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：居住在草地上的蟋蟀，差不多和蝉一样有名。它的出名不光由于它的唱歌，",
+      "answer": "还由于它的住宅",
+      "keywords": [
+        {
+          "aliases": [
+            "还由于它的住宅"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01093",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：蟋蟀和它们不同，",
+      "answer": "不肯随遇而安",
+      "keywords": [
+        {
+          "aliases": [
+            "不肯随遇而安"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01094",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：它常常慎重地选择住址，",
+      "answer": "一定要排水优良，并且有温和的阳光",
+      "keywords": [
+        {
+          "aliases": [
+            "一定要排水优良",
+            "并且有温和的阳光"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01095",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "蟋蟀的住宅"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《蟋蟀的住宅》第2自然段",
+      "answer": "别的昆虫大多在临时的隐蔽所藏身。它们的隐蔽所得来不费功夫，弃去毫不可惜。蟋蟀和它们不同，不肯随遇而安。它常常慎重地选择住址，一定要排水优良，并且有温和的阳光。",
+      "keywords": [
+        {
+          "aliases": [
+            "别的昆虫大多在临时的隐蔽所藏身",
+            "它们的隐蔽所得来不费功夫"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-蟋蟀的住宅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01096",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "题西林壁"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题西林壁》的作者及朝代是？",
+      "answer": "苏轼，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-题西林壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01097",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "题西林壁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题西林壁》中\"横看成岭侧成峰\"的后一句是？",
+      "answer": "远近高低各不同",
+      "keywords": [
+        {
+          "aliases": [
+            "远近高低各不同"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-题西林壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01098",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "题西林壁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题西林壁》中\"不识庐山真面目\"的后一句是？",
+      "answer": "只缘身在此山中",
+      "keywords": [
+        {
+          "aliases": [
+            "只缘身在此山中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-题西林壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01099",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "题西林壁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《题西林壁》中蕴含哲理的名句是？",
+      "answer": "不识庐山真面目，只缘身在此山中。",
+      "keywords": [
+        {
+          "aliases": [
+            "不识庐山真面目",
+            "只缘身在此山中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-题西林壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01100",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "题西林壁"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《题西林壁》",
+      "answer": "横看成岭侧成峰，远近高低各不同。不识庐山真面目，只缘身在此山中。",
+      "keywords": [
+        {
+          "aliases": [
+            "横看成岭侧成峰",
+            "远近高低各不同"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-题西林壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01101",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "游山西村"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游山西村》的作者及朝代是？",
+      "answer": "陆游，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游山西村"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01102",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "游山西村"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游山西村》中\"莫笑农家腊酒浑\"的后一句是？",
+      "answer": "丰年留客足鸡豚",
+      "keywords": [
+        {
+          "aliases": [
+            "丰年留客足鸡豚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游山西村"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01103",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "游山西村"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游山西村》中\"山重水复疑无路\"的后一句是？",
+      "answer": "柳暗花明又一村",
+      "keywords": [
+        {
+          "aliases": [
+            "柳暗花明又一村"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游山西村"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01104",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "游山西村"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游山西村》中蕴含\"绝处逢生\"哲理的名句是？",
+      "answer": "山重水复疑无路，柳暗花明又一村。",
+      "keywords": [
+        {
+          "aliases": [
+            "山重水复疑无路",
+            "柳暗花明又一村"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游山西村"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01105",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "游山西村"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《游山西村》",
+      "answer": "莫笑农家腊酒浑，丰年留客足鸡豚。山重水复疑无路，柳暗花明又一村。箫鼓追随春社近，衣冠简朴古风存。从今若许闲乘月，拄杖无时夜叩门。",
+      "keywords": [
+        {
+          "aliases": [
+            "莫笑农家腊酒浑",
+            "丰年留客足鸡豚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游山西村"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01106",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "过故人庄"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《过故人庄》的作者及朝代是？",
+      "answer": "孟浩然，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-过故人庄"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01107",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "过故人庄"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《过故人庄》中\"故人具鸡黍\"的后一句是？",
+      "answer": "邀我至田家",
+      "keywords": [
+        {
+          "aliases": [
+            "邀我至田家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-过故人庄"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01108",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "过故人庄"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《过故人庄》中\"绿树村边合\"的后一句是？",
+      "answer": "青山郭外斜",
+      "keywords": [
+        {
+          "aliases": [
+            "青山郭外斜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-过故人庄"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01109",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "过故人庄"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《过故人庄》中\"待到重阳日\"的后一句是？",
+      "answer": "还来就菊花",
+      "keywords": [
+        {
+          "aliases": [
+            "还来就菊花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-过故人庄"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01110",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "过故人庄"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《过故人庄》",
+      "answer": "故人具鸡黍，邀我至田家。绿树村边合，青山郭外斜。开轩面场圃，把酒话桑麻。待到重阳日，还来就菊花。",
+      "keywords": [
+        {
+          "aliases": [
+            "故人具鸡黍",
+            "邀我至田家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-过故人庄"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01111",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "精卫填海"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《精卫填海》选自哪部著作？",
+      "answer": "《山海经》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-精卫填海"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01112",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "精卫填海"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《精卫填海》中\"炎帝之少女\"的后一句是？",
+      "answer": "名曰女娃",
+      "keywords": [
+        {
+          "aliases": [
+            "名曰女娃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-精卫填海"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01113",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "精卫填海"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《精卫填海》中\"女娃游于东海\"的后一句是？",
+      "answer": "溺而不返",
+      "keywords": [
+        {
+          "aliases": [
+            "溺而不返"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-精卫填海"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01114",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "精卫填海"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《精卫填海》中精卫为什么要\"常衔西山之木石\"？",
+      "answer": "要把东海填平（以堙于东海）",
+      "keywords": [
+        {
+          "aliases": [
+            "要把东海填平（以堙于东海）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-精卫填海"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01115",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "精卫填海"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《精卫填海》",
+      "answer": "炎帝之少女，名曰女娃。女娃游于东海，溺而不返，故为精卫，常衔西山之木石，以堙于东海。",
+      "keywords": [
+        {
+          "aliases": [
+            "炎帝之少女",
+            "名曰女娃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-精卫填海"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01116",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "王戎不取道旁李"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《王戎不取道旁李》选自哪部著作？",
+      "answer": "《世说新语》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-王戎不取道旁李"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01117",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "王戎不取道旁李"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《王戎不取道旁李》中\"王戎七岁\"的后一句是？",
+      "answer": "尝与诸小儿游",
+      "keywords": [
+        {
+          "aliases": [
+            "尝与诸小儿游"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-王戎不取道旁李"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01118",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "王戎不取道旁李"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《王戎不取道旁李》中\"诸儿竞走取之\"的后一句是？",
+      "answer": "唯戎不动",
+      "keywords": [
+        {
+          "aliases": [
+            "唯戎不动"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-王戎不取道旁李"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01119",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "王戎不取道旁李"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《王戎不取道旁李》中王戎为什么不取道旁李？",
+      "answer": "树在道边而多子，此必苦李",
+      "keywords": [
+        {
+          "aliases": [
+            "树在道边而多子",
+            "此必苦李"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-王戎不取道旁李"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01120",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "王戎不取道旁李"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《王戎不取道旁李》",
+      "answer": "王戎七岁，尝与诸小儿游。看道边李树多子折枝，诸儿竞走取之，唯戎不动。人问之，答曰：\"树在道边而多子，此必苦李。\"取之，信然。",
+      "keywords": [
+        {
+          "aliases": [
+            "王戎七岁",
+            "尝与诸小儿游"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-王戎不取道旁李"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01121",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "鹿柴"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鹿柴》的作者及朝代是？",
+      "answer": "王维，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鹿柴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01122",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "鹿柴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鹿柴》中\"空山不见人\"的后一句是？",
+      "answer": "但闻人语响",
+      "keywords": [
+        {
+          "aliases": [
+            "但闻人语响"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鹿柴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01123",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "鹿柴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鹿柴》中\"返景入深林\"的后一句是？",
+      "answer": "复照青苔上",
+      "keywords": [
+        {
+          "aliases": [
+            "复照青苔上"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鹿柴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01124",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "鹿柴"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《鹿柴》",
+      "answer": "空山不见人，但闻人语响。返景入深林，复照青苔上。",
+      "keywords": [
+        {
+          "aliases": [
+            "空山不见人",
+            "但闻人语响"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鹿柴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01125",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "浪淘沙（其一）"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙（其一）》的作者及朝代是？",
+      "answer": "刘禹锡，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01126",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "浪淘沙（其一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙（其一）》中\"九曲黄河万里沙\"的后一句是？",
+      "answer": "浪淘风簸自天涯",
+      "keywords": [
+        {
+          "aliases": [
+            "浪淘风簸自天涯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01127",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "浪淘沙（其一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙（其一）》中\"如今直上银河去\"的后一句是？",
+      "answer": "同到牵牛织女家",
+      "keywords": [
+        {
+          "aliases": [
+            "同到牵牛织女家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01128",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "浪淘沙（其一）"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《浪淘沙（其一）》",
+      "answer": "九曲黄河万里沙，浪淘风簸自天涯。如今直上银河去，同到牵牛织女家。",
+      "keywords": [
+        {
+          "aliases": [
+            "九曲黄河万里沙",
+            "浪淘风簸自天涯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙（其一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01129",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "江南春"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江南春》的作者及朝代是？",
+      "answer": "杜牧，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南春"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01130",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "江南春"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江南春》中\"千里莺啼绿映红\"的后一句是？",
+      "answer": "水村山郭酒旗风",
+      "keywords": [
+        {
+          "aliases": [
+            "水村山郭酒旗风"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南春"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01131",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "江南春"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江南春》中\"南朝四百八十寺\"的后一句是？",
+      "answer": "多少楼台烟雨中",
+      "keywords": [
+        {
+          "aliases": [
+            "多少楼台烟雨中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南春"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01132",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "江南春"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《江南春》",
+      "answer": "千里莺啼绿映红，水村山郭酒旗风。南朝四百八十寺，多少楼台烟雨中。",
+      "keywords": [
+        {
+          "aliases": [
+            "千里莺啼绿映红",
+            "水村山郭酒旗风"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南春"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01133",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "书湖阴先生壁"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书湖阴先生壁》的作者及朝代是？",
+      "answer": "王安石，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书湖阴先生壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01134",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "书湖阴先生壁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书湖阴先生壁》中\"茅檐长扫净无苔\"的后一句是？",
+      "answer": "花木成畦手自栽",
+      "keywords": [
+        {
+          "aliases": [
+            "花木成畦手自栽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书湖阴先生壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01135",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "书湖阴先生壁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书湖阴先生壁》中\"一水护田将绿绕\"的后一句是？",
+      "answer": "两山排闼送青来",
+      "keywords": [
+        {
+          "aliases": [
+            "两山排闼送青来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书湖阴先生壁"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01136",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "4年级a册",
+    "knowledge_points": [
+      "书湖阴先生壁"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《书湖阴先生壁》",
+      "answer": "茅檐长扫净无苔，花木成畦手自栽。一水护田将绿绕，两山排闼送青来。",
+      "keywords": [
+        {
+          "aliases": [
+            "茅檐长扫净无苔",
+            "花木成畦手自栽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书湖阴先生壁"
+    }
+  }
+]

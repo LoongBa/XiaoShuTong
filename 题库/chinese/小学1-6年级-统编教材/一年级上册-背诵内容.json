@@ -1,0 +1,1508 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00001",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "金木水火土"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《金木水火土》中\"一二三四五\"的后一句是？",
+      "answer": "金木水火土",
+      "keywords": [
+        {
+          "aliases": [
+            "金木水火土"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-金木水火土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00002",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "金木水火土"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《金木水火土》中\"天地分上下\"的后一句是？",
+      "answer": "日月照今古",
+      "keywords": [
+        {
+          "aliases": [
+            "日月照今古"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-金木水火土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00003",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "金木水火土"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《金木水火土》",
+      "answer": "一二三四五，金木水火土。天地分上下，日月照今古。",
+      "keywords": [
+        {
+          "aliases": [
+            "一二三四五",
+            "金木水火土"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-金木水火土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00004",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "对韵歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《对韵歌》中\"云对雨\"的后一句是？",
+      "answer": "雪对风",
+      "keywords": [
+        {
+          "aliases": [
+            "雪对风"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-对韵歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00005",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "对韵歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《对韵歌》中\"花对树\"的后一句是？",
+      "answer": "鸟对虫",
+      "keywords": [
+        {
+          "aliases": [
+            "鸟对虫"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-对韵歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00006",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "对韵歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《对韵歌》中\"山清对水秀\"的后一句是？",
+      "answer": "柳绿对桃红",
+      "keywords": [
+        {
+          "aliases": [
+            "柳绿对桃红"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-对韵歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00007",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "对韵歌"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《对韵歌》",
+      "answer": "云对雨，雪对风。花对树，鸟对虫。山清对水秀，柳绿对桃红。",
+      "keywords": [
+        {
+          "aliases": [
+            "云对雨",
+            "雪对风"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-对韵歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00008",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "秋天"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《秋天》中\"天气凉了\"的后一句是？",
+      "answer": "树叶黄了",
+      "keywords": [
+        {
+          "aliases": [
+            "树叶黄了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋天"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00009",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "秋天"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《秋天》中\"树叶黄了\"的后一句是？",
+      "answer": "一片片叶子从树上落下来",
+      "keywords": [
+        {
+          "aliases": [
+            "一片片叶子从树上落下来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋天"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00010",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "秋天"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《秋天》中\"天空那么蓝\"的后一句是？",
+      "answer": "那么高",
+      "keywords": [
+        {
+          "aliases": [
+            "那么高"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋天"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00011",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "秋天"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《秋天》中\"一群大雁往南飞\"的后一句是？",
+      "answer": "一会儿排成个\"人\"字，一会儿排成个\"一\"字",
+      "keywords": [
+        {
+          "aliases": [
+            "一会儿排成个\"人\"字",
+            "一会儿排成个\"一\"字"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋天"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00012",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "秋天"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《秋天》",
+      "answer": "天气凉了，树叶黄了，一片片叶子从树上落下来。天空那么蓝，那么高。一群大雁往南飞，一会儿排成个\"人\"字，一会儿排成个\"一\"字。啊！秋天来了！",
+      "keywords": [
+        {
+          "aliases": [
+            "天气凉了",
+            "树叶黄了"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-秋天"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00013",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "小小的船"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小小的船》的作者是？",
+      "answer": "叶圣陶",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小小的船"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00014",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "小小的船"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小小的船》中\"弯弯的月儿小小的船\"的后一句是？",
+      "answer": "小小的船儿两头尖",
+      "keywords": [
+        {
+          "aliases": [
+            "小小的船儿两头尖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小小的船"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00015",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "小小的船"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小小的船》中\"我在小小的船里坐\"的后一句是？",
+      "answer": "只看见闪闪的星星蓝蓝的天",
+      "keywords": [
+        {
+          "aliases": [
+            "只看见闪闪的星星蓝蓝的天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小小的船"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00016",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "小小的船"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《小小的船》",
+      "answer": "弯弯的月儿小小的船，小小的船儿两头尖。我在小小的船里坐，只看见闪闪的星星蓝蓝的天。",
+      "keywords": [
+        {
+          "aliases": [
+            "弯弯的月儿小小的船",
+            "小小的船儿两头尖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小小的船"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00017",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "四季"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四季》中\"草芽尖尖\"的后一句是？",
+      "answer": "他对小鸟说：\"我是春天。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "他对小鸟说：\"我是春天",
+            "\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四季"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00018",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "四季"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四季》中\"荷叶圆圆\"的后一句是？",
+      "answer": "他对青蛙说：\"我是夏天。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "他对青蛙说：\"我是夏天",
+            "\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四季"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00019",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "四季"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四季》中\"谷穗弯弯\"的后一句是？",
+      "answer": "他鞠着躬说：\"我是秋天。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "他鞠着躬说：\"我是秋天",
+            "\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四季"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00020",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "四季"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四季》中\"雪人大肚子一挺\"的后一句是？",
+      "answer": "他顽皮地说：\"我就是冬天。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "他顽皮地说：\"我就是冬天",
+            "\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四季"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00021",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "四季"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《四季》",
+      "answer": "草芽尖尖，他对小鸟说：\"我是春天。\"荷叶圆圆，他对青蛙说：\"我是夏天。\"谷穗弯弯，他鞠着躬说：\"我是秋天。\"雪人大肚子一挺，他顽皮地说：\"我就是冬天。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "草芽尖尖",
+            "他对小鸟说：\"我是春天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四季"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00022",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "我爱我的祖国"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《我爱我的祖国》这篇课文表达了作者怎样的感情？",
+      "answer": "热爱祖国",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-我爱我的祖国"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00023",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "两件宝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两件宝》中\"人有两件宝\"的后一句是？",
+      "answer": "双手和大脑",
+      "keywords": [
+        {
+          "aliases": [
+            "双手和大脑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两件宝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00024",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "两件宝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两件宝》中\"双手会做工\"的后一句是？",
+      "answer": "大脑会思考",
+      "keywords": [
+        {
+          "aliases": [
+            "大脑会思考"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两件宝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00025",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "两件宝"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《两件宝》中\"用手又用脑\"的后一句是？",
+      "answer": "才能有创造",
+      "keywords": [
+        {
+          "aliases": [
+            "才能有创造"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两件宝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00026",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "两件宝"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《两件宝》",
+      "answer": "人有两件宝，双手和大脑。双手会做工，大脑会思考。用手又用脑，才能有创造。",
+      "keywords": [
+        {
+          "aliases": [
+            "人有两件宝",
+            "双手和大脑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-两件宝"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00027",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "江南"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江南》的作者及朝代是？",
+      "answer": "汉乐府，汉",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00028",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "江南"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江南》中\"江南可采莲\"的后一句是？",
+      "answer": "莲叶何田田",
+      "keywords": [
+        {
+          "aliases": [
+            "莲叶何田田"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00029",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "江南"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江南》中\"鱼戏莲叶间\"的后一句是？",
+      "answer": "鱼戏莲叶东，鱼戏莲叶西，鱼戏莲叶南，鱼戏莲叶北",
+      "keywords": [
+        {
+          "aliases": [
+            "鱼戏莲叶东",
+            "鱼戏莲叶西"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00030",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "江南"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《江南》",
+      "answer": "江南可采莲，莲叶何田田。鱼戏莲叶间。鱼戏莲叶东，鱼戏莲叶西，鱼戏莲叶南，鱼戏莲叶北。",
+      "keywords": [
+        {
+          "aliases": [
+            "江南可采莲",
+            "莲叶何田田"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江南"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00031",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "咏鹅"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《咏鹅》的作者是？",
+      "answer": "骆宾王（唐）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-咏鹅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00032",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "咏鹅"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《咏鹅》中\"鹅，鹅，鹅\"的后一句是？",
+      "answer": "曲项向天歌",
+      "keywords": [
+        {
+          "aliases": [
+            "曲项向天歌"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-咏鹅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00033",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "咏鹅"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《咏鹅》中\"白毛浮绿水\"的后一句是？",
+      "answer": "红掌拨清波",
+      "keywords": [
+        {
+          "aliases": [
+            "红掌拨清波"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-咏鹅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00034",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "咏鹅"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《咏鹅》",
+      "answer": "鹅，鹅，鹅，曲项向天歌。白毛浮绿水，红掌拨清波。",
+      "keywords": [
+        {
+          "aliases": [
+            "鹅",
+            "鹅"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-咏鹅"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00035",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "悯农（其二）"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《悯农（其二）》的作者是？",
+      "answer": "李绅（唐）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-悯农（其二）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00036",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "悯农（其二）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《悯农（其二）》中\"锄禾日当午\"的后一句是？",
+      "answer": "汗滴禾下土",
+      "keywords": [
+        {
+          "aliases": [
+            "汗滴禾下土"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-悯农（其二）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00037",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "悯农（其二）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《悯农（其二）》中\"谁知盘中餐\"的后一句是？",
+      "answer": "粒粒皆辛苦",
+      "keywords": [
+        {
+          "aliases": [
+            "粒粒皆辛苦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-悯农（其二）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00038",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "悯农（其二）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《悯农（其二）》中告诉我们要爱惜粮食的名句是？",
+      "answer": "谁知盘中餐，粒粒皆辛苦。",
+      "keywords": [
+        {
+          "aliases": [
+            "谁知盘中餐",
+            "粒粒皆辛苦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-悯农（其二）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00039",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "悯农（其二）"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《悯农（其二）》",
+      "answer": "锄禾日当午，汗滴禾下土。谁知盘中餐，粒粒皆辛苦。",
+      "keywords": [
+        {
+          "aliases": [
+            "锄禾日当午",
+            "汗滴禾下土"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-悯农（其二）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00040",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "古朗月行（节选）"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《古朗月行（节选）》的作者是？",
+      "answer": "李白（唐）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-古朗月行（节选）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00041",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "古朗月行（节选）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《古朗月行（节选）》中\"小时不识月\"的后一句是？",
+      "answer": "呼作白玉盘",
+      "keywords": [
+        {
+          "aliases": [
+            "呼作白玉盘"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-古朗月行（节选）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00042",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "古朗月行（节选）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《古朗月行（节选）》中\"又疑瑶台镜\"的后一句是？",
+      "answer": "飞在青云端",
+      "keywords": [
+        {
+          "aliases": [
+            "飞在青云端"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-古朗月行（节选）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00043",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "古朗月行（节选）"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《古朗月行（节选）》",
+      "answer": "小时不识月，呼作白玉盘。又疑瑶台镜，飞在青云端。",
+      "keywords": [
+        {
+          "aliases": [
+            "小时不识月",
+            "呼作白玉盘"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-古朗月行（节选）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00044",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "风"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《风》的作者是？",
+      "answer": "李峤（唐）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-风"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00045",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "风"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《风》中\"解落三秋叶\"的后一句是？",
+      "answer": "能开二月花",
+      "keywords": [
+        {
+          "aliases": [
+            "能开二月花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-风"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00046",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "风"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《风》中\"过江千尺浪\"的后一句是？",
+      "answer": "入竹万竿斜",
+      "keywords": [
+        {
+          "aliases": [
+            "入竹万竿斜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-风"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00047",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "1年级a册",
+    "knowledge_points": [
+      "风"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《风》",
+      "answer": "解落三秋叶，能开二月花。过江千尺浪，入竹万竿斜。",
+      "keywords": [
+        {
+          "aliases": [
+            "解落三秋叶",
+            "能开二月花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-风"
+    }
+  }
+]

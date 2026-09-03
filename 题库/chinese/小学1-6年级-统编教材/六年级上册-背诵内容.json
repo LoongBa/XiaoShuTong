@@ -1,0 +1,1756 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01709",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "丁香结"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《丁香结》的作者是？",
+      "answer": "宗璞（原名冯钟璞，当代女作家）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-丁香结"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01710",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "丁香结"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《丁香结》中作者引用的写\"丁香结\"的古人词句是？",
+      "answer": "\"芭蕉不展丁香结\"\"丁香空结雨中愁\"",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-丁香结"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01711",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "丁香结"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《丁香结》第5自然段的主旨句是？",
+      "answer": "结，是解不完的；人生中的问题也是解不完的，不然，岂不太平淡无味了吗？",
+      "keywords": [
+        {
+          "aliases": [
+            "结",
+            "是解不完的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-丁香结"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01712",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "丁香结"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《丁香结》中\"丁香结\"与人的一生有怎样的关系？",
+      "answer": "每个人一辈子都有许多不顺心的事，一件完了一件又来，所以丁香结年年都有；结是解不完的，人生中的问题也是解不完的",
+      "keywords": [
+        {
+          "aliases": [
+            "每个人一辈子都有许多不顺心的事",
+            "一件完了一件又来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-丁香结"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01713",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "丁香结"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《丁香结》第4-5自然段",
+      "answer": "古人词云\"芭蕉不展丁香结\"\"丁香空结雨中愁\"。在细雨迷蒙中，着了水的丁香格外妩媚。花墙边两株紫色的，如同印象派的画，线条模糊了，直向窗前的莹白渗过来。让人觉得，丁香确实该和微雨连在一起。只是赏过这么多年的丁香，却一直不解，何以古人发明了丁香结的说法。今年一次春雨，久立窗前，望着格外清新怡然的丁香花，忽然明白了。丁香结，这三个字给人许多想象。再联想到那些诗句，真觉得它们负担着解不开的愁怨了。每个人一辈子都有许多不顺心的事，一件完了一件又来。所以丁香结年年都有。结，是解不完的；人生中的问题也是解不完的，不然，岂不太平淡无味了吗？",
+      "keywords": [
+        {
+          "aliases": [
+            "古人词云\"芭蕉不展丁香结\"\"丁香空结雨中愁\"",
+            "在细雨迷蒙中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-丁香结"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01714",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "月光曲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《月光曲》写的是哪位音乐家的故事？",
+      "answer": "贝多芬（德国音乐家）",
+      "keywords": [
+        {
+          "aliases": [
+            "贝多芬（德国音乐家）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-月光曲"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01715",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "月光曲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《月光曲》第9自然段中\"忽然，海面上刮起了大风，卷起了巨浪\"的前一句是？",
+      "answer": "月亮越升越高，穿过一缕一缕轻纱似的微云",
+      "keywords": [
+        {
+          "aliases": [
+            "月亮越升越高",
+            "穿过一缕一缕轻纱似的微云"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-月光曲"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01716",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "月光曲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《月光曲》第9自然段中\"她仿佛也看到了\"的\"她\"指谁？看到了什么？",
+      "answer": "指盲姑娘；她仿佛看到了她从来没有看到过的景象——月光照耀下的波涛汹涌的大海",
+      "keywords": [
+        {
+          "aliases": [
+            "指盲姑娘",
+            "她仿佛看到了她从来没有看到过的景象——月光照耀下的波涛汹涌的大海"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-月光曲"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01717",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "月光曲"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《月光曲》第9自然段",
+      "answer": "皮鞋匠静静地听着。他好像面对着大海，月亮正从水天相接的地方升起来。微波粼粼的海面上，霎时间洒满了银光。月亮越升越高，穿过一缕一缕轻纱似的微云。忽然，海面上刮起了大风，卷起了巨浪。被月光照得雪亮的浪花，一个连一个朝着岸边涌过来……皮鞋匠看看妹妹，月光正照在她那恬静的脸上，照着她睁得大大的眼睛。她仿佛也看到了，看到了她从来没有看到过的景象，月光照耀下的波涛汹涌的大海。",
+      "keywords": [
+        {
+          "aliases": [
+            "皮鞋匠静静地听着",
+            "他好像面对着大海"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-月光曲"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01718",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "少年闰土"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《少年闰土》的作者是？",
+      "answer": "鲁迅（原名周树人），选自短篇小说《故乡》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-少年闰土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01719",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "少年闰土"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《少年闰土》第1自然段中\"深蓝的天空中挂着一轮金黄的圆月\"的后一句是？",
+      "answer": "下面是海边的沙地，都种着一望无际的碧绿的西瓜",
+      "keywords": [
+        {
+          "aliases": [
+            "下面是海边的沙地",
+            "都种着一望无际的碧绿的西瓜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-少年闰土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01720",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "少年闰土"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《少年闰土》第1自然段中描写少年闰土外貌与动作的句子是？",
+      "answer": "其间有一个十一二岁的少年，项带银圈，手捏一柄钢叉，向一匹猹尽力地刺去",
+      "keywords": [
+        {
+          "aliases": [
+            "其间有一个十一二岁的少年",
+            "项带银圈"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-少年闰土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01721",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "少年闰土"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《少年闰土》第1自然段",
+      "answer": "深蓝的天空中挂着一轮金黄的圆月，下面是海边的沙地，都种着一望无际的碧绿的西瓜。其间有一个十一二岁的少年，项带银圈，手捏一柄钢叉，向一匹猹尽力地刺去。那猹却将身一扭，反从他的胯下逃走了。",
+      "keywords": [
+        {
+          "aliases": [
+            "深蓝的天空中挂着一轮金黄的圆月",
+            "下面是海边的沙地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-少年闰土"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01722",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "宿建德江"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《宿建德江》的作者及朝代是？",
+      "answer": "孟浩然，唐（五言绝句）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-宿建德江"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01723",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "宿建德江"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《宿建德江》中\"移舟泊烟渚\"的后一句是？",
+      "answer": "日暮客愁新",
+      "keywords": [
+        {
+          "aliases": [
+            "日暮客愁新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-宿建德江"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01724",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "宿建德江"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《宿建德江》中\"野旷天低树\"的后一句是？",
+      "answer": "江清月近人",
+      "keywords": [
+        {
+          "aliases": [
+            "江清月近人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-宿建德江"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01725",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "宿建德江"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《宿建德江》中点明题目、交代日暮泊舟的诗句是？",
+      "answer": "移舟泊烟渚，日暮客愁新",
+      "keywords": [
+        {
+          "aliases": [
+            "移舟泊烟渚",
+            "日暮客愁新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-宿建德江"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01726",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "宿建德江"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《宿建德江》",
+      "answer": "移舟泊烟渚，日暮客愁新。野旷天低树，江清月近人。",
+      "keywords": [
+        {
+          "aliases": [
+            "移舟泊烟渚",
+            "日暮客愁新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-宿建德江"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01727",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "六月二十七日望湖楼醉书"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《六月二十七日望湖楼醉书》的作者及朝代是？",
+      "answer": "苏轼，宋（七言绝句）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-六月二十七日望湖楼醉书"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01728",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "六月二十七日望湖楼醉书"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《六月二十七日望湖楼醉书》中\"黑云翻墨未遮山\"的后一句是？",
+      "answer": "白雨跳珠乱入船",
+      "keywords": [
+        {
+          "aliases": [
+            "白雨跳珠乱入船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-六月二十七日望湖楼醉书"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01729",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "六月二十七日望湖楼醉书"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《六月二十七日望湖楼醉书》中\"卷地风来忽吹散\"的后一句是？",
+      "answer": "望湖楼下水如天",
+      "keywords": [
+        {
+          "aliases": [
+            "望湖楼下水如天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-六月二十七日望湖楼醉书"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01730",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "六月二十七日望湖楼醉书"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《六月二十七日望湖楼醉书》中运用比喻写暴雨骤至的诗句是？",
+      "answer": "黑云翻墨未遮山，白雨跳珠乱入船",
+      "keywords": [
+        {
+          "aliases": [
+            "黑云翻墨未遮山",
+            "白雨跳珠乱入船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-六月二十七日望湖楼醉书"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01731",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "六月二十七日望湖楼醉书"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《六月二十七日望湖楼醉书》",
+      "answer": "黑云翻墨未遮山，白雨跳珠乱入船。卷地风来忽吹散，望湖楼下水如天。",
+      "keywords": [
+        {
+          "aliases": [
+            "黑云翻墨未遮山",
+            "白雨跳珠乱入船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-六月二十七日望湖楼醉书"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01732",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "西江月·夜行黄沙道中"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《西江月·夜行黄沙道中》的作者及朝代是？",
+      "answer": "辛弃疾，宋（词；\"西江月\"为词牌名）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-西江月·夜行黄沙道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01733",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "西江月·夜行黄沙道中"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《西江月·夜行黄沙道中》中\"明月别枝惊鹊\"的后一句是？",
+      "answer": "清风半夜鸣蝉",
+      "keywords": [
+        {
+          "aliases": [
+            "清风半夜鸣蝉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-西江月·夜行黄沙道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01734",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "西江月·夜行黄沙道中"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《西江月·夜行黄沙道中》中\"稻花香里说丰年\"的后一句是？",
+      "answer": "听取蛙声一片",
+      "keywords": [
+        {
+          "aliases": [
+            "听取蛙声一片"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-西江月·夜行黄沙道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01735",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "西江月·夜行黄沙道中"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《西江月·夜行黄沙道中》中\"七八个星天外\"的后一句是？",
+      "answer": "两三点雨山前",
+      "keywords": [
+        {
+          "aliases": [
+            "两三点雨山前"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-西江月·夜行黄沙道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01736",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "西江月·夜行黄沙道中"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《西江月·夜行黄沙道中》写丰收在望、洋溢着喜悦的词句是？",
+      "answer": "稻花香里说丰年，听取蛙声一片",
+      "keywords": [
+        {
+          "aliases": [
+            "稻花香里说丰年",
+            "听取蛙声一片"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-西江月·夜行黄沙道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01737",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "西江月·夜行黄沙道中"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《西江月·夜行黄沙道中》",
+      "answer": "明月别枝惊鹊，清风半夜鸣蝉。稻花香里说丰年，听取蛙声一片。七八个星天外，两三点雨山前。旧时茅店社林边，路转溪桥忽见。",
+      "keywords": [
+        {
+          "aliases": [
+            "明月别枝惊鹊",
+            "清风半夜鸣蝉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-西江月·夜行黄沙道中"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01738",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "伯牙鼓琴"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《伯牙鼓琴》选自哪部典籍？",
+      "answer": "《吕氏春秋》（吕不韦组织门客集体编纂，杂家代表作）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-伯牙鼓琴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01739",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "伯牙鼓琴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《伯牙鼓琴》中\"方鼓琴而志在太山\"时锺子期的评价是？",
+      "answer": "\"善哉乎鼓琴，巍巍乎若太山。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"善哉乎鼓琴",
+            "巍巍乎若太山"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-伯牙鼓琴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01740",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "伯牙鼓琴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《伯牙鼓琴》中\"少选之间而志在流水\"时锺子期的评价是？",
+      "answer": "\"善哉乎鼓琴，汤汤乎若流水。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"善哉乎鼓琴",
+            "汤汤乎若流水"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-伯牙鼓琴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01741",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "伯牙鼓琴"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《伯牙鼓琴》中\"以为世无足复为鼓琴者\"是什么意思？",
+      "answer": "认为世上再没有值得他为之弹琴的人了（伯牙因此破琴绝弦，终身不再弹琴）",
+      "keywords": [
+        {
+          "aliases": [
+            "认为世上再没有值得他为之弹琴的人了（伯牙因此破琴绝弦",
+            "终身不再弹琴）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-伯牙鼓琴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01742",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"高山流水\"的典故出自哪则故事？",
+      "answer": "《伯牙鼓琴》——伯牙善鼓琴、锺子期善听，后世以\"高山流水\"比喻知音或知己",
+      "keywords": [
+        {
+          "aliases": [
+            "《伯牙鼓琴》——伯牙善鼓琴、锺子期善听",
+            "后世以\"高山流水\"比喻知音或知己"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01743",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "伯牙鼓琴"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《伯牙鼓琴》",
+      "answer": "伯牙鼓琴，锺子期听之。方鼓琴而志在太山，锺子期曰：\"善哉乎鼓琴，巍巍乎若太山。\"少选之间而志在流水，锺子期又曰：\"善哉乎鼓琴，汤汤乎若流水。\"锺子期死，伯牙破琴绝弦，终身不复鼓琴，以为世无足复为鼓琴者。",
+      "keywords": [
+        {
+          "aliases": [
+            "伯牙鼓琴",
+            "锺子期听之"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-伯牙鼓琴"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01744",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "书戴嵩画牛"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书戴嵩画牛》的作者是？",
+      "answer": "苏轼，宋（\"唐宋八大家\"之一）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书戴嵩画牛"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01745",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "书戴嵩画牛"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书戴嵩画牛》中牧童\"拊掌大笑\"的原因是？",
+      "answer": "他认为戴嵩画的斗牛错了——牛相斗时\"力在角，尾搐入两股间\"，画中的牛却掉尾而斗，不符合事实",
+      "keywords": [
+        {
+          "aliases": [
+            "他认为戴嵩画的斗牛错了——牛相斗时\"力在角",
+            "尾搐入两股间\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书戴嵩画牛"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01746",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "书戴嵩画牛"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书戴嵩画牛》中牧童指出画之谬误的话是？",
+      "answer": "\"此画斗牛也。牛斗，力在角，尾搐入两股间。今乃掉尾而斗，谬矣。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"此画斗牛也",
+            "牛斗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书戴嵩画牛"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01747",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "书戴嵩画牛"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书戴嵩画牛》结尾引用的古语是？",
+      "answer": "\"耕当问奴，织当问婢。\"不可改也。",
+      "keywords": [
+        {
+          "aliases": [
+            "\"耕当问奴",
+            "织当问婢"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书戴嵩画牛"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01748",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "书戴嵩画牛"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《书戴嵩画牛》告诉我们什么道理？",
+      "answer": "艺术创作要尊重生活实际、实事求是，做事要向有实践经验的内行人请教",
+      "keywords": [
+        {
+          "aliases": [
+            "艺术创作要尊重生活实际、实事求是",
+            "做事要向有实践经验的内行人请教"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书戴嵩画牛"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01749",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "书戴嵩画牛"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《书戴嵩画牛》",
+      "answer": "蜀中有杜处士，好书画，所宝以百数。有戴嵩《牛》一轴，尤所爱，锦囊玉轴，常以自随。一日曝书画，有一牧童见之，拊掌大笑，曰：\"此画斗牛也。牛斗，力在角，尾搐入两股间。今乃掉尾而斗，谬矣。\"处士笑而然之。古语有云：\"耕当问奴，织当问婢。\"不可改也。",
+      "keywords": [
+        {
+          "aliases": [
+            "蜀中有杜处士",
+            "好书画"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-书戴嵩画牛"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01750",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "春日"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《春日》的作者及朝代是？",
+      "answer": "朱熹，宋（理学家、教育家）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-春日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01751",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "春日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《春日》中\"胜日寻芳泗水滨\"的后一句是？",
+      "answer": "无边光景一时新",
+      "keywords": [
+        {
+          "aliases": [
+            "无边光景一时新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-春日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01752",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "春日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《春日》中\"等闲识得东风面\"的后一句是？",
+      "answer": "万紫千红总是春",
+      "keywords": [
+        {
+          "aliases": [
+            "万紫千红总是春"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-春日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01753",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "春日"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《春日》中写出春色无边、万紫千红的句子是？",
+      "answer": "等闲识得东风面，万紫千红总是春",
+      "keywords": [
+        {
+          "aliases": [
+            "等闲识得东风面",
+            "万紫千红总是春"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-春日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01754",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "春日"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《春日》",
+      "answer": "胜日寻芳泗水滨，无边光景一时新。等闲识得东风面，万紫千红总是春。",
+      "keywords": [
+        {
+          "aliases": [
+            "胜日寻芳泗水滨",
+            "无边光景一时新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-春日"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01755",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "浪淘沙"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙》的作者及朝代是？",
+      "answer": "刘禹锡，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01756",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "浪淘沙"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙》中\"九曲黄河万里沙\"的后一句是？",
+      "answer": "浪淘风簸自天涯",
+      "keywords": [
+        {
+          "aliases": [
+            "浪淘风簸自天涯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01757",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "浪淘沙"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙》中\"如今直上银河去\"的后一句是？",
+      "answer": "同到牵牛织女家",
+      "keywords": [
+        {
+          "aliases": [
+            "同到牵牛织女家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01758",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "浪淘沙"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《浪淘沙》中借神话想象表达豪迈气概的诗句是？",
+      "answer": "如今直上银河去，同到牵牛织女家",
+      "keywords": [
+        {
+          "aliases": [
+            "如今直上银河去",
+            "同到牵牛织女家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01759",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "浪淘沙"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《浪淘沙》",
+      "answer": "九曲黄河万里沙，浪淘风簸自天涯。如今直上银河去，同到牵牛织女家。",
+      "keywords": [
+        {
+          "aliases": [
+            "九曲黄河万里沙",
+            "浪淘风簸自天涯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-浪淘沙"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01760",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国古代所说的\"五行\"指哪五种物质？",
+      "answer": "金、木、水、火、土",
+      "keywords": [
+        {
+          "aliases": [
+            "金、木、水、火、土"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01761",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "古人所说的\"五谷\"指哪五种谷物？",
+      "answer": "稻、麦、黍、菽、稷",
+      "keywords": [
+        {
+          "aliases": [
+            "稻、麦、黍、菽、稷"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01762",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国古代\"五音\"指哪五个音阶？",
+      "answer": "宫、商、角、徵、羽",
+      "keywords": [
+        {
+          "aliases": [
+            "宫、商、角、徵、羽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01763",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "6年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "古人所说的\"五彩\"指哪五种颜色？",
+      "answer": "黄、青、赤、白、黑",
+      "keywords": [
+        {
+          "aliases": [
+            "黄、青、赤、白、黑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  }
+]

@@ -1,0 +1,1366 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01610",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "草原"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "文学常识：《草原》的作者是？",
+      "answer": "老舍（舒庆春）",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-草原"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01611",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：这次，我看到了草原。那里的天比别处的更可爱，",
+      "answer": "空气是那么清鲜，天空是那么明朗，使我总想高歌一曲，表示我满心的愉快",
+      "keywords": [
+        {
+          "aliases": [
+            "空气是那么清鲜",
+            "天空是那么明朗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01612",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：在天底下，一碧千里，",
+      "answer": "而并不茫茫",
+      "keywords": [
+        {
+          "aliases": [
+            "而并不茫茫"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01613",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "句子接龙：羊群一会儿上了小丘，一会儿又下来，",
+      "answer": "走在哪里都像给无边的绿毯绣上了白色的大花",
+      "keywords": [
+        {
+          "aliases": [
+            "走在哪里都像给无边的绿毯绣上了白色的大花"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01614",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "名句理解：\"这种境界，既使人惊叹，又叫人舒服\"这句话表达了什么？",
+      "answer": "对草原美景的赞美与沉醉",
+      "keywords": [
+        {
+          "aliases": [
+            "对草原美景的赞美与沉醉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01615",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "草原"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《草原》第1自然段",
+      "answer": "这次，我看到了草原。那里的天比别处的更可爱，空气是那么清鲜，天空是那么明朗，使我总想高歌一曲，表示我满心的愉快。在天底下，一碧千里，而并不茫茫。四面都有小丘，平地是绿的，小丘也是绿的。羊群一会儿上了小丘，一会儿又下来，走在哪里都像给无边的绿毯绣上了白色的大花。那些小丘的线条是那么柔美，就像只用绿色渲染，不用墨线勾勒的中国画那样，到处翠色欲流，轻轻流入云际。这种境界，既使人惊叹，又叫人舒服，既愿久立四望，又想坐下低吟一首奇丽的小诗。",
+      "keywords": [
+        {
+          "aliases": [
+            "这次",
+            "我看到了草原"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-草原"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01616",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "四时田园杂兴（其三十一）"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四时田园杂兴（其三十一）》的作者及朝代是？",
+      "answer": "范成大，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四时田园杂兴（其三十一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01617",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "四时田园杂兴（其三十一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四时田园杂兴（其三十一）》中\"昼出耘田夜绩麻\"的后一句是？",
+      "answer": "村庄儿女各当家",
+      "keywords": [
+        {
+          "aliases": [
+            "村庄儿女各当家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四时田园杂兴（其三十一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01618",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "四时田园杂兴（其三十一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四时田园杂兴（其三十一）》中\"童孙未解供耕织\"的后一句是？",
+      "answer": "也傍桑阴学种瓜",
+      "keywords": [
+        {
+          "aliases": [
+            "也傍桑阴学种瓜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四时田园杂兴（其三十一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01619",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "四时田园杂兴（其三十一）"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《四时田园杂兴（其三十一）》中描写农村孩子学种瓜的名句是？",
+      "answer": "童孙未解供耕织，也傍桑阴学种瓜。",
+      "keywords": [
+        {
+          "aliases": [
+            "童孙未解供耕织",
+            "也傍桑阴学种瓜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四时田园杂兴（其三十一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01620",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "四时田园杂兴（其三十一）"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《四时田园杂兴（其三十一）》",
+      "answer": "昼出耘田夜绩麻，村庄儿女各当家。童孙未解供耕织，也傍桑阴学种瓜。",
+      "keywords": [
+        {
+          "aliases": [
+            "昼出耘田夜绩麻",
+            "村庄儿女各当家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-四时田园杂兴（其三十一）"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01621",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "稚子弄冰"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《稚子弄冰》的作者及朝代是？",
+      "answer": "杨万里，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-稚子弄冰"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01622",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "稚子弄冰"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《稚子弄冰》中\"稚子金盆脱晓冰\"的后一句是？",
+      "answer": "彩丝穿取当银钲",
+      "keywords": [
+        {
+          "aliases": [
+            "彩丝穿取当银钲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-稚子弄冰"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01623",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "稚子弄冰"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《稚子弄冰》中\"敲成玉磬穿林响\"的后一句是？",
+      "answer": "忽作玻璃碎地声",
+      "keywords": [
+        {
+          "aliases": [
+            "忽作玻璃碎地声"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-稚子弄冰"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01624",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "稚子弄冰"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《稚子弄冰》中描写孩子玩冰的名句是？",
+      "answer": "稚子金盆脱晓冰，彩丝穿取当银钲。",
+      "keywords": [
+        {
+          "aliases": [
+            "稚子金盆脱晓冰",
+            "彩丝穿取当银钲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-稚子弄冰"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01625",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "稚子弄冰"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《稚子弄冰》",
+      "answer": "稚子金盆脱晓冰，彩丝穿取当银钲。敲成玉磬穿林响，忽作玻璃碎地声。",
+      "keywords": [
+        {
+          "aliases": [
+            "稚子金盆脱晓冰",
+            "彩丝穿取当银钲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-稚子弄冰"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01626",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "村晚"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《村晚》的作者及朝代是？",
+      "answer": "雷震，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-村晚"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01627",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "村晚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《村晚》中\"草满池塘水满陂\"的后一句是？",
+      "answer": "山衔落日浸寒漪",
+      "keywords": [
+        {
+          "aliases": [
+            "山衔落日浸寒漪"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-村晚"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01628",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "村晚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《村晚》中\"牧童归去横牛背\"的后一句是？",
+      "answer": "短笛无腔信口吹",
+      "keywords": [
+        {
+          "aliases": [
+            "短笛无腔信口吹"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-村晚"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01629",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "村晚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《村晚》中描写牧童自在吹笛的名句是？",
+      "answer": "牧童归去横牛背，短笛无腔信口吹。",
+      "keywords": [
+        {
+          "aliases": [
+            "牧童归去横牛背",
+            "短笛无腔信口吹"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-村晚"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01630",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "村晚"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《村晚》",
+      "answer": "草满池塘水满陂，山衔落日浸寒漪。牧童归去横牛背，短笛无腔信口吹。",
+      "keywords": [
+        {
+          "aliases": [
+            "草满池塘水满陂",
+            "山衔落日浸寒漪"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-村晚"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01631",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "游子吟"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游子吟》的作者及朝代是？",
+      "answer": "孟郊，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游子吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01632",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "游子吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游子吟》中\"慈母手中线\"的后一句是？",
+      "answer": "游子身上衣",
+      "keywords": [
+        {
+          "aliases": [
+            "游子身上衣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游子吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01633",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "游子吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游子吟》中\"临行密密缝\"的后一句是？",
+      "answer": "意恐迟迟归",
+      "keywords": [
+        {
+          "aliases": [
+            "意恐迟迟归"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游子吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01634",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "游子吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游子吟》中\"谁言寸草心\"的后一句是？",
+      "answer": "报得三春晖",
+      "keywords": [
+        {
+          "aliases": [
+            "报得三春晖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游子吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01635",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "游子吟"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《游子吟》中歌颂母爱伟大的名句是？",
+      "answer": "谁言寸草心，报得三春晖。",
+      "keywords": [
+        {
+          "aliases": [
+            "谁言寸草心",
+            "报得三春晖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游子吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01636",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "游子吟"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《游子吟》",
+      "answer": "慈母手中线，游子身上衣。临行密密缝，意恐迟迟归。谁言寸草心，报得三春晖。",
+      "keywords": [
+        {
+          "aliases": [
+            "慈母手中线",
+            "游子身上衣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-游子吟"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01637",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "杨氏之子"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《杨氏之子》选自哪部著作？",
+      "answer": "《世说新语》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-杨氏之子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01638",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "杨氏之子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《杨氏之子》中\"梁国杨氏子九岁\"的后一句是？",
+      "answer": "甚聪惠",
+      "keywords": [
+        {
+          "aliases": [
+            "甚聪惠"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-杨氏之子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01639",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "杨氏之子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《杨氏之子》中\"孔君平诣其父\"的后一句是？",
+      "answer": "父不在，乃呼儿出",
+      "keywords": [
+        {
+          "aliases": [
+            "父不在",
+            "乃呼儿出"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-杨氏之子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01640",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "杨氏之子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《杨氏之子》中\"未闻孔雀是夫子家禽\"是对谁说的话？",
+      "answer": "对孔君平的机智回答",
+      "keywords": [
+        {
+          "aliases": [
+            "对孔君平的机智回答"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-杨氏之子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01641",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "杨氏之子"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《杨氏之子》中杨氏子聪明在哪里？",
+      "answer": "由\"孔雀\"联想到\"孔君平\"的\"孔\"姓，幽默机智地回应",
+      "keywords": [
+        {
+          "aliases": [
+            "由\"孔雀\"联想到\"孔君平\"的\"孔\"姓",
+            "幽默机智地回应"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-杨氏之子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01642",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "杨氏之子"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《杨氏之子》",
+      "answer": "梁国杨氏子九岁，甚聪惠。孔君平诣其父，父不在，乃呼儿出。为设果，果有杨梅。孔指以示儿曰：\"此是君家果。\"儿应声答曰：\"未闻孔雀是夫子家禽。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "梁国杨氏子九岁",
+            "甚聪惠"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-杨氏之子"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01643",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "自相矛盾"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《自相矛盾》选自哪部著作？",
+      "answer": "《韩非子》",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-自相矛盾"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01644",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "自相矛盾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《自相矛盾》中\"楚人有鬻盾与矛者\"的后一句是？",
+      "answer": "誉之曰：\"吾盾之坚，物莫能陷也。\"",
+      "keywords": [
+        {
+          "aliases": [
+            "誉之曰：\"吾盾之坚",
+            "物莫能陷也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-自相矛盾"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01645",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "自相矛盾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《自相矛盾》中\"以子之矛陷子之盾，何如\"的结果是？",
+      "answer": "其人弗能应也",
+      "keywords": [
+        {
+          "aliases": [
+            "其人弗能应也"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-自相矛盾"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01646",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "自相矛盾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《自相矛盾》中道理是？",
+      "answer": "说话行事不能前后抵触（要前后一致）",
+      "keywords": [
+        {
+          "aliases": [
+            "说话行事不能前后抵触（要前后一致）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-自相矛盾"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01647",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "自相矛盾"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《自相矛盾》",
+      "answer": "楚人有鬻盾与矛者，誉之曰：\"吾盾之坚，物莫能陷也。\"又誉其矛曰：\"吾矛之利，于物无不陷也。\"或曰：\"以子之矛陷子之盾，何如？\"其人弗能应也。夫不可陷之盾与无不陷之矛，不可同世而立。",
+      "keywords": [
+        {
+          "aliases": [
+            "楚人有鬻盾与矛者",
+            "誉之曰：\"吾盾之坚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-自相矛盾"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01648",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "鸟鸣涧"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鸟鸣涧》的作者及朝代是？",
+      "answer": "王维，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鸟鸣涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01649",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "鸟鸣涧"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鸟鸣涧》中\"人闲桂花落\"的后一句是？",
+      "answer": "夜静春山空",
+      "keywords": [
+        {
+          "aliases": [
+            "夜静春山空"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鸟鸣涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01650",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "鸟鸣涧"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鸟鸣涧》中\"月出惊山鸟\"的后一句是？",
+      "answer": "时鸣春涧中",
+      "keywords": [
+        {
+          "aliases": [
+            "时鸣春涧中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鸟鸣涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01651",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "鸟鸣涧"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《鸟鸣涧》中以动衬静的名句是？",
+      "answer": "月出惊山鸟，时鸣春涧中。",
+      "keywords": [
+        {
+          "aliases": [
+            "月出惊山鸟",
+            "时鸣春涧中"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鸟鸣涧"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-01652",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "5年级b册",
+    "knowledge_points": [
+      "鸟鸣涧"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《鸟鸣涧》",
+      "answer": "人闲桂花落，夜静春山空。月出惊山鸟，时鸣春涧中。",
+      "keywords": [
+        {
+          "aliases": [
+            "人闲桂花落",
+            "夜静春山空"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-鸟鸣涧"
+    }
+  }
+]

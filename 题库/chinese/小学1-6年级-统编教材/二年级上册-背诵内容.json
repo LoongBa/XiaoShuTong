@@ -1,0 +1,2348 @@
+[
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00268",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《场景歌》中\"一只海鸥\"的后一句是？",
+      "answer": "一片沙滩",
+      "keywords": [
+        {
+          "aliases": [
+            "一片沙滩"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00269",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《场景歌》中\"一艘军舰\"的后一句是？",
+      "answer": "一条帆船",
+      "keywords": [
+        {
+          "aliases": [
+            "一条帆船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00270",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《场景歌》中\"一方鱼塘\"的后一句是？",
+      "answer": "一块稻田",
+      "keywords": [
+        {
+          "aliases": [
+            "一块稻田"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00271",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《场景歌》中\"一行垂柳\"的后一句是？",
+      "answer": "一座花园",
+      "keywords": [
+        {
+          "aliases": [
+            "一座花园"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00272",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《场景歌》中\"一道小溪\"的后一句是？",
+      "answer": "一孔石桥",
+      "keywords": [
+        {
+          "aliases": [
+            "一孔石桥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00273",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《场景歌》中\"一面队旗\"的后一句是？",
+      "answer": "一把铜号",
+      "keywords": [
+        {
+          "aliases": [
+            "一把铜号"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00274",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "场景歌"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《场景歌》",
+      "answer": "一只海鸥，一片沙滩。一艘军舰，一条帆船。一方鱼塘，一块稻田。一行垂柳，一座花园。一道小溪，一孔石桥。一丛翠竹，一群飞鸟。一面队旗，一把铜号。一队\"红领巾\"，一片欢笑。",
+      "keywords": [
+        {
+          "aliases": [
+            "一只海鸥",
+            "一片沙滩"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-场景歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00275",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "树之歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《树之歌》中\"杨树高，榕树壮\"的后一句是？",
+      "answer": "梧桐树叶像手掌",
+      "keywords": [
+        {
+          "aliases": [
+            "梧桐树叶像手掌"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-树之歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00276",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "树之歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《树之歌》中\"枫树秋天叶儿红\"的后一句是？",
+      "answer": "松柏四季披绿装",
+      "keywords": [
+        {
+          "aliases": [
+            "松柏四季披绿装"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-树之歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00277",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "树之歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《树之歌》中\"木棉喜暖在南方\"的后一句是？",
+      "answer": "桦树耐寒守北疆",
+      "keywords": [
+        {
+          "aliases": [
+            "桦树耐寒守北疆"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-树之歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00278",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "树之歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《树之歌》中\"银杏水杉活化石\"的后一句是？",
+      "answer": "金桂开花满院香",
+      "keywords": [
+        {
+          "aliases": [
+            "金桂开花满院香"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-树之歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00279",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "树之歌"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《树之歌》",
+      "answer": "杨树高，榕树壮，梧桐树叶像手掌。枫树秋天叶儿红，松柏四季披绿装。木棉喜暖在南方，桦树耐寒守北疆。银杏水杉活化石，金桂开花满院香。",
+      "keywords": [
+        {
+          "aliases": [
+            "杨树高",
+            "榕树壮"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-树之歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00280",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "拍手歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《拍手歌》中\"你拍一，我拍一\"的后一句是？",
+      "answer": "动物世界很新奇",
+      "keywords": [
+        {
+          "aliases": [
+            "动物世界很新奇"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-拍手歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00281",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "拍手歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《拍手歌》中\"你拍二，我拍二\"的后一句是？",
+      "answer": "孔雀锦鸡是伙伴",
+      "keywords": [
+        {
+          "aliases": [
+            "孔雀锦鸡是伙伴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-拍手歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00282",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "拍手歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《拍手歌》中\"天空雁群会写字\"的前一句是？",
+      "answer": "你拍四，我拍四",
+      "keywords": [
+        {
+          "aliases": [
+            "你拍四",
+            "我拍四"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-拍手歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00283",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "拍手歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《拍手歌》中\"黄鹂百灵唱不休\"的前一句是？",
+      "answer": "你拍六，我拍六",
+      "keywords": [
+        {
+          "aliases": [
+            "你拍六",
+            "我拍六"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-拍手歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00284",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "拍手歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《拍手歌》中\"人和动物是朋友\"的前一句是？",
+      "answer": "你拍九，我拍九",
+      "keywords": [
+        {
+          "aliases": [
+            "你拍九",
+            "我拍九"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-拍手歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00285",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "拍手歌"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《拍手歌》",
+      "answer": "你拍一，我拍一，动物世界很新奇。你拍二，我拍二，孔雀锦鸡是伙伴。你拍三，我拍三，雄鹰飞翔云彩间。你拍四，我拍四，天空雁群会写字。你拍五，我拍五，丛林深处有猛虎。你拍六，我拍六，黄鹂百灵唱不休。你拍七，我拍七，竹林熊猫在嬉戏。你拍八，我拍八，大小动物都有家。你拍九，我拍九，人和动物是朋友。你拍十，我拍十，保护动物是大事。",
+      "keywords": [
+        {
+          "aliases": [
+            "你拍一",
+            "我拍一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-拍手歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00286",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《田家四季歌》中\"春季里，春风吹\"的后一句是？",
+      "answer": "花开草长蝴蝶飞",
+      "keywords": [
+        {
+          "aliases": [
+            "花开草长蝴蝶飞"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00287",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《田家四季歌》中\"麦苗儿多嫩\"的后一句是？",
+      "answer": "桑叶儿正肥",
+      "keywords": [
+        {
+          "aliases": [
+            "桑叶儿正肥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00288",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《田家四季歌》中\"夏季里，农事忙\"的后一句是？",
+      "answer": "采了蚕桑又插秧",
+      "keywords": [
+        {
+          "aliases": [
+            "采了蚕桑又插秧"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00289",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《田家四季歌》中\"早起勤耕作\"的后一句是？",
+      "answer": "归来戴月光",
+      "keywords": [
+        {
+          "aliases": [
+            "归来戴月光"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00290",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《田家四季歌》中\"秋季里，稻上场\"的后一句是？",
+      "answer": "谷像黄金粒粒香",
+      "keywords": [
+        {
+          "aliases": [
+            "谷像黄金粒粒香"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00291",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《田家四季歌》中\"一年农事了\"的后一句是？",
+      "answer": "大家笑盈盈",
+      "keywords": [
+        {
+          "aliases": [
+            "大家笑盈盈"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00292",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "田家四季歌"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《田家四季歌》",
+      "answer": "春季里，春风吹，花开草长蝴蝶飞。麦苗儿多嫩，桑叶儿正肥。夏季里，农事忙，采了蚕桑又插秧。早起勤耕作，归来戴月光。秋季里，稻上场，谷像黄金粒粒香。身体虽辛苦，心里喜洋洋。冬季里，雪初晴，新制棉衣暖又轻。一年农事了，大家笑盈盈。",
+      "keywords": [
+        {
+          "aliases": [
+            "春季里",
+            "春风吹"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-田家四季歌"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00293",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "植物妈妈有办法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《植物妈妈有办法》中\"孩子如果已经长大\"的后一句是？",
+      "answer": "就得告别妈妈，四海为家",
+      "keywords": [
+        {
+          "aliases": [
+            "就得告别妈妈",
+            "四海为家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-植物妈妈有办法"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00294",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "植物妈妈有办法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《植物妈妈有办法》中\"蒲公英妈妈准备了降落伞\"的后一句是？",
+      "answer": "把它送给自己的娃娃",
+      "keywords": [
+        {
+          "aliases": [
+            "把它送给自己的娃娃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-植物妈妈有办法"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00295",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "植物妈妈有办法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《植物妈妈有办法》中\"只要有风轻轻吹过\"的后一句是？",
+      "answer": "孩子们就乘着风纷纷出发",
+      "keywords": [
+        {
+          "aliases": [
+            "孩子们就乘着风纷纷出发"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-植物妈妈有办法"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00296",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "植物妈妈有办法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《植物妈妈有办法》中\"苍耳妈妈有个好办法\"的后一句是？",
+      "answer": "她给孩子穿上带刺的铠甲",
+      "keywords": [
+        {
+          "aliases": [
+            "她给孩子穿上带刺的铠甲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-植物妈妈有办法"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00297",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "植物妈妈有办法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《植物妈妈有办法》中\"豌豆妈妈更有办法\"的后一句是？",
+      "answer": "她让豆荚晒在太阳底下",
+      "keywords": [
+        {
+          "aliases": [
+            "她让豆荚晒在太阳底下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-植物妈妈有办法"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00298",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "植物妈妈有办法"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《植物妈妈有办法》",
+      "answer": "孩子如果已经长大，就得告别妈妈，四海为家。牛马有脚，鸟有翅膀，植物旅行又有什么办法？蒲公英妈妈准备了降落伞，把它送给自己的娃娃。只要有风轻轻吹过，孩子们就乘着风纷纷出发。苍耳妈妈有个好办法，她给孩子穿上带刺的铠甲。只要挂住动物的皮毛，孩子们就能去田野、山洼。豌豆妈妈更有办法，她让豆荚晒在太阳底下。啪的一声，豆荚炸开，孩子们就蹦着跳着离开妈妈。植物妈妈的办法很多很多，不信你就仔细观察。那里有许许多多的知识，粗心的小朋友却得不到它。",
+      "keywords": [
+        {
+          "aliases": [
+            "孩子如果已经长大",
+            "就得告别妈妈"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-植物妈妈有办法"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00299",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "黄山奇石"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《黄山奇石》中\"仙桃石\"的样子是怎样的？",
+      "answer": "它好像从天上飞下来的一个大桃子，落在山顶的石盘上",
+      "keywords": [
+        {
+          "aliases": [
+            "它好像从天上飞下来的一个大桃子",
+            "落在山顶的石盘上"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-黄山奇石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00300",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "黄山奇石"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《黄山奇石》中\"猴子观海\"说的是什么？",
+      "answer": "在一座陡峭的山峰上，有一只\"猴子\"。它两只胳膊抱着腿，一动不动地蹲在山头，望着翻滚的云海",
+      "keywords": [
+        {
+          "aliases": [
+            "在一座陡峭的山峰上",
+            "有一只\"猴子\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-黄山奇石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00301",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "黄山奇石"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《黄山奇石》第2-3自然段",
+      "answer": "就说\"仙桃石\"吧，它好像从天上飞下来的一个大桃子，落在山顶的石盘上。在一座陡峭的山峰上，有一只\"猴子\"。它两只胳膊抱着腿，一动不动地蹲在山头，望着翻滚的云海。这就是有趣的\"猴子观海\"。",
+      "keywords": [
+        {
+          "aliases": [
+            "就说\"仙桃石\"吧",
+            "它好像从天上飞下来的一个大桃子"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-黄山奇石"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00302",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "梅花"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《梅花》的作者及朝代是？",
+      "answer": "王安石，宋",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-梅花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00303",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "梅花"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《梅花》中\"墙角数枝梅\"的后一句是？",
+      "answer": "凌寒独自开",
+      "keywords": [
+        {
+          "aliases": [
+            "凌寒独自开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-梅花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00304",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "梅花"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《梅花》中\"遥知不是雪\"的后一句是？",
+      "answer": "为有暗香来",
+      "keywords": [
+        {
+          "aliases": [
+            "为有暗香来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-梅花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00305",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "梅花"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《梅花》中赞美梅花不畏严寒的名句是？",
+      "answer": "墙角数枝梅，凌寒独自开。",
+      "keywords": [
+        {
+          "aliases": [
+            "墙角数枝梅",
+            "凌寒独自开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-梅花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00306",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "梅花"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《梅花》",
+      "answer": "墙角数枝梅，凌寒独自开。遥知不是雪，为有暗香来。",
+      "keywords": [
+        {
+          "aliases": [
+            "墙角数枝梅",
+            "凌寒独自开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-梅花"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00307",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "小儿垂钓"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小儿垂钓》的作者及朝代是？",
+      "answer": "胡令能，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小儿垂钓"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00308",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "小儿垂钓"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小儿垂钓》中\"蓬头稚子学垂纶\"的后一句是？",
+      "answer": "侧坐莓苔草映身",
+      "keywords": [
+        {
+          "aliases": [
+            "侧坐莓苔草映身"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小儿垂钓"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00309",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "小儿垂钓"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小儿垂钓》中\"路人借问遥招手\"的后一句是？",
+      "answer": "怕得鱼惊不应人",
+      "keywords": [
+        {
+          "aliases": [
+            "怕得鱼惊不应人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小儿垂钓"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00310",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "小儿垂钓"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《小儿垂钓》中描写小孩专心钓鱼、怕惊动鱼的名句是？",
+      "answer": "路人借问遥招手，怕得鱼惊不应人。",
+      "keywords": [
+        {
+          "aliases": [
+            "路人借问遥招手",
+            "怕得鱼惊不应人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小儿垂钓"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00311",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "小儿垂钓"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《小儿垂钓》",
+      "answer": "蓬头稚子学垂纶，侧坐莓苔草映身。路人借问遥招手，怕得鱼惊不应人。",
+      "keywords": [
+        {
+          "aliases": [
+            "蓬头稚子学垂纶",
+            "侧坐莓苔草映身"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-小儿垂钓"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00312",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "登鹳雀楼"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《登鹳雀楼》的作者及朝代是？",
+      "answer": "王之涣，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-登鹳雀楼"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00313",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "登鹳雀楼"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《登鹳雀楼》中\"白日依山尽\"的后一句是？",
+      "answer": "黄河入海流",
+      "keywords": [
+        {
+          "aliases": [
+            "黄河入海流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-登鹳雀楼"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00314",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "登鹳雀楼"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《登鹳雀楼》中\"欲穷千里目\"的后一句是？",
+      "answer": "更上一层楼",
+      "keywords": [
+        {
+          "aliases": [
+            "更上一层楼"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-登鹳雀楼"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00315",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "登鹳雀楼"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《登鹳雀楼》中告诉我们要站得高看得远的名句是？",
+      "answer": "欲穷千里目，更上一层楼。",
+      "keywords": [
+        {
+          "aliases": [
+            "欲穷千里目",
+            "更上一层楼"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-登鹳雀楼"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00316",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "登鹳雀楼"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《登鹳雀楼》",
+      "answer": "白日依山尽，黄河入海流。欲穷千里目，更上一层楼。",
+      "keywords": [
+        {
+          "aliases": [
+            "白日依山尽",
+            "黄河入海流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-登鹳雀楼"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00317",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "望庐山瀑布"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望庐山瀑布》的作者及朝代是？",
+      "answer": "李白，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-望庐山瀑布"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00318",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "望庐山瀑布"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望庐山瀑布》中\"日照香炉生紫烟\"的后一句是？",
+      "answer": "遥看瀑布挂前川",
+      "keywords": [
+        {
+          "aliases": [
+            "遥看瀑布挂前川"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-望庐山瀑布"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00319",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "望庐山瀑布"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望庐山瀑布》中\"飞流直下三千尺\"的后一句是？",
+      "answer": "疑是银河落九天",
+      "keywords": [
+        {
+          "aliases": [
+            "疑是银河落九天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-望庐山瀑布"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00320",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "望庐山瀑布"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《望庐山瀑布》中描写瀑布壮观的夸张名句是？",
+      "answer": "飞流直下三千尺，疑是银河落九天。",
+      "keywords": [
+        {
+          "aliases": [
+            "飞流直下三千尺",
+            "疑是银河落九天"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-望庐山瀑布"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00321",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "望庐山瀑布"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《望庐山瀑布》",
+      "answer": "日照香炉生紫烟，遥看瀑布挂前川。飞流直下三千尺，疑是银河落九天。",
+      "keywords": [
+        {
+          "aliases": [
+            "日照香炉生紫烟",
+            "遥看瀑布挂前川"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-望庐山瀑布"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00322",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "江雪"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江雪》的作者及朝代是？",
+      "answer": "柳宗元，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江雪"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00323",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "江雪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江雪》中\"千山鸟飞绝\"的后一句是？",
+      "answer": "万径人踪灭",
+      "keywords": [
+        {
+          "aliases": [
+            "万径人踪灭"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江雪"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00324",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "江雪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江雪》中\"孤舟蓑笠翁\"的后一句是？",
+      "answer": "独钓寒江雪",
+      "keywords": [
+        {
+          "aliases": [
+            "独钓寒江雪"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江雪"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00325",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "江雪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《江雪》中描写渔翁独钓的名句是？",
+      "answer": "孤舟蓑笠翁，独钓寒江雪。",
+      "keywords": [
+        {
+          "aliases": [
+            "孤舟蓑笠翁",
+            "独钓寒江雪"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江雪"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00326",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "江雪"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《江雪》",
+      "answer": "千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。",
+      "keywords": [
+        {
+          "aliases": [
+            "千山鸟飞绝",
+            "万径人踪灭"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-江雪"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00327",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "夜宿山寺"
+    ],
+    "type": "R4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《夜宿山寺》的作者及朝代是？",
+      "answer": "李白，唐",
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-夜宿山寺"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00328",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "夜宿山寺"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《夜宿山寺》中\"危楼高百尺\"的后一句是？",
+      "answer": "手可摘星辰",
+      "keywords": [
+        {
+          "aliases": [
+            "手可摘星辰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-夜宿山寺"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00329",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "夜宿山寺"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《夜宿山寺》中\"不敢高声语\"的后一句是？",
+      "answer": "恐惊天上人",
+      "keywords": [
+        {
+          "aliases": [
+            "恐惊天上人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-夜宿山寺"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00330",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "夜宿山寺"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《夜宿山寺》中运用夸张手法写楼高的名句是？",
+      "answer": "危楼高百尺，手可摘星辰。",
+      "keywords": [
+        {
+          "aliases": [
+            "危楼高百尺",
+            "手可摘星辰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-夜宿山寺"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00331",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "夜宿山寺"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "默写《夜宿山寺》",
+      "answer": "危楼高百尺，手可摘星辰。不敢高声语，恐惊天上人。",
+      "keywords": [
+        {
+          "aliases": [
+            "危楼高百尺",
+            "手可摘星辰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-夜宿山寺"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00332",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"人心齐\"的后一句是？",
+      "answer": "泰山移",
+      "keywords": [
+        {
+          "aliases": [
+            "泰山移"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00333",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"二人同心\"的后一句是？",
+      "answer": "其利断金",
+      "keywords": [
+        {
+          "aliases": [
+            "其利断金"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00334",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"众人拾柴\"的后一句是？",
+      "answer": "火焰高",
+      "keywords": [
+        {
+          "aliases": [
+            "火焰高"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00335",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"一花独放不是春\"的后一句是？",
+      "answer": "百花齐放春满园",
+      "keywords": [
+        {
+          "aliases": [
+            "百花齐放春满园"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00336",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"己所不欲\"的后一句是？",
+      "answer": "勿施于人",
+      "keywords": [
+        {
+          "aliases": [
+            "勿施于人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00337",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"立了秋\"的后一句是？",
+      "answer": "把扇丢",
+      "keywords": [
+        {
+          "aliases": [
+            "把扇丢"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00338",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"朝霞不出门\"的后一句是？",
+      "answer": "晚霞行千里",
+      "keywords": [
+        {
+          "aliases": [
+            "晚霞行千里"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  },
+  {
+    "id": "Q-chinese-chinese-p1to6-pep-00339",
+    "bank_id": "chinese-p1to6-pep",
+    "subject": "chinese",
+    "topic": "2年级a册",
+    "knowledge_points": [
+      "未分类"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"有雨山戴帽\"的后一句是？",
+      "answer": "无雨半山腰",
+      "keywords": [
+        {
+          "aliases": [
+            "无雨半山腰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-chinese-未分类"
+    }
+  }
+]
