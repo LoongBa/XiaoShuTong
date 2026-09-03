@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "question.v1.json",
+  "title": "小书童统一题目 Schema",
+  "description": "统一题库框架 L1 资源层的题目数据结构（V1.1，修复：R4 兼容、keywords 同义词组、R3 子型化、容错度字段、审计字段）。跨学科、跨题型通用。",
+  "type": "object",
+  "required": ["id", "bank_id", "subject", "type", "content"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^Q-[a-z]{2,}-[a-z0-9]+-[0-9]{4,}$",
+      "description": "稳定题目 ID，格式：Q-{学科}-{库缩写}-{序号}，如 Q-ch-7a-0001"
+    },
+    "bank_id": {
+      "type": "string",
+      "description": "所属题库 ID（对应 bank.v1.json 的 bank_id）"
+    },
+    "subject": {
+      "type": "string",
+      "enum": ["chinese", "english", "history", "geography", "biology", "chemistry", "math", "physics"],
+      "description": "学科（对应学科注册表）"
+    },
+    "topic": {
+      "type": "string",
+      "description": "章节/单元路径，如 七上-古诗文"
+    },
+    "knowledge_points": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "关联知识点（跨题库组织单元）"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["R1", "R2", "R3a", "R3b", "R4", "O1", "O2", "O3", "O4", "O5", "X1", "X2", "X3"],
+      "description": "题型注册表键（R3 分 a 段落/b 整篇 子型）"
+    },
+    "purpose_tags": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["memorize", "assess", "play"] },
+      "description": "适用学习场景标签"
+    },
+    "content": {
+      "type": "object",
+      "required": ["question"],
+      "properties": {
+        "question": { "type": "string", "description": "题干（R4 卡片型可为卡片标题）" },
+        "answer": { "type": "string", "description": "标准答案（R4 卡片型可为卡片正文）" },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "type": "string", "description": "扁平关键词（兼容旧格式）" },
+              {
+                "type": "object",
+                "required": ["aliases"],
+                "properties": {
+                  "aliases": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "minItems": 1,
+                    "description": "同义词组，组内任一命中即该组命中（如 [唐太宗,李世民]）"
+                  },
+                  "weight": {
+                    "type": "number",
+                    "minimum": 0,
+                    "default": 1,
+                    "description": "组权重，影响判题得分"
+                  },
+                  "required": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "required=true 且未命中 → 强制判 partial（核心要点）"
+                  }
+                }
+              }
+            ]
+          },
+          "description": "判题关键词（本地匹配用）。升级版支持同义词组+权重+必中要点"
+        },
+        "options": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "客观题选项（O1 单选/O2 多选/O3 判断）"
+        },
+        "correct_option": {
+          "type": "string",
+          "description": "客观题正确选项标识（如 'A' 或 'A,B' 或 '对'）"
+        },
+        "pairs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["left", "right"],
+            "properties": {
+              "left": { "type": "string" },
+              "right": { "type": "string" }
+            }
+          },
+          "description": "连线题（O4）左右匹配对"
+        },
+        "tolerance": {
+          "type": "string",
+          "enum": ["semantic_tolerant", "spelling_tolerant", "exact"],
+          "description": "题目级容错度覆盖（缺省继承学科注册表 gradingPreference）"
+        },
+        "audio_url": { "type": "string", "format": "uri" },
+        "image_url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "difficulty": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "难度 1-5"
+        },
+        "source": { "type": "string", "description": "来源（教材版本/真题/自研）" },
+        "knowledge_card_id": { "type": "string", "description": "关联知识卡片 ID" },
+        "prompt_override": { "type": "string", "description": "单题级 Prompt 覆盖（最高优先级）" },
+        "superseded_by": { "type": "string", "description": "被哪个题目 ID 取代（改版不删旧题）" },
+        "version": { "type": "string", "pattern": "^V[0-9]+(\\.[0-9]+)*$", "description": "题目内容版本（MinVer）" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "enum": ["R1", "R2", "R3a", "R3b"] } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": {
+          "content": {
+            "required": ["answer"],
+            "properties": {
+              "keywords": { "minItems": 1 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "enum": ["O1", "O2", "O3"] } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": {
+          "content": { "required": ["options", "correct_option"] }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "O4" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": {
+          "content": { "required": ["pairs"] }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "R4" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": {
+          "content": {
+            "required": ["question", "answer"],
+            "description": "R4 知识卡片型：question=卡片标题，answer=卡片正文，无需 keywords"
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bank.v1.json",
+  "title": "小书童题库元数据 Schema",
+  "description": "统一题库框架 L1 资源层的题库（Bank）元数据结构（V1.1，修复：supported_types、knowledge_card_template 覆盖位）。",
+  "type": "object",
+  "required": ["bank_id", "subject", "name", "version"],
+  "properties": {
+    "bank_id": {
+      "type": "string",
+      "pattern": "^[a-z]{2,}-[0-9a-z-]+$",
+      "description": "题库唯一 ID，如 chinese-7to9-pep"
+    },
+    "subject": {
+      "type": "string",
+      "enum": ["chinese", "english", "history", "geography", "biology", "chemistry", "math", "physics"]
+    },
+    "name": { "type": "string", "description": "题库名称" },
+    "version": { "type": "string", "pattern": "^V[0-9]+(\\.[0-9]+)*$", "description": "MinVer 风格版本号" },
+    "source": { "type": "string", "description": "内容来源（教材版本/真题/自研）" },
+    "supported_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["R1", "R2", "R3a", "R3b", "R4", "O1", "O2", "O3", "O4", "O5", "X1", "X2", "X3"]
+      },
+      "description": "本题库支持的题型子集（缺省继承学科 supportedTypes）"
+    },
+    "knowledge_card_template": {
+      "type": "string",
+      "enum": ["author_card", "word_card", "event_card", "region_card", "concept_card", "theorem_card"],
+      "description": "本题库知识卡片模板覆盖（缺省继承学科注册表）"
+    },
+    "purpose_tags": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["memorize", "assess", "play"] }
+    },
+    "default_prompt": { "type": "string", "description": "默认绑定 Prompt（全局基线层之上）" },
+    "type_overrides": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "题型级 Prompt 覆盖，键为题型键（R1/R2/...）"
+    },
+    "privacy": {
+      "type": "string",
+      "enum": ["private", "public", "group"],
+      "default": "private",
+      "description": "私域属性（V3 私域核心）"
+    },
+    "owner": { "type": "string", "description": "创建者（system/用户ID/群ID）" },
+    "superseded_by": { "type": "string", "description": "被哪个题库版本取代" }
+  },
+  "additionalProperties": true
+}
