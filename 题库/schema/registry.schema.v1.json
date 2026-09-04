@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "registry.schema.v1.json",
+  "title": "小书童注册表 Schema（题型/学科共用）",
+  "description": "题型注册表（题型注册表.json）与学科注册表（学科注册表.json）的统一元数据 Schema（V1.0）。",
+  "type": "object",
+  "required": ["version", "description"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": {
+      "type": "string",
+      "pattern": "^V[0-9]+(\\.[0-9]+)*$",
+      "description": "注册表版本（MinVer 风格）"
+    },
+    "description": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" },
+    "types": {
+      "type": "array",
+      "description": "题型注册条目（题型注册表专用）",
+      "items": { "$ref": "#/$defs/typeEntry" }
+    },
+    "subjects": {
+      "type": "array",
+      "description": "学科注册条目（学科注册表专用）",
+      "items": { "$ref": "#/$defs/subjectEntry" }
+    }
+  },
+  "oneOf": [
+    { "required": ["types"] },
+    { "required": ["subjects"] }
+  ],
+  "$defs": {
+    "typeEntry": {
+      "type": "object",
+      "required": ["key", "name", "family", "grading"],
+      "properties": {
+        "key": { "type": "string" },
+        "name": { "type": "string" },
+        "family": { "enum": ["memory", "objective", "subjective"] },
+        "grading": {
+          "enum": ["rule", "hybrid", "llm", "rule_llm", "display_only"],
+          "description": "判题路由层（选择判题引擎）"
+        },
+        "judging_strategy": {
+          "enum": ["exact", "similarity", "ai_guided", "hybrid", "display_only"],
+          "description": "判题算法层（引擎内部匹配算法，题型级默认）"
+        },
+        "prompt": { "type": ["string", "null"] },
+        "interaction": { "type": "string", "description": "交互组件（旧字段，保留兼容）" },
+        "interaction_type": {
+          "enum": ["voice", "text", "select", "drag", "swipe", "card"],
+          "description": "交互类型（题目/题型级可覆盖）"
+        },
+        "content_required": { "type": "array", "items": { "type": "string" } },
+        "grading_config": { "type": "object" },
+        "purpose_support": {
+          "type": "array",
+          "items": { "enum": ["memorize", "assess", "play"] }
+        }
+      },
+      "additionalProperties": true
+    },
+    "subjectEntry": {
+      "type": "object",
+      "required": ["subject", "name"],
+      "properties": {
+        "subject": { "type": "string" },
+        "name": { "type": "string" },
+        "supportedTypes": { "type": "array", "items": { "type": "string" } },
+        "gradingPreference": {
+          "enum": ["semantic_tolerant", "spelling_tolerant", "exact"],
+          "description": "容错度偏好（旧字段，保留兼容）"
+        },
+        "defaultJudgingStrategy": {
+          "enum": ["exact", "similarity", "ai_guided", "hybrid"],
+          "description": "学科级默认判题策略"
+        },
+        "knowledgeCardTemplate": { "type": "string" },
+        "promptOverrides": { "type": "object" },
+        "defaultPurpose": {
+          "type": "array",
+          "items": { "enum": ["memorize", "assess", "play"] }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

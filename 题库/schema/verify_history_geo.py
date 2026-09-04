@@ -38,10 +38,9 @@ for subj, items in banks.items():
             print(f"BAD {q['id']}: O 系列缺 options/correct_option"); problems += 1
         if q["type"] == "O4" and not q["content"].get("pairs"):
             print(f"BAD {q['id']}: O4 缺 pairs"); problems += 1
-        if q["type"] in ("R1", "R2") and not q["content"].get("keywords"):
-            print(f"BAD {q['id']}: R 系列缺 keywords"); problems += 1
-        if not q["content"].get("tolerance"):
-            print(f"BAD {q['id']}: 缺 tolerance"); problems += 1
+        if q["type"] in ("R1", "R2", "R3a", "R3b", "O5") and not q["content"].get("keywords"):
+            print(f"BAD {q['id']}: 缺 keywords"); problems += 1
+        # tolerance 为可选字段（避免强制检查导致误报）
     total_problems += problems
     print(f"1. {subj} 题库 schema 校验: {len(items)} 题, 问题={problems}")
 

@@ -235,6 +235,17 @@ POST /api/v1/study/attempts
 }
 ```
 
+**attempts 落库字段派生说明**（对齐 D02 §4.1 attempts 表 NOT NULL 约束）：
+
+| 落库字段 | 派生来源 |
+|---------|---------|
+| `question_id` / `qtype` / `bank_id` | 由 `question_id` 服务端查题目获得（客户端不上送，防篡改） |
+| `scenario` | 由 `session_id` 会话获得（session 创建时定为 memorize/assess/play_pk/play_daily） |
+| `pre_state` / `post_state` | 判题后状态机迁移结果（D01 §10.2 迁移矩阵） |
+| `result` / `confidence` | 判题引擎输出（五键契约前两项） |
+| `hint_level` | 请求原样透传 |
+| `time_cost_ms` | 服务端自请求到达至判题完成计时，由中间件写入（无需客户端上送） |
+
 **响应**（D01 判题契约）：
 ```json
 {
@@ -383,7 +394,7 @@ POST /api/v1/pk/matches/{match_id}/answer
 **请求**：`{ "question_id", "user_answer", "time_cost_ms" }`
 **响应**：`{ "is_correct": true, "result": "correct", "confidence": 0.95, "score": 10 }`
 
-> PK 答题走判题引擎，输出与 D01 判题契约一致（含 confidence）；PK 数据 state_coupling=isolated，不入 attempts/memory_states。
+> PK 答题走判题引擎，输出与 D01 判题契约一致（含 confidence）；PK 数据 state_coupling=isolated，不入 attempts/memory_states。**`time_cost_ms` 由客户端上送**（PK 需以用时决胜，客户端计时含题干阅读+作答全程），与 5.2 主判题接口的"服务端中间件计数"不同——PK 的用时语义是"总耗时决胜"，主判题接口的用时语义是"单题作答耗时（审计用）"。
 
 ### 7.5 PK 结果 + AI 点评
 
