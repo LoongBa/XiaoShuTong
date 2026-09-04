@@ -73,7 +73,7 @@ LLM 超时(>3s)/失败 → 降级本地规则引擎 + 提示用户
 | `通用判题-Prompt.md` | 兜底 LLM 判题（条款/特征等非精确类） |
 | `rule_grader.py` | O1-O5 客观题规则判题（零 LLM 成本，跨学科通用） |
 | `题型注册表.json` | 13 题型注册，O 系列全部走规则判题 |
-| `学科注册表.json` | 8 学科适配器配置（gradingPreference / knowledgeCardTemplate / promptOverrides） |
+| `学科注册表.json` | 9 学科适配器配置（gradingPreference / knowledgeCardTemplate / promptOverrides） |
 
 > R 系列（R1/R2）暂无学科专用 Prompt，使用通用判题兜底；历史/地理 R 系列为事实性知识，关键词匹配率通常 ≥80%，直接命中规则引擎即可判 correct，无需调用 LLM。
 
