@@ -129,13 +129,13 @@ def _sentence_alignment(user_sents: list, std_sents: list) -> tuple:
     return hits, sims
 
 
-def grade_r_content(content: dict, user_answer: str, voice: bool = False) -> dict:
+def grade_r_content(content: dict, user_answer: str, voice: bool = False, qtype: str = "R1") -> dict:
     """
     R 系列（R1/R2/R3a/R3b）相似度判题：
     1. 关键词命中率（rule_grader 同义词组）
     2. 字符相似度（编辑距离 + Jaccard）
-    3. 长文（R3a/R3b）追加逐句对齐
-    取 max 三者的最高得分，按路径阈值映射 result。
+    3. 长文（R3a/R3b）追加逐句对齐（顺序敏感）
+    R3a/R3b 段落以顺序对齐为主信号；R1/R2 单句补全按整体相似度评估。
     """
     answer = content.get("answer", "")
     keywords = content.get("keywords", [])
@@ -150,34 +150,46 @@ def grade_r_content(content: dict, user_answer: str, voice: bool = False) -> dic
     kratio, matched, missing, req_miss = _keyword_hit_ratio(content, user_answer) if keywords else (0.0, [], [answer], False)
     # 2. 字符相似度（整段，编辑距离 + Jaccard）
     csim = char_similarity(user, std) if std else 0.0
-    # 3. 逐句对齐（仅当有标点切分时补充，顺序敏感）
+    # 3. 逐句对齐（仅 R3a/R3b 段落路径，顺序敏感）
     scol = 0.0
     std_sents = _split_sentences(answer)
     user_sents = _split_sentences(user_answer)
-    if len(std_sents) > 1 and user_sents:
+    # 段落路径：仅段落题型（R3a/R3b）且标准答案多句、用户也作答了多句
+    multiline = qtype in ("R3a", "R3b") and len(std_sents) > 1 and len(user_sents) > 0
+    if multiline:
         hits, sims = _sentence_alignment(user_sents, std_sents)
         scol = (len(hits) / len(std_sents)) * 0.9 + (sum(sims) / len(std_sents)) * 0.1
 
-    score = max(kratio, csim, scol)
     th_correct = VOICE_CORRECT if voice else TEXT_CORRECT
     th_partial = VOICE_PARTIAL if voice else TEXT_PARTIAL
 
-    # 结果映射：关键词命中情况为基础判定，相似度辅助边界
-    # 边界情况（相似度高但关键词弱命中）判 partial → 上层 hybrid 走 AI 兜底
-    if has_keywords := bool(keywords):
-        if kratio >= th_correct and not req_miss and csim >= 0.7:
-            result = "correct"        # 关键词高水平命中 + 字符高度相似（含语音小幅噪声）
-        elif matched or csim >= th_partial:
-            result = "partial"        # 记住一部分 → partial（绝不能误判 wrong）
-        else:
-            result = "wrong"
-    else:
-        if score >= th_correct:
+    if multiline:
+        # 段落判题：顺序对齐为主（0.7）+ 关键词/字符相似辅助（0.3）
+        # 防"乱序/漏句但关键词全中"被 max 短路判 correct
+        score = round(0.7 * scol + 0.3 * max(kratio, csim), 3)
+        if score >= th_correct and not req_miss:
             result = "correct"
         elif score >= th_partial:
             result = "partial"
         else:
             result = "wrong"
+    else:
+        # 单句/无标点：关键词 + 字符相似度
+        score = max(kratio, csim)
+        if has_keywords := bool(keywords):
+            if kratio >= th_correct and not req_miss and csim >= 0.7:
+                result = "correct"        # 关键词高水平命中 + 字符高度相似（含语音小幅噪声）
+            elif matched or csim >= th_partial:
+                result = "partial"        # 记住一部分 → partial（绝不能误判 wrong）
+            else:
+                result = "wrong"
+        else:
+            if score >= th_correct:
+                result = "correct"
+            elif score >= th_partial:
+                result = "partial"
+            else:
+                result = "wrong"
 
     return {
         "result": result,
@@ -193,7 +205,7 @@ def grade(question: dict, user_answer, voice: bool = False, **kw) -> dict:
     qtype = question.get("type", "")
     if qtype not in ("R1", "R2", "R3a", "R3b"):
         raise ValueError(f"similarity_grader 仅支持 R1/R2/R3a/R3b，收到 {qtype}")
-    return grade_r_content(question.get("content", {}), user_answer, voice=voice)
+    return grade_r_content(question.get("content", {}), user_answer, voice=voice, qtype=qtype)
 
 
 # ================== 测试矩阵 ==================
@@ -231,10 +243,18 @@ def _run_tests():
     }}, "举头望明月，低头思乡", voice=True)
     assert r["result"] == "partial", r
 
-    # 逐句对齐：段落默写
+    # 逐句对齐：段落默写（正确顺序 + 缺末句）
     ans = "白日依山尽，黄河入海流。欲穷千里目，更上一层楼。"
     r = grade({"type": "R3a", "content": {"answer": ans}}, "白日依山尽，黄河入海流。欲穷千里目")
     assert r["result"] == "partial", r
+
+    # 段落顺序敏感：乱序但内容全 → 不得 correct
+    r = grade({"type": "R3a", "content": {"answer": ans}}, "黄河入海流，白日依山尽。更上一层楼，欲穷千里目。")
+    assert r["result"] != "correct", r
+
+    # 段落完整正确顺序 → correct
+    r = grade({"type": "R3a", "content": {"answer": ans}}, "白日依山尽，黄河入海流。欲穷千里目，更上一层楼。")
+    assert r["result"] == "correct", r
 
     # 编辑距离
     assert edit_distance("kitten", "sitting") == 3, edit_distance("kitten", "sitting")

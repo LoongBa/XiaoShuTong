@@ -5,6 +5,9 @@
 - 原始题库：qtype 启发式推断
 - 训练题库：按 S1-S4 标记映射 R1/R2/R3a/R3b
 - 背景钩子：解析为 author_card 知识卡片
+- 判题策略标记（可选）：题干行内 `[js=exact|similarity|ai_guided|hybrid]` 与
+  `[it=voice|text|select|drag|swipe|card]`，解析后剥离并写入 content 对应字段。
+  未标注的题目不落盘新字段（判题引擎从题型/学科注册表推导缺省，向后兼容）。
 - 输出：
   题库/chinese/七-九年级-统编教材/    （初中 7-9 年级）
   题库/chinese/小学1-6年级-统编教材/  （小学 1-6 年级）
@@ -54,6 +57,28 @@ RANGES = [
 VOLUMES = {"上": "a", "下": "b"}
 S2TYPE = {"S1": "R1", "S2": "R2", "S3": "R3a", "S4": "R3b"}
 
+VALID_JS = {"exact", "similarity", "ai_guided", "hybrid"}
+VALID_IT = {"voice", "text", "select", "drag", "swipe", "card"}
+_MARKER_RE = re.compile(r"\s*\[(js|it)=([a-z_]+)\]\s*")
+
+
+def parse_override_markers(q: str) -> tuple:
+    """
+    从题干剥离判题策略标记，返回 (干净题干, overrides dict)。
+    支持：`[js=ai_guided]` `[it=voice]`，二者可并存（按任意顺序）。
+    非法值忽略（回退注册表推导），保留原题干文字，保持兼容旧题。
+    """
+    overrides = {}
+    cleaned = q
+    for m in _MARKER_RE.finditer(q):
+        key = "judging_strategy" if m.group(1) == "js" else "interaction_type"
+        val = m.group(2)
+        allowed = VALID_JS if key == "judging_strategy" else VALID_IT
+        if val in allowed:
+            overrides[key] = val
+            cleaned = cleaned.replace(m.group(0), "")
+    return cleaned.strip(), overrides
+
 seq = {"n": 0}
 
 def next_id(subject: str, bank: str) -> str:
@@ -94,9 +119,18 @@ def parse_raw_txt(file: Path, subject: str, bank_id: str, bank_code: str, grade_
         q, a = q.strip(), a.strip()
         if not q or not a:
             continue
+        q, overrides = parse_override_markers(q)
         qtype = infer_qtype(q)
         titles = extract_title(q)
         seq["n"] += 1
+        content = {
+            "question": q,
+            "answer": a,
+            "tolerance": "semantic_tolerant",
+        }
+        if qtype != "R4":
+            content["keywords"] = make_keywords(a)
+        content.update(overrides)  # 可选 [js=] [it=] 标记落盘
         item = {
             "id": f"Q-{subject}-{bank_code}-{seq['n']:04d}",
             "bank_id": bank_id,
@@ -105,12 +139,7 @@ def parse_raw_txt(file: Path, subject: str, bank_id: str, bank_code: str, grade_
             "knowledge_points": titles or ["未分类"],
             "type": qtype,
             "purpose_tags": ["memorize", "play"],
-            "content": {
-                "question": q,
-                "answer": a,
-                "keywords": make_keywords(a),
-                "tolerance": "semantic_tolerant",
-            },
+            "content": content,
             "meta": {
                 "difficulty": 1,
                 "source": f"人教社统编版 2024 修订（{raw_suffix}）",
@@ -142,11 +171,19 @@ def parse_training_txt(file: Path, subject: str, bank_id: str, bank_code: str) -
         q, a = q.strip(), a.strip()
         if not q or not a:
             continue
+        q, overrides = parse_override_markers(q)
         qtype = current_type or "R1"
         if q.startswith("默写"):
             qtype = "R3b" if "全文" in q or "整篇" in q else "R3a"
         titles = extract_title(q)
         seq["n"] += 1
+        content = {
+            "question": q,
+            "answer": a,
+            "keywords": make_keywords(a),
+            "tolerance": "semantic_tolerant",
+        }
+        content.update(overrides)
         item = {
             "id": f"Q-{subject}-{bank_code}-{seq['n']:04d}",
             "bank_id": bank_id,
@@ -155,12 +192,7 @@ def parse_training_txt(file: Path, subject: str, bank_id: str, bank_code: str) -
             "knowledge_points": titles or ["未分类"],
             "type": qtype,
             "purpose_tags": ["memorize"],
-            "content": {
-                "question": q,
-                "answer": a,
-                "keywords": make_keywords(a),
-                "tolerance": "semantic_tolerant",
-            },
+            "content": content,
             "meta": {
                 "difficulty": 1,
                 "source": "分阶检索训练题库（S1-S4）",
