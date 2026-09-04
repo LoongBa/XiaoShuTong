@@ -98,6 +98,16 @@
           },
           "description": "连线题（O4）左右匹配对"
         },
+        "judging_strategy": {
+          "type": "string",
+          "enum": ["exact", "similarity", "ai_guided", "hybrid"],
+          "description": "题目级判题策略覆盖（缺省从题型注册表推导）。exact=字符精确比对；similarity=关键词命中率+字符相似度；ai_guided=LLM语义判题+引导式反馈；hybrid=similarity初筛+ai兜底"
+        },
+        "interaction_type": {
+          "type": "string",
+          "enum": ["voice", "text", "select", "drag", "swipe", "card"],
+          "description": "题目级交互类型覆盖（缺省从题型注册表推导）。voice=语音输入（系统ASR）；text=文本输入框；select=单选/多选按钮；drag=拖拽连线/排序；swipe=左右滑动；card=展示型卡片"
+        },
         "tolerance": {
           "type": "string",
           "enum": ["semantic_tolerant", "spelling_tolerant", "exact"],
