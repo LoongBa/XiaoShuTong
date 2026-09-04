@@ -61,7 +61,7 @@
       "name": "知识卡片",
       "family": "memory",
       "grading": "display_only",
-      "judging_strategy": "exact",
+      "judging_strategy": "display_only",
       "prompt": null,
       "interaction": "card",
       "interaction_type": "card",
