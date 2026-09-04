@@ -15,7 +15,7 @@ banks = {
     "geography": json.load(open(BASE + r"\geography\统编-2024修订版\geography-7to9-2024r.json", encoding="utf-8")),
 }
 cards = {
-    "history":   json.load(open(BASE + r"\history\history-cards.json", encoding="utf-8")),
+    "history":   json.load(open(BASE + r"\history\统编-2024修订版\history-cards.json", encoding="utf-8")),
     "geography": json.load(open(BASE + r"\geography\统编-2024修订版\geography-cards.json", encoding="utf-8")),
 }
 reg = json.load(open(BASE + r"\schema\学科注册表.json", encoding="utf-8"))

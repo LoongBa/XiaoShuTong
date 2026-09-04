@@ -13,7 +13,7 @@
     },
     "subject": {
       "type": "string",
-      "enum": ["chinese", "english", "history", "geography", "biology", "chemistry", "math", "physics"]
+      "enum": ["chinese", "english", "history", "geography", "biology", "chemistry", "math", "physics", "daodeyufazhi"]
     },
     "name": { "type": "string", "description": "题库名称" },
     "version": { "type": "string", "pattern": "^V[0-9]+(\\.[0-9]+)*$", "description": "MinVer 风格版本号" },

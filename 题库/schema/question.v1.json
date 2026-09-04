@@ -17,7 +17,7 @@
     },
     "subject": {
       "type": "string",
-      "enum": ["chinese", "english", "history", "geography", "biology", "chemistry", "math", "physics"],
+      "enum": ["chinese", "english", "history", "geography", "biology", "chemistry", "math", "physics", "daodeyufazhi"],
       "description": "学科（对应学科注册表）"
     },
     "topic": {
