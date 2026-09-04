@@ -1,0 +1,133 @@
+{
+  "version": "V1.0",
+  "last_updated": "2026-09-04",
+  "template": "region_card",
+  "cards": [
+    {
+      "id": "KC-geo-xinjiang",
+      "subject": "geography",
+      "name": "新疆维吾尔自治区",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "省级行政区",
+        "abbreviation": "新",
+        "capital": "乌鲁木齐",
+        "location": "我国西北部，面积约 166 万平方千米，是我国面积最大的省级行政区",
+        "features": "三山夹两盆（阿尔泰山、天山、昆仑山夹准噶尔盆地、塔里木盆地）；温带大陆性气候；绿洲农业；油气资源丰富"
+      },
+      "linked_question_ids": ["Q-geo-r1-0001"]
+    },
+    {
+      "id": "KC-geo-guangdong",
+      "subject": "geography",
+      "name": "广东省",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "省级行政区",
+        "abbreviation": "粤",
+        "capital": "广州",
+        "location": "我国大陆南端，南临南海",
+        "features": "亚热带季风气候为主；珠江水系；经济发达；粤菜、粤剧文化"
+      },
+      "linked_question_ids": ["Q-geo-r2-0001", "Q-geo-o4-0001"]
+    },
+    {
+      "id": "KC-geo-provinces",
+      "subject": "geography",
+      "name": "中国省级行政区与简称",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "省级行政区",
+        "abbreviation": "广东-粤 / 山东-鲁 / 四川-川(蜀) / 湖北-鄂",
+        "capital": "广州 / 济南 / 成都 / 武汉",
+        "location": "共 34 个省级行政区（23 省、5 自治区、4 直辖市、2 特别行政区）",
+        "features": "简称多取自古国名、山川名或历史名，如粤（百越）、鲁（鲁国）、蜀（古蜀国）、鄂（鄂州）"
+      },
+      "linked_question_ids": ["Q-geo-o4-0001"]
+    },
+    {
+      "id": "KC-geo-changjiang",
+      "subject": "geography",
+      "name": "长江",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "河流",
+        "abbreviation": "-",
+        "capital": "注入东海",
+        "location": "发源于唐古拉山脉，全长约 6300 千米，流经 11 个省级行政区，是我国第一大河",
+        "features": "上游落差大、水能丰富（三峡水利枢纽）；中游荆江河段弯曲；下游江阔水深、航运发达，被称为“黄金水道”"
+      },
+      "linked_question_ids": ["Q-geo-r1-0002", "Q-geo-o1-0001"]
+    },
+    {
+      "id": "KC-geo-huanghe",
+      "subject": "geography",
+      "name": "黄河",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "河流",
+        "abbreviation": "-",
+        "capital": "注入渤海",
+        "location": "发源于巴颜喀拉山，全长约 5400 千米，是我国第二长河",
+        "features": "中游流经黄土高原、含沙量大；下游形成“地上河”；被誉为中华民族的“母亲河”"
+      },
+      "linked_question_ids": ["Q-geo-r2-0002", "Q-geo-o3-0001"]
+    },
+    {
+      "id": "KC-geo-qingzang",
+      "subject": "geography",
+      "name": "青藏高原",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "地形区",
+        "abbreviation": "-",
+        "capital": "-",
+        "location": "我国西南部，平均海拔 4000 米以上，是世界上海拔最高的大高原",
+        "features": "被称为“世界屋脊”；雪山连绵、冰川广布；高寒气候；是长江、黄河等大江大河的发源地"
+      },
+      "linked_question_ids": ["Q-geo-r1-0003", "Q-geo-o2-0001"]
+    },
+    {
+      "id": "KC-geo-qinling",
+      "subject": "geography",
+      "name": "秦岭—淮河一线",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "地理分界线",
+        "abbreviation": "-",
+        "capital": "-",
+        "location": "大致沿秦岭山脉和淮河一线，横贯我国中部",
+        "features": "1 月 0℃等温线、800mm 年等降水量线大致经过；是暖温带与亚热带、湿润区与半湿润区、南方与北方的分界线"
+      },
+      "linked_question_ids": ["Q-geo-r1-0004"]
+    },
+    {
+      "id": "KC-geo-monsoon",
+      "subject": "geography",
+      "name": "季风气候",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "气候",
+        "abbreviation": "-",
+        "capital": "-",
+        "location": "我国东部季风区",
+        "features": "成因：海陆热力性质差异；冬季风（偏北风）寒冷干燥，夏季风（偏南风）温暖湿润；雨热同期，利于农业生产；季风气候显著是我国气候的主要特征之一"
+      },
+      "linked_question_ids": ["Q-geo-r2-0003"]
+    },
+    {
+      "id": "KC-geo-nanshui",
+      "subject": "geography",
+      "name": "南水北调工程",
+      "kind": "region",
+      "fields": {
+        "administrative_division": "跨流域调水工程",
+        "abbreviation": "-",
+        "capital": "-",
+        "location": "从长江流域调水至华北、西北（东线、中线、西线三线）",
+        "features": "目的是缓解我国水资源空间分布不均（南多北少）的问题；中线从丹江口水库引水至北京、天津"
+      },
+      "linked_question_ids": ["Q-geo-r2-0004"]
+    }
+  ]
+}

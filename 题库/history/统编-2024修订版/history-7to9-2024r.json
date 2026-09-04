@@ -1,0 +1,262 @@
+[
+  {
+    "id": "Q-his-r1-0001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-夏商周",
+    "knowledge_points": ["夏朝建立"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "我国历史上第一个王朝是什么？",
+      "answer": "夏朝",
+      "keywords": [
+        { "aliases": ["夏朝", "夏", "夏王朝"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-xia"
+    }
+  },
+  {
+    "id": "Q-his-r1-0002",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-战国",
+    "knowledge_points": ["商鞅变法"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "战国时期在秦国推行变法、使秦国强大起来的人物是谁？",
+      "answer": "商鞅",
+      "keywords": [
+        { "aliases": ["商鞅", "公孙鞅", "卫鞅"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-shangyang"
+    }
+  },
+  {
+    "id": "Q-his-r1-0003",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-秦汉",
+    "knowledge_points": ["秦统一六国"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "公元前 221 年完成统一、建立我国历史上第一个统一的多民族的封建国家的是哪个朝代？",
+      "answer": "秦朝",
+      "keywords": [
+        { "aliases": ["秦朝", "秦", "秦王朝"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-qinshihuang"
+    }
+  },
+  {
+    "id": "Q-his-r1-0004",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-汉朝",
+    "knowledge_points": ["汉朝建立"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "公元前 202 年，谁建立了汉朝，史称西汉？",
+      "answer": "刘邦",
+      "keywords": [
+        { "aliases": ["刘邦", "汉高祖"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-hanchu"
+    }
+  },
+  {
+    "id": "Q-his-r2-0001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-思想",
+    "knowledge_points": ["孔子"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "儒家学派的创始人、核心思想是“仁”的思想家是谁？",
+      "answer": "孔子",
+      "keywords": [
+        { "aliases": ["孔子", "孔丘", "仲尼"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-kongzi"
+    }
+  },
+  {
+    "id": "Q-his-r2-0002",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-战国",
+    "knowledge_points": ["商鞅变法内容"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "商鞅变法中“奖励耕战、按功授爵”的措施主要为了增强秦国的什么？",
+      "answer": "国力（军事与经济实力）",
+      "keywords": [
+        { "aliases": ["国力", "军事与经济实力", "军事实力"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-shangyang"
+    }
+  },
+  {
+    "id": "Q-his-r2-0003",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-秦汉",
+    "knowledge_points": ["造纸术"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "东汉时期改进造纸术、使纸张成为主要书写材料的人物是谁？",
+      "answer": "蔡伦",
+      "keywords": [
+        { "aliases": ["蔡伦"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-cailun"
+    }
+  },
+  {
+    "id": "Q-his-r2-0004",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-三国",
+    "knowledge_points": ["官渡之战"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "200 年曹操以少胜多击败袁绍、奠定统一北方基础的战役是什么？",
+      "answer": "官渡之战",
+      "keywords": [
+        { "aliases": ["官渡之战", "官渡"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-guandu"
+    }
+  },
+  {
+    "id": "Q-his-o1-0001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-夏商周",
+    "knowledge_points": ["朝代顺序"],
+    "type": "O1",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "我国古代朝代更迭顺序正确的是？",
+      "options": ["A. 夏→商→西周→东周", "B. 商→夏→西周→东周", "C. 夏→西周→商→东周", "D. 商→西周→夏→东周"],
+      "correct_option": "A",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-dynasty-order"
+    }
+  },
+  {
+    "id": "Q-his-o2-0001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-秦汉",
+    "knowledge_points": ["秦始皇巩固统一的措施"],
+    "type": "O2",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "下列哪些属于秦始皇巩固统一的措施？（多选）",
+      "options": ["A. 统一文字", "B. 统一度量衡", "C. 实行分封制", "D. 统一货币"],
+      "correct_option": "A,B,D",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-qinshihuang"
+    }
+  },
+  {
+    "id": "Q-his-o3-0001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-科举制",
+    "knowledge_points": ["科举制"],
+    "type": "O3",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "判断正误：科举制正式创立于隋朝，此后历代沿用，扩大了官吏选拔范围。",
+      "options": ["对", "错"],
+      "correct_option": "对",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级下册示例",
+      "knowledge_card_id": "KC-his-keju"
+    }
+  },
+  {
+    "id": "Q-his-o4-0001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-人物与成就",
+    "knowledge_points": ["历史人物与成就连线"],
+    "type": "O4",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "将下列历史人物与其主要成就连线。",
+      "pairs": [
+        { "left": "蔡伦", "right": "改进造纸术" },
+        { "left": "张仲景", "right": "著《伤寒杂病论》" },
+        { "left": "祖冲之", "right": "把圆周率精确到小数点后第七位" },
+        { "left": "毕昇", "right": "发明活字印刷术" }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 3,
+      "source": "统编《中国历史》七年级示例",
+      "knowledge_card_id": "KC-his-keji"
+    }
+  }
+]

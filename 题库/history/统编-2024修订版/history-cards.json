@@ -1,0 +1,157 @@
+{
+  "version": "V1.0",
+  "last_updated": "2026-09-04",
+  "template": "event_card",
+  "cards": [
+    {
+      "id": "KC-his-xia",
+      "subject": "history",
+      "name": "夏朝建立",
+      "kind": "event",
+      "fields": {
+        "dynasty": "夏朝",
+        "time": "约公元前 2070 年",
+        "person": "禹（启继位，世袭制代替禅让制）",
+        "location": "河南中西部一带",
+        "process": "禹建立夏朝，这是我国历史上第一个王朝，标志着早期国家的产生；禹死后，启继位，王位世袭制代替禅让制",
+        "significance": "我国历史进入文明时代，奴隶制国家开始形成"
+      },
+      "linked_question_ids": ["Q-his-r1-0001"]
+    },
+    {
+      "id": "KC-his-shangyang",
+      "subject": "history",
+      "name": "商鞅变法",
+      "kind": "event",
+      "fields": {
+        "dynasty": "战国·秦",
+        "time": "公元前 356 年",
+        "person": "商鞅（秦孝公支持）",
+        "location": "秦国",
+        "process": "废井田、开阡陌；奖励耕战；奖励军功、按功授爵；推行县制；严明法令",
+        "significance": "使秦国的国力大为增强，提高了军队战斗力，成为战国后期最富强的诸侯国，为以后秦统一全国奠定了基础"
+      },
+      "linked_question_ids": ["Q-his-r1-0002", "Q-his-r2-0002"]
+    },
+    {
+      "id": "KC-his-qinshihuang",
+      "subject": "history",
+      "name": "秦统一六国与巩固措施",
+      "kind": "event",
+      "fields": {
+        "dynasty": "秦朝",
+        "time": "公元前 221 年",
+        "person": "嬴政（秦始皇）",
+        "location": "咸阳",
+        "process": "先后灭掉韩、赵、魏、楚、燕、齐六国，完成统一；统一文字、货币、度量衡；修建长城；推行郡县制",
+        "significance": "建立我国历史上第一个统一的多民族的封建国家，创立中央集权制度，对后世影响深远"
+      },
+      "linked_question_ids": ["Q-his-r1-0003", "Q-his-o2-0001"]
+    },
+    {
+      "id": "KC-his-hanchu",
+      "subject": "history",
+      "name": "汉朝建立",
+      "kind": "event",
+      "fields": {
+        "dynasty": "西汉",
+        "time": "公元前 202 年",
+        "person": "刘邦（汉高祖）",
+        "location": "长安",
+        "process": "刘邦打败项羽，建立汉朝；汉初实行休养生息政策，轻徭薄赋",
+        "significance": "西汉初期社会经济逐步恢复，为文景之治和汉武帝的强盛奠定基础"
+      },
+      "linked_question_ids": ["Q-his-r1-0004"]
+    },
+    {
+      "id": "KC-his-kongzi",
+      "subject": "history",
+      "name": "孔子",
+      "kind": "person",
+      "fields": {
+        "dynasty": "春秋末期",
+        "time": "公元前 551—前 479 年",
+        "person": "孔子（名丘，字仲尼）",
+        "location": "鲁国（今山东曲阜）",
+        "process": "儒家学派创始人，核心思想\u201c仁\u201d；创办私学，主张\u201c有教无类\u201d；整理《诗经》《春秋》等典籍",
+        "significance": "儒家思想成为中国古代社会的正统思想，对中华文化影响深远"
+      },
+      "linked_question_ids": ["Q-his-r2-0001"]
+    },
+    {
+      "id": "KC-his-cailun",
+      "subject": "history",
+      "name": "蔡伦改进造纸术",
+      "kind": "event",
+      "fields": {
+        "dynasty": "东汉",
+        "time": "公元 105 年前后",
+        "person": "蔡伦",
+        "location": "东汉朝廷",
+        "process": "改进造纸工艺，用树皮、麻头、破布等原料制成质优价廉的\u201c蔡侯纸\u201d",
+        "significance": "纸成为主要书写材料，大大促进了文化传播与世界文明交流"
+      },
+      "linked_question_ids": ["Q-his-r2-0003", "Q-his-o4-0001"]
+    },
+    {
+      "id": "KC-his-guandu",
+      "subject": "history",
+      "name": "官渡之战",
+      "kind": "event",
+      "fields": {
+        "dynasty": "东汉末年",
+        "time": "200 年",
+        "person": "曹操 vs 袁绍",
+        "location": "官渡（今河南中牟东北）",
+        "process": "曹操以少胜多，偷袭袁绍粮仓乌巢，击败袁绍主力",
+        "significance": "为曹操统一北方奠定了基础，是中国历史上以少胜多的著名战役"
+      },
+      "linked_question_ids": ["Q-his-r2-0004"]
+    },
+    {
+      "id": "KC-his-dynasty-order",
+      "subject": "history",
+      "name": "中国古代朝代更迭顺序",
+      "kind": "timeline",
+      "fields": {
+        "dynasty": "夏商周至明清",
+        "time": "约公元前 2070 年—1912 年",
+        "person": "-",
+        "location": "-",
+        "process": "夏→商→西周→东周（春秋/战国）→秦→西汉→东汉→三国→两晋→南北朝→隋→唐→五代十国→宋（辽夏金）→元→明→清",
+        "significance": "把握朝代顺序是学习中国古代史的基石"
+      },
+      "linked_question_ids": ["Q-his-o1-0001"]
+    },
+    {
+      "id": "KC-his-keju",
+      "subject": "history",
+      "name": "科举制",
+      "kind": "system",
+      "fields": {
+        "dynasty": "隋朝创立，唐朝完善",
+        "time": "隋炀帝设进士科（约 605 年）",
+        "person": "-",
+        "location": "-",
+        "process": "隋文帝开始用分科考试选拔人才；隋炀帝设进士科，科举制正式确立；唐太宗增加考试科目，武则天首创殿试",
+        "significance": "扩大了官吏选拔范围，使有才学的人得以参政，改善了用人制度，此后沿用 1300 余年"
+      },
+      "linked_question_ids": ["Q-his-o3-0001"]
+    },
+    {
+      "id": "KC-his-keji",
+      "subject": "history",
+      "name": "中国古代科技成就",
+      "kind": "achievement",
+      "fields": {
+        "dynasty": "秦汉至宋",
+        "time": "-",
+        "person": "蔡伦、张仲景、祖冲之、毕昇",
+        "location": "-",
+        "process": "蔡伦改进造纸术；张仲景著《伤寒杂病论》；祖冲之把圆周率精确到小数点后第七位；毕昇发明活字印刷术",
+        "significance": "中国古代科技长期领先世界，对世界文明发展作出巨大贡献"
+      },
+      "linked_question_ids": ["Q-his-o4-0001"]
+    }
+  ]
+}

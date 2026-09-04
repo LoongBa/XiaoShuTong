@@ -1,0 +1,90 @@
+{
+  "$schema": "./registry.schema.v1.json",
+  "version": "V1.0",
+  "description": "小书童学科注册表：各学科适配器配置（数据驱动，判题/卡片/Prompt 按学科路由）",
+  "last_updated": "2026-09-04",
+  "subjects": [
+    {
+      "subject": "chinese",
+      "name": "语文",
+      "supportedTypes": ["R1", "R2", "R3a", "R3b", "R4", "O1", "O2", "O3"],
+      "gradingPreference": "semantic_tolerant",
+      "knowledgeCardTemplate": "author_card",
+      "promptOverrides": {
+        "R1": "题型-R1-补全记忆",
+        "R2": "题型-R2-逆向补全",
+        "R3a": "题型-R3a-段落默写",
+        "R3b": "题型-R3b-整篇默写"
+      },
+      "defaultPurpose": ["memorize", "assess", "play"]
+    },
+    {
+      "subject": "english",
+      "name": "英语",
+      "supportedTypes": ["R1", "R2", "R3a", "R3b", "O1", "O2", "O3", "O5"],
+      "gradingPreference": "spelling_tolerant",
+      "knowledgeCardTemplate": "word_card",
+      "promptOverrides": {
+        "R1": "学科-english-R1R2-翻译判题",
+        "R2": "学科-english-R1R2-翻译判题",
+        "R3a": "学科-english-R3aR3b-拼写判题",
+        "R3b": "学科-english-R3aR3b-拼写判题"
+      },
+      "defaultPurpose": ["memorize", "assess"]
+    },
+    {
+      "subject": "history",
+      "name": "历史",
+      "supportedTypes": ["R1", "R2", "O1", "O2", "O3", "O4"],
+      "gradingPreference": "exact",
+      "knowledgeCardTemplate": "event_card",
+      "promptOverrides": {},
+      "defaultPurpose": ["memorize", "assess", "play"]
+    },
+    {
+      "subject": "geography",
+      "name": "地理",
+      "supportedTypes": ["R1", "R2", "O1", "O2", "O3", "O4"],
+      "gradingPreference": "exact",
+      "knowledgeCardTemplate": "region_card",
+      "promptOverrides": {},
+      "defaultPurpose": ["memorize", "assess", "play"]
+    },
+    {
+      "subject": "biology",
+      "name": "生物",
+      "supportedTypes": ["O1", "O2", "O3", "O5"],
+      "gradingPreference": "exact",
+      "knowledgeCardTemplate": "concept_card",
+      "promptOverrides": {},
+      "defaultPurpose": ["memorize", "assess"]
+    },
+    {
+      "subject": "chemistry",
+      "name": "化学",
+      "supportedTypes": ["O1", "O2", "O3", "O5", "R3b"],
+      "gradingPreference": "exact",
+      "knowledgeCardTemplate": "concept_card",
+      "promptOverrides": {},
+      "defaultPurpose": ["memorize", "assess"]
+    },
+    {
+      "subject": "math",
+      "name": "数学",
+      "supportedTypes": ["O1", "O5", "X3"],
+      "gradingPreference": "exact",
+      "knowledgeCardTemplate": "theorem_card",
+      "promptOverrides": {},
+      "defaultPurpose": ["assess"]
+    },
+    {
+      "subject": "physics",
+      "name": "物理",
+      "supportedTypes": ["O1", "O5", "X3"],
+      "gradingPreference": "exact",
+      "knowledgeCardTemplate": "theorem_card",
+      "promptOverrides": {},
+      "defaultPurpose": ["assess"]
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+[
+  {
+    "id": "Q-his-o1-0001",
+    "bank_id": "history-demo",
+    "subject": "history",
+    "topic": "中国古代史-唐朝",
+    "knowledge_points": ["唐朝", "玄武门之变"],
+    "type": "O1",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "玄武门之变后，哪位皇子即位为唐太宗？",
+      "options": ["A. 李建成", "B. 李世民", "C. 李元吉", "D. 李渊"],
+      "correct_option": "B",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "示例数据-历史",
+      "knowledge_card_id": "KC-his-唐太宗"
+    }
+  },
+  {
+    "id": "Q-geo-o1-0001",
+    "bank_id": "geography-demo",
+    "subject": "geography",
+    "topic": "中国地理-省份",
+    "knowledge_points": ["省份简称"],
+    "type": "O1",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "四川省的简称是？",
+      "options": ["A. 川", "B. 蜀", "C. 渝", "D. 滇"],
+      "correct_option": "A",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "示例数据-地理",
+      "knowledge_card_id": "KC-geo-四川"
+    }
+  },
+  {
+    "id": "Q-his-o2-0001",
+    "bank_id": "history-demo",
+    "subject": "history",
+    "topic": "中国古代史-宋朝",
+    "knowledge_points": ["王安石变法"],
+    "type": "O2",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "王安石变法中推行的措施包括以下哪些？（多选）",
+      "options": ["A. 青苗法", "B. 免役法", "C. 一条鞭法", "D. 方田均税法"],
+      "correct_option": "A,B,D",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 3,
+      "source": "示例数据-历史",
+      "knowledge_card_id": "KC-his-王安石变法"
+    }
+  },
+  {
+    "id": "Q-bio-o2-0001",
+    "bank_id": "biology-demo",
+    "subject": "biology",
+    "topic": "细胞学",
+    "knowledge_points": ["细胞结构"],
+    "type": "O2",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "植物细胞特有的结构包括？（多选）",
+      "options": ["A. 细胞壁", "B. 叶绿体", "C. 线粒体", "D. 液泡"],
+      "correct_option": "A,B,D",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "示例数据-生物",
+      "knowledge_card_id": "KC-bio-细胞"
+    }
+  },
+  {
+    "id": "Q-his-o3-0001",
+    "bank_id": "history-demo",
+    "subject": "history",
+    "topic": "中国古代史-明朝",
+    "knowledge_points": ["郑和下西洋"],
+    "type": "O3",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "郑和七次下西洋发生在明朝永乐年间。",
+      "options": ["对", "错"],
+      "correct_option": "对",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "示例数据-历史",
+      "knowledge_card_id": "KC-his-郑和"
+    }
+  },
+  {
+    "id": "Q-geo-o3-0001",
+    "bank_id": "geography-demo",
+    "subject": "geography",
+    "topic": "中国地理-河流",
+    "knowledge_points": ["长江"],
+    "type": "O3",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "长江是中国第一长河。",
+      "options": ["对", "错"],
+      "correct_option": "对",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "示例数据-地理",
+      "knowledge_card_id": "KC-geo-长江"
+    }
+  },
+  {
+    "id": "Q-his-o4-0001",
+    "bank_id": "history-demo",
+    "subject": "history",
+    "topic": "中国古代史-朝代",
+    "knowledge_points": ["朝代对应"],
+    "type": "O4",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "请将下列历史人物与对应朝代连线。",
+      "pairs": [
+        { "left": "李白", "right": "唐" },
+        { "left": "苏轼", "right": "宋" },
+        { "left": "岳飞", "right": "宋" },
+        { "left": "诸葛亮", "right": "三国" }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "示例数据-历史",
+      "knowledge_card_id": "KC-his-朝代"
+    }
+  },
+  {
+    "id": "Q-geo-o4-0001",
+    "bank_id": "geography-demo",
+    "subject": "geography",
+    "topic": "中国地理-省份简称",
+    "knowledge_points": ["省份简称"],
+    "type": "O4",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "请将下列省份与简称连线。",
+      "pairs": [
+        { "left": "广东", "right": "粤" },
+        { "left": "山东", "right": "鲁" },
+        { "left": "河北", "right": "冀" },
+        { "left": "福建", "right": "闽" }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "示例数据-地理",
+      "knowledge_card_id": "KC-geo-简称"
+    }
+  },
+  {
+    "id": "Q-bio-o5-0001",
+    "bank_id": "biology-demo",
+    "subject": "biology",
+    "topic": "细胞学",
+    "knowledge_points": ["细胞"],
+    "type": "O5",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "请填空：___ 是生物体结构和功能的基本单位。",
+      "answer": "细胞",
+      "keywords": [
+        { "aliases": ["细胞"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "示例数据-生物",
+      "knowledge_card_id": "KC-bio-细胞"
+    }
+  },
+  {
+    "id": "Q-che-o5-0001",
+    "bank_id": "chemistry-demo",
+    "subject": "chemistry",
+    "topic": "化学用语",
+    "knowledge_points": ["元素符号"],
+    "type": "O5",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "请填写氧元素的化学符号：___",
+      "answer": "O",
+      "keywords": [
+        { "aliases": ["O"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "示例数据-化学",
+      "knowledge_card_id": "KC-che-氧"
+    }
+  }
+]

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "Q-eng-r1-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-词汇",
+    "knowledge_points": ["apple"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "play"],
+    "content": {
+      "question": "apple 的中文意思是？",
+      "answer": "苹果",
+      "keywords": [
+        { "aliases": ["苹果"], "weight": 2, "required": true }
+      ],
+      "tolerance": "spelling_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-apple"
+    }
+  },
+  {
+    "id": "Q-eng-r1-0002",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-词汇",
+    "knowledge_points": ["library"],
+    "type": "R1",
+    "purpose_tags": ["memorize"],
+    "content": {
+      "question": "library 的中文意思是？",
+      "answer": "图书馆",
+      "keywords": [
+        { "aliases": ["图书馆"], "weight": 2, "required": true }
+      ],
+      "tolerance": "spelling_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-library"
+    }
+  },
+  {
+    "id": "Q-eng-r2-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-词汇",
+    "knowledge_points": ["teacher"],
+    "type": "R2",
+    "purpose_tags": ["memorize"],
+    "content": {
+      "question": "“老师”的英文单词是？",
+      "answer": "teacher",
+      "keywords": [
+        { "aliases": ["teacher"], "weight": 2, "required": true }
+      ],
+      "tolerance": "spelling_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-teacher"
+    }
+  },
+  {
+    "id": "Q-eng-r2-0002",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-词汇",
+    "knowledge_points": ["beautiful"],
+    "type": "R2",
+    "purpose_tags": ["memorize"],
+    "content": {
+      "question": "“美丽的”的英文单词是？",
+      "answer": "beautiful",
+      "keywords": [
+        { "aliases": ["beautiful"], "weight": 2, "required": true }
+      ],
+      "tolerance": "spelling_tolerant"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-beautiful"
+    }
+  },
+  {
+    "id": "Q-eng-r3a-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-句型",
+    "knowledge_points": ["Greetings"],
+    "type": "R3a",
+    "purpose_tags": ["memorize"],
+    "content": {
+      "question": "默写问候语：How are you? 的完整回答（不少于 2 句）。",
+      "answer": "I'm fine, thank you. And you?",
+      "keywords": [
+        { "aliases": ["I'm fine"], "weight": 2, "required": true },
+        { "aliases": ["thank you"], "weight": 1, "required": false }
+      ],
+      "tolerance": "spelling_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-greeting"
+    }
+  },
+  {
+    "id": "Q-eng-o1-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-语法",
+    "knowledge_points": ["be动词"],
+    "type": "O1",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "选择正确的 be 动词：I ___ a student.",
+      "options": ["A. is", "B. am", "C. are", "D. be"],
+      "correct_option": "B",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-be"
+    }
+  },
+  {
+    "id": "Q-eng-o2-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-词汇",
+    "knowledge_points": ["水果"],
+    "type": "O2",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "下列哪些是水果？（多选）",
+      "options": ["A. apple", "B. banana", "C. car", "D. orange"],
+      "correct_option": "A,B,D",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-fruit"
+    }
+  },
+  {
+    "id": "Q-eng-o3-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-语法",
+    "knowledge_points": ["一般现在时"],
+    "type": "O3",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "判断正误：第三人称单数作主语时，动词要加 -s 或 -es。",
+      "options": ["对", "错"],
+      "correct_option": "对",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-tense"
+    }
+  },
+  {
+    "id": "Q-eng-o4-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-词汇",
+    "knowledge_points": ["反义词"],
+    "type": "O4",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "将下列单词与对应反义词连线。",
+      "pairs": [
+        { "left": "big", "right": "small" },
+        { "left": "hot", "right": "cold" },
+        { "left": "fast", "right": "slow" },
+        { "left": "happy", "right": "sad" }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-antonym"
+    }
+  },
+  {
+    "id": "Q-eng-o5-0001",
+    "bank_id": "english-7to9-pep-2024r",
+    "subject": "english",
+    "topic": "七年级-语法",
+    "knowledge_points": ["物主代词"],
+    "type": "O5",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "填空：This is ___ book. (我)",
+      "answer": "my",
+      "keywords": [
+        { "aliases": ["my"], "weight": 2, "required": true }
+      ],
+      "tolerance": "spelling_tolerant"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "PEP 英语七年级示例",
+      "knowledge_card_id": "KC-eng-possessive"
+    }
+  }
+]

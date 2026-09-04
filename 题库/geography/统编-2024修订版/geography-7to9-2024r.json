@@ -1,0 +1,262 @@
+[
+  {
+    "id": "Q-geo-r1-0001",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-省级行政区",
+    "knowledge_points": ["省级行政区划"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "我国面积最大的省级行政区是哪一个？",
+      "answer": "新疆维吾尔自治区",
+      "keywords": [
+        { "aliases": ["新疆维吾尔自治区", "新疆"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-xinjiang"
+    }
+  },
+  {
+    "id": "Q-geo-r1-0002",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-河流",
+    "knowledge_points": ["长江"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "我国第一大河、全长约 6300 千米、自西向东注入东海的是哪条河流？",
+      "answer": "长江",
+      "keywords": [
+        { "aliases": ["长江"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-changjiang"
+    }
+  },
+  {
+    "id": "Q-geo-r1-0003",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-地形",
+    "knowledge_points": ["世界屋脊"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "被称为“世界屋脊”、平均海拔 4000 米以上的高原是哪一个？",
+      "answer": "青藏高原",
+      "keywords": [
+        { "aliases": ["青藏高原", "青藏"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-qingzang"
+    }
+  },
+  {
+    "id": "Q-geo-r1-0004",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "七年级-气候",
+    "knowledge_points": ["秦岭-淮河线"],
+    "type": "R1",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "我国 1 月 0℃等温线大致经过哪条重要的地理分界线？",
+      "answer": "秦岭—淮河一线",
+      "keywords": [
+        { "aliases": ["秦岭-淮河一线", "秦岭—淮河", "秦岭淮河"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-qinling"
+    }
+  },
+  {
+    "id": "Q-geo-r2-0001",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-省级行政区",
+    "knowledge_points": ["省级行政区简称"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "简称“粤”的省级行政区是哪一个？",
+      "answer": "广东省",
+      "keywords": [
+        { "aliases": ["广东省", "广东"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-guangdong"
+    }
+  },
+  {
+    "id": "Q-geo-r2-0002",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-河流",
+    "knowledge_points": ["黄河"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "被誉为中华民族“母亲河”、发源于巴颜喀拉山、注入渤海的河流是哪一条？",
+      "answer": "黄河",
+      "keywords": [
+        { "aliases": ["黄河"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-huanghe"
+    }
+  },
+  {
+    "id": "Q-geo-r2-0003",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-气候",
+    "knowledge_points": ["季风气候"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "我国季风气候显著的主要影响因素是什么？",
+      "answer": "海陆位置（海陆热力性质差异）",
+      "keywords": [
+        { "aliases": ["海陆位置", "海陆热力性质差异", "海陆差异"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 3,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-monsoon"
+    }
+  },
+  {
+    "id": "Q-geo-r2-0004",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-自然资源",
+    "knowledge_points": ["南水北调"],
+    "type": "R2",
+    "purpose_tags": ["memorize", "assess"],
+    "content": {
+      "question": "为解决我国水资源空间分布不均（南多北少）问题而实施的跨流域调水工程是什么？",
+      "answer": "南水北调工程",
+      "keywords": [
+        { "aliases": ["南水北调", "南水北调工程"], "weight": 2, "required": true }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-nanshui"
+    }
+  },
+  {
+    "id": "Q-geo-o1-0001",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-河流",
+    "knowledge_points": ["长江流域"],
+    "type": "O1",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "长江干流流经的省级行政区数量约为（含发源地省份）？",
+      "options": ["A. 7 个", "B. 9 个", "C. 11 个", "D. 14 个"],
+      "correct_option": "C",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 3,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-changjiang"
+    }
+  },
+  {
+    "id": "Q-geo-o2-0001",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-地形区",
+    "knowledge_points": ["四大高原特征"],
+    "type": "O2",
+    "purpose_tags": ["assess"],
+    "content": {
+      "question": "下列描述与地形区对应正确的有哪些？（多选）",
+      "options": ["A. 青藏高原——世界屋脊", "B. 内蒙古高原——地势平坦开阔", "C. 黄土高原——沟壑纵横", "D. 云贵高原——喀斯特地貌广布"],
+      "correct_option": "A,B,C,D",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-qingzang"
+    }
+  },
+  {
+    "id": "Q-geo-o3-0001",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-河流",
+    "knowledge_points": ["黄河"],
+    "type": "O3",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "判断正误：黄河是我国第二长河，是世界上含沙量最大的河流之一。",
+      "options": ["对", "错"],
+      "correct_option": "对",
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-huanghe"
+    }
+  },
+  {
+    "id": "Q-geo-o4-0001",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-省级行政区",
+    "knowledge_points": ["省级行政区与简称连线"],
+    "type": "O4",
+    "purpose_tags": ["assess", "play"],
+    "content": {
+      "question": "将下列省级行政区与其简称连线。",
+      "pairs": [
+        { "left": "广东省", "right": "粤" },
+        { "left": "山东省", "right": "鲁" },
+        { "left": "四川省", "right": "川（蜀）" },
+        { "left": "湖北省", "right": "鄂" }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-provinces"
+    }
+  }
+]
