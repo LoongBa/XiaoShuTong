@@ -1,0 +1,105 @@
+# 小学PEP五年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版（三年级起点）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 五年级上册 =====
+
+# Unit 1 What's he like?
+年长的用英语怎么说？###old
+年轻的用英语怎么说？###young
+滑稽的用英语怎么说？###funny
+和蔼的用英语怎么说？###kind
+严格的用英语怎么说？###strict
+有礼貌的用英语怎么说？###polite
+他/她是什么样的人？用英语怎么说？###What's he/she like?
+# Unit 2 My week
+星期一用英语怎么说？###Monday
+星期二用英语怎么说？###Tuesday
+星期三用英语怎么说？###Wednesday
+星期四用英语怎么说？###Thursday
+星期五用英语怎么说？###Friday
+星期六用英语怎么说？###Saturday
+星期日用英语怎么说？###Sunday
+你星期一有什么课？用英语怎么说？###What do you have on Mondays?
+# Unit 3 What would you like?
+三明治用英语怎么说？###sandwich
+沙拉用英语怎么说？###salad
+汉堡包用英语怎么说？###hamburger
+茶用英语怎么说？###tea
+新鲜的用英语怎么说？###fresh
+你想要吃什么/喝什么？用英语怎么说？###What would you like to eat/drink?
+# Unit 4 What can you do?
+唱歌用英语怎么说？###sing
+跳舞用英语怎么说？###dance
+画画用英语怎么说？###draw
+做饭用英语怎么说？###cook
+游泳用英语怎么说？###swim
+你会做什么？用英语怎么说？###What can you do?
+# Unit 5 There is a big bed
+钟表用英语怎么说？###clock
+植物用英语怎么说？###plant
+瓶子用英语怎么说？###bottle
+自行车用英语怎么说？###bike
+照片用英语怎么说？###photo
+有一个/一些...用英语怎么说？###There is a/an... / There are...
+# Unit 6 In a nature park
+森林用英语怎么说？###forest
+河流用英语怎么说？###river
+湖泊用英语怎么说？###lake
+山用英语怎么说？###mountain
+小山用英语怎么说？###hill
+有一个...吗？用英语怎么说？###Is there a...?
+有一些...吗？用英语怎么说？###Are there any...?
+
+# ===== 五年级下册 =====
+
+# Unit 1 My day
+吃早餐用英语怎么说？###eat breakfast
+上...课用英语怎么说？###have...class
+做运动用英语怎么说？###play sports
+你什么时候...？用英语怎么说？###When do you...?
+# Unit 2 My favourite season
+春天用英语怎么说？###spring
+夏天用英语怎么说？###summer
+秋天用英语怎么说？###autumn / fall
+冬天用英语怎么说？###winter
+你最喜欢哪个季节？用英语怎么说？###Which season do you like best?
+# Unit 3 My school calendar
+一月用英语怎么说？###January
+二月用英语怎么说？###February
+三月用英语怎么说？###March
+四月用英语怎么说？###April
+五月用英语怎么说？###May
+六月用英语怎么说？###June
+七月用英语怎么说？###July
+八月用英语怎么说？###August
+九月用英语怎么说？###September
+十月用英语怎么说？###October
+十一月用英语怎么说？###November
+十二月用英语怎么说？###December
+...是什么时候？用英语怎么说？###When is...?
+# Unit 4 When is Easter?
+第一用英语怎么说？###first
+第二用英语怎么说？###second
+第三用英语怎么说？###third
+第四用英语怎么说？###fourth
+第五用英语怎么说？###fifth
+第六用英语怎么说？###sixth
+第七用英语怎么说？###seventh
+第八用英语怎么说？###eighth
+第九用英语怎么说？###ninth
+第十用英语怎么说？###tenth
+第十一用英语怎么说？###eleventh
+第十二用英语怎么说？###twelfth
+你的生日是什么时候？用英语怎么说？###When is your birthday?
+# Unit 5 Whose dog is it?
+他的用英语怎么说？###his
+她的用英语怎么说？###hers
+我的用英语怎么说？###mine
+你的用英语怎么说？###yours
+他们的用英语怎么说？###theirs
+这是谁的...？用英语怎么说？###Whose... is this/that?
+# Unit 6 Work quietly!
+做早操用英语怎么说？###do morning exercises
+上...课用英语怎么说？###have...class
+他们/你正在做什么？用英语怎么说？###What are they/you doing?

@@ -1,0 +1,78 @@
+# 初中八年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 八年级上册 =====
+
+# Unit 1 Where did you go on vacation?
+你假期去了哪里？用英语怎么说？###Where did you go on vacation?
+我去了海滩用英语怎么说？###I went to the beach.
+我参观了博物馆用英语怎么说？###I visited museums.
+我呆在家里用英语怎么说？###I stayed at home.
+# Unit 2 How often do you exercise?
+你多久锻炼一次？用英语怎么说？###How often do you exercise?
+我总是/通常/经常/有时/几乎不锻炼用英语怎么说？###I always/usually/often/sometimes/hardly ever exercise.
+# Unit 3 I'm more outgoing than my sister.
+我比我姐姐更外向用英语怎么说？###I'm more outgoing than my sister.
+他/她比我更有趣用英语怎么说？###He/She is funnier than me.
+# Unit 4 What's the best movie theater?
+最好的电影院是哪家？用英语怎么说？###What's the best movie theater?
+它是最舒适的用英语怎么说？###It's the most comfortable.
+# Unit 5 Do you want to watch a game show?
+你想看游戏节目吗？用英语怎么说？###Do you want to watch a game show?
+我想看新闻用英语怎么说？###I want to watch news.
+# Unit 6 I'm going to study computer science.
+你打算学习什么？用英语怎么说？###What are you going to study?
+我打算学习计算机科学用英语怎么说？###I'm going to study computer science.
+# Unit 7 Will people have robots?
+将来会有机器人吗？用英语怎么说？###Will there be robots?
+人们将会有机器人用英语怎么说？###People will have robots.
+# Unit 8 How do you make a banana milkshake?
+你怎么制作香蕉奶昔？用英语怎么说？###How do you make a banana milkshake?
+打开搅拌机用英语怎么说？###Turn on the blender.
+把香蕉切碎用英语怎么说？###Cut up the bananas.
+把牛奶倒进搅拌机用英语怎么说？###Pour the milk into the blender.
+# Unit 9 Can you come to my party?
+你能来我的聚会吗？用英语怎么说？###Can you come to my party?
+对不起，我不能来用英语怎么说？###Sorry, I can't come.
+# Unit 10 If you go to the party, you'll have a great time!
+如果你去聚会，你会玩得很开心用英语怎么说？###If you go to the party, you'll have a great time.
+
+# ===== 八年级下册 =====
+
+# Unit 1 What's the matter?
+怎么了？用英语怎么说？###What's the matter?
+我感冒了用英语怎么说？###I have a cold.
+我胃疼用英语怎么说？###I have a stomachache.
+我头疼用英语怎么说？###I have a headache.
+我牙疼用英语怎么说？###I have a toothache.
+我应该做什么？用英语怎么说？###What should I do?
+# Unit 2 I'll help to clean up the city parks.
+我会帮助打扫城市公园用英语怎么说？###I'll help to clean up the city parks.
+你可以分发传单用英语怎么说？###You could give out flyers.
+# Unit 3 Could you please clean your room?
+你能打扫你的房间吗？用英语怎么说？###Could you please clean your room?
+你能洗碗吗？用英语怎么说？###Could you please do the dishes?
+你能倒垃圾吗？用英语怎么说？###Could you please take out the rubbish?
+# Unit 4 Why don't you talk to your parents?
+你为什么不和父母谈谈？用英语怎么说？###Why don't you talk to your parents?
+你应该和他们交流用英语怎么说？###You should communicate with them.
+# Unit 5 What were you doing when the rainstorm came?
+暴风雨来的时候你正在做什么？用英语怎么说？###What were you doing when the rainstorm came?
+我正在安静地看书用英语怎么说？###I was reading in silence.
+# Unit 6 An old man tried to move the mountains.
+一位老人试图移动山用英语怎么说？###An old man tried to move the mountains.
+他一...就...用英语怎么说？###As soon as...
+如此...以至于...用英语怎么说？###So...that...
+# Unit 7 What's the highest mountain in the world?
+世界上最高的山是哪座？用英语怎么说？###What's the highest mountain in the world?
+珠穆朗玛峰是世界上最高的山用英语怎么说？###Mount Qomolangma is the highest mountain in the world.
+# Unit 8 Have you read Treasure Island yet?
+你读过《金银岛》吗？用英语怎么说？###Have you read Treasure Island yet?
+是的，我读过了用英语怎么说？###Yes, I have.
+# Unit 9 Have you ever been to a museum?
+你曾经去过博物馆吗？用英语怎么说？###Have you ever been to a museum?
+是的，我去过用英语怎么说？###Yes, I have been to.
+# Unit 10 I've had this bike for three years.
+我拥有这辆自行车三年了用英语怎么说？###I've had this bike for three years.
+我从2020年就拥有它了用英语怎么说？###I've had it since 2020.

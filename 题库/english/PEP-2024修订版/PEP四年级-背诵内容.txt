@@ -1,0 +1,91 @@
+# 小学PEP四年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版（三年级起点）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 四年级上册 =====
+
+# Unit 1 My classroom
+教室用英语怎么说？###classroom
+窗户用英语怎么说？###window
+门用英语怎么说？###door
+图画用英语怎么说？###picture
+黑板用英语怎么说？###blackboard / board
+教室里有什么？用英语怎么说？###What's in the classroom?
+# Unit 2 My schoolbag
+语文书用英语怎么说？###Chinese book
+英语书用英语怎么说？###English book
+数学书用英语怎么说？###maths book
+我有一个新...用英语怎么说？###I have a new...
+# Unit 3 My friends
+强壮的用英语怎么说？###strong
+瘦的用英语怎么说？###thin
+安静的用英语怎么说？###quiet
+友好的用英语怎么说？###friendly
+眼镜用英语怎么说？###glasses
+他/她有...用英语怎么说？###He/She has...
+# Unit 4 My home
+卧室用英语怎么说？###bedroom
+客厅用英语怎么说？###living room
+厨房用英语怎么说？###kitchen
+书房用英语怎么说？###study
+浴室用英语怎么说？###bathroom
+他/她在...吗？用英语怎么说？###Is she/he in the...?
+# Unit 5 Dinner's ready
+牛肉用英语怎么说？###beef
+鸡肉用英语怎么说？###chicken
+面条用英语怎么说？###noodles
+汤用英语怎么说？###soup
+蔬菜用英语怎么说？###vegetables
+你想要什么？用英语怎么说？###What would you like?
+# Unit 6 Meet my family!
+医生用英语怎么说？###doctor
+护士用英语怎么说？###nurse
+农民用英语怎么说？###farmer
+司机用英语怎么说？###driver
+你爸爸/妈妈的工作是什么？用英语怎么说？###What's your father/mother's job?
+
+# ===== 四年级下册 =====
+
+# Unit 1 My school
+一楼用英语怎么说？###first floor
+二楼用英语怎么说？###second floor
+音乐教室用英语怎么说？###music room
+美术教室用英语怎么说？###art room
+...在哪里？用英语怎么说？###Where is the...?
+# Unit 2 What time is it?
+早餐用英语怎么说？###breakfast
+午餐用英语怎么说？###lunch
+晚餐用英语怎么说？###dinner
+英语课用英语怎么说？###English class
+现在几点了？用英语怎么说？###What time is it?
+# Unit 3 Weather
+温暖的用英语怎么说？###warm
+寒冷的用英语怎么说？###cold
+炎热的用英语怎么说？###hot
+凉爽的用英语怎么说？###cool
+晴朗的用英语怎么说？###sunny
+有风的用英语怎么说？###windy
+天气怎么样？用英语怎么说？###What's the weather like?
+# Unit 4 At the farm
+西红柿用英语怎么说？###tomato
+土豆用英语怎么说？###potato
+胡萝卜用英语怎么说？###carrot
+马用英语怎么说？###horse
+牛用英语怎么说？###cow
+羊用英语怎么说？###sheep
+这些/那些是...吗？用英语怎么说？###Are these/those...?
+# Unit 5 My clothes
+衣服用英语怎么说？###clothes
+裤子用英语怎么说？###pants
+帽子用英语怎么说？###hat
+连衣裙用英语怎么说？###dress
+短裙用英语怎么说？###skirt
+夹克用英语怎么说？###jacket
+这些/那些是谁的...？用英语怎么说？###Whose... are these/those?
+# Unit 6 Shopping
+手套用英语怎么说？###gloves
+围巾用英语怎么说？###scarf
+雨伞用英语怎么说？###umbrella
+太阳镜用英语怎么说？###sunglasses
+我能帮你吗？用英语怎么说？###Can I help you?
+多少钱？用英语怎么说？###How much is it? / How much are they?

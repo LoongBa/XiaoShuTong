@@ -1,0 +1,141 @@
+# 小学PEP四年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP版 2024 修订版（三年级起点）
+# 题型：# S1 正向检索 / # S2 逆向检索 / # S3 要点默写 / # S4 综合默写
+# 格式：题目###答案（# 开头为注释）
+# 用法：✕→S1 跟读 | △→S1/S2 | ○→S2/S3 | ★→S4
+
+# ===== 四年级上册 =====
+
+## Unit 1 My classroom
+# S1 正向检索
+教室用英语怎么说？###classroom
+窗户用英语怎么说？###window
+门用英语怎么说？###door
+# S2 逆向检索
+classroom 这是什么场所的英语？###教室
+window 这是什么物品的英语？###窗户
+# S3 要点默写
+默写"教室里有什么？"的英语表达###What's in the classroom?
+
+## Unit 2 My schoolbag
+# S1 正向检索
+语文书用英语怎么说？###Chinese book
+英语书用英语怎么说？###English book
+数学书用英语怎么说？###maths book
+# S2 逆向检索
+Chinese book 这是什么物品的英语？###语文书
+English book 这是什么物品的英语？###英语书
+# S3 要点默写
+默写"我有一个新..."的英语表达###I have a new...
+
+## Unit 3 My friends
+# S1 正向检索
+强壮的用英语怎么说？###strong
+瘦的用英语怎么说？###thin
+安静的用英语怎么说？###quiet
+# S2 逆向检索
+strong 这是什么特征的英语？###强壮的
+thin 这是什么特征的英语？###瘦的
+# S3 要点默写
+默写"他/她有..."的英语表达###He/She has...
+
+## Unit 4 My home
+# S1 正向检索
+卧室用英语怎么说？###bedroom
+客厅用英语怎么说？###living room
+厨房用英语怎么说？###kitchen
+# S2 逆向检索
+bedroom 这是什么房间的英语？###卧室
+living room 这是什么房间的英语？###客厅
+# S3 要点默写
+默写"他/她在...吗？"的英语表达###Is she/he in the...?
+
+## Unit 5 Dinner's ready
+# S1 正向检索
+牛肉用英语怎么说？###beef
+鸡肉用英语怎么说？###chicken
+面条用英语怎么说？###noodles
+# S2 逆向检索
+beef 这是什么食物的英语？###牛肉
+chicken 这是什么食物的英语？###鸡肉
+# S3 要点默写
+默写"你想要什么？"的英语表达###What would you like?
+
+## Unit 6 Meet my family!
+# S1 正向检索
+医生用英语怎么说？###doctor
+护士用英语怎么说？###nurse
+农民用英语怎么说？###farmer
+# S2 逆向检索
+doctor 这是什么职业的英语？###医生
+nurse 这是什么职业的英语？###护士
+# S3 要点默写
+默写"你爸爸/妈妈的工作是什么？"的英语表达###What's your father/mother's job?
+
+# ===== 四年级下册 =====
+
+## Unit 1 My school
+# S1 正向检索
+一楼用英语怎么说？###first floor
+二楼用英语怎么说？###second floor
+音乐教室用英语怎么说？###music room
+# S2 逆向检索
+first floor 这是什么场所的英语？###一楼
+second floor 这是什么场所的英语？###二楼
+# S3 要点默写
+默写"...在哪里？"的英语表达###Where is the...?
+
+## Unit 2 What time is it?
+# S1 正向检索
+早餐用英语怎么说？###breakfast
+午餐用英语怎么说？###lunch
+晚餐用英语怎么说？###dinner
+# S2 逆向检索
+breakfast 这是什么餐食的英语？###早餐
+lunch 这是什么餐食的英语？###午餐
+# S3 要点默写
+默写"现在几点了？"的英语表达###What time is it?
+
+## Unit 3 Weather
+# S1 正向检索
+温暖的用英语怎么说？###warm
+寒冷的用英语怎么说？###cold
+炎热的用英语怎么说？###hot
+# S2 逆向检索
+warm 这是什么天气特征的英语？###温暖的
+cold 这是什么天气特征的英语？###寒冷的
+# S3 要点默写
+默写"天气怎么样？"的英语表达###What's the weather like?
+
+## Unit 4 At the farm
+# S1 正向检索
+西红柿用英语怎么说？###tomato
+土豆用英语怎么说？###potato
+胡萝卜用英语怎么说？###carrot
+# S2 逆向检索
+tomato 这是什么蔬菜的英语？###西红柿
+potato 这是什么蔬菜的英语？###土豆
+# S3 要点默写
+默写"这些/那些是...吗？"的英语表达###Are these/those...?
+
+## Unit 5 My clothes
+# S1 正向检索
+衣服用英语怎么说？###clothes
+裤子用英语怎么说？###pants
+帽子用英语怎么说？###hat
+# S2 逆向检索
+clothes 这是什么物品的英语？###衣服
+pants 这是什么物品的英语？###裤子
+# S3 要点默写
+默写"这些/那些是谁的...？"的英语表达###Whose... are these/those?
+
+## Unit 6 Shopping
+# S1 正向检索
+手套用英语怎么说？###gloves
+围巾用英语怎么说？###scarf
+雨伞用英语怎么说？###umbrella
+# S2 逆向检索
+gloves 这是什么物品的英语？###手套
+scarf 这是什么物品的英语？###围巾
+# S3 要点默写
+默写"我能帮你吗？"和"多少钱？"的英语表达###Can I help you? / How much is it?

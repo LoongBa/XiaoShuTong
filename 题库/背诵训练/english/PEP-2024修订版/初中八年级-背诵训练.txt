@@ -1,0 +1,208 @@
+# 初中八年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP版 2024 修订版
+# 题型：# S1 正向检索 / # S2 逆向检索 / # S3 要点默写 / # S4 综合默写
+# 格式：题目###答案（# 开头为注释）
+# 用法：✕→S1 跟读 | △→S1/S2 | ○→S2/S3 | ★→S4
+
+# ===== 八年级上册 =====
+
+## Unit 1 Where did you go on vacation?
+# S1 正向检索
+你假期去了哪里？用英语怎么说？###Where did you go on vacation?
+我去了海滩用英语怎么说？###I went to the beach.
+# S2 逆向检索
+Where did you go on vacation? 这是什么意思？###你假期去了哪里？
+I went to the beach. 这是什么意思？###我去了海滩。
+# S3 要点默写
+默写"我参观了博物馆"的英语表达###I visited museums.
+
+## Unit 2 How often do you exercise?
+# S1 正向检索
+你多久锻炼一次？用英语怎么说？###How often do you exercise?
+我总是/通常/经常/有时/几乎不锻炼用英语怎么说？###I always/usually/often/sometimes/hardly ever exercise.
+# S2 逆向检索
+How often do you exercise? 这是什么意思？###你多久锻炼一次？
+I always exercise. 这是什么意思？###我总是锻炼。
+# S3 要点默写
+默写频率副词（从高到低）###always, usually, often, sometimes, hardly ever, never
+
+## Unit 3 I'm more outgoing than my sister.
+# S1 正向检索
+我比我姐姐更外向用英语怎么说？###I'm more outgoing than my sister.
+他/她比我更有趣用英语怎么说？###He/She is funnier than me.
+# S2 逆向检索
+I'm more outgoing than my sister. 这是什么意思？###我比我姐姐更外向。
+He/She is funnier than me. 这是什么意思？###他/她比我更有趣。
+# S3 要点默写
+默写比较级的构成规则###短单词加-er，长单词加more
+
+## Unit 4 What's the best movie theater?
+# S1 正向检索
+最好的电影院是哪家？用英语怎么说？###What's the best movie theater?
+它是最舒适的用英语怎么说？###It's the most comfortable.
+# S2 逆向检索
+What's the best movie theater? 这是什么意思？###最好的电影院是哪家？
+It's the most comfortable. 这是什么意思？###它是最舒适的。
+# S3 要点默写
+默写最高级的构成规则###短单词加-est，长单词加most
+
+## Unit 5 Do you want to watch a game show?
+# S1 正向检索
+你想看游戏节目吗？用英语怎么说？###Do you want to watch a game show?
+我想看新闻用英语怎么说？###I want to watch news.
+# S2 逆向检索
+Do you want to watch a game show? 这是什么意思？###你想看游戏节目吗？
+I want to watch news. 这是什么意思？###我想看新闻。
+# S3 要点默写
+默写"你想要做...吗？"的英语表达###Do you want to...?
+
+## Unit 6 I'm going to study computer science.
+# S1 正向检索
+你打算学习什么？用英语怎么说？###What are you going to study?
+我打算学习计算机科学用英语怎么说？###I'm going to study computer science.
+# S2 逆向检索
+What are you going to study? 这是什么意思？###你打算学习什么？
+I'm going to study computer science. 这是什么意思？###我打算学习计算机科学。
+# S3 要点默写
+默写"你打算做什么？"的英语表达###What are you going to do?
+
+## Unit 7 Will people have robots?
+# S1 正向检索
+将来会有机器人吗？用英语怎么说？###Will there be robots?
+人们将会有机器人用英语怎么说？###People will have robots.
+# S2 逆向检索
+Will there be robots? 这是什么意思？###将来会有机器人吗？
+People will have robots. 这是什么意思？###人们将会有机器人。
+# S3 要点默写
+默写"将来会有...吗？"的there be将来时###Will there be...?
+
+## Unit 8 How do you make a banana milkshake?
+# S1 正向检索
+你怎么制作香蕉奶昔？用英语怎么说？###How do you make a banana milkshake?
+打开搅拌机用英语怎么说？###Turn on the blender.
+# S2 逆向检索
+How do you make a banana milkshake? 这是什么意思？###你怎么制作香蕉奶昔？
+Turn on the blender. 这是什么意思？###打开搅拌机。
+# S3 要点默写
+默写制作步骤的祈使句###Turn on, cut up, pour...into, add...to
+
+## Unit 9 Can you come to my party?
+# S1 正向检索
+你能来我的聚会吗？用英语怎么说？###Can you come to my party?
+对不起，我不能来用英语怎么说？###Sorry, I can't come.
+# S2 逆向检索
+Can you come to my party? 这是什么意思？###你能来我的聚会吗？
+Sorry, I can't come. 这是什么意思？###对不起，我不能来。
+# S3 要点默写
+默写"你能来...吗？"的邀请句型###Can you come to...?
+
+## Unit 10 If you go to the party, you'll have a great time!
+# S1 正向检索
+如果你去聚会，你会玩得很开心用英语怎么说？###If you go to the party, you'll have a great time.
+# S2 逆向检索
+If you go to the party, you'll have a great time. 这是什么意思？###如果你去聚会，你会玩得很开心。
+# S3 要点默写
+默写"如果你...，你会..."的条件句###If you..., you'll...
+
+# ===== 八年级下册 =====
+
+## Unit 1 What's the matter?
+# S1 正向检索
+怎么了？用英语怎么说？###What's the matter?
+我感冒了用英语怎么说？###I have a cold.
+我胃疼用英语怎么说？###I have a stomachache.
+# S2 逆向检索
+What's the matter? 这是什么意思？###怎么了？
+I have a cold. 这是什么意思？###我感冒了。
+# S3 要点默写
+默写"我..."的疾病表达###I have a cold/stomachache/headache/toothache.
+
+## Unit 2 I'll help to clean up the city parks.
+# S1 正向检索
+我会帮助打扫城市公园用英语怎么说？###I'll help to clean up the city parks.
+你可以分发传单用英语怎么说？###You could give out flyers.
+# S2 逆向检索
+I'll help to clean up the city parks. 这是什么意思？###我会帮助打扫城市公园。
+You could give out flyers. 这是什么意思？###你可以分发传单。
+# S3 要点默写
+默写"我会帮助..."的英语表达###I'll help to...
+
+## Unit 3 Could you please clean your room?
+# S1 正向检索
+你能打扫你的房间吗？用英语怎么说？###Could you please clean your room?
+你能洗碗吗？用英语怎么说？###Could you please do the dishes?
+# S2 逆向检索
+Could you please clean your room? 这是什么意思？###你能打扫你的房间吗？
+Could you please do the dishes? 这是什么意思？###你能洗碗吗？
+# S3 要点默写
+默写"你能...吗？"的礼貌请求###Could you please...?
+
+## Unit 4 Why don't you talk to your parents?
+# S1 正向检索
+你为什么不和父母谈谈？用英语怎么说？###Why don't you talk to your parents?
+你应该和他们交流用英语怎么说？###You should communicate with them.
+# S2 逆向检索
+Why don't you talk to your parents? 这是什么意思？###你为什么不和父母谈谈？
+You should communicate with them. 这是什么意思？###你应该和他们交流。
+# S3 要点默写
+默写"你为什么不...？"的建议句型###Why don't you...?
+
+## Unit 5 What were you doing when the rainstorm came?
+# S1 正向检索
+暴风雨来的时候你正在做什么？用英语怎么说？###What were you doing when the rainstorm came?
+我正在安静地看书用英语怎么说？###I was reading in silence.
+# S2 逆向检索
+What were you doing when the rainstorm came? 这是什么意思？###暴风雨来的时候你正在做什么？
+I was reading in silence. 这是什么意思？###我正在安静地看书。
+# S3 要点默写
+默写过去进行时的构成###was/were + doing
+
+## Unit 6 An old man tried to move the mountains.
+# S1 正向检索
+一位老人试图移动山用英语怎么说？###An old man tried to move the mountains.
+他一...就...用英语怎么说？###As soon as...
+# S2 逆向检索
+An old man tried to move the mountains. 这是什么意思？###一位老人试图移动山。
+As soon as... 这是什么意思？###他一...就...
+# S3 要点默写
+默写"如此...以至于..."的英语表达###So...that...
+
+## Unit 7 What's the highest mountain in the world?
+# S1 正向检索
+世界上最高的山是哪座？用英语怎么说？###What's the highest mountain in the world?
+珠穆朗玛峰是世界上最高的山用英语怎么说？###Mount Qomolangma is the highest mountain in the world.
+# S2 逆向检索
+What's the highest mountain in the world? 这是什么意思？###世界上最高的山是哪座？
+Mount Qomolangma is the highest mountain in the world. 这是什么意思？###珠穆朗玛峰是世界上最高的山。
+# S3 要点默写
+默写"世界上最...的...是哪个？"的英语表达###What's the highest/biggest/longest... in the world?
+
+## Unit 8 Have you read Treasure Island yet?
+# S1 正向检索
+你读过《金银岛》吗？用英语怎么说？###Have you read Treasure Island yet?
+是的，我读过了用英语怎么说？###Yes, I have.
+# S2 逆向检索
+Have you read Treasure Island yet? 这是什么意思？###你读过《金银岛》吗？
+Yes, I have. 这是什么意思？###是的，我读过了。
+# S3 要点默写
+默写现在完成时的一般疑问句###Have you ever...?
+
+## Unit 9 Have you ever been to a museum?
+# S1 正向检索
+你曾经去过博物馆吗？用英语怎么说？###Have you ever been to a museum?
+是的，我去过用英语怎么说？###Yes, I have been to.
+# S2 逆向检索
+Have you ever been to a museum? 这是什么意思？###你曾经去过博物馆吗？
+Yes, I have been to. 这是什么意思？###是的，我去过。
+# S3 要点默写
+默写"你曾经去过...吗？"的英语表达###Have you ever been to...?
+
+## Unit 10 I've had this bike for three years.
+# S1 正向检索
+我拥有这辆自行车三年了用英语怎么说？###I've had this bike for three years.
+我从2020年就拥有它了用英语怎么说？###I've had it since 2020.
+# S2 逆向检索
+I've had this bike for three years. 这是什么意思？###我拥有这辆自行车三年了。
+I've had it since 2020. 这是什么意思？###我从2020年就拥有它了。
+# S3 要点默写
+默写for和since的区别###for+时间段，since+时间点

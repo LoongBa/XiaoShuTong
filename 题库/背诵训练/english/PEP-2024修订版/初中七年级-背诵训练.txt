@@ -1,0 +1,219 @@
+# 初中七年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP版 2024 修订版
+# 题型：# S1 正向检索 / # S2 逆向检索 / # S3 要点默写 / # S4 综合默写
+# 格式：题目###答案（# 开头为注释）
+# 用法：✕→S1 跟读 | △→S1/S2 | ○→S2/S3 | ★→S4
+
+# ===== 七年级上册 =====
+
+## Unit 1 My name's Gina.
+# S1 正向检索
+你叫什么名字？用英语怎么说？###What's your name?
+我叫...用英语怎么说？###My name is... / I'm...
+# S2 逆向检索
+What's your name? 这是什么意思？###你叫什么名字？
+My name is... 这是什么意思？###我叫...
+# S3 要点默写
+默写"你的电话号码是多少？"的英语表达###What's your phone number?
+
+## Unit 2 This is my sister.
+# S1 正向检索
+这是我的...用英语怎么说？###This is my...
+这些/那些是...用英语怎么说？###These/Those are...
+# S2 逆向检索
+This is my... 这是什么意思？###这是我的...
+These/Those are... 这是什么意思？###这些/那些是...
+# S3 要点默写
+默写"那个男人/女人是谁？"的英语表达###Who's that man/woman?
+
+## Unit 3 Is this your pencil?
+# S1 正向检索
+这是你的铅笔吗？用英语怎么说？###Is this your pencil?
+那些是你的书吗？用英语怎么说？###Are those your books?
+# S2 逆向检索
+Is this your pencil? 这是什么意思？###这是你的铅笔吗？
+Are those your books? 这是什么意思？###那些是你的书吗？
+# S3 要点默写
+默写"这是...吗？"的一般疑问句###Is this/that your...?
+
+## Unit 4 Where's my schoolbag?
+# S1 正向检索
+我的书包在哪里？用英语怎么说？###Where is my schoolbag?
+它在桌子上用英语怎么说？###It's on the desk.
+# S2 逆向检索
+Where is my schoolbag? 这是什么意思？###我的书包在哪里？
+It's on the desk. 这是什么意思？###它在桌子上。
+# S3 要点默写
+默写"它在...下面"的英语表达###It's under...
+
+## Unit 5 Do you have a soccer ball?
+# S1 正向检索
+你有足球吗？用英语怎么说？###Do you have a soccer ball?
+我们打篮球吧用英语怎么说？###Let's play basketball.
+# S2 逆向检索
+Do you have a soccer ball? 这是什么意思？###你有足球吗？
+Let's play basketball. 这是什么意思？###我们打篮球吧。
+# S3 要点默写
+默写"让我们..."的英语表达###Let's...
+
+## Unit 6 Do you like bananas?
+# S1 正向检索
+你喜欢香蕉吗？用英语怎么说？###Do you like bananas?
+我喜欢/不喜欢...用英语怎么说？###I like/don't like...
+# S2 逆向检索
+Do you like bananas? 这是什么意思？###你喜欢香蕉吗？
+I like/don't like... 这是什么意思？###我喜欢/不喜欢...
+# S3 要点默写
+默写"你喜欢...吗？"的一般疑问句###Do you like...?
+
+## Unit 7 How much are these socks?
+# S1 正向检索
+这些袜子多少钱？用英语怎么说？###How much are these socks?
+这件毛衣多少钱？用英语怎么说？###How much is this sweater?
+# S2 逆向检索
+How much are these socks? 这是什么意思？###这些袜子多少钱？
+How much is this sweater? 这是什么意思？###这件毛衣多少钱？
+# S3 要点默写
+默写"多少钱？"的英语表达###How much is/are...?
+
+## Unit 8 When is your birthday?
+# S1 正向检索
+你的生日是什么时候？用英语怎么说？###When is your birthday?
+你几岁了？用英语怎么说？###How old are you?
+# S2 逆向检索
+When is your birthday? 这是什么意思？###你的生日是什么时候？
+How old are you? 这是什么意思？###你几岁了？
+# S3 要点默写
+默写"什么时候"的疑问词###when
+
+## Unit 9 My favorite subject is science.
+# S1 正向检索
+你最喜欢的科目是什么？用英语怎么说？###What's your favorite subject?
+我最喜欢的科目是科学用英语怎么说？###My favorite subject is science.
+# S2 逆向检索
+What's your favorite subject? 这是什么意思？###你最喜欢的科目是什么？
+My favorite subject is science. 这是什么意思？###我最喜欢的科目是科学。
+# S3 要点默写
+默写"你最喜欢的...是什么？"的英语表达###What's your favorite...?
+
+# ===== 七年级下册 =====
+
+## Unit 1 Can you play the guitar?
+# S1 正向检索
+你会弹吉他吗？用英语怎么说？###Can you play the guitar?
+你想加入什么俱乐部？用英语怎么说？###What club do you want to join?
+# S2 逆向检索
+Can you play the guitar? 这是什么意思？###你会弹吉他吗？
+What club do you want to join? 这是什么意思？###你想加入什么俱乐部？
+# S3 要点默写
+默写"你会...吗？"的英语表达###Can you...?
+
+## Unit 2 What time do you go to school?
+# S1 正向检索
+你几点起床？用英语怎么说？###What time do you get up?
+你几点去上学？用英语怎么说？###What time do you go to school?
+# S2 逆向检索
+What time do you get up? 这是什么意思？###你几点起床？
+What time do you go to school? 这是什么意思？###你几点去上学？
+# S3 要点默写
+默写"你几点...？"的英语表达###What time do you...?
+
+## Unit 3 How do you get to school?
+# S1 正向检索
+你怎么去学校？用英语怎么说？###How do you get to school?
+我乘公共汽车去学校用英语怎么说？###I take the bus to school.
+# S2 逆向检索
+How do you get to school? 这是什么意思？###你怎么去学校？
+I take the bus to school. 这是什么意思？###我乘公共汽车去学校。
+# S3 要点默写
+默写"你怎么去...？"的英语表达###How do you get to...?
+
+## Unit 4 Don't eat in class.
+# S1 正向检索
+不要在教室里吃东西用英语怎么说？###Don't eat in class.
+你必须/不能...用英语怎么说？###You must/can't...
+# S2 逆向检索
+Don't eat in class. 这是什么意思？###不要在教室里吃东西。
+You must/can't... 这是什么意思？###你必须/不能...
+# S3 要点默写
+默写"不要..."的祈使句###Don't...
+
+## Unit 5 Why do you like pandas?
+# S1 正向检索
+你为什么喜欢熊猫？用英语怎么说？###Why do you like pandas?
+因为它们很可爱用英语怎么说？###Because they are cute.
+# S2 逆向检索
+Why do you like pandas? 这是什么意思？###你为什么喜欢熊猫？
+Because they are cute. 这是什么意思？###因为它们很可爱。
+# S3 要点默写
+默写"为什么"的疑问词和"因为"的回答###Why...? Because...
+
+## Unit 6 I'm watching TV.
+# S1 正向检索
+你正在做什么？用英语怎么说？###What are you doing?
+我正在做作业用英语怎么说？###I'm doing homework.
+# S2 逆向检索
+What are you doing? 这是什么意思？###你正在做什么？
+I'm doing homework. 这是什么意思？###我正在做作业。
+# S3 要点默写
+默写"你正在做什么？"的现在进行时###What are you doing?
+
+## Unit 7 It's raining!
+# S1 正向检索
+天气怎么样？用英语怎么说？###How's the weather?
+正在下雨用英语怎么说？###It's raining.
+# S2 逆向检索
+How's the weather? 这是什么意思？###天气怎么样？
+It's raining. 这是什么意思？###正在下雨。
+# S3 要点默写
+默写"天气怎么样？"的英语表达###How's the weather? / What's the weather like?
+
+## Unit 8 Is there a post office near here?
+# S1 正向检索
+这附近有邮局吗？用英语怎么说？###Is there a post office near here?
+邮局在医院旁边用英语怎么说？###The post office is next to the hospital.
+# S2 逆向检索
+Is there a post office near here? 这是什么意思？###这附近有邮局吗？
+The post office is next to the hospital. 这是什么意思？###邮局在医院旁边。
+# S3 要点默写
+默写"这附近有...吗？"的there be句型###Is there a... near here?
+
+## Unit 9 What does he look like?
+# S1 正向检索
+他/她长什么样？用英语怎么说？###What does he/she look like?
+他/她又高又瘦用英语怎么说？###He/She is tall and thin.
+# S2 逆向检索
+What does he/she look like? 这是什么意思？###他/她长什么样？
+He/She is tall and thin. 这是什么意思？###他/她又高又瘦。
+# S3 要点默写
+默写"他/她长什么样？"的英语表达###What does he/she look like?
+
+## Unit 10 I'd like some noodles.
+# S1 正向检索
+你想要什么样的面条？用英语怎么说？###What kind of noodles would you like?
+我想要牛肉面用英语怎么说？###I'd like beef noodles.
+# S2 逆向检索
+What kind of noodles would you like? 这是什么意思？###你想要什么样的面条？
+I'd like beef noodles. 这是什么意思？###我想要牛肉面。
+# S3 要点默写
+默写"你想要什么？"的英语表达###What would you like?
+
+## Unit 11 How was your school trip?
+# S1 正向检索
+你的学校旅行怎么样？用英语怎么说？###How was your school trip?
+你做了什么？用英语怎么说？###What did you do?
+# S2 逆向检索
+How was your school trip? 这是什么意思？###你的学校旅行怎么样？
+What did you do? 这是什么意思？###你做了什么？
+# S3 要点默写
+默写"...怎么样？"的英语表达###How was...?
+
+## Unit 12 What did you do last weekend?
+# S1 正向检索
+你上个周末做了什么？用英语怎么说？###What did you do last weekend?
+我去看了电影用英语怎么说？###I went to the cinema.
+# S2 逆向检索
+What did you do last weekend? 这是什么意思？###你上个周末做了什么？
+I went to the cinema. 这是什么意思？###我去看了电影。
+# S3 要点默写
+默写"你上个周末做了什么？"的英语表达###What did you do last weekend?

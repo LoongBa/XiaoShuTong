@@ -1,0 +1,71 @@
+# 小学PEP六年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版（三年级起点）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 六年级上册 =====
+
+# Unit 1 How can I get there?
+科学博物馆用英语怎么说？###science museum
+邮局用英语怎么说？###post office
+书店用英语怎么说？###bookstore
+电影院用英语怎么说？###cinema
+我怎么到达...？用英语怎么说？###How can I get to...?
+# Unit 2 Ways to go to school
+乘公共汽车用英语怎么说？###by bus
+乘飞机用英语怎么说？###by plane
+乘出租车用英语怎么说？###by taxi
+步行用英语怎么说？###on foot
+你怎么来学校？用英语怎么说？###How do you come to school?
+# Unit 3 My weekend plan
+参观用英语怎么说？###visit
+电影用英语怎么说？###film
+旅行用英语怎么说？###trip
+超市用英语怎么说？###supermarket
+字典用英语怎么说？###dictionary
+你打算做什么？用英语怎么说？###What are you going to do?
+# Unit 4 I have a pen pal
+跳舞用英语怎么说？###dancing
+唱歌用英语怎么说？###singing
+读书用英语怎么说？###reading stories
+打足球用英语怎么说？###playing football
+你的爱好是什么？用英语怎么说？###What are your hobbies?
+# Unit 5 What does he do?
+渔夫用英语怎么说？###fisherman
+科学家用英语怎么说？###scientist
+飞行员用英语怎么说？###pilot
+教练用英语怎么说？###coach
+他/她是做什么的？用英语怎么说？###What does he/she do?
+# Unit 6 How do you feel?
+生气的用英语怎么说？###angry
+害怕的用英语怎么说？###afraid
+伤心的用英语怎么说？###sad
+担心的用英语怎么说？###worried
+开心的用英语怎么说？###happy
+你感觉怎么样？用英语怎么说？###How do you feel?
+
+# ===== 六年级下册 =====
+
+# Unit 1 How tall are you?
+更高的用英语怎么说？###taller
+更矮的用英语怎么说？###shorter
+更长的用英语怎么说？###longer
+更年长的用英语怎么说？###older
+更年轻的用英语怎么说？###younger
+你多高/多重？用英语怎么说？###How tall/heavy are you?
+# Unit 2 Last weekend
+看电视用英语怎么说？###watched TV
+洗衣服用英语怎么说？###washed clothes
+打扫房间用英语怎么说？###cleaned room
+你上个周末做了什么？用英语怎么说？###What did you do last weekend?
+# Unit 3 Where did you go?
+去露营用英语怎么说？###went camping
+去钓鱼用英语怎么说？###went fishing
+骑自行车用英语怎么说？###rode a bike
+你假期去了哪里？用英语怎么说？###Where did you go over the holiday?
+# Unit 4 Then and now
+以前用英语怎么说？###before
+现在用英语怎么说？###now
+许多年前用英语怎么说？###years ago
+在那时用英语怎么说？###at that time
+以前有/是...用英语怎么说？###There was/were...
+现在有/是...用英语怎么说？###Now there is/are...

@@ -1,0 +1,137 @@
+# 初中九年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP版 2024 修订版（全一册）
+# 题型：# S1 正向检索 / # S2 逆向检索 / # S3 要点默写 / # S4 综合默写
+# 格式：题目###答案（# 开头为注释）
+# 用法：✕→S1 跟读 | △→S1/S2 | ○→S2/S3 | ★→S4
+
+# ===== 九年级全一册 =====
+
+## Unit 1 How can we become good learners?
+# S1 正向检索
+我怎样才能学好英语？用英语怎么说？###How can I learn English well?
+你应该和小组一起学习用英语怎么说？###You should study with a group.
+# S2 逆向检索
+How can I learn English well? 这是什么意思？###我怎样才能学好英语？
+You should study with a group. 这是什么意思？###你应该和小组一起学习。
+# S3 要点默写
+默写"我怎样才能...？"的英语表达###How can I...?
+
+## Unit 2 I think that mooncakes are delicious!
+# S1 正向检索
+我认为月饼很好吃用英语怎么说？###I think that mooncakes are delicious.
+我想知道是否...用英语怎么说？###I wonder if/whether...
+# S2 逆向检索
+I think that mooncakes are delicious. 这是什么意思？###我认为月饼很好吃。
+I wonder if/whether... 这是什么意思？###我想知道是否...
+# S3 要点默写
+默写"我认为..."和"我想知道是否..."的英语表达###I think that... / I wonder if/whether...
+
+## Unit 3 Could you please tell me where the restrooms are?
+# S1 正向检索
+你能告诉我洗手间在哪里吗？用英语怎么说？###Could you please tell me where the restrooms are?
+# S2 逆向检索
+Could you please tell me where the restrooms are? 这是什么意思？###你能告诉我洗手间在哪里吗？
+# S3 要点默写
+默写宾语从句的语序（陈述语序）###Could you tell me where... are?
+
+## Unit 4 I used to be afraid of the dark.
+# S1 正向检索
+我过去害怕黑暗用英语怎么说？###I used to be afraid of the dark.
+我过去不害怕黑暗用英语怎么说？###I didn't use to be afraid of the dark.
+# S2 逆向检索
+I used to be afraid of the dark. 这是什么意思？###我过去害怕黑暗。
+I didn't use to be afraid of the dark. 这是什么意思？###我过去不害怕黑暗。
+# S3 要点默写
+默写used to的肯定和否定形式###I used to... / I didn't use to...
+
+## Unit 5 What are the shirts made of?
+# S1 正向检索
+这些衬衫是用什么做的？用英语怎么说？###What are the shirts made of?
+它们是用棉布做的用英语怎么说？###They are made of cotton.
+# S2 逆向检索
+What are the shirts made of? 这是什么意思？###这些衬衫是用什么做的？
+They are made of cotton. 这是什么意思？###它们是用棉布做的。
+# S3 要点默写
+默写be made of和be made from的区别###be made of看得出原材料，be made from看不出原材料
+
+## Unit 6 When was it invented?
+# S1 正向检索
+它是什么时候被发明的？用英语怎么说？###When was it invented?
+它是被谁发明的？用英语怎么说？###Who was it invented by?
+# S2 逆向检索
+When was it invented? 这是什么意思？###它是什么时候被发明的？
+Who was it invented by? 这是什么意思？###它是被谁发明的？
+# S3 要点默写
+默写被动语态的构成###was/were + 过去分词
+
+## Unit 7 Teenagers should be allowed to choose their own clothes.
+# S1 正向检索
+青少年应该被允许选择自己的衣服用英语怎么说？###Teenagers should be allowed to choose their own clothes.
+# S2 逆向检索
+Teenagers should be allowed to choose their own clothes. 这是什么意思？###青少年应该被允许选择自己的衣服。
+# S3 要点默写
+默写情态动词+被动语态的构成###should be + 过去分词
+
+## Unit 8 It must belong to Carla.
+# S1 正向检索
+它一定是卡拉的用英语怎么说？###It must belong to Carla.
+它可能是...用英语怎么说？###It might be...
+它不可能是...用英语怎么说？###It can't be...
+# S2 逆向检索
+It must belong to Carla. 这是什么意思？###它一定是卡拉的。
+It might be... 这是什么意思？###它可能是...
+It can't be... 这是什么意思？###它不可能是...
+# S3 要点默写
+默写表示推测的情态动词（从强到弱）###must, might/could, can't
+
+## Unit 9 I like music that I can dance to.
+# S1 正向检索
+我喜欢我能跟着跳舞的音乐用英语怎么说？###I like music that I can dance to.
+# S2 逆向检索
+I like music that I can dance to. 这是什么意思？###我喜欢我能跟着跳舞的音乐。
+# S3 要点默写
+默写定语从句that/who的用法###that用于物，who用于人
+
+## Unit 10 You're supposed to shake hands.
+# S1 正向检索
+你应该握手用英语怎么说？###You're supposed to shake hands.
+# S2 逆向检索
+You're supposed to shake hands. 这是什么意思？###你应该握手。
+# S3 要点默写
+默写be supposed to的用法###be supposed to应该做某事（按惯例/规定）
+
+## Unit 11 Sad movies make me cry.
+# S1 正向检索
+悲伤的电影让我哭泣用英语怎么说？###Sad movies make me cry.
+# S2 逆向检索
+Sad movies make me cry. 这是什么意思？###悲伤的电影让我哭泣。
+# S3 要点默写
+默写make的使役动词用法###make sb. do sth. / make sb. + adj.
+
+## Unit 12 Life is full of the unexpected.
+# S1 正向检索
+生活充满意外用英语怎么说？###Life is full of the unexpected.
+到我起床的时候，我已经迟到了用英语怎么说？###By the time I got up, I had been late.
+# S2 逆向检索
+Life is full of the unexpected. 这是什么意思？###生活充满意外。
+By the time I got up, I had been late. 这是什么意思？###到我起床的时候，我已经迟到了。
+# S3 要点默写
+默写过去完成时的构成###had + 过去分词
+
+## Unit 13 We're trying to save the earth!
+# S1 正向检索
+我们正在努力拯救地球用英语怎么说？###We're trying to save the earth!
+# S2 逆向检索
+We're trying to save the earth! 这是什么意思？###我们正在努力拯救地球！
+# S3 要点默写
+默写"我们正在努力..."的英语表达###We're trying to...
+
+## Unit 14 I remember meeting all of you in Grade 7.
+# S1 正向检索
+我记得在七年级见过你们所有人用英语怎么说？###I remember meeting all of you in Grade 7.
+我期待着...用英语怎么说？###I'm looking forward to...
+# S2 逆向检索
+I remember meeting all of you in Grade 7. 这是什么意思？###我记得在七年级见过你们所有人。
+I'm looking forward to... 这是什么意思？###我期待着...
+# S3 要点默写
+默写remember doing和look forward to doing的用法###remember doing记得做过，look forward to doing期待做

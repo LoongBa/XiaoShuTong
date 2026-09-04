@@ -1,0 +1,96 @@
+# 小学PEP三年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版（三年级起点）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 三年级上册 =====
+
+# Unit 1 Hello!
+你好用英语怎么说？###Hello! / Hi!
+再见用英语怎么说？###Goodbye! / Bye!
+我叫...用英语怎么说？###I'm... / My name is...
+# Unit 2 Colours
+红色用英语怎么说？###red
+黄色用英语怎么说？###yellow
+绿色用英语怎么说？###green
+蓝色用英语怎么说？###blue
+这是什么颜色？用英语怎么说？###What colour is it?
+# Unit 3 Look at me!
+头用英语怎么说？###head
+眼睛用英语怎么说？###eye
+耳朵用英语怎么说？###ear
+鼻子用英语怎么说？###nose
+嘴巴用英语怎么说？###mouth
+看我！用英语怎么说？###Look at me!
+# Unit 4 We love animals
+猫用英语怎么说？###cat
+狗用英语怎么说？###dog
+鸟用英语怎么说？###bird
+鱼用英语怎么说？###fish
+猴子用英语怎么说？###monkey
+我有一个...用英语怎么说？###I have a...
+# Unit 5 Let's eat!
+蛋糕用英语怎么说？###cake
+面包用英语怎么说？###bread
+鸡蛋用英语怎么说？###egg
+牛奶用英语怎么说？###milk
+水用英语怎么说？###water
+我能吃一些...吗？用英语怎么说？###Can I have some...?
+# Unit 6 Happy birthday!
+一用英语怎么说？###one
+二用英语怎么说？###two
+三用英语怎么说？###three
+四用英语怎么说？###four
+五用英语怎么说？###five
+六用英语怎么说？###six
+七用英语怎么说？###seven
+八用英语怎么说？###eight
+九用英语怎么说？###nine
+十用英语怎么说？###ten
+你几岁了？用英语怎么说？###How old are you?
+
+# ===== 三年级下册 =====
+
+# Unit 1 Welcome back to school!
+英国用英语怎么说？###UK
+加拿大用英语怎么说？###Canada
+美国用英语怎么说？###USA
+中国用英语怎么说？###China
+你来自哪里？用英语怎么说？###Where are you from?
+# Unit 2 My family
+爸爸用英语怎么说？###father / dad
+妈妈用英语怎么说？###mother / mom
+哥哥/弟弟用英语怎么说？###brother
+姐姐/妹妹用英语怎么说？###sister
+那个男人/女人是谁？用英语怎么说？###Who's that man/woman?
+# Unit 3 At the zoo
+高的用英语怎么说？###tall
+矮的用英语怎么说？###short
+瘦的用英语怎么说？###thin
+胖的用英语怎么说？###fat
+大的用英语怎么说？###big
+小的用英语怎么说？###small
+# Unit 4 Where is my car?
+在...里面用英语怎么说？###in
+在...上面用英语怎么说？###on
+在...下面用英语怎么说？###under
+桌子用英语怎么说？###desk
+椅子用英语怎么说？###chair
+我的...在哪里？用英语怎么说？###Where is my...?
+# Unit 5 Do you like pears?
+苹果用英语怎么说？###apple
+梨用英语怎么说？###pear
+橙子用英语怎么说？###orange
+香蕉用英语怎么说？###banana
+你喜欢...吗？用英语怎么说？###Do you like...?
+# Unit 6 How many?
+十一用英语怎么说？###eleven
+十二用英语怎么说？###twelve
+十三用英语怎么说？###thirteen
+十四用英语怎么说？###fourteen
+十五用英语怎么说？###fifteen
+十六用英语怎么说？###sixteen
+十七用英语怎么说？###seventeen
+十八用英语怎么说？###eighteen
+十九用英语怎么说？###nineteen
+二十用英语怎么说？###twenty
+你看到/有多少...？用英语怎么说？###How many... do you see/have?

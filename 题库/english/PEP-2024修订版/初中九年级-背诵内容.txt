@@ -1,0 +1,44 @@
+# 初中九年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版（全一册）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 九年级全一册 =====
+
+# Unit 1 How can we become good learners?
+我怎样才能学好英语？用英语怎么说？###How can I learn English well?
+你应该和小组一起学习用英语怎么说？###You should study with a group.
+你应该向老师求助用英语怎么说？###You should ask the teacher for help.
+# Unit 2 I think that mooncakes are delicious!
+我认为月饼很好吃用英语怎么说？###I think that mooncakes are delicious.
+我想知道是否...用英语怎么说？###I wonder if/whether...
+# Unit 3 Could you please tell me where the restrooms are?
+你能告诉我洗手间在哪里吗？用英语怎么说？###Could you please tell me where the restrooms are?
+# Unit 4 I used to be afraid of the dark.
+我过去害怕黑暗用英语怎么说？###I used to be afraid of the dark.
+我过去不害怕黑暗用英语怎么说？###I didn't use to be afraid of the dark.
+# Unit 5 What are the shirts made of?
+这些衬衫是用什么做的？用英语怎么说？###What are the shirts made of?
+它们是用棉布做的用英语怎么说？###They are made of cotton.
+# Unit 6 When was it invented?
+它是什么时候被发明的？用英语怎么说？###When was it invented?
+它是被谁发明的？用英语怎么说？###Who was it invented by?
+# Unit 7 Teenagers should be allowed to choose their own clothes.
+青少年应该被允许选择自己的衣服用英语怎么说？###Teenagers should be allowed to choose their own clothes.
+# Unit 8 It must belong to Carla.
+它一定是卡拉的用英语怎么说？###It must belong to Carla.
+它可能是...用英语怎么说？###It might be...
+它不可能是...用英语怎么说？###It can't be...
+# Unit 9 I like music that I can dance to.
+我喜欢我能跟着跳舞的音乐用英语怎么说？###I like music that I can dance to.
+# Unit 10 You're supposed to shake hands.
+你应该握手用英语怎么说？###You're supposed to shake hands.
+# Unit 11 Sad movies make me cry.
+悲伤的电影让我哭泣用英语怎么说？###Sad movies make me cry.
+# Unit 12 Life is full of the unexpected.
+生活充满意外用英语怎么说？###Life is full of the unexpected.
+到我起床的时候，我已经迟到了用英语怎么说？###By the time I got up, I had been late.
+# Unit 13 We're trying to save the earth!
+我们正在努力拯救地球用英语怎么说？###We're trying to save the earth!
+# Unit 14 I remember meeting all of you in Grade 7.
+我记得在七年级见过你们所有人用英语怎么说？###I remember meeting all of you in Grade 7.
+我期待着...用英语怎么说？###I'm looking forward to...

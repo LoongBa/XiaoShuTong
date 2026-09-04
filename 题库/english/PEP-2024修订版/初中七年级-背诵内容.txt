@@ -1,0 +1,77 @@
+# 初中七年级 英语 背诵内容测试题
+# 教材：人教PEP版 2024 修订版
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 七年级上册 =====
+
+# Unit 1 My name's Gina.
+你叫什么名字？用英语怎么说？###What's your name?
+我叫...用英语怎么说？###My name is... / I'm...
+你的电话号码是多少？用英语怎么说？###What's your phone number?
+# Unit 2 This is my sister.
+这是我的...用英语怎么说？###This is my...
+这些/那些是...用英语怎么说？###These/Those are...
+那个男人/女人是谁？用英语怎么说？###Who's that man/woman?
+# Unit 3 Is this your pencil?
+这是你的铅笔吗？用英语怎么说？###Is this your pencil?
+那些是你的书吗？用英语怎么说？###Are those your books?
+# Unit 4 Where's my schoolbag?
+我的书包在哪里？用英语怎么说？###Where is my schoolbag?
+它在桌子上用英语怎么说？###It's on the desk.
+它在椅子下面用英语怎么说？###It's under the chair.
+# Unit 5 Do you have a soccer ball?
+你有足球吗？用英语怎么说？###Do you have a soccer ball?
+我们打篮球吧用英语怎么说？###Let's play basketball.
+# Unit 6 Do you like bananas?
+你喜欢香蕉吗？用英语怎么说？###Do you like bananas?
+我喜欢/不喜欢...用英语怎么说？###I like/don't like...
+# Unit 7 How much are these socks?
+这些袜子多少钱？用英语怎么说？###How much are these socks?
+这件毛衣多少钱？用英语怎么说？###How much is this sweater?
+# Unit 8 When is your birthday?
+你的生日是什么时候？用英语怎么说？###When is your birthday?
+你几岁了？用英语怎么说？###How old are you?
+# Unit 9 My favorite subject is science.
+你最喜欢的科目是什么？用英语怎么说？###What's your favorite subject?
+我最喜欢的科目是科学用英语怎么说？###My favorite subject is science.
+为什么你喜欢科学？用英语怎么说？###Why do you like science?
+
+# ===== 七年级下册 =====
+
+# Unit 1 Can you play the guitar?
+你会弹吉他吗？用英语怎么说？###Can you play the guitar?
+你想加入什么俱乐部？用英语怎么说？###What club do you want to join?
+# Unit 2 What time do you go to school?
+你几点起床？用英语怎么说？###What time do you get up?
+你几点去上学？用英语怎么说？###What time do you go to school?
+# Unit 3 How do you get to school?
+你怎么去学校？用英语怎么说？###How do you get to school?
+我乘公共汽车去学校用英语怎么说？###I take the bus to school.
+# Unit 4 Don't eat in class.
+不要在教室里吃东西用英语怎么说？###Don't eat in class.
+你必须/不能...用英语怎么说？###You must/can't...
+# Unit 5 Why do you like pandas?
+你为什么喜欢熊猫？用英语怎么说？###Why do you like pandas?
+因为它们很可爱用英语怎么说？###Because they are cute.
+# Unit 6 I'm watching TV.
+你正在做什么？用英语怎么说？###What are you doing?
+我正在做作业用英语怎么说？###I'm doing homework.
+他/她正在看电视用英语怎么说？###He's/She's watching TV.
+# Unit 7 It's raining!
+天气怎么样？用英语怎么说？###How's the weather?
+正在下雨用英语怎么说？###It's raining.
+# Unit 8 Is there a post office near here?
+这附近有邮局吗？用英语怎么说？###Is there a post office near here?
+邮局在医院旁边用英语怎么说？###The post office is next to the hospital.
+# Unit 9 What does he look like?
+他/她长什么样？用英语怎么说？###What does he/she look like?
+他/她又高又瘦用英语怎么说？###He/She is tall and thin.
+# Unit 10 I'd like some noodles.
+你想要什么样的面条？用英语怎么说？###What kind of noodles would you like?
+我想要牛肉面用英语怎么说？###I'd like beef noodles.
+# Unit 11 How was your school trip?
+你的学校旅行怎么样？用英语怎么说？###How was your school trip?
+你做了什么？用英语怎么说？###What did you do?
+# Unit 12 What did you do last weekend?
+你上个周末做了什么？用英语怎么说？###What did you do last weekend?
+我去看了电影用英语怎么说？###I went to the cinema.

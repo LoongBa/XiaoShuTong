@@ -1,0 +1,141 @@
+# 小学PEP五年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP版 2024 修订版（三年级起点）
+# 题型：# S1 正向检索 / # S2 逆向检索 / # S3 要点默写 / # S4 综合默写
+# 格式：题目###答案（# 开头为注释）
+# 用法：✕→S1 跟读 | △→S1/S2 | ○→S2/S3 | ★→S4
+
+# ===== 五年级上册 =====
+
+## Unit 1 What's he like?
+# S1 正向检索
+年长的用英语怎么说？###old
+年轻的用英语怎么说？###young
+滑稽的用英语怎么说？###funny
+和蔼的用英语怎么说？###kind
+# S2 逆向检索
+old 这是什么特征的英语？###年长的
+young 这是什么特征的英语？###年轻的
+# S3 要点默写
+默写"他/她是什么样的人？"的英语表达###What's he/she like?
+
+## Unit 2 My week
+# S1 正向检索
+星期一用英语怎么说？###Monday
+星期二用英语怎么说？###Tuesday
+星期三用英语怎么说？###Wednesday
+# S2 逆向检索
+Monday 这是什么星期的英语？###星期一
+Tuesday 这是什么星期的英语？###星期二
+# S3 要点默写
+默写"你星期一有什么课？"的英语表达###What do you have on Mondays?
+
+## Unit 3 What would you like?
+# S1 正向检索
+三明治用英语怎么说？###sandwich
+沙拉用英语怎么说？###salad
+汉堡包用英语怎么说？###hamburger
+# S2 逆向检索
+sandwich 这是什么食物的英语？###三明治
+salad 这是什么食物的英语？###沙拉
+# S3 要点默写
+默写"你想要吃什么/喝什么？"的英语表达###What would you like to eat/drink?
+
+## Unit 4 What can you do?
+# S1 正向检索
+唱歌用英语怎么说？###sing
+跳舞用英语怎么说？###dance
+画画用英语怎么说？###draw
+# S2 逆向检索
+sing 这是什么动作的英语？###唱歌
+dance 这是什么动作的英语？###跳舞
+# S3 要点默写
+默写"你会做什么？"的英语表达###What can you do?
+
+## Unit 5 There is a big bed
+# S1 正向检索
+钟表用英语怎么说？###clock
+植物用英语怎么说？###plant
+瓶子用英语怎么说？###bottle
+# S2 逆向检索
+clock 这是什么物品的英语？###钟表
+plant 这是什么物品的英语？###植物
+# S3 要点默写
+默写"有一个/一些..."的英语表达###There is a/an... / There are...
+
+## Unit 6 In a nature park
+# S1 正向检索
+森林用英语怎么说？###forest
+河流用英语怎么说？###river
+湖泊用英语怎么说？###lake
+# S2 逆向检索
+forest 这是什么自然景观的英语？###森林
+river 这是什么自然景观的英语？###河流
+# S3 要点默写
+默写"有一个...吗？"和"有一些...吗？"的英语表达###Is there a...? / Are there any...?
+
+# ===== 五年级下册 =====
+
+## Unit 1 My day
+# S1 正向检索
+吃早餐用英语怎么说？###eat breakfast
+上...课用英语怎么说？###have...class
+做运动用英语怎么说？###play sports
+# S2 逆向检索
+eat breakfast 这是什么活动的英语？###吃早餐
+have...class 这是什么活动的英语？###上...课
+# S3 要点默写
+默写"你什么时候...？"的英语表达###When do you...?
+
+## Unit 2 My favourite season
+# S1 正向检索
+春天用英语怎么说？###spring
+夏天用英语怎么说？###summer
+秋天用英语怎么说？###autumn / fall
+冬天用英语怎么说？###winter
+# S2 逆向检索
+spring 这是什么季节的英语？###春天
+summer 这是什么季节的英语？###夏天
+# S3 要点默写
+默写"你最喜欢哪个季节？"的英语表达###Which season do you like best?
+
+## Unit 3 My school calendar
+# S1 正向检索
+一月用英语怎么说？###January
+二月用英语怎么说？###February
+三月用英语怎么说？###March
+# S2 逆向检索
+January 这是什么月份的英语？###一月
+February 这是什么月份的英语？###二月
+# S3 要点默写
+默写"...是什么时候？"的英语表达###When is...?
+
+## Unit 4 When is Easter?
+# S1 正向检索
+第一用英语怎么说？###first
+第二用英语怎么说？###second
+第三用英语怎么说？###third
+# S2 逆向检索
+first 这是什么序数词的英语？###第一
+second 这是什么序数词的英语？###第二
+# S3 要点默写
+默写"你的生日是什么时候？"的英语表达###When is your birthday?
+
+## Unit 5 Whose dog is it?
+# S1 正向检索
+他的用英语怎么说？###his
+她的用英语怎么说？###hers
+我的用英语怎么说？###mine
+# S2 逆向检索
+his 这是什么物主代词的英语？###他的
+hers 这是什么物主代词的英语？###她的
+# S3 要点默写
+默写"这是谁的...？"的英语表达###Whose... is this/that?
+
+## Unit 6 Work quietly!
+# S1 正向检索
+做早操用英语怎么说？###do morning exercises
+上...课用英语怎么说？###have...class
+# S2 逆向检索
+do morning exercises 这是什么活动的英语？###做早操
+# S3 要点默写
+默写"他们/你正在做什么？"的英语表达###What are they/you doing?
