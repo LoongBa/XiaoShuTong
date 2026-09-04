@@ -255,7 +255,7 @@ def migrate_range(cfg: dict):
                 summary[f"{grade}{vol_key}原始"] = len(items)
 
             train_name = f"{grade}{vol_key}册-背诵训练.txt"
-            train_file = BASE / "背诵训练" / info["dir"] / train_name
+            train_file = BASE / "背诵训练" / "chinese" / "统编-2024修订版" / train_name
             if train_file.exists():
                 items = parse_training_txt(train_file, "chinese", cfg["bank_id"], cfg["bank_code"])
                 (out / f"{grade}{vol_key}册-背诵训练.json").write_text(
@@ -263,7 +263,7 @@ def migrate_range(cfg: dict):
                 summary[f"{grade}{vol_key}训练"] = len(items)
 
     hook_files = sorted(
-        f for f in (BASE / "背景钩子").glob("*-背景钩子.md")
+        f for f in (BASE / "背景钩子" / "chinese" / "统编-2024修订版").glob("*-背景钩子.md")
         if cfg["hook_filter"](f.name)
     )
     cards = parse_background_hooks(hook_files, "chinese", cfg["card_template"])
