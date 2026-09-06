@@ -103,7 +103,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | 切片范围 | 群组管理域 + 内测邀请域（模块 6） |
 | 子域 | `Groups` |
 | 用户类型 | 群主(owner)/学生(student)/家长(parent) |
-| 开发路线 | WebApi（切片验证，全量待定） |
+| 开发路线 | 经 §五 实施偏好确认 2 填写（**建议 `WebApiBlazorWasm`**：WebApi 供 React 主前端 + Wasm 平台管理端；切片验证时暂用 WebApi） |
 | 测试模式 | 内存 DAC（切片验证） |
 | 审计字段命名 | `CreateTime`/`UpdateTime`（存量 DDL 为 CreatedAt/UpdatedAt，需迁移） |
 | 枚举 ORM 映射 | `[Column(MapType = typeof(string))]`，PascalCase 存字符串（存量小写需迁移） |
@@ -123,16 +123,17 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | # | 询问项 | 选项 | 默认 |
 |:-:|--------|------|:----:|
 | 1 | **测试编写节奏**：编写领域（Domain）的同时**同步创建测试**，还是在领域全部完成后**一次性创建测试**？ | A) 同步创建（每 Entity/Service 即写对应测试）<br>B) 一次性创建（Domain 全部完成后统一写测试） | **B) 一次性创建** |
+| 2 | **解决方案模式（create-new-solution.ps1 的 `-Mode` 参数）**：项目包含哪些端？ | `WebApiBlazorWasm`（WebApi + Blazor Wasm 双项目——**XiaoShuTong 建议值**：WebApi 供 React 主前端 + Wasm 平台管理端）<br>`WebApi`（仅后端 API）<br>`BlazorWeb`（Blazor Web）<br>`DomainOnly`（仅领域层） | 用户确认后填写，**不写死**（建议 `-Mode WebApiBlazorWasm`） |
 
 **测试编写节奏影响**：
 - **A 同步创建**：步骤 1~4 中每完成一个 Entity/Service 即写对应 `*ServiceTests.cs`——测试随写随验，适合测试驱动（TDD）节奏
 - **B 一次性创建（默认）**：先完成 步骤 1~3（Entity → xCodeGen → Service）全部领域代码，再在 步骤 4 一次性写全部测试——适合先跑通编译、再统一补测试验证
 
-**确认后按所选节奏执行**；若用户未明确选择，**默认采用 B（一次性创建）**。
+**确认后按所选偏好执行**；若用户未明确选择，**默认采用 B（一次性创建）+ `-Mode WebApi`**（模式确认后填入步骤 0 命令，不写死）。
 
 | 步骤 | 动作 | Skill / 工具 | 产出 | 完成标志 |
 |:----:|------|-------------|------|---------|
-| 0 | **按需创建解决方案**：检查 `XiaoShuTong.sln` 是否存在——不存在则运行 `$env:TKWF_FRAMEWORK_PATH\docs\AC-Kit\scripts\create-new-solution.ps1 -Name XiaoShuTong -Mode WebApi`；**已存在则跳过创建，直接复用** | create-new-solution.ps1 | 解决方案 + Domain/WebApi/Tests 项目骨架 | `.sln` 存在 |
+| 0 | **按需创建解决方案**：检查 `XiaoShuTong.sln` 是否存在——不存在则运行 `$env:TKWF_FRAMEWORK_PATH\docs\AC-Kit\scripts\create-new-solution.ps1 -Name XiaoShuTong -Mode {实施偏好确认 2 的确认值}`（建议 `WebApiBlazorWasm`）；**已存在则跳过创建，直接复用** | create-new-solution.ps1 | 解决方案 + Domain/WebApi(/Wasm)/Tests 项目骨架 | `.sln` 存在 |
 | 1 | 读 DS01 -> 写 5 个 Entity.cs | tkwf-entity | `Entities/Groups/*.cs` | 文件存在 |
 | 2 | `dotnet build` | - | xCodeGen 生成 DataService/DTO/Conditions | `.g.cs` 存在 |
 | 3 | 读 U01 -> 写 10 个 Service.cs | tkwf-service | `Services/Groups/*.cs` | 文件存在 |
