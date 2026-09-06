@@ -118,12 +118,45 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 
 | 步骤 | 动作 | Skill / 工具 | 产出 | 完成标志 |
 |:----:|------|-------------|------|---------|
+| 0 | **按需创建解决方案**：检查 `XiaoShuTong.sln` 是否存在——不存在则运行 `$env:TKWF_FRAMEWORK_PATH\docs\AC-Kit\scripts\create-new-solution.ps1 -Name XiaoShuTong -Mode WebApi`；**已存在则跳过创建，直接复用** | create-new-solution.ps1 | 解决方案 + Domain/WebApi/Tests 项目骨架 | `.sln` 存在 |
 | 1 | 读 DS01 -> 写 5 个 Entity.cs | tkwf-entity | `Entities/Groups/*.cs` | 文件存在 |
 | 2 | `dotnet build` | - | xCodeGen 生成 DataService/DTO/Conditions | `.g.cs` 存在 |
 | 3 | 读 U01 -> 写 10 个 Service.cs | tkwf-service | `Services/Groups/*.cs` | 文件存在 |
 | 4 | 读 U01 BR -> 写测试 | tkwf-test | `*ServiceTests.cs` | 文件存在 |
 | 5 | `dotnet build` | - | 全项目编译 | 0 error |
 | 6 | `dotnet test` | - | 测试执行 | 全部通过 |
+
+---
+
+## §六 衔接与继续执行
+
+> **实施 Agent 必读**：本切片执行完毕后，按下述逻辑衔接后续切片。**多切片交接纪律**：每个切片完成且验证通过后，**询问用户是否继续执行下一个切片，得到同意后才继续**；不得静默连跑。
+
+### 6.1 执行完毕询问
+
+| 状态 | 动作 |
+|------|------|
+| 本切片全部步骤完成 + 测试通过 | 向用户报告完成摘要（Entity/Service/测试数 + 编译测试结果）→ **询问用户：是否继续执行下一个切片（切片 02 学习Session域）？** |
+| 用户同意 | 读切片 02 HANDOVER → 执行其 §五 编码启动序列 |
+| 用户暂缓/暂停 | 保存当前状态（本切片 HANDOVER + 实施产物在解决方案中），等待用户指示 |
+
+### 6.2 中断后续跑衔接（从任意切片启动）
+
+若实施中途被中断，之后从**任意一个切片 HANDOVER 启动**，Agent 必须：
+
+| 步骤 | 动作 |
+|------|------|
+| 1 | **检查解决方案是否存在**：`XiaoShuTong.sln` 不存在 → 按 §五 步骤 0 创建（仅首次需要） |
+| 2 | **检查本切片的前序切片实体是否已编码**：查解决方案中 `Entities/{前序域}/*.cs` + `DataServices/*.g.cs` 是否存在 |
+| 3 | **前序未编码** → 提醒用户："检测到前序切片 {前序域} 尚未实施，需要先完成其编码序列" → 询问是否跳转执行前序 HANDOVER，或由用户决定 |
+| 4 | **前序已编码** → 直接执行本切片 §五 编码启动序列 |
+
+> **切片依赖链**：01（群组）→ 02（学习）→ 03（题库判题）→ 04（家校任务）→ 05（可视化激励，依赖 02）→ 06（排行榜搭子，依赖 02/03）→ 07（PK，依赖 03/06）→ 08（家长报告，依赖 02/04）
+
+### 6.3 完成后状态
+
+- 本切片实施产物（Entity/DataService/Service/测试）已在解决方案中，版本已提交
+- 后续切片 Agent 读本 HANDOVER §五 步骤 0 即知本切片已实施（`Entities/Groups/*.cs` 存在）
 
 ---
 
