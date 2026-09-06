@@ -1,0 +1,160 @@
+# HANDOVER · 家校任务闭环域切片交接文档
+
+> **定位**：设计阶段→实施阶段的承上启下文档（切片验证版）。Agent 阅读本文档后完成自引导加载后续动作——AC-Kit。
+> **项目**：小书童（XiaoShuTong）· 家校任务闭环域切片
+> **范围**：模块 2（家校任务闭环：布置任务/列表详情/学生执行入口/群主看板/逾期处理），切片序号 04（前序：01 群组管理域、02 学习Session域、03 题库判题域）
+> **更新日期**：2026-09-06
+
+---
+
+## 文档流总览
+
+```
+R01(需求)→ S01(场景)→ DS01(数据结构)→ U01(用况与契约)
+
+DS01 ──→ Entity.cs（手写）     参考：{AC-Kit}/templates/Entity.cs.txt
+   └──→ xCodeGen → DataService（自动生成，MSBuild AfterBuild 触发）
+
+U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接口，不手写
+   └──→ 服务契约一览（并入实施总览） + 本 HANDOVER
+```
+
+> ⚠️ **必须执行顺序**：`DS01 → Entity → xCodeGen → DataService/DTO → U01 → Service`
+> - 缺少 xCodeGen → DataService/DTO/Conditions 缺失 → Service 无法编译
+> - xCodeGen 失败时上报 Sisyphus，不要自行绕过（手写 DataService 与 SG 生成的 Controller 不兼容）
+
+---
+
+## §一 输入文档清单
+
+- **R-series**：`docs/草稿/切片验证-家校任务闭环域/R01-需求与功能设计-家校任务闭环.md`
+- **S-series**：`docs/草稿/切片验证-家校任务闭环域/S01-场景描述-家校任务闭环.md`
+- **DS-series**：`docs/草稿/切片验证-家校任务闭环域/DS01-数据结构设计-家校任务闭环.md`
+- **U-series**：`docs/草稿/切片验证-家校任务闭环域/U01-用况与契约-家校任务闭环.md`
+- **实施总览**：`docs/草稿/切片验证-家校任务闭环域/家校任务闭环域-切片实施总览.md`
+
+---
+
+## §二 设计规格清单
+
+### UC 跟踪表（Agent 逐项填写）
+
+| UC# | UC 名称 | 子域 | § Entity | § Service | § 测试 | § Schema | § 验证 | 备注 |
+|:---:|---------|:----:|:--------:|:---------:|:------:|:--------:|:------:|------|
+| 2.1 | 布置任务 | Tasks | ☐ | ☐ | ☐ | ☐ | ☐ | CROSS + 跨群组/题库域 |
+| 2.2 | 任务列表/详情 | Tasks | ☐ | ☐ | ☐ | ☐ | ☐ | |
+| 2.3 | 学生任务列表 | Tasks | ☐ | ☐ | ☐ | ☐ | ☐ | [Proposed] 独立视图 |
+| 2.4 | 群主执行看板 | Tasks | ☐ | ☐ | ☐ | ☐ | ☐ | 跨掌握度域 |
+| 2.5 | 任务逾期扫描 | Tasks | ☐ | ☐ | ☐ | ☐ | ☐ | BackgroundJob |
+
+### Entity → DS 映射表
+
+| Entity | 子域 | 关联 DS 文档 | 文件路径 |
+|--------|:----:|:------------:|---------|
+| Tasks | Tasks | DS01 | `Entities/Tasks/Tasks.cs` |
+| TaskAssignments | Tasks | DS01 | `Entities/Tasks/TaskAssignments.cs` |
+
+### Service 跟踪表
+
+| Service 类 | 子域 | 关联 UC | 备注 |
+|-----------|:----:|:-------:|------|
+| CreateTaskService | Tasks | 2.1 | [GenerateController] + [Transactional] |
+| ListTasksService | Tasks | 2.2 | [GenerateController] |
+| GetTaskDetailService | Tasks | 2.2 | [GenerateController] |
+| ListMyTasksService | Tasks | 2.3 | [GenerateController] |
+| GetOwnerDashboardService | Tasks | 2.4 | [GenerateController] |
+| TaskOverdueScanJob | Tasks | 2.5 | BackgroundJob，无 Controller |
+
+### 测试跟踪表
+
+| 测试类 | 关联 Service | 重点 |
+|-------|-------------|------|
+| CreateTaskServiceTests | CreateTaskService | 任务+分配原子/群组Owner/题目归属/无成员群组/CROSS 回滚 |
+| ListTasksServiceTests | ListTasksService | 角色过滤/详情聚合/不按正确率排名 |
+| ListMyTasksServiceTests | ListMyTasksService | 仅本人分配/已截止拦截/空态 |
+| GetOwnerDashboardServiceTests | GetOwnerDashboardService | 执行率分母/逾期数/Top5排序/合规无排名 |
+| TaskOverdueScanJobTests | TaskOverdueScanJob | 到期扫描幂等/Overdue 置位/AllowRedo 不阻断 |
+
+---
+
+## §三 服务契约一览
+
+> 完整表格见 `家校任务闭环域-切片实施总览.md`（6 个 Service，BR-01~23，CROSS 事务 2 处：2.1/2.5，跨模块依赖 4 项：群组/题库/学习/账户，双向闭环：任务域↔学习域）
+
+---
+
+## §四 项目约定
+
+| 项 | 值 |
+|----|-----|
+| 项目名 | XiaoShuTong |
+| 切片范围 | 家校任务闭环域（模块 2）；切片 04（前序：01 群组管理、02 学习Session、03 题库判题） |
+| 子域 | `Tasks` |
+| 用户类型 | 群主(owner)/学生(student)/家长(parent)；本域 owner + student |
+| 开发路线 | WebApi（切片验证，全量待定） |
+| 测试模式 | 内存 DAC（切片验证） |
+| 审计字段命名 | `CreateTime`/`UpdateTime`（存量 CreatedAt/UpdatedAt → 改名/补列） |
+| 枚举 ORM 映射 | `[Column(MapType = typeof(string))]`，PascalCase 存字符串（存量小写/中文 → 迁移映射） |
+| 错误码 | 数字域码 51xx（5101/5102 存量）+ 10xx 全局 + SNAKE_CASE 双列（迁移决策） |
+| 主键决策 | 系统内部 `long Id`；外部关联/跨系统 `Uid`（uuid 业务键），实体表补 Uid 列 |
+| API 命名 | JSON 字段 camelCase（D03 原则 #6 明示禁 snake_case）；SNAKE_CASE 仅错误码语义名 |
+| 框架路径 | `$env:TKWF_FRAMEWORK_PATH` |
+
+---
+
+## §五 编码启动序列（切片验证）
+
+| 步骤 | 动作 | Skill / 工具 | 产出 | 完成标志 |
+|:----:|------|-------------|------|---------|
+| 1 | 读 DS01 -> 写 2 个 Entity.cs | tkwf-entity | `Entities/Tasks/*.cs` | 文件存在 |
+| 2 | `dotnet build` | - | xCodeGen 生成 DataService/DTO/Conditions | `.g.cs` 存在 |
+| 3 | 读 U01 -> 写 6 个 Service.cs | tkwf-service | `Services/Tasks/*.cs` | 文件存在 |
+| 4 | 读 U01 BR -> 写测试 | tkwf-test | `*ServiceTests.cs` | 文件存在 |
+| 5 | `dotnet build` | - | 全项目编译 | 0 error |
+| 6 | `dotnet test` | - | 测试执行 | 全部通过 |
+
+> ⚠️ **存量迁移前置确认（路径 B 转化衔接）**：DS01「存量差异标注」①主键（uuid → long Id + Uid）已按前序切片决策确定；⑤ AllowRedo 字段（D02 未定义，本切片补充）与 ⑥ Draft 状态保留需实施前确认。
+
+---
+
+## 附录：8 项交接条件自查（DG-01 §2.4）
+
+| # | 条件 | 验证方式 | 结果 |
+|:-:|------|---------|:----:|
+| 1 | U-series 所有 Use-Case 的契约签名已定义（含 DTO 字段类型） | 审查 | ✅ 5 UC 契约签名 + Req/Res DTO 完整 |
+| 2 | 所有 BR-xx 规则已列全，无「待定」「后续补充」 | 审查 | ✅ BR-01~23 全覆盖 |
+| 3 | 所有 Use-Case 引用的 DataService 已在 DS 中定义 | 交叉核对 | ✅ 2 实体均有对应 DataService（Tasks/TaskAssignments）；跨模块引用已标注 |
+| 4 | 所有跨模块依赖已标注 | 交叉核对 | ✅ 群组/题库/学习/账户 4 项 + 双向闭环（UC 头/编排逻辑/实施总览三处一致） |
+| 5 | 所有 Alternative Flow 至少有一条对应的 BR-xx | 审查 | ✅ 每条替代流均有 BR 对应 |
+| 6 | 所有 R-series 约束条件的交叉引用均指向已存在功能点 | 交叉核对 | ✅ R01 约束均在 U01 有 BR |
+| 7 | 交叉模块影响扫描已完成 | 审查 | ✅ R01「交叉模块影响扫描」覆盖模块 4/5/6/10；学习域 R-doc 前序切片已接收 |
+| 8 | 所有 DS 实体的子域标注与 U 文档 UC 头子域一致 | 交叉核对 | ✅ 全部 `Tasks` 一致 |
+
+**⚠️ 补充说明**：条件 1~8 在"设计文档"层面全部满足。但存在 **2 类非阻断缺口**需实施前确认（见下节）：AllowRedo 重做语义、任务状态 Draft 保留与否。
+
+---
+
+## 已决策项（本切片新增）
+
+| # | 决策 | 说明 |
+|:-:|------|------|
+| 1 | 三步向导 = 前端编排 | D03 无分步接口，前端逐步收集，后端单次提交 |
+| 2 | AllowRedo 字段补充 | D02 未定义，对齐 UI"是否允许重做"；重做 = 已完成仍可复习，不改变状态 |
+| 3 | 逾期扫描 = Hangfire 作业 | 每日 0:00 + 发布时触发；到期未完成分配置 Overdue |
+| 4 | 薄弱点 Top5 排序键 = 掌握度正确率升序 | D02 未定义排序 |
+| 5 | 执行率分母含全部分配 | D02 仅"completed/total"，分母口径显式定义 |
+| 6 | 学生任务列表独立视图 [Proposed] | D03 复用 6.6 群主+成员视图，本切片提出独立"我的任务"端点 |
+
+## 待确认项清单
+
+| # | 项 | 影响 | 建议 |
+|:-:|---|------|------|
+| 1 | **AllowRedo 重做语义**：已完成任务允许重做时，进入复习会话不改变 Completed 状态 | 学习域 UC-4.1/4.2 联动 | 实施阶段确认：重做会话 Scenario 是否仍为 Memorize |
+| 2 | **任务状态 Draft 保留**：三步向导暂存扩展是否需要 | 枚举与发布流程 | 本期创建即发布，Draft 枚举值保留待扩展 |
+| 3 | **学生"我的任务"独立端点 [Proposed]**：D03 复用 6.6 | API 契约 | 业务确认后回改 D03 或接受 U 层为契约来源 |
+
+---
+
+> *文档版本：第一阶段 v1.0*
+> *编制日期：2026-09-06*
+> *同步版本：R01 v1.0 / S01 v1.0 / DS01 v1.0 / U01 v1.0*
