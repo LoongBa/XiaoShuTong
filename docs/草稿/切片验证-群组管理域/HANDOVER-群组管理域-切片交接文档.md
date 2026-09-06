@@ -116,13 +116,27 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 
 > ⚠️ **主键决策（已定）**：系统内部用 `long Id` 主键/外键；外部关联、跨系统用 `Uid`（uuid 业务键）。实体表补 `Uid` 列（唯一索引），API 参数/响应/DTO 暴露 Uid——见 DS01「存量差异标注」①。
 
+### 实施偏好确认（创建解决方案前必问）
+
+> ⚠️ **实施 Agent 必读**：进入 §五 编码启动序列前（即创建解决方案之前），必须先向用户确认以下偏好——**不得静默采用默认值**。
+
+| # | 询问项 | 选项 | 默认 |
+|:-:|--------|------|:----:|
+| 1 | **测试编写节奏**：编写领域（Domain）的同时**同步创建测试**，还是在领域全部完成后**一次性创建测试**？ | A) 同步创建（每 Entity/Service 即写对应测试）<br>B) 一次性创建（Domain 全部完成后统一写测试） | **B) 一次性创建** |
+
+**测试编写节奏影响**：
+- **A 同步创建**：步骤 1~4 中每完成一个 Entity/Service 即写对应 `*ServiceTests.cs`——测试随写随验，适合测试驱动（TDD）节奏
+- **B 一次性创建（默认）**：先完成 步骤 1~3（Entity → xCodeGen → Service）全部领域代码，再在 步骤 4 一次性写全部测试——适合先跑通编译、再统一补测试验证
+
+**确认后按所选节奏执行**；若用户未明确选择，**默认采用 B（一次性创建）**。
+
 | 步骤 | 动作 | Skill / 工具 | 产出 | 完成标志 |
 |:----:|------|-------------|------|---------|
 | 0 | **按需创建解决方案**：检查 `XiaoShuTong.sln` 是否存在——不存在则运行 `$env:TKWF_FRAMEWORK_PATH\docs\AC-Kit\scripts\create-new-solution.ps1 -Name XiaoShuTong -Mode WebApi`；**已存在则跳过创建，直接复用** | create-new-solution.ps1 | 解决方案 + Domain/WebApi/Tests 项目骨架 | `.sln` 存在 |
 | 1 | 读 DS01 -> 写 5 个 Entity.cs | tkwf-entity | `Entities/Groups/*.cs` | 文件存在 |
 | 2 | `dotnet build` | - | xCodeGen 生成 DataService/DTO/Conditions | `.g.cs` 存在 |
 | 3 | 读 U01 -> 写 10 个 Service.cs | tkwf-service | `Services/Groups/*.cs` | 文件存在 |
-| 4 | 读 U01 BR -> 写测试 | tkwf-test | `*ServiceTests.cs` | 文件存在 |
+| 4 | 读 U01 BR -> 写测试（按已确认的测试编写节奏） | tkwf-test | `*ServiceTests.cs` | 文件存在 |
 | 5 | `dotnet build` | - | 全项目编译 | 0 error |
 | 6 | `dotnet test` | - | 测试执行 | 全部通过 |
 
