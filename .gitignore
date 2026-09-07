@@ -1,29 +1,46 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-dist/
-build/
-.venv/
-venv/
-env/
-
-# Node
+# Node modules
 node_modules/
-.next/
+
+# Build outputs
+bin/
+obj/
 dist/
+packages/
+
+# Generated code — only exclude obj/bin build-time artifacts
+obj/**/*.g.cs
+bin/**/*.g.cs
+*.g.js
+
+# Sisyphus auto-generated docs
+.sisyphus/
+
+# .TKWF 开发中枢：{域}/ 生成物 gitignore；TKWF-Rules.md 与 xCodeGen/ 配置进 git
+.TKWF/*/
+!.TKWF/xCodeGen/
+
+# Runtime
+.DS_Store
+*.swp
+*.swo
+*~
+*.log
 
 # IDE
 .vs/
 .vscode/
-.idea/
-*.swp
-*.swo
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# OS
-.DS_Store
-Thumbs.db
+# Secrets
+*.p12
+*.pem
+*.key
+secrets.json
+appsettings.*.local.json
 
-# Environment
-.env
-.env.local
+# Legacy refs（框架已通过环境变量引用）
+refs/
+# TKWF skills junction（框架侧共享，单源同步）.agents/skills/
