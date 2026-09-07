@@ -52,7 +52,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | Entity | 子域 | 关联 DS 文档 | 文件路径 | 状态 |
 |--------|:----:|:------------:|---------|:----:|
 | （无新增实体） | — | 复用切片 02 DS01 | `Entities/Learning/*.cs`（已有） | **复用** |
-| HeatmapDayDto / StreakDto / PeriodReportDto / WrongQuestionItemDto | Stats | 本切片 DS01 §二 | `Entities/DTOs/Stats/`（查询 DTO） | 新增 DTO |
+| （查询 DTO 全部复用 {Entity}Dto，无手写 DTO） | Stats | 本切片 DS01 §二 | `Entities/DTOs/Learning/*.g.cs`（自动生成） | DTO 最小化：HeatmapDayDto/TrendPointDto/WrongQuestionItemDto 均已替换 |
 
 ### Service 跟踪表
 

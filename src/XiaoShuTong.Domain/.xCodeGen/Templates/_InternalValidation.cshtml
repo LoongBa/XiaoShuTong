@@ -1,0 +1,56 @@
+@using TKW.Framework.CodeGeneration
+@using TKW.Framework.Domain.xCodeGen
+@model ClassMetadata
+@{
+    var generateType = Model.GenerateCodeSettings.ContainsKey("Type") 
+            ? Model.GenerateCodeSettings["Type"].ToString() : "";
+    bool isDto = generateType == "Dto";
+
+    // 1. 直接通过 this 启动验证链条（DTO 校验器 vs Model 校验器）
+    if (isDto) {
+        @:this.CreateDtoValidator<@(Model.ClassName), @(Model.ClassName)Dto>(scene, results)
+    } else {
+        @:this.CreateModelValidator(scene, results)
+    }
+
+    // 2. 链式调用：动态生成验证规则
+    foreach (var p in Model.Properties)
+    {
+        // --- 拦截器 1：DtoFieldIgnore 拦截 ---
+        // 如果是 DTO 模式且标记了 DtoFieldIgnore，则不生成验证逻辑，防止因 DTO 缺少该属性导致编译错误
+        if (isDto && p.Attributes.Any(a => a.TypeFullName.Contains("DtoFieldIgnore"))) continue;
+
+        // --- 拦截器 2：导航属性拦截 ---
+        // 导航属性属于 ORM 关系追踪对象，跳过基础的物理长度与逻辑校验
+        if (p.Attributes.Any(a => a.TypeFullName.Contains("NavigateAttribute"))) continue;
+
+        var colAttr = p.Attributes.FirstOrDefault(a => a.TypeFullName.Contains("ColumnAttribute"));
+        var dtoAttr = p.Attributes.FirstOrDefault(a => a.TypeFullName.Contains("DtoFieldAttribute"));
+        
+        // --- 必填校验 (Required) ---
+        // 修复点：恢复使用 CodeGenPolicy 来读取元数据配置
+        if (p.Attributes.Any(a => a.TypeFullName.Contains("RequiredAttribute")) || CodeGenPolicy.GetBoolProp(dtoAttr, "IsRequired", false))
+        {
+            @:.Required(nameof(@p.Name), d => d.@p.Name)
+        }
+
+        // --- 长度校验 (MaxLength) ---
+        if (colAttr != null && colAttr.Properties.TryGetValue("StringLength", out var slenObj) && slenObj is int slen && slen > 0)
+        {
+            // 检测是否存在 MapType (逻辑类型与存储类型不一致，如枚举转字符串)
+            bool hasMapType = colAttr.Properties.ContainsKey("MapType") && !string.IsNullOrEmpty(colAttr.Properties["MapType"]?.ToString());
+            // 唯一权威事实：字符串类型判断统一 TypeClassification.IsStringType
+            bool isString = TypeClassification.IsStringType(p.TypeName);
+            
+            // 物理字段忽略检查
+            bool isColumnIgnore = CodeGenPolicy.GetBoolProp(colAttr, "IsIgnore", false);
+
+            // 规则：仅当属性为字符串、未被 MapType 劫持且未被物理忽略时，才生成长度校验
+            if (isString && !hasMapType && !isColumnIgnore)
+            {
+                @:.MaxLength(nameof(@p.Name), @slen, d => d.@p.Name)
+            }
+        }
+    }
+        @:;
+}

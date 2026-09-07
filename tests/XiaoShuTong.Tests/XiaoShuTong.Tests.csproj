@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>XiaoShuTong.Tests</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <!-- NuGet 模式（默认）：TKWF 框架包 -->
+  <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
+    <PackageReference Include="TKWF.Domain.Testing.xUnit" Version="4.6.4" />
+  </ItemGroup>
+
+  <!-- DLL 模式：TKWFRole=Client（注入 TKWF.Domain/FreeSql）+ TKWFTest=true（注入测试基架 DLL）
+       由 TKWF.Domain.targets 按角色自动注入。参考 DMP-Lite.Merchant.Domain.Test。 -->
+  <PropertyGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
+    <TKWFRole>Client</TKWFRole>
+    <TKWFTest>true</TKWFTest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.Test.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 版本在 Directory.Packages.props 中集中管理 -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <!-- 消费者项目引用：双模式共用 -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\XiaoShuTong.Domain\XiaoShuTong.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

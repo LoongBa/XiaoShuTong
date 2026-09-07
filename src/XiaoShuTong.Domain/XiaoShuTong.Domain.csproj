@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    模板参考: DMP-Lite\DMP-Lite.Merchant.Domain\DMP-Lite.Merchant.Domain.csproj
+    更新时请与该参考项目对齐。
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>XiaoShuTong</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)GeneratedFiles</CompilerGeneratedFilesOutputPath>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- NuGet 模式（默认）：TKWF 框架包 -->
+  <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
+    <PackageReference Include="TKWF.Domain" Version="4.6.4" />
+    <PackageReference Include="TKWF.Domain.FreeSql" Version="4.6.4" />
+    <PackageReference Include="TKWF.CodeGeneration" Version="4.6.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- DLL 模式：TKWFRole=Domain 由 TKWF.Domain.targets 自动注入基架 DLL + SG1 -->
+  <PropertyGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
+    <TKWFRole>Domain</TKWFRole>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 版本在 Directory.Packages.props 中集中管理 -->
+    <PackageReference Include="FreeSql.Provider.PostgreSQL" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+  </ItemGroup>
+
+  <!-- 排除 SG 输出的物理文件 -->
+  <ItemGroup>
+    <None Remove="$(CompilerGeneratedFilesOutputPath)\**" />
+  </ItemGroup>
+
+  <!-- ════════════════════════════════════════════
+       AfterBuild: auto-run xCodeGen 知识文档生成
+       ════════════════════════════════════════════ -->
+  <PropertyGroup>
+    <_XCG_CliProject Condition="'$(_XCG_CliProject)' == ''">$(TKWFRoot)_xCodeGen\xCodeGen.Cli\xCodeGen.Cli.csproj</_XCG_CliProject>
+    <!-- 双模式：优先部署包 xCodeGen\（V4.9.16 起，Release 单文件 / Debug 常规输出），
+         缺失时回退源码 bin（_XCG_EnsureCli 会构建） -->
+    <_XCG_CliExe_Deploy Condition="'$(_XCG_CliExe_Deploy)' == ''">$(TKWFRoot)xCodeGen\xCodeGen.Cli.exe</_XCG_CliExe_Deploy>
+    <_XCG_CliExe Condition="Exists('$(_XCG_CliExe_Deploy)')">$(_XCG_CliExe_Deploy)</_XCG_CliExe>
+    <_XCG_CliExe Condition="'$(_XCG_CliExe)' == ''">$(TKWFRoot)_xCodeGen\xCodeGen.Cli\bin\Debug\net10.0\xCodeGen.Cli.exe</_XCG_CliExe>
+    <_XCG_WorkDir>$(MSBuildThisFileDirectory).xCodeGen</_XCG_WorkDir>
+    <!-- V4.9.105+：gen 无 -j 时从 exe 目录（部署包 xCodeGen\）找默认配置而非工作目录，
+         须显式 _XCG_ConfigPath 触发框架 targets 模式 B（gen -j <config>）。
+         Target 本体（_XCG_EnsureCli/_XCG_Run）由 TKWF.Domain.targets 统一提供，勿重复定义。 -->
+    <_XCG_ConfigPath>$(MSBuildThisFileDirectory).xCodeGen\xCodeGen.json</_XCG_ConfigPath>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="XiaoShuTong.Tests" />
+  </ItemGroup></Project>

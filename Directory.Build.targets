@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="$(TKWFRoot)build\TKWF.Domain.targets"
+          Condition="Exists('$(TKWFRoot)build\TKWF.Domain.targets')" />
+</Project>

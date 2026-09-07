@@ -1,0 +1,132 @@
+<Project>
+  <!--
+    ════════════════════════════════════════════════════════════
+    集中包版本管理（Central Package Management）
+    由 _TKWF/Directory.Packages.props + DMP-Lite/Directory.Packages.props
+    + DMPTest/Directory.Packages.props 合并而来。
+
+    所有 TKWF 框架 + 消费者项目共享此 CPM 文件。
+    更新 NuGet 包时，只需改此文件一处，所有项目同步生效。
+    ════════════════════════════════════════════════════════════
+  -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- ════════════════════════════════════════════
+         HotChocolate — 统一 16.5.1
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="HotChocolate" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate.Abstractions" Version="16.5.0" />
+    <PackageVersion Include="HotChocolate.AspNetCore" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate.AspNetCore.Authorization" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate.AspNetCore.CommandLine" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate.Data" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate.Execution.Abstractions" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate.Types" Version="16.5.1" />
+    <!-- ════════════════════════════════════════════
+         FreeSql
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="FreeSql" Version="3.5.310" />
+    <PackageVersion Include="FreeSql.Cloud" Version="2.0.1" />
+    <PackageVersion Include="FreeSql.DbContext" Version="3.5.310" />
+    <PackageVersion Include="FreeSql.Extensions.Linq" Version="3.5.310" />
+    <PackageVersion Include="FreeSql.Provider.PostgreSQL" Version="3.5.310" />
+    <PackageVersion Include="FreeSql.Repository" Version="3.5.310" />
+    <!-- ════════════════════════════════════════════
+         Microsoft ASP.NET Core
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.DataProtection" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
+    <!-- ════════════════════════════════════════════
+         Microsoft Extensions
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="10.8.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="10.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Options.DataAnnotations" Version="10.0.10" />
+    <!-- ════════════════════════════════════════════
+         Microsoft Code Analysis (Roslyn) — SG 项目用
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="5.6.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="5.6.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="5.6.0" />
+    <!-- ════════════════════════════════════════════
+         Entity Framework Core
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.10" />
+    <!-- ════════════════════════════════════════════
+         测试
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="coverlet.collector" Version="10.0.1" />
+    <PackageVersion Include="MSTest.TestAdapter" Version="3.9.1" />
+    <PackageVersion Include="MSTest.TestFramework" Version="3.9.1" />
+    <!-- ════════════════════════════════════════════
+         API 文档 / 工具
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.16" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+    <PackageVersion Include="Nanoid" Version="3.1.0" />
+    <PackageVersion Include="Karambolo.Extensions.Logging.File" Version="4.1.1" />
+    <!-- ════════════════════════════════════════════
+         FluentValidation
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="FluentValidation" Version="12.1.1" />
+    <!-- ════════════════════════════════════════════
+         Excel / 报表
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="ClosedXML" Version="0.105.1" />
+    <PackageVersion Include="ClosedXML.Report" Version="0.2.12" />
+    <PackageVersion Include="ExcelDataReader" Version="3.9.0" />
+    <PackageVersion Include="ExcelDataReader.DataSet" Version="3.9.0" />
+    <!-- ════════════════════════════════════════════
+         AntDesign
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="AntDesign.Charts" Version="0.9.0" />
+    <PackageVersion Include="AntDesign.Extensions.Localization" Version="1.6.2" />
+    <PackageVersion Include="AntDesign.ProLayout" Version="1.6.2" />
+    <!-- ════════════════════════════════════════════
+         模板引擎
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="RazorLight" Version="2.3.1" />
+    <!-- ════════════════════════════════════════════
+         终端 UI
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="Spectre.Console" Version="0.57.2" />
+    <PackageVersion Include="Spectre.Console.Cli" Version="0.55.0" />
+    <PackageVersion Include="XenoAtom.CommandLine" Version="2.0.3" />
+    <PackageVersion Include="XenoAtom.Terminal" Version="2.2.0" />
+    <PackageVersion Include="XenoAtom.Terminal.UI" Version="3.8.1" />
+    <PackageVersion Include="System.Text.Encoding.CodePages" Version="10.0.10" />
+    <!-- ════════════════════════════════════════════
+         System（netstandard2.0 兼容）
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageVersion Include="System.Text.Json" Version="10.0.10" />
+    <PackageVersion Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
+    <PackageVersion Include="System.Threading.RateLimiting" Version="10.0.10" />
+    <PackageVersion Include="System.Memory" Version="4.6.3" />
+    <!-- ════════════════════════════════════════════
+         构建工具
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="MinVer" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Maui.Controls" Version="10.0.90" />
+  </ItemGroup>
+</Project>

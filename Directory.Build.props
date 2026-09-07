@@ -1,0 +1,25 @@
+<Project>
+
+  <PropertyGroup>
+    <TKWFRoot Condition="'$(TKWF_FRAMEWORK_PATH)' != ''">$([MSBuild]::EnsureTrailingSlash('$(TKWF_FRAMEWORK_PATH)'))</TKWFRoot>
+    <TKWFRoot Condition="'$(TKWFRoot)' == ''">$([MSBuild]::EnsureTrailingSlash('$(MSBuildThisFileDirectory)..\..\_TKWF\'))</TKWFRoot>
+
+    <!-- MinVer：从 git tag 自动推导版本号 -->
+    <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
+  <Import Project="$(TKWFRoot)build\TKWF.Domain.props"
+          Condition="Exists('$(TKWFRoot)build\TKWF.Domain.props')" />
+
+  <PropertyGroup>
+    <TkwfReferenceMode>Dll</TkwfReferenceMode>
+    <RefsDir>$(MSBuildThisFileDirectory)refs\</RefsDir>
+  </PropertyGroup>
+
+  <!-- MinVer 编译期版本推导，版本由 Directory.Packages.props 集中管理 -->
+  <ItemGroup>
+    <PackageReference Include="MinVer" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

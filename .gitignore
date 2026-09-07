@@ -43,4 +43,9 @@ appsettings.*.local.json
 
 # Legacy refs（框架已通过环境变量引用）
 refs/
-# TKWF skills junction（框架侧共享，单源同步）.agents/skills/
+# TKWF skills junction（框架侧共享，单源同步）——不跟踪 junction 目标
+.agents/skills/
+
+# Python
+__pycache__/
+*.pyc

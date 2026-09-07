@@ -1,0 +1,78 @@
+{
+  "TargetProject": "../XiaoShuTong.Domain.csproj",
+  "EnableSkipUnchanged": true,
+  "OutputRoot": "Generated",
+  "EnableInterfaceExtraction": false,
+  "InterfaceOutputPath": "../../Interfaces",
+  "ServiceDirectory": "../../Services",
+  "TemplatesPath": "Templates",
+  "Artifacts": {
+    "Entity": {
+      "Scope": "Entity",
+      "Template": "Entity.cshtml",
+      "OutputPattern": "{ClassName}.g.cs",
+      "OutputDir": "../../Entities",
+      "SkeletonTemplate": "EntityEmpty.cshtml",
+      "SkeletonPattern": "{ClassName}.biz.cs",
+      "SkeletonDir": "../../Entities"
+    },
+    "Dto": {
+      "Scope": "Entity",
+      "Template": "Dto.cshtml",
+      "OutputPattern": "{ClassName}Dto.g.cs",
+      "OutputDir": "../../Entities/DTOs",
+      "SkeletonTemplate": "DtoEmpty.cshtml",
+      "SkeletonPattern": "{ClassName}Dto.cs",
+      "SkeletonDir": "../../Entities/DTOs"
+    },
+    "Conditions": {
+      "Scope": "Entity",
+      "Template": "Conditions.cshtml",
+      "OutputPattern": "{ClassName}Conditions.g.cs",
+      "OutputDir": "../../Entities/Conditions"
+    },
+    "DataService": {
+      "Scope": "Entity",
+      "Template": "DataService.cshtml",
+      "OutputPattern": "{ClassName}DataService.g.cs",
+      "OutputDir": "../../DataServices",
+      "SkeletonTemplate": "DataServiceEmpty.cshtml",
+      "SkeletonPattern": "{ClassName}DataService.cs",
+      "SkeletonDir": "../../DataServices"
+    },
+    "DOMAIN_MAP": {
+      "Scope": "Project",
+      "Template": "DomainMap.cshtml",
+      "OutputPattern": "DOMAIN_MAP.md",
+      "OutputDir": "../../../../.TKWF"
+    },
+    "Domain_Api": {
+      "Scope": "Project",
+      "Template": "Domain_Api.cshtml",
+      "OutputPattern": "Domain_Api.md",
+      "OutputDir": "../../../../.TKWF"
+    },
+    "DataService_Api": {
+      "Scope": "Project",
+      "Template": "DataServiceApi.cshtml",
+      "OutputPattern": "DataService_API.md",
+      "OutputDir": "../../../../.TKWF"
+    },
+    "Business": {
+      "Scope": "Project",
+      "SkeletonTemplate": "DomainBusiness.cshtml",
+      "OutputPattern": "Business.md",
+      "OutputDir": "../../../../.TKWF"
+    },
+    "LOG": {
+      "Scope": "Project",
+      "SkeletonTemplate": "Domain_Log.cshtml",
+      "OutputPattern": "LOG.md",
+      "OutputDir": "../../../../.TKWF"
+    }
+  },
+  "CustomSettings": {
+    "EnableLogging": "true",
+    "AutoManagedFields": "Id,CreateTime,UpdateTime,IsDeleted,TenantId,UId"
+  }
+}

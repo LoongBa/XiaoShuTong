@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/XiaoShuTong.Domain/XiaoShuTong.Domain.csproj" />
+    <Project Path="src/XiaoShuTong.Wasm/XiaoShuTong.Wasm.csproj" />
+    <Project Path="src/XiaoShuTong.WebApi/XiaoShuTong.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/XiaoShuTong.Tests/XiaoShuTong.Tests.csproj" />
+  </Folder>
+</Solution>

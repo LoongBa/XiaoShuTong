@@ -187,3 +187,54 @@ Users (1) ──→ (N) PkPlayers / PkAttempts       参赛者/答题者
 > *文档版本：第一阶段 v1.0*
 > *编制日期：2026-09-06*
 > *同步版本：R01 v1.0 / S01 v1.0*
+---
+
+## VEntity 设计规格（tkwf-ventity-design 产出，2026-09-07）
+
+> 输入：S01 定稿场景 + UI PK/战绩页字段来源 + R/S 查询需求。结论：**PkPlayerStats（战绩聚合）为 VEntity 适用场景**（跨表聚合报表），但切片验证期以 Service 层聚合实现（内存 DAC 不支持 SQL 视图）；生产建议落正式视图。
+
+### 查询场景全局清单
+
+| 页面 | 查询字段 | 来源表 | 聚合口径 | 跨表 | 判定 |
+|------|---------|--------|---------|:----:|------|
+| PK 战绩（9.6） | 场次/胜场/胜率 | PkMatches + PkPlayers | 按 UserId 聚合（Status=Finished） | 是（JOIN） | **VEntity 候选 → 生产 vw_pk_player_stats** |
+| PK 结果（9.4） | 双方得分/用时/AI点评/胜负 | PkMatches + PkPlayers（单局） | 无聚合（单行） | 是（按局关联） | Service |
+| PK 大厅/待加入（9.1/9.2） | 待加入对局列表（Subject/题量/对战码） | PkMatches | 无聚合（列表） | 否 | Service 单表 |
+| 对战答题（9.3） | 题目/判分/得分 | PkMatches + PkPlayers + PkAttempts（单局写） | 写入侧 | — | Service（判题引擎跨模块） |
+
+### PkPlayerStatsView ── PK 战绩聚合视图（VEntity 设计规格）
+
+**表名**：`vw_pk_player_stats`（DisableSyncStructure=true）
+**子域**：`Pk`（生产域内聚）
+**Id 构造方案**：A 业务唯一键透传（UserId）
+**视图类型**：普通视图（物化经 DBA 评估）
+
+**引用基表**：Pk.PkMatches（Status='Finished'）+ Pk.PkPlayers
+**依赖追踪**：PkMatches.Status/WinnerId/FinishedAt、PkPlayers.MatchId/UserId DDL 变更需核对本视图
+
+**Join 结构**：INNER JOIN（PkPlayers ← PkMatches ON MatchId，WHERE PkMatches.Status='Finished'）
+**优化栅栏评估**：含 GROUP BY（聚合）+ WHERE 谓词——无窗口函数/集合操作
+
+**聚合粒度**：COUNT（场次）/ 派生胜场（PkMatches.WinnerId = 玩家）按 UserId 分组
+
+**字段表**（= UI 展示字段超集）：
+| 字段 | 类型 | 来源列 | 四层一致性核对 | 可更新列 |
+|------|------|--------|--------------|:-------:|
+| UserId | long | PkPlayers.UserId | UI 战绩页按人 | 否 |
+| TotalMatches | int | COUNT(PkPlayers.MatchId) | 场次 | 否 |
+| Wins | int | COUNT(CASE WHEN PkMatches.WinnerId = PkPlayers.UserId THEN 1 END) | 胜场 | 否 |
+
+**数据权限**：行级 WHERE（仅本人/搭子可见）；无列级隐藏
+**性能评估**：预估行数 = 用户数 / 索引建议（PkMatches.Status+FinishedAt、PkPlayers.UserId+MatchId）/ EXPLAIN 验证（谓词下推?）
+**可维护性**：命名 `vw_` 前缀 / COMMENT ON 文档（战绩口径：Status=Finished 才计入）/ 纳入 git
+**查询通道暴露决策**：EQR `User.Query<PkPlayerStatsView>()` / ExposeRestQuery 关（经 Service 包装 REST）/ GraphQL 开
+
+### 切片验证期实现（不建视图）
+
+- 内存 DAC（TestingEntityDAC）不支持 SQL 视图 → `GetPkStatsService` 以 Service 层聚合实现（读 PkMatches+PkPlayers 计算胜场/场次/胜率，口径与视图一致：仅 Status=Finished 计入）
+- 生产切换：建 `vw_pk_player_stats` 后 GetPkStatsService 改为 EQR 读取，DTO 不变
+
+### 跨切片消费声明
+
+- 本切片消费：**Judging**（判题引擎五键契约，切片 03）、**Buddy**（StudyBuddies 搭子资格，切片 06）、**Bank**（Questions 出题/知识点，切片 03）
+- 本切片生产：PkMatches/PkPlayers/PkAttempts（PK 战绩数据源，供切片 06 排行榜 PkWins 指标消费）

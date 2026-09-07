@@ -489,7 +489,7 @@ public class GetReviewQueueService : DomainServiceBase<TUserInfo>
 
 | 属性 | 类型 | 说明 |
 |------|------|------|
-| Items | ReviewItemDto[] | QuestionId/State/NextReviewAt（不含答案） |
+| Items | MemoryStatesDto[] | QuestionId/State/NextReviewAt（DTO 最小化：复用自动生成 MemoryStatesDto，不含答案正文） |
 | OverdueCount | int | 逾期数 |
 
 #### 业务规则
@@ -577,7 +577,7 @@ public class GetMemoryStatesService : DomainServiceBase<TUserInfo>
 
 | 属性 | 类型 | 说明 |
 |------|------|------|
-| Items | MemoryStateItemDto[] | QuestionId/State/HistoryAccuracy/NextReviewAt |
+| Items | MemoryStatesDto[] | QuestionId/State/HistoryAccuracy/NextReviewAt（DTO 最小化：复用自动生成 MemoryStatesDto） |
 
 #### 业务规则
 
@@ -754,7 +754,7 @@ public class GetWrongQuestionsService : DomainServiceBase<TUserInfo>
 
 | 属性 | 类型 | 说明 |
 |------|------|------|
-| Items | WrongQuestionItemDto[] | QuestionId/知识点/错因(WrongCount)/LastWrongAt/Subject |
+| Items | WrongQuestionsDto[] | QuestionId/知识点/错因(WrongCount)/LastWrongAt/Subject（DTO 最小化：复用 WrongQuestionsDto + KnowledgePoint 计算字段） |
 
 #### 业务规则
 

@@ -1,0 +1,52 @@
+@* ⚠️ 原则: xCodeGen = 增强版（AfterBuild）。SG（编译期）提供基础回退。 *@
+@using System.Linq
+@using TKW.Framework.CodeGeneration
+@model TKW.Framework.CodeGeneration.ClassMetadata
+@{
+    bool isView = Model.Type == MetaType.View;
+    var entity = Model.ClassName;
+    var dtoName = $"{entity}Dto";
+    var summary = (Model.Summary ?? "").Replace("\r\n", " ").Replace("\n", " ");
+    var serviceName = $"{entity}DataService";
+    var entityNS = Model.Namespace;
+    var dtoNS = entityNS + ".DTOs";
+    var servicesNS = entityNS.Replace(".Entities", ".DataServices");
+    
+    // V4.9.81 (W1): 实体不再指定 UserType/UserInfoType（V4.9.80 ADR43 D3 物理删除，
+    // 用户类型单一来源 = 宿主初始化器 DomainHostInitializerBase<T>）——DataService 走非泛型基类。
+    // 扫描实体属性，决定是否生成特定的构造函数注入标记
+    var hasIsDeleted = Model.Properties.Any(p => p.Name == "IsDeleted");
+
+    // 根据 isView 动态决定基类名称 
+    var baseName = isView ? "DomainReadOnlyDataServiceBase" : "DomainDataServiceBase";
+    var dacInterfaceName = isView ? "IEntityReadOnlyDAC" : "IEntityDAC";
+}
+using TKW.Framework.Domain;
+using TKW.Framework.Domain.Interfaces;
+using @(entityNS);
+using @(dtoNS);
+
+namespace @(servicesNS);
+
+/// <summary>数据服务：@(summary)</summary>
+// 提示：标准 CRUD 逻辑和构造函数已由 @(serviceName).g.cs 承载。
+// 这里的分部类仅用于编写特定的业务查询方法。
+//
+// 【V4.9.40 架构说明】
+// - DataService 为 sealed 分部类，.g.cs 承载所有 CRUD 和搜索能力
+// - 自定义业务逻辑 → 在 `Services/` 下创建 Service 类，标注 `[GenerateController]`
+// - 数据过滤干预 → 实现 IGlobalQueryFilter（初始化器基类 DomainHostInitializerBase 已实现，override Apply<T> 即可）
+// - 不要手动创建 Controller 类（V3.7 起由 SG 自动生成）
+@Model.Accessibility partial class @(serviceName)(IDomainUser user, @(dacInterfaceName)<@(entity)> dac)
+        : @(baseName)<@(entity), @(dtoName)>(user, dac, hasSoftDelete:@(hasIsDeleted.ToString().ToLower())) 
+{
+@if (!isView)
+{
+    @: // 场景：业务驱动的删除（自动按 HasSoftDelete 分派：有软删→软删，无软删→物理删）
+    @: public async Task<bool> AdminDeleteAsync(long id, CancellationToken ct)
+    @: {
+    @:     // 公共 DeleteAsync 自动分派——不调用 [Obsolete] 的 InternalHardDeleteAsync（ADR15）
+    @:     return await DeleteAsync(id, ct);
+    @: }
+}
+}

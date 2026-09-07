@@ -1,0 +1,23 @@
+@* ⚠️ 原则: xCodeGen = 增强版（AfterBuild）。SG（编译期）提供基础回退。 *@
+@using TKW.Framework.CodeGeneration
+@model TKW.Framework.CodeGeneration.ClassMetadata
+@{
+    var dtoName = Model.ClassName + "Dto";
+    var dtoSummary = (Model.Summary ?? Model.ClassName).Replace("\r\n", " ").Replace("\n", " ");
+}
+using System.ComponentModel.DataAnnotations;
+using TKW.Framework;
+using TKW.Framework.CodeGeneration;
+namespace @(Model.Namespace).DTOs;
+
+/// <summary>@Raw(dtoSummary) 的手写 DTO 扩展</summary>
+public partial record @dtoName
+{
+    /// <summary>根据需要添加自定义验证逻辑</summary>
+    partial void OnCustomValidate(EnumSceneFlags scene, List<ValidationResult> results)
+    {
+        // 示例：非数据库依赖的字段交叉验证
+        // if (this.StartTime > this.EndTime) 
+        //    results.Add(new ValidationResult("开始时间不能晚于结束时间", new[] { nameof(StartTime) }));
+    }
+}
