@@ -137,6 +137,18 @@ SDK 位置只在 workspace 一处声明，改路径只改一处，pnpm 符号链
 | MOCK_SPEC.md | `.TKWF/MOCK_SPEC.md` | mock 数据策略（8 域，已物化） |
 | Business.md | `.TKWF/Business.md` | 248 BR + 20 C（mock 字段策略依据） |
 
+### P1.1 生成器脚本路径硬约束（防层级漂移）
+
+> ⚠️ **根因预警**：`file:../../../../tkwf-tsclient` 等相对路径随目录层级漂移（DMP 2 级 / WebH5 3 级），曾导致 `GraphQL_Api.md` 误写到框架侧 `F:\LoongBa_Git\.TKWF\`。以下为强制约定：
+
+| 约束 | 值 | 说明 |
+|---|---|---|
+| gen-ts-client 脚本位置 | `src/XiaoShuTong.WebH5/scripts/gen-ts-client.ts` | 消费端自有，**勿移动**（package.json `gen-ts-client` script 引用它） |
+| DOC_OUTPUT_PATH | 必须基于 `SOLUTION_ROOT`（脚本上 3 级 = `XiaoShuTong/`） | 输出到 `.TKWF/GraphQL_Api.md`（项目侧），**禁止** `WEBH5_ROOT/../../../` 组合 |
+| schema 输入 | `src/XiaoShuTong.WebApi/schema.graphql` | 由根 `buildSchema.ps1` 导出（Full 模式）；Quick 模式假设已存在 |
+| 生成链路 | `.\buildSchema.ps1`（根）→ gen-ts-client → ts-client.g.ts + GraphQL_Api.md | 单脚本、同源、同批次原子生成 |
+| 修改后验证 | 重跑 `pnpm gen-ts-client` 后检查 `F:\LoongBa_Git\.TKWF\` 无产物 | 防回归到框架侧
+
 ### P2. 框架 SG2 修复状态（✅ 已修复，v4.9.109 起）
 
 **历史问题（已解决）**：全部 Service 统一 `ExecuteAsync` 命名 + SG2 resolver 字段名=方法名 → 冲突静默丢弃，GraphQL 仅暴露 8 操作（Query 4 + Mutation 4），55 个业务服务不可达。已转交框架组修复。
