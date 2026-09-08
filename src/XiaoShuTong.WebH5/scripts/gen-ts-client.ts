@@ -1123,12 +1123,11 @@ function mapFieldToOperator(gqlType: string, schema?: string): string | null {
 }
 
 // ── GraphQL_Api.md 文档生成（V1.0.6 新增） ──
+// 输出到项目侧 .TKWF/（与 Domain_Api.md / DataService_API.md 同一活态文档目录），
+// 而非框架侧 —— 用 SOLUTION_ROOT（= 解决方案根 XiaoShuTong/）定位，避免多退层级
 
 const DOC_OUTPUT_PATH = resolve(
-  WEBH5_ROOT,
-  '..',
-  '..',
-  '..',
+  SOLUTION_ROOT,
   '.TKWF',
   'GraphQL_Api.md',
 );

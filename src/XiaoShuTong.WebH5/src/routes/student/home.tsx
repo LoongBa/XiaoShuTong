@@ -56,45 +56,51 @@ function StudentHomePage() {
     const loadData = async () => {
       setIsLoading(true);
       try {
-        // 并行加载所有数据
+        // 并行加载所有数据（参数与真实 DTO 契约对齐：GraphQL_Api.md §三）
         const [tasksResult, reviewResult, heatmapResult, streakResult] = await Promise.all([
-          Tkwf.User.Use<MyTasks_ExecuteService>().listMyTasks_Execute(),
-          Tkwf.User.Use<ReviewQueue_ExecuteService>().reviewQueue_Execute(),
-          Tkwf.User.Use<Heatmap_ExecuteService>().heatmap_Execute(),
+          Tkwf.User.Use<MyTasks_ExecuteService>().listMyTasks_Execute({
+            request: { status: null }
+          }),
+          Tkwf.User.Use<ReviewQueue_ExecuteService>().reviewQueue_Execute({
+            request: { date: new Date().toISOString().slice(0, 10), pageIndex: 1, pageSize: 20 }
+          }),
+          Tkwf.User.Use<Heatmap_ExecuteService>().heatmap_Execute({
+            request: { start: '', end: '' }
+          }),
           Tkwf.User.Use<Streak_ExecuteService>().streak_Execute(),
         ]);
         
-        // 处理任务数据
+        // 处理任务数据（MyTaskItemDto → 页面形状）
         if (tasksResult.success && tasksResult.items) {
           setTasks(tasksResult.items.map((item: any) => ({
-            id: item.taskId || item.id,
+            id: item.taskUid || item.id,
             title: item.title,
-            description: item.description || '',
-            teacherName: item.teacherName || '老师',
-            teacherId: item.teacherId || '',
-            classId: item.groupId ? String(item.groupId) : '',
-            totalQuestions: item.totalQuestions || 0,
-            completedQuestions: item.completedQuestions || 0,
-            deadline: item.deadline || new Date().toISOString(),
-            status: item.status || 'pending',
-            createdAt: item.createTime || new Date().toISOString(),
-            source: item.source || 'teacher'
+            description: '',
+            teacherName: item.ownerName || '老师',
+            teacherId: '',
+            classId: '',
+            totalQuestions: 1,
+            completedQuestions: Math.round((item.progress ?? 0) * 100),
+            deadline: item.deadlineAt || new Date().toISOString(),
+            status: item.status?.toLowerCase() || 'pending',
+            createdAt: new Date().toISOString(),
+            source: 'teacher'
           })));
         }
         
-        // 处理复习队列数据
+        // 处理复习队列数据（MemoryStatesDto → 页面形状）
         if (reviewResult.success && reviewResult.items) {
           setReviewItems(reviewResult.items.map((item: any) => ({
-            id: item.id || item.knowledgePointId,
-            knowledgePointId: item.knowledgePointId,
-            title: item.title,
-            memoryState: item.memoryState || 'gray',
-            daysSinceLastReview: item.daysSinceLastReview || 0,
-            isOverdue: item.isOverdue || false
+            id: item.uId || item.questionId,
+            knowledgePointId: item.questionId,
+            title: '',
+            memoryState: item.state === '✕' ? 'gray' : item.state === '△' ? 'yellow' : item.state === '○' ? 'green' : 'gold',
+            daysSinceLastReview: Math.max(0, Math.ceil((Date.now() - new Date(item.nextReviewAt || Date.now()).getTime()) / 86400000)),
+            isOverdue: new Date(item.nextReviewAt || Date.now()) < new Date()
           })));
         }
         
-        // 处理热力图数据
+        // 处理热力图数据（DailyStatsDto → 页面形状）
         if (heatmapResult.success && heatmapResult.days) {
           setLearningStats(heatmapResult.days.map((day: any) => ({
             date: day.statDate || day.date,
