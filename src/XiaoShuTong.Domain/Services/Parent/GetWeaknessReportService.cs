@@ -56,7 +56,7 @@ internal class GetWeaknessReportService(DomainUser<XiaoShuTongUserInfo> user)
         // BR-27：State 映射家长端文案（0=✕未掌握/1=△模糊/2=○掌握/3=★熟练）
         var weakPoints = rows
             .OrderBy(r => r.Accuracy)
-            .Select(r => new WeakPointDto
+            .Select(r => new ParentWeakPointDto
             {
                 Subject = r.Subject,
                 KnowledgePoint = r.KnowledgePoint,
@@ -96,11 +96,11 @@ public sealed record GetWeaknessReportResDto
     public string? ErrorCode { get; init; }
 
     /// <summary>薄弱知识点列表（正确率升序）</summary>
-    public List<WeakPointDto> WeakPoints { get; init; } = [];
+    public List<ParentWeakPointDto> WeakPoints { get; init; } = [];
 }
 
-/// <summary>薄弱点 DTO</summary>
-public sealed record WeakPointDto
+/// <summary>薄弱点 DTO（Parent 版——重命名消 GraphQL 跨域同名冲突；含学科/状态文案，与共享版形状不同）</summary>
+public sealed record ParentWeakPointDto
 {
     /// <summary>学科</summary>
     public string Subject { get; init; } = string.Empty;

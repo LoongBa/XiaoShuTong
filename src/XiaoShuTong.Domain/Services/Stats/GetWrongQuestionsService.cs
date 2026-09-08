@@ -32,12 +32,12 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
     /// <summary>
     /// 分页查询当前学生错题（Mastered 分组 + 学科过滤 + 题目摘要）
     /// </summary>
-    public async Task<GetWrongQuestionsResDto> ExecuteAsync(GetWrongQuestionsReqDto request, CancellationToken ct = default)
+    public async Task<StatsGetWrongQuestionsResDto> ExecuteAsync(GetWrongQuestionsReqDto request, CancellationToken ct = default)
     {
         // BR-13：参数校验（page≥1、size 1~100）
         var pageIndex = request.PageIndex < 1 ? 1 : request.PageIndex;
         if (request.PageSize is < 1 or > 100)
-            return new GetWrongQuestionsResDto { Success = false, ErrorCode = StatsErrorCodes.ParamInvalid };
+            return new StatsGetWrongQuestionsResDto { Success = false, ErrorCode = StatsErrorCodes.ParamInvalid };
         var pageSize = request.PageSize;
 
         var userId = User.UserInfo?.Id ?? 0;
@@ -67,7 +67,7 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
         }
 
         // BR-12：空列表正常返回
-        return new GetWrongQuestionsResDto
+        return new StatsGetWrongQuestionsResDto
         {
             Success = true,
             Items = items
@@ -97,8 +97,8 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
     }
 }
 
-/// <summary>错题本查询响应 DTO</summary>
-public sealed record GetWrongQuestionsResDto
+/// <summary>错题本查询响应 DTO（Stats 版——重命名消 GraphQL 跨域同名冲突，对齐 ControllerName=StatsWrongQuestions）</summary>
+public sealed record StatsGetWrongQuestionsResDto
 {
     /// <summary>是否成功</summary>
     public bool Success { get; init; }

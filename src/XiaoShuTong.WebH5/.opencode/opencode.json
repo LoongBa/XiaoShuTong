@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "codemap": { "enabled": false },
+    "dotnet-analyzer": { "enabled": false },
+    "shadcn": {
+      "type": "local",
+      "command": ["npx", "-y", "shadcn@latest", "mcp"],
+      "enabled": true,
+      "timeout": 10000
+    }
+  }
+}

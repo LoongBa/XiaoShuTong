@@ -1,0 +1,9 @@
+packages:
+  # 消费端（H5 前端）
+  - 'src/XiaoShuTong.WebH5'
+  # @tkwf SDK 源码仓库（同级目录，workspace 链接复用；位置变更只需改此处）
+  - '../tkwf-tsclient'
+  - '../TKWF-tsclient-mock'
+
+allowBuilds:
+  esbuild: true

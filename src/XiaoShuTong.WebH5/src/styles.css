@@ -1,0 +1,345 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/* 小书童-背书伴侣设计系统 - 清爽鼓励感 */
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  
+  /* 基础颜色 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  
+  /* 记忆状态色 */
+  --color-memory-gray: var(--memory-gray);
+  --color-memory-gray-foreground: var(--memory-gray-foreground);
+  --color-memory-yellow: var(--memory-yellow);
+  --color-memory-yellow-foreground: var(--memory-yellow-foreground);
+  --color-memory-green: var(--memory-green);
+  --color-memory-green-foreground: var(--memory-green-foreground);
+  --color-memory-gold: var(--memory-gold);
+  --color-memory-gold-foreground: var(--memory-gold-foreground);
+  
+  /* 图表颜色 */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  
+  /* 侧边栏 */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* 字体 */
+  --font-sans: var(--font-sans);
+  --font-kai: var(--font-kai);
+}
+
+:root {
+  --radius: 0.75rem;
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-kai: "KaiTi", "STKaiti", "楷体", serif;
+  
+  /* 清爽浅色主题 */
+  --background: oklch(0.98 0.005 260);
+  --foreground: oklch(0.25 0.02 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 260);
+  
+  /* 品牌主色 - 清新蓝绿 */
+  --primary: oklch(0.65 0.12 195);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.01 260);
+  --secondary-foreground: oklch(0.35 0.02 260);
+  
+  --muted: oklch(0.94 0.01 260);
+  --muted-foreground: oklch(0.55 0.02 260);
+  --accent: oklch(0.94 0.02 195);
+  --accent-foreground: oklch(0.25 0.02 260);
+  
+  /* 错误色 - 温和红 */
+  --destructive: oklch(0.65 0.18 25);
+  --destructive-foreground: oklch(1 0 0);
+  
+  --border: oklch(0.9 0.01 260);
+  --input: oklch(0.9 0.01 260);
+  --ring: oklch(0.65 0.12 195);
+  
+  /* 记忆状态色 - 四阶状态 */
+  --memory-gray: oklch(0.75 0.01 260);
+  --memory-gray-foreground: oklch(0.45 0.02 260);
+  --memory-yellow: oklch(0.85 0.12 85);
+  --memory-yellow-foreground: oklch(0.35 0.05 85);
+  --memory-green: oklch(0.75 0.15 145);
+  --memory-green-foreground: oklch(1 0 0);
+  --memory-gold: oklch(0.75 0.18 85);
+  --memory-gold-foreground: oklch(0.25 0.05 85);
+  
+  /* 图表颜色 */
+  --chart-1: oklch(0.65 0.12 195);
+  --chart-2: oklch(0.75 0.15 145);
+  --chart-3: oklch(0.85 0.12 85);
+  --chart-4: oklch(0.65 0.18 25);
+  --chart-5: oklch(0.55 0.15 285);
+  
+  /* 侧边栏 */
+  --sidebar: oklch(0.98 0.005 260);
+  --sidebar-foreground: oklch(0.25 0.02 260);
+  --sidebar-primary: oklch(0.65 0.12 195);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.94 0.02 195);
+  --sidebar-accent-foreground: oklch(0.25 0.02 260);
+  --sidebar-border: oklch(0.9 0.01 260);
+  --sidebar-ring: oklch(0.65 0.12 195);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 260);
+  --foreground: oklch(0.95 0.01 260);
+  --card: oklch(0.22 0.02 260);
+  --card-foreground: oklch(0.95 0.01 260);
+  --popover: oklch(0.22 0.02 260);
+  --popover-foreground: oklch(0.95 0.01 260);
+  --primary: oklch(0.7 0.12 195);
+  --primary-foreground: oklch(0.15 0.02 260);
+  --secondary: oklch(0.28 0.02 260);
+  --secondary-foreground: oklch(0.95 0.01 260);
+  --muted: oklch(0.28 0.02 260);
+  --muted-foreground: oklch(0.65 0.02 260);
+  --accent: oklch(0.28 0.02 260);
+  --accent-foreground: oklch(0.95 0.01 260);
+  --destructive: oklch(0.7 0.18 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.3 0.02 260);
+  --input: oklch(0.3 0.02 260);
+  --ring: oklch(0.7 0.12 195);
+  
+  --memory-gray: oklch(0.45 0.01 260);
+  --memory-gray-foreground: oklch(0.75 0.02 260);
+  --memory-yellow: oklch(0.7 0.12 85);
+  --memory-yellow-foreground: oklch(0.2 0.05 85);
+  --memory-green: oklch(0.65 0.15 145);
+  --memory-green-foreground: oklch(1 0 0);
+  --memory-gold: oklch(0.7 0.18 85);
+  --memory-gold-foreground: oklch(0.2 0.05 85);
+  
+  --chart-1: oklch(0.7 0.12 195);
+  --chart-2: oklch(0.65 0.15 145);
+  --chart-3: oklch(0.7 0.12 85);
+  --chart-4: oklch(0.7 0.18 25);
+  --chart-5: oklch(0.65 0.15 285);
+  
+  --sidebar: oklch(0.22 0.02 260);
+  --sidebar-foreground: oklch(0.95 0.01 260);
+  --sidebar-primary: oklch(0.7 0.12 195);
+  --sidebar-primary-foreground: oklch(0.15 0.02 260);
+  --sidebar-accent: oklch(0.28 0.02 260);
+  --sidebar-accent-foreground: oklch(0.95 0.01 260);
+  --sidebar-border: oklch(0.3 0.02 260);
+  --sidebar-ring: oklch(0.7 0.12 195);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+/* 动画定义 */
+@keyframes star-pop {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.3) rotate(180deg); opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; }
+}
+
+@keyframes float-up {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-30px); opacity: 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(251, 191, 36, 0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes progress-fill {
+  from { width: 0%; }
+  to { width: var(--progress-width); }
+}
+
+/* 工具类 */
+.animate-star-pop {
+  animation: star-pop 0.6s ease-out forwards;
+}
+
+.animate-float-up {
+  animation: float-up 1s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+/* 记忆状态徽章 */
+.memory-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.memory-badge-gray {
+  background-color: var(--color-memory-gray);
+  color: var(--color-memory-gray-foreground);
+}
+
+.memory-badge-yellow {
+  background-color: var(--color-memory-yellow);
+  color: var(--color-memory-yellow-foreground);
+}
+
+.memory-badge-green {
+  background-color: var(--color-memory-green);
+  color: var(--color-memory-green-foreground);
+}
+
+.memory-badge-gold {
+  background-color: var(--color-memory-gold);
+  color: var(--color-memory-gold-foreground);
+}
+
+/* 进度条 */
+.progress-bar {
+  height: 0.5rem;
+  background-color: var(--color-muted);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), oklch(0.7 0.15 195));
+  border-radius: 9999px;
+  transition: width 0.5s ease-out;
+}
+
+/* 连续打卡徽章 */
+.streak-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.streak-badge-normal {
+  background-color: oklch(0.9 0.02 50);
+  color: oklch(0.5 0.05 50);
+}
+
+.streak-badge-gold {
+  background-color: oklch(0.95 0.08 85);
+  color: oklch(0.6 0.1 85);
+}
+
+/* 热力图格子 */
+.heatmap-cell {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.25rem;
+}
+
+.heatmap-level-0 { background-color: oklch(0.9 0.01 260); }
+.heatmap-level-1 { background-color: oklch(0.85 0.05 145); }
+.heatmap-level-2 { background-color: oklch(0.75 0.1 145); }
+.heatmap-level-3 { background-color: oklch(0.65 0.15 145); }
+.heatmap-level-4 { background-color: oklch(0.55 0.18 145); }
+
+/* 题目区楷体 */
+.question-text {
+  font-family: var(--font-kai);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* 移动端优化 */
+@media (max-width: 640px) {
+  .question-text {
+    font-size: 1.125rem;
+  }
+}
+
+/* 安全区域适配 */
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}

@@ -1,0 +1,10 @@
+# graphql-codegen 配置
+# 路径相对于运行 npm 的前端目录（FrontendDir 自动检测：AdminWeb > WebApi fallback，Wasm 不参与）
+# schema 由 WebApi 项目导出，codegen.yml 存于 WebApi 项目，运行时由 buildSchema.ps1 通过 --config 绝对路径引用
+# 注：当 FrontendDir 回退到 WebApi 自身时，schema 路径自动调整为 ./schema.graphql
+schema: './schema.graphql'
+generates:
+  './src/gql/types.ts':
+    plugins:
+      - typescript
+      - typescript-operations

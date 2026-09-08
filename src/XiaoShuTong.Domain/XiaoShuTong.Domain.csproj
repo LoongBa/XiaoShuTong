@@ -34,7 +34,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- 版本在 Directory.Packages.props 中集中管理 -->
+    <!-- 版本在 Directory.Packages.props 中集中管理。
+         ⚠️ Dll 模式（refs 引用）框架 DLL 不传递 NuGet 依赖：TKWF.Domain.FreeSql.dll
+         运行时依赖 FreeSql / FreeSql.DbContext / FreeSql.Extensions.Linq，须在此显式声明
+         （与 TKWF.Domain.targets 注释一致；DMP-Lite 同模式同处理）。 -->
+    <PackageReference Include="FreeSql" />
+    <PackageReference Include="FreeSql.DbContext" />
+    <PackageReference Include="FreeSql.Extensions.Linq" />
     <PackageReference Include="FreeSql.Provider.PostgreSQL" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
