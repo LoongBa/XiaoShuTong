@@ -54,7 +54,6 @@ export const Query = {
   heatmap_Execute                 : { field: 'heatmap_Execute', type: 'query' } as const,
   periodReport_Execute            : { field: 'periodReport_Execute', type: 'query' } as const,
   streak_Execute                  : { field: 'streak_Execute', type: 'query' } as const,
-  statsWrongQuestions_Execute     : { field: 'statsWrongQuestions_Execute', type: 'query' } as const,
   createTask_Execute              : { field: 'createTask_Execute', type: 'query' } as const,
   ownerDashboard_Execute          : { field: 'ownerDashboard_Execute', type: 'query' } as const,
   taskDetail_Execute              : { field: 'taskDetail_Execute', type: 'query' } as const,
@@ -127,14 +126,13 @@ export const operationSelection: Record<string, string> = {
   'sessionResult_Execute': 'success errorCode correctCount totalCount newStarCount blockedPoints { questionId knowledgePoint state }',
   'setRankEnabled_Execute': 'success errorCode groupId rankEnabled',
   'startTrial_Execute': 'success errorCode subscriptionUid status trialEndAt',
-  'statsWrongQuestions_Execute': 'success errorCode items { knowledgePoint summary isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
   'streak_Execute': 'success errorCode currentStreak longestStreak',
   'submitAttempt_Execute': 'success errorCode result confidence matchedKeywords missingKeywords hint preState postState nextReviewAt',
   'submitJudgmentFeedback_Execute': 'success errorCode feedbackUid status',
   'submitPkAnswer_Execute': 'success errorCode isCorrect result confidence score',
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
   'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText }',
-  'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } totalCount pageIndex pageSize',
+  'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
 } as const;
 
 // ===== Schema Types (Auto-generated from schema.graphql) =====
@@ -504,9 +502,7 @@ export interface GetWrongQuestionsResDto {
   success: boolean;
   errorCode: string | null;
   items: Array<WrongQuestionsDto>;
-  totalCount: number;
-  pageIndex: number;
-  pageSize: number;
+  total: number;
 }
 
 export interface GetWrongQuestionsReqDtoInput {
@@ -754,13 +750,6 @@ export interface GetStreakResDto {
   errorCode: string | null;
   currentStreak: number;
   longestStreak: number;
-}
-
-export interface StatsGetWrongQuestionsResDto {
-  success: boolean;
-  errorCode: string | null;
-  items: Array<WrongQuestionsDto>;
-  total: number;
 }
 
 export interface CreateTaskResDto {
@@ -1335,10 +1324,6 @@ export interface PeriodReport_ExecuteArgs {
   request?: GetPeriodReportReqDtoInput;
 }
 
-export interface StatsWrongQuestions_ExecuteArgs {
-  request?: GetWrongQuestionsReqDtoInput;
-}
-
 export interface CreateTask_ExecuteArgs {
   request?: CreateTaskReqDtoInput;
 }
@@ -1553,10 +1538,6 @@ export interface SetRankEnabled_ExecuteService {
 
 export interface StartTrial_ExecuteService {
   startTrial_Execute(args?: StartTrial_ExecuteArgs): ChainablePromise<StartTrialResDto>;
-}
-
-export interface StatsWrongQuestions_ExecuteService {
-  statsWrongQuestions_Execute(args?: StatsWrongQuestions_ExecuteArgs): ChainablePromise<StatsGetWrongQuestionsResDto>;
 }
 
 export interface Streak_ExecuteService {

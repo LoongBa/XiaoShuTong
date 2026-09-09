@@ -14,16 +14,17 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- ════════════════════════════════════════════
-         HotChocolate — 统一 16.5.1
+         HotChocolate — 统一 16.6.4（对齐框架部署 refs 4.9.114 的 HotChocolate 集成版本；
+         16.5.1 时代 schema export 运行时缺 HotChocolate.Execution.Configuration.Abstractions 16.6.4 报错）
          ════════════════════════════════════════════ -->
-    <PackageVersion Include="HotChocolate" Version="16.5.1" />
-    <PackageVersion Include="HotChocolate.Abstractions" Version="16.5.0" />
-    <PackageVersion Include="HotChocolate.AspNetCore" Version="16.5.1" />
-    <PackageVersion Include="HotChocolate.AspNetCore.Authorization" Version="16.5.1" />
-    <PackageVersion Include="HotChocolate.AspNetCore.CommandLine" Version="16.5.1" />
-    <PackageVersion Include="HotChocolate.Data" Version="16.5.1" />
-    <PackageVersion Include="HotChocolate.Execution.Abstractions" Version="16.5.1" />
-    <PackageVersion Include="HotChocolate.Types" Version="16.5.1" />
+    <PackageVersion Include="HotChocolate" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.Abstractions" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.AspNetCore" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.AspNetCore.Authorization" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.AspNetCore.CommandLine" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.Data" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.Execution.Abstractions" Version="16.6.4" />
+    <PackageVersion Include="HotChocolate.Types" Version="16.6.4" />
     <!-- ════════════════════════════════════════════
          FreeSql
          ════════════════════════════════════════════ -->

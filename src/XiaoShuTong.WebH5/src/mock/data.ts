@@ -408,19 +408,6 @@ export const initialData: DatasetSeed = {
     },
   ],
 
-  // statsGetWrongQuestionsResDtos — 3 条
-  statsGetWrongQuestionsResDtos: [
-    {
-      success: true, errorCode: null,
-      items: [
-        { questionId: "q-001", knowledgePoint: "乘法分配律", summary: "展开括号时的符号错误", wrongCount: 3, mastered: false },
-        { questionId: "q-002", knowledgePoint: "分数除法", summary: "未正确转化为乘法", wrongCount: 2, mastered: false },
-        { questionId: "q-003", knowledgePoint: "成语运用", summary: "望文生义", wrongCount: 1, mastered: true },
-      ],
-      total: 3,
-    },
-  ],
-
   // =====================================================================
   // P1：排行榜搭子域（Rank + Buddy）
   // =====================================================================

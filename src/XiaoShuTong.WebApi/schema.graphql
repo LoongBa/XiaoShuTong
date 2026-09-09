@@ -99,8 +99,6 @@ type Query {
   periodReport_Execute(request: GetPeriodReportReqDtoInput): GetPeriodReportResDto
     @cost(weight: "10")
   streak_Execute: GetStreakResDto @cost(weight: "10")
-  statsWrongQuestions_Execute(request: GetWrongQuestionsReqDtoInput): StatsGetWrongQuestionsResDto
-    @cost(weight: "10")
   createTask_Execute(request: CreateTaskReqDtoInput): CreateTaskResDto
     @cost(weight: "10")
   ownerDashboard_Execute(request: GetOwnerDashboardReqDtoInput): GetOwnerDashboardResDto
@@ -666,20 +664,16 @@ type GetWeaknessReportResDto {
   weakPoints: [ParentWeakPointDto!]!
 }
 
-"错题本查询响应 DTO"
+"错题本查询响应 DTO（Items + Total，对齐学习域 U01 分页决策 {items,total}）"
 type GetWrongQuestionsResDto {
   "是否成功"
   success: Boolean!
   "错误码（失败时）"
   errorCode: String
-  "错题列表（复用 WrongQuestionsDto + KnowledgePoint 计算字段）"
+  "错题列表（复用 WrongQuestionsDto + KnowledgePoint/Summary 计算字段）"
   items: [WrongQuestionsDto!]!
-  "总记录数"
-  totalCount: Int!
-  "页码"
-  pageIndex: Int!
-  "每页数"
-  pageSize: Int!
+  "总数"
+  total: Int!
 }
 
 "群组详情响应 DTO"
@@ -1118,18 +1112,6 @@ type StartTrialResDto {
   status: String!
   "试用结束（+7 天）"
   trialEndAt: DateTime
-}
-
-"错题本查询响应 DTO（Stats 版——重命名消 GraphQL 跨域同名冲突，对齐 ControllerName=StatsWrongQuestions）"
-type StatsGetWrongQuestionsResDto {
-  "是否成功"
-  success: Boolean!
-  "错误码（失败时）"
-  errorCode: String
-  "错题列表（复用 WrongQuestionsDto + Summary 计算字段）"
-  items: [WrongQuestionsDto!]!
-  "总数"
-  total: Int!
 }
 
 "学科掌握度 DTO"

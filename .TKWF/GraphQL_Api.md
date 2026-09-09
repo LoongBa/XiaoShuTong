@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-09 04:54:10
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-09 23:06:01
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -17,14 +17,14 @@
 | groups_Execute | 1 | 0 | 1 | 0 |
 | member | 0 | 1 | 1 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 41 | 1 | 42 | 0 |
+| other | 40 | 1 | 41 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **55** | **5** | **60** | **0** |
+| **合计** | **54** | **5** | **59** | **0** |
 
 ## 二、按域操作清单
 
@@ -225,9 +225,7 @@
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `items`: `WrongQuestionsDto` | | | | | |
-| | ⤷ `totalCount`: number | | | | | |
-| | ⤷ `pageIndex`: number | | | | | |
-| | ⤷ `pageSize`: number | | | | | |
+| | ⤷ `total`: number | | | | | |
 | other | `submitAttempt_Execute` | Query |  | { request?: SubmitAttemptReqDtoInput | null } | `SubmitAttemptResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -326,11 +324,6 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `currentStreak`: number | | | | | |
 | | ⤷ `longestStreak`: number | | | | | |
-| other | `statsWrongQuestions_Execute` | Query |  | { request?: GetWrongQuestionsReqDtoInput | null } | `StatsGetWrongQuestionsResDto` | ✅ |
-| | ⤷ `success`: boolean | | | | | |
-| | ⤷ `errorCode`: string | null | | | | | |
-| | ⤷ `items`: `WrongQuestionsDto` | | | | | |
-| | ⤷ `total`: number | | | | | |
 | other | `ownerDashboard_Execute` | Query |  | { request?: GetOwnerDashboardReqDtoInput | null } | `GetOwnerDashboardResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -411,7 +404,7 @@
 | `GetStreakResDto` | success, errorCode, currentStreak, longestStreak |
 | `GetTaskDetailResDto` | success, errorCode, task → 见 \`TasksDto\`, members → 见 \`TaskAssignmentsDto\` |
 | `GetWeaknessReportResDto` | success, errorCode, weakPoints → 见 \`ParentWeakPointDto\` |
-| `GetWrongQuestionsResDto` | success, errorCode, items → 见 \`WrongQuestionsDto\`, totalCount, pageIndex, pageSize |
+| `GetWrongQuestionsResDto` | success, errorCode, items → 见 \`WrongQuestionsDto\`, total |
 | `GroupDetailResDto` | success, errorCode, groupId, members → 见 \`MemberItemDto\` |
 | `ImportQuestionsResDto` | success, errorCode, imported, failed, failures |
 | `ImportRosterResDto` | success, errorCode, importId, status, sourceCount |
@@ -433,7 +426,6 @@
 | `RosterPreviewResDto` | success, errorCode, importId, status, sourceCount, cleanedCount, duplicateCount, invalidCount, preview |
 | `SetRankEnabledResDto` | success, errorCode, groupId, rankEnabled |
 | `StartTrialResDto` | success, errorCode, subscriptionUid, status, trialEndAt |
-| `StatsGetWrongQuestionsResDto` | success, errorCode, items → 见 \`WrongQuestionsDto\`, total |
 | `SubmitAttemptResDto` | success, errorCode, result, confidence, matchedKeywords, missingKeywords, hint, preState, postState, nextReviewAt |
 | `SubmitJudgmentFeedbackResDto` | success, errorCode, feedbackUid, status |
 | `SubmitPkAnswerResDto` | success, errorCode, isCorrect, result, confidence, score |

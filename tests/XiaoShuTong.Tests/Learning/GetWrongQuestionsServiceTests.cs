@@ -2,17 +2,18 @@ using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.Learning;
+using XiaoShuTong.Services.Learning;
 using XiaoShuTong.Services.Shared;
-using XiaoShuTong.Services.Stats;
 using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
-namespace XiaoShuTong.Tests.Stats;
+namespace XiaoShuTong.Tests.Learning;
 
 /// <summary>
-/// UC-6.4 查看错题本（GetWrongQuestionsService Stats 版）Contract 测试
-/// 覆盖 BR：BR-12 空态 | BR-13 参数校验 | BR-14 仅当前学生（RLS）| BR-15 只读 + 题目摘要关联
+/// UC-4.7 错题本查询（GetWrongQuestionsService）Contract 测试
+/// 覆盖 BR：BR-43 空态 | BR-44 仅当前用户（RLS）| BR-45 Mastered/Subject 过滤 | BR-46 参数校验
+/// 富化：KnowledgePoint（注册表）+ Summary（题库域题目摘要，2026-09-09 合并 Stats 版）
 /// </summary>
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
@@ -34,7 +35,7 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
             UId = UidGenerator.NewId(),
             UserId = userId,
             QuestionId = questionId,
-            BankId = "bank-stats-64001",
+            BankId = "bank-learning-47001",
             Subject = subject,
             WrongCount = wrongCount,
             LastWrongAt = DateTime.UtcNow,
@@ -49,7 +50,7 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         {
             UId = UidGenerator.NewId(),
             QuestionId = questionId,
-            BankId = "bank-stats-64001",
+            BankId = "bank-learning-47001",
             QType = QuestionType.R1,
             Content = $"{{\"questionId\":\"{questionId}\",\"stem\":\"{stem}\"}}",
             Keywords = "[]",
@@ -59,47 +60,56 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         }, TestContext.Current.CancellationToken);
     }
 
-    /// <summary>主流程 + BR-15：错题列表 + 题目摘要关联（不含答案）</summary>
-    [Fact]
-    public async Task ExecuteAsync_ListWithSummary()
+    private void RegisterMeta(string questionId, string knowledgePoint)
     {
-        var userId = SetUser(64001);
-        await SeedWrongAsync(userId, "Q-64001a", "chinese", 3, mastered: false);
-        await SeedQuestionAsync("Q-64001a", "东临碣石，___");
+        LearningQuestionRegistry.Register(new LearningQuestionMeta(
+            questionId, "bank-learning-47001", "chinese", knowledgePoint, "R1", [], ""));
+    }
+
+    /// <summary>主流程 + 富化：错题列表 + KnowledgePoint（注册表）+ Summary（题目摘要，无答案）</summary>
+    [Fact]
+    public async Task ExecuteAsync_ListWithKnowledgePointAndSummary()
+    {
+        var userId = SetUser(47001);
+        await SeedWrongAsync(userId, "Q-47001a", "chinese", 3, mastered: false);
+        await SeedQuestionAsync("Q-47001a", "东临碣石，___");
+        RegisterMeta("Q-47001a", "诗歌鉴赏");
         var svc = User.Use<GetWrongQuestionsService>();
 
         var result = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false }, TestContext.Current.CancellationToken);
 
         Assert.True(result.Success);
         var item = Assert.Single(result.Items);
-        Assert.Equal("Q-64001a", item.QuestionId);
+        Assert.Equal("Q-47001a", item.QuestionId);
         Assert.Equal(3, item.WrongCount);
-        Assert.Equal("东临碣石，___", item.Summary); // 题目摘要（题干，无答案）
+        Assert.Equal("诗歌鉴赏", item.KnowledgePoint); // 注册表富化
+        Assert.Equal("东临碣石，___", item.Summary);    // 题库域题目摘要
+        Assert.Equal(1, result.Total);
 
         var json = System.Text.Json.JsonSerializer.Serialize(result);
         Assert.DoesNotContain("answer", json, StringComparison.OrdinalIgnoreCase);
     }
 
-    /// <summary>BR-14：仅当前学生错题（RLS）</summary>
+    /// <summary>BR-44：仅当前用户错题（RLS）</summary>
     [Fact]
     public async Task ExecuteAsync_OnlyOwnWrongQuestions()
     {
-        var userId = SetUser(64002);
-        await SeedWrongAsync(userId, "Q-64002a", "chinese", 2, mastered: false);
-        await SeedWrongAsync(999999, "Q-64002b", "chinese", 5, mastered: false); // 他人
+        var userId = SetUser(47002);
+        await SeedWrongAsync(userId, "Q-47002a", "chinese", 2, mastered: false);
+        await SeedWrongAsync(999999, "Q-47002b", "chinese", 5, mastered: false); // 他人
         var svc = User.Use<GetWrongQuestionsService>();
 
         var result = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false }, TestContext.Current.CancellationToken);
 
         Assert.Single(result.Items);
-        Assert.Equal("Q-64002a", result.Items[0].QuestionId);
+        Assert.Equal("Q-47002a", result.Items[0].QuestionId);
     }
 
-    /// <summary>BR-12：空错题本正常返回空</summary>
+    /// <summary>BR-43：空错题本正常返回空</summary>
     [Fact]
     public async Task ExecuteAsync_NoWrongQuestions_ReturnsEmpty()
     {
-        SetUser(64003);
+        SetUser(47003);
         var svc = User.Use<GetWrongQuestionsService>();
 
         var result = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false }, TestContext.Current.CancellationToken);
@@ -109,34 +119,34 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         Assert.Equal(0, result.Total);
     }
 
-    /// <summary>BR-13：PageSize=0 → PARAM_INVALID</summary>
+    /// <summary>BR-46：PageSize=0 → PARAM_INVALID</summary>
     [Fact]
     public async Task ExecuteAsync_InvalidPageSize_ReturnsParamInvalid()
     {
-        SetUser(64004);
+        SetUser(47004);
         var svc = User.Use<GetWrongQuestionsService>();
 
         var result = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false, PageSize = 0 }, TestContext.Current.CancellationToken);
 
         Assert.False(result.Success);
-        Assert.Equal(StatsErrorCodes.ParamInvalid, result.ErrorCode);
+        Assert.Equal(LearningErrorCodes.ParamInvalid, result.ErrorCode);
     }
 
-    /// <summary>BR-12/Mastered 分组：待掌握与已掌握分组过滤</summary>
+    /// <summary>BR-45/Mastered 分组：待掌握与已掌握分组过滤</summary>
     [Fact]
     public async Task ExecuteAsync_MasteredFilter_GroupsCorrectly()
     {
-        var userId = SetUser(64005);
-        await SeedWrongAsync(userId, "Q-64005a", "chinese", 2, mastered: false);
-        await SeedWrongAsync(userId, "Q-64005b", "chinese", 4, mastered: true);
+        var userId = SetUser(47005);
+        await SeedWrongAsync(userId, "Q-47005a", "chinese", 2, mastered: false);
+        await SeedWrongAsync(userId, "Q-47005b", "chinese", 4, mastered: true);
         var svc = User.Use<GetWrongQuestionsService>();
 
         var pending = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false }, TestContext.Current.CancellationToken);
         var mastered = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = true }, TestContext.Current.CancellationToken);
 
         Assert.Single(pending.Items);
-        Assert.Equal("Q-64005a", pending.Items[0].QuestionId);
+        Assert.Equal("Q-47005a", pending.Items[0].QuestionId);
         Assert.Single(mastered.Items);
-        Assert.Equal("Q-64005b", mastered.Items[0].QuestionId);
+        Assert.Equal("Q-47005b", mastered.Items[0].QuestionId);
     }
 }
