@@ -26,8 +26,7 @@ export const Query = {
   rosterPreview_Execute           : { field: 'rosterPreview_Execute', type: 'query' } as const,
   importRoster_Execute            : { field: 'importRoster_Execute', type: 'query' } as const,
   listGroups_Execute              : { field: 'listGroups_Execute', type: 'query' } as const,
-  manageGroupMembers_Execute      : { field: 'manageGroupMembers_Execute', type: 'query' } as const,
-  execute_ByRequest               : { field: 'execute_ByRequest', type: 'query' } as const,
+  members                         : { field: 'members', type: 'query' } as const,
   setRankEnabled_Execute          : { field: 'setRankEnabled_Execute', type: 'query' } as const,
   submitJudgmentFeedback_Execute  : { field: 'submitJudgmentFeedback_Execute', type: 'query' } as const,
   createStudySession_Execute      : { field: 'createStudySession_Execute', type: 'query' } as const,
@@ -69,6 +68,7 @@ export const Mutation = {
   loginByContext        : { field: 'loginByContext', type: 'mutation' } as const,
   logout                : { field: 'logout', type: 'mutation' } as const,
   changePasswordSecure  : { field: 'changePasswordSecure', type: 'mutation' } as const,
+  removeMember          : { field: 'removeMember', type: 'mutation' } as const,
 } as const;
 
 // ===== Operation Selection Map =====
@@ -88,7 +88,6 @@ export const operationSelection: Record<string, string> = {
   'createStudySession_Execute': 'success errorCode sessionUid questionCount',
   'createTask_Execute': 'success errorCode taskUid assignedCount',
   'dashboardReport_Execute': 'success errorCode subscription { status trialEndAt } todayCompleted streakDays weekProgress { learnedCount accuracy } subjectsMastery { subject accuracy } locked',
-  'execute_ByRequest': 'success errorCode removed',
   'exportRosterCsv_Execute': 'success errorCode csvFileUrl expiresAt columns',
   'generateInviteCodes_Execute': 'success errorCode generatedCount',
   'heatmap_Execute': 'success errorCode days { isFromPersistentSource id uId userId statDate learnedCount starredCount reviewCount accuracy studySeconds createTime updateTime }',
@@ -108,7 +107,7 @@ export const operationSelection: Record<string, string> = {
   'loginByContext': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
   'loginByPassword': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
   'logout': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
-  'manageGroupMembers_Execute': 'success errorCode groupId members { userId nickname role joinedAt progress }',
+  'members': 'success errorCode groupId members { userId nickname role joinedAt progress }',
   'memoryStates_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } totalCount pageIndex pageSize',
   'myRanking_Execute': 'success errorCode rank value trend rankChange rankEnabled',
   'ownerDashboard_Execute': 'success errorCode todayExecutionRate avgProgress overdueCount weakPointsTop5 { knowledgePoint accuracy } taskList { task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } completionRate status }',
@@ -120,6 +119,7 @@ export const operationSelection: Record<string, string> = {
   'registerSecure': 'success message',
   'rejectBuddyInvite_Execute': 'success errorCode',
   'removeBuddy_Execute': 'success errorCode',
+  'removeMember': 'success errorCode removed',
   'requestChallenge': 'challengeToken salt iterations',
   'reviewBackingPoints_Execute': 'success errorCode imported skipped',
   'reviewQueue_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } overdueCount',
@@ -404,17 +404,6 @@ export interface GroupDetailResDto {
 
 export interface GetMembersReqDtoInput {
   groupId: number;
-}
-
-export interface RemoveMemberResDto {
-  success: boolean;
-  errorCode: string | null;
-  removed: boolean;
-}
-
-export interface RemoveMemberReqDtoInput {
-  groupId: number;
-  userId: number;
 }
 
 export interface SetRankEnabledResDto {
@@ -870,6 +859,17 @@ export interface ChangePasswordSecureInput {
   newSalt: string;
 }
 
+export interface RemoveMemberResDto {
+  success: boolean;
+  errorCode: string | null;
+  removed: boolean;
+}
+
+export interface RemoveMemberReqDtoInput {
+  groupId: number;
+  userId: number;
+}
+
 export interface BanksDto {
   isFromPersistentSource: boolean;
   id: number;
@@ -1235,12 +1235,8 @@ export interface ListGroups_ExecuteArgs {
   request?: ListGroupsReqDtoInput;
 }
 
-export interface ManageGroupMembers_ExecuteArgs {
+export interface MembersArgs {
   request?: GetMembersReqDtoInput;
-}
-
-export interface Execute_ByRequestArgs {
-  request?: RemoveMemberReqDtoInput;
 }
 
 export interface SetRankEnabled_ExecuteArgs {
@@ -1371,6 +1367,10 @@ export interface ChangePasswordSecureArgs {
   input?: ChangePasswordSecureInput;
 }
 
+export interface RemoveMemberArgs {
+  request?: RemoveMemberReqDtoInput;
+}
+
 // ===== Service Typed Interfaces =====
 export interface AcceptBuddyInvite_ExecuteService {
   acceptBuddyInvite_Execute(args?: AcceptBuddyInvite_ExecuteArgs): ChainablePromise<AcceptBuddyInviteResDto>;
@@ -1426,10 +1426,6 @@ export interface DashboardReport_ExecuteService {
   dashboardReport_Execute(args?: DashboardReport_ExecuteArgs): ChainablePromise<GetDashboardReportResDto>;
 }
 
-export interface Execute_ByRequestService {
-  execute_ByRequest(args?: Execute_ByRequestArgs): ChainablePromise<RemoveMemberResDto>;
-}
-
 export interface ExportRosterCsv_ExecuteService {
   exportRosterCsv_Execute(args?: ExportRosterCsv_ExecuteArgs): ChainablePromise<ExportRosterCsvResDto>;
 }
@@ -1474,8 +1470,9 @@ export interface KnowledgeCard_ExecuteService {
   knowledgeCard_Execute(args?: KnowledgeCard_ExecuteArgs): ChainablePromise<GetKnowledgeCardResDto>;
 }
 
-export interface ManageGroupMembers_ExecuteService {
-  manageGroupMembers_Execute(args?: ManageGroupMembers_ExecuteArgs): ChainablePromise<GroupDetailResDto>;
+export interface MemberService {
+  removeMember(args?: RemoveMemberArgs): ChainablePromise<RemoveMemberResDto>;
+  members(args?: MembersArgs): ChainablePromise<GroupDetailResDto>;
 }
 
 export interface MemoryStates_ExecuteService {

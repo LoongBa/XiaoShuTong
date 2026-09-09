@@ -48,10 +48,7 @@ type Query {
     @cost(weight: "10")
   listGroups_Execute(request: ListGroupsReqDtoInput): ListGroupsResDto
     @cost(weight: "10")
-  manageGroupMembers_Execute(request: GetMembersReqDtoInput): GroupDetailResDto
-    @cost(weight: "10")
-  execute_ByRequest(request: RemoveMemberReqDtoInput): RemoveMemberResDto
-    @cost(weight: "10")
+  members(request: GetMembersReqDtoInput): GroupDetailResDto @cost(weight: "10")
   setRankEnabled_Execute(request: SetRankEnabledReqDtoInput): SetRankEnabledResDto
     @cost(weight: "10")
   submitJudgmentFeedback_Execute(request: SubmitJudgmentFeedbackReqDtoInput): SubmitJudgmentFeedbackResDto
@@ -127,6 +124,8 @@ type Mutation {
   loginByContext(input: LoginContextInput): LoginPayload @cost(weight: "10")
   logout(broadcast: Boolean!): LoginPayload @cost(weight: "10")
   changePasswordSecure(input: ChangePasswordSecureInput): RegisterResult
+    @cost(weight: "10")
+  removeMember(request: RemoveMemberReqDtoInput): RemoveMemberResDto
     @cost(weight: "10")
 }
 

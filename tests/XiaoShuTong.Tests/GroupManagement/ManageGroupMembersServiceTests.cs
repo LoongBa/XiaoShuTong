@@ -58,7 +58,7 @@ public class ManageGroupMembersServiceTests(XiaoShuTongDomainTestFixture fixture
         await SeedMemberAsync(group.Id, 63012, MemberRole.Parent, "小张妈妈");
         var svc = User.Use<ManageGroupMembersService>();
 
-        var result = await svc.ExecuteAsync(new GetMembersReqDto { GroupId = group.Id }, TestContext.Current.CancellationToken);
+        var result = await svc.GetMembersAsync(new GetMembersReqDto { GroupId = group.Id }, TestContext.Current.CancellationToken);
 
         Assert.True(result.Success);
         Assert.Equal(2, result.Members.Count);
@@ -73,7 +73,7 @@ public class ManageGroupMembersServiceTests(XiaoShuTongDomainTestFixture fixture
         SetUser(63002);
         var svc = User.Use<ManageGroupMembersService>();
 
-        var result = await svc.ExecuteAsync(new GetMembersReqDto { GroupId = 99999901 }, TestContext.Current.CancellationToken);
+        var result = await svc.GetMembersAsync(new GetMembersReqDto { GroupId = 99999901 }, TestContext.Current.CancellationToken);
 
         Assert.False(result.Success);
         Assert.Equal(GroupErrorCodes.GroupNotFound, result.ErrorCode);
@@ -87,7 +87,7 @@ public class ManageGroupMembersServiceTests(XiaoShuTongDomainTestFixture fixture
         SetUser(63004); // 另一个用户
         var svc = User.Use<ManageGroupMembersService>();
 
-        var result = await svc.ExecuteAsync(new GetMembersReqDto { GroupId = group.Id }, TestContext.Current.CancellationToken);
+        var result = await svc.GetMembersAsync(new GetMembersReqDto { GroupId = group.Id }, TestContext.Current.CancellationToken);
 
         Assert.False(result.Success);
         Assert.Equal(GroupErrorCodes.GroupNotFound, result.ErrorCode);
@@ -102,7 +102,7 @@ public class ManageGroupMembersServiceTests(XiaoShuTongDomainTestFixture fixture
         await SeedMemberAsync(group.Id, 63015, MemberRole.Student, "小张");
         var svc = User.Use<ManageGroupMembersService>();
 
-        var result = await svc.ExecuteAsync(new RemoveMemberReqDto { GroupId = group.Id, UserId = 63015 }, TestContext.Current.CancellationToken);
+        var result = await svc.RemoveMemberAsync(new RemoveMemberReqDto { GroupId = group.Id, UserId = 63015 }, TestContext.Current.CancellationToken);
 
         Assert.True(result.Success);
         Assert.True(result.Removed);
@@ -126,7 +126,7 @@ public class ManageGroupMembersServiceTests(XiaoShuTongDomainTestFixture fixture
         var group = await SeedGroupAsync(ownerId, $"群组{63006}");
         var svc = User.Use<ManageGroupMembersService>();
 
-        var result = await svc.ExecuteAsync(new RemoveMemberReqDto { GroupId = group.Id, UserId = 99999902 }, TestContext.Current.CancellationToken);
+        var result = await svc.RemoveMemberAsync(new RemoveMemberReqDto { GroupId = group.Id, UserId = 99999902 }, TestContext.Current.CancellationToken);
 
         Assert.False(result.Success);
         Assert.Equal(GroupErrorCodes.NotGroupMember, result.ErrorCode);
@@ -139,7 +139,7 @@ public class ManageGroupMembersServiceTests(XiaoShuTongDomainTestFixture fixture
         SetUser(63007);
         var svc = User.Use<ManageGroupMembersService>();
 
-        var result = await svc.ExecuteAsync(new RemoveMemberReqDto { GroupId = 99999903, UserId = 63017 }, TestContext.Current.CancellationToken);
+        var result = await svc.RemoveMemberAsync(new RemoveMemberReqDto { GroupId = 99999903, UserId = 63017 }, TestContext.Current.CancellationToken);
 
         Assert.False(result.Success);
         Assert.Equal(GroupErrorCodes.GroupNotFound, result.ErrorCode);

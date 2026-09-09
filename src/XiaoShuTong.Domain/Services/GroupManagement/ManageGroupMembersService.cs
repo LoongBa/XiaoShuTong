@@ -28,7 +28,7 @@ internal class ManageGroupMembersService(DomainUser<XiaoShuTongUserInfo> user)
     /// <summary>
     /// 查询群组成员列表（含任务完成度）
     /// </summary>
-    public async Task<GroupDetailResDto> ExecuteAsync(GetMembersReqDto request, CancellationToken ct = default)
+    public async Task<GroupDetailResDto> GetMembersAsync(GetMembersReqDto request, CancellationToken ct = default)
     {
         var ownerId = User.UserInfo?.Id ?? 0;
 
@@ -62,7 +62,7 @@ internal class ManageGroupMembersService(DomainUser<XiaoShuTongUserInfo> user)
     /// <summary>
     /// 移除群组成员（仅删成员行，不删学习数据）
     /// </summary>
-    public async Task<RemoveMemberResDto> ExecuteAsync(RemoveMemberReqDto request, CancellationToken ct = default)
+    public async Task<RemoveMemberResDto> RemoveMemberAsync(RemoveMemberReqDto request, CancellationToken ct = default)
     {
         var ownerId = User.UserInfo?.Id ?? 0;
 

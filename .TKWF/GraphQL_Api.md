@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-09 02:43:41
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-09 04:54:10
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -15,15 +15,16 @@
 | children_Execute | 1 | 0 | 1 | 0 |
 | group_Execute | 1 | 0 | 1 | 0 |
 | groups_Execute | 1 | 0 | 1 | 0 |
+| member | 0 | 1 | 1 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 42 | 1 | 43 | 0 |
+| other | 41 | 1 | 42 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **56** | **4** | **60** | **0** |
+| **合计** | **55** | **5** | **60** | **0** |
 
 ## 二、按域操作清单
 
@@ -91,6 +92,10 @@
 | | ⤷ `pageIndex`: number | | | | | |
 | | ⤷ `pageSize`: number | | | | | |
 | | ⤷ `totalCount`: number | | | | | |
+| member | `removeMember` | Mutation |  | { request?: RemoveMemberReqDtoInput | null } | `RemoveMemberResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `removed`: boolean | | | | | |
 | myTasks_Execute | `listMyTasks_Execute` | Query |  | { request?: ListMyTasksReqDtoInput | null } | `ListMyTasksResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -176,15 +181,11 @@
 | | ⤷ `importId`: number | | | | | |
 | | ⤷ `status`: string | null | | | | | |
 | | ⤷ `sourceCount`: number | | | | | |
-| other | `manageGroupMembers_Execute` | Query |  | { request?: GetMembersReqDtoInput | null } | `GroupDetailResDto` | ✅ |
+| other | `members` | Query |  | { request?: GetMembersReqDtoInput | null } | `GroupDetailResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `groupId`: number | | | | | |
 | | ⤷ `members`: `MemberItemDto` | | | | | |
-| other | `execute_ByRequest` | Query |  | { request?: RemoveMemberReqDtoInput | null } | `RemoveMemberResDto` | ✅ |
-| | ⤷ `success`: boolean | | | | | |
-| | ⤷ `errorCode`: string | null | | | | | |
-| | ⤷ `removed`: boolean | | | | | |
 | other | `setRankEnabled_Execute` | Query |  | { request?: SetRankEnabledReqDtoInput | null } | `SetRankEnabledResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |

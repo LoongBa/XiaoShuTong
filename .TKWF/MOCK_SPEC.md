@@ -34,7 +34,7 @@
 | `createStudySession_Execute` | Query | `createStudySessionResDtos` |  |
 | `createTask_Execute` | Query | `createTaskResDtos` |  |
 | `dashboardReport_Execute` | Query | `getDashboardReportResDtos` |  |
-| `execute_ByRequest` | Query | `removeMemberResDtos` |  |
+| `removeMember` | Mutation | `removeMemberResDtos` |  |
 | `exportRosterCsv_Execute` | Query | `exportRosterCsvResDtos` |  |
 | `generateInviteCodes_Execute` | Query | `generateInviteCodesResDtos` |  |
 | `heatmap_Execute` | Query | `getHeatmapResDtos` |  |
@@ -54,7 +54,7 @@
 | `loginByContext` | Mutation | `loginPayloads` |  |
 | `loginByPassword` | Mutation | `loginPayloads` |  |
 | `logout` | Mutation | `loginPayloads` |  |
-| `manageGroupMembers_Execute` | Query | `groupDetailResDtos` |  |
+| `members` | Query | `groupDetailResDtos` |  |
 | `memoryStates_Execute` | Query | `getMemoryStatesResDtos` |  |
 | `myRanking_Execute` | Query | `getMyRankingResDtos` |  |
 | `ownerDashboard_Execute` | Query | `getOwnerDashboardResDtos` |  |
