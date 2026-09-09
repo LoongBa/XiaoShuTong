@@ -45,7 +45,8 @@ internal class CreateBankService(DomainUser<XiaoShuTongUserInfo> user)
             return new CreateBankResDto { Success = false, ErrorCode = BankErrorCodes.ParamInvalid };
 
         // 生成业务键（BankId）+ 内容权威路径
-        var bankId = $"{subject.ToString().ToLowerInvariant()}-{ownerId}-{Guid.NewGuid():N}"[..Math.Min(48, 64)];
+        var rawBankId = $"{subject.ToString().ToLowerInvariant()}-{ownerId}-{Guid.NewGuid():N}";
+        var bankId = rawBankId.Length > 48 ? rawBankId[..48] : rawBankId;
         var jsonPath = $"bank.{bankId}.json";
 
         var bank = await BanksDs.EntityCreateAsync(new Banks
