@@ -1,8 +1,9 @@
 # SG2 Resolver 字段命名缺陷报告 — 待框架组解决
 
-> **状态**：🔴 Open（待框架组评估解决）
+> **状态**：🟡 已接受为框架内置提示（消歧已生效）；框架组反馈已记录（见 §四·决议）
 > **报告方**：XiaoShuTong 项目（消费者）
 > **日期**：2026-09-08
+> **决议日期**：2026-09-09
 > **框架模块**：`_TKWF/_Domain.SG/ApiService.SG/ApiServiceGenerator.Resolvers.cs`
 > **项目证据**：`XiaoShuTong.WebApi/schema.graphql`（45.9KB）· `XiaoShuTong.WebH5/src/gql/ts-client.g.ts`
 
@@ -53,6 +54,22 @@ descriptor.Name(resolverMethodName + ...);      // 直接作为 GraphQL 字段�
 | **C** | SG2 检测 resolver 字段重名时**告警/报错**（而非静默丢弃） | 最小改动，先防"悄然丢失" |
 
 > 建议组合：**C 先行（快速止损）+ A 或 B 根治**。
+
+### 决议（2026-09-09，消费者接受 + 框架组反馈）
+
+XiaoShuTong 侧定案：**保留统一 `ExecuteAsync` 服务约定，接受 WARN004 为框架内置提示**（SG2 已自动消歧为 `{服务短名}_Execute`，schema 与 ts-client 契约已再生成且一致，行为正确），不执行 53 个服务全量改名（破坏性 API 变更）。
+
+**框架组反馈（2026-09-09）**：
+
+> WARN004 已是 Warning 级且去重后只报一次，噪音可控，**可不加开关**。
+
+消费者侧核实结论（XiaoShuTong 对部署 refs 4.9.113 实测）：
+
+- ✅ **采纳"不加开关"建议**：WARN004 当前即 Warning 级、整桶只报一次 → 无需任何开关属性，XiaoShuTong 不加标注、不加 NoWarn。
+- ⚠️ 框架组反馈中提到的 `[TKWFSeverity(TKWFDiagnostic.WARN004, EnumSeverity.Hidden)]` 标注方式**当前部署版本不可用**（供框架组参考，非本项目实施项）：
+  - `TKWFDiagnostic` 枚举（`_TKWF\_Framework\Abstractions\Extensions\TKWFDiagnostic.cs`）当前仅含 `DI001`/`TKWF0034`，**无 WARN004**；
+  - `EnumSeverity` 仅含 `Warning`/`Error`，**无 `Hidden`**；
+  - 机制差异：`TKWFSeverity` 是**运行时 Guard** 严重级别覆盖（标注于 `ExtensionInitializer`/`DomainHostInitializerBase`），而 WARN004 是 **SG2 编译期诊断**（`Guard.cs` `Warning(SgId.Sg2a, "WARN004", ...)` 发射）——如需支持该标注方式，框架需将编译期诊断接入同一 severity 覆盖管线。
 
 ---
 

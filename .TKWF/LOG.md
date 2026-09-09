@@ -117,6 +117,10 @@
 > - 建议组合：C（重名告警止损）+ A/B（服务名前缀 / 别名注解根治）
 > - 项目侧缓解：REST 通道不受影响（54 控制器全可达），UI 暂走 REST
 
+> **2026-09-09 决议更新**：框架已修复为 SG2 自动消歧（`{服务短名}_Execute`）+ 发射 WARN004 提示（不再静默丢服务），schema 与 ts-client 契约已再生成且一致。消费者定案：**保留统一 `ExecuteAsync` 约定，接受 WARN004 为框架内置提示**，不执行 53 服务全量改名（破坏性 API 变更）。
+> **2026-09-09 框架组反馈**：WARN004 已 Warning 级且去重只报一次，噪音可控，**可不加开关** → 采纳，本项目不加标注、不加 NoWarn。
+> ⚠️ 核实备忘：框架组提及的 `[TKWFSeverity(TKWFDiagnostic.WARN004, EnumSeverity.Hidden)]` 标注方式在部署 refs 4.9.113 **不可用**（`TKWFDiagnostic` 枚举无 WARN004、`EnumSeverity` 无 Hidden，且 `TKWFSeverity` 为运行时 Guard 机制、WARN004 为 SG2 编译期诊断——机制不匹配）。详见报告 §四·决议。
+
 **避坑指南**：
 > - **统一 `ExecuteAsync` 命名 = GraphQL 层单点风险**：SG2 resolver 字段冲突会静默丢服务且 schema export 不报错——**必须核对 schema 字段数 vs Service 数**（本项目 4+4 vs 57）
 > - 验证方法：`Select-String "type Query/Mutation"` 比对字段数；或 `gen-ts-client` 输出 `Services: N` 是否接近控制器数
