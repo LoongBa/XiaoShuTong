@@ -10,9 +10,9 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
-  <!-- NuGet 模式（默认）：TKWF 框架包 -->
+  <!-- NuGet 模式（默认）：TKWF 框架包（版本由 Directory.Packages.props CPM 集中管理，禁止硬编码版本号） -->
   <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
-    <PackageReference Include="TKWF.Domain.Testing.xUnit" Version="4.6.4" />
+    <PackageReference Include="TKWF.Domain.Testing.xUnit" />
   </ItemGroup>
 
   <!-- DLL 模式：TKWFRole=Client（注入 TKWF.Domain/FreeSql）+ TKWFTest=true（注入测试基架 DLL）

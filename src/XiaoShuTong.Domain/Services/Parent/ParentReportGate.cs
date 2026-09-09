@@ -11,7 +11,12 @@ internal static class ParentReportGate
     /// <summary>
     /// 校验家长-孩子报告访问权益
     /// </summary>
+    /// <param name="relationsDs">家长-孩子关系数据服务（授权链校验）</param>
+    /// <param name="subscriptionsDs">订阅数据服务（订阅权益校验）</param>
+    /// <param name="parentId">家长用户 Id</param>
+    /// <param name="studentId">孩子用户 Id</param>
     /// <param name="allowPreview">true = 无订阅返回预览模式（dashboard）；false = 无订阅直接拒绝</param>
+    /// <param name="ct">取消令牌</param>
     /// <returns>Allowed=false 时 ErrorCode 为 8002/8003/8001</returns>
     public static async Task<(bool Allowed, string? ErrorCode, bool Locked, Subscriptions? Subscription)> CheckAsync(
         ParentStudentRelationsDataService relationsDs,

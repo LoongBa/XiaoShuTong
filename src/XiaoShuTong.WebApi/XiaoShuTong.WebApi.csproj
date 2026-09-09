@@ -43,18 +43,31 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
-    <Analyzer Include="$(TKWFRoot)build\refs\TKWF.Domain.ApiService.SG.dll" />
-    <Analyzer Include="$(TKWFRoot)build\refs\TKWF.CodeGeneration.Abstractions.dll" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.SG\ApiService.SG\TKWF.Domain.ApiService.SG.csproj" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.Infrastructure\Web\TKWF.Domain.Web.csproj" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.ApiService\HotChocolate\TKWF.Domain.ApiService.HotChocolate.csproj" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.ApiService\MinimalApi\TKWF.Domain.ApiService.MinimalApi.csproj" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.SG\CodeGeneration.Abstractions\TKWF.CodeGeneration.Abstractions.csproj" />
+    <Analyzer Include="$(TKWFDeployPath)build\refs\TKWF.Domain.ApiService.SG.dll" />
+    <Analyzer Include="$(TKWFDeployPath)build\refs\TKWF.CodeGeneration.Abstractions.dll" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.SG\ApiService.SG\TKWF.Domain.ApiService.SG.csproj" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Infrastructure\Web\TKWF.Domain.Web.csproj" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.ApiService\HotChocolate\TKWF.Domain.ApiService.HotChocolate.csproj" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.ApiService\MinimalApi\TKWF.Domain.ApiService.MinimalApi.csproj" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.SG\CodeGeneration.Abstractions\TKWF.CodeGeneration.Abstractions.csproj" />
   </ItemGroup>
 
   <!-- 消费者项目引用：双模式共用 -->
   <ItemGroup>
     <ProjectReference Include="..\..\src\XiaoShuTong.Domain\XiaoShuTong.Domain.csproj" />
   </ItemGroup>
+
+  <!--
+    NU1510：TKWF.Domain.targets 为所有 Dll 模式项目统一注入 System.Threading.RateLimiting 直接引用
+    （类库 Dll 引用不传递 NuGet 依赖所需）。但 Web SDK 项目（Microsoft.NET.Sdk.Web）的共享框架
+    Microsoft.AspNetCore.App 已内置该程序集，直接引用与之重复 → NU1510。此处显式移除，
+    编译期/运行期类型仍由共享框架提供（对齐框架注释"Web SDK 项目会通过框架隐式引用同一版本"）。
+    注意：注入发生在 Directory.Build.targets（csproj 之后），故须在 NuGet 收集引用前移除。
+  -->
+  <Target Name="_RemoveRedundantRateLimiting" BeforeTargets="CollectPackageReferences;_LoadRestoreGraphEntryPoints">
+    <ItemGroup>
+      <PackageReference Remove="System.Threading.RateLimiting" />
+    </ItemGroup>
+  </Target>
 
 </Project>

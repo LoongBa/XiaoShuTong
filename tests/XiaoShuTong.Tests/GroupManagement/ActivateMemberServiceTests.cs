@@ -215,7 +215,7 @@ public class ActivateMemberServiceTests(XiaoShuTongDomainTestFixture fixture, IT
         var second = await svc.ExecuteAsync(new ActivateMemberReqDto { OneTimeCode = code2, PhoneLast4 = "8008" }, TestContext.Current.CancellationToken);
         Assert.False(second.Success);
         Assert.Equal(GroupErrorCodes.AlreadyInGroup, second.ErrorCode);
-        Assert.Equal(userId, 61007);
+        Assert.Equal(61007, userId);
     }
 
     /// <summary>BR-05：内测开关关闭 → BETA_NOT_OPEN</summary>

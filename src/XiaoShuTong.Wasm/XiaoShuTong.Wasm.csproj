@@ -5,10 +5,11 @@
     更新时请与该参考项目对齐。
   -->
 
-  <!-- TKWFRoot fallback（Directory.Build.props 未覆盖时使用） -->
+  <!-- 路径回退（Directory.Build.props 未覆盖时使用）：
+       TKWFSourceRoot = 源码根（相对路径）；TKWFDeployPath = 部署根（环境变量规范化） -->
   <PropertyGroup>
-    <TKWFRoot Condition="'$(TKWF_FRAMEWORK_PATH)' != ''">$([MSBuild]::EnsureTrailingSlash('$(TKWF_FRAMEWORK_PATH)'))</TKWFRoot>
-    <TKWFRoot Condition="'$(TKWFRoot)' == ''">$([MSBuild]::EnsureTrailingSlash('$(MSBuildThisFileDirectory)..\..\..\_TKWF\'))</TKWFRoot>
+    <TKWFSourceRoot>$([MSBuild]::EnsureTrailingSlash('$(MSBuildThisFileDirectory)..\..\..\_TKWF\'))</TKWFSourceRoot>
+    <TKWFDeployPath Condition="'$(TKWFDeployPath)' == ''">$([MSBuild]::EnsureTrailingSlash('$(TKWFDeployPath)'))</TKWFDeployPath>
     <TkwfReferenceMode>Dll</TkwfReferenceMode>
   </PropertyGroup>
   <!-- TKWF.Domain.props 由 Directory.Build.props 统一导入，此处不重复 Import -->
@@ -40,23 +41,21 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
-    <ProjectReference Include="$(TKWFRoot)_Domain.Infrastructure\Blazor\TKWF.Domain.Blazor.csproj" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.SG\ApiService.SG\TKWF.Domain.ApiService.SG.csproj" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.Api\ApiClient\TKWF.Domain.ApiClient.csproj" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.Api\ApiClient.GraphQL\TKWF.Domain.ApiClient.GraphQL.csproj" />
-    <ProjectReference Include="$(TKWFRoot)_Domain.SG\CodeGeneration.Core\TKWF.CodeGeneration.Core.csproj" />
-    <Analyzer Include="$(TKWFRoot)build\refs\TKWF.Domain.ApiService.SG.dll" />
-    <Analyzer Include="$(TKWFRoot)build\refs\TKWF.CodeGeneration.Abstractions.dll" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Infrastructure\Blazor\TKWF.Domain.Blazor.csproj" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.SG\ApiService.SG\TKWF.Domain.ApiService.SG.csproj" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Api\ApiClient\TKWF.Domain.ApiClient.csproj" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Api\ApiClient.GraphQL\TKWF.Domain.ApiClient.GraphQL.csproj" />
+    <ProjectReference Include="$(TKWFSourceRoot)_Domain.SG\CodeGeneration.Core\TKWF.CodeGeneration.Core.csproj" />
+    <Analyzer Include="$(TKWFDeployPath)build\refs\TKWF.Domain.ApiService.SG.dll" />
+    <Analyzer Include="$(TKWFDeployPath)build\refs\TKWF.CodeGeneration.Abstractions.dll" />
   </ItemGroup>
 
-  <!-- DLL 模式：硬编码路径（BlazorWebAssembly SDK 不导入 Directory.Build.props） -->
+  <!-- DLL 模式：核心框架引用由 TKWF.Domain.targets 按 TKWFRole=ApiClient 自动注入（路径 $(TKWFDeployPath)build\refs\），
+       此处仅补充自动注入不包含的 Blazor WASM 宿主 DLL（ConfigWasmClient/UseWasmAuth 扩展所在）。
+       框架引用路径统一使用 $(TKWFDeployPath)build\refs\（Agents_Use_TKWF.md §5），不使用本地 refs/。 -->
   <ItemGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
-    <Reference Include="TKWF.Domain" HintPath="$(RefsDir)TKWF.Domain.dll" />
-    <Reference Include="TKWF.Domain.Blazor.Wasm" HintPath="$(RefsDir)TKWF.Domain.Blazor.Wasm.dll" />
-    <Reference Include="TKWF.Domain.Blazor.Abstractions" HintPath="$(RefsDir)TKWF.Domain.Blazor.Abstractions.dll" />
-    <Reference Include="TKWF.Domain.ApiClient" HintPath="$(RefsDir)TKWF.Domain.ApiClient.dll" />
-    <Reference Include="TKWF.Utility" HintPath="$(RefsDir)TKWF.Utility.dll" />
-    <Reference Include="TKWF.Core" HintPath="$(RefsDir)TKWF.Core.dll" />
+    <Reference Include="TKWF.Domain.Blazor.Wasm" HintPath="$(TKWFDeployPath)build\refs\TKWF.Domain.Blazor.Wasm.dll" />
+    <Reference Include="TKWF.Domain.Blazor.Abstractions" HintPath="$(TKWFDeployPath)build\refs\TKWF.Domain.Blazor.Abstractions.dll" />
   </ItemGroup>
 
   <!-- 引用 Domain 项目中的 UserInfo 类型和 WebApi 元数据 -->

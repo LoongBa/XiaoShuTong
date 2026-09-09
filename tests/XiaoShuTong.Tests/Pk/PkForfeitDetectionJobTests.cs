@@ -48,6 +48,7 @@ public class PkForfeitDetectionJobTests(XiaoShuTongDomainTestFixture fixture, IT
 
         var matchesDs = User.Use<PkMatchesDataService>();
         var updated = await matchesDs.EntityGetAsync(x => x.Id == match.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(PkMatchStatus.Finished, updated.Status);
         Assert.Equal(PkFinishReason.Forfeit, updated.FinishReason);
         Assert.Equal(onlineId, updated.WinnerId); // 对方获胜
@@ -65,6 +66,7 @@ public class PkForfeitDetectionJobTests(XiaoShuTongDomainTestFixture fixture, IT
 
         var matchesDs = User.Use<PkMatchesDataService>();
         var updated = await matchesDs.EntityGetAsync(x => x.Id == match.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(PkMatchStatus.Ongoing, updated.Status); // 未判弃权
     }
 
@@ -82,6 +84,7 @@ public class PkForfeitDetectionJobTests(XiaoShuTongDomainTestFixture fixture, IT
 
         var matchesDs = User.Use<PkMatchesDataService>();
         var updated = await matchesDs.EntityGetAsync(x => x.Id == match.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(PkMatchStatus.Ongoing, updated.Status); // 重连后不判弃权
         Assert.Null(updated.WinnerId);
     }

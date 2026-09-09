@@ -76,7 +76,7 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
 
         Assert.True(result.Success);
         Assert.InRange(result.Hint.Length, 1, 20);
-        Assert.False(result.Hint.Contains("星汉灿烂")); // 严禁直接给答案
+        Assert.DoesNotContain("星汉灿烂", result.Hint); // 严禁直接给答案
         Assert.Equal("memory-hook", result.HintSource);
     }
 

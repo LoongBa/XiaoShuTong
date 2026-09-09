@@ -11,7 +11,7 @@ namespace XiaoShuTong.Services.Judging;
 /// BR-32 required 必中要点未命中 → 强制 partial | BR-33 aliases 组内任一命中即该组命中
 /// BR-34 LLM 超时/失败 → 降级本地规则 + 降级标记 | BR-35 阈值 ≥0.85→Correct / 0.5~0.85→Partial / &lt;0.5→Wrong | BR-36 统一五键契约
 /// 生产：LLM 供应商可插拔（Prompt 矩阵五层）；切片验证：LLM 路径以本地规则降级实现。
-/// </summary>
+/// </remarks>
 internal class JudgingEngineService(DomainUser<XiaoShuTongUserInfo> user)
     : DomainServiceBase<XiaoShuTongUserInfo>(user)
 {

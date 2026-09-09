@@ -102,12 +102,14 @@ public class ActivateSubscriptionServiceTests(XiaoShuTongDomainTestFixture fixtu
 
         var ds = User.Use<SubscriptionsDataService>();
         var before = await ds.EntityGetAsync(x => x.UId == activated.SubscriptionUid, TestContext.Current.CancellationToken);
+        Assert.NotNull(before);
 
         var svc = User.Use<CancelSubscriptionService>();
         var result = await svc.ExecuteAsync(new CancelSubscriptionReqDto { SubscriptionUid = activated.SubscriptionUid }, TestContext.Current.CancellationToken);
 
         Assert.True(result.Success);
         var after = await ds.EntityGetAsync(x => x.UId == activated.SubscriptionUid, TestContext.Current.CancellationToken);
+        Assert.NotNull(after);
         Assert.Equal(SubscriptionStatus.Cancelled, after.Status);
         Assert.Equal(before.PeriodEndAt, after.PeriodEndAt); // BR-14：权益保留至周期末
     }

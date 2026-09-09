@@ -89,6 +89,7 @@ public class JoinPkMatchServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
 
         var matchesDs = User.Use<PkMatchesDataService>();
         var updated = await matchesDs.EntityGetAsync(x => x.Id == match.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(PkMatchStatus.Ongoing, updated.Status);
     }
 

@@ -53,6 +53,7 @@ public class AcceptBuddyInviteServiceTests(XiaoShuTongDomainTestFixture fixture,
 
         var buddiesDs = User.Use<StudyBuddiesDataService>();
         var updated = await buddiesDs.EntityGetAsync(x => x.Id == invite.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(BuddyStatus.Accepted, updated.Status);
         Assert.NotNull(updated.AcceptedAt);
     }
@@ -148,6 +149,7 @@ public class AcceptBuddyInviteServiceTests(XiaoShuTongDomainTestFixture fixture,
         Assert.True(result.Success);
         var buddiesDs = User.Use<StudyBuddiesDataService>();
         var updated = await buddiesDs.EntityGetAsync(x => x.Id == invite.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(BuddyStatus.Rejected, updated.Status);
     }
 

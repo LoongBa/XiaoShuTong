@@ -110,7 +110,7 @@ public class ListBanksServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOu
         var result = await svc.ExecuteAsync(new ListBanksReqDto { PageSize = 50 }, TestContext.Current.CancellationToken);
 
         Assert.True(result.Success);
-        var ids = result.Items.Select(i => i.Bank.BankId).ToList();
+        var ids = result.Items.Select(i => i.Bank?.BankId).ToList();
         Assert.Contains("bank-pub-31004", ids);   // 公开可见
         Assert.Contains("bank-mine-31004", ids);  // 自己私域可见
         Assert.DoesNotContain("bank-other-31004", ids); // 他人私域不可见
@@ -129,9 +129,9 @@ public class ListBanksServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOu
         var result = await svc.ExecuteAsync(new ListBanksReqDto { Subject = "Chinese" }, TestContext.Current.CancellationToken);
 
         Assert.True(result.Success);
-        Assert.All(result.Items, i => Assert.Equal("Chinese", i.Bank.Subject.ToString())); // 全部为中文
-        Assert.Contains(result.Items, i => i.Bank.BankId == "bank-ch-31005");
-        var mine = result.Items.First(i => i.Bank.BankId == "bank-ch-31005");
+        Assert.All(result.Items, i => Assert.Equal("Chinese", i.Bank?.Subject.ToString())); // 全部为中文
+        Assert.Contains(result.Items, i => i.Bank?.BankId == "bank-ch-31005");
+        var mine = result.Items.First(i => i.Bank?.BankId == "bank-ch-31005");
         Assert.Equal(2, mine.QuestionCount);
     }
 }

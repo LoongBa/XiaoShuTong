@@ -163,7 +163,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.True(result.Success);
         Assert.Equal("NotMastered", result.PreState);
         Assert.Equal("Fuzzy", result.PostState);
-        Assert.NotNull(result.NextReviewAt);
+        Assert.NotEqual(default, result.NextReviewAt);
     }
 
     /// <summary>BR-11：△ 独立答对 → ○</summary>
@@ -219,6 +219,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
 
         var statesDs = User.Use<MemoryStatesDataService>();
         var state = await statesDs.EntityGetAsync(x => x.UserId == userId && x.QuestionId == "Q-42014", TestContext.Current.CancellationToken);
+        Assert.NotNull(state);
         Assert.Equal(0, state.ConsecutiveCorrect);
     }
 
@@ -265,6 +266,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
 
         var statesDs = User.Use<MemoryStatesDataService>();
         var state = await statesDs.EntityGetAsync(x => x.UserId == userId && x.QuestionId == "Q-42016", TestContext.Current.CancellationToken);
+        Assert.NotNull(state);
         Assert.Equal(MemoryState.Mastered, state.State); // 状态未迁移
     }
 

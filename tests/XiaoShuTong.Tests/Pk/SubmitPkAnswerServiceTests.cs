@@ -111,11 +111,13 @@ public class SubmitPkAnswerServiceTests(XiaoShuTongDomainTestFixture fixture, IT
 
         var playersDs = User.Use<PkPlayersDataService>();
         var me = await playersDs.EntityGetAsync(x => x.MatchId == match.Id && x.UserId == meId, TestContext.Current.CancellationToken);
+        Assert.NotNull(me);
         Assert.Equal(10, me.Score);
 
         // 末题答完 → 结算（对手 0 分 → 我方胜）
         var matchesDs = User.Use<PkMatchesDataService>();
         var updated = await matchesDs.EntityGetAsync(x => x.Id == match.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(PkMatchStatus.Finished, updated.Status);
         Assert.Equal(meId, updated.WinnerId);
         Assert.Equal(PkFinishReason.Score, updated.FinishReason);

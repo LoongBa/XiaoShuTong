@@ -1,21 +1,36 @@
 <Project>
 
   <PropertyGroup>
-    <TKWFRoot Condition="'$(TKWF_FRAMEWORK_PATH)' != ''">$([MSBuild]::EnsureTrailingSlash('$(TKWF_FRAMEWORK_PATH)'))</TKWFRoot>
-    <TKWFRoot Condition="'$(TKWFRoot)' == ''">$([MSBuild]::EnsureTrailingSlash('$(MSBuildThisFileDirectory)..\..\_TKWF\'))</TKWFRoot>
+    <!-- TKWFSourceRoot：框架源码仓库根（开发环境 git 内，本项目位于 F:\LoongBa_Git\_TKWF）。
+         Project 模式 ProjectReference / props·targets 导入使用。 -->
+    <TKWFSourceRoot>$([MSBuild]::EnsureTrailingSlash('$(MSBuildThisFileDirectory)..\_TKWF\'))</TKWFSourceRoot>
 
-    <!-- MinVer：从 git tag 自动推导版本号 -->
-    <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+    <!-- TKWFDeployPath 规范化属性（带尾斜杠）：框架部署根（Dll 模式引用 $(TKWFDeployPath)build\refs\）。
+         从环境变量 TKWFDeployPath 规范化而来（Agents_Use_TKWF.md §5），
+         不得硬编码源码树路径或本地 refs\。 -->
+    <TKWFDeployPath>$([MSBuild]::EnsureTrailingSlash('$(TKWFDeployPath)'))</TKWFDeployPath>
+
+    <!-- MinVer：从 git tag 自动推导版本号（MinVerDefaultPreReleaseIdentifiers 替代已废弃的 MinVerDefaultPreReleasePhase，对齐 DMP-Lite） -->
+    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
     <MinVerTagPrefix>v</MinVerTagPrefix>
   </PropertyGroup>
 
-  <Import Project="$(TKWFRoot)build\TKWF.Domain.props"
-          Condition="Exists('$(TKWFRoot)build\TKWF.Domain.props')" />
+  <Import Project="$(TKWFSourceRoot)build\TKWF.Domain.props"
+          Condition="Exists('$(TKWFSourceRoot)build\TKWF.Domain.props')" />
 
   <PropertyGroup>
     <TkwfReferenceMode>Dll</TkwfReferenceMode>
-    <RefsDir>$(MSBuildThisFileDirectory)refs\</RefsDir>
+    <RefsDir>$(TKWFDeployPath)build\refs\</RefsDir>
   </PropertyGroup>
+
+  <!-- Dll 模式强依赖 TKWFDeployPath 环境变量；缺失时提前报清晰错误，
+       避免出现 "build\refs\TKWF.Core.dll" 相对路径 CS0006/MSB3245 的误判。
+       NuGet 模式（CI）不依赖该变量，不受影响。 -->
+  <Target Name="_TKWF_ValidateDeployPath"
+          BeforeTargets="ResolveAssemblyReferences"
+          Condition="'$(TkwfReferenceMode)' == 'Dll' And '$(TKWFDeployPath)' == ''">
+    <Error Text="[TKWF] Dll 模式需要环境变量 TKWFDeployPath（指向框架部署包根目录，当前值为 F:\TKWF_FRAMEWORK_PATH）。检测到该变量为空——若新开终端仍为空，请执行 `setx TKWFDeployPath F:\TKWF_FRAMEWORK_PATH` 后重开终端。" />
+  </Target>
 
   <!-- MinVer 编译期版本推导，版本由 Directory.Packages.props 集中管理 -->
   <ItemGroup>

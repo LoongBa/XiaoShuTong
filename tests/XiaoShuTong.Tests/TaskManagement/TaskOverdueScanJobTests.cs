@@ -112,6 +112,7 @@ public class TaskOverdueScanJobTests(XiaoShuTongDomainTestFixture fixture, ITest
         var ds = User.Use<TaskAssignmentsDataService>();
         var assignment = await ds.EntityGetAsync(
             x => x.TaskId == task.Id && x.UserId == 25031, TestContext.Current.CancellationToken);
+        Assert.NotNull(assignment);
         Assert.Equal(AssignmentStatus.Overdue, assignment.Status); // 仍为 Overdue，无副作用
     }
 }

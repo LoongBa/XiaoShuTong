@@ -98,6 +98,7 @@ public class GenerateInviteCodesServiceTests(XiaoShuTongDomainTestFixture fixtur
         // 批次已置 Exported（BR-23）
         var importsDs = User.Use<RosterImportsDataService>();
         var updated = await importsDs.EntityGetAsync(x => x.Id == batch.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(RosterImportStatus.Exported, updated.Status);
     }
 

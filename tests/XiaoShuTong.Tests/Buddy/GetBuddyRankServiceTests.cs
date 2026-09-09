@@ -114,6 +114,7 @@ public class GetBuddyRankServiceTests(XiaoShuTongDomainTestFixture fixture, ITes
         Assert.True(result.Success);
         var buddiesDs = User.Use<StudyBuddiesDataService>();
         var updated = await buddiesDs.EntityGetAsync(x => x.Id == buddy.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updated);
         Assert.Equal(BuddyStatus.Removed, updated.Status); // 状态置 Removed，行保留
     }
 

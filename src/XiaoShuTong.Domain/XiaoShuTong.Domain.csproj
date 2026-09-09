@@ -18,11 +18,11 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
-  <!-- NuGet 模式（默认）：TKWF 框架包 -->
+  <!-- NuGet 模式（默认）：TKWF 框架包（版本由 Directory.Packages.props CPM 集中管理，禁止硬编码版本号） -->
   <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
-    <PackageReference Include="TKWF.Domain" Version="4.6.4" />
-    <PackageReference Include="TKWF.Domain.FreeSql" Version="4.6.4" />
-    <PackageReference Include="TKWF.CodeGeneration" Version="4.6.4">
+    <PackageReference Include="TKWF.Domain" />
+    <PackageReference Include="TKWF.Domain.FreeSql" />
+    <PackageReference Include="TKWF.CodeGeneration">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -55,12 +55,12 @@
        AfterBuild: auto-run xCodeGen 知识文档生成
        ════════════════════════════════════════════ -->
   <PropertyGroup>
-    <_XCG_CliProject Condition="'$(_XCG_CliProject)' == ''">$(TKWFRoot)_xCodeGen\xCodeGen.Cli\xCodeGen.Cli.csproj</_XCG_CliProject>
+    <_XCG_CliProject Condition="'$(_XCG_CliProject)' == ''">$(TKWFSourceRoot)_xCodeGen\xCodeGen.Cli\xCodeGen.Cli.csproj</_XCG_CliProject>
     <!-- 双模式：优先部署包 xCodeGen\（V4.9.16 起，Release 单文件 / Debug 常规输出），
          缺失时回退源码 bin（_XCG_EnsureCli 会构建） -->
-    <_XCG_CliExe_Deploy Condition="'$(_XCG_CliExe_Deploy)' == ''">$(TKWFRoot)xCodeGen\xCodeGen.Cli.exe</_XCG_CliExe_Deploy>
+    <_XCG_CliExe_Deploy Condition="'$(_XCG_CliExe_Deploy)' == ''">$(TKWFSourceRoot)xCodeGen\xCodeGen.Cli.exe</_XCG_CliExe_Deploy>
     <_XCG_CliExe Condition="Exists('$(_XCG_CliExe_Deploy)')">$(_XCG_CliExe_Deploy)</_XCG_CliExe>
-    <_XCG_CliExe Condition="'$(_XCG_CliExe)' == ''">$(TKWFRoot)_xCodeGen\xCodeGen.Cli\bin\Debug\net10.0\xCodeGen.Cli.exe</_XCG_CliExe>
+    <_XCG_CliExe Condition="'$(_XCG_CliExe)' == ''">$(TKWFSourceRoot)_xCodeGen\xCodeGen.Cli\bin\Debug\net10.0\xCodeGen.Cli.exe</_XCG_CliExe>
     <_XCG_WorkDir>$(MSBuildThisFileDirectory).xCodeGen</_XCG_WorkDir>
     <!-- V4.9.105+：gen 无 -j 时从 exe 目录（部署包 xCodeGen\）找默认配置而非工作目录，
          须显式 _XCG_ConfigPath 触发框架 targets 模式 B（gen -j <config>）。
