@@ -107,7 +107,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | 主键决策 | 系统内部 `long Id`；外部关联/跨系统 `Uid`（uuid 业务键），实体表补 Uid 列 |
 | API 命名 | JSON 字段 camelCase（D03 原则 #6）；SNAKE_CASE 仅错误码语义名 |
 | 授权链 | 订阅/报告前应用层校验 ParentStudentRelations（8002） |
-| 框架路径 | `$env:TKWF_FRAMEWORK_PATH` |
+| 框架路径 | `$env:TKWFDeployPath` |
 
 ---
 

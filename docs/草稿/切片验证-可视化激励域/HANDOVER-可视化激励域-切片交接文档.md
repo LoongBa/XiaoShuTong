@@ -95,7 +95,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | 错误码 | 数字域码 4001（统计）+ 10xx 全局 + SNAKE_CASE 双列；4002 [Proposed] |
 | 主键决策 | 复用切片 02（内部 long + 外部 Uid） |
 | API 命名 | JSON 字段 camelCase（D03 原则 #6） |
-| 框架路径 | `$env:TKWF_FRAMEWORK_PATH` |
+| 框架路径 | `$env:TKWFDeployPath` |
 
 ---
 

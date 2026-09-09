@@ -43,11 +43,11 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 
 ## 5. TKWF 框架依赖
 
-- 框架同步：`pwsh %TKWF_FRAMEWORK_PATH%\build\build-deployment.ps1 -Destination F:\TKWF_FRAMEWORK_PATH -LinkRefs`
+- 框架同步：`pwsh %TKWFDeployPath%\build\build-deployment.ps1 -Destination F:\TKWF_FRAMEWORK_PATH -LinkRefs`
 
 增量开发路由：`.TKWF/TKWF-Rules.md`（需求分层、Skill 路由、红线）
 
-框架引用路径统一使用 `$(TKWF_FRAMEWORK_PATH)build\refs\`，不得硬编码源码树路径
+框架引用路径统一使用 `$(TKWFDeployPath)build\refs\`，不得硬编码源码树路径
 
 ## 6. TKWF 开发流程和基本规则
 
@@ -84,7 +84,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 - 计算字段（非 SQL 列）→ `[DtoField(IsComputed=true)]` 扩展 VEntity Dto，Service 赋值，不新建 POCO
 - 新建 POCO 需论证：参见 Dto最小化速查 §2 决策树（仅 2 个正当理由：Request Dto / 独立响应形状）
 
-> 详细决策树与组合模式见 `%TKWF_FRAMEWORK_PATH%\docs\G00-TKWF.Domain-领域自治框架-V4-使用指南.md` §类型生命周期与 POCO 管控。
+> 详细决策树与组合模式见 `%TKWFDeployPath%\docs\G00-TKWF.Domain-领域自治框架-V4-使用指南.md` §类型生命周期与 POCO 管控。
 
 ### 6.2 建议使用的 Skill
 
@@ -184,7 +184,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 | --------------------- | -------------------------- |
 | `.TKWF/TKWF-Rules.md` | 需求分层、Skill 路由、红线 |
 
-### 框架静态规则（`%TKWF_FRAMEWORK_PATH%/AC-Kit/guides/`）
+### 框架静态规则（`%TKWFDeployPath%/AC-Kit/guides/`）
 
 | 指南                    | 查阅时机               |
 | ----------------------- | ---------------------- |

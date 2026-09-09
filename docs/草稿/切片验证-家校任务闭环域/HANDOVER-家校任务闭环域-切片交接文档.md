@@ -98,7 +98,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | 错误码 | 数字域码 51xx（5101/5102 存量）+ 10xx 全局 + SNAKE_CASE 双列（迁移决策） |
 | 主键决策 | 系统内部 `long Id`；外部关联/跨系统 `Uid`（uuid 业务键），实体表补 Uid 列 |
 | API 命名 | JSON 字段 camelCase（D03 原则 #6 明示禁 snake_case）；SNAKE_CASE 仅错误码语义名 |
-| 框架路径 | `$env:TKWF_FRAMEWORK_PATH` |
+| 框架路径 | `$env:TKWFDeployPath` |
 
 ---
 

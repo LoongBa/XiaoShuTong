@@ -108,7 +108,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | 审计字段命名 | `CreateTime`/`UpdateTime`（存量 DDL 为 CreatedAt/UpdatedAt，需迁移） |
 | 枚举 ORM 映射 | `[Column(MapType = typeof(string))]`，PascalCase 存字符串（存量小写需迁移） |
 | 错误码 | 数字域码 52xx/50xx + SNAKE_CASE 语义名双列（迁移决策） |
-| 框架路径 | `$env:TKWF_FRAMEWORK_PATH` |
+| 框架路径 | `$env:TKWFDeployPath` |
 
 ---
 
@@ -131,11 +131,11 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 
 **确认后按所选偏好执行**；若用户未明确选择，**默认采用 B（一次性创建）+ `-Mode WebApi`**（模式确认后填入步骤 0 命令，不写死）。
 
-> **实施 skill 位置**：tkwf-entity / tkwf-service / tkwf-test 的 SKILL.md 位于 `$env:TKWF_FRAMEWORK_PATH\docs\AC-Kit\skills\{skill名}\SKILL.md`——按步骤 Skill 列加载对应 skill 执行，不得手写绕过。
+> **实施 skill 位置**：tkwf-entity / tkwf-service / tkwf-test 的 SKILL.md 位于 `$env:TKWFDeployPath\docs\AC-Kit\skills\{skill名}\SKILL.md`——按步骤 Skill 列加载对应 skill 执行，不得手写绕过。
 
 | 步骤 | 动作 | Skill / 工具 | 产出 | 完成标志 |
 |:----:|------|-------------|------|---------|
-| 0 | **按需创建解决方案**：检查 `XiaoShuTong.sln` 是否存在——不存在则运行 `$env:TKWF_FRAMEWORK_PATH\docs\AC-Kit\scripts\create-new-solution.ps1 -Name XiaoShuTong -Mode {实施偏好确认 2 的确认值}`（建议 `WebApiBlazorWasm`）；**已存在则跳过创建，直接复用** | create-new-solution.ps1 | 解决方案 + Domain/WebApi(/Wasm)/Tests 项目骨架 | `.sln` 存在 |
+| 0 | **按需创建解决方案**：检查 `XiaoShuTong.sln` 是否存在——不存在则运行 `$env:TKWFDeployPath\docs\AC-Kit\scripts\create-new-solution.ps1 -Name XiaoShuTong -Mode {实施偏好确认 2 的确认值}`（建议 `WebApiBlazorWasm`）；**已存在则跳过创建，直接复用** | create-new-solution.ps1 | 解决方案 + Domain/WebApi(/Wasm)/Tests 项目骨架 | `.sln` 存在 |
 | 1 | 读 DS01 -> 写 5 个 Entity.cs（**用真实 Entity 原子替换 FakeEntity 全家桶**：写首个 `{Entity}.cs`（标注 `[DomainGenerateCode]`）同时移除 `Entities\FakeEntity*` + `Entities\DTOs\FakeEntityDto*` + `Entities\Conditions\FakeEntity*` + `DataServices\FakeEntityDataService*`，或运行 `create-new-solution.ps1 -CleanupFakeEntity`；⚠️ 勿只删 FakeEntity.cs 留空实体状态——无 `[DomainGenerateCode]` 实体时 SG1 不生成 ProjectMetaContext，Domain 编译失败） | tkwf-entity | `Entities/Groups/*.cs` | 文件存在 |
 | 2 | `dotnet build` | - | xCodeGen 生成 DataService/DTO/Conditions | `.g.cs` 存在 |
 | 3 | 读 U01 -> 写 10 个 Service.cs | tkwf-service | `Services/Groups/*.cs` | 文件存在 |

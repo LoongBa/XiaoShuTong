@@ -128,5 +128,19 @@
          ════════════════════════════════════════════ -->
     <PackageVersion Include="MinVer" Version="6.0.0" />
     <PackageVersion Include="Microsoft.Maui.Controls" Version="10.0.90" />
+    <!-- ════════════════════════════════════════════
+         TKWF 框架（NuGet 模式：TkwfReferenceMode != Dll 时的框架包引用）
+         版本对齐本地 feed F:\LoongBa_Git\_TKWF\nupkgs 的最新固定包 4.9.113-preview.0.1
+         （含 v4.9.109+ SG2 消歧修复 + TKWF.CodeGeneration 分析器打包布局修复；
+         TKWF.CodeGeneration 4.9.111 及更早版本的 nupkg 把 SG DLL 误放 lib/，
+         NuGet 模式下 SG1 不执行——框架侧已修 csproj，随 v4.9.113 正式发布）。
+         由 CPM 集中管理避免逐 csproj 硬编码版本漂移（历史教训：曾残留 4.6.4 远古版本）。
+         更新框架版本时仅改此处。Dll 模式（TkwfReferenceMode=Dll）不走此通道，
+         引用 $(TKWFDeployPath)build\refs\ 部署 DLL（当前 4.9.113.0）。
+         ════════════════════════════════════════════ -->
+    <PackageVersion Include="TKWF.Domain" Version="4.9.113-preview.0.1" />
+    <PackageVersion Include="TKWF.Domain.FreeSql" Version="4.9.113-preview.0.1" />
+    <PackageVersion Include="TKWF.CodeGeneration" Version="4.9.113-preview.0.1" />
+    <PackageVersion Include="TKWF.Domain.Testing.xUnit" Version="4.9.113-preview.0.1" />
   </ItemGroup>
 </Project>

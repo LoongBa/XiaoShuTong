@@ -11,7 +11,7 @@
 
 | 模式 | 机制 | 适用场景 |
 |------|------|---------|
-| **Dll 模式**（默认） | `TkwfReferenceMode=Dll`，引用 `$(TKWF_FRAMEWORK_PATH)build\refs\` 已编译 DLL | 脱离 TKWF 源码，纯 DLL 编译，验证发布一致性；离线可用 |
+| **Dll 模式**（默认） | `TkwfReferenceMode=Dll`，引用 `$(TKWFDeployPath)build\refs\` 已编译 DLL | 脱离 TKWF 源码，纯 DLL 编译，验证发布一致性；离线可用 |
 | **NuGet 模式** | `PackageReference` 引用 `TKWF.*` 已发布包（TKWF 自动发布至 nuget.org） | 标准分发，随包版本演进 |
 
 > 切换方式：`Directory.Build.props` 中设 `<TkwfReferenceMode>Dll</TkwfReferenceMode>`（或 NuGet 模式改用 PackageReference）。
@@ -53,7 +53,7 @@
 
 > **执行顺序**：凡涉及业务规则的 Service 编写，**先 `tkwf-business` 物化/更新 Business.md（确保 BR 就绪），再 `tkwf-service` 实现**。`tkwf-service` Step 0 会检查 Business.md，未物化时提示先执行 `tkwf-business`。
 
-> Skill 在项目初始化时由 `create-new-solution.ps1` 从 AC-Kit `skills/` 复制到 `.agents/skills/`（3g 步骤，复数，OpenCode/Claude 规范路径），按项目替换 `{App}`（有 `$env:TKWF_FRAMEWORK_PATH` 时同时替换 `{AC-Kit}`）。增量开发从 `.agents/skills/` 加载，**不依赖 AC-Kit**。
+> Skill 在项目初始化时由 `create-new-solution.ps1` 从 AC-Kit `skills/` 复制到 `.agents/skills/`（3g 步骤，复数，OpenCode/Claude 规范路径），按项目替换 `{App}`（有 `$env:TKWFDeployPath` 时同时替换 `{AC-Kit}`）。增量开发从 `.agents/skills/` 加载，**不依赖 AC-Kit**。
 
 ---
 
@@ -67,7 +67,7 @@ XiaoShuTong\
 │   ├── TKWF-Rules.md            ← 本文件（进 git）
 │   ├── xCodeGen\                ← 生成配置（进 git）
 │   │   ├── merchant.xCodeGen.json / platform.xCodeGen.json
-│   │   （模板单源在部署包，经 %TKWF_FRAMEWORK_PATH% 引用）
+│   │   （模板单源在部署包，经 %TKWFDeployPath% 引用）
 │   ├── {域}\                    ← 域活态文档（gitignore，xCodeGen 生成）
 │   │   ├── DOMAIN_MAP.md  DataService_API.md  Domain_Api.md
 │   │   ├── Business.md   LOG.md   AGENTS.md

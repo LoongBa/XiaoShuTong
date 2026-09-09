@@ -107,7 +107,7 @@ U01 ──→ Service + [GenerateController]（手写） ← SG 自动生成接�
 | 枚举 ORM 映射 | `[Column(MapType = typeof(string))]`，PascalCase 存字符串（存量 smallint 0-3/小写/中文需迁移映射） |
 | 错误码 | 数字域码 30xx（仅 3001/3002 存量）+ SNAKE_CASE 语义名双列（迁移决策） |
 | 主键决策 | 系统内部 `long Id`；外部关联/跨系统 `Uid`（uuid 业务键），实体表补 Uid 列 |
-| 框架路径 | `$env:TKWF_FRAMEWORK_PATH` |
+| 框架路径 | `$env:TKWFDeployPath` |
 
 ---
 
