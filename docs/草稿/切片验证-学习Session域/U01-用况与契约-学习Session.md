@@ -754,7 +754,10 @@ public class GetWrongQuestionsService : DomainServiceBase<TUserInfo>
 
 | 属性 | 类型 | 说明 |
 |------|------|------|
-| Items | WrongQuestionsDto[] | QuestionId/知识点/错因(WrongCount)/LastWrongAt/Subject（DTO 最小化：复用 WrongQuestionsDto + KnowledgePoint 计算字段） |
+| Items | WrongQuestionsDto[] | QuestionId/知识点/错因(WrongCount)/LastWrongAt/Subject/题目摘要（DTO 最小化：复用 WrongQuestionsDto + KnowledgePoint/Summary 计算字段） |
+| Total | int | 总数（对齐本域分页决策 `{items,total}`） |
+
+> **2026-09-09 合并更新**：Stats 域 UC-6.4 同名服务（StatsWrongQuestions）为重复实现，已合并入本服务——Summary（题库域题目摘要）富化并入，DTO 形状对齐本域分页决策 `{items,total}`（原实现 TotalCount/PageIndex/PageSize 三件套废弃），GraphQL 契约统一为 `wrongQuestions_Execute`。
 
 #### 业务规则
 
@@ -776,6 +779,7 @@ public class GetWrongQuestionsService : DomainServiceBase<TUserInfo>
 
 ```csharp
 IWrongQuestionsDataService           // 错题查询（本域；数据由 UC-4.2 写入）
+IQuestionsDataService                // 题目摘要（跨模块，题库域 D01 §7.6；2026-09-09 合并 Stats 版后引入）
 ```
 
 #### Service 编排逻辑

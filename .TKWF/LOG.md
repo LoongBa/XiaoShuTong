@@ -28,6 +28,25 @@
 
 ---
 
+## 2026-09-09 — [Refactor] — GetWrongQuestionsService 跨域同名合并（Stats 版并入 Learning 版）
+
+**类别标签**：`Refactor`
+
+**涉及模块**：`XiaoShuTong.Services.Learning.GetWrongQuestionsService`（保留）← `XiaoShuTong.Services.Stats.GetWrongQuestionsService`（删除，含 `StatsWrongQuestions` 控制器 + `StatsGetWrongQuestionsResDto`）→ `wrongQuestions_Execute` 契约 `{items,total}`
+
+**上下文**：
+> 学习域 UC-4.7（错题本查询，API 路由 `stats/wrong-questions`，本域 Service 提供数据）与统计域 UC-6.4（查看错题本）为**同一业务的两个视图**——切片 05 实施时因同名冲突用 `ControllerName=StatsWrongQuestions` 消歧造了第二份实现，两个服务约 90% 逻辑重复（同 predicate/分页/RLS），仅计算字段不同（Learning 填 KnowledgePoint，Stats 填 Summary）。学习域 U01 分页决策本已统一 `{items,total}`，Learning 版实现却用了 TotalCount/PageIndex/PageSize 三件套（偏离文档）；Stats 版 `{Items,Total}` 反而符合。
+
+**决策/修复**：
+> 无明确独立理由 → 合并。保留 Learning 版为主服务（错题本业务根在学习域：作答产生错题 UC-4.2 BR-23 + 重练回学习域），并入 Summary 富化（`QuestionsDataService` 跨题库域，**批处理一次 IN 查询防 N+1**——原 Stats 版逐题 `EntityGetAsync`）。DTO 对齐学习域 U01 分页决策 `{items,total}`（删三件套），KnowledgePoint+Summary 双计算字段同填。GraphQL 契约 `statsWrongQuestions_Execute` 移除，统一 `wrongQuestions_Execute`。测试迁移至 `tests/Learning/GetWrongQuestionsServiceTests.cs`（BR-43~46 + 深化断言，5 用例）。
+
+**避坑指南**：
+> - **跨域同名 Service 先查 U01 是否已定义统一入口**——学习域 UC-4.7 明确"统计域路由 + 本域 Service 提供数据"，Stats 版本不该再造；跨切片并行开发时先核 `.TKWF/` 活态文档再动手。
+> - **分页契约以 U01 决策为准**：学习域已统一 `page/size → {items,total}`，实现偏离文档（三件套）是既存债；合并时顺手对齐。
+> - **跨域富化用批处理**：`EntitySelectAsync(questionIds.Contains(...))` 一次取回，避免逐条 `EntityGetAsync` 的 N+1。
+
+---
+
 ## 2026-09-08 — [Rule] — Business.md 首次物化（8 切片域）
 
 **类别标签**：`Rule`
