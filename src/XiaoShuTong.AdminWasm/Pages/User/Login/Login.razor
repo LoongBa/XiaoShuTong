@@ -1,0 +1,21 @@
+@namespace XiaoShuTong.AdminWasm.Pages.User
+@layout UserLayout
+@page "/user/login"
+
+<div class="main__b__0">
+    <div class="login">
+        <Form Model="@_Model">
+            <FormItem>
+                <AntDesign.Input Placeholder="用户名" Size="@InputSize.Large" @bind-Value="@context.UserName">
+                    <Prefix><Icon Type="user" /></Prefix>
+                </AntDesign.Input>
+            </FormItem>
+            <FormItem>
+                <AntDesign.Input Placeholder="密码" Size="@InputSize.Large" @bind-Value="@context.Password" Type="@InputType.Password">
+                    <Prefix><Icon Type="lock" /></Prefix>
+                </AntDesign.Input>
+            </FormItem>
+            <Button Type="@ButtonType.Primary" @onclick="HandleSubmit" Class="submit" Size="@ButtonSize.Large" Block>登 录</Button>
+        </Form>
+    </div>
+</div>

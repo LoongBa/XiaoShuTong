@@ -1,0 +1,12 @@
+@namespace XiaoShuTong.AdminWasm.Components
+@inject NavigationManager Navigation
+
+@code {
+    [Parameter] public string LoginUrl { get; set; } = "/user/login";
+
+    protected override void OnInitialized()
+    {
+        var returnUrl = Uri.EscapeDataString(Navigation.Uri);
+        Navigation.NavigateTo($"{LoginUrl}?returnUrl={returnUrl}", forceLoad: true);
+    }
+}

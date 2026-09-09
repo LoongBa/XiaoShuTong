@@ -20,8 +20,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ScopedCssEnabled>true</ScopedCssEnabled>
-    <RootNamespace>XiaoShuTong.Wasm</RootNamespace>
+    <RootNamespace>XiaoShuTong.AdminWasm</RootNamespace>
     <TKWFRole>ApiClient</TKWFRole>
+    <!-- 独立版本线：领域/WebH5/AdminWasm 各自独立 MinVer tag（前缀区分，项目前缀方案）。
+         覆盖 Directory.Build.props 的全局 MinVerTagPrefix=v，AdminWasm 只识别 AdminWasm-V* tag。 -->
+    <MinVerTagPrefix>AdminWasm-V</MinVerTagPrefix>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,7 +40,10 @@
     <!-- 版本在 Directory.Packages.props 中集中管理 -->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" />
     <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="AntDesign.Extensions.Localization" />
+    <PackageReference Include="AntDesign.ProLayout" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">

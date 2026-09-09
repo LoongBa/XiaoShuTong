@@ -1,0 +1,67 @@
+@namespace XiaoShuTong.AdminWasm
+@using TKW.Framework.Domain.Blazor.Wasm.Extensions
+@using XiaoShuTong.AdminWasm.Services
+@inject SessionExpiredState SessionExpiredState
+@inject DomainClientUser DomainUser
+
+<ErrorBoundary>
+    <ChildContent>
+        <Routes />
+        <AntContainer />
+        @* 会话过期模态框：登录后 OnAuthRequired 事件触发时显示 *@
+        <Modal @bind-Visible="_showSessionExpired"
+               Title="@("会话已过期")"
+               OkText="@("重新登录")"
+               CancelText="@("")"
+               OnOk="OnSessionExpiredOk"
+               MaskClosable="false"
+               Closable="false"
+               DestroyOnClose>
+            <p>您的会话已过期，请重新登录。</p>
+        </Modal>
+    </ChildContent>
+    <ErrorContent>
+        <div style="padding: 48px; text-align: center; color: #ff4d4f;">
+            <h2>Application Error</h2>
+            <p style="margin-bottom: 24px; color: #00000073;">An unexpected error occurred. Check the browser console (F12) for details.</p>
+            <button class="ant-btn ant-btn-primary" style="margin-right: 12px;" @onclick="Reload">Reload</button>
+            <button class="ant-btn" @onclick="GoToLogin">Back to Login</button>
+        </div>
+    </ErrorContent>
+</ErrorBoundary>
+
+@code {
+    private bool _showSessionExpired;
+
+    protected override void OnInitialized()
+    {
+        // 监听会话过期事件 → 显示模态框，不自动跳转
+        DomainUser.OnAuthRequired += OnAuthRequiredAsync;
+    }
+
+    private async Task OnAuthRequiredAsync()
+    {
+        SessionExpiredState.IsExpired = true;
+        _showSessionExpired = true;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private void OnSessionExpiredOk()
+    {
+        _showSessionExpired = false;
+        SessionExpiredState.IsExpired = false;
+        NavigationManager.NavigateTo("/user/login", forceLoad: true);
+    }
+
+    void Reload()
+    {
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
+    void GoToLogin()
+    {
+        NavigationManager.NavigateTo("/user/login", forceLoad: true);
+    }
+
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+}

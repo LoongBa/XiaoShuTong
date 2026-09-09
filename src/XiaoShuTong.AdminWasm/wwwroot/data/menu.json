@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/",
+    "name": "工作台",
+    "key": "dashboard",
+    "icon": "dashboard"
+  },
+  {
+    "path": "/",
+    "name": "学习",
+    "key": "study",
+    "icon": "book",
+    "children": [
+      {
+        "path": "/",
+        "name": "学习计划",
+        "key": "study.plan"
+      },
+      {
+        "path": "/",
+        "name": "学习记录",
+        "key": "study.records"
+      }
+    ]
+  },
+  {
+    "path": "/",
+    "name": "设置",
+    "key": "settings",
+    "icon": "setting"
+  }
+]

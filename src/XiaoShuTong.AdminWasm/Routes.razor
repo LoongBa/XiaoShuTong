@@ -1,0 +1,31 @@
+@namespace XiaoShuTong.AdminWasm
+@using Microsoft.AspNetCore.Components.Authorization
+@using XiaoShuTong.AdminWasm.Services
+@inject NavigationManager Navigation
+@inject SessionExpiredState SessionExpiredState
+
+@* 自定义路由组件：替代框架 AuthRoutes，NotAuthorized 区分会话过期 vs 从未登录 *@
+<Router AppAssembly="typeof(Program).Assembly">
+    <Found Context="routeData">
+        <AuthorizeRouteView RouteData="routeData"
+                            DefaultLayout="typeof(XiaoShuTong.AdminWasm.Layouts.BasicLayout)">
+            <NotAuthorized>
+                @if (!SessionExpiredState.IsExpired)
+                {
+                    @* 正常未登录访问 → 跳转登录页 *@
+                    <RedirectToLogin LoginUrl="/user/login" />
+                }
+                @* 会话过期 → 不跳转，由 App.razor 中的模态框处理 *@
+            </NotAuthorized>
+        </AuthorizeRouteView>
+    </Found>
+    <NotFound>
+        <LayoutView Layout="typeof(XiaoShuTong.AdminWasm.Layouts.UserLayout)">
+            <div style="padding: 48px; text-align: center;">
+                <h1 style="font-size: 72px; color: #1890ff; margin-bottom: 8px;">404</h1>
+                <p style="font-size: 20px; color: #00000073; margin-bottom: 24px;">Sorry, the page you visited does not exist.</p>
+                <button class="ant-btn ant-btn-primary" onclick="window.location.href='/'">Back to Home</button>
+            </div>
+        </LayoutView>
+    </NotFound>
+</Router>

@@ -1,0 +1,29 @@
+@namespace XiaoShuTong.AdminWasm.Layouts
+@inherits LayoutComponentBase
+@attribute [AllowAnonymous]
+
+<div class="container__b__0">
+    <div class="lang">
+        <!--todo: selectLang-->
+    </div>
+    <div class="content">
+        <div class="top">
+            <div class="header">
+                <a>
+                    <img alt="logo" class="logo" src="assets/logo.svg" />
+                    <span class="title">小书童</span>
+                </a>
+            </div>
+            <div class="desc">AI 学习助手 · 背书搭子</div>
+        </div>
+        @Body
+    </div>
+    <FooterView Copyright="2025 小书童" Links="Links"></FooterView>
+</div>
+
+@code
+{
+    public LinkItem[] Links { get; set; } =
+    {
+    };
+}

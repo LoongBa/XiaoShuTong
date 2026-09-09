@@ -1,5 +1,5 @@
 using XiaoShuTong;
-using XiaoShuTong.Wasm;
+using XiaoShuTong.AdminWasm;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using TKW.Framework.Domain.ApiClient;
@@ -23,15 +23,21 @@ var app = await builder.ConfigWasmClient<XiaoShuTongUserInfo>(webApiBaseUrl, opt
 })
 .RegisterServices(sp =>
 {
-    // ─── 2. 注册 HttpClient、会话服务 ───
+    // ─── 2. 注册 AntDesign ProLayout、ProSettings、国际化、HttpClient、会话服务 ───
+    sp.AddAntDesign();
+    sp.Configure<AntDesign.ProLayout.ProSettings>(
+        builder.Configuration.GetSection("ProSettings"));
+    sp.AddLocalization();                       // AntDesign.Extensions.Localization
+    sp.AddInteractiveStringLocalizer();         // AntDesign.Extensions.Localization
     sp.AddSessionAwareHttpClient("WebApi", webApiBaseUrl);
     sp.AddScoped(sp => new HttpClient
     {
         BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
     });
     sp.AddSessionServices();
+    sp.AddSingleton<XiaoShuTong.AdminWasm.Services.SessionExpiredState>();
 })
 .UseApiClient(ApiClientType.GraphQL)    // 启用 ApiClient（GraphQL）传输
-.UseWasmAuth()                          // 启用 Wasm 认证
-.BuildClient<XiaoShuTongUserInfo>();         // 构建客户端
-await app.RunAsync();                   // 运行 Wasm 应用
+.UseWasmAuth()                          // 启用 Wasm 认证（DomainClientUser + SessionKeyStore + SessionKeyHandler）
+.BuildClient<XiaoShuTongUserInfo>();    // 构建客户端
+await app.RunAsync();                   // 运行 Wasm 应用（WebAssemblyHost.RunAsync()）

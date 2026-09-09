@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="xst-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#40a9ff"/>
+      <stop offset="100%" stop-color="#1890ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#xst-grad)"/>
+  <!-- 左页 -->
+  <path d="M20 18c4-2.2 8-2.2 12 0v26c-4-2.2-8-2.2-12 0V18z" fill="#ffffff" opacity="0.88"/>
+  <!-- 右页 -->
+  <path d="M44 18c-4-2.2-8-2.2-12 0v26c4-2.2 8-2.2 12 0V18z" fill="#ffffff"/>
+  <!-- 书脊 -->
+  <path d="M32 18v26" stroke="#1890ff" stroke-width="2" stroke-linecap="round"/>
+  <!-- 页码装饰 -->
+  <circle cx="24" cy="28" r="2" fill="#1890ff" opacity="0.55"/>
+  <circle cx="40" cy="28" r="2" fill="#1890ff" opacity="0.55"/>
+  <rect x="22" y="34" width="4" height="1.6" rx="0.8" fill="#1890ff" opacity="0.55"/>
+  <rect x="38" y="34" width="4" height="1.6" rx="0.8" fill="#1890ff" opacity="0.55"/>
+</svg>

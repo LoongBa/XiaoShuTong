@@ -1,0 +1,17 @@
+@namespace XiaoShuTong.AdminWasm.Components
+@inherits AntDomComponentBase
+
+<Space Class="@ClassMapper.Class" Size="@("24")">
+    <SpaceItem>
+        @if (User.IsAuthenticated)
+        {
+            <AvatarDropdown Name="@_DisplayName"
+                            Avatar=""
+                            MenuItems="@AvatarMenuItems"
+                            OnItemSelected="HandleSelectUser" />
+        }
+    </SpaceItem>
+    <SpaceItem>
+        <SelectLang OnItemSelected="HandleSelectLang" />
+    </SpaceItem>
+</Space>
