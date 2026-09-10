@@ -131,14 +131,17 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
         return (latest.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc), items);
     }
 
+    /// <summary>最新快照日期（排序取首行，替代全量加载后取 MAX）</summary>
     private async Task<DateOnly> LatestSnapshotDateAsync(
         RankScopeType scopeType, string scopeId, string subject, RankMetricType[] metrics, CancellationToken ct)
     {
         var rows = await SnapshotsDs.EntitySelectAsync(
             x => x.ScopeType == scopeType && x.ScopeId == scopeId && x.Subject == subject
                  && metrics.Contains(x.MetricType),
-            ct: ct);
-        return rows.Count == 0 ? DateOnly.FromDateTime(DateTime.UtcNow) : rows.Max(r => r.SnapshotDate);
+            0, 1,
+            q => q.OrderByDescending(x => x.SnapshotDate),
+            ct);
+        return rows.Count == 0 ? DateOnly.FromDateTime(DateTime.UtcNow) : rows[0].SnapshotDate;
     }
 }
 

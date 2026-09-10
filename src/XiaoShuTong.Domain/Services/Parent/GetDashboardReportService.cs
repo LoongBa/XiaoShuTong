@@ -53,8 +53,10 @@ internal class GetDashboardReportService(DomainUser<XiaoShuTongUserInfo> user)
         var today = DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8));
 
         // 预览项（前 2 项，任何权益均可看）：今日任务完成 + 坚持天数
+        // 窗口：近 365 天（坚持天数理论无上限，取安全窗口兼顾查询量；streak 连续性需完整日期列表）
+        var windowStart = today.AddDays(-364);
         var dailyStats = await DailyDs.EntitySelectAsync(
-            x => x.UserId == request.StudentId, ct: ct);
+            x => x.UserId == request.StudentId && x.StatDate >= windowStart, ct: ct);
         var streakDays = StreakCalculator.CalcCurrentStreak(dailyStats.Select(d => d.StatDate).ToList(), today);
 
         // 今日任务完成（跨模块任务域）

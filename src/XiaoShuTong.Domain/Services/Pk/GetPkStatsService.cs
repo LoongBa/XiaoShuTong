@@ -1,7 +1,7 @@
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
-using XiaoShuTong.DataServices.Pk;
+using TKW.Framework.Domain.Interfaces;
 using XiaoShuTong.Entities.Pk;
 
 namespace XiaoShuTong.Services.Pk;
@@ -11,59 +11,43 @@ namespace XiaoShuTong.Services.Pk;
 /// </summary>
 /// <remarks>
 /// BR-24 无记录零值 | BR-25 仅当前用户（RLS）| BR-26 胜率 API 层计算 | BR-27 无正确率对比榜（合规）
-/// PkPlayerStats 视图（VEntity 设计规格）：切片验证期 Service 层聚合实现（内存 DAC 不支持 SQL 视图），口径与视图一致（仅 Finished 计入）。
+/// 数据源：PkPlayerStatsView（vw_pk_player_stats，仅 Finished 计入）——替代切片验证期 Service 层内存聚合。
+/// 注入 IEntityReadOnlyDAC&lt;PkPlayerStatsView&gt;（VEntity 只读通道；测试可注入同 scope 实例）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
-internal class GetPkStatsService(DomainUser<XiaoShuTongUserInfo> user)
+internal class GetPkStatsService(DomainUser<XiaoShuTongUserInfo> user,
+    IEntityReadOnlyDAC<PkPlayerStatsView> playerStatsDac)
     : DomainServiceBase<XiaoShuTongUserInfo>(user)
 {
-    private PkMatchesDataService? _matchesDs;
-    private PkMatchesDataService MatchesDs => _matchesDs ??= User.Use<PkMatchesDataService>();
-
-    private PkPlayersDataService? _playersDs;
-    private PkPlayersDataService PlayersDs => _playersDs ??= User.Use<PkPlayersDataService>();
+    private readonly IEntityReadOnlyDAC<PkPlayerStatsView> _playerStatsDac = playerStatsDac;
 
     /// <summary>
     /// 当前用户 PK 战绩（场次/胜/平/胜率/累计分）
     /// </summary>
-    public async Task<GetPkStatsResDto> ExecuteAsync(GetPkStatsReqDto request, CancellationToken ct = default)
+    public Task<GetPkStatsResDto> ExecuteAsync(GetPkStatsReqDto request, CancellationToken ct = default)
     {
         // BR-25：仅当前用户（RLS；UserUid 参数账户域未实施，默认本人）
         var userId = User.UserInfo?.Id ?? 0;
 
-        // 本人参与的所有对局（PkPlayers 反查 MatchId）
-        var myPlayers = await PlayersDs.EntitySelectAsync(x => x.UserId == userId, ct: ct);
-        if (myPlayers.Count == 0)
-            return new GetPkStatsResDto { Success = true };
+        // 查询视图（vw_pk_player_stats 已按 UserId 聚合，仅 Finished 计入）
+        var row = _playerStatsDac.Query.FirstOrDefault(x => x.UserId == userId);
 
-        var matchIds = myPlayers.Select(p => p.MatchId).ToArray();
-        var finishedMatches = await MatchesDs.EntitySelectAsync(
-            x => x.Status == PkMatchStatus.Finished && matchIds.Contains(x.Id), ct: ct);
-        var finishedIds = finishedMatches.Select(m => m.Id).ToHashSet();
+        // BR-24：无记录 → 零值；BR-26：胜率 API 层计算（视图不含除法）
+        if (row == null)
+            return Task.FromResult(new GetPkStatsResDto { Success = true });
 
-        // 战绩口径（与 vw_pk_player_stats 一致：仅 Finished 计入）
-        var totalMatches = finishedMatches.Count;
-        var wins = finishedMatches.Count(m => m.WinnerId == userId);
-        var draws = finishedMatches.Count(m => m.WinnerId == null);
+        var winRate = row.TotalMatches == 0 ? 0d : Math.Round((double)row.Wins / row.TotalMatches, 2);
 
-        // 累计分（Finished 对局中本人 PkPlayers.Score 之和）
-        var totalScore = myPlayers
-            .Where(p => finishedIds.Contains(p.MatchId))
-            .Sum(p => p.Score);
-
-        // BR-24：无记录 → 零值；BR-26：胜率 API 层计算
-        var winRate = totalMatches == 0 ? 0d : Math.Round((double)wins / totalMatches, 2);
-
-        return new GetPkStatsResDto
+        return Task.FromResult(new GetPkStatsResDto
         {
             Success = true,
-            TotalMatches = totalMatches,
-            Wins = wins,
-            Draws = draws,
+            TotalMatches = (int)row.TotalMatches,
+            Wins = (int)row.Wins,
+            Draws = (int)row.Draws,
             WinRate = winRate,
-            TotalScore = totalScore,
-        };
+            TotalScore = (int)row.TotalScore,
+        });
     }
 }
 

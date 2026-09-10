@@ -53,12 +53,13 @@ internal class GetOwnerDashboardService(DomainUser<XiaoShuTongUserInfo> user)
         if (group.OwnerId != ownerId)
             return new GetOwnerDashboardResDto { Success = false, ErrorCode = TaskErrorCodes.Forbidden };
 
-        // 本群任务 + 全部分配
+        // 本群任务 + 全部分配（一次 IN 查询替代 foreach N+1）
         var tasks = await TasksDs.EntitySelectAsync(
             x => x.GroupId == group.Id, ct: ct);
-        var allAssignments = new List<TaskAssignments>();
-        foreach (var task in tasks)
-            allAssignments.AddRange(await AssignmentsDs.EntitySelectAsync(x => x.TaskId == task.Id, ct: ct));
+        var taskIds = tasks.Select(t => t.Id).ToArray();
+        var allAssignments = taskIds.Length == 0
+            ? new List<TaskAssignments>()
+            : await AssignmentsDs.EntitySelectAsync(x => taskIds.Contains(x.TaskId), ct: ct);
 
         // BR-14：无任务 → 空态数据（指标为零）
         if (tasks.Count == 0 || allAssignments.Count == 0)
@@ -128,9 +129,9 @@ internal class GetOwnerDashboardService(DomainUser<XiaoShuTongUserInfo> user)
         if (memberIds.Length == 0)
             return [];
 
-        var masteryRows = new List<KnowledgeMastery>();
-        foreach (var memberId in memberIds)
-            masteryRows.AddRange(await MasteryDs.EntitySelectAsync(x => x.UserId == memberId, ct: ct));
+        // 一次 IN 查询替代 foreach N+1
+        var masteryRows = await MasteryDs.EntitySelectAsync(
+            x => memberIds.Contains(x.UserId), ct: ct);
 
         return masteryRows
             .GroupBy(x => x.KnowledgePoint)
