@@ -1,0 +1,126 @@
+@page "/owner/banks/detail/{BankId}"
+@namespace XiaoShuTong.AdminWasm.Pages.Banks
+@using XiaoShuTong.Services.Bank.Api
+@using XiaoShuTong.Entities.Bank.DTOs.Api
+
+<PageContainer Title="@("题库详情")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("内容管理")</BreadcrumbItem>
+            <BreadcrumbItem>@("题库详情")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="@("加载中...")" />
+            </Card>
+        }
+        else if (_Detail?.Bank != null)
+        {
+            @* ─ 元数据 ─ *@
+            <Card Style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <Title Level="3" Style="margin-bottom: 8px;">@_Detail.Bank.Name</Title>
+                        <div style="color: #666;">
+                            <Tag>@GetSubjectLabel(_Detail.Bank.Subject.ToString())</Tag>
+                            <Tag>@GetPurposeLabel(_Detail.Bank.Purpose.ToString())</Tag>
+                            <Tag>@GetPrivacyLabel(_Detail.Bank.Privacy.ToString())</Tag>
+                        </div>
+                    </div>
+                    <div>
+                        <Button Type="@ButtonType.Primary"
+                                OnClick="@(() => Navigation.NavigateTo($"/owner/banks/import?bankId={BankId}"))">
+                            @("导入题目")
+                        </Button>
+                    </div>
+                </div>
+                <Descriptions Column="3" Bordered Style="margin-top: 16px;">
+                    <DescriptionsItem Label="@("题库ID")">
+                        <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                            @_Detail.Bank.BankId
+                        </span>
+                    </DescriptionsItem>
+                    <DescriptionsItem Label="@("题量")">@_Detail.PreviewQuestions.Count 条（预览）</DescriptionsItem>
+                    <DescriptionsItem Label="@("创建时间")">@_Detail.Bank.CreateTime.ToString("yyyy-MM-dd HH:mm")</DescriptionsItem>
+                </Descriptions>
+            </Card>
+
+            @* ─ 知识点树 ─ *@
+            @if (_Detail.Topics.Count > 0)
+            {
+                <Card Title="@("知识点树")" Style="margin-bottom: 16px;">
+                    <Collapse>
+                        @foreach (var topic in _Detail.Topics)
+                        {
+                            <Panel Header="@topic.Title" Key="@topic.ChapterId">
+                                <div style="margin-bottom: 8px;">
+                                    <strong>@("知识点：")</strong>
+                                    @string.Join("、", topic.SubTopics)
+                                </div>
+                                <div style="color: #666;">
+                                    @($"共 {topic.QuestionIds.Length} 题")
+                                </div>
+                            </Panel>
+                        }
+                    </Collapse>
+                </Card>
+            }
+
+            @* ─ 题目预览（不含答案） ─ *@
+            @if (_Detail.PreviewQuestions.Count > 0)
+            {
+                <Card Title="@("题目预览（不含答案）")">
+                    <Table TItem="QuestionsDto"
+                           DataSource="@_Detail.PreviewQuestions"
+                           RowKey="@(x => x.QuestionId)"
+                           Size="@TableSize.Small">
+                        <PropertyColumn Property="@(x => x.QuestionId)" Title="@("题目ID")" Width="180">
+                            <BodyTemplate>
+                                <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                                    @context.QuestionId
+                                </span>
+                            </BodyTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="@(x => x.Content)" Title="@("内容")">
+                            <BodyTemplate>
+                                @TruncateContent(context.Content)
+                            </BodyTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="@(x => x.ChapterId)" Title="@("章节")">
+                            <BodyTemplate>
+                                @(context.ChapterId ?? "-")
+                            </BodyTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="@(x => x.KnowledgePoints)" Title="@("知识点")">
+                            <BodyTemplate>
+                                @string.Join("、", context.KnowledgePoints ?? [])
+                            </BodyTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="@(x => x.Difficulty)" Title="@("难度")">
+                            <BodyTemplate>
+                                @($"{context.Difficulty}/5")
+                            </BodyTemplate>
+                        </PropertyColumn>
+                    </Table>
+                </Card>
+            }
+        }
+        else
+        {
+            <Card>
+                <Empty Description="@("题库不存在")">
+                    <Button Type="@ButtonType.Primary"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/banks"))">
+                        @("返回题库列表")
+                    </Button>
+                </Empty>
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

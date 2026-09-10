@@ -47,15 +47,25 @@
     ]
   },
   {
-    "path": "/owner/groups/list",
+    "path": "/owner/banks",
     "name": "内容管理",
     "key": "banks",
     "icon": "book",
     "children": [
       {
-        "path": "/owner/groups/list",
+        "path": "/owner/banks",
         "name": "题库管理",
         "key": "banks.list"
+      },
+      {
+        "path": "/owner/banks/create",
+        "name": "新建题库",
+        "key": "banks.create"
+      },
+      {
+        "path": "/owner/banks/import",
+        "name": "导入题目",
+        "key": "banks.import"
       }
     ]
   }

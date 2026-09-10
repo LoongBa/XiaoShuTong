@@ -1,0 +1,107 @@
+@page "/owner/banks"
+@namespace XiaoShuTong.AdminWasm.Pages.Banks
+@using XiaoShuTong.Services.Bank.Api
+
+<PageContainer Title="@("题库管理")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("内容管理")</BreadcrumbItem>
+            <BreadcrumbItem>@("题库管理")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 学科筛选卡片网格 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <Button Type="@(_SelectedSubject == null ? ButtonType.Primary : ButtonType.Default)"
+                        OnClick="@(() => OnSubjectFilterAsync(null))">
+                    @("全部")
+                </Button>
+                @foreach (var subject in _Subjects)
+                {
+                    <Button Type="@(_SelectedSubject == subject.Value ? ButtonType.Primary : ButtonType.Default)"
+                            OnClick="@(() => OnSubjectFilterAsync(subject.Value))">
+                        @subject.Label
+                    </Button>
+                }
+            </div>
+        </Card>
+
+        @* ─ 顶部操作栏 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; justify-content: flex-end;">
+                <Button Type="@ButtonType.Primary" OnClick="@(() => Navigation.NavigateTo("/owner/banks/create"))">
+                    @("新建题库")
+                </Button>
+            </div>
+        </Card>
+
+        @* ─ 加载中 ─ *@
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="@("加载中...")" />
+            </Card>
+        }
+        @* ─ 空态 ─ *@
+        else if (_Banks.Length == 0)
+        {
+            <Card>
+                <Empty Description="@("还没有题库")">
+                    <Button Type="@ButtonType.Primary"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/banks/create"))">
+                        @("新建题库")
+                    </Button>
+                </Empty>
+            </Card>
+        }
+        @* ─ 题库表格 ─ *@
+        else
+        {
+            <Card>
+                <Table TItem="BankListItemDto"
+                       DataSource="@_Banks"
+                       RowKey="@(x => x.Bank?.BankId ?? "")">
+                    <PropertyColumn Property="@(x => x.Bank!.Name)" Title="@("题库名")" />
+                    <PropertyColumn Property="@(x => x.Bank!.Subject)" Title="@("学科")">
+                        <BodyTemplate>
+                            @GetSubjectLabel(context.Bank!.Subject.ToString())
+                        </BodyTemplate>
+                    </PropertyColumn>
+                    <PropertyColumn Property="@(x => x.Bank!.Purpose)" Title="@("用途")">
+                        <BodyTemplate>
+                            @GetPurposeLabel(context.Bank!.Purpose.ToString())
+                        </BodyTemplate>
+                    </PropertyColumn>
+                    <PropertyColumn Property="@(x => x.Bank!.Privacy)" Title="@("隐私")">
+                        <BodyTemplate>
+                            @GetPrivacyLabel(context.Bank!.Privacy.ToString())
+                        </BodyTemplate>
+                    </PropertyColumn>
+                    <PropertyColumn Property="@(x => x.QuestionCount)" Title="@("题量")" />
+                    <ActionColumn Title="@("操作")">
+                        <BodyTemplate>
+                            <Space>
+                                <SpaceItem>
+                                    <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                            OnClick="@(() => Navigation.NavigateTo($"/owner/banks/detail/{context.Bank!.BankId}"))">
+                                        @("详情")
+                                    </Button>
+                                </SpaceItem>
+                                <SpaceItem>
+                                    <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                            OnClick="@(() => Navigation.NavigateTo($"/owner/banks/import?bankId={context.Bank!.BankId}"))">
+                                        @("导入题目")
+                                    </Button>
+                                </SpaceItem>
+                            </Space>
+                        </BodyTemplate>
+                    </ActionColumn>
+                </Table>
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

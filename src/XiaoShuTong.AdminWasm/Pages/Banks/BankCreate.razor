@@ -1,0 +1,71 @@
+@page "/owner/banks/create"
+@namespace XiaoShuTong.AdminWasm.Pages.Banks
+@using XiaoShuTong.Services.Bank.Api
+
+<PageContainer Title="@("新建题库")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("内容管理")</BreadcrumbItem>
+            <BreadcrumbItem>@("新建题库")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        <Card>
+            <div style="max-width: 480px;">
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("题库名称（必填）")</label>
+                    <Input @bind-Value="@_Name" Placeholder="@("请输入题库名称")" MaxLength="128" />
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("学科（必选）")</label>
+                    <Select TItemValue="string" TItem="SubjectOption"
+                            Style="width: 100%;"
+                            @bind-Value="@_Subject"
+                            Placeholder="@("请选择学科")">
+                        @foreach (var subject in _SubjectOptions)
+                        {
+                            <SelectOption Value="@subject.Value" TItemValue="string" TItem="SubjectOption" Label="@subject.Label" />
+                        }
+                    </Select>
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("用途")</label>
+                    <Select TItemValue="string" TItem="PurposeOption"
+                            Style="width: 100%;"
+                            @bind-Value="@_Purpose"
+                            Placeholder="@("默认背诵")"
+                            AllowClear>
+                        @foreach (var purpose in _PurposeOptions)
+                        {
+                            <SelectOption Value="@purpose.Value" TItemValue="string" TItem="PurposeOption" Label="@purpose.Label" />
+                        }
+                    </Select>
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("隐私")</label>
+                    <Select TItemValue="string" TItem="PrivacyOption"
+                            Style="width: 100%;"
+                            @bind-Value="@_Privacy"
+                            Placeholder="@("默认私有")"
+                            AllowClear>
+                        @foreach (var privacy in _PrivacyOptions)
+                        {
+                            <SelectOption Value="@privacy.Value" TItemValue="string" TItem="PrivacyOption" Label="@privacy.Label" />
+                        }
+                    </Select>
+                </div>
+                <div style="margin-top: 24px;">
+                    <Button Type="@ButtonType.Primary" OnClick="@OnSubmitAsync" Loading="@_Submitting">
+                        @("创建题库")
+                    </Button>
+                    <Button Style="margin-left: 8px;" OnClick="@(() => Navigation.NavigateTo("/owner/banks"))">
+                        @("取消")
+                    </Button>
+                </div>
+            </div>
+        </Card>
+
+    </ChildContent>
+</PageContainer>

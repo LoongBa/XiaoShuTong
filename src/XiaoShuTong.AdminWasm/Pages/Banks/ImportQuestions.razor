@@ -1,0 +1,108 @@
+@page "/owner/banks/import"
+@namespace XiaoShuTong.AdminWasm.Pages.Banks
+@using XiaoShuTong.Services.Bank.Api
+
+<PageContainer Title="@("导入题目")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("内容管理")</BreadcrumbItem>
+            <BreadcrumbItem>@("导入题目")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 选择题库 ─ *@
+        <Card Style="margin-bottom: 16px;" Title="@("选择题库")">
+            <div style="max-width: 480px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("题库（必选）")</label>
+                <Select TItemValue="string" TItem="BankListItemDto"
+                        Style="width: 100%;"
+                        @bind-Value="@_SelectedBankId"
+                        Placeholder="@("请选择题库")">
+                    @foreach (var bank in _Banks)
+                    {
+                        <SelectOption Value="@bank.Bank!.BankId" TItemValue="string" TItem="BankListItemDto" Label="@bank.Bank!.Name" />
+                    }
+                </Select>
+            </div>
+        </Card>
+
+        @* ─ 导入方式 ─ *@
+        <Card Style="margin-bottom: 16px;" Title="@("导入方式")">
+            <Tabs DefaultActiveKey="paste">
+                <TabPane Key="paste" Tab="@("粘贴文本")">
+                    <div style="max-width: 600px;">
+                        <div style="margin-bottom: 8px; color: #666;">
+                            @("格式：每行 问题###答案，# 开头为注释行")
+                        </div>
+                        <TextArea @bind-Value="@_RawText" Rows="10"
+                                  Placeholder="@("背诵全文###作者朝代\n# 这是注释行\n问题1###答案1")" />
+                    </div>
+                </TabPane>
+                <TabPane Key="file" Tab="@("上传文件")">
+                    <div style="max-width: 600px;">
+                        <div style="margin-bottom: 8px; color: #666;">
+                            @("支持 .txt/.csv 文件，单文件 ≤10M，格式：问题###答案")
+                        </div>
+                        <InputFile OnChange="@OnFileSelectedAsync" accept=".txt,.csv" />
+                        @if (_SelectedFile != null)
+                        {
+                            <div style="margin-top: 8px; color: #666;">
+                                @($"已选择：{_SelectedFile.Name} ({_SelectedFile.Size / 1024}KB)")
+                            </div>
+                        }
+                    </div>
+                </TabPane>
+            </Tabs>
+        </Card>
+
+        @* ─ 章节（可选） ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="max-width: 480px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("目标章节（可选）")</label>
+                <Input @bind-Value="@_Topic" Placeholder="@("如：第一章、Unit1")" />
+            </div>
+        </Card>
+
+        @* ─ 导入按钮 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <Button Type="@ButtonType.Primary" OnClick="@OnImportAsync" Loading="@_Importing"
+                    Disabled="@(string.IsNullOrEmpty(_SelectedBankId) || (string.IsNullOrWhiteSpace(_RawText) && _SelectedFile == null))">
+                @("开始导入")
+            </Button>
+        </Card>
+
+        @* ─ 导入结果 ─ *@
+        @if (_Result != null)
+        {
+            <Card Title="@("导入结果")">
+                <div style="margin-bottom: 12px;">
+                    @if (_Result.Success)
+                    {
+                        <span style="color: #52c41a;">@($"导入 {_Result.Imported} 条")</span>
+                    }
+                    else
+                    {
+                        <span style="color: #ff4d4f;">@($"导入失败: {_Result.ErrorCode}")</span>
+                    }
+                    @if (_Result.Failed > 0)
+                    {
+                        <span style="margin-left: 12px; color: #faad14;">@($"失败 {_Result.Failed} 条")</span>
+                    }
+                </div>
+                @if (_Result.Failures.Length > 0)
+                {
+                    <div style="color: #666; margin-bottom: 8px;">@("失败明细：")</div>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        @foreach (var failure in _Result.Failures)
+                        {
+                            <li style="color: #ff4d4f; margin-bottom: 4px;">@failure</li>
+                        }
+                    </ul>
+                }
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>
