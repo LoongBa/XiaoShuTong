@@ -64,21 +64,38 @@
     <Reference Include="TKWF.Domain.Blazor.Abstractions" HintPath="$(TKWFDeployPath)build\refs\TKWF.Domain.Blazor.Abstractions.dll" />
   </ItemGroup>
 
-  <!-- 引用 Domain 项目中的 UserInfo 类型和 WebApi 元数据 -->
+  <!-- 引用 Domain 项目中的 UserInfo 类型和 WebApi 元数据
+       ADR32 决策 2/3（框架 v4.10.0）：SG2 元数据引用 .TKWF/{域}/ApiMetadata.g.cs 稳定路径，
+       不再直接引用 obj/...generated/ 深层路径（TFM/配置切换/SG 改名断链根因）。
+       {域} = $(TKWFDomain)（自包含定义，与 WebApi 侧 Directory.Build.props 同源同值）。 -->
+  <PropertyGroup>
+    <TKWFDomain>XiaoShuTong.WebApi</TKWFDomain>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\XiaoShuTong.Domain\XiaoShuTong.Domain.csproj" />
     <ProjectReference Include="..\..\src\XiaoShuTong.WebApi\XiaoShuTong.WebApi.csproj"
                       ReferenceOutputAssembly="false"
                       SkipGetTargetFrameworkProperties="true" />
-    <Compile Include="..\..\src\XiaoShuTong.WebApi\obj\$(Configuration)\net10.0\generated\TKWF.Domain.ApiService.SG\TKW.Framework.CodeGeneration.ApiServiceGenerator\ApiMetadata.g.cs"
+    <Compile Include="..\..\.TKWF\$(TKWFDomain)\ApiMetadata.g.cs"
              Link="Metadata\ApiMetadata.g.cs" Visible="false"
-             Condition="Exists('..\..\src\XiaoShuTong.WebApi\obj\$(Configuration)\net10.0\generated\TKWF.Domain.ApiService.SG\TKW.Framework.CodeGeneration.ApiServiceGenerator\ApiMetadata.g.cs')" />
+             Condition="Exists('..\..\.TKWF\$(TKWFDomain)\ApiMetadata.g.cs')" />
   </ItemGroup>
 
-  <!-- 确保 WebApi 的 SG 生成文件（ApiMetadata.g.cs）在 Wasm 编译前就绪 -->
+  <!-- 确保 WebApi 的 SG 生成文件（ApiMetadata.g.cs）在 Wasm 编译前就绪（v4.10.0 模式）
+       ProjectReference(ReferenceOutputAssembly=false) 在并行构建时不保证 WebApi 先编译，
+       故在 CoreCompile 前显式 MSBuild 构建 WebApi，生成 ApiMetadata.g.cs 供 SG3 客户端代理消费。
+       Inputs 含 WebApi 全部源码（排除 obj/bin）：改任何 WebApi 源码（含 .cs）都触发重建。
+       Outputs 指向 .TKWF/$(TKWFDomain)/ApiMetadata.g.cs（稳定路径）。 -->
+  <ItemGroup>
+    <_WebApiInputs Include="..\..\src\XiaoShuTong.WebApi\XiaoShuTong.WebApi.csproj;..\..\src\XiaoShuTong.WebApi\**\*.cs"
+                   Exclude="..\..\src\XiaoShuTong.WebApi\obj\**;..\..\src\XiaoShuTong.WebApi\bin\**" />
+  </ItemGroup>
   <Target Name="_EnsureWebApiMetadata" BeforeTargets="CoreCompile"
-          Inputs="..\..\src\XiaoShuTong.WebApi\XiaoShuTong.WebApi.csproj"
-          Outputs="..\..\src\XiaoShuTong.WebApi\obj\$(Configuration)\net10.0\generated\TKWF.Domain.ApiService.SG\TKW.Framework.CodeGeneration.ApiServiceGenerator\ApiMetadata.g.cs">
+          Inputs="@(_WebApiInputs)"
+          Outputs="..\..\.TKWF\$(TKWFDomain)\ApiMetadata.g.cs">
+    <!-- TKWFDomain 空值兜底（Oracle Q4.3）：占位符替换失败时显式报错而非静默路径错位 -->
+    <Error Condition="'$(TKWFDomain)' == ''"
+           Text="[TKWF] TKWFDomain 未定义——请配置域标识（ADR32 决策 2），例如 &lt;TKWFDomain&gt;XiaoShuTong.WebApi&lt;/TKWFDomain&gt;" />
     <MSBuild Projects="..\..\src\XiaoShuTong.WebApi\XiaoShuTong.WebApi.csproj"
              Targets="Build"
              Properties="TkwfReferenceMode=Dll"

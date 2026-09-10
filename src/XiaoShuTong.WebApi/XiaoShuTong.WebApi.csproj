@@ -40,6 +40,10 @@
 
   <PropertyGroup>
     <TKWFRole>ApiService</TKWFRole>
+    <!-- ADR32 决策 2（v4.10.0）：域标识——_XCG_CopyApiMetadata 将 SG2 ApiMetadata.g.cs
+         复制到 .TKWF/{域}/ApiMetadata.g.cs（解决方案根稳定位置），AdminWasm 从同路径消费。
+         单域结构：域 = WebApi 项目名。 -->
+    <TKWFDomain>XiaoShuTong.WebApi</TKWFDomain>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
