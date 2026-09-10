@@ -149,12 +149,10 @@
                        Message="邀请码生成成功"
                        ShowIcon="true"
                        Style="margin-bottom: 16px;">
-                    <Description>
-                        <Button Type="@ButtonType.Link"
-                                OnClick="@(() => Navigation.NavigateTo($"/owner/groups/roster-export?importId={_ImportId}"))">
-                            去导出 CSV
-                        </Button>
-                    </Description>
+                    <Button Type="@ButtonType.Link"
+                            OnClick="@(() => Navigation.NavigateTo($"/owner/groups/roster-export?importId={_ImportId}"))">
+                        去导出 CSV
+                    </Button>
                 </Alert>
             }
         }

@@ -79,38 +79,30 @@
                     <Table TItem="MemberItemDto"
                            DataSource="@_GroupDetail.Members"
                            RowKey="@(x => x.UserId)">
-                        <Column TData="long" Title="用户ID" Field="@context.UserId" Width="100">
-                            <BodyTemplate>
-                                <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
-                                    @context.UserId
-                                </span>
-                            </BodyTemplate>
+                        <Column TData="long" Title="用户ID" Width="100">
+                            <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                                @context.UserId
+                            </span>
                         </Column>
-                        <Column TData="string" Title="昵称" Field="@context.Nickname" Width="150">
-                            <BodyTemplate>
-                                @(context.Nickname ?? "未设置")
-                            </BodyTemplate>
+                        <Column TData="string" Title="昵称" Width="150">
+                            @(context.Nickname ?? "未设置")
                         </Column>
-                        <Column TData="string" Title="角色" Field="@context.Role" Width="100" />
-                        <Column TData="DateTime" Title="加入时间" Field="@context.JoinedAt" Width="180">
-                            <BodyTemplate>
-                                @context.JoinedAt.ToString("yyyy-MM-dd HH:mm")
-                            </BodyTemplate>
+                        <Column TData="string" Title="角色" Width="100">
+                            @context.Role
                         </Column>
-                        <Column TData="int" Title="进度" Field="@context.Progress" Width="100">
-                            <BodyTemplate>
-                                @(context.Progress)%
-                            </BodyTemplate>
+                        <Column TData="DateTime" Title="加入时间" Width="180">
+                            @context.JoinedAt.ToString("yyyy-MM-dd HH:mm")
+                        </Column>
+                        <Column TData="int" Title="进度" Width="100">
+                            @(context.Progress)%
                         </Column>
                         <Column TData="string" Title="操作" Width="120">
-                            <BodyTemplate>
-                                <Popconfirm Title="确定要移除该成员吗？移除后学习数据将保留。"
-                                            OnConfirm="@(() => OnRemoveMemberAsync(context.UserId))"
-                                            OkText="确定移除"
-                                            CancelText="取消">
-                                    <Button Size="@ButtonSize.Small" Danger>移除</Button>
-                                </Popconfirm>
-                            </BodyTemplate>
+                            <Popconfirm Title="确定要移除该成员吗？移除后学习数据将保留。"
+                                        OnConfirm="@(() => OnRemoveMemberAsync(context.UserId))"
+                                        OkText="确定移除"
+                                        CancelText="取消">
+                                <Button Size="@ButtonSize.Small" Danger>移除</Button>
+                            </Popconfirm>
                         </Column>
                     </Table>
                 }

@@ -61,41 +61,33 @@
                            DataSource="@_TaskDetail.Members"
                            RowKey="@(x => x.UId)">
                         <ChildContent>
-                            <Column TData="long" Title="@("用户ID")" Field="@context.UserId" Width="100">
-                                <BodyTemplate>
-                                    <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
-                                        @context.UserId
-                                    </span>
-                                </BodyTemplate>
+                            <Column TData="long" Title="@("用户ID")" Width="100">
+                                <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                                    @context.UserId
+                                </span>
                             </Column>
-                            <Column TData="string" Title="@("状态")" Field="@context.Status" Width="120">
-                                <BodyTemplate>
-                                    @switch (context.Status)
-                                    {
-                                        case "Completed":
-                                            <Tag Color="@("green")">@("已完成")</Tag>
-                                            break;
-                                        case "InProgress":
-                                            <Tag Color="@("blue")">@("进行中")</Tag>
-                                            break;
-                                        case "Overdue":
-                                            <Tag Color="@("red")">@("逾期")</Tag>
-                                            break;
-                                        default:
-                                            <Tag>@("待开始")</Tag>
-                                            break;
-                                    }
-                                </BodyTemplate>
+                            <Column TData="string" Title="@("状态")" Width="120">
+                                @switch (context.Status)
+                                {
+                                    case "Completed":
+                                        <Tag Color="@("green")">@("已完成")</Tag>
+                                        break;
+                                    case "InProgress":
+                                        <Tag Color="@("blue")">@("进行中")</Tag>
+                                        break;
+                                    case "Overdue":
+                                        <Tag Color="@("red")">@("逾期")</Tag>
+                                        break;
+                                    default:
+                                        <Tag>@("待开始")</Tag>
+                                        break;
+                                }
                             </Column>
-                            <Column TData="int" Title="@("进度")" Field="@context.Progress" Width="150">
-                                <BodyTemplate>
-                                    <Progress Percent="@context.Progress" />
-                                </BodyTemplate>
+                            <Column TData="int" Title="@("进度")" Width="150">
+                                <Progress Percent="@context.Progress" />
                             </Column>
-                            <Column TData="DateTime" Title="@("分配时间")" Field="@context.AssignedAt" Width="180">
-                                <BodyTemplate>
-                                    @context.AssignedAt.ToString("yyyy-MM-dd HH:mm")
-                                </BodyTemplate>
+                            <Column TData="DateTime" Title="@("分配时间")" Width="180">
+                                @context.AssignedAt.ToString("yyyy-MM-dd HH:mm")
                             </Column>
                         </ChildContent>
                     </Table>

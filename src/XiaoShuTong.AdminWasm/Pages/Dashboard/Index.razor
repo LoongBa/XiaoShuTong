@@ -99,32 +99,28 @@
                        DataSource="@_DashboardData.TaskList"
                        RowKey="@((x) => x.Task?.UId ?? string.Empty)">
                     <ChildContent>
-                        <Column TData="string" Title="@("任务名")" Field="@context.Task?.Title" Width="200" />
-                        <Column TData="double" Title="@("完成率")" Field="@context.CompletionRate" Width="150">
-                            <BodyTemplate>
-                                <Progress Percent="@(context.CompletionRate * 100)" />
-                            </BodyTemplate>
+                        <Column TData="string" Title="@("任务名")" Width="200">
+                            @context.Task?.Title
                         </Column>
-                        <Column TData="string" Title="@("状态")" Field="@context.Status" Width="100">
-                            <BodyTemplate>
-                                @if (context.Status == "Overdue")
-                                {
-                                    <Tag Color="@("red")">@("逾期")</Tag>
-                                }
-                                else
-                                {
-                                    <Tag Color="@("green")">@("正常")</Tag>
-                                }
-                            </BodyTemplate>
+                        <Column TData="double" Title="@("完成率")" Width="150">
+                            <Progress Percent="@(context.CompletionRate * 100)" />
                         </Column>
-                        <ActionColumn Title="@("操作")" Width="100">
-                            <BodyTemplate>
-                                <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
-                                        OnClick="@(() => Navigation.NavigateTo($"/owner/tasks/detail/{context.Task?.UId}"))">
-                                    @("详情")
-                                </Button>
-                            </BodyTemplate>
-                        </ActionColumn>
+                        <Column TData="string" Title="@("状态")" Width="100">
+                            @if (context.Status == "Overdue")
+                            {
+                                <Tag Color="@("red")">@("逾期")</Tag>
+                            }
+                            else
+                            {
+                                <Tag Color="@("green")">@("正常")</Tag>
+                            }
+                        </Column>
+                        <Column TData="string" Title="@("操作")" Width="100">
+                            <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                    OnClick="@(() => Navigation.NavigateTo($"/owner/tasks/detail/{context.Task?.UId}"))">
+                                @("详情")
+                            </Button>
+                        </Column>
                     </ChildContent>
                 </Table>
             </Card>

@@ -23,7 +23,6 @@ public partial class RosterImport
     private string? _RawText;
     private IBrowserFile? _SelectedFile;
 
-    private bool _Loading;
     private bool _Importing;
     private bool _Generating;
     private bool _Generated;
@@ -39,7 +38,6 @@ public partial class RosterImport
 
     private async Task LoadGroupsAsync()
     {
-        _Loading = true;
         try
         {
             var svc = User.Use<IListGroupsService>();
@@ -55,7 +53,6 @@ public partial class RosterImport
         }
         finally
         {
-            _Loading = false;
             StateHasChanged();
         }
     }

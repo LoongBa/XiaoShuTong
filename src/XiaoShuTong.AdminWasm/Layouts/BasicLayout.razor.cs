@@ -8,22 +8,22 @@ namespace XiaoShuTong.AdminWasm.Layouts
 {
     public partial class BasicLayout() : LayoutComponentBase, IDisposable
     {
-        private MenuDataItem[] _MenuData;
+        private MenuDataItem[] _MenuData = [];
 
-        [Inject] private ReuseTabsService TabService { get; set; }
+        [Inject] private ReuseTabsService TabService { get; set; } = null!;
 
-        [Inject] private ILocalizationService LocalizationService { get; set; }
+        [Inject] private ILocalizationService LocalizationService { get; set; } = null!;
 
-        [Inject] private HttpClient HttpClient { get; set; }
+        [Inject] private HttpClient HttpClient { get; set; } = null!;
 
-        private EventHandler<CultureInfo> _LocalizationChanged;
+        private EventHandler<CultureInfo> _LocalizationChanged = (_, _) => { };
 
 
         protected override async Task OnInitializedAsync()
         {
             _LocalizationChanged = (sender, args) => InvokeAsync(StateHasChanged);
             LocalizationService.LanguageChanged += _LocalizationChanged;
-            _MenuData = await HttpClient.GetFromJsonAsync<MenuDataItem[]>("data/menu.json");
+            _MenuData = await HttpClient.GetFromJsonAsync<MenuDataItem[]>("data/menu.json") ?? [];
         }
 
         void Reload()

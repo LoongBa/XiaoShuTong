@@ -23,7 +23,6 @@ public partial class InviteCodes
     private long _ImportId;
     private RosterPreviewResDto? _PreviewData;
 
-    private bool _Loading;
     private bool _Generating;
     private bool _Exporting;
     private string? _ErrorMessage;
@@ -54,7 +53,6 @@ public partial class InviteCodes
 
     private async Task LoadGroupsAsync()
     {
-        _Loading = true;
         try
         {
             var svc = User.Use<IListGroupsService>();
@@ -70,7 +68,6 @@ public partial class InviteCodes
         }
         finally
         {
-            _Loading = false;
             StateHasChanged();
         }
     }

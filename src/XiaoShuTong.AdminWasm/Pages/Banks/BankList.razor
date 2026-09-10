@@ -65,40 +65,34 @@
                        DataSource="@_Banks"
                        RowKey="@(x => x.Bank?.BankId ?? "")">
                     <PropertyColumn Property="@(x => x.Bank!.Name)" Title="@("题库名")" />
-                    <PropertyColumn Property="@(x => x.Bank!.Subject)" Title="@("学科")">
-                        <BodyTemplate>
-                            @GetSubjectLabel(context.Bank!.Subject.ToString())
-                        </BodyTemplate>
-                    </PropertyColumn>
-                    <PropertyColumn Property="@(x => x.Bank!.Purpose)" Title="@("用途")">
-                        <BodyTemplate>
-                            @GetPurposeLabel(context.Bank!.Purpose.ToString())
-                        </BodyTemplate>
-                    </PropertyColumn>
-                    <PropertyColumn Property="@(x => x.Bank!.Privacy)" Title="@("隐私")">
-                        <BodyTemplate>
-                            @GetPrivacyLabel(context.Bank!.Privacy.ToString())
-                        </BodyTemplate>
-                    </PropertyColumn>
-                    <PropertyColumn Property="@(x => x.QuestionCount)" Title="@("题量")" />
-                    <ActionColumn Title="@("操作")">
-                        <BodyTemplate>
-                            <Space>
-                                <SpaceItem>
-                                    <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
-                                            OnClick="@(() => Navigation.NavigateTo($"/owner/banks/detail/{context.Bank!.BankId}"))">
-                                        @("详情")
-                                    </Button>
-                                </SpaceItem>
-                                <SpaceItem>
-                                    <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
-                                            OnClick="@(() => Navigation.NavigateTo($"/owner/banks/import?bankId={context.Bank!.BankId}"))">
-                                        @("导入题目")
-                                    </Button>
-                                </SpaceItem>
-                            </Space>
-                        </BodyTemplate>
-                    </ActionColumn>
+                    <Column TData="string" Title="@("学科")">
+                        @GetSubjectLabel(context.Bank!.Subject.ToString())
+                    </Column>
+                    <Column TData="string" Title="@("用途")">
+                        @GetPurposeLabel(context.Bank!.Purpose.ToString())
+                    </Column>
+                    <Column TData="string" Title="@("隐私")">
+                        @GetPrivacyLabel(context.Bank!.Privacy.ToString())
+                    </Column>
+                    <Column TData="int" Title="@("题量")">
+                        @context.QuestionCount
+                    </Column>
+                    <Column TData="string" Title="@("操作")">
+                        <Space>
+                            <SpaceItem>
+                                <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                        OnClick="@(() => Navigation.NavigateTo($"/owner/banks/detail/{context.Bank!.BankId}"))">
+                                    @("详情")
+                                </Button>
+                            </SpaceItem>
+                            <SpaceItem>
+                                <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                        OnClick="@(() => Navigation.NavigateTo($"/owner/banks/import?bankId={context.Bank!.BankId}"))">
+                                    @("导入题目")
+                                </Button>
+                            </SpaceItem>
+                        </Space>
+                    </Column>
                 </Table>
             </Card>
         }

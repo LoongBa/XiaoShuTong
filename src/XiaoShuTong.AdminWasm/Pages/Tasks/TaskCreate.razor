@@ -2,6 +2,7 @@
 @namespace XiaoShuTong.AdminWasm.Pages.Tasks
 @using XiaoShuTong.Services.GroupManagement.Api
 @using XiaoShuTong.Services.TaskManagement.Api
+@using XiaoShuTong.Services.Bank.Api
 
 <PageContainer Title="布置任务">
     <Breadcrumb>
@@ -51,12 +52,67 @@
                             <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("题库（可选）")</label>
                             <Select TItemValue="string" TItem="string"
                                     Style="width: 100%;"
-                                    @bind-Value="@_SelectedBankId"
+                                    Value="@_SelectedBankId"
+                                    ValueChanged="@OnBankSelectedAsync"
                                     Placeholder="@("自由编排可不选")"
                                     AllowClear>
-                                @* TODO: 题库列表需要 IBankManagementService 或类似接口 *@
+                                @foreach (var bank in _Banks)
+                                {
+                                    <SelectOption Value="@bank.Bank?.BankId" TItemValue="string" TItem="string"
+                                                   Label="@($"{bank.Bank?.Name}（{bank.QuestionCount}题）")" />
+                                }
                             </Select>
                         </div>
+                    </div>
+
+                    @* ─ 题目选择区块 ─ *@
+                    <div style="margin-top: 16px; border-top: 1px solid #f0f0f0; padding-top: 16px;">
+                        @if (string.IsNullOrEmpty(_SelectedBankId))
+                        {
+                            <Alert Type="@AlertType.Info"
+                                   Message="@("选择题库后可选题目（自由编排可跳过）")"
+                                   ShowIcon="true" />
+                        }
+                        else if (_LoadingBankDetail)
+                        {
+                            <Spin Tip="@("加载题目列表...")" />
+                        }
+                        else if (_AllQuestions.Count == 0)
+                        {
+                            <Alert Type="@AlertType.Warning"
+                                   Message="@("该题库暂无题目")"
+                                   ShowIcon="true" />
+                        }
+                        else
+                        {
+                            <div style="margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                                <label style="font-weight: 500;">@($"题目选择（共 {_AllQuestions.Count} 题）")</label>
+                                <Checkbox Indeterminate="@(0 < _SelectedQuestionIds.Length && _SelectedQuestionIds.Length < _AllQuestions.Count)"
+                                          Checked="@(_SelectedQuestionIds.Length == _AllQuestions.Count && _AllQuestions.Count > 0)"
+                                          CheckedChanged="@OnSelectAllQuestions">
+                                    @("全选")
+                                </Checkbox>
+                            </div>
+                            <CheckboxGroup TValue="string" Value="@_SelectedQuestionIds" OnChange="@OnQuestionsSelectionChanged">
+                                <div style="max-height: 320px; overflow-y: auto; border: 1px solid #f0f0f0; border-radius: 4px; padding: 8px;">
+                                    @foreach (var question in _AllQuestions)
+                                    {
+                                        <div style="margin-bottom: 4px;">
+                                            <Checkbox Label="@question.QuestionId">
+                                                <span style="color: #999;">[@question.TopicTitle]</span>
+                                                @question.QuestionId
+                                            </Checkbox>
+                                        </div>
+                                    }
+                                </div>
+                            </CheckboxGroup>
+                            @if (_SelectedQuestionIds.Length > 0)
+                            {
+                                <div style="margin-top: 8px; color: #666; font-size: 12px;">
+                                    @($"已选 {_SelectedQuestionIds.Length} 题")
+                                </div>
+                            }
+                        }
                     </div>
                 </Card>
             }
@@ -96,6 +152,8 @@
                         <DescriptionsItem Label="@("任务说明")">@(_Description ?? "无")</DescriptionsItem>
                         <DescriptionsItem Label="@("截止时间")">@(_DeadlineAt?.ToString("yyyy-MM-dd HH:mm") ?? "无")</DescriptionsItem>
                         <DescriptionsItem Label="@("允许重做")">@(_AllowRedo ? "是" : "否")</DescriptionsItem>
+                        <DescriptionsItem Label="@("题库")">@(string.IsNullOrEmpty(_SelectedBankId) ? "自由编排" : _Banks.FirstOrDefault(b => b.Bank?.BankId == _SelectedBankId)?.Bank?.Name ?? _SelectedBankId)</DescriptionsItem>
+                        <DescriptionsItem Label="@("选题")">@(_SelectedQuestionIds.Length > 0 ? $"{_SelectedQuestionIds.Length} 题" : "未选题（自由编排）")</DescriptionsItem>
                     </Descriptions>
                 </Card>
             }

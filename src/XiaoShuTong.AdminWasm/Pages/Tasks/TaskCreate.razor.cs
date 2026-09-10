@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Components;
+using XiaoShuTong.Services.Bank.Api;
 using XiaoShuTong.Services.GroupManagement.Api;
 using XiaoShuTong.Services.TaskManagement.Api;
 using XiaoShuTong.Api;
@@ -36,28 +37,51 @@ public partial class TaskCreate
 
     #endregion
 
+    #region ─── 题库/题目选择 ───
+
+    private BankListItemDto[] _Banks = [];
+    private List<TopicNodeDto> _Topics = [];
+    private List<SelectableQuestion> _AllQuestions = [];
+    private string[] _SelectedQuestionIds = [];
+    private bool _LoadingBankDetail;
+
+    private sealed class SelectableQuestion
+    {
+        public string QuestionId { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
+        public string TopicTitle { get; set; } = string.Empty;
+    }
+
+    #endregion
+
     #region ─── 生命周期 ───
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadGroupsAsync();
+        await LoadGroupsAndBanksAsync();
     }
 
     #endregion
 
     #region ─── 数据加载 ───
 
-    private async Task LoadGroupsAsync()
+    private async Task LoadGroupsAndBanksAsync()
     {
         _Loading = true;
         StateHasChanged();
         try
         {
-            var svc = User.Use<IListGroupsService>();
-            var res = await svc.Execute(new ListGroupsReqDto { PageIndex = 1, PageSize = 100 }, CancellationToken.None);
-            if (res.Success)
+            var groupsTask = User.Use<IListGroupsService>()
+                .Execute(new ListGroupsReqDto { PageIndex = 1, PageSize = 100 }, CancellationToken.None);
+            var banksTask = User.Use<IListBanksService>()
+                .Execute(new ListBanksReqDto { PageIndex = 1, PageSize = 100 }, CancellationToken.None);
+
+            await Task.WhenAll(groupsTask, banksTask);
+
+            var groupsRes = groupsTask.Result;
+            if (groupsRes.Success)
             {
-                _Groups = res.Items?.ToArray() ?? [];
+                _Groups = groupsRes.Items?.ToArray() ?? [];
                 if (_Groups.Length > 0)
                 {
                     _SelectedGroupUid = _Groups[0].GroupUid;
@@ -66,18 +90,99 @@ public partial class TaskCreate
             }
             else
             {
-                Message.Error($"加载群组失败: {res.ErrorCode}");
+                Message.Error($"加载群组失败: {groupsRes.ErrorCode}");
+            }
+
+            var banksRes = banksTask.Result;
+            if (banksRes.Success)
+            {
+                _Banks = banksRes.Items?.ToArray() ?? [];
+            }
+            else
+            {
+                Message.Error($"加载题库失败: {banksRes.ErrorCode}");
             }
         }
         catch (Exception ex)
         {
-            Message.Error($"加载群组失败: {ex.Message}");
+            Message.Error($"加载数据失败: {ex.Message}");
         }
         finally
         {
             _Loading = false;
             StateHasChanged();
         }
+    }
+
+    private async Task OnBankSelectedAsync(string? bankId)
+    {
+        _SelectedBankId = bankId;
+        _SelectedQuestionIds = [];
+        _AllQuestions = [];
+        _Topics = [];
+
+        if (string.IsNullOrEmpty(bankId))
+        {
+            StateHasChanged();
+            return;
+        }
+
+        _LoadingBankDetail = true;
+        StateHasChanged();
+        try
+        {
+            var svc = User.Use<IGetBankDetailService>();
+            var res = await svc.Execute(new GetBankDetailReqDto { BankId = bankId }, CancellationToken.None);
+            if (res.Success)
+            {
+                _Topics = res.Topics ?? [];
+                var allQuestions = new List<SelectableQuestion>();
+                foreach (var topic in _Topics)
+                {
+                    foreach (var qid in topic.QuestionIds)
+                    {
+                        allQuestions.Add(new SelectableQuestion
+                        {
+                            QuestionId = qid,
+                            Content = qid,
+                            TopicTitle = topic.Title
+                        });
+                    }
+                }
+                _AllQuestions = allQuestions;
+            }
+            else
+            {
+                Message.Error($"加载题库详情失败: {res.ErrorCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Message.Error($"加载题库详情失败: {ex.Message}");
+        }
+        finally
+        {
+            _LoadingBankDetail = false;
+            StateHasChanged();
+        }
+    }
+
+    #endregion
+
+    #region ─── 题目选择 ───
+
+    private void OnSelectAllQuestions(bool isChecked)
+    {
+        _SelectedQuestionIds = isChecked
+            ? _AllQuestions.Select(q => q.QuestionId).ToArray()
+            : [];
+        StateHasChanged();
+    }
+
+    private void OnQuestionsSelectionChanged(string[] values)
+    {
+        _SelectedQuestionIds = values;
+        StateHasChanged();
     }
 
     #endregion
@@ -109,7 +214,7 @@ public partial class TaskCreate
                 BankId = _SelectedBankId,
                 Title = _Title,
                 Description = _Description,
-                QuestionIds = [], // TODO: 需要题目选择功能（迭代3实现）
+                QuestionIds = _SelectedQuestionIds,
                 AllowRedo = _AllowRedo,
                 DeadlineAt = _DeadlineAt,
             }, CancellationToken.None);

@@ -26,7 +26,6 @@ public partial class BetaInvite
 
     private readonly CreateGroupFormModel _formModel = new();
     private bool _Submitting;
-    private bool _SubmitDisabled;
     private string? _ErrorMessage;
 
     private static readonly string[] _Subjects =
