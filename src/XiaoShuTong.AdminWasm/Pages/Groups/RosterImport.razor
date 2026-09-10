@@ -1,0 +1,169 @@
+@page "/owner/groups/roster-import"
+@namespace XiaoShuTong.AdminWasm.Pages.Groups
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.GroupManagement.Controllers
+
+<PageContainer Title="名单导入">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>群组管理</BreadcrumbItem>
+            <BreadcrumbItem>名单导入</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 群组选择 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span>选择群组：</span>
+                <Select TItemValue="long" TItem="GroupListItemDto"
+                        @bind-Value="@_SelectedGroupId"
+                        Placeholder="请选择群组"
+                        Style="width: 300px;"
+                        OnSelectedItemChanged="OnGroupChanged">
+                    @foreach (var g in _Groups)
+                    {
+                        <SelectOption TItemValue="long" TItem="GroupListItemDto"
+                                      Value="@g.GroupId" Label="@g.Name" />
+                    }
+                </Select>
+            </div>
+        </Card>
+
+        @if (_SelectedGroupId > 0)
+        {
+            @* ─ Step1: 导入名单 ─ *@
+            <Card Title="Step 1: 导入名单" Style="margin-bottom: 16px;">
+                <Tabs ActiveKey="@_ActiveTab" OnChange="OnTabChange">
+                    @* Tab 1: 批量粘贴 *@
+                    <TabPane Key="paste" Tab="批量粘贴">
+                        <div style="padding: 8px 0;">
+                            <p style="color: #666; margin-bottom: 8px;">每行一个手机号，例如：</p>
+                            <p style="color: #999; font-family: monospace; margin-bottom: 12px;">13800138001<br/>13900139002<br/>15000150003</p>
+                            <TextArea @bind-Value="@_RawText"
+                                      Placeholder="请粘贴手机号，每行一个"
+                                      Rows="8"
+                                      Style="font-family: 'Cascadia Code', 'Consolas', monospace;" />
+                            <div style="margin-top: 12px;">
+                                <Button Type="@ButtonType.Primary" Loading="@_Importing"
+                                        OnClick="@(() => ImportAsync("Paste"))">
+                                    导入
+                                </Button>
+                            </div>
+                        </div>
+                    </TabPane>
+                    @* Tab 2: 文件上传 *@
+                    <TabPane Key="file" Tab="文件上传">
+                        <div style="padding: 8px 0;">
+                            <InputFile OnChange="OnFileSelected"
+                                       accept=".txt,.csv"
+                                       style="margin-bottom: 12px;" />
+                            @if (_SelectedFile != null)
+                            {
+                                <div style="color: #666; margin-bottom: 12px;">
+                                    已选择: @_SelectedFile.Name (@(_SelectedFile.Size / 1024)KB)
+                                </div>
+                                <Button Type="@ButtonType.Primary" Loading="@_Importing"
+                                        OnClick="@(() => ImportAsync("File"))">
+                                    导入
+                                </Button>
+                            }
+                        </div>
+                    </TabPane>
+                </Tabs>
+            </Card>
+
+            @* ─ 错误提示 ─ *@
+            @if (!string.IsNullOrEmpty(_ErrorMessage))
+            {
+                <Alert Type="@AlertType.Error"
+                       Message="@_ErrorMessage"
+                       ShowIcon="true"
+                       Style="margin-bottom: 16px;" />
+            }
+
+            @* ─ Step2: 预览统计 ─ *@
+            @if (_PreviewData != null)
+            {
+                <Card Title="Step 2: 整理预览" Style="margin-bottom: 16px;">
+                    @if (_PreviewData.Status == "Processing")
+                    {
+                        <div style="text-align: center; padding: 24px;">
+                            <Spin Tip="整理中…" />
+                            <div style="margin-top: 12px;">
+                                <Button OnClick="OnRefreshPreview">刷新状态</Button>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                            <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                                <div style="color: #8c8c8c; font-size: 14px;">导入总数</div>
+                                <div style="font-size: 24px; margin-top: 4px;">@_PreviewData.SourceCount</div>
+                            </div>
+                            <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                                <div style="color: #8c8c8c; font-size: 14px;">有效号码</div>
+                                <div style="font-size: 24px; margin-top: 4px; color: #3f8600;">@_PreviewData.CleanedCount</div>
+                            </div>
+                            <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                                <div style="color: #8c8c8c; font-size: 14px;">去重剔除</div>
+                                <div style="font-size: 24px; margin-top: 4px; color: #cf1322;">@_PreviewData.DuplicateCount</div>
+                            </div>
+                            <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                                <div style="color: #8c8c8c; font-size: 14px;">非法剔除</div>
+                                <div style="font-size: 24px; margin-top: 4px; color: #cf1322;">@_PreviewData.InvalidCount</div>
+                            </div>
+                        </div>
+
+                        @if (_PreviewData.Preview?.Length > 0)
+                        {
+                            <div style="margin-bottom: 16px;">
+                                <Text Strong>脱敏预览（前10条）：</Text>
+                                <div style="margin-top: 8px; padding: 12px; background: #fafafa; border-radius: 4px; font-family: monospace;">
+                                    @foreach (var phone in _PreviewData.Preview.Take(10))
+                                    {
+                                        <div>@phone</div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                        @* ─ Step3: 确认生成 ─ *@
+                        <div style="text-align: right;">
+                            <Button Type="@ButtonType.Primary" Loading="@_Generating"
+                                    Disabled="@(_PreviewData.CleanedCount == 0)"
+                                    OnClick="OnGenerateInviteCodesAsync">
+                                确认生成一次性邀请码
+                            </Button>
+                        </div>
+                    }
+                </Card>
+            }
+
+            @* ─ 生成成功 ─ *@
+            @if (_Generated)
+            {
+                <Alert Type="@AlertType.Success"
+                       Message="邀请码生成成功"
+                       ShowIcon="true"
+                       Style="margin-bottom: 16px;">
+                    <Description>
+                        <Button Type="@ButtonType.Link"
+                                OnClick="@(() => Navigation.NavigateTo($"/owner/groups/roster-export?importId={_ImportId}"))">
+                            去导出 CSV
+                        </Button>
+                    </Description>
+                </Alert>
+            }
+        }
+        else
+        {
+            <Card>
+                <Empty Description="@("请先选择群组")" />
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

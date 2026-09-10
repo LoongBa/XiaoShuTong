@@ -1,0 +1,129 @@
+@page "/owner/groups/roster-export"
+@namespace XiaoShuTong.AdminWasm.Pages.Groups
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.GroupManagement.Controllers
+
+<PageContainer Title="CSV导出">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>群组管理</BreadcrumbItem>
+            <BreadcrumbItem>CSV导出</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 群组选择 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span>选择群组：</span>
+                <Select TItemValue="long" TItem="GroupListItemDto"
+                        @bind-Value="@_SelectedGroupId"
+                        Placeholder="请选择群组"
+                        Style="width: 300px;"
+                        OnSelectedItemChanged="OnGroupChanged">
+                    @foreach (var g in _Groups)
+                    {
+                        <SelectOption TItemValue="long" TItem="GroupListItemDto"
+                                      Value="@g.GroupId" Label="@g.Name" />
+                    }
+                </Select>
+            </div>
+        </Card>
+
+        @if (_SelectedGroupId > 0)
+        {
+            @* ─ 操作按钮 ─ *@
+            <Card Style="margin-bottom: 16px;">
+                <Space>
+                    <SpaceItem>
+                        <Button Type="@ButtonType.Primary" Loading="@_Generating"
+                                OnClick="OnGenerateAsync">
+                            生成一次性邀请码
+                        </Button>
+                    </SpaceItem>
+                    <SpaceItem>
+                        <Button Loading="@_Exporting"
+                                Disabled="@(_PreviewData == null || _PreviewData.CleanedCount == 0)"
+                                OnClick="OnExportAsync">
+                            导出 CSV
+                        </Button>
+                    </SpaceItem>
+                </Space>
+            </Card>
+
+            @* ─ 错误提示 ─ *@
+            @if (!string.IsNullOrEmpty(_ErrorMessage))
+            {
+                <Alert Type="@AlertType.Error"
+                       Message="@_ErrorMessage"
+                       ShowIcon="true"
+                       Style="margin-bottom: 16px;" />
+            }
+
+            @* ─ 预览统计 ─ *@
+            @if (_PreviewData != null)
+            {
+                <Card Title="批次预览" Style="margin-bottom: 16px;">
+                    <div style="display: flex; gap: 16px;">
+                        <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                            <div style="color: #8c8c8c; font-size: 14px;">导入总数</div>
+                            <div style="font-size: 24px; margin-top: 4px;">@_PreviewData.SourceCount</div>
+                        </div>
+                        <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                            <div style="color: #8c8c8c; font-size: 14px;">有效号码</div>
+                            <div style="font-size: 24px; margin-top: 4px; color: #3f8600;">@_PreviewData.CleanedCount</div>
+                        </div>
+                        <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                            <div style="color: #8c8c8c; font-size: 14px;">去重剔除</div>
+                            <div style="font-size: 24px; margin-top: 4px; color: #cf1322;">@_PreviewData.DuplicateCount</div>
+                        </div>
+                        <div style="flex: 1; text-align: center; padding: 16px; border: 1px solid #f0f0f0; border-radius: 2px;">
+                            <div style="color: #8c8c8c; font-size: 14px;">非法剔除</div>
+                            <div style="font-size: 24px; margin-top: 4px; color: #cf1322;">@_PreviewData.InvalidCount</div>
+                        </div>
+                    </div>
+                </Card>
+            }
+
+            @* ─ CSV 下载链接 ─ *@
+            @if (!string.IsNullOrEmpty(_CsvFileUrl))
+            {
+                <Card Title="CSV下载" Style="margin-bottom: 16px;">
+                    <div style="margin-bottom: 12px;">
+                        <Text>下载链接（7天内有效）：</Text>
+                        <div style="margin-top: 8px; padding: 12px; background: #fafafa; border-radius: 4px;">
+                            <a href="@_CsvFileUrl" target="_blank" style="color: #1890ff;">@_CsvFileUrl</a>
+                        </div>
+                        @if (_ExpiresAt.HasValue)
+                        {
+                            <div style="margin-top: 8px; color: #999; font-size: 12px;">
+                                过期时间: @_ExpiresAt.Value.ToString("yyyy-MM-dd HH:mm")
+                            </div>
+                        }
+                    </div>
+                </Card>
+            }
+
+            @* ─ 分发话术 ─ *@
+            @if (_PreviewData != null && _PreviewData.CleanedCount > 0)
+            {
+                <Card Title="分发话术">
+                    <div style="padding: 12px; background: #f6f8fa; border-radius: 4px; line-height: 1.8;">
+                        【小书童内测】@("手机号后四位") XXXX，你已被邀请加入群组，请用一次性邀请码 XXXX-XXXX 激活（7天内有效），激活即绑定微信。
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <Button OnClick="CopyTemplateAsync">复制话术模板</Button>
+                    </div>
+                </Card>
+            }
+        }
+        else
+        {
+            <Card>
+                <Empty Description="@("请先选择群组")" />
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

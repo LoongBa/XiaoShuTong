@@ -1,0 +1,70 @@
+@page "/owner/groups/beta-invite"
+@namespace XiaoShuTong.AdminWasm.Pages.Groups
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.GroupManagement.Controllers
+
+<PageContainer Title="激活建群">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>群组管理</BreadcrumbItem>
+            <BreadcrumbItem>激活建群</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        <Card>
+            <Form Model="@_formModel"
+                  LabelColSpan="6"
+                  WrapperColSpan="14"
+                  OnFinish="OnFinishAsync">
+                <FormItem Label="内测邀请码" Required>
+                    <Input @bind-Value="@_formModel.BetaCode"
+                           Placeholder="请输入16位内测邀请码"
+                           MaxLength="16"
+                           Style="font-family: 'Cascadia Code', 'Consolas', monospace;" />
+                </FormItem>
+                <FormItem Label="群组名称" Required>
+                    <Input @bind-Value="@_formModel.Name"
+                           Placeholder="请输入群组名称（≤64字符）"
+                           MaxLength="64" />
+                </FormItem>
+                <FormItem Label="学科" Required>
+                    <Select TItemValue="string" TItem="string"
+                            @bind-Value="@_formModel.Subject"
+                            Placeholder="请选择学科"
+                            Style="width: 100%;">
+                        @foreach (var subject in _Subjects)
+                        {
+                            <SelectOption TItemValue="string" TItem="string" Value="@subject" Label="@subject" />
+                        }
+                    </Select>
+                </FormItem>
+                <FormItem Label="年级">
+                    <Input @bind-Value="@_formModel.Grade"
+                           Placeholder="可选，如：高一、初三" />
+                </FormItem>
+                <FormItem WrapperColSpan="14" WrapperColOffset="6">
+                    <Button Type="@ButtonType.Primary" HtmlType="submit" Loading="@_Submitting"
+                            Disabled="@_SubmitDisabled">
+                        激活建群
+                    </Button>
+                    <Button Style="margin-left: 12px;"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/groups/list"))">
+                        取消
+                    </Button>
+                </FormItem>
+            </Form>
+        </Card>
+
+        @* ─ 错误提示 ─ *@
+        @if (!string.IsNullOrEmpty(_ErrorMessage))
+        {
+            <Alert Type="@AlertType.Error"
+                   Message="@_ErrorMessage"
+                   ShowIcon="true"
+                   Style="margin-top: 16px;" />
+        }
+
+    </ChildContent>
+</PageContainer>

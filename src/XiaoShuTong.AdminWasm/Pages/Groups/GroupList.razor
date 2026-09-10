@@ -1,0 +1,80 @@
+@page "/owner/groups/list"
+@namespace XiaoShuTong.AdminWasm.Pages.Groups
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.GroupManagement.Controllers
+
+<PageContainer Title="群组管理">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>群组管理</BreadcrumbItem>
+            <BreadcrumbItem>群组列表</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 顶部操作栏 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; justify-content: flex-end;">
+                <Button Type="@ButtonType.Primary" OnClick="@(() => Navigation.NavigateTo("/owner/groups/beta-invite"))">
+                    激活建群
+                </Button>
+            </div>
+        </Card>
+
+        @* ─ 加载中 ─ *@
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="加载中..." />
+            </Card>
+        }
+        @* ─ 空态 ─ *@
+        else if (_Groups.Length == 0)
+        {
+            <Card>
+                <Empty Description="@("还没有群组")">
+                    <Button Type="@ButtonType.Primary"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/groups/beta-invite"))">
+                        输入内测码激活建群
+                    </Button>
+                </Empty>
+            </Card>
+        }
+        @* ─ 群组卡片列表 ─ *@
+        else
+        {
+            <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+                @foreach (var group in _Groups)
+                {
+                    <div style="flex: 0 0 calc(25% - 12px); min-width: 240px;">
+                        <Card Hoverable>
+                            <Title Level="4" Style="margin-bottom: 8px;">@group.Name</Title>
+                            <div style="color: #666; margin-bottom: 4px;">
+                                <Tag>@(group.Subject ?? "未设置")</Tag>
+                                @if (!string.IsNullOrEmpty(group.Grade))
+                                {
+                                    <Tag>@group.Grade</Tag>
+                                }
+                            </div>
+                            <div style="color: #999; margin-bottom: 12px;">
+                                <span>成员 @group.MemberCount 人</span>
+                                <span style="margin-left: 12px;">执行率 @(group.ExecutionRate)%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 12px; color: #999;">
+                                    排名 @(group.RankEnabled ? "开启" : "关闭")
+                                </span>
+                                <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                        OnClick="@(() => Navigation.NavigateTo($"/owner/groups/detail/{group.GroupId}"))">
+                                    详情
+                                </Button>
+                            </div>
+                        </Card>
+                    </div>
+                }
+            </div>
+        }
+
+    </ChildContent>
+</PageContainer>

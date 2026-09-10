@@ -1,32 +1,62 @@
 [
   {
-    "path": "/",
+    "path": "/owner/groups/list",
     "name": "工作台",
     "key": "dashboard",
     "icon": "dashboard"
   },
   {
-    "path": "/",
-    "name": "学习",
-    "key": "study",
-    "icon": "book",
+    "path": "/owner/groups/list",
+    "name": "群组管理",
+    "key": "groups",
+    "icon": "team",
     "children": [
       {
-        "path": "/",
-        "name": "学习计划",
-        "key": "study.plan"
+        "path": "/owner/groups/list",
+        "name": "群组列表",
+        "key": "groups.list"
       },
       {
-        "path": "/",
-        "name": "学习记录",
-        "key": "study.records"
+        "path": "/owner/groups/beta-invite",
+        "name": "激活建群",
+        "key": "groups.beta-invite"
+      },
+      {
+        "path": "/owner/groups/roster-import",
+        "name": "名单导入",
+        "key": "groups.roster-import"
+      },
+      {
+        "path": "/owner/groups/roster-export",
+        "name": "CSV 导出",
+        "key": "groups.roster-export"
       }
     ]
   },
   {
-    "path": "/",
-    "name": "设置",
-    "key": "settings",
-    "icon": "setting"
+    "path": "/owner/groups/list",
+    "name": "任务管理",
+    "key": "tasks",
+    "icon": "schedule",
+    "children": [
+      {
+        "path": "/owner/groups/list",
+        "name": "任务列表",
+        "key": "tasks.list"
+      }
+    ]
+  },
+  {
+    "path": "/owner/groups/list",
+    "name": "内容管理",
+    "key": "banks",
+    "icon": "book",
+    "children": [
+      {
+        "path": "/owner/groups/list",
+        "name": "题库管理",
+        "key": "banks.list"
+      }
+    ]
   }
 ]

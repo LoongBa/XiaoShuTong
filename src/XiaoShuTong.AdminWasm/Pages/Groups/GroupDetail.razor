@@ -1,0 +1,121 @@
+@page "/owner/groups/detail/{GroupId:long}"
+@namespace XiaoShuTong.AdminWasm.Pages.Groups
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.GroupManagement.Controllers
+
+<PageContainer Title="群组详情">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>群组管理</BreadcrumbItem>
+            <BreadcrumbItem>群组详情</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="加载中..." />
+            </Card>
+        }
+        else if (_GroupDetail != null)
+        {
+            @* ─ 群组信息头 ─ *@
+            <Card Style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                            <Title Level="3" Style="margin: 0;">@_GroupDetail.GroupName</Title>
+                            <Tag>@(_GroupDetail.Subject ?? "未设置")</Tag>
+                            @if (!string.IsNullOrEmpty(_GroupDetail.Grade))
+                            {
+                                <Tag>@_GroupDetail.Grade</Tag>
+                            }
+                        </div>
+                        <div style="color: #666;">
+                            <span>成员 @_GroupDetail.Members.Count 人</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span>排名开关：</span>
+                            <Switch @bind-Value="@_RankEnabled" Loading="@_SavingRank"
+                                   OnChange="OnRankToggleAsync" />
+                        </div>
+                        <div>
+                            <Space>
+                                <SpaceItem>
+                                    <Button Size="@ButtonSize.Small"
+                                            OnClick="@(() => Navigation.NavigateTo("/owner/groups/roster-import"))">
+                                        导入名单
+                                    </Button>
+                                </SpaceItem>
+                                <SpaceItem>
+                                    <Button Size="@ButtonSize.Small"
+                                            OnClick="@(() => Navigation.NavigateTo($"/owner/groups/roster-export?importId=0"))">
+                                        导出 CSV
+                                    </Button>
+                                </SpaceItem>
+                            </Space>
+                        </div>
+                    </div>
+                </div>
+            </Card>
+
+            @* ─ 成员列表 ─ *@
+            <Card Title="成员列表">
+                @if (_GroupDetail.Members.Count == 0)
+                {
+                    <Empty Description="@("还没有成员")">
+                        <Button Type="@ButtonType.Primary"
+                                OnClick="@(() => Navigation.NavigateTo("/owner/groups/roster-import"))">
+                            导入名单
+                        </Button>
+                    </Empty>
+                }
+                else
+                {
+                    <Table TItem="MemberItemDto"
+                           DataSource="@_GroupDetail.Members"
+                           RowKey="@(x => x.UserId)">
+                        <Column TData="long" Title="用户ID" Field="@context.UserId" Width="100">
+                            <BodyTemplate>
+                                <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                                    @context.UserId
+                                </span>
+                            </BodyTemplate>
+                        </Column>
+                        <Column TData="string" Title="昵称" Field="@context.Nickname" Width="150">
+                            <BodyTemplate>
+                                @(context.Nickname ?? "未设置")
+                            </BodyTemplate>
+                        </Column>
+                        <Column TData="string" Title="角色" Field="@context.Role" Width="100" />
+                        <Column TData="DateTime" Title="加入时间" Field="@context.JoinedAt" Width="180">
+                            <BodyTemplate>
+                                @context.JoinedAt.ToString("yyyy-MM-dd HH:mm")
+                            </BodyTemplate>
+                        </Column>
+                        <Column TData="int" Title="进度" Field="@context.Progress" Width="100">
+                            <BodyTemplate>
+                                @(context.Progress)%
+                            </BodyTemplate>
+                        </Column>
+                        <Column TData="string" Title="操作" Width="120">
+                            <BodyTemplate>
+                                <Popconfirm Title="确定要移除该成员吗？移除后学习数据将保留。"
+                                            OnConfirm="@(() => OnRemoveMemberAsync(context.UserId))"
+                                            OkText="确定移除"
+                                            CancelText="取消">
+                                    <Button Size="@ButtonSize.Small" Danger>移除</Button>
+                                </Popconfirm>
+                            </BodyTemplate>
+                        </Column>
+                    </Table>
+                }
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>
