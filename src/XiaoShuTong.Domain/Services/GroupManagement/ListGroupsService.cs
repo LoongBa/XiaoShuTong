@@ -50,6 +50,7 @@ internal class ListGroupsService(DomainUser<XiaoShuTongUserInfo> user)
             listItems.Add(new GroupListItemDto
             {
                 GroupId = group.Id,
+                GroupUid = group.UId,
                 Name = group.Name,
                 Subject = group.Subject,
                 Grade = group.Grade,
@@ -107,6 +108,9 @@ public sealed record GroupListItemDto
 {
     /// <summary>群组 Id</summary>
     public long GroupId { get; init; }
+
+    /// <summary>群组外部键（Uid，任务/看板等跨服务引用用）</summary>
+    public string GroupUid { get; init; } = string.Empty;
 
     /// <summary>群组名称</summary>
     public string Name { get; init; } = string.Empty;

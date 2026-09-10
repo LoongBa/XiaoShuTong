@@ -1,0 +1,132 @@
+@page "/owner/tasks/create"
+@namespace XiaoShuTong.AdminWasm.Pages.Tasks
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.TaskManagement.Api
+
+<PageContainer Title="布置任务">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>任务管理</BreadcrumbItem>
+            <BreadcrumbItem>布置任务</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 步骤条 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <Steps Current="@_CurrentStep">
+                <Step Title="@("选题源")" Description="@("选择群组和题库")" />
+                <Step Title="@("配置")" Description="@("任务名称和截止时间")" />
+                <Step Title="@("预览发布")" Description="@("确认并发布")" />
+            </Steps>
+        </Card>
+
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="@("加载中...")" />
+            </Card>
+        }
+        else
+        {
+            @* ─ Step 1：选题源 ─ *@
+            @if (_CurrentStep == 0)
+            {
+                <Card Title="@("选择群组和题库")">
+                    <div style="max-width: 480px;">
+                        <div style="margin-bottom: 16px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("群组（必选）")</label>
+                            <Select TItemValue="string" TItem="GroupListItemDto"
+                                    Style="width: 100%;"
+                                    @bind-Value="@_SelectedGroupUid"
+                                    Placeholder="@("请选择群组")">
+                                @foreach (var group in _Groups)
+                                {
+                                    <SelectOption Value="@group.GroupUid" TItemValue="string" TItem="GroupListItemDto" Label="@group.Name" />
+                                }
+                            </Select>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("题库（可选）")</label>
+                            <Select TItemValue="string" TItem="string"
+                                    Style="width: 100%;"
+                                    @bind-Value="@_SelectedBankId"
+                                    Placeholder="@("自由编排可不选")"
+                                    AllowClear>
+                                @* TODO: 题库列表需要 IBankManagementService 或类似接口 *@
+                            </Select>
+                        </div>
+                    </div>
+                </Card>
+            }
+
+            @* ─ Step 2：配置 ─ *@
+            @if (_CurrentStep == 1)
+            {
+                <Card Title="@("任务配置")">
+                    <div style="max-width: 480px;">
+                        <div style="margin-bottom: 16px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("任务名称（必填）")</label>
+                            <Input @bind-Value="@_Title" Placeholder="@("请输入任务名称，如：第三章背诵")" MaxLength="128" />
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("任务说明")</label>
+                            <TextArea @bind-Value="@_Description" Placeholder="@("可选，补充说明")" Rows="3" />
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("截止时间")</label>
+                            <DatePicker @bind-Value="@_DeadlineAt" Placeholder="@("请选择截止时间")" Style="width: 100%;" />
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">@("允许重做")</label>
+                            <Switch @bind-Value="@_AllowRedo" />
+                        </div>
+                    </div>
+                </Card>
+            }
+
+            @* ─ Step 3：预览发布 ─ *@
+            @if (_CurrentStep == 2)
+            {
+                <Card Title="@("确认发布")">
+                    <Descriptions Column="1" Bordered>
+                        <DescriptionsItem Label="@("群组")">@_SelectedGroupName</DescriptionsItem>
+                        <DescriptionsItem Label="@("任务名称")">@_Title</DescriptionsItem>
+                        <DescriptionsItem Label="@("任务说明")">@(_Description ?? "无")</DescriptionsItem>
+                        <DescriptionsItem Label="@("截止时间")">@(_DeadlineAt?.ToString("yyyy-MM-dd HH:mm") ?? "无")</DescriptionsItem>
+                        <DescriptionsItem Label="@("允许重做")">@(_AllowRedo ? "是" : "否")</DescriptionsItem>
+                    </Descriptions>
+                </Card>
+            }
+
+            @* ─ 操作按钮 ─ *@
+            <Card Style="margin-top: 16px;">
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        @if (_CurrentStep > 0)
+                        {
+                            <Button OnClick="@(() => _CurrentStep--)">@("上一步")</Button>
+                        }
+                    </div>
+                    <div>
+                        @if (_CurrentStep < 2)
+                        {
+                            <Button Type="@ButtonType.Primary" OnClick="@(() => _CurrentStep++)"
+                                    Disabled="@(_CurrentStep == 0 && string.IsNullOrEmpty(_SelectedGroupUid))">
+                                @("下一步")
+                            </Button>
+                        }
+                        else
+                        {
+                            <Button Type="@ButtonType.Primary" OnClick="@OnSubmitAsync" Loading="@_Submitting">
+                                @("发布任务")
+                            </Button>
+                        }
+                    </div>
+                </div>
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

@@ -1,0 +1,134 @@
+@page "/owner/dashboard"
+@namespace XiaoShuTong.AdminWasm.Pages.Dashboard
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.TaskManagement.Api
+@using XiaoShuTong.Services.Shared
+
+<PageContainer Title="工作台">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>工作台</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 群组选择器 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span>选择群组：</span>
+                <Select TItemValue="string" TItem="GroupListItemDto"
+                        Style="width: 240px;"
+                        @bind-Value="@_SelectedGroupUid"
+                        Placeholder="@("请选择群组")"
+                        OnSelectedItemChanged="OnGroupChanged">
+                    @foreach (var group in _Groups)
+                    {
+                        <SelectOption Value="@group.GroupUid" TItemValue="string" TItem="GroupListItemDto" Label="@group.Name" />
+                    }
+                </Select>
+            </div>
+        </Card>
+
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="@("加载中...")" />
+            </Card>
+        }
+        else if (_DashboardData == null)
+        {
+            <Card>
+                <Empty Description="@("请选择群组查看看板")" />
+            </Card>
+        }
+        else if (_DashboardData.TaskList.Count == 0)
+        {
+            @* ─ BR-14：无任务空态 ─ *@
+            <Card>
+                <Empty Description="@("还没有布置任务")">
+                    <Button Type="@ButtonType.Primary"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/tasks/create"))">
+                        布置一个任务
+                    </Button>
+                </Empty>
+            </Card>
+        }
+        else
+        {
+            @* ─ 指标卡 ─ *@
+            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                <div style="flex: 1;">
+                    <Card>
+                        <Statistic Title="@("今日执行率")" Value="@(_DashboardData.TodayExecutionRate * 100)" Suffix="%" Precision="1" />
+                    </Card>
+                </div>
+                <div style="flex: 1;">
+                    <Card>
+                        <Statistic Title="@("平均进度")" Value="@(_DashboardData.AvgProgress * 100)" Suffix="%" Precision="1" />
+                    </Card>
+                </div>
+                <div style="flex: 1;">
+                    <Card>
+                        <Statistic Title="@("逾期任务")" Value="@_DashboardData.OverdueCount" ValueStyle="color: #cf1322;" />
+                    </Card>
+                </div>
+                <div style="flex: 1;">
+                    <Card Title="@("薄弱点 Top5")">
+                        @if (_DashboardData.WeakPointsTop5.Count == 0)
+                        {
+                            <span style="color: #999;">@("暂无数据")</span>
+                        }
+                        else
+                        {
+                            @foreach (var wp in _DashboardData.WeakPointsTop5)
+                            {
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                    <span>@wp.KnowledgePoint</span>
+                                    <span>@(wp.Accuracy * 100)%</span>
+                                </div>
+                            }
+                        }
+                    </Card>
+                </div>
+            </div>
+
+            @* ─ 任务列表 ─ *@
+            <Card Title="@("任务列表")">
+                <Table TItem="DashboardTaskDto"
+                       DataSource="@_DashboardData.TaskList"
+                       RowKey="@((x) => x.Task?.UId ?? string.Empty)">
+                    <ChildContent>
+                        <Column TData="string" Title="@("任务名")" Field="@context.Task?.Title" Width="200" />
+                        <Column TData="double" Title="@("完成率")" Field="@context.CompletionRate" Width="150">
+                            <BodyTemplate>
+                                <Progress Percent="@(context.CompletionRate * 100)" />
+                            </BodyTemplate>
+                        </Column>
+                        <Column TData="string" Title="@("状态")" Field="@context.Status" Width="100">
+                            <BodyTemplate>
+                                @if (context.Status == "Overdue")
+                                {
+                                    <Tag Color="@("red")">@("逾期")</Tag>
+                                }
+                                else
+                                {
+                                    <Tag Color="@("green")">@("正常")</Tag>
+                                }
+                            </BodyTemplate>
+                        </Column>
+                        <ActionColumn Title="@("操作")" Width="100">
+                            <BodyTemplate>
+                                <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                        OnClick="@(() => Navigation.NavigateTo($"/owner/tasks/detail/{context.Task?.UId}"))">
+                                    @("详情")
+                                </Button>
+                            </BodyTemplate>
+                        </ActionColumn>
+                    </ChildContent>
+                </Table>
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

@@ -1,6 +1,6 @@
 [
   {
-    "path": "/owner/groups/list",
+    "path": "/owner/dashboard",
     "name": "工作台",
     "key": "dashboard",
     "icon": "dashboard"
@@ -34,15 +34,15 @@
     ]
   },
   {
-    "path": "/owner/groups/list",
+    "path": "/owner/tasks/create",
     "name": "任务管理",
     "key": "tasks",
     "icon": "schedule",
     "children": [
       {
-        "path": "/owner/groups/list",
-        "name": "任务列表",
-        "key": "tasks.list"
+        "path": "/owner/tasks/create",
+        "name": "布置任务",
+        "key": "tasks.create"
       }
     ]
   },

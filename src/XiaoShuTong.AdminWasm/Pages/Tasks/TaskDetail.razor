@@ -1,0 +1,107 @@
+@page "/owner/tasks/detail/{TaskUid}"
+@namespace XiaoShuTong.AdminWasm.Pages.Tasks
+@using XiaoShuTong.Services.TaskManagement.Api
+@using XiaoShuTong.Entities.TaskManagement.DTOs.Api
+
+<PageContainer Title="任务详情">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>任务管理</BreadcrumbItem>
+            <BreadcrumbItem>任务详情</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="@("加载中...")" />
+            </Card>
+        }
+        else if (_TaskDetail == null)
+        {
+            <Card>
+                <Empty Description="@("任务不存在")">
+                    <Button Type="@ButtonType.Primary"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/dashboard"))">
+                        返回工作台
+                    </Button>
+                </Empty>
+            </Card>
+        }
+        else
+        {
+            @* ─ 任务头信息 ─ *@
+            <Card Style="margin-bottom: 16px;">
+                <Descriptions Column="2" Bordered Title="@(_TaskDetail.Task?.Title ?? "任务详情")">
+                    <DescriptionsItem Label="@("任务名称")">@(_TaskDetail.Task?.Title)</DescriptionsItem>
+                    <DescriptionsItem Label="@("状态")">
+                        <Tag>@(_TaskDetail.Task?.Status ?? "未知")</Tag>
+                    </DescriptionsItem>
+                    <DescriptionsItem Label="@("题目数")">@(_TaskDetail.Task?.QuestionCount)</DescriptionsItem>
+                    <DescriptionsItem Label="@("截止时间")">
+                        @(_TaskDetail.Task?.DeadlineAt?.ToString("yyyy-MM-dd HH:mm") ?? "无截止时间")
+                    </DescriptionsItem>
+                    <DescriptionsItem Label="@("任务说明")" Span="2">
+                        @(_TaskDetail.Task?.Description ?? "无")
+                    </DescriptionsItem>
+                </Descriptions>
+            </Card>
+
+            @* ─ 成员执行状态列表 ─ *@
+            <Card Title="@($"成员执行状态（{_TaskDetail.Members.Count} 人）")">
+                @if (_TaskDetail.Members.Count == 0)
+                {
+                    <Empty Description="@("暂无成员数据")" />
+                }
+                else
+                {
+                    <Table TItem="TaskAssignmentsDto"
+                           DataSource="@_TaskDetail.Members"
+                           RowKey="@(x => x.UId)">
+                        <ChildContent>
+                            <Column TData="long" Title="@("用户ID")" Field="@context.UserId" Width="100">
+                                <BodyTemplate>
+                                    <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                                        @context.UserId
+                                    </span>
+                                </BodyTemplate>
+                            </Column>
+                            <Column TData="string" Title="@("状态")" Field="@context.Status" Width="120">
+                                <BodyTemplate>
+                                    @switch (context.Status)
+                                    {
+                                        case "Completed":
+                                            <Tag Color="@("green")">@("已完成")</Tag>
+                                            break;
+                                        case "InProgress":
+                                            <Tag Color="@("blue")">@("进行中")</Tag>
+                                            break;
+                                        case "Overdue":
+                                            <Tag Color="@("red")">@("逾期")</Tag>
+                                            break;
+                                        default:
+                                            <Tag>@("待开始")</Tag>
+                                            break;
+                                    }
+                                </BodyTemplate>
+                            </Column>
+                            <Column TData="int" Title="@("进度")" Field="@context.Progress" Width="150">
+                                <BodyTemplate>
+                                    <Progress Percent="@context.Progress" />
+                                </BodyTemplate>
+                            </Column>
+                            <Column TData="DateTime" Title="@("分配时间")" Field="@context.AssignedAt" Width="180">
+                                <BodyTemplate>
+                                    @context.AssignedAt.ToString("yyyy-MM-dd HH:mm")
+                                </BodyTemplate>
+                            </Column>
+                        </ChildContent>
+                    </Table>
+                }
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>
