@@ -3,6 +3,7 @@ using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
 using XiaoShuTong.DataServices.Pk;
 using XiaoShuTong.Entities.Pk;
+using XiaoShuTong.Services.Platform;
 
 namespace XiaoShuTong.Services.Pk;
 
@@ -11,6 +12,7 @@ namespace XiaoShuTong.Services.Pk;
 /// </summary>
 /// <remarks>
 /// BR-17 对局不存在 → 2001 | BR-18 AI 点评失败留空 + 兜底文案 | BR-19 合规：无正确率对比榜 | BR-20 胜负由 WinnerId 判定（NULL=平局）
+/// 平台-BR-02/03/04：AI 点评走统一网关，网关失败/降级 → 兜底文案。
 /// 知识彩蛋（knowledgeEggs）响应态展示不落库（切片返回空数组）。
 /// </remarks>
 [GenerateController]
@@ -25,6 +27,9 @@ internal class GetPkResultService(DomainUser<XiaoShuTongUserInfo> user)
 
     private PkPlayersDataService? _playersDs;
     private PkPlayersDataService PlayersDs => _playersDs ??= User.Use<PkPlayersDataService>();
+
+    private LlmGateway? _llmGateway;
+    private LlmGateway LlmGateway => _llmGateway ??= User.Use<LlmGateway>();
 
     /// <summary>
     /// PK 结果（胜负 + 双方得分/用时/点评）
@@ -57,14 +62,16 @@ internal class GetPkResultService(DomainUser<XiaoShuTongUserInfo> user)
                     ? "对局超时"
                     : null;
 
-        // BR-18：AI 点评失败留空 → 兜底文案（切片：未接 LLM，直接兜底）
+        // BR-18：AI 点评 → 统一网关生成；网关失败/降级 → 兜底文案
+        var aiComment = await BuildAiCommentAsync(match, players, ct);
+
         var playerItems = players.Select(p => new PkPlayerResultDto
         {
             UserId = p.UserId,
             Nickname = string.Empty, // 账户域（跨模块），切片为空串
             Score = p.Score,
             TotalTimeMs = p.TotalTimeMs,
-            AiComment = string.IsNullOrWhiteSpace(p.AiComment) ? AiCommentFallback : p.AiComment,
+            AiComment = aiComment,
         }).ToList();
 
         // BR-19：合规——仅展示 ★数/用时，无正确率对比榜
@@ -79,6 +86,28 @@ internal class GetPkResultService(DomainUser<XiaoShuTongUserInfo> user)
             KnowledgeEggs = [], // 知识彩蛋响应态展示（切片不落库，返回空）
         };
     }
+
+    /// <summary>
+    /// 生成 AI 点评（平台-BR-02/03/04）：网关成功 → 点评内容；失败/降级 → 兜底文案（BR-18）
+    /// </summary>
+    private async Task<string> BuildAiCommentAsync(PkMatches match, List<PkPlayers> players, CancellationToken ct)
+    {
+        var summary = string.Join("；", players.Select(p => $"用户{p.UserId}得分{p.Score}用时{p.TotalTimeMs}ms"));
+        var llmResult = await LlmGateway.CompleteAsync(
+            PkCommentSystemPrompt,
+            $"对局状态：{match.Status}；结束原因：{match.FinishReason}；胜方用户：{match.WinnerId}；对局摘要：{summary}",
+            ct);
+
+        if (llmResult.Success && !string.IsNullOrWhiteSpace(llmResult.Content))
+            return llmResult.Content.Trim();
+        return AiCommentFallback;
+    }
+
+    private const string PkCommentSystemPrompt =
+        """
+        你是小书童的搭子 PK 趣味点评助手。根据对局摘要生成一句简短、积极、鼓励性的中文点评（不超过 50 字），
+        面向参与对局的学生，语言生动有趣但不夸大胜负。
+        """;
 
     private static string? DetermineScoreWinReason(List<PkPlayers> players)
     {

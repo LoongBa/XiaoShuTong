@@ -73,5 +73,11 @@
         "key": "banks.preprocess"
       }
     ]
+  },
+  {
+    "path": "/owner/platform/ai-models",
+    "name": "AI 模型",
+    "key": "platform.ai-models",
+    "icon": "robot"
   }
 ]

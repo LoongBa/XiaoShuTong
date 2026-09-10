@@ -509,6 +509,17 @@ public enum SubscriptionStatus
     /// <summary>已过期</summary>
     Expired = 2,
 
-    /// <summary>已取消（权益至周期末）</summary>
+/// <summary>已取消（权益至周期末）</summary>
     Cancelled = 3,
+}
+
+// ── 平台运营域（Platform）枚举 ───────────────────────────────
+// 来源：DS01-数据结构设计-平台运营（AI 网关）§枚举定义
+// 存储格式：string（PascalCase），实体列标注 [Column(MapType = typeof(string))]
+
+/// <summary>AI 模型供应商</summary>
+public enum AiProvider
+{
+    /// <summary>OpenAI 兼容协议（OpenAI/DeepSeek/通义等 /v1/chat/completions）</summary>
+    OpenAiCompatible = 0,
 }

@@ -1,0 +1,161 @@
+@page "/owner/platform/ai-models"
+@namespace XiaoShuTong.AdminWasm.Pages.Platform
+@using XiaoShuTong.Services.Platform.Api
+@using XiaoShuTong.Entities.Platform.DTOs.Api
+@using XiaoShuTong.Api
+
+<PageContainer Title="@("AI 模型配置")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("平台运营")</BreadcrumbItem>
+            <BreadcrumbItem>@("AI 模型配置")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        <Alert Type="@AlertType.Info"
+               ShowIcon="true"
+               Message="@("统一 AI 网关：多模型 round-robin 轮询")"
+               Description="@("配置多个 AI 供应商的模型端点，系统按 SortOrder 升序轮询调用；ApiKey 为敏感字段，仅新增时填写，列表/编辑不展示。")"
+               Style="margin-bottom: 16px;" />
+
+        @* ─ 顶部工具栏 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; justify-content: flex-end;">
+                <Button Type="@ButtonType.Primary" OnClick="@ShowCreateModal">
+                    @("新增模型")
+                </Button>
+            </div>
+        </Card>
+
+        @* ─ 列表表格 ─ *@
+        <Card>
+            @if (_Loading)
+            {
+                <Spin Tip="@("加载中...")" />
+            }
+            else
+            {
+                <Table TItem="AiModelConfigDto"
+                       DataSource="@_Items"
+                       RowKey="@(x => x.UId)"
+                       Size="@TableSize.Middle">
+                    <PropertyColumn Property="@(x => x.Name)" Title="@("名称")" Width="140" />
+                    <Column TData="string" Title="@("供应商")" Width="120">
+                        <Tag Color="@("geekblue")">@context.Provider.ToString()</Tag>
+                    </Column>
+                    <PropertyColumn Property="@(x => x.BaseUrl)" Title="@("BaseUrl")" Width="220" Ellipsis />
+                    <PropertyColumn Property="@(x => x.ModelName)" Title="@("模型名")" Width="140" />
+                    <Column TData="bool" Title="@("启用")" Width="80">
+                        <Switch Checked="@context.Enabled"
+                                CheckedChanged="@(async (bool val) => await OnEnabledChangedAsync(context, val))" />
+                    </Column>
+                    <PropertyColumn Property="@(x => x.SortOrder)" Title="@("顺序")" Width="70" />
+                    <Column TData="int" Title="@("超时(s)")" Width="80">
+                        @context.TimeoutSeconds
+                    </Column>
+                    <PropertyColumn Property="@(x => x.Remark)" Title="@("备注")" Width="140" Ellipsis />
+                    <PropertyColumn Property="@(x => x.CreateTime)" Title="@("创建时间")" Width="160"
+                                    Format="yyyy-MM-dd HH:mm" />
+                    <Column TData="string" Title="@("操作")" Width="140">
+                        <Space>
+                            <SpaceItem>
+                                <Button Size="@ButtonSize.Small" Type="@ButtonType.Link"
+                                        OnClick="@(() => ShowEditModal(context))">
+                                    @("编辑")
+                                </Button>
+                            </SpaceItem>
+                            <SpaceItem>
+                                <Popconfirm Title="@("确定删除该模型配置？")"
+                                            OnConfirm="@(() => OnDeleteAsync(context))"
+                                            OkText="@("删除")"
+                                            CancelText="@("取消")">
+                                    <Button Size="@ButtonSize.Small" Type="@ButtonType.Link" Danger>
+                                        @("删除")
+                                    </Button>
+                                </Popconfirm>
+                            </SpaceItem>
+                        </Space>
+                    </Column>
+                </Table>
+            }
+        </Card>
+
+    </ChildContent>
+</PageContainer>
+
+@* ─ 新增 Modal ─ *@
+<Modal Title="@("新增模型配置")"
+       Visible="@_CreateVisible"
+       OnOk="@OnCreateOkAsync"
+       OnCancel="@OnCreateCancel"
+       ConfirmLoading="@_Creating"
+       OkText="@("创建")"
+       CancelText="@("取消")">
+    <Form Model="@_CreateForm" Layout="@FormLayout.Vertical">
+        <FormItem Label="@("名称")">
+            <Input @bind-Value="@_CreateForm.Name" Placeholder="@("如：主力模型-OpenAI")" />
+        </FormItem>
+        <FormItem Label="@("供应商")">
+            <Input @bind-Value="@_CreateForm.Provider" Placeholder="@("如：OpenAiCompatible")" />
+        </FormItem>
+        <FormItem Label="@("BaseUrl")">
+            <Input @bind-Value="@_CreateForm.BaseUrl" Placeholder="@("如：https://api.openai.com/v1")" />
+        </FormItem>
+        <FormItem Label="@("ApiKey")">
+            <Input @bind-Value="@_CreateForm.ApiKey" Placeholder="@("必填，敏感密钥")" />
+        </FormItem>
+        <FormItem Label="@("模型名")">
+            <Input @bind-Value="@_CreateForm.ModelName" Placeholder="@("如：gpt-4o-mini")" />
+        </FormItem>
+        <FormItem Label="@("启用")">
+            <Switch @bind-Value="@_CreateForm.Enabled" />
+        </FormItem>
+        <FormItem Label="@("排序顺序")">
+            <AntDesign.InputNumber @bind-Value="@_CreateForm.SortOrder" Min="0" Style="width:100%;" />
+        </FormItem>
+        <FormItem Label="@("超时(秒)")">
+            <AntDesign.InputNumber @bind-Value="@_CreateForm.TimeoutSeconds" Min="1" Max="300" Style="width:100%;" />
+        </FormItem>
+        <FormItem Label="@("备注")">
+            <Input @bind-Value="@_CreateForm.Remark" Placeholder="@("可选")" />
+        </FormItem>
+    </Form>
+</Modal>
+
+@* ─ 编辑 Modal ─ *@
+<Modal Title="@("编辑模型配置")"
+       Visible="@_EditVisible"
+       OnOk="@OnEditOkAsync"
+       OnCancel="@OnEditCancel"
+       ConfirmLoading="@_Editing"
+       OkText="@("保存")"
+       CancelText="@("取消")">
+    <Form Model="@_EditForm" Layout="@FormLayout.Vertical">
+        <FormItem Label="@("名称")">
+            <Input @bind-Value="@_EditForm.Name" />
+        </FormItem>
+        <FormItem Label="@("供应商")">
+            <Input @bind-Value="@_EditForm.Provider" />
+        </FormItem>
+        <FormItem Label="@("BaseUrl")">
+            <Input @bind-Value="@_EditForm.BaseUrl" />
+        </FormItem>
+        <FormItem Label="@("ApiKey")">
+            <Input @bind-Value="@_EditForm.ApiKey" Placeholder="@("留空则不修改")" />
+        </FormItem>
+        <FormItem Label="@("模型名")">
+            <Input @bind-Value="@_EditForm.ModelName" />
+        </FormItem>
+        <FormItem Label="@("排序顺序")">
+            <AntDesign.InputNumber @bind-Value="@_EditForm.SortOrder" Min="0" Style="width:100%;" />
+        </FormItem>
+        <FormItem Label="@("超时(秒)")">
+            <AntDesign.InputNumber @bind-Value="@_EditForm.TimeoutSeconds" Min="1" Max="300" Style="width:100%;" />
+        </FormItem>
+        <FormItem Label="@("备注")">
+            <Input @bind-Value="@_EditForm.Remark" Placeholder="@("留空则不修改")" />
+        </FormItem>
+    </Form>
+</Modal>
