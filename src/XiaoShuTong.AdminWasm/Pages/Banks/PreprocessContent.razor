@@ -1,0 +1,126 @@
+@page "/owner/banks/preprocess"
+@namespace XiaoShuTong.AdminWasm.Pages.Banks
+@using XiaoShuTong.Services.Bank.Api
+@using XiaoShuTong.Api
+
+<PageContainer Title="@("AI 预处理")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("内容管理")</BreadcrumbItem>
+            <BreadcrumbItem>@("AI 预处理")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        <Alert Type="@AlertType.Info"
+               ShowIcon="true"
+               Message="@("AI 预处理工具链")"
+               Description="@("上传 PDF/Word/文本资料 → AI 预处理生成背诵点草稿 → 人工校验后入库（内容准确性由人工把关，不会直接入库）")"
+               Style="margin-bottom: 16px;" />
+
+        <Card Title="@("1. 选择资料所属题库")" Style="margin-bottom: 16px;">
+            <Select TItemValue="string" TItem="string"
+                    Style="width: 100%;"
+                    Value="@_SelectedBankId"
+                    ValueChanged="@OnBankSelectedAsync"
+                    Placeholder="@("选择题库")">
+                @foreach (var bank in _Banks)
+                {
+                    <SelectOption Value="@bank.Bank?.BankId" TItemValue="string" TItem="string"
+                                   Label="@($"{bank.Bank?.Name}（{bank.QuestionCount}题）")" />
+                }
+            </Select>
+            @if (string.IsNullOrEmpty(_SelectedBankId))
+            {
+                <div style="margin-top: 8px; color: #999;">
+                    @("提示：若列表为空，请先在「新建题库」创建题库。")
+                </div>
+            }
+        </Card>
+
+        <Card Title="@("2. 上传资料或粘贴文本")" Style="margin-bottom: 16px;">
+            <Tabs>
+                <TabPane Key="paste" Tab="@("粘贴文本")">
+                    <TextArea Rows="12"
+                              Placeholder="@("在此粘贴文本资料（段落间以空行分隔，AI 将按段落生成背诵点草稿）")"
+                              @bind-Value="_RawText"
+                              ShowCount
+                              MaxLength="100000" />
+                </TabPane>
+                <TabPane Key="file" Tab="@("上传文件")">
+                    <div style="max-width: 600px;">
+                        <div style="margin-bottom: 8px; color: #666;">
+                            @("支持 .txt 文本资料，单文件 ≤10M")
+                        </div>
+                        <InputFile OnChange="@OnFileSelectedAsync" accept=".txt" />
+                        @if (_SelectedFile != null)
+                        {
+                            <div style="margin-top: 8px; color: #666;">
+                                @($"已选择：{_SelectedFile.Name} ({_SelectedFile.Size / 1024}KB)")
+                            </div>
+                        }
+                        <div style="margin-top: 8px; color: #999;">
+                            @("PDF/Word 解析后续版本支持。")
+                        </div>
+                    </div>
+                </TabPane>
+            </Tabs>
+        </Card>
+
+        <Card>
+            <Button Type="@ButtonType.Primary"
+                    Loading="@_Processing"
+                    Disabled="@(!CanSubmit)"
+                    OnClick="@OnPreprocessAsync"
+                    Block>
+                @("开始 AI 预处理")
+            </Button>
+        </Card>
+
+        @if (_Result != null)
+        {
+            <Card Title="@("预处理结果")" Style="margin-top: 16px;">
+                @if (_Result.Success)
+                {
+                    <Result Status="@ResultStatus.Success"
+                            Title="@("预处理完成")"
+                            SubTitle="@($"已生成草稿批次：{_Result.BatchId}")">
+                        <ChildContent>
+                            <div style="margin: 8px 0;">
+                                <Tag Color="@("geekblue")">
+                                    @_Result.BatchId
+                                </Tag>
+                            </div>
+                            <div style="color: #999;">
+                                @("请进入人工校验页，逐条通过/编辑/跳过背诵点草稿。")
+                            </div>
+                            <div style="margin-top: 16px;">
+                                <Button Type="@ButtonType.Primary"
+                                        OnClick="@(() => Navigation.NavigateTo($"/owner/banks/review-draft?batchId={_Result.BatchId}&bankId={_SelectedBankId}"))">
+                                    @("去校验草稿")
+                                </Button>
+                                <Button Style="margin-left: 12px;" OnClick="@OnResetAsync">
+                                    @("再传一份")
+                                </Button>
+                            </div>
+                        </ChildContent>
+                    </Result>
+                }
+                else
+                {
+                    <Result Status="@ResultStatus.Error"
+                            Title="@("预处理失败")"
+                            SubTitle="@($"错误码：{_Result.ErrorCode}")">
+                        <ChildContent>
+                            <Button OnClick="@OnResetAsync">
+                                @("重试")
+                            </Button>
+                        </ChildContent>
+                    </Result>
+                }
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

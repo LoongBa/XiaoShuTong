@@ -1,0 +1,129 @@
+@page "/owner/banks/review-draft"
+@namespace XiaoShuTong.AdminWasm.Pages.Banks
+@using XiaoShuTong.Services.Bank.Api
+@using XiaoShuTong.Api
+
+<PageContainer Title="@("人工校验草稿")">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>@("内容管理")</BreadcrumbItem>
+            <BreadcrumbItem>@("人工校验草稿")</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        <Alert Type="@AlertType.Warning"
+               ShowIcon="true"
+               Message="@("人工校验（BR-26/BR-29）")"
+               Description="@("AI 生成的背诵点草稿必须逐条人工校验后才能入库：勾选「通过」或编辑内容后入库，未勾选的条目将被跳过。")"
+               Style="margin-bottom: 16px;" />
+
+        @if (_Loading)
+        {
+            <Card>
+                <Spin Tip="@("加载草稿批次...")" />
+            </Card>
+        }
+        else if (_Draft?.Items is { Count: > 0 })
+        {
+            @* ─ 批次信息 ─ *@
+            <Card Style="margin-bottom: 16px;">
+                <Descriptions Column="3" Bordered>
+                    <DescriptionsItem Label="@("批次 ID")">
+                        <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                            @_Draft.BatchId
+                        </span>
+                    </DescriptionsItem>
+                    <DescriptionsItem Label="@("题库 ID")">@_Draft.BankId</DescriptionsItem>
+                    <DescriptionsItem Label="@("草稿条数")">@_Draft.Items.Count 条</DescriptionsItem>
+                </Descriptions>
+                <div style="margin-top: 16px;">
+                    <Button Type="@ButtonType.Primary"
+                            Loading="@_Submitting"
+                            Disabled="@(ApprovedItems.Count == 0)"
+                            OnClick="@OnSubmitAsync">
+                        @($"提交入库（已确认 {ApprovedItems.Count} 条）")
+                    </Button>
+                    <Button Style="margin-left: 12px;"
+                            OnClick="@SelectAllAsync">
+                        @("全部通过")
+                    </Button>
+                </div>
+            </Card>
+
+            @* ─ 草稿列表 ─ *@
+            @for (var i = 0; i < _Draft.Items.Count; i++)
+            {
+                var item = _Draft.Items[i];
+                var index = i;
+                <Card Style="margin-bottom: 12px;"
+                      Title="@($"背诵点 {index + 1}")">
+                    <Extra>@(item.Reviewed ? "已校验" : "")</Extra>
+                    <ChildContent>
+                        <div style="display: flex; gap: 16px;">
+                            <Checkbox @bind-Value="_Approved[index]"
+                                      @bind-Value:after="() => StateHasChanged()">
+                                @("通过")
+                            </Checkbox>
+                            <Tag>@GetSubjectLabel(item.Subject)</Tag>
+                            <Tag Color="@("geekblue")">@item.KnowledgePoint</Tag>
+                        </div>
+
+                        <Descriptions Column="2" Bordered Style="margin-top: 12px;">
+                            <DescriptionsItem Label="@("题干")">
+                                <TextArea @bind-Value="_EditedStems[index]"
+                                          Rows="3"
+                                          Placeholder="@(item.Stem)" />
+                            </DescriptionsItem>
+                            <DescriptionsItem Label="@("答案")">
+                                <TextArea @bind-Value="_EditedAnswers[index]"
+                                          Rows="3"
+                                          Placeholder="@(item.Answer)" />
+                            </DescriptionsItem>
+                            <DescriptionsItem Label="@("题目 ID")">
+                                <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
+                                    @item.QuestionId
+                                </span>
+                            </DescriptionsItem>
+                            <DescriptionsItem Label="@("关键词候选")">
+                                @string.Join("、", item.Keywords ?? [])
+                            </DescriptionsItem>
+                        </Descriptions>
+                    </ChildContent>
+                </Card>
+            }
+
+            @* ─ 提交结果 ─ *@
+            @if (_Result != null)
+            {
+                <Card Title="@("入库结果")">
+                    @if (_Result.Success)
+                    {
+                        <Result Status="@ResultStatus.Success"
+                                Title="@("入库完成")"
+                                SubTitle="@($"已入库 {_Result.Imported} 条，跳过 {_Result.Skipped} 条")" />
+                    }
+                    else
+                    {
+                        <Result Status="@ResultStatus.Error"
+                                Title="@("入库失败")"
+                                SubTitle="@($"错误码：{_Result.ErrorCode}")" />
+                    }
+                </Card>
+            }
+        }
+        else if (_Draft != null)
+        {
+            <Card>
+                <Empty Description="@("草稿批次不存在或已处理")">
+                    <Button Type="@ButtonType.Primary"
+                            OnClick="@(() => Navigation.NavigateTo("/owner/banks/preprocess"))">
+                        @("返回 AI 预处理")
+                    </Button>
+                </Empty>
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>

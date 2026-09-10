@@ -32,7 +32,10 @@
                             <Tag>@GetPrivacyLabel(_Detail.Bank.Privacy.ToString())</Tag>
                         </div>
                     </div>
-                    <div>
+                    <div style="display: flex; gap: 8px;">
+                        <Button OnClick="@(() => Navigation.NavigateTo($"/owner/banks/preprocess?bankId={BankId}"))">
+                            @("AI 预处理")
+                        </Button>
                         <Button Type="@ButtonType.Primary"
                                 OnClick="@(() => Navigation.NavigateTo($"/owner/banks/import?bankId={BankId}"))">
                             @("导入题目")

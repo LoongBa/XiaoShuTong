@@ -66,6 +66,11 @@
         "path": "/owner/banks/import",
         "name": "导入题目",
         "key": "banks.import"
+      },
+      {
+        "path": "/owner/banks/preprocess",
+        "name": "AI 预处理",
+        "key": "banks.preprocess"
       }
     ]
   }
