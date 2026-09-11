@@ -6,8 +6,8 @@
 > **维护方式**：由 `tkwf-business` skill 物化与增量更新，不手动直接编辑。
 
 > **最后更新**：2026-09-11
-> **版本**：v2 | **变更**：新增 2.9 平台运营域（AI 网关，平台-BR-01~04）
-> **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-23 / 题库-39 / 激励-18 / 搭子-32 / Pk-27 / 家长-28 / 平台-04）
+> **版本**：v3 | **变更**：任务域补 BR-24（周报口径）/ BR-25（周报 CSV 合规）
+> **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-25 / 题库-39 / 激励-18 / 搭子-32 / Pk-27 / 家长-28 / 平台-04）
 
 ---
 
@@ -143,6 +143,8 @@
 | 任务-BR-21 | 单任务失败不中断整批 | Tasks, TaskAssignments | UC-2.5 |
 | 任务-BR-22 | 到期未完成分配置 Overdue；已完成不变 | TaskAssignments | UC-2.5 |
 | 任务-BR-23 | 允许重做的逾期任务仍可进入复习（不改变 Overdue） | TaskAssignments | UC-2.5 |
+| 任务-BR-24 | 周报口径：执行率 = 周窗口内 Completed / 全部分配（分母含 Overdue，同 BR-17）；平均进度 = 周内分配 Progress 均值；学习量 = 周内 DailyStats.LearnedCount 求和 | Tasks, TaskAssignments, DailyStats | UC-2.4/F9 |
+| 任务-BR-25 | 周报导出 CSV 仅含成员汇总指标（昵称/执行率/平均进度/学习量），不含答题明细与正确率排名 — 合规 | TaskAssignments, DailyStats | F9 |
 
 ### 2.4 题库判题域（Bank + Judging）
 

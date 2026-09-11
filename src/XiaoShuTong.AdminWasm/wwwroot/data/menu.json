@@ -43,6 +43,11 @@
         "path": "/owner/tasks/create",
         "name": "布置任务",
         "key": "tasks.create"
+      },
+      {
+        "path": "/owner/tasks/weekly-report",
+        "name": "周报导出",
+        "key": "tasks.weekly-report"
       }
     ]
   },

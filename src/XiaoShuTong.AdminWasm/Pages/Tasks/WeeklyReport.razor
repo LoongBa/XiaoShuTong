@@ -1,0 +1,174 @@
+@page "/owner/tasks/weekly-report"
+@namespace XiaoShuTong.AdminWasm.Pages.Tasks
+@using XiaoShuTong.Services.GroupManagement.Api
+@using XiaoShuTong.Services.TaskManagement.Api
+
+<PageContainer Title="群组执行周报">
+    <Breadcrumb>
+        <Breadcrumb>
+            <BreadcrumbItem>Home</BreadcrumbItem>
+            <BreadcrumbItem>任务管理</BreadcrumbItem>
+            <BreadcrumbItem>周报导出</BreadcrumbItem>
+        </Breadcrumb>
+    </Breadcrumb>
+    <ChildContent>
+
+        @* ─ 顶部说明 ─ *@
+        <Alert Type="@AlertType.Info"
+               Message="@("周报导出：执行率、平均进度、学习量、成员数（不含正确率与答题明细，合规 BR-25）")"
+               ShowIcon="true"
+               Style="margin-bottom: 16px;" />
+
+        @* ─ 工具栏 ─ *@
+        <Card Style="margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-weight: 500;">@("群组")</label>
+                    <Select TItemValue="string" TItem="GroupListItemDto"
+                            Style="width: 260px;"
+                            @bind-Value="@_SelectedGroupUid"
+                            Placeholder="@("请选择群组")">
+                        @foreach (var group in _Groups)
+                        {
+                            <SelectOption Value="@group.GroupUid" TItemValue="string" TItem="GroupListItemDto" Label="@group.Name" />
+                        }
+                    </Select>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-weight: 500;">@("周开始")</label>
+                    <DatePicker Value="@_WeekStart" ValueChanged="@((DateOnly? v) => OnWeekStartChanged(v))"
+                                Placeholder="@("选择周一开始日")" Style="width: 180px;" />
+                </div>
+                <Button Type="@ButtonType.Primary" Loading="@_Generating"
+                        Disabled="@string.IsNullOrEmpty(_SelectedGroupUid)"
+                        OnClick="@OnGenerateAsync">
+                    @("生成周报")
+                </Button>
+            </div>
+        </Card>
+
+        @* ─ 结果区 ─ *@
+        @if (_Generating && _Report == null)
+        {
+            <Card>
+                <Spin Tip="@("正在生成周报...")" />
+            </Card>
+        }
+        else if (_Report != null)
+        {
+            @* ─ 周报区间 ─ *@
+            <Card Style="margin-bottom: 16px;">
+                <div style="color: #666; margin-bottom: 4px;">
+                    @($"{_SelectedGroupName} · {_Report.WeekStart:yyyy-MM-dd} ~ {_Report.WeekEnd:yyyy-MM-dd}")
+                </div>
+            </Card>
+
+            @* ─ 指标卡组 ─ *@
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("任务数")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px;">@_Report.TaskCount</div>
+                        </div>
+                    </Card>
+                </div>
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("成员数")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px;">@_Report.MemberCount</div>
+                        </div>
+                    </Card>
+                </div>
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("总分配")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px;">@_Report.TotalAssignments</div>
+                        </div>
+                    </Card>
+                </div>
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("已完成")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px; color: #52c41a;">@_Report.CompletedCount</div>
+                        </div>
+                    </Card>
+                </div>
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("执行率")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px; color: #1890ff;">@($"{_Report.ExecutionRate:F1}%")</div>
+                        </div>
+                    </Card>
+                </div>
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("平均进度")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px; color: #722ed1;">@($"{_Report.AvgProgress:F1}%")</div>
+                        </div>
+                    </Card>
+                </div>
+                <div style="flex: 1; min-width: 160px;">
+                    <Card>
+                        <div style="text-align: center;">
+                            <div style="color: #8c8c8c; font-size: 14px;">@("学习量")</div>
+                            <div style="font-size: 32px; font-weight: 600; margin-top: 8px; color: #fa8c16;">@_Report.LearnedCount</div>
+                        </div>
+                    </Card>
+                </div>
+            </div>
+
+            @* ─ 成员汇总表 ─ *@
+            <Card Title="@("成员汇总")" Style="margin-bottom: 16px;">
+                @if (_Report.MemberReports?.Count > 0)
+                {
+                    <Table TItem="WeeklyMemberReportDto" DataSource="@_Report.MemberReports" Size="@TableSize.Small">
+                        <PropertyColumn Property="@(x => x.UserId)" Title="@("用户ID")" />
+                        <PropertyColumn Property="@(x => x.Nickname)" Title="@("昵称")" />
+                        <Column TData="double" Title="@("执行率")">
+                            @($"{context.ExecutionRate:F1}%")
+                        </Column>
+                        <Column TData="double" Title="@("平均进度")">
+                            @($"{context.AvgProgress:F1}%")
+                        </Column>
+                        <PropertyColumn Property="@(x => x.LearnedCount)" Title="@("学习量")" />
+                    </Table>
+                }
+                else
+                {
+                    <Empty Description="@("暂无成员数据")" />
+                }
+            </Card>
+
+            @* ─ CSV 下载链接 ─ *@
+            @if (!string.IsNullOrEmpty(_Report.CsvFileUrl))
+            {
+                <Card Title="@("CSV 导出")">
+                    <div style="padding: 12px; background: #fafafa; border-radius: 4px;">
+                        <div style="margin-bottom: 8px;">
+                            <Text>@("下载链接：")</Text>
+                        </div>
+                        <div style="padding: 12px; background: #fff; border: 1px solid #f0f0f0; border-radius: 4px; word-break: break-all;">
+                            <a href="@_Report.CsvFileUrl" target="_blank" style="color: #1890ff;">@_Report.CsvFileUrl</a>
+                        </div>
+                        <div style="margin-top: 8px; color: #999; font-size: 12px;">
+                            @("链接有效期 7 天，请及时下载")
+                        </div>
+                    </div>
+                </Card>
+            }
+        }
+        else
+        {
+            <Card>
+                <Empty Description="@("选择群组并点击「生成周报」查看结果")" />
+            </Card>
+        }
+
+    </ChildContent>
+</PageContainer>
