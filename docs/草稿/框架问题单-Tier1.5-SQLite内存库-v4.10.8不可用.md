@@ -85,6 +85,28 @@ var isNonPooled = connectionOptions.DataSource == ":memory:"
 
 裸 `:memory:` 每次 `new SqliteConnection()` + `Open()` 创建全新内存库。共享需 `file:memdb1?mode=memory&cache=shared`（URI 形式，非 `Mode=Memory`）。
 
+### G5（FreeSql 类型映射缺口）：SQLite 对 `DateOnly` / `string[]` 无原生映射
+
+**现象**：Tier 1.5 下实体含 `DateOnly`（如 `DailyStats.StatDate`）与 `string[]`（如 `Banks.Tags`、`Tasks.QuestionIds`）字段——SQLite provider 无原生类型映射，属性被 FreeSql 标记"忽略"→ 列缺失 → 建表/读写异常。
+
+**证据**：`FreeSql.Internal.Utils.TypeHandlers` 为框架内部类型处理器注册点（PG 下由 provider 原生支持；SQLite 下 DateOnly/string[] 需显式注册 TypeHandler 才能映射）。
+
+**消费端出现绕过**（XiaoShuTong 曾暂用，**按新原则不采用**）：
+
+```csharp
+static XiaoShuTongDomainTestFixture()
+{
+    FreeSql.Internal.Utils.TypeHandlers[typeof(DateOnly)] = new DateOnlyTextHandler();
+    FreeSql.Internal.Utils.TypeHandlers[typeof(string[])] = new StringArrayJsonHandler();
+}
+```
+
+**影响**：消费端绕过使用框架内部 API（`FreeSql.Internal`）——脆弱、跨版本易碎；且隐藏了框架对 SQLite 类型映射的缺口。
+
+**建议框架侧**：
+- 框架 FreeSql 扩展包（`_Domain.Infrastructure/FreeSql`）为 SQLite 提供 `DateOnly`（TEXT yyyy-MM-dd）与 `string[]`（JSON TEXT）默认 TypeHandler——对齐 PG provider 的原生支持；或
+- 文档明示 SQLite Tier 1.5 的类型映射限制 + 提供框架级注册入口（非 `FreeSql.Internal` 私有 API）。
+
 ## 三、框架自身未验证
 
 框架 908/908 测试中，SQLite 相关测试（`ViewSyncInitializerTests`/`GraphQLProjectionEndToEndTests` 等）全用**裸 `FreeSqlBuilder`**（绕过 DomainHost 的 `ConfigTestDomainAsync` 链路）。**从未验证 `ConfigTestDomainAsync` + SQLite :memory: 组合**——ADR60/v4.10.7 文档"Tier 1.5 可用"未实证。
