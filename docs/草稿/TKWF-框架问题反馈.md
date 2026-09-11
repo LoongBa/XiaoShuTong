@@ -13,6 +13,7 @@ source: XiaoShuTong VEntity 落地 + 框架源码审计（F:\LoongBa_Git\_TKWF�
 > 涉及框架能力：VEntity 测试（InMemory DAC）、`IEntityDAC<T>`/`IEntityReadOnlyDAC<T>` 注册机制、tkwf-* skill 文档准确性。
 > 优先级：P0 = 影响正确性（测试与生产行为不一致）；P1 = 文档误导开发者踩坑；P2 = 可维护性。
 > **v0.3（2026-09-11）**：框架组回复「DLL 至 4.10.6 后 P0-3 因 P0-1 天然解锁」——经源码审计 + 部署运行时探针**证伪**（P0-1 与 P1-1 正交，守卫仍拦截 `IEntityDAC<TView>.InsertAsync`）；另发现部署版本混合（Testing.xUnit.dll 仍 4.10.5）。详见「N-3 论证伪」。
+> **v0.4（2026-09-11）**：框架组回复「v4.10.6 增量 SeedViewAsync 已落地」——经源码审计 + 运行时探针**验收成立**（实际部署 v4.10.7）；PkPlayerStatsView 聚合测试已迁移 SeedViewAsync 填充全绿。新增「N-5：`User.Query<T>()` 测试上下文限制」。
 
 ---
 
@@ -288,6 +289,45 @@ IEntityDAC<PkPlayerStatsView>.InsertAsync → THREW InvalidOperationException
 
 ---
 
+## N-5：框架组「SeedViewAsync 已落地」— 验收成立 + 新发现 User.Query 测试上下文限制（v0.4 新增）
+
+### 框架组回复
+
+> 「v4.10.6 增量（SeedViewAsync）已落地 + Testing.xUnit.dll 已同步部署——VEntity InMemory 填充通道现真正可用（SeedViewAsync 填充 → User.Query<TView>() 查询）。」
+
+### 验收结论：**成立**（实际部署 v4.10.7）
+
+**源码审计**（提交 `4bf0a53f`「feat(V4.10.6 增量): 消费端反馈 v0.3——VEntity SeedViewAsync 填充通道 + 交叉矛盾修复」，7 文件 +168/-11）：
+- `TestingEntityDAC.SeedViewAsync(IEnumerable<TEntity>, CancellationToken)`（L154）：**直写 `_store`，不调用 `GuardAgainstViewEntity`** —— 正是 N-2/N-3 建议的方案 A
+- `MockDbEntityDAC.SeedViewAsync`（L154）同构
+- `GuardAgainstViewEntity` **保留**（4 DAC 全在：Testing/Mock/FreeSql/EFCore）——守卫管"业务写"、Seed 管"测试数据准备"，语义分工（源码注释 L147-152 明示）
+- `CfgStrongContractTests.SetEntityDAC_ViewEntity_SeedViewAsync_FillThenRead`（L278-314）三段式闭环用例：① InsertAsync 被守卫拦 → ② SeedViewAsync 填充 → ③ Forwarder 同源读回
+
+**运行时探针**（XiaoShuTong 侧）：
+- `SeedViewAsync(PkPlayerStatsView)` → `GetPkStatsService` 完整走通：TotalMatches/Wins/Draws/WinRate/TotalScore 全部正确（含多人数据只取本人行 0.62 胜率）
+- `SeedViewAsync` 填充 + 注入 `IEntityReadOnlyDAC` 读回：数据完整保留
+
+**XiaoShuTong 落地**：`GetPkStatsServiceTests` 从 3 个零值降级用例迁移为 **5 个完整聚合验证用例**，全套件 345 通过 0 失败——P0-3 补闭环，VEntity 聚合正确性在 InMemory 下可自动化验证。
+
+### 新发现 N-5：`User.Query<TView>()` 在测试上下文不可用
+
+**现象**：框架回复称「SeedViewAsync 填充 → **User.Query<TView>()** 查询」，但探针验证 `User.Query<T>()` 在测试上下文**返回空**（Count=0）。
+
+**根因**：`DomainUser.Query<T>()` 双路径：
+```csharp
+if (DomainLayerContext.IsInsideDomain.Value)   // 域内（Service 执行中）= true
+    return ServiceProvider.GetRequiredService<IEntityReadOnlyDAC<T>>().Query;  // 测试直连可用
+return Use<IEntityQueryRoot>().Query<T>();     // 测试上下文 IsInsideDomain=false → AOP 路径，返回空
+```
+
+**影响**：测试中直接 `User.Query<TView>()` 查不到 SeedViewAsync 填充的数据——**正确测试路径是**：
+1. 经 Service 间接验证（构造注入 `IEntityReadOnlyDAC<TView>`，如 `GetPkStatsService`）
+2. 或直接 `IEntityDAC<TView>.Query` / `IEntityReadOnlyDAC<TView>.Query`（与 Seed 同源 `_store`）
+
+**建议**：SKILL.md §7.3 示例当前用 `User.Query<PaymentLogStatView>()` 查询——与 N-5 冲突（测试上下文返回空），建议改为 DAC.Query 或经 Service 验证；并在 §7 补「`User.Query<T>()` 在测试上下文走 AOP 路径返回空，VEntity 验证请用 DAC.Query 或 Service 路径」说明。
+
+---
+
 ## 修复优先级摘要
 
 | 优先级 | 项 | 修复 | 收益 |
@@ -302,3 +342,4 @@ IEntityDAC<PkPlayerStatsView>.InsertAsync → THREW InvalidOperationException
 | **P0** | **N-2** | VEntity InMemory 填充通道缺失（P0-3 未落地） | VEntity 聚合正确性可自动化验证 |
 | **P0** | **N-3** | 「P0-3 因 P0-1 天然解锁」论断证伪——P0-1/P1-1 正交，需 View 专用 Seed 通道 | 防止错误论断误导消费端 |
 | **P1** | **N-4** | 部署版本混合：Testing.xUnit.dll 仍 4.10.5 | 部署一致性 |
+| **P0** | **N-5** | `User.Query<T>()` 测试上下文走 AOP 路径返回空——SKILL §7.3 示例查询路径需修正 | 防止 VEntity 测试示例再次误导 |
