@@ -3,6 +3,7 @@ using XiaoShuTong.Entities.Platform;
 using XiaoShuTong.Services.Platform;
 using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Interfaces;
+using TKW.Framework.Domain.Testing.Mock;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
@@ -34,8 +35,8 @@ public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHe
     private void ResetModelConfigs()
     {
         var dac = User.GetService<IEntityDAC<AiModelConfig>>();
-        if (dac is TestingEntityDAC<AiModelConfig> testingDac)
-            testingDac.Clear();
+        if (dac is MockDbEntityDAC<AiModelConfig> mockDac)
+            mockDac.Clear();
     }
 
     private async Task SeedModelAsync(int tag, int sortOrder, bool enabled, string baseUrl)

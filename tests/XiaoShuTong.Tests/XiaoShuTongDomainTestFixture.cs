@@ -3,8 +3,8 @@
 // ═══════════════════════════════════════════════════════
 //
 // 方式 A（推荐）：ConfigTestDomainAsync — 一行搞定 5 个阻塞点
-//   无连接串 → 内存 DAC（SetTestingEntityDAC），无需数据库
-//   有连接串 → 真实 PostgreSQL（SetFreeSqlEntityDAC）
+//   无连接串 → 内存 DAC（UseMockDbEntityDAC），无需数据库
+//   有连接串 → 真实 PostgreSQL（UseFreeSqlEntityDAC）
 //
 // 方式 B（手动）：逐行写 —— 用于理解原理或在中间插入自定义注册
 //
@@ -12,7 +12,7 @@
 //   1. ILogger<T>       → AddLogging
 //   2. 会话管理         → TestSessionManager
 //   3. DataService 注册 → DomainHost.Initialize（内置 throw-factory）
-//   4. IEntityDAC<T>    → SetTestingEntityDAC / SetFreeSqlEntityDAC
+//   4. IEntityDAC<T>    → SetEntityDAC(MockDbEntityDAC<>) / SetEntityDAC(FreeSqlEntityDAC<>)
 //   5. 种子数据/自举    → ServiceProviderBuiltCallbackAsync
 // ═══════════════════════════════════════════════════════
 
@@ -48,7 +48,7 @@ public sealed class XiaoShuTongDomainTestFixture : DomainXunitTestFixtureBase
             ?? new DomainWebOptions { IsDevelopment = true };
 
         // ── 方式 A1：内存 DAC（推荐，无需数据库） ──
-        // 无连接串参数 → 内部用 SetTestingEntityDAC()，基于 ConcurrentDictionary
+        // 无连接串参数 → 内部用 UseMockDbEntityDAC()（V4.10.7 起默认 MockDbEntityDAC，ConcurrentDictionary）
         Host = await services.ConfigTestDomainAsync<XiaoShuTongUserInfo, XiaoShuTongDomainInitializer, DomainWebOptions>(
             options);
 
@@ -56,8 +56,8 @@ public sealed class XiaoShuTongDomainTestFixture : DomainXunitTestFixtureBase
         // services.AddLogging(b => b.ClearProviders().SetMinimumLevel(LogLevel.Warning));
         // services.AddSingleton<ISessionManager<XiaoShuTongUserInfo>, TestSessionManager<XiaoShuTongUserInfo>>();
         // var host = DomainHost<XiaoShuTongUserInfo>.Initialize<XiaoShuTongDomainInitializer, DomainWebOptions>(services, options);
-        // services.SetTestingEntityDAC();       // 内存 DAC
-        // // 或 services.SetFreeSqlEntityDAC(connectionString, isDev);  // 真实 DB
+        // services.SetEntityDAC(typeof(MockDbEntityDAC<>));    // 内存 DAC
+        // // 或 services.SetEntityDAC(typeof(FreeSqlEntityDAC<>)) + cfg.ConnectionStringTemplate;  // 真实 DB
         // var sp = services.BuildServiceProvider();
         // var initializer = sp.GetRequiredService<DomainHostInitializerBase<XiaoShuTongUserInfo, DomainWebOptions>>();
         // await initializer.ServiceProviderBuiltCallbackAsync(sp);
