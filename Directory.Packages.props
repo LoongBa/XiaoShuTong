@@ -34,6 +34,7 @@
     <PackageVersion Include="FreeSql.Extensions.Linq" Version="3.5.311" />
     <PackageVersion Include="FreeSql.Provider.PostgreSQL" Version="3.5.311" />
     <PackageVersion Include="FreeSql.Provider.Sqlite" Version="3.5.311" />
+<PackageVersion Include="Microsoft.Data.Sqlite" Version="9.0.10" />
     <PackageVersion Include="FreeSql.Repository" Version="3.5.310" />
     <!-- ════════════════════════════════════════════
          Microsoft ASP.NET Core

@@ -1,11 +1,13 @@
 ---
-title: 框架问题单——Tier 1.5（SQLite :memory: 测试）在 v4.10.8 不可用
-status: 待框架组处理
+title: 框架问题单——Tier 1.5（SQLite :memory: 测试）不可用（v4.10.8 六缺口 + v4.10.10 修复后 G6 状态隔离）
+status: 待框架组处理（G1-G5+F1/F2 已由 v4.10.10 修复；G6 为新发现待确认）
 date: 2026-09-12
 source: XiaoShuTong Tier 1.5 迁移实测 + 框架源码审计 + FreeSql/Microsoft.Data.Sqlite 库级调研
 ---
 
-# 框架问题单：Tier 1.5（SQLite :memory: 测试）在 v4.10.8 不可用
+# 框架问题单：Tier 1.5（SQLite :memory: 测试）不可用
+
+> **进展**：G1-G5 + F1/F2 六缺口已由框架 **v4.10.10**（提交 `eaa847ec`）修复（NonDisposableFreeSqlWrapper / 共享 scope / 双发现 / ViewSqlMetadataReader / SqliteTypeHandlerRegistrar / SqliteMemoryKeeper），Oracle PASS WITH CONDITIONS，框架实证回归 911/911。XiaoShuTong 恢复官方用法后，发现 **G6（Tier 1.5 状态不隔离）**——见下。
 
 ## 一、现象
 
@@ -106,6 +108,22 @@ static XiaoShuTongDomainTestFixture()
 **建议框架侧**：
 - 框架 FreeSql 扩展包（`_Domain.Infrastructure/FreeSql`）为 SQLite 提供 `DateOnly`（TEXT yyyy-MM-dd）与 `string[]`（JSON TEXT）默认 TypeHandler——对齐 PG provider 的原生支持；或
 - 文档明示 SQLite Tier 1.5 的类型映射限制 + 提供框架级注册入口（非 `FreeSql.Internal` 私有 API）。
+
+### G6（v4.10.10 修复后新发现）：Tier 1.5 SQLite :memory: 状态不隔离——多测试/多运行库污染
+
+**现象**：框架 v4.10.10 修复（G1-G5+F1/F2）后，项目恢复官方 Tier 1.5 配置（`UseFreeSqlEntityDAC(Sqlite, "Data Source=:memory:")` + `SqliteMemoryKeeper`），实测：
+
+- **单测试单运行**：`GetPkStatsServiceTests.ExecuteAsync_Stats_WinRateComputed`（写基表→读聚合）**通过**（视图真实执行，聚合正确）
+- **多测试或重复运行**：同一测试**多次运行结果不稳定**——首次通过、后续 `Actual=0`（写基表后读不到）；全类 5 Fact 跑 3 失败（第 2 个起写后读不到）
+
+**根因假设**：`SqliteMemoryKeeper`（共享缓存 + Keeper 保活）在 **Fixture 级单例**下，`:memory:` 库跨测试/跨运行**未重置或状态残留**——首次运行空库写入+读正常；后续运行 `:memory:` 库可能被 Keeper 重建（丢数据）或读到旧状态。
+
+**框架实证局限**：框架 `Tier15SqliteTests` 是**单 Fact**（`Tier15_SqliteMemory_FullChain` 单测试内写 3 条 + 读聚合）——**未验证多测试顺序写入 / 重复运行场景**。
+
+**建议框架侧**：
+- `SqliteMemoryKeeper` 在 Fixture/测试集合重建时**重置 :memory: 库**（或提供显式 Reset API）
+- 框架 Tier15SqliteTests 扩展为**多 Fact**（多测试顺序写入隔离验证）
+- 或文档明示 Tier 1.5 测试需**每个测试独立库**（连接串含测试唯一 Guid）
 
 ## 三、框架自身未验证
 

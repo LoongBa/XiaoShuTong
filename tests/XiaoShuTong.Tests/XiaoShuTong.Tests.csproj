@@ -47,6 +47,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
     <!-- Tier 1.5：SQLite :memory: 内存库（真实 VEntity 视图/聚合/投影语义测试） -->
     <PackageReference Include="FreeSql.Provider.Sqlite" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
     <Using Include="Xunit" />
   </ItemGroup>
 
