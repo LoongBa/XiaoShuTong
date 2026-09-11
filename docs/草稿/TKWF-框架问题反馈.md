@@ -1,6 +1,6 @@
 ---
 title: TKWF 框架问题反馈（XiaoShuTong 实盘发现）
-version: v0.1
+version: v0.2
 summary: 从 XiaoShuTong 项目实战中发现的 TKWF 框架问题/隐患/文档偏差，供框架组修正
 status: 待框架组评审
 date: 2026-09-11
@@ -12,6 +12,7 @@ source: XiaoShuTong VEntity 落地 + 框架源码审计（F:\LoongBa_Git\_TKWF�
 > 反馈来源：XiaoShuTong 项目 `PkPlayerStatsView`（VEntity）落地过程中实测发现 + 框架源码三路并行审计。
 > 涉及框架能力：VEntity 测试（InMemory DAC）、`IEntityDAC<T>`/`IEntityReadOnlyDAC<T>` 注册机制、tkwf-* skill 文档准确性。
 > 优先级：P0 = 影响正确性（测试与生产行为不一致）；P1 = 文档误导开发者踩坑；P2 = 可维护性。
+> **v0.2（2026-09-11）**：框架组 v4.10.6 已修复 P0-1/P0-2(部分)/P1-1/P1-2/P1-3；新增 N-1（P0-2 与 P1-1 矛盾）、N-2（VEntity InMemory 填充缺口）。
 
 ---
 
@@ -181,6 +182,68 @@ VEntity 无 DataService（ADR14 D7），测试无法经 `EntityCreateAsync` 填�
 ## 补充：XiaoShuTong 侧已确认的联调环境说明
 
 - 项目侧 `.agents/skills/tkwf-*` 与 `%TKWFDeployPath%\docs\AC-Kit\skills\*` 为**同一文件（junction/hardlink，FileId 一致）**——`-LinkRefs` 本地联调模式。**项目侧无法独立定制 skill**，skill 修正需在框架源码 `_TKWF` 侧进行（单一来源）。若产品线有「项目侧 skill 覆盖」需求，需框架侧评估链接策略或提供覆盖优先级机制。
+
+---
+
+## V4.10.6 反馈验收（2026-09-11 框架组已修复项）
+
+框架组已在 **v4.10.6**（提交 `1af81e56`）落地本反馈的 P0-1/P0-2/P1-1/P1-2/P1-3，回归 907/907 全绿：
+
+| 原项 | 框架组修复 | 验收状态 |
+|:---:|-----------|:---:|
+| P0-1 | `EntityReadOnlyDACForwarder<T>` 桥接：`IEntityReadOnlyDAC<>` 转发到同 scope `IEntityDAC<>` 实例（Microsoft DI 开放泛型工厂无法拿闭合类型参数，forwarder 标准方案） | ✅ 运行时已生效（Forwarder 解析 + 读写同源回归测试） |
+| P0-2 | SKILL §7.3 示例 `RootServiceProvider`→`User.GetService<T>`（RootServiceProvider 全仓 15 处/7 文件替换归零） | ⚠️⚠️ **部分修复，见下** |
+| P1-1 | 5 处文档改方法级守卫 + `TestingEntityDAC`/`MockDbEntityDAC` 补对称 View 守卫 | ✅ 已生效（写 View 抛异常） |
+| P1-2 | G06 §5.3 自定义 DAC 注册改 `SetEntityDAC` | ✅ 已修 |
+| P1-3 | README 断裂链 1/问题 1 标注已修（V4.9.44） | ✅ 已修 |
+
+**XiaoShuTong 适配**：`GetPkStatsServiceTests` 已移除过时 workaround（强转 `TestingEntityDAC`），改为 V4.10.6 修复后的降级路径验证；全套件 343 通过 0 失败。
+
+---
+
+## 新发现（V4.10.6 引入，待框架组下一轮）
+
+### N-1：P0-2 与 P1-1 相互矛盾——SKILL §7.3 示例仍不可用
+
+**现象**：v4.10.6 修正后的 SKILL.md §7.3 示例：
+
+```csharp
+var dac = this.User.GetService<IEntityDAC<PaymentLogStatView>>();
+await dac.InsertAsync(new PaymentLogStatView { ... });
+```
+
+但**同一版本**的 P1-1 守卫（`TestingEntityDAC.cs`/`MockDbEntityDAC.cs`）对 View 实体的写操作抛 `InvalidOperationException`（"View Entity 不支持写操作"）。两个改动**互相冲突**：
+
+```
+§7.3 示例：IEntityDAC<View>.InsertAsync 填充  → 被 P1-1 守卫拦截（抛异常）
+```
+
+**实测复现**：XiaoShuTong `GetPkStatsServiceTests` 按修正后示例编写 → 运行抛 `TestingEntityDAC<PkPlayerStatsView>: View Entity 不支持写操作`。
+
+**根因**：P0-2 只把 `RootServiceProvider` 换成 `GetService<T>`，未同步意识到 P1-1 守卫使 `IEntityDAC<View>` 写入不可行——两个修复独立落地，未交叉验证。
+
+**建议**：
+- SKILL §7.3 示例改为**真实 FreeSql 集成测试**（视图由 `SyncViewsAsync` 创建，数据写基表后查视图）——与框架自身 VEntity 测试模式一致
+- 或明确文档：InMemory 下 VEntity 不可填充（`IEntityDAC<View>` 写被守卫、`IEntityReadOnlyDAC<View>` 无写方法），VEntity 数据验证需 FreeSql 视图真实创建
+- 补 P0-2/P1-1 交叉回归：任一改动都走一遍 §7.3 示例
+
+### N-2：VEntity InMemory 数据填充通道仍缺失（P0-3 悬而未决）
+
+**现象**：P0-1 修复（只读 DAC 转发写 DAC）后，VEntity 数据仍**无法经任何 DAC 通道填充**：
+
+| 通道 | 状态 | 原因 |
+|------|:---:|------|
+| `IEntityDAC<ViewEntity>.InsertAsync` | ❌ 守卫拦截 | P1-1 新增 View 写守卫 |
+| `IEntityReadOnlyDAC<ViewEntity>` | ❌ 无写方法 | 接口仅 Query/FirstOrDefault/ToList/Count |
+| `User.Query<ViewEntity>` | ✅ 只读可用 | EQR 查询通道（但无数据可读） |
+| `EntityCreateAsync`（经 DataService） | ❌ VEntity 无 DataService | ADR14 D7 |
+
+**影响**：VEntity 的 InMemory Contract 测试（本仓库已实现第一个 VEntity `PkPlayerStatsView`）只能验证降级/空值路径，**聚合正确性**（仅 Finished 计入、Count/Sum 口径）必须在真实 FreeSql 环境验证。本机无 DB（`appsettings.Test.json` 连接串为空）→ 聚合正确性无自动化保障，仅靠编译期 `TKW_SG1a_VIEW001` 列校验。
+
+**建议**（任选其一，供框架组决策）：
+- **方案 A**：`TestingEntityDAC` 提供 `SeedAsync(IEnumerable<TEntity>)` 便捷方法（绕过写守卫，直接写 `_store`，专用测试通道，与生产守卫语义不冲突）
+- **方案 B**：提供 `IEntityReadOnlyDAC<ViewEntity>` 的测试特化实现（实现类带 Seed，注册仅覆盖测试 scope）
+- **方案 C**：文档明示「VEntity InMemory 测试仅覆盖只读降级路径，聚合正确性需 FreeSql 集成测试」，并考虑 `ConfigTestDomainAsync` 增加 `EnableAutoViewSync` 真实视图联动（本机需 DB）
 
 ---
 
