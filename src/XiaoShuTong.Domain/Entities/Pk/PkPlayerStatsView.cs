@@ -23,6 +23,18 @@ SELECT p.""UserId"" AS ""Id"",
 FROM ""PkPlayers"" p
 INNER JOIN ""PkMatches"" m ON m.""Id"" = p.""MatchId""
 WHERE m.""Status"" = 'Finished'
+GROUP BY p.""UserId""",
+    // V4.10.8 (Tier 1.5): SQLite 内存库方言变体（测试用真实视图；FILTER → CASE WHEN）
+    ViewSqlSQLite = @"CREATE VIEW IF NOT EXISTS ""vw_pk_player_stats"" AS
+SELECT p.""UserId"" AS ""Id"",
+       p.""UserId"" AS ""UserId"",
+       COUNT(p.""Id"") AS ""TotalMatches"",
+       SUM(CASE WHEN m.""WinnerId"" = p.""UserId"" THEN 1 ELSE 0 END) AS ""Wins"",
+       SUM(CASE WHEN m.""WinnerId"" IS NULL THEN 1 ELSE 0 END) AS ""Draws"",
+       SUM(p.""Score"") AS ""TotalScore""
+FROM ""PkPlayers"" p
+INNER JOIN ""PkMatches"" m ON m.""Id"" = p.""MatchId""
+WHERE m.""Status"" = 'Finished'
 GROUP BY p.""UserId""")]
 [Table(Name = "vw_pk_player_stats", DisableSyncStructure = true)]
 public partial class PkPlayerStatsView

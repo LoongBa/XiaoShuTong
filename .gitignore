@@ -49,3 +49,6 @@ refs/
 # Python
 __pycache__/
 *.pyc
+
+# xCodeGen 生成物（Generated/ 目录，非模板）
+src/**/.xCodeGen/Generated/

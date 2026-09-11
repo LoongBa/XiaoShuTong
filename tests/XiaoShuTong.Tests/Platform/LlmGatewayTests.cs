@@ -3,7 +3,6 @@ using XiaoShuTong.Entities.Platform;
 using XiaoShuTong.Services.Platform;
 using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Interfaces;
-using TKW.Framework.Domain.Testing.Mock;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
@@ -31,12 +30,17 @@ public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHe
         return id;
     }
 
-    /// <summary>清空 AiModelConfig 内存表（排除跨测试残留的启用模型，保证各用例状态确定）</summary>
-    private void ResetModelConfigs()
+    /// <summary>
+    /// 清空 AiModelConfig 数据（排除跨测试残留的启用模型，保证各用例状态确定）。
+    /// Tier 1.5（SQLite :memory:）：MockDbEntityDAC.Clear() 已退役——改为删除全部行，
+    /// 语义等价（无任何残留配置），经 IEntityDAC 读写同源（P0-1 Forwarder）。
+    /// </summary>
+    private async Task ResetModelConfigsAsync()
     {
         var dac = User.GetService<IEntityDAC<AiModelConfig>>();
-        if (dac is MockDbEntityDAC<AiModelConfig> mockDac)
-            mockDac.Clear();
+        var all = await dac.ToListAsync(dac.Query, TestContext.Current.CancellationToken);
+        foreach (var cfg in all)
+            await dac.DeleteAsync(cfg, TestContext.Current.CancellationToken);
     }
 
     private async Task SeedModelAsync(int tag, int sortOrder, bool enabled, string baseUrl)
@@ -60,7 +64,7 @@ public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHe
     [Fact]
     public async Task CompleteAsync_NoEnabledModels_ReturnsDegraded()
     {
-        ResetModelConfigs();
+        await ResetModelConfigsAsync();
         SetUser(51401);
         await SeedModelAsync(51401, 0, enabled: false, baseUrl: UnreachableBaseUrl);
         var gw = User.Use<LlmGateway>();
@@ -76,7 +80,7 @@ public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHe
     [Fact]
     public async Task CompleteAsync_AllModelsUnreachable_ReturnsDegraded()
     {
-        ResetModelConfigs();
+        await ResetModelConfigsAsync();
         SetUser(51402);
         await SeedModelAsync(51402, 0, enabled: true, baseUrl: UnreachableBaseUrl);
         var gw = User.Use<LlmGateway>();
@@ -93,7 +97,7 @@ public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHe
     [Fact]
     public async Task CompleteAsync_OrderBySortOrder_AttemptsInOrder()
     {
-        ResetModelConfigs();
+        await ResetModelConfigsAsync();
         SetUser(51403);
         await SeedModelAsync(51403, 0, enabled: true, baseUrl: UnreachableBaseUrl);
         await SeedModelAsync(51404, 1, enabled: true, baseUrl: UnreachableBaseUrl);
@@ -111,7 +115,7 @@ public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHe
     [Fact]
     public async Task CompleteAsync_EmptyProviderConfig_NoModels()
     {
-        ResetModelConfigs();
+        await ResetModelConfigsAsync();
         SetUser(51405);
         var gw = User.Use<LlmGateway>();
 

@@ -22,6 +22,12 @@
     <TKWFTest>true</TKWFTest>
   </PropertyGroup>
 
+  <!-- DLL 模式补充：MockDbEntityDAC（v4.10.8 默认内存 DAC，框架 targets 未自动注入 Mock 程序集——
+       LlmGatewayTests 等需 MockDbEntityDAC.Clear() 测试隔离） -->
+  <ItemGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
+    <Reference Include="TKWF.Domain.Testing.Mock" HintPath="$(TKWFDeployPath)build\refs\TKWF.Domain.Testing.Mock.dll" />
+  </ItemGroup>
+
   <ItemGroup>
     <None Update="appsettings.Test.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
@@ -39,6 +45,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <!-- Tier 1.5：SQLite :memory: 内存库（真实 VEntity 视图/聚合/投影语义测试） -->
+    <PackageReference Include="FreeSql.Provider.Sqlite" />
     <Using Include="Xunit" />
   </ItemGroup>
 

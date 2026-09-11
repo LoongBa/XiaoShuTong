@@ -15,7 +15,10 @@ namespace XiaoShuTong.Tests.Pk;
 /// - 查询路径：测试上下文 User.Query&lt;T&gt;() 因 IsInsideDomain=false 走 AOP 路径不可用（N-5）——
 ///   本类保留的 BR-24 用例不依赖填充（空数据零值降级），无需 DAC 查询。
 /// - 聚合正确性（仅 Finished 计入、Count/Sum 口径、胜率）需真实视图语义——待 Tier 1.5
-///   （FreeSqlEntityDAC @ SQLite :memory:，需 PkPlayerStatsView 提供 ViewSqlSQLite 方言变体）真迁移后恢复覆盖。
+///   （FreeSqlEntityDAC @ SQLite :memory:）真迁移后恢复覆盖。⚠️ 当前 Tier 1.5 有框架缺口：
+///   ConfigTestDomainAsync + SQLite :memory: 的 SyncViewsAsync 抛 ObjectDisposedException
+///   （FreeSql SQLite 连接池 :memory: 不保活），框架自身测试全用裸 FreeSqlBuilder 绕过——待框架修复。
+/// - PkPlayerStatsView.ViewSqlSQLite 方言变体已就绪（FILTER→CASE WHEN），框架修复后即可启用。
 /// </remarks>
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]

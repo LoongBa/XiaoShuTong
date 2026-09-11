@@ -3,8 +3,8 @@
 // ═══════════════════════════════════════════════════════
 //
 // 方式 A（推荐）：ConfigTestDomainAsync — 一行搞定 5 个阻塞点
-//   无连接串 → 内存 DAC（UseMockDbEntityDAC），无需数据库
-//   有连接串 → 真实 PostgreSQL（UseFreeSqlEntityDAC）
+//   无 configure → 默认内存 MockDbEntityDAC（V4.10.7+），无需数据库
+//   cfg.UseFreeSqlEntityDAC(DataType.Sqlite, ":memory:") → SQLite 真实内存库（Tier 1.5）
 //
 // 方式 B（手动）：逐行写 —— 用于理解原理或在中间插入自定义注册
 //
@@ -17,6 +17,7 @@
 // ═══════════════════════════════════════════════════════
 
 using XiaoShuTong;
+using FreeSql;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using TKW.Framework.Domain;
@@ -47,8 +48,11 @@ public sealed class XiaoShuTongDomainTestFixture : DomainXunitTestFixtureBase
         var options = config.GetSection("DomainOptions").Get<DomainWebOptions>()
             ?? new DomainWebOptions { IsDevelopment = true };
 
-        // ── 方式 A1：内存 DAC（推荐，无需数据库） ──
-        // 无连接串参数 → 内部用 UseMockDbEntityDAC()（V4.10.7 起默认 MockDbEntityDAC，ConcurrentDictionary）
+        // ── Tier 1：内存 DAC（默认 MockDbEntityDAC，V4.10.7+） ──
+        // ⚠️ Tier 1.5（SQLite :memory:）暂不可用：框架 ConfigTestDomainAsync + UseFreeSqlEntityDAC(Sqlite,:memory:)
+        //    SyncViewsAsync 执行 ViewSql 时 ObjectDisposedException（FreeSql SQLite 连接池 :memory: 不保活，
+        //    SyncStructure 后连接释放）——框架自身测试全用裸 FreeSqlBuilder（绕过 DomainHost），此组合未实证。
+        //    待框架修复后启用 Tier 1.5（见 PkPlayerStatsView ViewSqlSQLite 已就绪）。
         Host = await services.ConfigTestDomainAsync<XiaoShuTongUserInfo, XiaoShuTongDomainInitializer, DomainWebOptions>(
             options);
 
