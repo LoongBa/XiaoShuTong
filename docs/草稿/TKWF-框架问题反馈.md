@@ -1,9 +1,9 @@
 ---
 title: TKWF 框架问题反馈（XiaoShuTong 实盘发现）
-version: v0.3
-summary: 从 XiaoShuTong 项目实战中发现的 TKWF 框架问题/隐患/文档偏差，供框架组修正
-status: 待框架组评审
-date: 2026-09-11
+version: v0.7
+summary: 从 XiaoShuTong 项目实战中发现的 TKWF 框架问题/隐患/文档偏差，供框架组修正（P0-1~P1-3、N-1~N-6 已由框架组 v4.10.6/v4.10.7 修复落地并验收）
+status: 已验收归档（框架组修复全部落地；N-7 提案待框架组评估；N-8 已登记新迭代 v4.10.9）
+date: 2026-09-12
 source: XiaoShuTong VEntity 落地 + 框架源码审计（F:\LoongBa_Git\_TKWF）
 ---
 
@@ -16,6 +16,7 @@ source: XiaoShuTong VEntity 落地 + 框架源码审计（F:\LoongBa_Git\_TKWF�
 > **v0.4（2026-09-11）**：框架组回复「v4.10.6 增量 SeedViewAsync 已落地」——经源码审计 + 运行时探针**验收成立**（实际部署 v4.10.7）；PkPlayerStatsView 聚合测试已迁移 SeedViewAsync 填充全绿。新增「N-5：`User.Query<T>()` 测试上下文限制」。
 > **v0.5（2026-09-12）**：框架组通知——**v4.10.7 起 `SeedViewAsync` 已退役**（ADR60：它是"伪覆盖"，假数据直填 store，视图计算/聚合/策略未被真测）；N-5 已修复（SKILL §7.3 查询路径改 `IEntityReadOnlyDAC<TView>.Query`）。项目组需迁移已用 SeedViewAsync 的测试（迁移指引见文末「附录：SeedViewAsync 退役迁移指引」）。
 > **v0.6（2026-09-12）**：XiaoShuTong 架构提案——「**框架 Testing 注入 VEntity 方言 + 分层自动翻译**」（N-7）：基于框架既有 sqlglot 调研（ADR55）与 xCodeGen ProjectMetaContext 能力，提出测试侧注入 Testing ViewSql + L1 规则式/L2 工具式自动翻译（新发现 cyqwel = SQLGlot v30.12.0 C# 移植）+ 既有校验门控兜底。
+> **v0.7（2026-09-12）**：复查收口——逐项对照 `_TKWF` HEAD v4.10.8 源码验证：P0-1~P1-3、N-1~N-6 全部修复落地（Forwarder 桥接 / SKILL §7 重写 / ADR60 Tier 1.5 / 守卫对称 / SeedViewAsync 退役等，证据见各节「验收」注）。**新增 N-8：P1-1 修复遗漏 `G06:317`**（活文档仍称「静态构造器守卫」），已登记框架新迭代 v4.10.9。本文档状态同步为已验收归档。
 
 ---
 
@@ -86,6 +87,8 @@ public static IServiceCollection SetEntityDAC(
 ```
 
 > 注意：需处理开放泛型 `AddScoped(typeof(X), ...)` 与实例转发的组合。生产（FreeSql）行为不变（共享实例 + 共享 DB）；InMemory 两接口指向同一 `_store`，读写链路天然打通。
+
+> ✅ **验收（v0.7 复核）**：v4.10.6 落地采用**方案 A 变体——`EntityReadOnlyDACForwarder<T>` 桥接**（`EntityDACExtensions.cs:35-36`）：`IEntityReadOnlyDAC<>` 注册为 forwarder，构造时注入同 scope 的 `IEntityDAC<T>` 实例并转发全部 6 成员。原方案 A 代码中的「开放泛型工厂 + `MakeGenericType`」不可行（Microsoft DI 开放泛型工厂拿不到闭合类型参数），forwarder 是标准替代方案。回归测试 `SetEntityDAC_DualInterfaces_ReadWriteSameSource`（CfgStrongContractTests:247）✅。
 
 **方案 B（最小）**：文档明示「InMemory DAC 下两接口为独立实例，测试须用同一接口读写」+ `TestingEntityDAC` 类注释加醒目警告。
 
@@ -180,6 +183,8 @@ VEntity 无 DataService（ADR14 D7），测试无法经 `EntityCreateAsync` 填�
 - `_Domain.Testing\xUnit\README.md`（2026-07-29）「断裂链 1」（DataService 丢弃 DAC 返回值）**已在 V4.9.44 修复**（DomainDataServiceBase.cs:152 `entity = await dac.InsertAsync(...)`），README 未同步。
 - 建议：新增实例同一性回归测试（修复后必绿）+ 更新 README。
 
+> ✅ **验收（v0.7 复核）**：v4.10.6 已补回归 `SetEntityDAC_DualInterfaces_ReadWriteSameSource` + README 断裂链 1/问题 1 标注「✅ 已修复 V4.9.44 + V4.10.6 复核」。⚠️ 原建议的「`ReferenceEquals` 同一断言」**实际调整为语义共享断言**（写入后经只读接口读回同数据）——Forwarder 方案下 `IEntityReadOnlyDAC<T>` 解析类型是独立 forwarder 对象，`Assert.Same` 必然失败（CfgStrongContractTests:244 注释已说明，Oracle v4.10.6 审核 P0-1 修正）。
+
 ---
 
 ## 补充：XiaoShuTong 侧已确认的联调环境说明
@@ -195,7 +200,7 @@ VEntity 无 DataService（ADR14 D7），测试无法经 `EntityCreateAsync` 填�
 | 原项 | 框架组修复 | 验收状态 |
 |:---:|-----------|:---:|
 | P0-1 | `EntityReadOnlyDACForwarder<T>` 桥接：`IEntityReadOnlyDAC<>` 转发到同 scope `IEntityDAC<>` 实例（Microsoft DI 开放泛型工厂无法拿闭合类型参数，forwarder 标准方案） | ✅ 运行时已生效（Forwarder 解析 + 读写同源回归测试） |
-| P0-2 | SKILL §7.3 示例 `RootServiceProvider`→`User.GetService<T>`（RootServiceProvider 全仓 15 处/7 文件替换归零） | ⚠️⚠️ **部分修复，见下** |
+| P0-2 | SKILL §7.3 示例 `RootServiceProvider`→`User.GetService<T>`（RootServiceProvider 全仓 15 处/7 文件替换归零） | ✅ 已修复（v4.10.6 修正示例 + v4.10.6 增量 SeedViewAsync 打通 + v4.10.7 §7 完整重写为 Tier 1.5 SQLite——N-1 矛盾彻底消除，见 N-1/N-8） |
 | P1-1 | 5 处文档改方法级守卫 + `TestingEntityDAC`/`MockDbEntityDAC` 补对称 View 守卫 | ✅ 已生效（写 View 抛异常） |
 | P1-2 | G06 §5.3 自定义 DAC 注册改 `SetEntityDAC` | ✅ 已修 |
 | P1-3 | README 断裂链 1/问题 1 标注已修（V4.9.44） | ✅ 已修 |
@@ -328,6 +333,8 @@ return Use<IEntityQueryRoot>().Query<T>();     // 测试上下文 IsInsideDomain
 
 **建议**：SKILL.md §7.3 示例当前用 `User.Query<PaymentLogStatView>()` 查询——与 N-5 冲突（测试上下文返回空），建议改为 DAC.Query 或经 Service 验证；并在 §7 补「`User.Query<T>()` 在测试上下文走 AOP 路径返回空，VEntity 验证请用 DAC.Query 或 Service 路径」说明。
 
+> ✅ **验收（v0.7 复核）**：v4.10.7（ADR60）SKILL §7.3/§7.4 已重写为 `IEntityReadOnlyDAC<TView>.Query` 直查 + N-5 根因注释（`DomainUser.cs:319-337` 双路径源码已核实：域内 `IsInsideDomain=true` 直连 DAC，域外走 `Use<IEntityQueryRoot>()` AOP 路径）。⚠️ 失败模式描述差异：本项实测为「**返回空**（Count=0）」，ADR60 描述为「`GetRequiredService` **解析失败**（测试项目无 `[DomainGenerateCode]` 实体 → 不生成 EQR）」——两者取决于测试项目是否注册了 `IEntityQueryRoot`，核心结论一致（`User.Query<TView>()` 在测试方法体不可用）。
+
 ---
 
 ## N-7：架构提案——框架 Testing 注入 VEntity 方言 + 分层自动翻译（v0.6 新增）
@@ -418,23 +425,55 @@ web 调研发现 `sebastienros/cyqwel`（MIT）——**SQLGlot v30.12.0 的 C# �
 
 ---
 
+## N-8：P1-1 修复遗漏——G06 使用指南仍称「静态构造器守卫」（v0.7 新增）
+
+### 现象
+
+P1-1 修复（v4.10.6）覆盖了 4 处文档（D06:121/123/467/612、tkwf-ventity-design:104、VEntity跨表查询升级:181、ADR-扩展跨表查询VEntity化:56），但**活文档 `G06-领域数据服务与数据存取使用指南.md:317` 仍写**：
+
+> | ❌ 错误用法 | 后果 |
+> |------------|------|
+> | 注入 `IEntityDAC<PaymentLogView>` | **类型实例化即抛异常**（`FreeSqlEntityDAC` **静态构造器守卫**检测 `IDomainViewEntity`） |
+
+与当前实现（v4.10.6 复核确认）不符：`GuardAgainstViewEntity()` 是**方法级守卫**——注入可解析，仅调用写方法（Insert/Update/Delete）时抛 `InvalidOperationException`，`Query` 放行。
+
+**同源旧表述残留**（历史记录文档，建议加注而非改原文）：
+- `ADR27:222`（Oracle 补充：GuardAgainstViewEntity() 静态构造器守卫）
+- `v4.9.5-VEntity-审核报告.md:15`（FreeSqlEntityDAC 静态构造器守卫 View Entity 写操作）
+
+### 影响
+
+开发者按 G06 的「错误用法后果」理解 → 以为注入 `IEntityDAC<ViewEntity>` 即抛错 → 实际可解析（仅写调用抛）——文档与行为不符，与 P1-1 修复前同类误导。
+
+### 建议修复
+
+1. `G06:317` 改为「**方法级守卫（V4.10.6 复核）**：注入可解析，调用写方法时抛 `InvalidOperationException`，`Query` 只读放行」——对齐 D06 表述
+2. `ADR27:222` / `v4.9.5 审核报告:15` 加「⚠️ 已过时——V4.10.6 起为方法级守卫，见 D06 §4.2」标注（ADR/审核报告为永久记录，不改历史正文）
+
+### 状态
+
+📋 **已登记框架新迭代 v4.10.9 处理**（v0.7 复查发现，开发方案见 `_TKWF` `docs/02-迭代开发/V4/v4.10.9-守卫文档残留修正-开发方案.md`）。
+
+---
+
 ## 修复优先级摘要
 
-| 优先级 | 项 | 修复 | 收益 |
-|:---:|:---:|------|------|
-| P0 | P0-1 | `SetEntityDAC` 工厂注册共享实例 | 一次性修复双实例/读写隔离/框架内部组件静默失效 |
-| P0 | P0-2 | 修正 SKILL.md §7.3 示例 + 全仓 `RootServiceProvider` 检索 | 阻断官方文档引导的陷阱 |
-| P0 | P0-3 | VEntity InMemory 测试填充通道（依赖 P0-1） | VEntity 集成测试在 InMemory 可行 |
-| P1 | P1-1 | 4 处文档改「方法级守卫」+ 测试 DAC 补守卫 | 消除文档漂移 + 测试信任假象 |
-| P1 | P1-2 | `SetEntityDAC` 重复注册检测 | 防静默分歧 |
-| P1 | P1-3 | 实例同一性回归测试 + README 更新 | 防回归 + 文档准确 |
-| **P0** | **N-1** | SKILL §7.3 示例与 P1-1 守卫矛盾（示例仍不可用） | 消除官方文档错误引导 |
-| **P0** | **N-2** | VEntity InMemory 填充通道缺失（P0-3 未落地） | VEntity 聚合正确性可自动化验证 |
-| **P0** | **N-3** | 「P0-3 因 P0-1 天然解锁」论断证伪——P0-1/P1-1 正交，需 View 专用 Seed 通道 | 防止错误论断误导消费端 |
-| **P1** | **N-4** | 部署版本混合：Testing.xUnit.dll 仍 4.10.5 | 部署一致性 |
-| **P0** | **N-5** | `User.Query<T>()` 测试上下文走 AOP 路径返回空——SKILL §7.3 示例查询路径需修正 | 防止 VEntity 测试示例再次误导 |
-| **P2** | **N-7** | 架构提案：框架 Testing 注入 VEntity 方言 + 分层自动翻译（L1 规则式 / L2 cyqwel/sqlglot 工具式 / L3 校验门控）——xCodeGen ProjectMetaContext 链路已就绪，自动翻译定位"节约 Agent 思考" | 消除每 VEntity 手写方言变体成本 + 翻译可靠性有界 |
-| **P1** | **N-6** | v4.10.7 退役 `SeedViewAsync`（ADR60）——项目组已用 SeedViewAsync 的测试需迁移 | 消除"伪覆盖"（假数据直填 store，视图计算/聚合/策略未被真测） |
+| 优先级 | 项 | 状态 | 修复 | 收益 |
+|:---:|:---:|:---:|------|------|
+| P0 | P0-1 | ✅ v4.10.6 | `SetEntityDAC` 双接口共享实例（Forwarder 桥接落地） | 一次性修复双实例/读写隔离/框架内部组件静默失效 |
+| P0 | P0-2 | ✅ v4.10.6/7 | 修正 SKILL.md §7.3 示例 + 全仓 `RootServiceProvider` 检索 | 阻断官方文档引导的陷阱 |
+| P0 | P0-3 | ✅ v4.10.6 增量→v4.10.7 | VEntity 测试填充通道（SeedViewAsync → 演进为 Tier 1.5 SQLite 真实视图） | VEntity 聚合正确性可自动化验证 |
+| P1 | P1-1 | ✅ v4.10.6（⚠️ G06:317 遗漏见 N-8） | 4 处文档改「方法级守卫」+ 测试 DAC 补守卫 | 消除文档漂移 + 测试信任假象 |
+| P1 | P1-2 | ✅ v4.10.6（仅文档层） | G06 §5.3 自定义 DAC 注册改 `SetEntityDAC`（「重复注册检测」建议未落地） | 防静默分歧 |
+| P1 | P1-3 | ✅ v4.10.6 | 读写同源回归测试（语义共享断言）+ README 更新 | 防回归 + 文档准确 |
+| **P0** | **N-1** | ✅ v4.10.6 增量→v4.10.7 | SKILL §7.3 示例与 P1-1 守卫矛盾（§7 完整重写消除） | 消除官方文档错误引导 |
+| **P0** | **N-2** | ✅ v4.10.7 | VEntity 填充通道缺失（SeedViewAsync 曾落地，ADR60 演进为 Tier 1.5） | VEntity 聚合正确性可自动化验证 |
+| **P0** | **N-3** | ✅ v4.10.7 | 「P0-3 因 P0-1 天然解锁」论断证伪成立——SeedViewAsync 落地后演进退役 | 防止错误论断误导消费端 |
+| **P1** | **N-4** | ✅ v4.10.6 增量 | 部署版本混合：Testing.xUnit.dll 已同步部署 | 部署一致性 |
+| **P0** | **N-5** | ✅ v4.10.7 | `User.Query<T>()` 测试上下文限制——SKILL §7.3/§7.4 改 `IEntityReadOnlyDAC<TView>.Query` 直查 | 防止 VEntity 测试示例再次误导 |
+| **P1** | **N-6** | ✅ v4.10.7 | 退役 `SeedViewAsync`（ADR60）——迁移指引见文末附录 | 消除"伪覆盖"（假数据直填 store，视图计算/聚合/策略未被真测） |
+| **P2** | **N-7** | ⏳ 待框架组评估（提案） | 架构提案：框架 Testing 注入 VEntity 方言 + 分层自动翻译（L1 规则式 / L2 cyqwel/sqlglot 工具式 / L3 校验门控）——xCodeGen ProjectMetaContext 链路已就绪 | 消除每 VEntity 手写方言变体成本 + 翻译可靠性有界 |
+| **P1** | **N-8** | 📋 已登记 v4.10.9 | P1-1 修复遗漏：`G06:317` 仍称「静态构造器守卫」，活文档残留需改方法级守卫表述 | 消除使用指南文档误导 |
 
 ---
 
