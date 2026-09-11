@@ -14,6 +14,8 @@ source: XiaoShuTong VEntity 落地 + 框架源码审计（F:\LoongBa_Git\_TKWF�
 > 优先级：P0 = 影响正确性（测试与生产行为不一致）；P1 = 文档误导开发者踩坑；P2 = 可维护性。
 > **v0.3（2026-09-11）**：框架组回复「DLL 至 4.10.6 后 P0-3 因 P0-1 天然解锁」——经源码审计 + 部署运行时探针**证伪**（P0-1 与 P1-1 正交，守卫仍拦截 `IEntityDAC<TView>.InsertAsync`）；另发现部署版本混合（Testing.xUnit.dll 仍 4.10.5）。详见「N-3 论证伪」。
 > **v0.4（2026-09-11）**：框架组回复「v4.10.6 增量 SeedViewAsync 已落地」——经源码审计 + 运行时探针**验收成立**（实际部署 v4.10.7）；PkPlayerStatsView 聚合测试已迁移 SeedViewAsync 填充全绿。新增「N-5：`User.Query<T>()` 测试上下文限制」。
+> **v0.5（2026-09-12）**：框架组通知——**v4.10.7 起 `SeedViewAsync` 已退役**（ADR60：它是"伪覆盖"，假数据直填 store，视图计算/聚合/策略未被真测）；N-5 已修复（SKILL §7.3 查询路径改 `IEntityReadOnlyDAC<TView>.Query`）。项目组需迁移已用 SeedViewAsync 的测试（迁移指引见文末「附录：SeedViewAsync 退役迁移指引」）。
+> **v0.6（2026-09-12）**：XiaoShuTong 架构提案——「**框架 Testing 注入 VEntity 方言 + 分层自动翻译**」（N-7）：基于框架既有 sqlglot 调研（ADR55）与 xCodeGen ProjectMetaContext 能力，提出测试侧注入 Testing ViewSql + L1 规则式/L2 工具式自动翻译（新发现 cyqwel = SQLGlot v30.12.0 C# 移植）+ 既有校验门控兜底。
 
 ---
 
@@ -328,6 +330,94 @@ return Use<IEntityQueryRoot>().Query<T>();     // 测试上下文 IsInsideDomain
 
 ---
 
+## N-7：架构提案——框架 Testing 注入 VEntity 方言 + 分层自动翻译（v0.6 新增）
+
+> **背景**：XiaoShuTong 迁移 Tier 1.5（SQLite 内存真实库）时发现，VEntity 的 `ViewSql` 基于 PostgreSQL 方言，测试需提供 `ViewSqlSQLite` 变体。本提案探讨：① 测试环节自动注入 Testing ViewSql（基于 xCodeGen ProjectMetaContext）；② 自动翻译的可靠性边界与工具选型。
+
+### 7.1 核心问题
+
+- **现状**：ADR53 要求每 VEntity 手写方言变体（`ViewSqlSQLite` 等）——维护成本高（每 VEntity × 每方言），且人工翻译可能引入语义漂移。
+- **诉求**：测试（SQLite Tier 1.5）无需为每个 VEntity 手写 Testing ViewSql，由框架自动注入。
+
+### 7.2 框架既有能力核对（无需新增）
+
+**xCodeGen 读取 ProjectMetaContext 注入 Testing ViewSql 完全可行**——链路已就绪：
+
+```
+xCodeGen.Cli.LoadProjectMetaContext()（Program.cli.cs L77-125）
+  → AssemblyLoadContext 加载目标程序集
+  → 反射查找 IProjectMetaContext 实现 → GetOrCreateInstance()
+  → IProjectMetaContext.AllMetadatas / Views / FindByClassName / GetPropertyMap
+  → ClassMetadata.ViewSql + GenerateCodeSettings["ViewSqlByProvider"]
+  → ViewSqlDraft.cshtml 模板已消费（@model ClassMetadata）
+```
+
+| 能力 | 位置 | 状态 |
+|------|------|:---:|
+| xCodeGen 读取 ProjectMetaContext | Program.cli.cs `LoadProjectMetaContext()` | ✅ 已有 |
+| Engine 接收 IProjectMetaContext | Engine.cs `GenerateAsync(IProjectMetaContext, ...)` | ✅ 已有 |
+| ClassMetadata 暴露 ViewSql/变体 | `GenerateCodeSettings["ViewSqlByProvider"]` | ✅ 已有 |
+| 模板消费元数据 | ViewSqlDraft.cshtml（@model ClassMetadata） | ✅ 已有 |
+| 测试注入 DatabaseProvider | ViewSyncInitializerTests `ConfigureServices` 钩子（V4.9.100 T1） | ✅ 已有先例 |
+| 新增 Artifact 改动面 | xCodeGen.json 1 行 + 1 .cshtml（v4.9.106 §3.3 确认） | ✅ 极小 |
+
+**测试侧注入方言先例**（V4.9.100 T1，`ViewSyncInitializerTests.SyncViews_SqliteVariant_ExecutesTests`）：
+```csharp
+protected override void ConfigureServices(IServiceCollection services)
+    => services.AddSingleton(typeof(DatabaseProvider), DatabaseProvider.SQLite);
+// + 元数据 GenerateCodeSettings["ViewSqlByProvider"]["SQLite"] = "CREATE VIEW ..."
+// → SyncViewsAsync 按 dbProvider.ToString() 选变体执行
+```
+
+### 7.3 自动翻译：可靠性边界（框架 ADR55 定论 + 新发现）
+
+**sqlglot 调研**（框架已有，ADR55 + v4.9.106 §2.1/§3.5）：
+
+| 项 | 结论 |
+|----|------|
+| 方言数 | **31+ 方言**（Postgres/SQLite 均 Official）——用户记忆的"33 方言"即此 |
+| 可靠性 | ⚠️ **DLBENCH 仅 8.2% EX 准确率**——复杂 SQL（窗口/聚合/FILTER）不可控 |
+| 集成障碍 | Python 进程外依赖，与 TKWF 零反射/AOT 哲学冲突 |
+| 框架定位 | 「sqlglot 初筛 → Agent review → 校验」，定位"节约 Agent 思考"，不承诺 100% 自动 |
+
+**新发现：cyqwel（.NET 内嵌替代）**
+
+web 调研发现 `sebastienros/cyqwel`（MIT）——**SQLGlot v30.12.0 的 C# 移植**（Polyglot AST 提取，identity 测试覆盖 PostgreSql/Sqlite/MySQL/TSQL/Oracle）。**消除 sqlglot 的 Python 进程外依赖**——值得框架组重新评估 ADR53 否决的 .NET 进程内方案（当时否决的是 Polyglot/Cyqwel 旧版）。
+
+### 7.4 建议：分层可靠自动翻译
+
+```
+测试注入 Testing ViewSql 的三级策略（优先级由高到低）：
+  L1 规则式（推荐先做）：PG→SQLite 已知确定规则
+     FILTER → CASE WHEN / CREATE OR REPLACE → CREATE IF NOT EXISTS / :: → CAST / CASCADE 移除
+     —— 完全确定、可单测、无外部依赖；覆盖 PkPlayerStatsView 全部特征
+  L2 工具式（可选增强）：sqlglot（进程外）/ cyqwel（.NET 内嵌）初筛
+     —— 覆盖 L1 未命中规则集，但 8.2% EX 需 review 兜底
+  L3 校验门控（框架已有）：编译期 VIEW001/VIEW003 + 运行时 ViewSqlColumnValidator
+     —— 翻译产物自动过校验，错误即时暴露
+```
+
+**L1 规则式可行性实证**（PkPlayerStatsView，PG→SQLite 全部语义等价）：
+
+| PG 表达式 | SQLite 等价 | 语义等价 |
+|-----------|------------|:---:|
+| `COUNT(*) FILTER (WHERE x)` | `SUM(CASE WHEN x THEN 1 ELSE 0 END)` | ✅ |
+| `CREATE OR REPLACE VIEW` | `CREATE VIEW IF NOT EXISTS` | ✅ |
+| `::` 类型转换 | `CAST(x AS type)` | ✅ |
+| `DROP ... CASCADE` | 移除 CASCADE | ✅ |
+| `COUNT`/`SUM` NULL 传播 | 两库一致（忽略 NULL） | ✅ |
+| `INNER JOIN` / `GROUP BY` | 标准 SQL，一致 | ✅ |
+
+### 7.5 落地建议（供框架组评估立项）
+
+1. **规则式翻译器**（L1）：框架 Testing 新增 `ViewSqlTranslator`——按已知确定规则映射 PG→目标库，产物进入 `ViewSqlByProvider` 注入
+2. **注入机制**：xCodeGen 新增 Artifact（`ViewSqlDraft.cshtml` 扩展）——读取 ProjectMetaContext 的 Views，缺失目标库变体时自动生成 Testing ViewSql（标记 `[auto-generated]`）
+3. **工具式增强**（L2，可选）：评估 cyqwel（.NET 内嵌）替代 sqlglot（Python 进程外）——若质量达标可并入翻译器
+4. **校验兜底**（L3）：复用既有 VIEW001/VIEW003 + ViewSqlColumnValidator——翻译产物自动过校验
+5. **回退**：自动翻译产物可被手写变体覆盖（显式 > 自动）；复杂 SQL 翻译失败 → 标记"需人工提供"（对齐 ADR55 尽力而为）
+
+---
+
 ## 修复优先级摘要
 
 | 优先级 | 项 | 修复 | 收益 |
@@ -343,3 +433,52 @@ return Use<IEntityQueryRoot>().Query<T>();     // 测试上下文 IsInsideDomain
 | **P0** | **N-3** | 「P0-3 因 P0-1 天然解锁」论断证伪——P0-1/P1-1 正交，需 View 专用 Seed 通道 | 防止错误论断误导消费端 |
 | **P1** | **N-4** | 部署版本混合：Testing.xUnit.dll 仍 4.10.5 | 部署一致性 |
 | **P0** | **N-5** | `User.Query<T>()` 测试上下文走 AOP 路径返回空——SKILL §7.3 示例查询路径需修正 | 防止 VEntity 测试示例再次误导 |
+| **P2** | **N-7** | 架构提案：框架 Testing 注入 VEntity 方言 + 分层自动翻译（L1 规则式 / L2 cyqwel/sqlglot 工具式 / L3 校验门控）——xCodeGen ProjectMetaContext 链路已就绪，自动翻译定位"节约 Agent 思考" | 消除每 VEntity 手写方言变体成本 + 翻译可靠性有界 |
+| **P1** | **N-6** | v4.10.7 退役 `SeedViewAsync`（ADR60）——项目组已用 SeedViewAsync 的测试需迁移 | 消除"伪覆盖"（假数据直填 store，视图计算/聚合/策略未被真测） |
+
+---
+
+## 附录：SeedViewAsync 退役迁移指引（框架组 v0.5，2026-09-12）
+
+> **背景**：v4.10.6 提供的 `SeedViewAsync`（测试专用填充旁路，直写 store 绕过守卫）已在 **v4.10.7 退役**（ADR60）。原因是"伪覆盖"——假数据直填内存 store，视图的 SQL 计算、聚合、过滤策略**从未被真实执行**，测试断言的是手工数据而非视图真实行为。同时 N-5 已修复：VEntity 查询用 `IEntityReadOnlyDAC<TView>.Query`（不可用 `User.Query<TView>()`）。
+
+### 迁移规则（对号入座）
+
+| 你的现状 | 改为（推荐） | 说明 |
+|---------|------------|------|
+| 用 `SeedViewAsync` 填充 VEntity 测聚合（如 `PkPlayerStatsView`） | **Tier 1.5：SQLite 内存真实库** | 测试宿主 `cfg.UseFreeSqlEntityDAC(FreeSql.DataType.Sqlite, "Data Source=:memory:")` → 初始化器真实执行 `CREATE VIEW` → `InsertAsync` 写**基表** → `IEntityReadOnlyDAC<TView>.Query` 读视图。聚合/视图计算被真实执行 |
+| 用 `SeedViewAsync` 填充 VEntity 测字段映射/投影 | 用 **MockDbEntityDAC 只读直查**（Tier 1）或同样迁 SQLite | 框架层保证：VEntity 写守卫不可绕过（无 Seed 旁路了） |
+| 已用 `IEntityDAC<TView>.Query` / `IEntityReadOnlyDAC<TView>.Query` 查询 | **无需改动** | 此路径不受影响（只是无 Seed 填充，Tier 1 下读为空，需走 Tier 1.5） |
+
+### 迁移示例（XiaoShuTong `GetPkStatsServiceTests` 对照）
+
+```csharp
+// ❌ v4.10.6 旧方式（SeedViewAsync 已退役——编译报错：方法不存在）
+// var dac = this.User.GetService<IEntityDAC<PkPlayerStatsView>>();
+// await ((TestingEntityDAC<PkPlayerStatsView>)dac).SeedViewAsync(rows);
+
+// ✅ v4.10.7 方式一：SQLite 内存真实库（推荐，聚合真测）
+// Fixture 配置：cfg.UseFreeSqlEntityDAC(FreeSql.DataType.Sqlite, "Data Source=:memory:")
+var baseDac = this.User.GetService<IEntityDAC<PlayerMatch>>();
+await baseDac.InsertBatchAsync(matchRows);                  // 写基表
+var reader = this.User.GetService<IEntityReadOnlyDAC<PkPlayerStatsView>>();
+var stats = await reader.ToListAsync(reader.Query);          // 读真实视图（聚合由 SQL 执行）
+
+// ✅ v4.10.7 方式二：纯逻辑断言直接塞基表到 Mock（不涉及视图语义时）
+var playerDac = this.User.GetService<IEntityDAC<PlayerMatch>>();
+await playerDac.InsertBatchAsync(matchRows);
+// 若需验证视图层聚合 → 必须走方式一（SQLite）
+```
+
+### 关键点
+
+1. **升级依赖**：框架引用更新到 **v4.10.7**（`UseMockDbEntityDAC()` 为默认内存 DAC；`SeedViewAsync` 已从两个 DAC 删除）。
+2. **视图方言**：SQLite 执行视图需该项目 VEntity 提供 `ViewSqlSQLite` 方言变体（ADR53）或改用 `InlineSelectSql` 子查询——详见 tkwf-test SKILL §7.3。
+3. **`User.Query<TView>()` 禁用于测试方法体**（N-5）：测试方法体 `IsInsideDomain=false` 走 AOP 路径返回空——一律用 `IEntityReadOnlyDAC<TView>.Query` 或经 Service。
+4. **守卫不可绕过**：`IEntityDAC<TView>.InsertAsync` 始终抛异常（对齐生产只读），别再尝试填充 VEntity 本身——写**基表**，视图由 SQL 引擎派生。
+
+### 框架侧已同步
+
+- SKILL §7 重写（Tier 1/1.5/2 决策表 + Tier 1.5 SQLite 示例）；VEntity开发速查同步
+- `CfgStrongContractTests`：SeedViewAsync 交叉回归 → 守卫断言 + 只读空集
+- ADR60 已立项；v4.10.7 已提交 + tag + 推送
