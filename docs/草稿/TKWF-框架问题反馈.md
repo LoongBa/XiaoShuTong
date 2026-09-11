@@ -1,6 +1,6 @@
 ---
 title: TKWF 框架问题反馈（XiaoShuTong 实盘发现）
-version: v0.2
+version: v0.3
 summary: 从 XiaoShuTong 项目实战中发现的 TKWF 框架问题/隐患/文档偏差，供框架组修正
 status: 待框架组评审
 date: 2026-09-11
@@ -12,7 +12,7 @@ source: XiaoShuTong VEntity 落地 + 框架源码审计（F:\LoongBa_Git\_TKWF�
 > 反馈来源：XiaoShuTong 项目 `PkPlayerStatsView`（VEntity）落地过程中实测发现 + 框架源码三路并行审计。
 > 涉及框架能力：VEntity 测试（InMemory DAC）、`IEntityDAC<T>`/`IEntityReadOnlyDAC<T>` 注册机制、tkwf-* skill 文档准确性。
 > 优先级：P0 = 影响正确性（测试与生产行为不一致）；P1 = 文档误导开发者踩坑；P2 = 可维护性。
-> **v0.2（2026-09-11）**：框架组 v4.10.6 已修复 P0-1/P0-2(部分)/P1-1/P1-2/P1-3；新增 N-1（P0-2 与 P1-1 矛盾）、N-2（VEntity InMemory 填充缺口）。
+> **v0.3（2026-09-11）**：框架组回复「DLL 至 4.10.6 后 P0-3 因 P0-1 天然解锁」——经源码审计 + 部署运行时探针**证伪**（P0-1 与 P1-1 正交，守卫仍拦截 `IEntityDAC<TView>.InsertAsync`）；另发现部署版本混合（Testing.xUnit.dll 仍 4.10.5）。详见「N-3 论证伪」。
 
 ---
 
@@ -247,6 +247,47 @@ await dac.InsertAsync(new PaymentLogStatView { ... });
 
 ---
 
+## N-3：框架组「P0-3 因 P0-1 天然解锁」论断 — 经审计证伪（v0.3 新增）
+
+### 框架组回复（待验证论断）
+
+> 「DLL 更新到 v4.10.6 后，P0-1 读写隔离、P0-2 文档陷阱、P1-1 守卫不对称、P1-2 注册分裂、P1-3 README 滞后全部消除；**P0-3（VEntity InMemory 填充）因 P0-1 修复天然解锁**（`IEntityDAC<TView>` 填充 + `User.Query<TView>()` 同源）。」
+
+### 验证结论：**P0-3 论断不成立**（P0-1 与 P1-1 正交）
+
+**源码审计**（`_TKWF` v4.10.6）：
+- `TestingEntityDAC.GuardAgainstViewEntity()`（L68）被 **6 个写方法全部调用**（InsertAsync L77 / InsertBatchAsync L87 / DeleteAsync L101 / UpdateAsync L107 / UpdateBatchAsync L114 / UpdateColumnsBatchAsync L125）；`MockDbEntityDAC` 同样（L60 定义，6 调用点）
+- `DatasetSeedLoader.LoadIntoAsync/LoadFromSeedAsync` 调用 `dac.InsertAsync` → **Seed 通道也被守卫拦截**，无绕过
+- 框架自身 VEntity 测试（GraphQLProjectionEndToEndTests / Plan1EndToEndTests）**全部用 `fsql.Insert(...)` 原生写入**，不经过 `IEntityDAC<T>`——框架无 VEntity InMemory 填充先例
+- P0-1 回归测试 `SetEntityDAC_DualInterfaces_ReadWriteSameSource` 用 `TestEntity`（**普通实体**，仅 `IDomainEntity`），**不涉及 View 行为**
+
+**部署运行时探针**（决定性证据）：
+```
+PkPlayerStatsView implements IDomainViewEntity: True
+IEntityDAC<PkPlayerStatsView>.InsertAsync → THREW InvalidOperationException
+  "TestingEntityDAC<PkPlayerStatsView>: View Entity 不支持写操作"
+```
+
+**逻辑推演**：
+- P0-1（Forwarder 桥接）= 解决「`IEntityReadOnlyDAC<T>` 与 `IEntityDAC<T>` 同 scope 共享实例」→ 读写同源
+- P1-1（GuardAgainstViewEntity）= 解决「测试可写 View、生产不可写」信任假象 → **View 实体禁止任何写入**
+- 两者正交：P0-1 使读写同源，但**写操作本身被 P1-1 守卫拦截** → `IEntityDAC<TView>.InsertAsync` 填充路径仍被阻断
+- v4.10.6 开发方案 L143 的论断（写于 P1-1 加入之前/未考虑交互）不成立
+
+**附带发现**：部署 `TKWF.Domain.dll` 已 v4.10.6（含 Forwarder，09:26），但 `TKWF.Domain.Testing.xUnit.dll` **仍 v4.10.5**（08:49）——**部署版本混合**，需框架组同步补齐。
+
+### 建议框架组
+
+1. **成立性确认**：P0-3 需**两个独立修复**（P0-1 读写同源 ✅ 已修 + View 专用填充通道 ❌ 未提供），非 P0-1 自然结果
+2. **填充通道方案**（任选）：
+   - `TestingEntityDAC` 增加 `SeedViewAsync(IEnumerable<TEntity>)`（写 `_store` 直通，与生产守卫语义不冲突——测试专用）
+   - 或提供 `IEntityViewDAC<T>` 测试接口（带 Seed）
+   - 或文档明示「VEntity InMemory 测试需 FreeSql 原生 Insert（对齐框架自身测试模式）」+ 修正 v4.10.6 开发方案 L143
+3. **修正 SKILL §7.3 示例**（N-1 延续）：当前 `IEntityDAC<PaymentLogStatView>.InsertAsync` 示例仍被守卫拦截
+4. **部署同步**：Testing.xUnit.dll 升至 v4.10.6
+
+---
+
 ## 修复优先级摘要
 
 | 优先级 | 项 | 修复 | 收益 |
@@ -257,3 +298,7 @@ await dac.InsertAsync(new PaymentLogStatView { ... });
 | P1 | P1-1 | 4 处文档改「方法级守卫」+ 测试 DAC 补守卫 | 消除文档漂移 + 测试信任假象 |
 | P1 | P1-2 | `SetEntityDAC` 重复注册检测 | 防静默分歧 |
 | P1 | P1-3 | 实例同一性回归测试 + README 更新 | 防回归 + 文档准确 |
+| **P0** | **N-1** | SKILL §7.3 示例与 P1-1 守卫矛盾（示例仍不可用） | 消除官方文档错误引导 |
+| **P0** | **N-2** | VEntity InMemory 填充通道缺失（P0-3 未落地） | VEntity 聚合正确性可自动化验证 |
+| **P0** | **N-3** | 「P0-3 因 P0-1 天然解锁」论断证伪——P0-1/P1-1 正交，需 View 专用 Seed 通道 | 防止错误论断误导消费端 |
+| **P1** | **N-4** | 部署版本混合：Testing.xUnit.dll 仍 4.10.5 | 部署一致性 |
