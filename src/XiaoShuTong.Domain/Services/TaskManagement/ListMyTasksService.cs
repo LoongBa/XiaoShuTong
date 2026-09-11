@@ -37,11 +37,17 @@ internal class ListMyTasksService(DomainUser<XiaoShuTongUserInfo> user)
                  && (string.IsNullOrWhiteSpace(request.Status) || x.Status.ToString() == request.Status),
             ct: ct);
 
+        var orderedAssignments = assignments.OrderByDescending(a => a.AssignedAt).ToList();
+        var taskIds = orderedAssignments.Select(a => a.TaskId).ToArray();
+        var tasks = taskIds.Length == 0
+            ? new List<Tasks>()
+            : await TasksDs.EntitySelectAsync(x => taskIds.Contains(x.Id), ct: ct);
+        var taskById = tasks.ToDictionary(t => t.Id);
+
         var items = new List<MyTaskItemDto>();
-        foreach (var assignment in assignments.OrderByDescending(a => a.AssignedAt))
+        foreach (var assignment in orderedAssignments)
         {
-            var task = await TasksDs.EntityGetAsync(x => x.Id == assignment.TaskId, ct);
-            if (task == null)
+            if (!taskById.TryGetValue(assignment.TaskId, out var task))
                 continue;
 
             // BR-12：已截止（DeadlineAt 已过且未完成）→ 状态显示为 Overdue 红标

@@ -35,22 +35,23 @@ internal class ListChildrenService(DomainUser<XiaoShuTongUserInfo> user)
         var relations = await RelationsDs.EntitySelectAsync(
             x => x.ParentId == parentId, ct: ct);
 
-        var items = new List<ChildItemDto>();
-        foreach (var relation in relations)
-        {
-            // 订阅状态（HasSubscription：存在非过期订阅即视为有）
-            var hasSubscription = await SubscriptionsDs.EntityGetAsync(
-                x => x.ParentId == parentId && x.StudentId == relation.StudentId
-                     && x.Status != SubscriptionStatus.Expired, ct) != null;
+        // 一次 IN 查询替代 foreach N+1：一次取全部非过期订阅，内存判定
+        var studentIds = relations.Select(r => r.StudentId).ToArray();
+        var subscriptions = studentIds.Length == 0
+            ? new List<Subscriptions>()
+            : await SubscriptionsDs.EntitySelectAsync(
+                x => x.ParentId == parentId
+                     && x.Status != SubscriptionStatus.Expired
+                     && studentIds.Contains(x.StudentId), ct: ct);
+        var subscribedStudentIds = subscriptions.Select(s => s.StudentId).ToHashSet();
 
-            items.Add(new ChildItemDto
-            {
-                StudentUid = relation.StudentId.ToString(), // 账户域 Uid 未实施，透传 Id
-                Nickname = string.Empty, // 账户域（跨模块），切片为空串
-                ClassName = string.Empty,
-                HasSubscription = hasSubscription,
-            });
-        }
+        var items = relations.Select(relation => new ChildItemDto
+        {
+            StudentUid = relation.StudentId.ToString(), // 账户域 Uid 未实施，透传 Id
+            Nickname = string.Empty, // 账户域（跨模块），切片为空串
+            ClassName = string.Empty,
+            HasSubscription = subscribedStudentIds.Contains(relation.StudentId),
+        }).ToList();
 
         // BR-03：无孩子空列表
         return new ListChildrenResDto { Success = true, Items = items };

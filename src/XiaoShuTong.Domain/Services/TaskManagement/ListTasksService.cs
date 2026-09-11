@@ -64,15 +64,22 @@ internal class ListTasksService(DomainUser<XiaoShuTongUserInfo> user)
             ct);
         var totalCount = await TasksDs.CountAsync(predicate, ct);
 
-        var listItems = new List<TaskListItemDto>();
-        foreach (var task in items)
-        {
-            var assignments = await AssignmentsDs.EntitySelectAsync(
-                x => x.TaskId == task.Id, ct: ct);
-            var completed = assignments.Count(a => a.Status == AssignmentStatus.Completed);
-            var completionRate = assignments.Count == 0 ? 0d : Math.Round((double)completed / assignments.Count, 4);
+        // 一次 IN 查询替代 foreach N+1：按 TaskId 分组组装完成率
+        var taskIds = items.Select(t => t.Id).ToArray();
+        var assignmentRows = taskIds.Length == 0
+            ? new List<TaskAssignments>()
+            : await AssignmentsDs.EntitySelectAsync(x => taskIds.Contains(x.TaskId), ct: ct);
+        var assignmentsByTask = assignmentRows
+            .GroupBy(a => a.TaskId)
+            .ToDictionary(g => g.Key, g => g.ToList());
 
-            listItems.Add(new TaskListItemDto
+        var listItems = items.Select(task =>
+        {
+            var taskAssignments = assignmentsByTask.GetValueOrDefault(task.Id) ?? [];
+            var completed = taskAssignments.Count(a => a.Status == AssignmentStatus.Completed);
+            var completionRate = taskAssignments.Count == 0 ? 0d : Math.Round((double)completed / taskAssignments.Count, 4);
+
+            return new TaskListItemDto
             {
                 TaskUid = task.UId,
                 Title = task.Title,
@@ -80,8 +87,8 @@ internal class ListTasksService(DomainUser<XiaoShuTongUserInfo> user)
                 Status = task.Status.ToString(),
                 QuestionCount = task.QuestionCount,
                 CompletionRate = completionRate,
-            });
-        }
+            };
+        }).ToList();
 
         return new ListTasksResDto { Success = true, Items = listItems, Total = (int)totalCount };
     }

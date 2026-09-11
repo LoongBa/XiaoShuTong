@@ -42,23 +42,26 @@ internal class ListGroupsService(DomainUser<XiaoShuTongUserInfo> user)
 
         var totalCount = await GroupsDs.CountAsync(x => x.OwnerId == ownerId, ct);
 
-        var listItems = new List<GroupListItemDto>();
-        foreach (var group in items)
+        // 一次 IN 查询替代 foreach N+1：按 GroupId 聚合成员数
+        var groupIds = items.Select(g => g.Id).ToArray();
+        var memberRows = groupIds.Length == 0
+            ? new List<GroupMembers>()
+            : await MembersDs.EntitySelectAsync(x => groupIds.Contains(x.GroupId), ct: ct);
+        var memberCountByGroup = memberRows
+            .GroupBy(x => x.GroupId)
+            .ToDictionary(g => g.Key, g => g.Count());
+
+        var listItems = items.Select(group => new GroupListItemDto
         {
-            var memberCount = await MembersDs.CountAsync(
-                x => x.GroupId == group.Id, ct);
-            listItems.Add(new GroupListItemDto
-            {
-                GroupId = group.Id,
-                GroupUid = group.UId,
-                Name = group.Name,
-                Subject = group.Subject,
-                Grade = group.Grade,
-                MemberCount = (int)memberCount,
-                ExecutionRate = 0, // 依赖模块 2（学习Session域），切片暂不实现
-                RankEnabled = group.RankEnabled,
-            });
-        }
+            GroupId = group.Id,
+            GroupUid = group.UId,
+            Name = group.Name,
+            Subject = group.Subject,
+            Grade = group.Grade,
+            MemberCount = memberCountByGroup.GetValueOrDefault(group.Id),
+            ExecutionRate = 0, // 依赖模块 2（学习Session域），切片暂不实现
+            RankEnabled = group.RankEnabled,
+        }).ToList();
 
         return new ListGroupsResDto
         {

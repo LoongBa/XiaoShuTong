@@ -55,18 +55,22 @@ internal class ListBanksService(DomainUser<XiaoShuTongUserInfo> user)
             ct);
         var totalCount = await BanksDs.CountAsync(predicate, ct);
 
-        var listItems = new List<BankListItemDto>();
-        foreach (var bank in items)
+        // 一次 IN 查询替代 foreach N+1：按 BankId 聚合活跃题数
+        var bankIds = items.Select(b => b.BankId).ToArray();
+        var questionGroups = bankIds.Length == 0
+            ? new List<Questions>()
+            : await QuestionsDs.EntitySelectAsync(
+                x => bankIds.Contains(x.BankId) && x.Status == QuestionStatus.Active, ct: ct);
+        var questionCountByBank = questionGroups
+            .GroupBy(x => x.BankId)
+            .ToDictionary(g => g.Key, g => g.Count());
+
+        var listItems = items.Select(bank => new BankListItemDto
         {
-            var questionCount = await QuestionsDs.CountAsync(
-                x => x.BankId == bank.BankId && x.Status == QuestionStatus.Active, ct);
-            listItems.Add(new BankListItemDto
-            {
-                Bank = bank.ToDto(),
-                TopicCount = 0, // 知识点树统计：切片按 ChapterId 去重（B.2 展示），此处简化为 0
-                QuestionCount = (int)questionCount,
-            });
-        }
+            Bank = bank.ToDto(),
+            TopicCount = 0, // 知识点树统计：切片按 ChapterId 去重（B.2 展示），此处简化为 0
+            QuestionCount = questionCountByBank.GetValueOrDefault(bank.BankId),
+        }).ToList();
 
         return new ListBanksResDto
         {

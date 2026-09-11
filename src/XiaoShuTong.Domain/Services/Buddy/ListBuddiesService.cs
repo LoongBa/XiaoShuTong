@@ -45,19 +45,41 @@ internal class ListBuddiesService(DomainUser<XiaoShuTongUserInfo> user)
             x => (x.InviterId == userId || x.InviteeId == userId) && x.Status == BuddyStatus.Accepted, ct: ct);
 
         var today = DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8));
+
+        var otherIds = buddies
+            .Select(b => b.InviterId == userId ? b.InviteeId : b.InviterId)
+            .Distinct()
+            .ToArray();
+
+        // 连续打卡天数（跨模块）——一次 IN 查询替代 foreach N+1
+        var dailyRows = otherIds.Length == 0
+            ? new List<DailyStats>()
+            : await DailyDs.EntitySelectAsync(x => otherIds.Contains(x.UserId), ct: ct);
+        var statDatesByUser = dailyRows
+            .GroupBy(x => x.UserId)
+            .ToDictionary(g => g.Key, g => g.Select(d => d.StatDate).ToList());
+
+        // 对方最新排名快照（BR-26/27：仅排名与数值）——一次 IN 查询，内存按 SnapshotDate 取最新
+        var snapshotRows = otherIds.Length == 0
+            ? new List<RankSnapshots>()
+            : await SnapshotsDs.EntitySelectAsync(x => otherIds.Contains(x.UserId), ct: ct);
+        var latestSnapshotByUser = snapshotRows
+            .GroupBy(x => x.UserId)
+            .ToDictionary(g => g.Key, g => g.OrderByDescending(s => s.SnapshotDate).First());
+
         var items = new List<BuddyListItemDto>();
         foreach (var buddy in buddies)
         {
             var otherId = buddy.InviterId == userId ? buddy.InviteeId : buddy.InviterId;
 
             // 连续打卡天数（跨模块）
-            var dailyStats = await DailyDs.EntitySelectAsync(
-                x => x.UserId == otherId, ct: ct);
             var streakDays = StreakCalculator.CalcCurrentStreak(
-                dailyStats.Select(d => d.StatDate).ToList(), today);
+                statDatesByUser.GetValueOrDefault(otherId) ?? [], today);
 
             // 对方最新排名快照（BR-26/27：仅排名与数值）
-            var rankSnapshot = await LatestRankSnapshotAsync(otherId, ct);
+            var rankSnapshot = latestSnapshotByUser.TryGetValue(otherId, out var latest)
+                ? latest.ToDto()
+                : null;
 
             items.Add(new BuddyListItemDto
             {
@@ -73,18 +95,6 @@ internal class ListBuddiesService(DomainUser<XiaoShuTongUserInfo> user)
 
         // BR-24：无搭子空列表
         return new ListBuddiesResDto { Success = true, Items = items };
-    }
-
-    private async Task<RankSnapshotsDto?> LatestRankSnapshotAsync(long otherId, CancellationToken ct)
-    {
-        var snapshots = await SnapshotsDs.EntitySelectAsync(
-            x => x.UserId == otherId, ct: ct);
-        var latest = snapshots.OrderByDescending(s => s.SnapshotDate).FirstOrDefault();
-        if (latest == null)
-            return null;
-
-        // DTO 最小化：复用自动生成 RankSnapshotsDto（SnapshotDate DateOnly 契约变更，列类型即 DateOnly）
-        return latest.ToDto();
     }
 }
 
