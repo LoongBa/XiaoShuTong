@@ -125,6 +125,22 @@ static XiaoShuTongDomainTestFixture()
 - 框架 Tier15SqliteTests 扩展为**多 Fact**（多测试顺序写入隔离验证）
 - 或文档明示 Tier 1.5 测试需**每个测试独立库**（连接串含测试唯一 Guid）
 
+### G6b（v4.10.13 Reset 契约适配发现）：Reset 后标准 Service 调用（User scope）读旧库
+
+**现象**：v4.10.13（G6 修复，提交 `4387cade`）提供 `ResetTier15SqliteMemoryDbAsync`（移除 IFreeSqlCache 缓存 + 释放 Keeper + 重建表视图）。XiaoShuTong 按契约（每 Fact 首行 Reset）恢复 Tier 1.5 聚合测试，实测：
+
+- Reset 后**新 scope 解析 DAC 写入**成功（无 ObjectDisposed——新库写入正常）
+- 但 **`User.Use<GetPkStatsService>()`（标准 Service 调用，User 会话 scope）查询返回 0**——Service 注入的 `IEntityReadOnlyDAC` 持 **Reset 前的旧库引用**（User 会话 scope 的 DAC 缓存了旧 IFreeSql），读不到新 scope 写入的数据
+
+**根因**：Reset 移除 `IFreeSqlCache` 缓存实例（下次 GetOrAdd 重铸新 Guid 内存库）。**User 会话 scope 的 DAC/IFreeSql 在 Reset 后仍是旧实例**——框架测试（Tier15SqliteIsolationTests）用「单 scope 内写+读」（SeedAndReadAsync 同一 scope GetRequiredService），规避了跨 scope 一致性；**标准 `User.Use<TService>()`（NoAop User scope）路径未覆盖**——Reset 后读旧库。
+
+**影响**：框架 G6 契约「每 Fact Reset」与「标准 Service 调用（User scope）」**冲突**——VEntity 聚合测试若经 Service 验证（如 XiaoShuTong GetPkStatsService），Reset 后 Service 读旧库 → 断言失败。
+
+**建议框架侧**：
+- Reset 后使 **User 会话 scope 的 DAC 引用同步失效**（或提供"重置后刷新会话 DAC"API）
+- 或文档明示：Tier 1.5 测试经 Service 验证时，**Service 调用也需新 scope**（非 `User.Use<T>()` 默认 User scope）
+- 或框架测试补充「Reset 后经 Service 查询」用例（覆盖标准消费模式）
+
 ## 三、框架自身未验证
 
 框架 908/908 测试中，SQLite 相关测试（`ViewSyncInitializerTests`/`GraphQLProjectionEndToEndTests` 等）全用**裸 `FreeSqlBuilder`**（绕过 DomainHost 的 `ConfigTestDomainAsync` 链路）。**从未验证 `ConfigTestDomainAsync` + SQLite :memory: 组合**——ADR60/v4.10.7 文档"Tier 1.5 可用"未实证。
