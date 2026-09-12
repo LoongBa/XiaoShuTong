@@ -165,6 +165,18 @@ static XiaoShuTongDomainTestFixture()
 - 明确 FreeSql SQLite provider 对 string[] Contains 的翻译能力边界：a) 框架文档明示 Tier 1.5 不支持 string[] 列 Contains 查询（查询需内存过滤），或 b) 框架层用 AOP/方言翻译将 `string[] Contains` 转为 SQLite `json_each` 兼容写法
 - 官方 Tier15SqliteTests 补 string[] 列 Contains 查询用例（覆盖查询翻译）
 
+### G7b（v4.10.18 部署后新发现）：DateTimeUtcHandler 未覆盖 `DateTime?`（nullable）——XiaoShuTong 7 用例仍 +8h
+
+**现象**：v4.10.18（09-13 部署，G7 修复已含）下，XiaoShuTong **7 个 DateTime 断言仍失败** +8h（Kind=Unspecified）——期望 `2026-09-19T22:33:24.5813690Z`，实际 `2026-09-20T06:33:24.5813690`。探针实证：nullable `DateTime?` 字段往返失败。
+
+**根因**：`SqliteTypeHandlerRegistrar.EnsureRegistered()` 只注册 `TypeHandlers[typeof(DateTime)] = new DateTimeUtcHandler()`——**未注册 `typeof(DateTime?)`**。FreeSql 对 `Nullable<DateTime>` 属性读列时按 `typeof(DateTime?)` 查 TypeHandlers 字典**不命中** → 走 System.Data.SQLite 原生 DateTime 路径（Kind 丢失 → +8h）。框架官方 G7 回归测试实体 `Tier15DateTimeEntity.CreatedAt` 是**非空 `DateTime`**（命中 handler）——**nullable 场景未覆盖**。
+
+**影响**：Tier 1.5 下所有 `DateTime?` 字段（TrialEndAt/PeriodEndAt/DeadlineAt/CsvExpiresAt/ExpiresAt 等）UTC 往返仍失败——XiaoShuTong 7 用例（ListSubscriptions×1 / CancelSubscription×1 / ListMyTasks×2 / ExportRosterCsv×2 / GenerateInviteCodes×1）。
+
+**建议框架侧**：
+- `EnsureRegistered()` 补 `TypeHandlers[typeof(DateTime?)] = new DateTimeUtcHandler()`（同一 handler 可同时处理非空与 nullable——ITypeHandler.Deserialize 返回 object 赋值 nullable 属性兼容）
+- 官方 `G7_DateTimeUtcRoundTrip` 加 nullable 变体（`Tier15DateTimeEntity` 补 `DateTime? NullableCreatedAt` 列 + 断言），覆盖 nullable 往返
+
 ## 三、框架自身未验证
 
 框架 908/908 测试中，SQLite 相关测试（`ViewSyncInitializerTests`/`GraphQLProjectionEndToEndTests` 等）全用**裸 `FreeSqlBuilder`**（绕过 DomainHost 的 `ConfigTestDomainAsync` 链路）。**从未验证 `ConfigTestDomainAsync` + SQLite :memory: 组合**——ADR60/v4.10.7 文档"Tier 1.5 可用"未实证。
