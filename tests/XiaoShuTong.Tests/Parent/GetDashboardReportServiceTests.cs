@@ -105,14 +105,23 @@ public class GetDashboardReportServiceTests(XiaoShuTongDomainTestFixture fixture
     }
 
     /// <summary>主流程 + BR-19：已订阅 → 完整聚合（坚持天数/本周进度/学科掌握度）</summary>
+    /// <remarks>
+    /// 种子用"今天 + 昨天"，但**昨天跨周则跳过**（Service 窗口 = [weekStart, today]，周一运行时
+    /// 昨天=上周日被排除）——既保证 StreakCalculator anchor（today/today-1）命中，又避免跨周。
+    /// 断言按 hasTwoDays 动态：周一仅今天（LearnedCount=5/Streak=1），其余两天（8/2）。
+    /// </remarks>
     [Fact]
     public async Task ExecuteAsync_Subscribed_FullAggregation()
     {
         var parentId = SetUser(10702);
         await SeedRelationAsync(parentId, 17021);
         await SeedSubscriptionAsync(parentId, 17021, SubscriptionStatus.Active, periodEnd: DateTime.UtcNow.AddDays(20));
-        await SeedDailyAsync(17021, Today.AddDays(-1), learned: 3);
-        await SeedDailyAsync(17021, Today, learned: 5);
+        var today = DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8));
+        var weekStart = today.AddDays(-((int)today.DayOfWeek + 6) % 7); // 本周一（周一起点）
+        var hasTwoDays = today.AddDays(-1) >= weekStart;               // 昨天在本周内（非周一）
+        await SeedDailyAsync(17021, today, learned: 5);
+        if (hasTwoDays)
+            await SeedDailyAsync(17021, today.AddDays(-1), learned: 3);
         await SeedMasteryAsync(17021, "chinese", 0.5);
         await SeedMasteryAsync(17021, "math", 0.9);
         var svc = User.Use<GetDashboardReportService>();
@@ -121,10 +130,10 @@ public class GetDashboardReportServiceTests(XiaoShuTongDomainTestFixture fixture
 
         Assert.True(result.Success);
         Assert.False(result.Locked);
-        Assert.Equal(2, result.StreakDays);                    // 连续 2 天
+        Assert.Equal(hasTwoDays ? 2 : 1, result.StreakDays);          // 连续 2 天（周一仅 1 天）
         Assert.NotNull(result.WeekProgress);
-        Assert.Equal(8, result.WeekProgress!.LearnedCount);    // 3+5
-        Assert.Equal(2, result.SubjectsMastery.Count);         // 两学科
+        Assert.Equal(hasTwoDays ? 8 : 5, result.WeekProgress!.LearnedCount); // 3+5（周一仅 5）
+        Assert.Equal(2, result.SubjectsMastery.Count);                // 两学科
     }
 
     /// <summary>BR-17：试用过期 → 8003</summary>
