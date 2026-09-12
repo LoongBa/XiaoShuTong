@@ -84,7 +84,10 @@ internal class GetDashboardReportService(DomainUser<XiaoShuTongUserInfo> user)
         }
 
         // 完整项：本周进度 + 学科掌握度（BR-19 链式聚合）
-        var weekStart = today.AddDays(-(int)today.DayOfWeek);
+        // ⚠️ 周起点用周一开始（中国习惯）：today.AddDays(-(int)today.DayOfWeek) 在周日(DayOfWeek=0)
+        // 会退化为 today（漏掉周六数据——2026-09-13 周日实证 WeekProgress=5 而非 8）。
+        // 统一公式：本周一 = today - ((DayOfWeek+6) % 7)；周日(0)→-6，周一(1)→0，周六(6)→-5。
+        var weekStart = today.AddDays(-((int)today.DayOfWeek + 6) % 7);
         var weekDaily = dailyStats.Where(d => d.StatDate >= weekStart && d.StatDate <= today).ToList();
         var weekLearned = weekDaily.Sum(d => d.LearnedCount);
         var weekAccuracy = weekDaily.Where(d => d.Accuracy.HasValue).Select(d => d.Accuracy!.Value).ToList();

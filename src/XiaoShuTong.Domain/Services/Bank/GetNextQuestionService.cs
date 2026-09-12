@@ -59,12 +59,15 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
             }
         }
 
-        // 题库内可用题目（题型/知识点过滤）
+        // 题库内可用题目（题型过滤；⚠️ 知识点过滤移内存层——G8：FreeSql SQLite provider 无法翻译
+        // string[] .Contains()（PG jsonb @> 无对应，SQL 方言边界，框架文档明示）。生产 PG 同样走
+        // 内存过滤（先查全量再 Where）——单题库题量 < 1000，量级合理，语义一致。）
         var questions = await QuestionsDs.EntitySelectAsync(
             x => x.BankId == request.BankId && x.Status == QuestionStatus.Active
-                 && (string.IsNullOrWhiteSpace(request.Type) || x.QType.ToString() == request.Type)
-                 && (string.IsNullOrWhiteSpace(request.KnowledgePoint) || x.KnowledgePoints.Contains(request.KnowledgePoint)),
+                 && (string.IsNullOrWhiteSpace(request.Type) || x.QType.ToString() == request.Type),
             ct: ct);
+        if (!string.IsNullOrWhiteSpace(request.KnowledgePoint))
+            questions = questions.Where(q => q.KnowledgePoints.Contains(request.KnowledgePoint)).ToList();
 
         var available = questions
             .Where(q => answeredQuestionIds == null || !answeredQuestionIds.Contains(q.QuestionId))
