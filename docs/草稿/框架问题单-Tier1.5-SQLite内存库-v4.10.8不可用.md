@@ -171,10 +171,32 @@ static XiaoShuTongDomainTestFixture()
 
 **根因**：`SqliteTypeHandlerRegistrar.EnsureRegistered()` 只注册 `TypeHandlers[typeof(DateTime)] = new DateTimeUtcHandler()`——**未注册 `typeof(DateTime?)`**。FreeSql 对 `Nullable<DateTime>` 属性读列时按 `typeof(DateTime?)` 查 TypeHandlers 字典**不命中** → 走 System.Data.SQLite 原生 DateTime 路径（Kind 丢失 → +8h）。框架官方 G7 回归测试实体 `Tier15DateTimeEntity.CreatedAt` 是**非空 `DateTime`**（命中 handler）——**nullable 场景未覆盖**。
 
+**机制证据（FreeSql 3.5.311 源码审计，2026-09-13）**：FreeSql 对 `Nullable<T>` **不 unwrap**——TypeHandler 查找两条路径均用直接类型比较：
+- 写入/建表：`Aop.ConfigEntityProperty` 中 `e.Property.PropertyType == typeHandler.Type`（`typeof(DateTime?) == typeof(DateTime)` → false）
+- 读取：`TypeHandlers.TryGetValue(type2, ...)`（以属性类型 `typeof(DateTime?)` 为 key，字典无此键 → 不命中）
+- `NullableTypeOrThis()` 扩展存在但不用于 TypeHandler 查找（仅导航/列属性类型比较）
+
 **影响**：Tier 1.5 下所有 `DateTime?` 字段（TrialEndAt/PeriodEndAt/DeadlineAt/CsvExpiresAt/ExpiresAt 等）UTC 往返仍失败——XiaoShuTong 7 用例（ListSubscriptions×1 / CancelSubscription×1 / ListMyTasks×2 / ExportRosterCsv×2 / GenerateInviteCodes×1）。
 
-**建议框架侧**：
-- `EnsureRegistered()` 补 `TypeHandlers[typeof(DateTime?)] = new DateTimeUtcHandler()`（同一 handler 可同时处理非空与 nullable——ITypeHandler.Deserialize 返回 object 赋值 nullable 属性兼容）
+**建议框架侧（最小修复，可直接实施）**：
+- `EnsureRegistered()` 追加 `TypeHandlers[typeof(DateTime?)]`，用**独立 handler 类**（⚠️ 不能复用 `DateTimeUtcHandler` 实例——其 `ITypeHandler.Type` 固定返回 `typeof(DateTime)`，`ConfigEntityProperty` 中 `PropertyType == Type` 比较会失败）：
+```csharp
+private sealed class DateTimeUtcNullableHandler : ITypeHandler
+{
+    public Type Type => typeof(DateTime?);
+    public object Deserialize(object value)
+    {
+        if (value == null) return null;
+        return new DateTimeUtcHandler().Deserialize(value);
+    }
+    public object Serialize(object value)
+    {
+        if (value == null) return null;
+        return new DateTimeUtcHandler().Serialize(value);
+    }
+    public void FluentApi(ColumnFluent column) => column.MapType(typeof(string));
+}
+```
 - 官方 `G7_DateTimeUtcRoundTrip` 加 nullable 变体（`Tier15DateTimeEntity` 补 `DateTime? NullableCreatedAt` 列 + 断言），覆盖 nullable 往返
 
 ## 三、框架自身未验证
