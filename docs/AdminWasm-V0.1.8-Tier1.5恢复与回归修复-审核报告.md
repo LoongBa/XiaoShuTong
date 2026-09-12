@@ -16,10 +16,13 @@ date: 2026-09-13
 | `116e8fe` | G8 修复（GetNextQuestionService 知识点过滤移内存层）+ GetDashboardReportService `weekStart` 周一起点修复（周日边界） |
 | `5bc70d2` | 框架问题单补 G7b（DateTime? nullable 盲区） |
 | `dcdc867` | 变更记录补 09-13 回归修复条目 |
+| `74b1344` | 本审核报告初版 |
+| `1cf0463` | GetDashboardReport 测试种子改动态（今天+昨天，跨周跳过）——根治周一边界（原"昨天+今天"种子周一仍失败） |
+| `c443e98` | 框架组转交摘要——G7b（DateTime? nullable TypeHandler，含最小修复代码与验收标准） |
 
 ## 二、审核结论
 
-**✅ 通过（有条件）**。Tier 1.5 真实视图聚合测试按官方契约（ADR66 / SKILL §7.1.1）完整恢复——Fixture 配置、串行集合、每 Fact Reset、5 Fact 聚合断言全部符合框架 v4.10.14 G6b 修复后的标准用法。21 个 UId 测试种子缺陷（MockDb 无唯一约束掩盖）清零。G8 按框架文档明示边界在项目侧改内存过滤（不绕过）。**剩余 7 个失败为框架缺口 G7b（DateTime? nullable TypeHandler 未注册）**，已探针实证并记录问题单，待框架组修复（见遗留缺陷）。
+**✅ 通过（有条件）**。Tier 1.5 真实视图聚合测试按官方契约（ADR66 / SKILL §7.1.1）完整恢复——Fixture 配置、串行集合、每 Fact Reset、5 Fact 聚合断言全部符合框架 v4.10.14 G6b 修复后的标准用法。21 个 UId 测试种子缺陷（MockDb 无唯一约束掩盖）清零。G8 按框架文档明示边界在项目侧改内存过滤（不绕过）。GetDashboardReport 周起点修复经补充审计根治了周一边界（种子改动态）。**剩余 7 个失败为框架缺口 G7b（DateTime? nullable TypeHandler 未注册）**，已探针实证并记录问题单 + 转交摘要，待框架组修复（见遗留缺陷）。
 
 ## 三、需求符合度
 
