@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Pk;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class PkForfeitDetectionJobTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private async Task<(PkMatches Match, long OnlineId, long OfflineId)> SeedOngoingMatchAsync(
         long onlineId, long offlineId)

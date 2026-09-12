@@ -1,6 +1,7 @@
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Services.Learning;
+using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
@@ -13,7 +14,7 @@ namespace XiaoShuTong.Tests.Learning;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetMemoryStatesServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {
@@ -27,6 +28,7 @@ public class GetMemoryStatesServiceTests(XiaoShuTongDomainTestFixture fixture, I
         var ds = User.Use<MemoryStatesDataService>();
         await ds.EntityCreateAsync(new MemoryStates
         {
+            UId = UidGenerator.NewId(),
             UserId = userId,
             QuestionId = questionId,
             BankId = bankId,

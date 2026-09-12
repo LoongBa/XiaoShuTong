@@ -18,7 +18,7 @@ namespace XiaoShuTong.Tests.TaskManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class CreateTaskServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {

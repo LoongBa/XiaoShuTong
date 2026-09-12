@@ -13,7 +13,7 @@ namespace XiaoShuTong.Tests.Stats;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetHeatmapServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {

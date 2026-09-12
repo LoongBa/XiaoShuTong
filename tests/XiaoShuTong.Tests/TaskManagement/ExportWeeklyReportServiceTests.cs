@@ -18,7 +18,7 @@ namespace XiaoShuTong.Tests.TaskManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class ExportWeeklyReportServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 固定测试周（2026-09-07 为周一），窗口 = [2026-09-07, 2026-09-13]
     private static readonly DateOnly FixedWeekStart = new(2026, 9, 7);

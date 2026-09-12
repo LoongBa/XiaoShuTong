@@ -1,6 +1,7 @@
 using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Services.GroupManagement;
+using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
@@ -13,7 +14,7 @@ namespace XiaoShuTong.Tests.GroupManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class ListGroupsServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {
@@ -27,6 +28,7 @@ public class ListGroupsServiceTests(XiaoShuTongDomainTestFixture fixture, ITestO
         var ds = User.Use<GroupsDataService>();
         return await ds.EntityCreateAsync(new Groups
         {
+            UId = UidGenerator.NewId(),
             OwnerId = ownerId,
             Name = name,
             Subject = "history",
@@ -40,6 +42,7 @@ public class ListGroupsServiceTests(XiaoShuTongDomainTestFixture fixture, ITestO
         var ds = User.Use<GroupMembersDataService>();
         return await ds.EntityCreateAsync(new GroupMembers
         {
+            UId = UidGenerator.NewId(),
             GroupId = groupId,
             UserId = userId,
             Role = MemberRole.Student,

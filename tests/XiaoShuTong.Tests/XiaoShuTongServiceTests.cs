@@ -27,7 +27,7 @@ namespace XiaoShuTong.Tests;
 /// </summary>
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]    // 用于 CI 过滤：dotnet test --filter "Category=Contract"
-public class XiaoShuTongServiceTests : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>
+public class XiaoShuTongServiceTests : XiaoShuTongTestBase
 {
     public XiaoShuTongServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
         : base(fixture, output) { }

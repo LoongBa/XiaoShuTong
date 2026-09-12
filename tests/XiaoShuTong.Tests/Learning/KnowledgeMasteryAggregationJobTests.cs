@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Learning;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class KnowledgeMasteryAggregationJobTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static void RegisterQuestion(string questionId, string kp = "岳阳楼记-背诵", string subject = "chinese")
     {
@@ -33,6 +33,7 @@ public class KnowledgeMasteryAggregationJobTests(XiaoShuTongDomainTestFixture fi
         var ds = User.Use<AttemptsDataService>();
         await ds.EntityCreateAsync(new Attempts
         {
+            UId = UidGenerator.NewId(),
             UserId = userId,
             QuestionId = questionId,
             BankId = "bank-ch-7a",

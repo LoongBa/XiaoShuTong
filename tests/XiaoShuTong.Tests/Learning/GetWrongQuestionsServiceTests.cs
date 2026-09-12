@@ -18,7 +18,7 @@ namespace XiaoShuTong.Tests.Learning;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {

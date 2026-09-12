@@ -28,8 +28,12 @@ using Xunit;
 
 namespace XiaoShuTong.Tests;
 
-/// <summary>声明此为集合夹具</summary>
-[CollectionDefinition("XiaoShuTongDomain")]
+/// <summary>
+/// 声明此为集合夹具。
+/// ⚠️ Tier 1.5（SQLite :memory:）要求集合串行：Reset 期间共享库状态变更，并行测试会互相干扰
+/// （ADR66：Tier 1.5 测试集合须 <c>DisableParallelization = true</c>）。
+/// </summary>
+[CollectionDefinition("XiaoShuTongDomain", DisableParallelization = true)]
 public class XiaoShuTongDomainCollection : ICollectionFixture<XiaoShuTongDomainTestFixture> { }
 
 /// <summary>领域测试夹具（每个测试类创建一次）</summary>
@@ -48,11 +52,12 @@ public sealed class XiaoShuTongDomainTestFixture : DomainXunitTestFixtureBase
         var options = config.GetSection("DomainOptions").Get<DomainWebOptions>()
             ?? new DomainWebOptions { IsDevelopment = true };
 
-        // ── Tier 1：内存 DAC（默认 MockDbEntityDAC，V4.10.7+） ──
-        // ⚠️ Tier 1.5（SQLite :memory:）暂不可用：框架 ConfigTestDomainAsync + UseFreeSqlEntityDAC(Sqlite,:memory:)
-        //    SyncViewsAsync 执行 ViewSql 时 ObjectDisposedException（FreeSql SQLite 连接池 :memory: 不保活，
-        //    SyncStructure 后连接释放）——框架自身测试全用裸 FreeSqlBuilder（绕过 DomainHost），此组合未实证。
-        //    待框架修复后启用 Tier 1.5（见 PkPlayerStatsView ViewSqlSQLite 已就绪）。
+        // ── Tier 1.5：SQLite :memory: 真实内存库（框架 v4.10.14 G6b 已修复） ──
+        // 真实视图（PkPlayerStatsView.ViewSqlSQLite 方言）聚合语义测试——VEntity 只读通道全链路。
+        // 每 Fact 前经 XiaoShuTongTestBase.OnInitializeAsync 调 Host.ResetTier15SqliteMemoryDbAsync()
+        // （ADR66 契约：原地清空——DELETE 数据 + DROP/重建视图，实例/引用保持有效）。
+        options.UseFreeSqlEntityDAC(FreeSql.DataType.Sqlite, "Data Source=:memory:");
+
         Host = await services.ConfigTestDomainAsync<XiaoShuTongUserInfo, XiaoShuTongDomainInitializer, DomainWebOptions>(
             options);
 

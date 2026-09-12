@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Bank;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetBankDetailServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 他人 Owner（避免与 50xxx 测试用户冲突）
     private const long OtherOwnerId = 999902;

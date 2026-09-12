@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Learning;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {
@@ -40,6 +40,7 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
         var ds = User.Use<MemoryStatesDataService>();
         await ds.EntityCreateAsync(new MemoryStates
         {
+            UId = UidGenerator.NewId(),
             UserId = userId,
             QuestionId = questionId,
             BankId = "bank-ch-7a",

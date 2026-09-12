@@ -15,7 +15,7 @@ namespace XiaoShuTong.Tests.GroupManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class ActivateMemberServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {
@@ -29,6 +29,7 @@ public class ActivateMemberServiceTests(XiaoShuTongDomainTestFixture fixture, IT
         var ds = User.Use<GroupsDataService>();
         return await ds.EntityCreateAsync(new Groups
         {
+            UId = UidGenerator.NewId(),
             OwnerId = ownerId,
             Name = name,
             Subject = "history",
@@ -44,6 +45,7 @@ public class ActivateMemberServiceTests(XiaoShuTongDomainTestFixture fixture, IT
         var ds = User.Use<OneTimeInviteCodesDataService>();
         return await ds.EntityCreateAsync(new OneTimeInviteCodes
         {
+            UId = UidGenerator.NewId(),
             GroupId = groupId,
             Code = code,
             PhoneLast4 = phoneLast4,

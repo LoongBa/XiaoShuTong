@@ -18,7 +18,7 @@ namespace XiaoShuTong.Tests.Platform;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class LlmGatewayTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 不可达端点（端口 1 必然连接失败；即使异常也由 1s 超时兜底）
     private const string UnreachableBaseUrl = "http://127.0.0.1:1";

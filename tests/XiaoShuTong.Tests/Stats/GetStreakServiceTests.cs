@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Stats;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetStreakServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static readonly DateOnly Today = DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8)); // UTC+8 业务日
 

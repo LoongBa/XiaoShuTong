@@ -16,7 +16,7 @@ namespace XiaoShuTong.Tests.Parent;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetProgressReportServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static readonly DateOnly Today = DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8));
 

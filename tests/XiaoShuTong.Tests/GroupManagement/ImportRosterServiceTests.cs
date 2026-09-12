@@ -15,7 +15,7 @@ namespace XiaoShuTong.Tests.GroupManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class ImportRosterServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 非当前用户的第三方群主 Id（避免与本文件测试用户 Id 冲突）
     private const long OtherOwnerId = 999931;

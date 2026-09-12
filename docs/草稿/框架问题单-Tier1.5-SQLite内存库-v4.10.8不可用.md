@@ -1,6 +1,6 @@
 ---
-title: 框架问题单——Tier 1.5（SQLite :memory: 测试）不可用（v4.10.8 六缺口 + v4.10.10 修复后 G6 状态隔离）
-status: 待框架组处理（G1-G5+F1/F2 已由 v4.10.10 修复；G6 为新发现待确认）
+title: 框架问题单——Tier 1.5（SQLite :memory: 测试）不可用（v4.10.8 六缺口 + v4.10.10 修复后 G6 状态隔离 + v4.10.14 恢复后 G7/G8 覆盖盲区）
+status: 待框架组处理（G1-G5+F1/F2 已由 v4.10.10 修复；G6/G6b 已由 v4.10.13/v4.10.14 修复；G7/G8 为新发现待确认）
 date: 2026-09-12
 source: XiaoShuTong Tier 1.5 迁移实测 + 框架源码审计 + FreeSql/Microsoft.Data.Sqlite 库级调研
 ---
@@ -140,6 +140,30 @@ static XiaoShuTongDomainTestFixture()
 - Reset 后使 **User 会话 scope 的 DAC 引用同步失效**（或提供"重置后刷新会话 DAC"API）
 - 或文档明示：Tier 1.5 测试经 Service 验证时，**Service 调用也需新 scope**（非 `User.Use<T>()` 默认 User scope）
 - 或框架测试补充「Reset 后经 Service 查询」用例（覆盖标准消费模式）
+
+### G7（v4.10.14 恢复 Tier 1.5 后新发现）：DateTime UTC Kind 往返丢失（+8h 时区偏移）
+
+**现象**：XiaoShuTong 全套件切 Tier 1.5（SQLite :memory:）后，**7 个**测试断言 DateTime 失败——期望 `2026-09-19T05:11:37.5519156Z`（UTC），实际 `2026-09-19T13:11:37.5519156`（+8h 本地偏移）。涉及：`ListSubscriptionsServiceTests`（TrialEndAt 透传）、`CancelSubscriptionServiceTests`（PeriodEndAt 保留）、`ListMyTasksServiceTests`×2（DeadlineAt 透传 + Overdue 判定）、`ExportRosterCsvServiceTests`×2（CsvExpiresAt 链接过期时间）、`GenerateInviteCodesServiceTests`（30 天过期时间）。
+
+**根因**：System.Data.SQLite（FreeSql.Provider.Sqlite 3.5.311 依赖的 ADO provider，堆栈实证 `System.Data.SQLite.SQLite3.Step`）读写 DateTime **不带 Kind**——`DateTime.UtcNow` 存入后读出 Kind=Unspecified 且被解释为本地时间 → 与 UtcNow 比较偏移 +8h。框架 v4.10.10 G5（`SqliteTypeHandlerRegistrar`）只注册了 **DateOnly/string[]** 的 TypeHandler，**未覆盖 DateTime 的 UTC 往返**（框架官方 Tier15SqliteTests 测试实体仅含 `DateOnly StatDate` + `string[] Tags`，DateTime 未实证）。
+
+**影响**：Tier 1.5 下任何含 DateTime 字段的实体（时间戳/截止/过期语义）断言 `Assert.Equal(utcNow, value)` 失败——Tier 1.5 与生产 PostgreSQL（timestamptz 原生 UTC）行为不一致。
+
+**建议框架侧**：
+- `SqliteTypeHandlerRegistrar` 补 DateTime TypeHandler（TEXT ISO8601 `yyyy-MM-ddTHH:mm:ss.fffffffZ` + Kind=Utc 往返），或配置连接串 `DateTimeKind=Utc` / `DateTimeFormat=ISO8601`
+- 框架官方 Tier15SqliteTests 补 DateTime 字段读写用例（覆盖 UTC 往返）
+
+### G8（v4.10.14 恢复 Tier 1.5 后新发现）：string[] 数组列查询翻译失败（SQL logic error）
+
+**现象**：`GetNextQuestionServiceTests` 3 个用例失败 `System.Data.SQLite.SQLiteException : SQL logic error`，堆栈指向 `GetNextQuestionService.ExecuteAsync` line 63——`QuestionsDs.EntitySelectAsync(x => x.BankId == ... && x.Status == ... && x.KnowledgePoints.Contains(request.KnowledgePoint))`（`KnowledgePoints` 为 `string[]`，`[Column(DbType = "jsonb")]`）。
+
+**根因**：FreeSql 在 SQLite 下对 `string[]` 列的 `.Contains(x)`（数组包含查询）**无法翻译**（PostgreSQL 用 jsonb `@>` 数组操作，SQLite 无对应）→ 生成非法 SQL → SQL logic error。G5 只解决 string[] **读写**（JSON TEXT 序列化），**未解决 string[] 查询翻译**（Contains/数组操作）。生产 PostgreSQL 正常，Tier 1.5 SQLite 失败。
+
+**影响**：Tier 1.5 下任何对 `string[]`（JSONB 数组列）的 Contains 过滤查询失败——含知识点过滤（GetNextQuestionService 等核心取题逻辑）。
+
+**建议框架侧**：
+- 明确 FreeSql SQLite provider 对 string[] Contains 的翻译能力边界：a) 框架文档明示 Tier 1.5 不支持 string[] 列 Contains 查询（查询需内存过滤），或 b) 框架层用 AOP/方言翻译将 `string[] Contains` 转为 SQLite `json_each` 兼容写法
+- 官方 Tier15SqliteTests 补 string[] 列 Contains 查询用例（覆盖查询翻译）
 
 ## 三、框架自身未验证
 

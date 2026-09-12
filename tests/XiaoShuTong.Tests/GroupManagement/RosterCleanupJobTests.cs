@@ -15,7 +15,7 @@ namespace XiaoShuTong.Tests.GroupManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class RosterCleanupJobTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private async Task<RosterImports> SeedBatchAsync(string[] rawPhones)
     {

@@ -18,7 +18,7 @@ namespace XiaoShuTong.Tests.Rank;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class RankSnapshotFreezeJobTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static DateOnly Today() => DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8));
 

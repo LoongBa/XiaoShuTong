@@ -16,7 +16,7 @@ namespace XiaoShuTong.Tests.Parent;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetWeaknessReportServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {

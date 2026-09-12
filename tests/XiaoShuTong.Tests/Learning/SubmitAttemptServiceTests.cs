@@ -15,7 +15,7 @@ namespace XiaoShuTong.Tests.Learning;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static readonly string[] FullKeywords = ["若出其中", "星汉灿烂", "幸甚至哉", "歌以咏志"];
 
@@ -58,6 +58,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         var ds = User.Use<MemoryStatesDataService>();
         await ds.EntityCreateAsync(new MemoryStates
         {
+            UId = UidGenerator.NewId(),
             UserId = userId,
             QuestionId = questionId,
             BankId = "bank-ch-7a",

@@ -19,7 +19,7 @@ namespace XiaoShuTong.Tests.Pk;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class SubmitPkAnswerServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static readonly string[] Keywords = ["东临碣石", "以观沧海", "水何澹澹"];
 

@@ -2,6 +2,7 @@ using System.Text.Json;
 using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Services.GroupManagement;
+using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
@@ -15,7 +16,7 @@ namespace XiaoShuTong.Tests.GroupManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetRosterPreviewServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 非当前用户的第三方群主 Id（避免与本文件测试用户 Id 冲突）
     private const long OtherOwnerId = 999941;
@@ -32,6 +33,7 @@ public class GetRosterPreviewServiceTests(XiaoShuTongDomainTestFixture fixture, 
         var ds = User.Use<GroupsDataService>();
         return await ds.EntityCreateAsync(new Groups
         {
+            UId = UidGenerator.NewId(),
             OwnerId = ownerId,
             Name = name,
             Subject = "history",
@@ -47,6 +49,7 @@ public class GetRosterPreviewServiceTests(XiaoShuTongDomainTestFixture fixture, 
         var ds = User.Use<RosterImportsDataService>();
         return await ds.EntityCreateAsync(new RosterImports
         {
+            UId = UidGenerator.NewId(),
             GroupId = groupId,
             OwnerId = ownerId,
             ImportMethod = "Paste",

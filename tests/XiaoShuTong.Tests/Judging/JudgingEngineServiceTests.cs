@@ -13,7 +13,7 @@ namespace XiaoShuTong.Tests.Judging;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class JudgingEngineServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private static string GroupsJson(params KeywordGroup[] groups)
         => JsonSerializer.Serialize(groups);

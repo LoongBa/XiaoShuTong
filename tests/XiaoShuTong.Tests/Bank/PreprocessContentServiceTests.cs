@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Bank;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class PreprocessContentServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 他人 Owner（避免与 51xxx 测试用户冲突）
     private const long OtherOwnerId = 999901;

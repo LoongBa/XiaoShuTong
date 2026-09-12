@@ -15,7 +15,7 @@ namespace XiaoShuTong.Tests.Platform;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class AiModelConfigServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     // 不可达端点（端口 1 必然连接失败）：配置管理测试仅为 CRUD 语义，避免任何真实 HTTP 出网
     private const string UnreachableBaseUrl = "http://127.0.0.1:1";

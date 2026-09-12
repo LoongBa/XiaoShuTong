@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.Learning;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private long SetUser(long id)
     {
@@ -55,6 +55,7 @@ public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, 
         var ds = User.Use<AttemptsDataService>();
         await ds.EntityCreateAsync(new Attempts
         {
+            UId = UidGenerator.NewId(),
             UserId = userId,
             SessionId = sessionId,
             QuestionId = questionId,

@@ -14,7 +14,7 @@ namespace XiaoShuTong.Tests.TaskManagement;
 [Collection("XiaoShuTongDomain")]
 [Trait("Category", "Contract")]
 public class TaskOverdueScanJobTests(XiaoShuTongDomainTestFixture fixture, ITestOutputHelper output)
-    : DomainXunitTestBase<XiaoShuTongUserInfo, XiaoShuTongDomainTestFixture>(fixture, output)
+    : XiaoShuTongTestBase(fixture, output)
 {
     private async Task<Tasks> SeedTaskAsync(string title, TaskStatus status, DateTime? deadline)
     {
