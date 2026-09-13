@@ -60,38 +60,35 @@ date: 2026-09-13
 
 ### 自动化测试
 
-**全套件：338 通过 / 7 失败 / 2 跳过**（Tier 1.5 SQLite :memory:，净增 4 清零）
+**全套件：345 通过 / 0 失败 / 2 跳过**（Tier 1.5 SQLite :memory:，最终全绿）
 
 | 阶段 | 通过 | 失败 | 说明 |
 |------|:---:|:---:|------|
 | 迁移后首跑 | 315 | 30 | 21 UId 约束 + 3 G8 方言 + 6 G7 DateTime（初判） |
 | UId 修复后 | 335 | 10 | 21 UId 清零；G7×7 + G8×3 |
 | 框架 v4.10.18 + 项目修复 | 338 | 7 | G8×3 + GetDashboardReport×1 清零；**剩 7 = G7b（DateTime? nullable）** |
+| **框架 v4.10.21（G7b 修复）** | **345** | **0** | **G7b×7 清零——全套件全绿** |
 
 - GetPkStatsServiceTests：5 Fact 全通过（视图真实执行 + 每 Fact 隔离）
 - G8：GetNextQuestionServiceTests 3 用例全通过（内存过滤）
-- GetDashboardReportServiceTests：全通过（周起点修复，周日实证）
+- GetDashboardReportServiceTests：全通过（周起点修复，周日/周一跨周边界均稳定）
 - 编译：全解决方案 0 错误 0 警告；lsp_diagnostics 干净
+- 验证脚本：`tests/verify-g7b.ps1` 一键复验通过（特征检测 + 全套件）
 
-### 遗留缺陷（框架缺口，非本项目缺陷）
+### 遗留缺陷（框架缺口，已闭环）
 
-**G7b：DateTimeUtcHandler 未覆盖 `DateTime?`（nullable）**——7 个测试仍 +8h：
+**G7b：DateTimeUtcHandler 未覆盖 `DateTime?`（nullable）**——**已由框架 v4.10.19（`8b3d514d`）修复**：
 
 ```
-现象：v4.10.18（G7 修复已含）下 nullable DateTime? 字段往返仍 +8h（Kind=Unspecified）
-     探针实证：期望 2026-09-19T22:33:24.5813690Z / 实际 2026-09-20T06:33:24.5813690
-根因：SqliteTypeHandlerRegistrar.EnsureRegistered() 只注册 TypeHandlers[typeof(DateTime)]，
-     未注册 typeof(DateTime?)——FreeSql 对 Nullable<DateTime> 属性按 typeof(DateTime?) 查字典
-     不命中 → 走 System.Data.SQLite 原生路径（Kind 丢失 +8h）
-证据：框架官方 G7 回归测试实体 Tier15DateTimeEntity.CreatedAt 是非空 DateTime（命中 handler）；
-     nullable 场景框架未覆盖
-影响：XiaoShuTong 7 用例（ListSubscriptions×1 / CancelSubscription×1 / ListMyTasks×2 /
-     ExportRosterCsv×2 / GenerateInviteCodes×1）
-建议：EnsureRegistered() 补 TypeHandlers[typeof(DateTime?)] = new DateTimeUtcHandler()；
-     官方 G7_DateTimeUtcRoundTrip 加 nullable 变体
+框架修复：SqliteTypeHandlerRegistrar 追加 TypeHandlers[typeof(DateTime?)] = new DateTimeNullableUtcHandler()
+         ——FreeSql ConfigEntityProperty 的 PropertyType == typeHandler.Type 精确匹配 DateTime? 属性
+         → FluentApi MapType(string) 执行 → 建 TEXT 列 → 读回保 UTC Kind/值（Oracle C2 落档 ADR69：
+         FreeSql 读写路径实际仍由 DateTimeUtcHandler 处理，本 handler 关键作用 = 精确匹配触发建 TEXT 列）
+框架回归：G7_DateTimeUtcRoundTrip 加 nullable 变体
+验收：XiaoShuTong 全套件 345 通过 / 0 失败 / 2 跳过（7 用例清零）✅
 ```
 
-**缓解**：7 个失败全部为 G7b 单一框架缺口（DateTime? TypeHandler 注册缺失），项目侧无绕过方案（按用户原则不绕过）；已记录框架问题单（`docs/草稿/框架问题单-Tier1.5-SQLite内存库-v4.10.8不可用.md` G7b 节），待框架组修复后验证清零。
+**历史（修复前）**：v4.10.18 下 nullable DateTime? 字段往返 +8h（Kind=Unspecified），探针实证期望 `22:33:24Z` / 实际 `06:33:24`——根因 `EnsureRegistered()` 只注册 `typeof(DateTime)`，FreeSql 对 `Nullable<DateTime>` 按 `typeof(DateTime?)` 查字典不命中（不 unwrap）→ 走 System.Data.SQLite 原生路径。已通过问题单 G7b 节 + 转交摘要（`c443e98`）转交框架组闭环。
 
 ## 七、ADR 执行情况
 
@@ -106,9 +103,9 @@ date: 2026-09-13
 
 | 优先级 | 项 | 说明 |
 |:---:|------|------|
-| P0 | G7b 框架缺口（DateTime? TypeHandler） | `TypeHandlers[typeof(DateTime?)]` 注册缺失——已记录问题单，待框架组修复（v4.10.19+）后 7 用例清零 |
-| P1 | 全套件全绿验收 | 框架修复 G7b 后全套件目标 345 通过 / 0 失败 / 2 跳过；届时补 tag（子版本 +1，需征求同意） |
+| P0 | G7b 框架缺口（DateTime? TypeHandler） | ✅ 已由框架 v4.10.19 修复（`DateTimeNullableUtcHandler` 精确匹配注册），v4.10.21 部署验证全绿 |
+| P1 | 全套件全绿验收 | ✅ 345 通过 / 0 失败 / 2 跳过——V0.1.8 达成全绿；补 tag（子版本 +1，需征求同意） |
 
 ## 九、审核结论
 
-**✅ 通过（有条件）**——Tier 1.5 真实视图聚合按官方契约完整恢复（Fixture/串行/Reset/5 Fact 全合规），21 个 UId 种子缺陷与 G8 边界（内存过滤）、周起点缺陷（周日边界）全部正确修复，338 通过基线稳定。**条件**：剩余 7 个失败为框架缺口 G7b（DateTime? nullable TypeHandler 未注册），项目侧不绕过，已记录问题单待框架组修复后验证清零并补 tag。
+**✅ 通过**——Tier 1.5 真实视图聚合按官方契约完整恢复（Fixture/串行/Reset/5 Fact 全合规），21 个 UId 种子缺陷、G8 边界（内存过滤）、周起点/周一边界缺陷全部正确修复；G7b 框架缺口（DateTime? nullable TypeHandler）已由框架 v4.10.19 修复并部署 v4.10.21 验证清零——**全套件 345 通过 / 0 失败 / 2 跳过，V0.1.8 全绿达成**。建议补 tag（AdminWasm-V0.1.8，需征求用户同意）。

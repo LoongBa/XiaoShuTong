@@ -1,6 +1,6 @@
 ---
 title: 框架问题单——Tier 1.5（SQLite :memory: 测试）不可用（v4.10.8 六缺口 + v4.10.10 修复后 G6 状态隔离 + v4.10.14 恢复后 G7/G8 覆盖盲区）
-status: 待框架组处理（G1-G5+F1/F2 已由 v4.10.10 修复；G6/G6b 已由 v4.10.13/v4.10.14 修复；G7/G8 为新发现待确认）
+status: 全部已闭环（G1-G5+F1/F2 由 v4.10.10；G6/G6b 由 v4.10.13/v4.10.14；G7/G8 由 v4.10.16；G7b 由 v4.10.19 修复，v4.10.21 部署验证——XiaoShuTong 全套件 345/0/2 全绿）
 date: 2026-09-12
 source: XiaoShuTong Tier 1.5 迁移实测 + 框架源码审计 + FreeSql/Microsoft.Data.Sqlite 库级调研
 ---

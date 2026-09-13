@@ -18,15 +18,15 @@ Write-Host "部署 DLL: $ver ($ts)" -ForegroundColor Yellow
 
 $bytes = [System.IO.File]::ReadAllBytes($dll)
 $text = [System.Text.Encoding]::UTF8.GetString($bytes)
-$hasNullableHandler = $text.Contains("DateTimeUtcNullableHandler")
+$hasNullableHandler = $text.Contains("DateTimeNullableUtcHandler")
 $hasDateTimeHandler = $text.Contains("DateTimeUtcHandler")
 
 Write-Host "DateTimeUtcHandler (G7): $hasDateTimeHandler"
-Write-Host "DateTimeUtcNullableHandler (G7b): $hasNullableHandler"
+Write-Host "DateTimeNullableUtcHandler (G7b): $hasNullableHandler"
 
 if (-not $hasNullableHandler)
 {
-    Write-Host "✗ G7b 未修复：部署 DLL 缺 DateTimeUtcNullableHandler（当前 $ver）" -ForegroundColor Red
+    Write-Host "✗ G7b 未修复：部署 DLL 缺 DateTimeNullableUtcHandler（当前 $ver）" -ForegroundColor Red
     Write-Host "  转交材料：$repo\docs\草稿\框架组转交摘要-G7b-DateTime-nullable-TypeHandler.md"
     Write-Host "  等待框架组部署 v4.10.19+ 后重跑本脚本"
     exit 1
@@ -38,8 +38,7 @@ $src = "$env:TKWFDeployPath\..\_TKWF"  # 若框架源码在此
 if (Test-Path "$src\_Domain.Infrastructure\FreeSql\SqliteTypeHandlerRegistrar.cs")
 {
     $hasSrc = Select-String -Path "$src\_Domain.Infrastructure\FreeSql\SqliteTypeHandlerRegistrar.cs" -Pattern "typeof\(DateTime\?\)" -Quiet
-    Write-Host "框架源码 nullable 注册: $hasSrc"
-}
+    Write-Host "框架源码 nullable 注册: $hasSrc"}
 
 # ── 3. 全套件回归 ──
 Write-Host "=== 全套件回归 ===" -ForegroundColor Cyan
