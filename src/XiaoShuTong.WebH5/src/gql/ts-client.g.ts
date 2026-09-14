@@ -9,9 +9,11 @@ export const Query = {
   registerSecure                  : { field: 'registerSecure', type: 'query' } as const,
   createBank_Execute              : { field: 'createBank_Execute', type: 'query' } as const,
   bankDetail_Execute              : { field: 'bankDetail_Execute', type: 'query' } as const,
+  draftBatch_Execute              : { field: 'draftBatch_Execute', type: 'query' } as const,
   knowledgeCard_Execute           : { field: 'knowledgeCard_Execute', type: 'query' } as const,
   importQuestions_Execute         : { field: 'importQuestions_Execute', type: 'query' } as const,
   listBanks_Execute               : { field: 'listBanks_Execute', type: 'query' } as const,
+  preprocessContent_Execute       : { field: 'preprocessContent_Execute', type: 'query' } as const,
   reviewBackingPoints_Execute     : { field: 'reviewBackingPoints_Execute', type: 'query' } as const,
   acceptBuddyInvite_Execute       : { field: 'acceptBuddyInvite_Execute', type: 'query' } as const,
   buddyRank_Execute               : { field: 'buddyRank_Execute', type: 'query' } as const,
@@ -49,16 +51,21 @@ export const Query = {
   pkStats_Execute                 : { field: 'pkStats_Execute', type: 'query' } as const,
   joinPkMatch_Execute             : { field: 'joinPkMatch_Execute', type: 'query' } as const,
   submitPkAnswer_Execute          : { field: 'submitPkAnswer_Execute', type: 'query' } as const,
+  listModels                      : { field: 'listModels', type: 'query' } as const,
+  setEnabled                      : { field: 'setEnabled', type: 'query' } as const,
   myRanking_Execute               : { field: 'myRanking_Execute', type: 'query' } as const,
   rankings_Execute                : { field: 'rankings_Execute', type: 'query' } as const,
   heatmap_Execute                 : { field: 'heatmap_Execute', type: 'query' } as const,
   periodReport_Execute            : { field: 'periodReport_Execute', type: 'query' } as const,
   streak_Execute                  : { field: 'streak_Execute', type: 'query' } as const,
   createTask_Execute              : { field: 'createTask_Execute', type: 'query' } as const,
+  exportWeeklyReport_Execute      : { field: 'exportWeeklyReport_Execute', type: 'query' } as const,
   ownerDashboard_Execute          : { field: 'ownerDashboard_Execute', type: 'query' } as const,
   taskDetail_Execute              : { field: 'taskDetail_Execute', type: 'query' } as const,
   listMyTasks_Execute             : { field: 'listMyTasks_Execute', type: 'query' } as const,
   listTasks_Execute               : { field: 'listTasks_Execute', type: 'query' } as const,
+  pkPlayerStatsView               : { field: 'pkPlayerStatsView', type: 'query' } as const,
+  PkPlayerStatsView_aggregate     : { field: 'PkPlayerStatsView_aggregate', type: 'query' } as const,
 } as const;
 
 // ===== Mutation Operations =====
@@ -68,6 +75,9 @@ export const Mutation = {
   logout                : { field: 'logout', type: 'mutation' } as const,
   changePasswordSecure  : { field: 'changePasswordSecure', type: 'mutation' } as const,
   removeMember          : { field: 'removeMember', type: 'mutation' } as const,
+  createModel           : { field: 'createModel', type: 'mutation' } as const,
+  updateModel           : { field: 'updateModel', type: 'mutation' } as const,
+  deleteModel           : { field: 'deleteModel', type: 'mutation' } as const,
 } as const;
 
 // ===== Operation Selection Map =====
@@ -82,12 +92,16 @@ export const operationSelection: Record<string, string> = {
   'changePasswordSecure': 'success message',
   'createBank_Execute': 'success errorCode bankUid bankId',
   'createGroup_Execute': 'success errorCode groupId',
+  'createModel': 'success errorCode uId',
   'createParentRelation_Execute': 'success errorCode relationUid',
   'createPkMatch_Execute': 'success errorCode matchUid inviteCode',
   'createStudySession_Execute': 'success errorCode sessionUid questionCount',
   'createTask_Execute': 'success errorCode taskUid assignedCount',
   'dashboardReport_Execute': 'success errorCode subscription { status trialEndAt } todayCompleted streakDays weekProgress { learnedCount accuracy } subjectsMastery { subject accuracy } locked',
+  'deleteModel': 'success errorCode removed',
+  'draftBatch_Execute': 'success errorCode batchId bankId items { questionId stem answer subject knowledgePoint keywords reviewed }',
   'exportRosterCsv_Execute': 'success errorCode csvFileUrl expiresAt columns',
+  'exportWeeklyReport_Execute': 'success errorCode weekStart weekEnd taskCount memberCount totalAssignments completedCount executionRate avgProgress learnedCount memberReports { userId nickname executionRate avgProgress learnedCount } csvFileUrl',
   'generateInviteCodes_Execute': 'success errorCode generatedCount',
   'heatmap_Execute': 'success errorCode days { isFromPersistentSource id uId userId statDate learnedCount starredCount reviewCount accuracy studySeconds createTime updateTime }',
   'hint_Execute': 'success errorCode hint difficultySlot hintSource',
@@ -99,7 +113,8 @@ export const operationSelection: Record<string, string> = {
   'listBanks_Execute': 'success errorCode items { bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topicCount questionCount } total',
   'listBuddies_Execute': 'success errorCode items { buddyId userId nickname avatarUrl streakDays status rank { isFromPersistentSource id uId userId scopeType scopeId subject metricType metricValue rank snapshotDate createTime updateTime } }',
   'listChildren_Execute': 'success errorCode items { studentUid nickname className hasSubscription }',
-  'listGroups_Execute': 'success errorCode items { groupId name subject grade memberCount executionRate rankEnabled } pageIndex pageSize totalCount',
+  'listGroups_Execute': 'success errorCode items { groupId groupUid name subject grade memberCount executionRate rankEnabled } pageIndex pageSize totalCount',
+  'listModels': 'success errorCode items { isFromPersistentSource id uId name provider baseUrl modelName enabled sortOrder timeoutSeconds remark createTime updateTime } total',
   'listMyTasks_Execute': 'success errorCode items { taskUid title progress deadlineAt status ownerName }',
   'listSubscriptions_Execute': 'success errorCode items { subscriptionUid studentUid studentNickname plan status trialEndAt periodEndAt }',
   'listTasks_Execute': 'success errorCode items { taskUid title deadlineAt status questionCount completionRate } total',
@@ -111,8 +126,11 @@ export const operationSelection: Record<string, string> = {
   'myRanking_Execute': 'success errorCode rank value trend rankChange rankEnabled',
   'ownerDashboard_Execute': 'success errorCode todayExecutionRate avgProgress overdueCount weakPointsTop5 { knowledgePoint accuracy } taskList { task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } completionRate status }',
   'periodReport_Execute': 'success errorCode learnedCount accuracy starredCount weakPoints { knowledgePoint accuracy }',
+  'pkPlayerStatsView': 'pageInfo { hasNextPage hasPreviousPage startCursor endCursor } edges { cursor node { isFromPersistentSource id userId totalMatches wins draws totalScore } } nodes { isFromPersistentSource id userId totalMatches wins draws totalScore } totalCount',
+  'PkPlayerStatsView_aggregate': 'count sum { id userId totalMatches wins draws totalScore } avg { id userId totalMatches wins draws totalScore } min { id userId totalMatches wins draws totalScore } max { id userId totalMatches wins draws totalScore }',
   'pkResult_Execute': 'success errorCode status winnerId finishReason winReason players { userId nickname score totalTimeMs aiComment }',
   'pkStats_Execute': 'success errorCode totalMatches wins draws winRate totalScore',
+  'preprocessContent_Execute': 'success errorCode batchId',
   'progressReport_Execute': 'success errorCode trend { isFromPersistentSource id uId userId statDate learnedCount starredCount reviewCount accuracy studySeconds createTime updateTime } vsLastWeek { learnedDelta weaknessShift }',
   'rankings_Execute': 'success errorCode snapshotDate rankEnabled items { rank userId nickname avatarUrl value trend isMe }',
   'registerSecure': 'success message',
@@ -124,6 +142,7 @@ export const operationSelection: Record<string, string> = {
   'reviewQueue_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } overdueCount',
   'rosterPreview_Execute': 'success errorCode importId status sourceCount cleanedCount duplicateCount invalidCount preview',
   'sessionResult_Execute': 'success errorCode correctCount totalCount newStarCount blockedPoints { questionId knowledgePoint state }',
+  'setEnabled': 'success errorCode uId enabled',
   'setRankEnabled_Execute': 'success errorCode groupId rankEnabled',
   'startTrial_Execute': 'success errorCode subscriptionUid status trialEndAt',
   'streak_Execute': 'success errorCode currentStreak longestStreak',
@@ -131,6 +150,7 @@ export const operationSelection: Record<string, string> = {
   'submitJudgmentFeedback_Execute': 'success errorCode feedbackUid status',
   'submitPkAnswer_Execute': 'success errorCode isCorrect result confidence score',
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
+  'updateModel': 'success errorCode uId',
   'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText }',
   'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
 } as const;
@@ -181,6 +201,18 @@ export interface GetBankDetailReqDtoInput {
   bankId: string;
 }
 
+export interface GetDraftBatchResDto {
+  success: boolean;
+  errorCode: string | null;
+  batchId: string;
+  bankId: string;
+  items: Array<DraftItemDto>;
+}
+
+export interface GetDraftBatchReqDtoInput {
+  batchId: string;
+}
+
 export interface GetKnowledgeCardResDto {
   success: boolean;
   errorCode: string | null;
@@ -219,6 +251,18 @@ export interface ListBanksReqDtoInput {
   purpose: string | null;
   pageIndex: number;
   pageSize: number;
+}
+
+export interface PreprocessContentResDto {
+  success: boolean;
+  errorCode: string | null;
+  batchId: string | null;
+}
+
+export interface PreprocessContentReqDtoInput {
+  bankId: string;
+  fileName: string | null;
+  content: string;
 }
 
 export interface ReviewBackingPointsResDto {
@@ -687,6 +731,31 @@ export interface SubmitPkAnswerReqDtoInput {
   timeCostMs: number;
 }
 
+export interface ListAiModelConfigResDto {
+  success: boolean;
+  errorCode: string | null;
+  items: Array<AiModelConfigDto>;
+  total: number;
+}
+
+export interface ListAiModelConfigReqDtoInput {
+  name: string | null;
+  pageIndex: number;
+  pageSize: number;
+}
+
+export interface SetEnabledResDto {
+  success: boolean;
+  errorCode: string | null;
+  uId: string;
+  enabled: boolean;
+}
+
+export interface SetEnabledReqDtoInput {
+  uId: string;
+  enabled: boolean;
+}
+
 export interface GetMyRankingResDto {
   success: boolean;
   errorCode: string | null;
@@ -771,6 +840,27 @@ export interface CreateTaskReqDtoInput {
   deadlineAt: string | null;
 }
 
+export interface ExportWeeklyReportResDto {
+  success: boolean;
+  errorCode: string | null;
+  weekStart: string;
+  weekEnd: string;
+  taskCount: number;
+  memberCount: number;
+  totalAssignments: number;
+  completedCount: number;
+  executionRate: number;
+  avgProgress: number;
+  learnedCount: number;
+  memberReports: Array<WeeklyMemberReportDto>;
+  csvFileUrl: string | null;
+}
+
+export interface ExportWeeklyReportReqDtoInput {
+  groupUid: string;
+  weekStart: string | null;
+}
+
 export interface GetOwnerDashboardResDto {
   success: boolean;
   errorCode: string | null;
@@ -820,6 +910,38 @@ export interface ListTasksReqDtoInput {
   pageSize: number;
 }
 
+export type PkPlayerStatsViewConnection = Connection<PkPlayerStatsView, PkPlayerStatsViewEdge>;
+
+export interface PkPlayerStatsViewFilterInput {
+  and: PkPlayerStatsViewFilterInput | null;
+  or: PkPlayerStatsViewFilterInput | null;
+  isFromPersistentSource: BooleanOperationFilterInput | null;
+  id: LongOperationFilterInput | null;
+  userId: LongOperationFilterInput | null;
+  totalMatches: LongOperationFilterInput | null;
+  wins: LongOperationFilterInput | null;
+  draws: LongOperationFilterInput | null;
+  totalScore: LongOperationFilterInput | null;
+}
+
+export interface PkPlayerStatsViewSortInput {
+  isFromPersistentSource: string | null;
+  id: string | null;
+  userId: string | null;
+  totalMatches: string | null;
+  wins: string | null;
+  draws: string | null;
+  totalScore: string | null;
+}
+
+export interface PkPlayerStatsViewAggregate {
+  count: number;
+  sum: PkPlayerStatsViewSumFields | null;
+  avg: PkPlayerStatsViewAvgFields | null;
+  min: PkPlayerStatsViewMinFields | null;
+  max: PkPlayerStatsViewMaxFields | null;
+}
+
 export interface LoginPayload {
   success: boolean;
   userName: string | null;
@@ -857,6 +979,53 @@ export interface RemoveMemberResDto {
 export interface RemoveMemberReqDtoInput {
   groupId: number;
   userId: number;
+}
+
+export interface CreateAiModelConfigResDto {
+  success: boolean;
+  errorCode: string | null;
+  uId: string;
+}
+
+export interface CreateAiModelConfigReqDtoInput {
+  name: string;
+  provider: string;
+  baseUrl: string;
+  apiKey: string;
+  modelName: string;
+  enabled: boolean;
+  sortOrder: number;
+  timeoutSeconds: number;
+  remark: string | null;
+}
+
+export interface UpdateAiModelConfigResDto {
+  success: boolean;
+  errorCode: string | null;
+  uId: string;
+}
+
+export interface UpdateAiModelConfigReqDtoInput {
+  uId: string;
+  name: string | null;
+  provider: string | null;
+  baseUrl: string | null;
+  apiKey: string | null;
+  modelName: string | null;
+  enabled: boolean | null;
+  sortOrder: number | null;
+  timeoutSeconds: number | null;
+  remark: string | null;
+}
+
+export interface DeleteAiModelConfigResDto {
+  success: boolean;
+  errorCode: string | null;
+  removed: boolean;
+}
+
+export interface DeleteAiModelConfigReqDtoInput {
+  uId: string;
 }
 
 export interface BanksDto {
@@ -901,6 +1070,16 @@ export interface QuestionsDto {
   updateTime: string;
 }
 
+export interface DraftItemDto {
+  questionId: string;
+  stem: string;
+  answer: string;
+  subject: string;
+  knowledgePoint: string;
+  keywords: Array<string>;
+  reviewed: boolean;
+}
+
 export interface BankListItemDto {
   bank: BanksDto | null;
   topicCount: number;
@@ -925,6 +1104,7 @@ export interface BuddyListItemDto {
 
 export interface GroupListItemDto {
   groupId: number;
+  groupUid: string;
   name: string;
   subject: string;
   grade: string | null;
@@ -1049,6 +1229,22 @@ export interface PkPlayerResultDto {
   aiComment: string;
 }
 
+export interface AiModelConfigDto {
+  isFromPersistentSource: boolean;
+  id: number;
+  uId: string;
+  name: string;
+  provider: string;
+  baseUrl: string;
+  modelName: string;
+  enabled: boolean;
+  sortOrder: number;
+  timeoutSeconds: number;
+  remark: string | null;
+  createTime: string;
+  updateTime: string;
+}
+
 export interface RankingItemDto {
   rank: number;
   userId: number;
@@ -1062,6 +1258,14 @@ export interface RankingItemDto {
 export interface WeakPointDto {
   knowledgePoint: string;
   accuracy: number;
+}
+
+export interface WeeklyMemberReportDto {
+  userId: number;
+  nickname: string | null;
+  executionRate: number;
+  avgProgress: number;
+  learnedCount: number;
 }
 
 export interface DashboardTaskDto {
@@ -1125,6 +1329,56 @@ export interface TaskListItemDto {
   completionRate: number;
 }
 
+export type PkPlayerStatsViewEdge = Edge<PkPlayerStatsView>;
+
+export interface PkPlayerStatsView {
+  isFromPersistentSource: boolean;
+  id: number;
+  userId: number;
+  totalMatches: number;
+  wins: number;
+  draws: number;
+  totalScore: number;
+}
+
+export type LongOperationFilterInput = OperationFilterInput<number>;
+
+export interface PkPlayerStatsViewSumFields {
+  id: number | null;
+  userId: number | null;
+  totalMatches: number | null;
+  wins: number | null;
+  draws: number | null;
+  totalScore: number | null;
+}
+
+export interface PkPlayerStatsViewAvgFields {
+  id: number | null;
+  userId: number | null;
+  totalMatches: number | null;
+  wins: number | null;
+  draws: number | null;
+  totalScore: number | null;
+}
+
+export interface PkPlayerStatsViewMinFields {
+  id: number | null;
+  userId: number | null;
+  totalMatches: number | null;
+  wins: number | null;
+  draws: number | null;
+  totalScore: number | null;
+}
+
+export interface PkPlayerStatsViewMaxFields {
+  id: number | null;
+  userId: number | null;
+  totalMatches: number | null;
+  wins: number | null;
+  draws: number | null;
+  totalScore: number | null;
+}
+
 export interface ExtensionEntry {
   key: string;
   value: string | null;
@@ -1160,6 +1414,10 @@ export interface BankDetail_ExecuteArgs {
   request?: GetBankDetailReqDtoInput;
 }
 
+export interface DraftBatch_ExecuteArgs {
+  request?: GetDraftBatchReqDtoInput;
+}
+
 export interface KnowledgeCard_ExecuteArgs {
   request?: GetKnowledgeCardReqDtoInput;
 }
@@ -1170,6 +1428,10 @@ export interface ImportQuestions_ExecuteArgs {
 
 export interface ListBanks_ExecuteArgs {
   request?: ListBanksReqDtoInput;
+}
+
+export interface PreprocessContent_ExecuteArgs {
+  request?: PreprocessContentReqDtoInput;
 }
 
 export interface ReviewBackingPoints_ExecuteArgs {
@@ -1308,6 +1570,14 @@ export interface SubmitPkAnswer_ExecuteArgs {
   request?: SubmitPkAnswerReqDtoInput;
 }
 
+export interface ListModelsArgs {
+  request?: ListAiModelConfigReqDtoInput;
+}
+
+export interface SetEnabledArgs {
+  request?: SetEnabledReqDtoInput;
+}
+
 export interface MyRanking_ExecuteArgs {
   request?: GetMyRankingReqDtoInput;
 }
@@ -1328,6 +1598,10 @@ export interface CreateTask_ExecuteArgs {
   request?: CreateTaskReqDtoInput;
 }
 
+export interface ExportWeeklyReport_ExecuteArgs {
+  request?: ExportWeeklyReportReqDtoInput;
+}
+
 export interface OwnerDashboard_ExecuteArgs {
   request?: GetOwnerDashboardReqDtoInput;
 }
@@ -1344,6 +1618,19 @@ export interface ListTasks_ExecuteArgs {
   request?: ListTasksReqDtoInput;
 }
 
+export interface PkPlayerStatsViewArgs {
+  first?: number;
+  after?: string;
+  last?: number;
+  before?: string;
+  where?: PkPlayerStatsViewFilterInput;
+  order?: Array<PkPlayerStatsViewSortInput>;
+}
+
+export interface PkPlayerStatsView_aggregateArgs {
+  where?: PkPlayerStatsViewFilterInput;
+}
+
 export interface LoginByContextArgs {
   input?: LoginContextInput;
 }
@@ -1354,6 +1641,18 @@ export interface ChangePasswordSecureArgs {
 
 export interface RemoveMemberArgs {
   request?: RemoveMemberReqDtoInput;
+}
+
+export interface CreateModelArgs {
+  request?: CreateAiModelConfigReqDtoInput;
+}
+
+export interface UpdateModelArgs {
+  request?: UpdateAiModelConfigReqDtoInput;
+}
+
+export interface DeleteModelArgs {
+  request?: DeleteAiModelConfigReqDtoInput;
 }
 
 // ===== Service Typed Interfaces =====
@@ -1411,8 +1710,16 @@ export interface DashboardReport_ExecuteService {
   dashboardReport_Execute(args?: DashboardReport_ExecuteArgs): ChainablePromise<GetDashboardReportResDto>;
 }
 
+export interface DraftBatch_ExecuteService {
+  draftBatch_Execute(args?: DraftBatch_ExecuteArgs): ChainablePromise<GetDraftBatchResDto>;
+}
+
 export interface ExportRosterCsv_ExecuteService {
   exportRosterCsv_Execute(args?: ExportRosterCsv_ExecuteArgs): ChainablePromise<ExportRosterCsvResDto>;
+}
+
+export interface ExportWeeklyReport_ExecuteService {
+  exportWeeklyReport_Execute(args?: ExportWeeklyReport_ExecuteArgs): ChainablePromise<ExportWeeklyReportResDto>;
 }
 
 export interface GenerateInviteCodes_ExecuteService {
@@ -1464,6 +1771,13 @@ export interface MemoryStates_ExecuteService {
   memoryStates_Execute(args?: MemoryStates_ExecuteArgs): ChainablePromise<GetMemoryStatesResDto>;
 }
 
+export interface ModelService {
+  createModel(args?: CreateModelArgs): ChainablePromise<CreateAiModelConfigResDto>;
+  updateModel(args?: UpdateModelArgs): ChainablePromise<UpdateAiModelConfigResDto>;
+  deleteModel(args?: DeleteModelArgs): ChainablePromise<DeleteAiModelConfigResDto>;
+  listModels(args?: ListModelsArgs): ChainablePromise<ListAiModelConfigResDto>;
+}
+
 export interface MyRanking_ExecuteService {
   myRanking_Execute(args?: MyRanking_ExecuteArgs): ChainablePromise<GetMyRankingResDto>;
 }
@@ -1488,12 +1802,24 @@ export interface PkMatch_ExecuteService {
   createPkMatch_Execute(args?: CreatePkMatch_ExecuteArgs): ChainablePromise<CreatePkMatchResDto>;
 }
 
+export interface PkPlayerStatsViewService {
+  pkPlayerStatsView(args?: PkPlayerStatsViewArgs): ChainablePromise<PkPlayerStatsViewConnection>;
+}
+
+export interface PkPlayerStatsView_aggregateService {
+  PkPlayerStatsView_aggregate(args?: PkPlayerStatsView_aggregateArgs): ChainablePromise<PkPlayerStatsViewAggregate>;
+}
+
 export interface PkResult_ExecuteService {
   pkResult_Execute(args?: PkResult_ExecuteArgs): ChainablePromise<GetPkResultResDto>;
 }
 
 export interface PkStats_ExecuteService {
   pkStats_Execute(args?: PkStats_ExecuteArgs): ChainablePromise<GetPkStatsResDto>;
+}
+
+export interface PreprocessContent_ExecuteService {
+  preprocessContent_Execute(args?: PreprocessContent_ExecuteArgs): ChainablePromise<PreprocessContentResDto>;
 }
 
 export interface ProgressReport_ExecuteService {
@@ -1530,6 +1856,10 @@ export interface RosterPreview_ExecuteService {
 
 export interface SessionResult_ExecuteService {
   sessionResult_Execute(args?: SessionResult_ExecuteArgs): ChainablePromise<GetSessionResultResDto>;
+}
+
+export interface SetEnabledService {
+  setEnabled(args?: SetEnabledArgs): ChainablePromise<SetEnabledResDto>;
 }
 
 export interface SetRankEnabled_ExecuteService {
@@ -1583,3 +1913,54 @@ export interface WeaknessReport_ExecuteService {
 export interface WrongQuestions_ExecuteService {
   wrongQuestions_Execute(args?: WrongQuestions_ExecuteArgs): ChainablePromise<GetWrongQuestionsResDto>;
 }
+
+// ===== QueryBuilder Types (V4.9.20) =====
+import { QueryBuilderBase, registerQueryBuilder } from "@tkwf/tsclient";
+import type {
+  StringFieldOperators, NumberFieldOperators,
+  DateFieldOperators, BooleanFieldOperators,
+  OperationFilterInput, StringOperationFilterInput, BooleanOperationFilterInput,
+  EnumOperationFilterInput, Connection, Edge,
+  SelectFieldsOf, OrderByFieldsOf,
+} from "@tkwf/tsclient";
+
+
+export interface PkPlayerStatsViewFields {
+  isFromPersistentSource: BooleanFieldOperators<PkPlayerStatsViewFields>;
+  id: NumberFieldOperators<PkPlayerStatsViewFields>;
+  userId: NumberFieldOperators<PkPlayerStatsViewFields>;
+  totalMatches: NumberFieldOperators<PkPlayerStatsViewFields>;
+  wins: NumberFieldOperators<PkPlayerStatsViewFields>;
+  draws: NumberFieldOperators<PkPlayerStatsViewFields>;
+  totalScore: NumberFieldOperators<PkPlayerStatsViewFields>;
+}
+
+export type PkPlayerStatsViewSelectFields = SelectFieldsOf<PkPlayerStatsViewFields>;
+
+export type PkPlayerStatsViewOrderByFields = OrderByFieldsOf<PkPlayerStatsViewFields>;
+
+export class PkPlayerStatsViewQueryBuilder extends QueryBuilderBase<
+  PkPlayerStatsView,
+  PkPlayerStatsViewFields,
+  PkPlayerStatsViewOrderByFields,
+  PkPlayerStatsViewSelectFields
+> {
+  protected defaultFields(): string[] {
+    return ["isFromPersistentSource", "id", "userId", "totalMatches", "wins", "draws", "totalScore"];
+  }
+
+  protected createFieldsProxy(): PkPlayerStatsViewFields {
+    return this.createFieldsProxyFrom<PkPlayerStatsViewFields>({
+      isFromPersistentSource: "Boolean",
+      id: "Long",
+      userId: "Long",
+      totalMatches: "Long",
+      wins: "Long",
+      draws: "Long",
+      totalScore: "Long",
+    });
+  }
+}
+
+registerQueryBuilder("PkPlayerStatsView", (transport, field, sessionKey) =>
+  new PkPlayerStatsViewQueryBuilder(transport, field, sessionKey));

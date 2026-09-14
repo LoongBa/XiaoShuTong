@@ -4,7 +4,7 @@
 import type { MockHandler, ScenarioConfig } from "@tkwf/tsclient-mock";
 import { createMockDb, defineMock, createMockFactory } from "@tkwf/tsclient-mock";
 import { Query, Mutation } from "./ts-client.g.js";
-import type { AcceptBuddyInvite_ExecuteArgs, ActivateMember_ExecuteArgs, LoginByContextArgs, CreateBank_ExecuteArgs, BankDetail_ExecuteArgs, ListBanks_ExecuteArgs, RemoveBuddy_ExecuteArgs, BuddyRank_ExecuteArgs, CancelSubscription_ExecuteArgs, ChangePasswordSecureArgs, DashboardReport_ExecuteArgs, ExportRosterCsv_ExecuteArgs, GenerateInviteCodes_ExecuteArgs, CreateGroup_ExecuteArgs, ListGroups_ExecuteArgs, Heatmap_ExecuteArgs, Hint_ExecuteArgs, ImportQuestions_ExecuteArgs, ImportRoster_ExecuteArgs, InviteBuddy_ExecuteArgs, JoinPkMatch_ExecuteArgs, KnowledgeCard_ExecuteArgs, RemoveMemberArgs, MembersArgs, MemoryStates_ExecuteArgs, MyRanking_ExecuteArgs, ListMyTasks_ExecuteArgs, OwnerDashboard_ExecuteArgs, CreateParentRelation_ExecuteArgs, PeriodReport_ExecuteArgs, CreatePkMatch_ExecuteArgs, PkResult_ExecuteArgs, PkStats_ExecuteArgs, ProgressReport_ExecuteArgs, Rankings_ExecuteArgs, RegisterSecureArgs, RejectBuddyInvite_ExecuteArgs, ReviewBackingPoints_ExecuteArgs, ReviewQueue_ExecuteArgs, RosterPreview_ExecuteArgs, SessionResult_ExecuteArgs, SetRankEnabled_ExecuteArgs, StartTrial_ExecuteArgs, CreateStudySession_ExecuteArgs, SubmitAttempt_ExecuteArgs, SubmitJudgmentFeedback_ExecuteArgs, SubmitPkAnswer_ExecuteArgs, CreateTask_ExecuteArgs, TaskDetail_ExecuteArgs, ListTasks_ExecuteArgs, WeaknessReport_ExecuteArgs, WrongQuestions_ExecuteArgs, AcceptBuddyInviteResDto, ActivateMemberResDto, LoginPayload, CreateBankResDto, GetBankDetailResDto, ListBanksResDto, ListBuddiesResDto, RemoveBuddyResDto, GetBuddyRankResDto, CancelSubscriptionResDto, RegisterResult, ListChildrenResDto, GetDashboardReportResDto, ExportRosterCsvResDto, GenerateInviteCodesResDto, CreateGroupResDto, ListGroupsResDto, GetHeatmapResDto, GetHintResDto, ImportQuestionsResDto, ImportRosterResDto, InviteBuddyResDto, JoinPkMatchResDto, GetKnowledgeCardResDto, RemoveMemberResDto, GroupDetailResDto, GetMemoryStatesResDto, GetMyRankingResDto, ListMyTasksResDto, GetOwnerDashboardResDto, CreateParentRelationResDto, GetPeriodReportResDto, CreatePkMatchResDto, GetPkResultResDto, GetPkStatsResDto, GetProgressReportResDto, GetRankingsResDto, RejectBuddyInviteResDto, ChallengeResponse, ReviewBackingPointsResDto, GetReviewQueueResDto, RosterPreviewResDto, GetSessionResultResDto, SetRankEnabledResDto, StartTrialResDto, GetStreakResDto, CreateStudySessionResDto, SubmitAttemptResDto, SubmitJudgmentFeedbackResDto, SubmitPkAnswerResDto, ListSubscriptionsResDto, CreateTaskResDto, GetTaskDetailResDto, ListTasksResDto, GetWeaknessReportResDto, GetWrongQuestionsResDto, BanksDto, TopicNodeDto, QuestionsDto, BankListItemDto, BuddyListItemDto, GroupListItemDto, MemberItemDto, MemoryStatesDto, BlockedPointDto, WrongQuestionsDto, SubscriptionBriefDto, WeekProgressDto, SubjectMasteryDto, DailyStatsDto, VsLastWeekDto, ParentWeakPointDto, ChildItemDto, SubscriptionItemDto, PkPlayerResultDto, RankingItemDto, WeakPointDto, DashboardTaskDto, TasksDto, TaskAssignmentsDto, MyTaskItemDto, TaskListItemDto, ExtensionEntry, RankSnapshotsDto } from "./ts-client.g.js";
+import type { AcceptBuddyInvite_ExecuteArgs, ActivateMember_ExecuteArgs, LoginByContextArgs, CreateBank_ExecuteArgs, BankDetail_ExecuteArgs, ListBanks_ExecuteArgs, RemoveBuddy_ExecuteArgs, BuddyRank_ExecuteArgs, CancelSubscription_ExecuteArgs, ChangePasswordSecureArgs, DashboardReport_ExecuteArgs, DraftBatch_ExecuteArgs, ExportRosterCsv_ExecuteArgs, ExportWeeklyReport_ExecuteArgs, GenerateInviteCodes_ExecuteArgs, CreateGroup_ExecuteArgs, ListGroups_ExecuteArgs, Heatmap_ExecuteArgs, Hint_ExecuteArgs, ImportQuestions_ExecuteArgs, ImportRoster_ExecuteArgs, InviteBuddy_ExecuteArgs, JoinPkMatch_ExecuteArgs, KnowledgeCard_ExecuteArgs, RemoveMemberArgs, MembersArgs, MemoryStates_ExecuteArgs, CreateModelArgs, UpdateModelArgs, DeleteModelArgs, ListModelsArgs, MyRanking_ExecuteArgs, ListMyTasks_ExecuteArgs, OwnerDashboard_ExecuteArgs, CreateParentRelation_ExecuteArgs, PeriodReport_ExecuteArgs, CreatePkMatch_ExecuteArgs, PkPlayerStatsViewArgs, PkPlayerStatsView_aggregateArgs, PkResult_ExecuteArgs, PkStats_ExecuteArgs, PreprocessContent_ExecuteArgs, ProgressReport_ExecuteArgs, Rankings_ExecuteArgs, RegisterSecureArgs, RejectBuddyInvite_ExecuteArgs, ReviewBackingPoints_ExecuteArgs, ReviewQueue_ExecuteArgs, RosterPreview_ExecuteArgs, SessionResult_ExecuteArgs, SetEnabledArgs, SetRankEnabled_ExecuteArgs, StartTrial_ExecuteArgs, CreateStudySession_ExecuteArgs, SubmitAttempt_ExecuteArgs, SubmitJudgmentFeedback_ExecuteArgs, SubmitPkAnswer_ExecuteArgs, CreateTask_ExecuteArgs, TaskDetail_ExecuteArgs, ListTasks_ExecuteArgs, WeaknessReport_ExecuteArgs, WrongQuestions_ExecuteArgs, AcceptBuddyInviteResDto, ActivateMemberResDto, LoginPayload, CreateBankResDto, GetBankDetailResDto, ListBanksResDto, ListBuddiesResDto, RemoveBuddyResDto, GetBuddyRankResDto, CancelSubscriptionResDto, RegisterResult, ListChildrenResDto, GetDashboardReportResDto, GetDraftBatchResDto, ExportRosterCsvResDto, ExportWeeklyReportResDto, GenerateInviteCodesResDto, CreateGroupResDto, ListGroupsResDto, GetHeatmapResDto, GetHintResDto, ImportQuestionsResDto, ImportRosterResDto, InviteBuddyResDto, JoinPkMatchResDto, GetKnowledgeCardResDto, RemoveMemberResDto, GroupDetailResDto, GetMemoryStatesResDto, CreateAiModelConfigResDto, UpdateAiModelConfigResDto, DeleteAiModelConfigResDto, ListAiModelConfigResDto, GetMyRankingResDto, ListMyTasksResDto, GetOwnerDashboardResDto, CreateParentRelationResDto, GetPeriodReportResDto, CreatePkMatchResDto, PkPlayerStatsViewConnection, PkPlayerStatsViewAggregate, GetPkResultResDto, GetPkStatsResDto, PreprocessContentResDto, GetProgressReportResDto, GetRankingsResDto, RejectBuddyInviteResDto, ChallengeResponse, ReviewBackingPointsResDto, GetReviewQueueResDto, RosterPreviewResDto, GetSessionResultResDto, SetEnabledResDto, SetRankEnabledResDto, StartTrialResDto, GetStreakResDto, CreateStudySessionResDto, SubmitAttemptResDto, SubmitJudgmentFeedbackResDto, SubmitPkAnswerResDto, ListSubscriptionsResDto, CreateTaskResDto, GetTaskDetailResDto, ListTasksResDto, GetWeaknessReportResDto, GetWrongQuestionsResDto, PkPlayerStatsView, BanksDto, TopicNodeDto, QuestionsDto, DraftItemDto, BankListItemDto, BuddyListItemDto, GroupListItemDto, MemberItemDto, MemoryStatesDto, BlockedPointDto, WrongQuestionsDto, SubscriptionBriefDto, WeekProgressDto, SubjectMasteryDto, DailyStatsDto, VsLastWeekDto, ParentWeakPointDto, ChildItemDto, SubscriptionItemDto, PkPlayerResultDto, AiModelConfigDto, RankingItemDto, WeakPointDto, WeeklyMemberReportDto, DashboardTaskDto, TasksDto, TaskAssignmentsDto, MyTaskItemDto, TaskListItemDto, PkPlayerStatsViewSumFields, PkPlayerStatsViewAvgFields, PkPlayerStatsViewMinFields, PkPlayerStatsViewMaxFields, ExtensionEntry, RankSnapshotsDto, PkPlayerStatsViewFields } from "./ts-client.g.js";
 
 
 // ── 内存数据库（骨架，Agent 填充初始数据） ──
@@ -22,7 +22,9 @@ export const db = createMockDb({
   registerResults: [] satisfies RegisterResult[],  // → API: changePasswordSecure, registerSecure
   listChildrenResDtos: [] satisfies ListChildrenResDto[],  // → API: listChildren_Execute
   getDashboardReportResDtos: [] satisfies GetDashboardReportResDto[],  // → API: dashboardReport_Execute
+  getDraftBatchResDtos: [] satisfies GetDraftBatchResDto[],  // → API: draftBatch_Execute
   exportRosterCsvResDtos: [] satisfies ExportRosterCsvResDto[],  // → API: exportRosterCsv_Execute
+  exportWeeklyReportResDtos: [] satisfies ExportWeeklyReportResDto[],  // → API: exportWeeklyReport_Execute
   generateInviteCodesResDtos: [] satisfies GenerateInviteCodesResDto[],  // → API: generateInviteCodes_Execute
   createGroupResDtos: [] satisfies CreateGroupResDto[],  // → API: createGroup_Execute
   listGroupsResDtos: [] satisfies ListGroupsResDto[],  // → API: listGroups_Execute
@@ -36,14 +38,21 @@ export const db = createMockDb({
   removeMemberResDtos: [] satisfies RemoveMemberResDto[],  // → API: removeMember
   groupDetailResDtos: [] satisfies GroupDetailResDto[],  // → API: members
   getMemoryStatesResDtos: [] satisfies GetMemoryStatesResDto[],  // → API: memoryStates_Execute
+  createAiModelConfigResDtos: [] satisfies CreateAiModelConfigResDto[],  // → API: createModel
+  updateAiModelConfigResDtos: [] satisfies UpdateAiModelConfigResDto[],  // → API: updateModel
+  deleteAiModelConfigResDtos: [] satisfies DeleteAiModelConfigResDto[],  // → API: deleteModel
+  listAiModelConfigResDtos: [] satisfies ListAiModelConfigResDto[],  // → API: listModels
   getMyRankingResDtos: [] satisfies GetMyRankingResDto[],  // → API: myRanking_Execute
   listMyTasksResDtos: [] satisfies ListMyTasksResDto[],  // → API: listMyTasks_Execute
   getOwnerDashboardResDtos: [] satisfies GetOwnerDashboardResDto[],  // → API: ownerDashboard_Execute
   createParentRelationResDtos: [] satisfies CreateParentRelationResDto[],  // → API: createParentRelation_Execute
   getPeriodReportResDtos: [] satisfies GetPeriodReportResDto[],  // → API: periodReport_Execute
   createPkMatchResDtos: [] satisfies CreatePkMatchResDto[],  // → API: createPkMatch_Execute
+  pkPlayerStatsViews: [] satisfies PkPlayerStatsView[],  // → API: pkPlayerStatsView
+  pkPlayerStatsViewAggregates: [] satisfies PkPlayerStatsViewAggregate[],  // → API: PkPlayerStatsView_aggregate
   getPkResultResDtos: [] satisfies GetPkResultResDto[],  // → API: pkResult_Execute
   getPkStatsResDtos: [] satisfies GetPkStatsResDto[],  // → API: pkStats_Execute
+  preprocessContentResDtos: [] satisfies PreprocessContentResDto[],  // → API: preprocessContent_Execute
   getProgressReportResDtos: [] satisfies GetProgressReportResDto[],  // → API: progressReport_Execute
   getRankingsResDtos: [] satisfies GetRankingsResDto[],  // → API: rankings_Execute
   rejectBuddyInviteResDtos: [] satisfies RejectBuddyInviteResDto[],  // → API: rejectBuddyInvite_Execute
@@ -52,6 +61,7 @@ export const db = createMockDb({
   getReviewQueueResDtos: [] satisfies GetReviewQueueResDto[],  // → API: reviewQueue_Execute
   rosterPreviewResDtos: [] satisfies RosterPreviewResDto[],  // → API: rosterPreview_Execute
   getSessionResultResDtos: [] satisfies GetSessionResultResDto[],  // → API: sessionResult_Execute
+  setEnabledResDtos: [] satisfies SetEnabledResDto[],  // → API: setEnabled
   setRankEnabledResDtos: [] satisfies SetRankEnabledResDto[],  // → API: setRankEnabled_Execute
   startTrialResDtos: [] satisfies StartTrialResDto[],  // → API: startTrial_Execute
   getStreakResDtos: [] satisfies GetStreakResDto[],  // → API: streak_Execute
@@ -126,6 +136,21 @@ export const GetBankDetailResDtoSchema = {
       updateTime: { kind: "date" }
   } } }
 } as const;
+export const GetDraftBatchResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    batchId: { kind: "string" },
+    bankId: { kind: "string" },
+    items: { kind: "array", element: { kind: "object", fields: {
+      questionId: { kind: "string" },
+      stem: { kind: "string" },
+      answer: { kind: "string" },
+      subject: { kind: "string" },
+      knowledgePoint: { kind: "string" },
+      keywords: { kind: "array", element: { kind: "string" } },
+      reviewed: { kind: "boolean" }
+  } } }
+} as const;
 export const GetKnowledgeCardResDtoSchema = {
     success: { kind: "boolean" },
     errorCode: { kind: "string" },
@@ -164,6 +189,11 @@ export const ListBanksResDtoSchema = {
       questionCount: { kind: "number" }
   } } },
     total: { kind: "number" }
+} as const;
+export const PreprocessContentResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    batchId: { kind: "string" }
 } as const;
 export const ReviewBackingPointsResDtoSchema = {
     success: { kind: "boolean" },
@@ -273,6 +303,7 @@ export const ListGroupsResDtoSchema = {
     errorCode: { kind: "string" },
     items: { kind: "array", element: { kind: "object", fields: {
       groupId: { kind: "number" },
+      groupUid: { kind: "string" },
       name: { kind: "string" },
       subject: { kind: "string" },
       grade: { kind: "string" },
@@ -548,6 +579,32 @@ export const SubmitPkAnswerResDtoSchema = {
     confidence: { kind: "number" },
     score: { kind: "number" }
 } as const;
+export const ListAiModelConfigResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    items: { kind: "array", element: { kind: "object", fields: {
+      isFromPersistentSource: { kind: "boolean" },
+      id: { kind: "number", isId: true },
+      uId: { kind: "string" },
+      name: { kind: "string" },
+      provider: { kind: "string" },
+      baseUrl: { kind: "string" },
+      modelName: { kind: "string" },
+      enabled: { kind: "boolean" },
+      sortOrder: { kind: "number" },
+      timeoutSeconds: { kind: "number" },
+      remark: { kind: "string" },
+      createTime: { kind: "date" },
+      updateTime: { kind: "date" }
+  } } },
+    total: { kind: "number" }
+} as const;
+export const SetEnabledResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    uId: { kind: "string" },
+    enabled: { kind: "boolean" }
+} as const;
 export const GetMyRankingResDtoSchema = {
     success: { kind: "boolean" },
     errorCode: { kind: "string" },
@@ -612,6 +669,27 @@ export const CreateTaskResDtoSchema = {
     errorCode: { kind: "string" },
     taskUid: { kind: "string" },
     assignedCount: { kind: "number" }
+} as const;
+export const ExportWeeklyReportResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    weekStart: { kind: "string" },
+    weekEnd: { kind: "string" },
+    taskCount: { kind: "number" },
+    memberCount: { kind: "number" },
+    totalAssignments: { kind: "number" },
+    completedCount: { kind: "number" },
+    executionRate: { kind: "number" },
+    avgProgress: { kind: "number" },
+    learnedCount: { kind: "number" },
+    memberReports: { kind: "array", element: { kind: "object", fields: {
+      userId: { kind: "number" },
+      nickname: { kind: "string" },
+      executionRate: { kind: "number" },
+      avgProgress: { kind: "number" },
+      learnedCount: { kind: "number" }
+  } } },
+    csvFileUrl: { kind: "string" }
 } as const;
 export const GetOwnerDashboardResDtoSchema = {
     success: { kind: "boolean" },
@@ -712,6 +790,41 @@ export const ListTasksResDtoSchema = {
   } } },
     total: { kind: "number" }
 } as const;
+export const PkPlayerStatsViewAggregateSchema = {
+    count: { kind: "number" },
+    sum: { kind: "object", fields: {
+      id: { kind: "number", isId: true },
+      userId: { kind: "number" },
+      totalMatches: { kind: "number" },
+      wins: { kind: "number" },
+      draws: { kind: "number" },
+      totalScore: { kind: "number" }
+  } },
+    avg: { kind: "object", fields: {
+      id: { kind: "number", isId: true },
+      userId: { kind: "number" },
+      totalMatches: { kind: "number" },
+      wins: { kind: "number" },
+      draws: { kind: "number" },
+      totalScore: { kind: "number" }
+  } },
+    min: { kind: "object", fields: {
+      id: { kind: "number", isId: true },
+      userId: { kind: "number" },
+      totalMatches: { kind: "number" },
+      wins: { kind: "number" },
+      draws: { kind: "number" },
+      totalScore: { kind: "number" }
+  } },
+    max: { kind: "object", fields: {
+      id: { kind: "number", isId: true },
+      userId: { kind: "number" },
+      totalMatches: { kind: "number" },
+      wins: { kind: "number" },
+      draws: { kind: "number" },
+      totalScore: { kind: "number" }
+  } }
+} as const;
 export const LoginPayloadSchema = {
     success: { kind: "boolean" },
     userName: { kind: "string" },
@@ -727,6 +840,21 @@ export const LoginPayloadSchema = {
   } } }
 } as const;
 export const RemoveMemberResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    removed: { kind: "boolean" }
+} as const;
+export const CreateAiModelConfigResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    uId: { kind: "string" }
+} as const;
+export const UpdateAiModelConfigResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    uId: { kind: "string" }
+} as const;
+export const DeleteAiModelConfigResDtoSchema = {
     success: { kind: "boolean" },
     errorCode: { kind: "string" },
     removed: { kind: "boolean" }
@@ -769,6 +897,15 @@ export const QuestionsDtoSchema = {
     supersededBy: { kind: "string" },
     createTime: { kind: "date" },
     updateTime: { kind: "date" }
+} as const;
+export const DraftItemDtoSchema = {
+    questionId: { kind: "string" },
+    stem: { kind: "string" },
+    answer: { kind: "string" },
+    subject: { kind: "string" },
+    knowledgePoint: { kind: "string" },
+    keywords: { kind: "array", element: { kind: "string" } },
+    reviewed: { kind: "boolean" }
 } as const;
 export const BankListItemDtoSchema = {
     bank: { kind: "object", fields: {
@@ -816,6 +953,7 @@ export const BuddyListItemDtoSchema = {
 } as const;
 export const GroupListItemDtoSchema = {
     groupId: { kind: "number" },
+    groupUid: { kind: "string" },
     name: { kind: "string" },
     subject: { kind: "string" },
     grade: { kind: "string" },
@@ -926,6 +1064,21 @@ export const PkPlayerResultDtoSchema = {
     totalTimeMs: { kind: "number" },
     aiComment: { kind: "string" }
 } as const;
+export const AiModelConfigDtoSchema = {
+    isFromPersistentSource: { kind: "boolean" },
+    id: { kind: "number", isId: true },
+    uId: { kind: "string" },
+    name: { kind: "string" },
+    provider: { kind: "string" },
+    baseUrl: { kind: "string" },
+    modelName: { kind: "string" },
+    enabled: { kind: "boolean" },
+    sortOrder: { kind: "number" },
+    timeoutSeconds: { kind: "number" },
+    remark: { kind: "string" },
+    createTime: { kind: "date" },
+    updateTime: { kind: "date" }
+} as const;
 export const RankingItemDtoSchema = {
     rank: { kind: "number" },
     userId: { kind: "number" },
@@ -938,6 +1091,13 @@ export const RankingItemDtoSchema = {
 export const WeakPointDtoSchema = {
     knowledgePoint: { kind: "string" },
     accuracy: { kind: "number" }
+} as const;
+export const WeeklyMemberReportDtoSchema = {
+    userId: { kind: "number" },
+    nickname: { kind: "string" },
+    executionRate: { kind: "number" },
+    avgProgress: { kind: "number" },
+    learnedCount: { kind: "number" }
 } as const;
 export const DashboardTaskDtoSchema = {
     task: { kind: "object", fields: {
@@ -1014,6 +1174,47 @@ export const TaskListItemDtoSchema = {
     questionCount: { kind: "number" },
     completionRate: { kind: "number" }
 } as const;
+export const PkPlayerStatsViewSchema = {
+    isFromPersistentSource: { kind: "boolean" },
+    id: { kind: "number", isId: true },
+    userId: { kind: "number" },
+    totalMatches: { kind: "number" },
+    wins: { kind: "number" },
+    draws: { kind: "number" },
+    totalScore: { kind: "number" }
+} as const;
+export const PkPlayerStatsViewSumFieldsSchema = {
+    id: { kind: "number", isId: true },
+    userId: { kind: "number" },
+    totalMatches: { kind: "number" },
+    wins: { kind: "number" },
+    draws: { kind: "number" },
+    totalScore: { kind: "number" }
+} as const;
+export const PkPlayerStatsViewAvgFieldsSchema = {
+    id: { kind: "number", isId: true },
+    userId: { kind: "number" },
+    totalMatches: { kind: "number" },
+    wins: { kind: "number" },
+    draws: { kind: "number" },
+    totalScore: { kind: "number" }
+} as const;
+export const PkPlayerStatsViewMinFieldsSchema = {
+    id: { kind: "number", isId: true },
+    userId: { kind: "number" },
+    totalMatches: { kind: "number" },
+    wins: { kind: "number" },
+    draws: { kind: "number" },
+    totalScore: { kind: "number" }
+} as const;
+export const PkPlayerStatsViewMaxFieldsSchema = {
+    id: { kind: "number", isId: true },
+    userId: { kind: "number" },
+    totalMatches: { kind: "number" },
+    wins: { kind: "number" },
+    draws: { kind: "number" },
+    totalScore: { kind: "number" }
+} as const;
 export const ExtensionEntrySchema = {
     key: { kind: "string" },
     value: { kind: "string" }
@@ -1033,6 +1234,15 @@ export const RankSnapshotsDtoSchema = {
     createTime: { kind: "date" },
     updateTime: { kind: "date" }
 } as const;
+export const PkPlayerStatsViewFieldsSchema = {
+    isFromPersistentSource: { kind: "string" },
+    id: { kind: "string" },
+    userId: { kind: "string" },
+    totalMatches: { kind: "string" },
+    wins: { kind: "string" },
+    draws: { kind: "string" },
+    totalScore: { kind: "string" }
+} as const;
 
 
 // ── 工厂 DSL（v1.9.0，Agent 可用 defineXxxFactory.make({ key: value }) 覆盖关键字段） ──
@@ -1040,9 +1250,11 @@ export const defineChallengeResponse = createMockFactory<ChallengeResponse>({ _t
 export const defineRegisterResult = createMockFactory<RegisterResult>({ _types: RegisterResultSchema });
 export const defineCreateBankResDto = createMockFactory<CreateBankResDto>({ _types: CreateBankResDtoSchema });
 export const defineGetBankDetailResDto = createMockFactory<GetBankDetailResDto>({ _types: GetBankDetailResDtoSchema });
+export const defineGetDraftBatchResDto = createMockFactory<GetDraftBatchResDto>({ _types: GetDraftBatchResDtoSchema });
 export const defineGetKnowledgeCardResDto = createMockFactory<GetKnowledgeCardResDto>({ _types: GetKnowledgeCardResDtoSchema });
 export const defineImportQuestionsResDto = createMockFactory<ImportQuestionsResDto>({ _types: ImportQuestionsResDtoSchema });
 export const defineListBanksResDto = createMockFactory<ListBanksResDto>({ _types: ListBanksResDtoSchema });
+export const definePreprocessContentResDto = createMockFactory<PreprocessContentResDto>({ _types: PreprocessContentResDtoSchema });
 export const defineReviewBackingPointsResDto = createMockFactory<ReviewBackingPointsResDto>({ _types: ReviewBackingPointsResDtoSchema });
 export const defineAcceptBuddyInviteResDto = createMockFactory<AcceptBuddyInviteResDto>({ _types: AcceptBuddyInviteResDtoSchema });
 export const defineGetBuddyRankResDto = createMockFactory<GetBuddyRankResDto>({ _types: GetBuddyRankResDtoSchema });
@@ -1080,21 +1292,29 @@ export const defineGetPkResultResDto = createMockFactory<GetPkResultResDto>({ _t
 export const defineGetPkStatsResDto = createMockFactory<GetPkStatsResDto>({ _types: GetPkStatsResDtoSchema });
 export const defineJoinPkMatchResDto = createMockFactory<JoinPkMatchResDto>({ _types: JoinPkMatchResDtoSchema });
 export const defineSubmitPkAnswerResDto = createMockFactory<SubmitPkAnswerResDto>({ _types: SubmitPkAnswerResDtoSchema });
+export const defineListAiModelConfigResDto = createMockFactory<ListAiModelConfigResDto>({ _types: ListAiModelConfigResDtoSchema });
+export const defineSetEnabledResDto = createMockFactory<SetEnabledResDto>({ _types: SetEnabledResDtoSchema });
 export const defineGetMyRankingResDto = createMockFactory<GetMyRankingResDto>({ _types: GetMyRankingResDtoSchema });
 export const defineGetRankingsResDto = createMockFactory<GetRankingsResDto>({ _types: GetRankingsResDtoSchema });
 export const defineGetHeatmapResDto = createMockFactory<GetHeatmapResDto>({ _types: GetHeatmapResDtoSchema });
 export const defineGetPeriodReportResDto = createMockFactory<GetPeriodReportResDto>({ _types: GetPeriodReportResDtoSchema });
 export const defineGetStreakResDto = createMockFactory<GetStreakResDto>({ _types: GetStreakResDtoSchema });
 export const defineCreateTaskResDto = createMockFactory<CreateTaskResDto>({ _types: CreateTaskResDtoSchema });
+export const defineExportWeeklyReportResDto = createMockFactory<ExportWeeklyReportResDto>({ _types: ExportWeeklyReportResDtoSchema });
 export const defineGetOwnerDashboardResDto = createMockFactory<GetOwnerDashboardResDto>({ _types: GetOwnerDashboardResDtoSchema });
 export const defineGetTaskDetailResDto = createMockFactory<GetTaskDetailResDto>({ _types: GetTaskDetailResDtoSchema });
 export const defineListMyTasksResDto = createMockFactory<ListMyTasksResDto>({ _types: ListMyTasksResDtoSchema });
 export const defineListTasksResDto = createMockFactory<ListTasksResDto>({ _types: ListTasksResDtoSchema });
+export const definePkPlayerStatsViewAggregate = createMockFactory<PkPlayerStatsViewAggregate>({ _types: PkPlayerStatsViewAggregateSchema });
 export const defineLoginPayload = createMockFactory<LoginPayload>({ _types: LoginPayloadSchema });
 export const defineRemoveMemberResDto = createMockFactory<RemoveMemberResDto>({ _types: RemoveMemberResDtoSchema });
+export const defineCreateAiModelConfigResDto = createMockFactory<CreateAiModelConfigResDto>({ _types: CreateAiModelConfigResDtoSchema });
+export const defineUpdateAiModelConfigResDto = createMockFactory<UpdateAiModelConfigResDto>({ _types: UpdateAiModelConfigResDtoSchema });
+export const defineDeleteAiModelConfigResDto = createMockFactory<DeleteAiModelConfigResDto>({ _types: DeleteAiModelConfigResDtoSchema });
 export const defineBanksDto = createMockFactory<BanksDto>({ _types: BanksDtoSchema });
 export const defineTopicNodeDto = createMockFactory<TopicNodeDto>({ _types: TopicNodeDtoSchema });
 export const defineQuestionsDto = createMockFactory<QuestionsDto>({ _types: QuestionsDtoSchema });
+export const defineDraftItemDto = createMockFactory<DraftItemDto>({ _types: DraftItemDtoSchema });
 export const defineBankListItemDto = createMockFactory<BankListItemDto>({ _types: BankListItemDtoSchema });
 export const defineBuddyListItemDto = createMockFactory<BuddyListItemDto>({ _types: BuddyListItemDtoSchema });
 export const defineGroupListItemDto = createMockFactory<GroupListItemDto>({ _types: GroupListItemDtoSchema });
@@ -1111,15 +1331,23 @@ export const defineParentWeakPointDto = createMockFactory<ParentWeakPointDto>({ 
 export const defineChildItemDto = createMockFactory<ChildItemDto>({ _types: ChildItemDtoSchema });
 export const defineSubscriptionItemDto = createMockFactory<SubscriptionItemDto>({ _types: SubscriptionItemDtoSchema });
 export const definePkPlayerResultDto = createMockFactory<PkPlayerResultDto>({ _types: PkPlayerResultDtoSchema });
+export const defineAiModelConfigDto = createMockFactory<AiModelConfigDto>({ _types: AiModelConfigDtoSchema });
 export const defineRankingItemDto = createMockFactory<RankingItemDto>({ _types: RankingItemDtoSchema });
 export const defineWeakPointDto = createMockFactory<WeakPointDto>({ _types: WeakPointDtoSchema });
+export const defineWeeklyMemberReportDto = createMockFactory<WeeklyMemberReportDto>({ _types: WeeklyMemberReportDtoSchema });
 export const defineDashboardTaskDto = createMockFactory<DashboardTaskDto>({ _types: DashboardTaskDtoSchema });
 export const defineTasksDto = createMockFactory<TasksDto>({ _types: TasksDtoSchema });
 export const defineTaskAssignmentsDto = createMockFactory<TaskAssignmentsDto>({ _types: TaskAssignmentsDtoSchema });
 export const defineMyTaskItemDto = createMockFactory<MyTaskItemDto>({ _types: MyTaskItemDtoSchema });
 export const defineTaskListItemDto = createMockFactory<TaskListItemDto>({ _types: TaskListItemDtoSchema });
+export const definePkPlayerStatsView = createMockFactory<PkPlayerStatsView>({ _types: PkPlayerStatsViewSchema });
+export const definePkPlayerStatsViewSumFields = createMockFactory<PkPlayerStatsViewSumFields>({ _types: PkPlayerStatsViewSumFieldsSchema });
+export const definePkPlayerStatsViewAvgFields = createMockFactory<PkPlayerStatsViewAvgFields>({ _types: PkPlayerStatsViewAvgFieldsSchema });
+export const definePkPlayerStatsViewMinFields = createMockFactory<PkPlayerStatsViewMinFields>({ _types: PkPlayerStatsViewMinFieldsSchema });
+export const definePkPlayerStatsViewMaxFields = createMockFactory<PkPlayerStatsViewMaxFields>({ _types: PkPlayerStatsViewMaxFieldsSchema });
 export const defineExtensionEntry = createMockFactory<ExtensionEntry>({ _types: ExtensionEntrySchema });
 export const defineRankSnapshotsDto = createMockFactory<RankSnapshotsDto>({ _types: RankSnapshotsDtoSchema });
+export const definePkPlayerStatsViewFields = createMockFactory<PkPlayerStatsViewFields>({ _types: PkPlayerStatsViewFieldsSchema });
 
 // ── 场景数据集骨架（v2.0.0：default 预填充，empty 保持空） ──
 export const scenarios = {
@@ -1137,7 +1365,9 @@ export const scenarios = {
     registerResults: defineRegisterResult.makeN(5),  // → API: changePasswordSecure, registerSecure
     listChildrenResDtos: defineListChildrenResDto.makeN(5),  // → API: listChildren_Execute
     getDashboardReportResDtos: defineGetDashboardReportResDto.makeN(5),  // → API: dashboardReport_Execute
+    getDraftBatchResDtos: defineGetDraftBatchResDto.makeN(5),  // → API: draftBatch_Execute
     exportRosterCsvResDtos: defineExportRosterCsvResDto.makeN(5),  // → API: exportRosterCsv_Execute
+    exportWeeklyReportResDtos: defineExportWeeklyReportResDto.makeN(5),  // → API: exportWeeklyReport_Execute
     generateInviteCodesResDtos: defineGenerateInviteCodesResDto.makeN(5),  // → API: generateInviteCodes_Execute
     createGroupResDtos: defineCreateGroupResDto.makeN(5),  // → API: createGroup_Execute
     listGroupsResDtos: defineListGroupsResDto.makeN(5),  // → API: listGroups_Execute
@@ -1151,14 +1381,21 @@ export const scenarios = {
     removeMemberResDtos: defineRemoveMemberResDto.makeN(5),  // → API: removeMember
     groupDetailResDtos: defineGroupDetailResDto.makeN(5),  // → API: members
     getMemoryStatesResDtos: defineGetMemoryStatesResDto.makeN(5),  // → API: memoryStates_Execute
+    createAiModelConfigResDtos: defineCreateAiModelConfigResDto.makeN(5),  // → API: createModel
+    updateAiModelConfigResDtos: defineUpdateAiModelConfigResDto.makeN(5),  // → API: updateModel
+    deleteAiModelConfigResDtos: defineDeleteAiModelConfigResDto.makeN(5),  // → API: deleteModel
+    listAiModelConfigResDtos: defineListAiModelConfigResDto.makeN(5),  // → API: listModels
     getMyRankingResDtos: defineGetMyRankingResDto.makeN(5),  // → API: myRanking_Execute
     listMyTasksResDtos: defineListMyTasksResDto.makeN(5),  // → API: listMyTasks_Execute
     getOwnerDashboardResDtos: defineGetOwnerDashboardResDto.makeN(5),  // → API: ownerDashboard_Execute
     createParentRelationResDtos: defineCreateParentRelationResDto.makeN(5),  // → API: createParentRelation_Execute
     getPeriodReportResDtos: defineGetPeriodReportResDto.makeN(5),  // → API: periodReport_Execute
     createPkMatchResDtos: defineCreatePkMatchResDto.makeN(5),  // → API: createPkMatch_Execute
+    pkPlayerStatsViews: definePkPlayerStatsView.makeN(5),  // → API: pkPlayerStatsView
+    pkPlayerStatsViewAggregates: definePkPlayerStatsViewAggregate.makeN(5),  // → API: PkPlayerStatsView_aggregate
     getPkResultResDtos: defineGetPkResultResDto.makeN(5),  // → API: pkResult_Execute
     getPkStatsResDtos: defineGetPkStatsResDto.makeN(5),  // → API: pkStats_Execute
+    preprocessContentResDtos: definePreprocessContentResDto.makeN(5),  // → API: preprocessContent_Execute
     getProgressReportResDtos: defineGetProgressReportResDto.makeN(5),  // → API: progressReport_Execute
     getRankingsResDtos: defineGetRankingsResDto.makeN(5),  // → API: rankings_Execute
     rejectBuddyInviteResDtos: defineRejectBuddyInviteResDto.makeN(5),  // → API: rejectBuddyInvite_Execute
@@ -1167,6 +1404,7 @@ export const scenarios = {
     getReviewQueueResDtos: defineGetReviewQueueResDto.makeN(5),  // → API: reviewQueue_Execute
     rosterPreviewResDtos: defineRosterPreviewResDto.makeN(5),  // → API: rosterPreview_Execute
     getSessionResultResDtos: defineGetSessionResultResDto.makeN(5),  // → API: sessionResult_Execute
+    setEnabledResDtos: defineSetEnabledResDto.makeN(5),  // → API: setEnabled
     setRankEnabledResDtos: defineSetRankEnabledResDto.makeN(5),  // → API: setRankEnabled_Execute
     startTrialResDtos: defineStartTrialResDto.makeN(5),  // → API: startTrial_Execute
     getStreakResDtos: defineGetStreakResDto.makeN(5),  // → API: streak_Execute
@@ -1195,7 +1433,9 @@ export const scenarios = {
     registerResults: [] satisfies RegisterResult[],
     listChildrenResDtos: [] satisfies ListChildrenResDto[],
     getDashboardReportResDtos: [] satisfies GetDashboardReportResDto[],
+    getDraftBatchResDtos: [] satisfies GetDraftBatchResDto[],
     exportRosterCsvResDtos: [] satisfies ExportRosterCsvResDto[],
+    exportWeeklyReportResDtos: [] satisfies ExportWeeklyReportResDto[],
     generateInviteCodesResDtos: [] satisfies GenerateInviteCodesResDto[],
     createGroupResDtos: [] satisfies CreateGroupResDto[],
     listGroupsResDtos: [] satisfies ListGroupsResDto[],
@@ -1209,14 +1449,21 @@ export const scenarios = {
     removeMemberResDtos: [] satisfies RemoveMemberResDto[],
     groupDetailResDtos: [] satisfies GroupDetailResDto[],
     getMemoryStatesResDtos: [] satisfies GetMemoryStatesResDto[],
+    createAiModelConfigResDtos: [] satisfies CreateAiModelConfigResDto[],
+    updateAiModelConfigResDtos: [] satisfies UpdateAiModelConfigResDto[],
+    deleteAiModelConfigResDtos: [] satisfies DeleteAiModelConfigResDto[],
+    listAiModelConfigResDtos: [] satisfies ListAiModelConfigResDto[],
     getMyRankingResDtos: [] satisfies GetMyRankingResDto[],
     listMyTasksResDtos: [] satisfies ListMyTasksResDto[],
     getOwnerDashboardResDtos: [] satisfies GetOwnerDashboardResDto[],
     createParentRelationResDtos: [] satisfies CreateParentRelationResDto[],
     getPeriodReportResDtos: [] satisfies GetPeriodReportResDto[],
     createPkMatchResDtos: [] satisfies CreatePkMatchResDto[],
+    pkPlayerStatsViews: [] satisfies PkPlayerStatsView[],
+    pkPlayerStatsViewAggregates: [] satisfies PkPlayerStatsViewAggregate[],
     getPkResultResDtos: [] satisfies GetPkResultResDto[],
     getPkStatsResDtos: [] satisfies GetPkStatsResDto[],
+    preprocessContentResDtos: [] satisfies PreprocessContentResDto[],
     getProgressReportResDtos: [] satisfies GetProgressReportResDto[],
     getRankingsResDtos: [] satisfies GetRankingsResDto[],
     rejectBuddyInviteResDtos: [] satisfies RejectBuddyInviteResDto[],
@@ -1225,6 +1472,7 @@ export const scenarios = {
     getReviewQueueResDtos: [] satisfies GetReviewQueueResDto[],
     rosterPreviewResDtos: [] satisfies RosterPreviewResDto[],
     getSessionResultResDtos: [] satisfies GetSessionResultResDto[],
+    setEnabledResDtos: [] satisfies SetEnabledResDto[],
     setRankEnabledResDtos: [] satisfies SetRankEnabledResDto[],
     startTrialResDtos: [] satisfies StartTrialResDto[],
     getStreakResDtos: [] satisfies GetStreakResDto[],
@@ -1285,6 +1533,15 @@ export async function validateGetBankDetailResDto(data: unknown) {
   }
 };
 
+export async function validateGetDraftBatchResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...GetDraftBatchResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
 export async function validateGetKnowledgeCardResDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
@@ -1307,6 +1564,15 @@ export async function validateListBanksResDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
     return mockFieldSchemaToZod({ kind: "object", fields: { ...ListBanksResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validatePreprocessContentResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PreprocessContentResDtoSchema } }).safeParse(data);
   } catch {
     throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
   }
@@ -1645,6 +1911,24 @@ export async function validateSubmitPkAnswerResDto(data: unknown) {
   }
 };
 
+export async function validateListAiModelConfigResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...ListAiModelConfigResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateSetEnabledResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...SetEnabledResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
 export async function validateGetMyRankingResDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
@@ -1699,6 +1983,15 @@ export async function validateCreateTaskResDto(data: unknown) {
   }
 };
 
+export async function validateExportWeeklyReportResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...ExportWeeklyReportResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
 export async function validateGetOwnerDashboardResDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
@@ -1735,6 +2028,15 @@ export async function validateListTasksResDto(data: unknown) {
   }
 };
 
+export async function validatePkPlayerStatsViewAggregate(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewAggregateSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
 export async function validateLoginPayload(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
@@ -1748,6 +2050,33 @@ export async function validateRemoveMemberResDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
     return mockFieldSchemaToZod({ kind: "object", fields: { ...RemoveMemberResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateCreateAiModelConfigResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...CreateAiModelConfigResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateUpdateAiModelConfigResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...UpdateAiModelConfigResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateDeleteAiModelConfigResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...DeleteAiModelConfigResDtoSchema } }).safeParse(data);
   } catch {
     throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
   }
@@ -1775,6 +2104,15 @@ export async function validateQuestionsDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
     return mockFieldSchemaToZod({ kind: "object", fields: { ...QuestionsDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateDraftItemDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...DraftItemDtoSchema } }).safeParse(data);
   } catch {
     throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
   }
@@ -1924,6 +2262,15 @@ export async function validatePkPlayerResultDto(data: unknown) {
   }
 };
 
+export async function validateAiModelConfigDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...AiModelConfigDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
 export async function validateRankingItemDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
@@ -1937,6 +2284,15 @@ export async function validateWeakPointDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
     return mockFieldSchemaToZod({ kind: "object", fields: { ...WeakPointDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateWeeklyMemberReportDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...WeeklyMemberReportDtoSchema } }).safeParse(data);
   } catch {
     throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
   }
@@ -1987,6 +2343,51 @@ export async function validateTaskListItemDto(data: unknown) {
   }
 };
 
+export async function validatePkPlayerStatsView(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validatePkPlayerStatsViewSumFields(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewSumFieldsSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validatePkPlayerStatsViewAvgFields(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewAvgFieldsSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validatePkPlayerStatsViewMinFields(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewMinFieldsSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validatePkPlayerStatsViewMaxFields(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewMaxFieldsSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
 export async function validateExtensionEntry(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
@@ -2000,6 +2401,15 @@ export async function validateRankSnapshotsDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
     return mockFieldSchemaToZod({ kind: "object", fields: { ...RankSnapshotsDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validatePkPlayerStatsViewFields(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...PkPlayerStatsViewFieldsSchema } }).safeParse(data);
   } catch {
     throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
   }
@@ -2127,6 +2537,14 @@ export const handlers = {
   }>((_vars) => {
     return db.queryOne("getDashboardReportResDtos") as GetDashboardReportResDto;
   }),
+  // draftBatch_Execute (query, 单条)
+  draftBatch_Execute: defineMock<{
+    field: "draftBatch_Execute";
+    args: DraftBatch_ExecuteArgs;
+    result: GetDraftBatchResDto;
+  }>((_vars) => {
+    return db.queryOne("getDraftBatchResDtos") as GetDraftBatchResDto;
+  }),
   // exportRosterCsv_Execute (query, 单条)
   exportRosterCsv_Execute: defineMock<{
     field: "exportRosterCsv_Execute";
@@ -2134,6 +2552,14 @@ export const handlers = {
     result: ExportRosterCsvResDto;
   }>((_vars) => {
     return db.queryOne("exportRosterCsvResDtos") as ExportRosterCsvResDto;
+  }),
+  // exportWeeklyReport_Execute (query, 单条)
+  exportWeeklyReport_Execute: defineMock<{
+    field: "exportWeeklyReport_Execute";
+    args: ExportWeeklyReport_ExecuteArgs;
+    result: ExportWeeklyReportResDto;
+  }>((_vars) => {
+    return db.queryOne("exportWeeklyReportResDtos") as ExportWeeklyReportResDto;
   }),
   // generateInviteCodes_Execute (query, 单条)
   generateInviteCodes_Execute: defineMock<{
@@ -2239,6 +2665,38 @@ export const handlers = {
   }>((_vars) => {
     return db.queryOne("getMemoryStatesResDtos") as GetMemoryStatesResDto;
   }),
+  // createModel (mutation)
+  createModel: defineMock<{
+    field: "createModel";
+    args: CreateModelArgs;
+    result: CreateAiModelConfigResDto;
+  }>((_vars) => {
+    return db.queryOne("createAiModelConfigResDtos") as unknown as CreateAiModelConfigResDto;
+  }),
+  // updateModel (mutation)
+  updateModel: defineMock<{
+    field: "updateModel";
+    args: UpdateModelArgs;
+    result: UpdateAiModelConfigResDto;
+  }>((_vars) => {
+    return db.queryOne("updateAiModelConfigResDtos") as unknown as UpdateAiModelConfigResDto;
+  }),
+  // deleteModel (mutation)
+  deleteModel: defineMock<{
+    field: "deleteModel";
+    args: DeleteModelArgs;
+    result: DeleteAiModelConfigResDto;
+  }>((vars) => {
+    return db.remove("deleteAiModelConfigResDtos", vars?.request?.uId as string | number) as unknown as DeleteAiModelConfigResDto;
+  }),
+  // listModels (query, 单条)
+  listModels: defineMock<{
+    field: "listModels";
+    args: ListModelsArgs;
+    result: ListAiModelConfigResDto;
+  }>((_vars) => {
+    return db.queryOne("listAiModelConfigResDtos") as ListAiModelConfigResDto;
+  }),
   // myRanking_Execute (query, 单条)
   myRanking_Execute: defineMock<{
     field: "myRanking_Execute";
@@ -2287,6 +2745,28 @@ export const handlers = {
   }>((_vars) => {
     return db.queryOne("createPkMatchResDtos") as unknown as CreatePkMatchResDto;
   }),
+  // pkPlayerStatsView (query)
+  pkPlayerStatsView: defineMock<{
+    field: "pkPlayerStatsView";
+    args: PkPlayerStatsViewArgs;
+    result: PkPlayerStatsViewConnection;
+  }>((vars) => {
+    const rows = db.query("pkPlayerStatsViews", vars?.where, vars?.order, (vars?.first === undefined ? undefined : { first: vars?.first + 1, after: vars?.after }));
+    const limit = vars?.first;
+    const hasNextPage = limit !== undefined && rows.length > limit;
+    const nodes = limit === undefined ? rows : rows.slice(0, limit);
+    return { nodes, totalCount: rows.length, pageInfo: { hasPreviousPage: Boolean(vars?.after), hasNextPage } } as PkPlayerStatsViewConnection;
+    // pageInfo：first+1 探测，hasNextPage 准确；totalCount 为探测条数（最多 limit+1，近似）
+  }),
+  // // TODO: 反向分页未实现，Agent 需自定义 last/before 处理
+  // PkPlayerStatsView_aggregate (query, 单条)
+  PkPlayerStatsView_aggregate: defineMock<{
+    field: "PkPlayerStatsView_aggregate";
+    args: PkPlayerStatsView_aggregateArgs;
+    result: PkPlayerStatsViewAggregate;
+  }>((vars) => {
+    return db.queryOne("pkPlayerStatsViewAggregates", vars?.where) as PkPlayerStatsViewAggregate;
+  }),
   // pkResult_Execute (query, 单条)
   pkResult_Execute: defineMock<{
     field: "pkResult_Execute";
@@ -2302,6 +2782,14 @@ export const handlers = {
     result: GetPkStatsResDto;
   }>((_vars) => {
     return db.queryOne("getPkStatsResDtos") as GetPkStatsResDto;
+  }),
+  // preprocessContent_Execute (query, 单条)
+  preprocessContent_Execute: defineMock<{
+    field: "preprocessContent_Execute";
+    args: PreprocessContent_ExecuteArgs;
+    result: PreprocessContentResDto;
+  }>((_vars) => {
+    return db.queryOne("preprocessContentResDtos") as PreprocessContentResDto;
   }),
   // progressReport_Execute (query, 单条)
   progressReport_Execute: defineMock<{
@@ -2374,6 +2862,14 @@ export const handlers = {
     result: GetSessionResultResDto;
   }>((_vars) => {
     return db.queryOne("getSessionResultResDtos") as GetSessionResultResDto;
+  }),
+  // setEnabled (query, 单条)
+  setEnabled: defineMock<{
+    field: "setEnabled";
+    args: SetEnabledArgs;
+    result: SetEnabledResDto;
+  }>((_vars) => {
+    return db.queryOne("setEnabledResDtos") as SetEnabledResDto;
   }),
   // setRankEnabled_Execute (query, 单条)
   setRankEnabled_Execute: defineMock<{

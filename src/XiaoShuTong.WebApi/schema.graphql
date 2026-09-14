@@ -15,11 +15,15 @@ type Query {
     @cost(weight: "10")
   bankDetail_Execute(request: GetBankDetailReqDtoInput): GetBankDetailResDto
     @cost(weight: "10")
+  draftBatch_Execute(request: GetDraftBatchReqDtoInput): GetDraftBatchResDto
+    @cost(weight: "10")
   knowledgeCard_Execute(request: GetKnowledgeCardReqDtoInput): GetKnowledgeCardResDto
     @cost(weight: "10")
   importQuestions_Execute(request: ImportQuestionsReqDtoInput): ImportQuestionsResDto
     @cost(weight: "10")
   listBanks_Execute(request: ListBanksReqDtoInput): ListBanksResDto
+    @cost(weight: "10")
+  preprocessContent_Execute(request: PreprocessContentReqDtoInput): PreprocessContentResDto
     @cost(weight: "10")
   reviewBackingPoints_Execute(request: ReviewBackingPointsReqDtoInput): ReviewBackingPointsResDto
     @cost(weight: "10")
@@ -90,6 +94,10 @@ type Query {
     @cost(weight: "10")
   submitPkAnswer_Execute(request: SubmitPkAnswerReqDtoInput): SubmitPkAnswerResDto
     @cost(weight: "10")
+  listModels(request: ListAiModelConfigReqDtoInput): ListAiModelConfigResDto
+    @cost(weight: "10")
+  setEnabled(request: SetEnabledReqDtoInput): SetEnabledResDto
+    @cost(weight: "10")
   myRanking_Execute(request: GetMyRankingReqDtoInput): GetMyRankingResDto
     @cost(weight: "10")
   rankings_Execute(request: GetRankingsReqDtoInput): GetRankingsResDto
@@ -101,6 +109,8 @@ type Query {
   streak_Execute: GetStreakResDto @cost(weight: "10")
   createTask_Execute(request: CreateTaskReqDtoInput): CreateTaskResDto
     @cost(weight: "10")
+  exportWeeklyReport_Execute(request: ExportWeeklyReportReqDtoInput): ExportWeeklyReportResDto
+    @cost(weight: "10")
   ownerDashboard_Execute(request: GetOwnerDashboardReqDtoInput): GetOwnerDashboardResDto
     @cost(weight: "10")
   taskDetail_Execute(request: GetTaskDetailReqDtoInput): GetTaskDetailResDto
@@ -109,6 +119,29 @@ type Query {
     @cost(weight: "10")
   listTasks_Execute(request: ListTasksReqDtoInput): ListTasksResDto
     @cost(weight: "10")
+  pkPlayerStatsView(
+    "Returns the first _n_ elements from the list."
+    first: Int
+    "Returns the elements in the list that come after the specified cursor."
+    after: String
+    "Returns the last _n_ elements from the list."
+    last: Int
+    "Returns the elements in the list that come before the specified cursor."
+    before: String
+    where: PkPlayerStatsViewFilterInput @cost(weight: "10")
+    order: [PkPlayerStatsViewSortInput!] @cost(weight: "10")
+  ): PkPlayerStatsViewConnection
+    @listSize(
+      assumedSize: 100
+      slicingArguments: ["first", "last"]
+      slicingArgumentDefaultValue: 20
+      sizedFields: ["edges", "nodes"]
+      requireOneSlicingArgument: false
+    )
+    @cost(weight: "10")
+  PkPlayerStatsView_aggregate(
+    where: PkPlayerStatsViewFilterInput @cost(weight: "10")
+  ): PkPlayerStatsViewAggregate @cost(weight: "10")
 }
 
 """
@@ -124,6 +157,12 @@ type Mutation {
   changePasswordSecure(input: ChangePasswordSecureInput): RegisterResult
     @cost(weight: "10")
   removeMember(request: RemoveMemberReqDtoInput): RemoveMemberResDto
+    @cost(weight: "10")
+  createModel(request: CreateAiModelConfigReqDtoInput): CreateAiModelConfigResDto
+    @cost(weight: "10")
+  updateModel(request: UpdateAiModelConfigReqDtoInput): UpdateAiModelConfigResDto
+    @cost(weight: "10")
+  deleteModel(request: DeleteAiModelConfigReqDtoInput): DeleteAiModelConfigResDto
     @cost(weight: "10")
 }
 
@@ -151,6 +190,35 @@ type ActivateMemberResDto {
   role: String!
   "GroupMembers Id"
   memberId: Long!
+}
+
+"AI 模型配置（统一 AI 网关路由表） 的手写 DTO 扩展"
+type AiModelConfigDto {
+  isFromPersistentSource: Boolean!
+  "自增主键"
+  id: Long!
+  "外部业务键（uuid，API/DTO 暴露）"
+  uId: String!
+  "配置名（≤64）"
+  name: String!
+  "供应商（OpenAiCompatible）"
+  provider: AiProvider!
+  "在线 API BaseUrl（如 https://api.openai.com/v1）"
+  baseUrl: String!
+  "模型名（如 gpt-4o-mini）"
+  modelName: String!
+  "是否启用（默认 true）"
+  enabled: Boolean!
+  "轮询顺序（升序优先，默认 0）"
+  sortOrder: Int!
+  "请求超时秒数（默认 30）"
+  timeoutSeconds: Int!
+  "备注（可空）"
+  remark: String
+  "创建时间"
+  createTime: DateTime!
+  "更新时间"
+  updateTime: DateTime!
 }
 
 "题库卡片项 DTO（复用 BanksDto + 计数壳）"
@@ -249,6 +317,16 @@ type ChildItemDto {
   className: String!
   "是否有订阅"
   hasSubscription: Boolean!
+}
+
+"新增模型配置响应 DTO（回显 UId，不含 ApiKey）"
+type CreateAiModelConfigResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "新建配置业务键"
+  uId: String!
 }
 
 "创建题库响应 DTO"
@@ -356,6 +434,34 @@ type DashboardTaskDto {
   status: String!
 }
 
+"删除模型配置响应 DTO"
+type DeleteAiModelConfigResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "是否已删除"
+  removed: Boolean!
+}
+
+"草稿条目 DTO（外层壳 + 内嵌条目）"
+type DraftItemDto {
+  "草稿题目业务键"
+  questionId: String!
+  "题干"
+  stem: String!
+  "答案"
+  answer: String!
+  "学科"
+  subject: String!
+  "知识点"
+  knowledgePoint: String!
+  "关键词候选"
+  keywords: [String!]!
+  "是否已校验"
+  reviewed: Boolean!
+}
+
 "导出 CSV 响应 DTO"
 type ExportRosterCsvResDto {
   "是否成功"
@@ -368,6 +474,36 @@ type ExportRosterCsvResDto {
   expiresAt: DateTime
   "CSV 列名"
   columns: [String!]!
+}
+
+"周报导出响应 DTO"
+type ExportWeeklyReportResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "周起始日"
+  weekStart: LocalDate!
+  "周结束日（WeekStart+6）"
+  weekEnd: LocalDate!
+  "周窗口内任务数"
+  taskCount: Int!
+  "群组 Student 成员数"
+  memberCount: Int!
+  "周窗口内全部分配数（分母含 Overdue）"
+  totalAssignments: Int!
+  "其中已完成分配数"
+  completedCount: Int!
+  "执行率（Completed / TotalAssignments，Total=0 → 0）"
+  executionRate: Float!
+  "平均进度（周内全部分配 Progress 均值，int）"
+  avgProgress: Int!
+  "学习量（周内 DailyStats.LearnedCount 求和）"
+  learnedCount: Int!
+  "成员汇总明细（BR-25：不含正确率/答题明细）"
+  memberReports: [WeeklyMemberReportDto!]!
+  "CSV 下载链接（mock OSS，周报即时生成不落库）"
+  csvFileUrl: String
 }
 
 "扩展字段条目（替代 Dictionary，兼容 GraphQL schema）。"
@@ -434,6 +570,20 @@ type GetDashboardReportResDto {
   subjectsMastery: [SubjectMasteryDto!]!
   "未订阅标记（完整内容锁定）"
   locked: Boolean!
+}
+
+"草稿批次查询响应 DTO"
+type GetDraftBatchResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "草稿批次 ID"
+  batchId: String!
+  "所属题库业务键"
+  bankId: String!
+  "草稿条目列表"
+  items: [DraftItemDto!]!
 }
 
 "热力图响应 DTO"
@@ -692,6 +842,8 @@ type GroupDetailResDto {
 type GroupListItemDto {
   "群组 Id"
   groupId: Long!
+  "群组外部键（Uid，任务/看板等跨服务引用用）"
+  groupUid: String!
   "群组名称"
   name: String!
   "学科"
@@ -760,6 +912,18 @@ type JoinPkMatchResDto {
   questionCount: Int!
   "每题时长（秒）"
   perQuestionTimeS: Int!
+}
+
+"模型配置分页列表响应 DTO（不含 ApiKey——平台-BR-19）"
+type ListAiModelConfigResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "模型配置列表（复用 AiModelConfigDto，天然不含 ApiKey）"
+  items: [AiModelConfigDto!]!
+  "总条数"
+  total: Int!
 }
 
 "题库列表响应 DTO"
@@ -918,6 +1082,18 @@ type MyTaskItemDto {
   ownerName: String!
 }
 
+"Information about pagination in a connection."
+type PageInfo {
+  "Indicates whether more edges exist following the set defined by the clients arguments."
+  hasNextPage: Boolean!
+  "Indicates whether more edges exist prior the set defined by the clients arguments."
+  hasPreviousPage: Boolean!
+  "When paginating backwards, the cursor to continue."
+  startCursor: String
+  "When paginating forwards, the cursor to continue."
+  endCursor: String
+}
+
 "薄弱点 DTO（Parent 版——重命名消 GraphQL 跨域同名冲突；含学科/状态文案，与共享版形状不同）"
 type ParentWeakPointDto {
   "学科"
@@ -942,6 +1118,115 @@ type PkPlayerResultDto {
   totalTimeMs: Int!
   "AI 趣味点评（失败兜底文案）"
   aiComment: String!
+}
+
+"PK 战绩视图（每用户一行：Finished 对局聚合）"
+type PkPlayerStatsView {
+  toDto: PkPlayerStatsViewDto!
+  isFromPersistentSource: Boolean!
+  "业务唯一键（UserId 透传，稳定）"
+  id: Long!
+  "用户 Id（分组键 + RLS 过滤）"
+  userId: Long!
+  "总场次（仅 Finished 计入）"
+  totalMatches: Long!
+  "胜场"
+  wins: Long!
+  "平局场次"
+  draws: Long!
+  "累计分（Finished 对局 Score 之和）"
+  totalScore: Long!
+}
+
+type PkPlayerStatsViewAggregate {
+  count: Int!
+  sum: PkPlayerStatsViewSumFields
+  avg: PkPlayerStatsViewAvgFields
+  min: PkPlayerStatsViewMinFields
+  max: PkPlayerStatsViewMaxFields
+}
+
+type PkPlayerStatsViewAvgFields {
+  id: Decimal
+  userId: Decimal
+  totalMatches: Decimal
+  wins: Decimal
+  draws: Decimal
+  totalScore: Decimal
+}
+
+"A connection to a list of items."
+type PkPlayerStatsViewConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [PkPlayerStatsViewEdge!]
+  "A flattened list of the nodes."
+  nodes: [PkPlayerStatsView]
+  "Identifies the total count of items in the connection."
+  totalCount: Int! @cost(weight: "10")
+}
+
+"PK 战绩视图（每用户一行：Finished 对局聚合） 的手写 DTO 扩展"
+type PkPlayerStatsViewDto {
+  isFromPersistentSource: Boolean!
+  "业务唯一键（UserId 透传，稳定）"
+  id: Long!
+  "用户 Id（分组键 + RLS 过滤）"
+  userId: Long!
+  "总场次（仅 Finished 计入）"
+  totalMatches: Long!
+  "胜场"
+  wins: Long!
+  "平局场次"
+  draws: Long!
+  "累计分（Finished 对局 Score 之和）"
+  totalScore: Long!
+}
+
+"An edge in a connection."
+type PkPlayerStatsViewEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: PkPlayerStatsView
+}
+
+type PkPlayerStatsViewMaxFields {
+  id: Decimal
+  userId: Decimal
+  totalMatches: Decimal
+  wins: Decimal
+  draws: Decimal
+  totalScore: Decimal
+}
+
+type PkPlayerStatsViewMinFields {
+  id: Decimal
+  userId: Decimal
+  totalMatches: Decimal
+  wins: Decimal
+  draws: Decimal
+  totalScore: Decimal
+}
+
+type PkPlayerStatsViewSumFields {
+  id: Decimal
+  userId: Decimal
+  totalMatches: Decimal
+  wins: Decimal
+  draws: Decimal
+  totalScore: Decimal
+}
+
+"预处理触发响应 DTO"
+type PreprocessContentResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "草稿批次 ID（供人工校验）"
+  batchId: String
 }
 
 "题目索引表（API 查询索引） 的手写 DTO 扩展"
@@ -1086,6 +1371,18 @@ type RosterPreviewResDto {
   invalidCount: Int!
   "脱敏手机号列表（前缀 + 后四位）"
   preview: [String!]!
+}
+
+"启停模型配置响应 DTO"
+type SetEnabledResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "目标配置业务键"
+  uId: String!
+  "更新后开关值"
+  enabled: Boolean!
 }
 
 "设置排名开关响应 DTO"
@@ -1296,6 +1593,16 @@ type TopicNodeDto {
   questionIds: [String!]!
 }
 
+"更新模型配置响应 DTO（不含 ApiKey）"
+type UpdateAiModelConfigResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "更新配置业务键"
+  uId: String!
+}
+
 "相对进步 DTO"
 type VsLastWeekDto {
   "多背 N 篇（本周−上周）"
@@ -1310,6 +1617,20 @@ type WeakPointDto {
   knowledgePoint: String!
   "聚合正确率"
   accuracy: Float!
+}
+
+"周报成员汇总 DTO"
+type WeeklyMemberReportDto {
+  "成员用户 Id"
+  userId: Long!
+  "群内昵称"
+  nickname: String
+  "该成员周内执行率（完成分配数/全部分配数）"
+  executionRate: Float!
+  "该成员周内平均进度"
+  avgProgress: Int!
+  "该成员周内学习量（DailyStats 求和）"
+  learnedCount: Int!
 }
 
 "本周进度 DTO"
@@ -1365,6 +1686,11 @@ input ActivateMemberReqDtoInput {
   phoneLast4: String!
 }
 
+input BooleanOperationFilterInput {
+  eq: Boolean @cost(weight: "10")
+  neq: Boolean @cost(weight: "10")
+}
+
 "取消续费请求 DTO"
 input CancelSubscriptionReqDtoInput {
   "订阅外部键"
@@ -1377,6 +1703,28 @@ input ChangePasswordSecureInput {
   challengeToken: String!
   newClientHash: String!
   newSalt: String!
+}
+
+"新增模型配置请求 DTO"
+input CreateAiModelConfigReqDtoInput {
+  "配置名（≤64）"
+  name: String!
+  "供应商（默认 OpenAiCompatible）"
+  provider: String!
+  "在线 API BaseUrl（如 https://api.openai.com/v1）"
+  baseUrl: String!
+  "API Key（敏感：仅入库，不回显）"
+  apiKey: String!
+  "模型名"
+  modelName: String!
+  "是否启用（默认 true）"
+  enabled: Boolean!
+  "轮询顺序（升序优先，默认 0）"
+  sortOrder: Int!
+  "请求超时秒数（默认 30）"
+  timeoutSeconds: Int!
+  "备注（可空）"
+  remark: String
 }
 
 "创建题库请求 DTO"
@@ -1463,12 +1811,26 @@ input CreateTaskReqDtoInput {
   deadlineAt: DateTime
 }
 
+"删除模型配置请求 DTO"
+input DeleteAiModelConfigReqDtoInput {
+  "目标配置业务键"
+  uId: String!
+}
+
 "导出 CSV 请求 DTO"
 input ExportRosterCsvReqDtoInput {
   "群组 Id"
   groupId: Long!
   "批次 Id"
   importId: Long!
+}
+
+"周报导出请求 DTO"
+input ExportWeeklyReportReqDtoInput {
+  "群组外部键"
+  groupUid: String!
+  "周起始日（UTC+8 业务日期；为空默认本周一）"
+  weekStart: LocalDate
 }
 
 "生成一次性邀请码请求 DTO"
@@ -1503,6 +1865,12 @@ input GetBuddyRankReqDtoInput {
 input GetDashboardReportReqDtoInput {
   "孩子 Id"
   studentId: Long!
+}
+
+"草稿批次查询请求 DTO"
+input GetDraftBatchReqDtoInput {
+  "草稿批次 ID"
+  batchId: String!
 }
 
 "热力图请求 DTO"
@@ -1689,6 +2057,16 @@ input JoinPkMatchReqDtoInput {
   inviteCode: String!
 }
 
+"模型配置分页列表请求 DTO"
+input ListAiModelConfigReqDtoInput {
+  "配置名筛选（模糊）"
+  name: String
+  "页码（默认 1）"
+  pageIndex: Int!
+  "每页数（默认 20）"
+  pageSize: Int!
+}
+
 "题库列表请求 DTO"
 input ListBanksReqDtoInput {
   "学科筛选"
@@ -1735,6 +2113,67 @@ input LoginContextInput {
   authType: EnumLoginAuthType!
   authInfo: String
   deviceId: String
+}
+
+input LongOperationFilterInput {
+  eq: Long @cost(weight: "10")
+  neq: Long @cost(weight: "10")
+  in: [Long] @cost(weight: "10")
+  nin: [Long] @cost(weight: "10")
+  gt: Long @cost(weight: "10")
+  ngt: Long @cost(weight: "10")
+  gte: Long @cost(weight: "10")
+  ngte: Long @cost(weight: "10")
+  lt: Long @cost(weight: "10")
+  nlt: Long @cost(weight: "10")
+  lte: Long @cost(weight: "10")
+  nlte: Long @cost(weight: "10")
+}
+
+"PK 战绩视图（每用户一行：Finished 对局聚合）"
+input PkPlayerStatsViewFilterInput {
+  and: [PkPlayerStatsViewFilterInput!]
+  or: [PkPlayerStatsViewFilterInput!]
+  isFromPersistentSource: BooleanOperationFilterInput
+  "业务唯一键（UserId 透传，稳定）"
+  id: LongOperationFilterInput
+  "用户 Id（分组键 + RLS 过滤）"
+  userId: LongOperationFilterInput
+  "总场次（仅 Finished 计入）"
+  totalMatches: LongOperationFilterInput
+  "胜场"
+  wins: LongOperationFilterInput
+  "平局场次"
+  draws: LongOperationFilterInput
+  "累计分（Finished 对局 Score 之和）"
+  totalScore: LongOperationFilterInput
+}
+
+"PK 战绩视图（每用户一行：Finished 对局聚合）"
+input PkPlayerStatsViewSortInput {
+  isFromPersistentSource: SortEnumType @cost(weight: "10")
+  "业务唯一键（UserId 透传，稳定）"
+  id: SortEnumType @cost(weight: "10")
+  "用户 Id（分组键 + RLS 过滤）"
+  userId: SortEnumType @cost(weight: "10")
+  "总场次（仅 Finished 计入）"
+  totalMatches: SortEnumType @cost(weight: "10")
+  "胜场"
+  wins: SortEnumType @cost(weight: "10")
+  "平局场次"
+  draws: SortEnumType @cost(weight: "10")
+  "累计分（Finished 对局 Score 之和）"
+  totalScore: SortEnumType @cost(weight: "10")
+}
+
+"预处理触发请求 DTO"
+input PreprocessContentReqDtoInput {
+  "题库业务键"
+  bankId: String!
+  "文件名（用于格式预检，PDF/Word/txt）"
+  fileName: String
+  "资料文本内容（≤10M）"
+  content: String!
 }
 
 "安全注册请求。"
@@ -1786,6 +2225,14 @@ input ReviewItemInputDtoInput {
   editedAnswer: String
 }
 
+"启停模型配置请求 DTO"
+input SetEnabledReqDtoInput {
+  "目标配置业务键"
+  uId: String!
+  "开关值"
+  enabled: Boolean!
+}
+
 "设置排名开关请求 DTO"
 input SetRankEnabledReqDtoInput {
   "群组 Id"
@@ -1832,6 +2279,36 @@ input SubmitPkAnswerReqDtoInput {
   userAnswer: String!
   "答题用时（毫秒，客户端上送）"
   timeCostMs: Int!
+}
+
+"更新模型配置请求 DTO（空值 = 保留原值；ApiKey 空 = 不改）"
+input UpdateAiModelConfigReqDtoInput {
+  "目标配置业务键"
+  uId: String!
+  "配置名（可空 = 不改）"
+  name: String
+  "供应商（可空 = 不改）"
+  provider: String
+  "在线 API BaseUrl（可空 = 不改）"
+  baseUrl: String
+  "API Key（空 = 不改）"
+  apiKey: String
+  "模型名（可空 = 不改）"
+  modelName: String
+  "是否启用（null = 不改）"
+  enabled: Boolean
+  "轮询顺序（null = 不改）"
+  sortOrder: Int
+  "请求超时秒数（null 或 ≤0 = 不改）"
+  timeoutSeconds: Int
+  "备注（null = 不改；空串 = 清空）"
+  remark: String
+}
+
+"AI 模型供应商"
+enum AiProvider {
+  "OpenAI 兼容协议（OpenAI/DeepSeek/通义等 /v1/chat/completions）"
+  OPEN_AI_COMPATIBLE
 }
 
 "Defines when a policy shall be executed."
@@ -2005,6 +2482,11 @@ enum RankScopeType {
   GRADE
 }
 
+enum SortEnumType {
+  ASC
+  DESC
+}
+
 "学科"
 enum Subject {
   "语文（官方冷启动）"
@@ -2090,3 +2572,17 @@ directive @cost(
   | ARGUMENT_DEFINITION
   | ENUM
   | INPUT_FIELD_DEFINITION
+
+"The purpose of the `@listSize` directive is to either inform the static analysis about the size of returned lists (if that information is statically available), or to point the analysis to where to find that information."
+directive @listSize(
+  "The `assumedSize` argument can be used to statically define the maximum length of a list returned by a field."
+  assumedSize: Int
+  "The `slicingArguments` argument can be used to define which of the field's arguments with numeric type are slicing arguments, so that their value determines the size of the list returned by that field. It may specify a list of multiple slicing arguments."
+  slicingArguments: [String!]
+  "The `slicingArgumentDefaultValue` argument can be used to define a default value for a slicing argument, which is used if the argument is not present in a query."
+  slicingArgumentDefaultValue: Int
+  "The `sizedFields` argument can be used to define that the value of the `assumedSize` argument or of a slicing argument does not affect the size of a list returned by a field itself, but that of a list returned by one of its sub-fields."
+  sizedFields: [String!]
+  "The `requireOneSlicingArgument` argument can be used to inform the static analysis that it should expect that exactly one of the defined slicing arguments is present in a query. If that is not the case (i.e., if none or multiple slicing arguments are present), the static analysis may throw an error."
+  requireOneSlicingArgument: Boolean = true
+) on FIELD_DEFINITION

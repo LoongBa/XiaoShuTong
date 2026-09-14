@@ -186,6 +186,46 @@
 ### 2026-09-07 — [Decision] — 示例条目
 -->
 
+### 2026-09-13 — [Rule] — GetDashboardReportService 周起点统一周一（修正周日退化）
+
+**涉及模块**：`GetDashboardReportService`（weekStart 计算）
+
+**上下文**：周日（DayOfWeek=0）时原公式 `today.AddDays(-(int)today.DayOfWeek)` 退化为 today，周六数据被排除在"本周"窗口外——09-13 周日实测评测 WeekProgress=5 而非 8。
+
+**决策/修复**：周起点改 `today.AddDays(-((int)today.DayOfWeek + 6) % 7)`（周一起点：周日→-6，周一→0，周六→-5）；测试种子改"今天+昨天（跨周跳过）"动态断言，根治周一边界。
+
+**避坑指南**：周窗口计算勿用 `-(int)DayOfWeek`（周日=0 退化）；测试种子含相对日期（昨天+今天）时须考虑跨周边界，用 `hasTwoDays` 动态断言。
+
+### 2026-09-13 — [Refactor] — GetNextQuestionService 知识点过滤移内存层（G8 方言边界）
+
+**涉及模块**：`GetNextQuestionService`（KnowledgePoints.Contains 过滤）
+
+**上下文**：FreeSql SQLite provider 无法翻译 string[] `.Contains()`（PG jsonb `@>` 无对应）→ SQL logic error。框架 v4.10.16 文档明示 Tier 1.5 边界：string[] 列仅写读可用，查询需内存过滤或改查询模式。
+
+**决策/修复**：知识点过滤移内存层（先查全量 BankId+Status 再 `Where(KnowledgePoints.Contains)`）——单题库 <1000 题，量级合理；生产 PG 与 Tier 1.5 语义一致。
+
+**避坑指南**：string[]（JSONB 数组）列勿在 LINQ 表达式内 `Contains` 过滤（跨方言不可移植）——需内存过滤或改查询模式。
+
+### 2026-09-11 — [Rule] — 测试种子须显式设 UId（实体未实现 IEntityTracked 时）
+
+**涉及模块**：全部领域实体（MemoryStates/Groups/BetaInviteCodes/Subscriptions 等 21 处测试种子）
+
+**上下文**：Tier 1.5（SQLite :memory: 真实约束）迁移后 21 个测试因 `UNIQUE constraint failed: {Entity}.UId` 失败——MockDbEntityDAC 无唯一约束检查掩盖了种子缺 UId。
+
+**决策/修复**：实体未实现 `IEntityTracked`（框架不自动生成 UId），测试种子显式补 `UId = UidGenerator.NewId()`（与生产 Service 一致）。
+
+**避坑指南**：实体若声明 UId 唯一索引但未实现 IEntityTracked，所有写入（生产+测试）须显式设 UId；MockDb 无约束检查会掩盖此缺陷，切真实库（SQLite/PG）即暴露。
+
+### 2026-09-11 — [Decision] — AiModelConfigService / ExportWeeklyReportService / PreprocessContentService / GetDraftBatchService 新增
+
+**涉及模块**：`AiModelConfigService`（平台域 AI 网关配置，5 方法）+ `ExportWeeklyReportService`（任务域周报导出）+ `PreprocessContentService`/`GetDraftBatchService`（题库域 AI 预处理）+ `LlmGateway`（内部网关）
+
+**上下文**：F12 AI 预处理工具链 + 统一 AI 网关 + F9 周报导出按迭代推进落地。
+
+**决策/修复**：全部走 SG 特性注册（[GenerateController] + DomainServiceBase），LlmGateway 为内部服务（无控制器，仅本域调用）。前端 ts-client 经 09-14 buildSchema.ps1 全链路刷新收录（69 ops / 63 services）。
+
+**避坑指南**：新增 Service 后须执行 `buildSchema.ps1` 刷新前端生成物（GraphQL_Api.md + ts-client.g.ts + ts-client.mock.g.ts + MOCK_SPEC §1）——否则消费端契约落后后端。
+
 ---
 
 > **Agent 注意**：请在此记录你对复杂业务逻辑的理解补丁，或在修改代码后手动同步你的"避坑指南"。

@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-09 23:06:01
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-14 08:13:25
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -16,15 +16,16 @@
 | group_Execute | 1 | 0 | 1 | 0 |
 | groups_Execute | 1 | 0 | 1 | 0 |
 | member | 0 | 1 | 1 | 0 |
+| model | 1 | 3 | 4 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 40 | 1 | 41 | 0 |
+| other | 46 | 1 | 47 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **54** | **5** | **59** | **0** |
+| **合计** | **61** | **8** | **69** | **0** |
 
 ## 二、按域操作清单
 
@@ -96,6 +97,23 @@
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `removed`: boolean | | | | | |
+| model | `listModels` | Query |  | { request?: ListAiModelConfigReqDtoInput | null } | `ListAiModelConfigResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `items`: `AiModelConfigDto` | | | | | |
+| | ⤷ `total`: number | | | | | |
+| model | `createModel` | Mutation |  | { request?: CreateAiModelConfigReqDtoInput | null } | `CreateAiModelConfigResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `uId`: string | | | | | |
+| model | `updateModel` | Mutation |  | { request?: UpdateAiModelConfigReqDtoInput | null } | `UpdateAiModelConfigResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `uId`: string | | | | | |
+| model | `deleteModel` | Mutation |  | { request?: DeleteAiModelConfigReqDtoInput | null } | `DeleteAiModelConfigResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `removed`: boolean | | | | | |
 | myTasks_Execute | `listMyTasks_Execute` | Query |  | { request?: ListMyTasksReqDtoInput | null } | `ListMyTasksResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -113,6 +131,12 @@
 | | ⤷ `bank`: `BanksDto` | | | | | |
 | | ⤷ `topics`: `TopicNodeDto` | | | | | |
 | | ⤷ `previewQuestions`: `QuestionsDto` | | | | | |
+| other | `draftBatch_Execute` | Query |  | { request?: GetDraftBatchReqDtoInput | null } | `GetDraftBatchResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `batchId`: string | | | | | |
+| | ⤷ `bankId`: string | | | | | |
+| | ⤷ `items`: `DraftItemDto` | | | | | |
 | other | `knowledgeCard_Execute` | Query |  | { request?: GetKnowledgeCardReqDtoInput | null } | `GetKnowledgeCardResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -124,6 +148,10 @@
 | | ⤷ `imported`: number | | | | | |
 | | ⤷ `failed`: number | | | | | |
 | | ⤷ `failures`: string[] | | | | | |
+| other | `preprocessContent_Execute` | Query |  | { request?: PreprocessContentReqDtoInput | null } | `PreprocessContentResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `batchId`: string | null | | | | | |
 | other | `reviewBackingPoints_Execute` | Query |  | { request?: ReviewBackingPointsReqDtoInput | null } | `ReviewBackingPointsResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -294,6 +322,11 @@
 | | ⤷ `result`: string | | | | | |
 | | ⤷ `confidence`: number | null | | | | | |
 | | ⤷ `score`: number | | | | | |
+| other | `setEnabled` | Query |  | { request?: SetEnabledReqDtoInput | null } | `SetEnabledResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `uId`: string | | | | | |
+| | ⤷ `enabled`: boolean | | | | | |
 | other | `myRanking_Execute` | Query |  | { request?: GetMyRankingReqDtoInput | null } | `GetMyRankingResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -324,6 +357,20 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `currentStreak`: number | | | | | |
 | | ⤷ `longestStreak`: number | | | | | |
+| other | `exportWeeklyReport_Execute` | Query |  | { request?: ExportWeeklyReportReqDtoInput | null } | `ExportWeeklyReportResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `weekStart`: string | | | | | |
+| | ⤷ `weekEnd`: string | | | | | |
+| | ⤷ `taskCount`: number | | | | | |
+| | ⤷ `memberCount`: number | | | | | |
+| | ⤷ `totalAssignments`: number | | | | | |
+| | ⤷ `completedCount`: number | | | | | |
+| | ⤷ `executionRate`: number | | | | | |
+| | ⤷ `avgProgress`: number | | | | | |
+| | ⤷ `learnedCount`: number | | | | | |
+| | ⤷ `memberReports`: `WeeklyMemberReportDto` | | | | | |
+| | ⤷ `csvFileUrl`: string | null | | | | | |
 | other | `ownerDashboard_Execute` | Query |  | { request?: GetOwnerDashboardReqDtoInput | null } | `GetOwnerDashboardResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -337,6 +384,17 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `task`: `TasksDto` | | | | | |
 | | ⤷ `members`: `TaskAssignmentsDto` | | | | | |
+| other | `pkPlayerStatsView` | Query |  | { first?: number | null; after?: string | null; last?: number | null; before?: string | null; where?: PkPlayerStatsViewFilterInput | null; order?: PkPlayerStatsViewSortInput[] | null } | `PkPlayerStatsViewConnection` | ✅ |
+| | ⤷ `pageInfo`: `PageInfo` | | | | | |
+| | ⤷ `edges`: `PkPlayerStatsViewEdge` | | | | | |
+| | ⤷ `nodes`: `PkPlayerStatsView` | | | | | |
+| | ⤷ `totalCount`: number | | | | | |
+| other | `PkPlayerStatsView_aggregate` | Query |  | { where?: PkPlayerStatsViewFilterInput | null } | `PkPlayerStatsViewAggregate` | ✅ |
+| | ⤷ `count`: number | | | | | |
+| | ⤷ `sum`: `PkPlayerStatsViewSumFields` | | | | | |
+| | ⤷ `avg`: `PkPlayerStatsViewAvgFields` | | | | | |
+| | ⤷ `min`: `PkPlayerStatsViewMinFields` | | | | | |
+| | ⤷ `max`: `PkPlayerStatsViewMaxFields` | | | | | |
 | other | `changePasswordSecure` | Mutation |  | { input?: ChangePasswordSecureInput | null } | `RegisterResult` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `message`: string | null | | | | | |
@@ -377,17 +435,21 @@
 | `ActivateMemberResDto` | success, errorCode, groupId, groupName, role, memberId |
 | `CancelSubscriptionResDto` | success, errorCode |
 | `ChallengeResponse` | challengeToken, salt, iterations |
+| `CreateAiModelConfigResDto` | success, errorCode, uId |
 | `CreateBankResDto` | success, errorCode, bankUid, bankId |
 | `CreateGroupResDto` | success, errorCode, groupId |
 | `CreateParentRelationResDto` | success, errorCode, relationUid |
 | `CreatePkMatchResDto` | success, errorCode, matchUid, inviteCode |
 | `CreateStudySessionResDto` | success, errorCode, sessionUid, questionCount |
 | `CreateTaskResDto` | success, errorCode, taskUid, assignedCount |
+| `DeleteAiModelConfigResDto` | success, errorCode, removed |
 | `ExportRosterCsvResDto` | success, errorCode, csvFileUrl, expiresAt, columns |
+| `ExportWeeklyReportResDto` | success, errorCode, weekStart, weekEnd, taskCount, memberCount, totalAssignments, completedCount, executionRate, avgProgress, learnedCount, memberReports → 见 \`WeeklyMemberReportDto\`, csvFileUrl |
 | `GenerateInviteCodesResDto` | success, errorCode, generatedCount |
 | `GetBankDetailResDto` | success, errorCode, bank → 见 \`BanksDto\`, topics → 见 \`TopicNodeDto\`, previewQuestions → 见 \`QuestionsDto\` |
 | `GetBuddyRankResDto` | success, errorCode, rank, metricValue, trend, snapshotDate |
 | `GetDashboardReportResDto` | success, errorCode, subscription → 见 \`SubscriptionBriefDto\`, todayCompleted, streakDays, weekProgress → 见 \`WeekProgressDto\`, subjectsMastery → 见 \`SubjectMasteryDto\`, locked |
+| `GetDraftBatchResDto` | success, errorCode, batchId, bankId, items → 见 \`DraftItemDto\` |
 | `GetHeatmapResDto` | success, errorCode, days → 见 \`DailyStatsDto\` |
 | `GetHintResDto` | success, errorCode, hint, difficultySlot, hintSource |
 | `GetKnowledgeCardResDto` | success, errorCode, cardType, content |
@@ -410,6 +472,7 @@
 | `ImportRosterResDto` | success, errorCode, importId, status, sourceCount |
 | `InviteBuddyResDto` | success, errorCode, inviteId, expiresAt |
 | `JoinPkMatchResDto` | success, errorCode, matchUid, mode, questionCount, perQuestionTimeS |
+| `ListAiModelConfigResDto` | success, errorCode, items → 见 \`AiModelConfigDto\`, total |
 | `ListBanksResDto` | success, errorCode, items → 见 \`BankListItemDto\`, total |
 | `ListBuddiesResDto` | success, errorCode, items → 见 \`BuddyListItemDto\` |
 | `ListChildrenResDto` | success, errorCode, items → 见 \`ChildItemDto\` |
@@ -418,17 +481,22 @@
 | `ListSubscriptionsResDto` | success, errorCode, items → 见 \`SubscriptionItemDto\` |
 | `ListTasksResDto` | success, errorCode, items → 见 \`TaskListItemDto\`, total |
 | `LoginPayload` | success, userName, displayName, sessionKey, accessToken, refreshToken, expiresAt, deviceId, extensions → 见 \`ExtensionEntry\` |
+| `PkPlayerStatsViewAggregate` | count, sum → 见 \`PkPlayerStatsViewSumFields\`, avg → 见 \`PkPlayerStatsViewAvgFields\`, min → 见 \`PkPlayerStatsViewMinFields\`, max → 见 \`PkPlayerStatsViewMaxFields\` |
+| `PkPlayerStatsViewConnection` | pageInfo → 见 \`PageInfo\`, edges → 见 \`PkPlayerStatsViewEdge\`, nodes → 见 \`PkPlayerStatsView\`, totalCount |
+| `PreprocessContentResDto` | success, errorCode, batchId |
 | `RegisterResult` | success, message |
 | `RejectBuddyInviteResDto` | success, errorCode |
 | `RemoveBuddyResDto` | success, errorCode |
 | `RemoveMemberResDto` | success, errorCode, removed |
 | `ReviewBackingPointsResDto` | success, errorCode, imported, skipped |
 | `RosterPreviewResDto` | success, errorCode, importId, status, sourceCount, cleanedCount, duplicateCount, invalidCount, preview |
+| `SetEnabledResDto` | success, errorCode, uId, enabled |
 | `SetRankEnabledResDto` | success, errorCode, groupId, rankEnabled |
 | `StartTrialResDto` | success, errorCode, subscriptionUid, status, trialEndAt |
 | `SubmitAttemptResDto` | success, errorCode, result, confidence, matchedKeywords, missingKeywords, hint, preState, postState, nextReviewAt |
 | `SubmitJudgmentFeedbackResDto` | success, errorCode, feedbackUid, status |
 | `SubmitPkAnswerResDto` | success, errorCode, isCorrect, result, confidence, score |
+| `UpdateAiModelConfigResDto` | success, errorCode, uId |
 
 ## 四、暴露状态与缺口
 
@@ -445,4 +513,4 @@
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| v1.0.6 | 09/09/2026 | 自动生成初版 |
+| v1.0.6 | 09/14/2026 | 自动生成初版 |

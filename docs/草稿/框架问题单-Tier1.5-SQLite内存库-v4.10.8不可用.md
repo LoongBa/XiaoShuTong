@@ -287,3 +287,29 @@ private async Task SeedBaseTablesAsync(long userId, int totalMatches, int wins, 
 ### 多连接隔离未解（F1/F2）
 
 兜底方案未解决：基表写入（连接 A）与视图查询（连接 B）不同内存库。框架侧需配合 `file:xxx?mode=memory&cache=shared` + Keeper 连接（见主文 F1/F2 建议）。
+
+---
+
+## 六、xCodeGen 活态文档生成缺陷（G9/G10，2026-09-14 审计发现）
+
+> ⚠️ 与 Tier 1.5 无关——另主题。归档至本问题单保持单一转交通道。经 `dotnet build` 触发 xCodeGen AfterBuild（v4.10.23-preview）+ 全链路同步（buildSchema.ps1 → schema.graphql → gen-ts-client → gen-mock-handlers --mock-spec）实证。
+
+### G9：DOMAIN_MAP.md 未收录 VEntity（PkPlayerStatsView）
+
+**现象**：`PkPlayerStatsView` 实体（`[DomainGenerateCode(IsView=true)]` + ViewSql + ViewSqlSQLite，手写定义与 `.g.cs` 均已存在且生成于 09-12）**未出现在 DOMAIN_MAP.md**——文档列出 24 个实体，0 个 VEntity/视图。而 `Business.md` Pk-BR-24~27 引用 `PkPlayerStats` 实体 → **文档间引用断裂**。
+
+**根因（待框架确认）**：xCodeGen `EntityMetadataGenerator` 写 DOMAIN_MAP.md 时可能仅枚举 `IsView=false` 实体，或按实体类型过滤时遗漏 VEntity（idiom：DOMAIN_MAP 表头声称"实体 vs 视图"两类，但实际仅实体行）。
+
+**影响**：活态文档缺失 VEntity——领域视图设计（Aggregation 统计）无文档映射，审计/消费端检索断层。
+
+**建议框架侧**：DOMAIN_MAP.md 生成时收录 VEntity 行（标注类型=视图），并补 PkPlayerStatsView 类回归用例。
+
+### G10：实体描述占位符泄漏——"条件工厂（V4.9）..." 写入实体描述
+
+**现象**：DOMAIN_MAP.md 24 实体中 **18 个描述字段为占位符**：`条件工厂（V4.9）。支持两种使用方式： Xxx.Conditions.ByXxx(value)...`——仅 6 个实体（AiModelConfig/Attempts/Banks/BetaInviteCodes/Questions/StudyBuddies）有真实业务描述。泄漏源为各实体 `Conditions/{Entity}Conditions.g.cs` 与 `{Entity}.g.cs` 的 XML Doc。
+
+**根因（待框架确认）**：xCodeGen 实体描述提取逻辑**取错了 Doc 源**——从 Conditions 工厂类/实体生成文件的 XML Doc 提取占位文本，而非手写实体类（`Entities/{Entity}.cs`）的 `/// <summary>` 业务描述。
+
+**影响**：18/24 实体无业务描述——活态文档价值减半；`<summary>` 真实描述被占位符遮蔽，检索/审计误导。
+
+**建议框架侧**：① 实体描述优先取手写实体类的 `/// <summary>`（非生成文件/非 Conditions 工厂 Doc）；② 无手写描述时输出空或"待补充"，而非泄漏内嵌占位文本。
