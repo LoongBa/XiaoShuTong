@@ -5,6 +5,10 @@ date: 2026-09-12
 source: XiaoShuTong Tier 1.5 迁移实测 + 框架源码审计 + FreeSql/Microsoft.Data.Sqlite 库级调研
 ---
 
+> **[归档] 全部闭环（2026-09-14）**——本问题单 G1-G8 + F1/F2 + G6/G6b + G7/G7b 全部由框架
+> v4.10.10~v4.10.21 修复并部署验证（XiaoShuTong 全套件 345/0/2 全绿）。移入归档作为历史问题档案。
+> 活跃问题单（xCodeGen 活态文档生成缺陷 G9/G10）见 `docs/草稿/框架问题单-xCodeGen活态文档生成缺陷-G9-G10.md`。
+
 # 框架问题单：Tier 1.5（SQLite :memory: 测试）不可用
 
 > **进展**：G1-G5 + F1/F2 六缺口已由框架 **v4.10.10**（提交 `eaa847ec`）修复（NonDisposableFreeSqlWrapper / 共享 scope / 双发现 / ViewSqlMetadataReader / SqliteTypeHandlerRegistrar / SqliteMemoryKeeper），Oracle PASS WITH CONDITIONS，框架实证回归 911/911。XiaoShuTong 恢复官方用法后，发现 **G6（Tier 1.5 状态不隔离）**——见下。
