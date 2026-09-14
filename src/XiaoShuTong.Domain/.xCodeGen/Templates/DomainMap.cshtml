@@ -4,7 +4,11 @@
 @model IProjectMetaContext
 @{
     var hash = Model.Configuration.CustomProperties.ContainsKey("MetadataHash") ? Model.Configuration.CustomProperties["MetadataHash"] : "N/A";
-    var entities = Model.Entities.OrderBy(m => m.SubDomain).ThenBy(m => m.ClassName).ToList();
+    // V4.10.24 (G9): 实体 + 视图合并收录（ProjectMetaContextBase.Entities 仅含 MetaType.Entity，
+    // 视图在独立的 .Views 集合——此前第一节"实体 vs 视图"表只遍历 Entities，VEntity 永远不出现；
+    // 合并后视图行由下方 isView 判断自动标"视图"。ER 图/依赖映射各自按需过滤，不受影响。）
+    var entities = Model.Entities.Concat(Model.Views)
+        .OrderBy(m => m.SubDomain).ThenBy(m => m.ClassName).ToList();
     var subDomainGroups = entities.GroupBy(e => string.IsNullOrEmpty(e.SubDomain) ? "默认" : e.SubDomain)
         .OrderBy(g => g.Key);
     var dataServiceMap = Model.AllMetadatas
@@ -133,6 +137,79 @@
 }
 
 <!-- @@xcodegen:end entity-table -->
+
+<!-- @@xcodegen:begin entity-relations -->
+
+## 二、实体关系图（mermaid ER）
+
+> **自动生成（V4.9.106）** — 从实体属性上的 `[Navigate]`（FreeSql 导航）特性提取关联，
+> 生成 mermaid `erDiagram`。仅列出**显式声明**的导航关系（未标注 Navigate 的关联不在此图）。
+> 视图（VEntity）不参与 ER 图（只读投影，非持久化实体）。
+
+```mermaid
+erDiagram
+@{
+    // V4.9.106: 实体关系图——从 [Navigate] 特性提取显式导航关系（跨实体关联可视化）
+    var relationEntities = entities.Where(e => e.Type == MetaType.Entity).ToList();
+    foreach (var entity in relationEntities)
+    {
+        // 实体节点：使用类名（mermaid 标识符需字母开头）
+        var nodeName = entity.ClassName;
+@:    @Raw(nodeName) {
+@:    }
+        // 收集该实体属性上的 [Navigate] 导航（属性名 + 特性参数）
+        foreach (var prop in entity.Properties.Where(p => p.Attributes.Any(a => a.TypeFullName != null && a.TypeFullName.Contains("NavigateAttribute"))))
+        {
+            var navAttr = prop.Attributes.First(a => a.TypeFullName != null && a.TypeFullName.Contains("NavigateAttribute"));
+            var target = "?";
+            // Navigate("目标属性") 或 Navigate(typeof(Target), ...)——从构造函数参数或属性提取
+            if (navAttr.ConstructorArguments != null && navAttr.ConstructorArguments.Count > 0)
+            {
+                var first = navAttr.ConstructorArguments.First();
+                if (first is string s) target = s;
+            }
+@:    @Raw(entity.ClassName) ||--o| @Raw(target) : "@Raw(prop.Name)"
+        }
+    }
+}
+```
+
+> **关系说明**：`[Navigate("...")]` 参数为目标属性/类型名（简写）；完整外键语义需结合数据库约束确认（D18A/ADR）。
+
+<!-- @@xcodegen:end entity-relations -->
+
+<!-- @@xcodegen:begin view-dependencies -->
+
+## 三、基表→视图依赖映射
+
+> **自动生成（V4.9.108 E1）** — 从各 VEntity 的 ViewSql 经 `ViewSqlParser.BuildBaseTableToViewMap` 提取
+> （FROM/JOIN 子句；CTE 已豁免；方言变体不重复聚合——变体经规范化后基表名与默认一致）。
+> **用途**：基表 DDL 变更时，先查此表列出受影响视图，逐一核对 ViewSql 是否需要调整（列名/类型/新增列透传）。
+> **基表名**：`NormalizeColumnName` 规范化后的裸表名（schema 前缀/引号已剥离）。
+> `(未匹配实体)` = 不在实体类名集合中（CTE 漏网 / 拼写错误 / 外部表 / 跨库表），需人工核对。
+> ⚠️ **视图间依赖也标"未匹配实体"**（V4.10.24 说明）：若 ViewA 的 ViewSql `FROM ViewB`（视图链，编译期 `TKW_SG1a_VIEW002` 已禁止且运行时兜底抛错——此场景仅存于未校验的遗留 SQL），ViewB 会被标"未匹配实体"——它确实不是实体，属语义正确标注，非文档缺陷。
+
+@{
+    // V4.9.108 (E1): 基表 → 受影响视图 反向依赖映射（反向推理，替代手填"依赖追踪"字段）
+    var entityClassNames = new HashSet<string>(Model.Entities.Select(e => e.ClassName), StringComparer.OrdinalIgnoreCase);
+    var depMap = ViewSqlParser.BuildBaseTableToViewMap(Model.Views);
+    if (depMap.Count == 0)
+    {
+@:> *无 VEntity 或全部 ViewSql 为空——无依赖映射可生成。*
+    }
+    else
+    {
+@:| 基表 | 受影响视图 |
+@:|:-----|:-----------|
+        foreach (var kv in depMap.OrderBy(k => k.Key, StringComparer.OrdinalIgnoreCase))
+        {
+            var unmatched = !entityClassNames.Contains(kv.Key) ? "　`(未匹配实体)`" : "";
+@:| `@Raw(kv.Key)`@Raw(unmatched) | @Raw(string.Join("、", kv.Value.Select(v => "`" + v + "`"))) |
+        }
+    }
+}
+
+<!-- @@xcodegen:end view-dependencies -->
 
 > **DataService 映射**（实体 ↔ DataService）参见 [`DataService_API.md`](./DataService_API.md)（搜索能力索引中含对应关系）。
 > **外部 API 契约**（GraphQL Query/Mutation、AOP 接口）参见 [`Service_API.md`](./Service_API.md)。
