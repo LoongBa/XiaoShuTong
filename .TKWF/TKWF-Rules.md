@@ -72,7 +72,7 @@ XiaoShuTong\
 │   │   ├── DOMAIN_MAP.md  DataService_API.md  Domain_Api.md
 │   │   ├── Business.md   LOG.md   AGENTS.md
 │   │   └── schema.graphql（接入层导出）
-├── build.ps1 / buildSchema.ps1 / build-quick.cmd   ← 执行工具（不进 .TKWF）
+├── buildSchema.ps1                                 ← 执行工具（API 变更后导出 schema + codegen，不进 .TKWF）
 └── {前端}\src\gql\domain-client.g.ts               ← 前端编译依赖
 ```
 

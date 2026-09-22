@@ -11,7 +11,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 
 - **TKWF 框架**：`F:\TKWF_FRAMEWORK_PATH`
 - **引用模式**：Dll（默认）/ NuGet，详见 `.TKWF/TKWF-Rules.md §1`
-- XiaoShuTong.Dev.slnx 是基于框架源码的测试项目。
+- **解决方案**：仅 `XiaoShuTong.slnx`（Dll 模式，4 项目）。（勘误：历史文档记载的 `XiaoShuTong.Dev.slnx` 源码联调方案**不存在**，如未来恢复 ProjectRef/源码联调需另行决策，见 `PROJECT_STRUCTURE.md` 勘误备忘。）
 
 ## 2. 版本体系
 
@@ -35,6 +35,18 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 ### 构建纪律
 
 - **关闭编译服务器用 `dotnet build-server shutdown`**：需要停止编译服务器（VBCSCompiler/MSBuild 节点）时，使用 `dotnet build-server shutdown` 优雅关闭，**不得强杀进程**——强杀可能导致锁文件残留、增量构建缓存损坏、后续编译异常或需手工清理 obj/bin 才能恢复。
+
+### 进度同步纪律（通用）
+
+任何功能/内容迭代完成后，**检查并更新受影响的状态文档**，防止状态过期（四类文档联动，具体触发范围随迭代内容而定）：
+
+| 文档 | 触发条件 | 说明 |
+|------|---------|------|
+| `docs/变更记录.md` | 任何内容/代码/文档变更 | 增量追加条目（日期/版本/变更内容/关联 ADR），不覆盖历史 |
+| 对应 README / 状态清单 | 该子产品的进度/待办变化 | 如 `题库/各册更新情况清单.md` + `题库/README.md`（素材/复核完成四联同步）、`docs/平台管理系统-迭代计划.md`（页面建成状态） |
+| `docs/AGENTS.md` | 题库素材/复核状态、项目总览变化 | 同步"题库素材与版本状态"节及路由表 |
+| `PROJECT_STRUCTURE.md` | 目录结构变化（新增/移动项目、文件） | 活文档，结构变化必须同步，见 §8 索引 |
+| 子产品 `AGENTS.md` | 该子产品的规范/架构变化 | AdminWasm / WebH5 / tests / 题库 各自维护
 
 ## 4. Tag 纪律
 
