@@ -1,77 +1,68 @@
 # 初中七年级 英语 背诵内容测试题
-# 教材：人教PEP版 2024 修订版
+# 教材：人教PEP版 2024 修订新版（主题式单元）
 # 格式：问题###答案（# 开头为注释）
+# 说明：题材为每单元核心句型 + 语法焦点 + 主题表达，2026-09 对照教材全文重写
 
-# ===== 七年级上册 =====
+# ===== Unit 1 Animal Friends =====
+# 核心句型：询问喜好/缘由/产地
+询问"你最喜欢的动物是什么"的英文句型？###What's your favourite animal? — It's the monkey.
+询问"你为什么喜欢猴子"并回答的句型？###Why do you like monkeys? — Because they're clever and funny.
+询问"企鹅来自哪里"的句型？###Where are penguins from? — They're from Antarctica.
+用形容词描述动物（可爱/聪明/吓人）？###They're cute / clever / scary. / It looks lovely / amazing.
+描述动物能力（飞/游泳）的句型？###They can swim fast, but they can't fly like other birds.
 
-# Unit 1 My name's Gina.
-你叫什么名字？用英语怎么说？###What's your name?
-我叫...用英语怎么说？###My name is... / I'm...
-你的电话号码是多少？用英语怎么说？###What's your phone number?
-# Unit 2 This is my sister.
-这是我的...用英语怎么说？###This is my...
-这些/那些是...用英语怎么说？###These/Those are...
-那个男人/女人是谁？用英语怎么说？###Who's that man/woman?
-# Unit 3 Is this your pencil?
-这是你的铅笔吗？用英语怎么说？###Is this your pencil?
-那些是你的书吗？用英语怎么说？###Are those your books?
-# Unit 4 Where's my schoolbag?
-我的书包在哪里？用英语怎么说？###Where is my schoolbag?
-它在桌子上用英语怎么说？###It's on the desk.
-它在椅子下面用英语怎么说？###It's under the chair.
-# Unit 5 Do you have a soccer ball?
-你有足球吗？用英语怎么说？###Do you have a soccer ball?
-我们打篮球吧用英语怎么说？###Let's play basketball.
-# Unit 6 Do you like bananas?
-你喜欢香蕉吗？用英语怎么说？###Do you like bananas?
-我喜欢/不喜欢...用英语怎么说？###I like/don't like...
-# Unit 7 How much are these socks?
-这些袜子多少钱？用英语怎么说？###How much are these socks?
-这件毛衣多少钱？用英语怎么说？###How much is this sweater?
-# Unit 8 When is your birthday?
-你的生日是什么时候？用英语怎么说？###When is your birthday?
-你几岁了？用英语怎么说？###How old are you?
-# Unit 9 My favorite subject is science.
-你最喜欢的科目是什么？用英语怎么说？###What's your favorite subject?
-我最喜欢的科目是科学用英语怎么说？###My favorite subject is science.
-为什么你喜欢科学？用英语怎么说？###Why do you like science?
+# ===== Unit 2 No Rules, No Order =====
+# 核心句型：规则情态动词 + 祈使句
+用 can/can't 表达"可以/不可以做某事"？###We can drink water. / We can't eat snacks in class.
+用 must/mustn't 表达"必须/禁止"？###We must keep quiet. / We mustn't make noise.
+用 have to 表达"不得不"？###We have to turn off our mobile phones.
+用祈使句表达规则？###Walk in the hallway. Don't run! / Be polite and treat one another with respect.
+询问"学校里有什么规则"的句型？###What rules do we have at school?
 
-# ===== 七年级下册 =====
+# ===== Unit 3 Keep Fit =====
+# 物主代词 + 频率副词
+询问"这是你的吗"并回答的句型？###Is it yours? — No, it isn't mine. Maybe it's Yaming's.
+询问"你多久打一次（球类）"的句型？###How often do you play? — I play twice a week.
+频率副词从不/很少/有时/经常的英文？###never, seldom, sometimes, often, usually, always
+表达"你/我/他的"名词性物主代词？###mine, yours, his, hers, ours, theirs
+建议一起运动的句型？###We should all play doubles some time. / Let's keep fit together.
 
-# Unit 1 Can you play the guitar?
-你会弹吉他吗？用英语怎么说？###Can you play the guitar?
-你想加入什么俱乐部？用英语怎么说？###What club do you want to join?
-# Unit 2 What time do you go to school?
-你几点起床？用英语怎么说？###What time do you get up?
-你几点去上学？用英语怎么说？###What time do you go to school?
-# Unit 3 How do you get to school?
-你怎么去学校？用英语怎么说？###How do you get to school?
-我乘公共汽车去学校用英语怎么说？###I take the bus to school.
-# Unit 4 Don't eat in class.
-不要在教室里吃东西用英语怎么说？###Don't eat in class.
-你必须/不能...用英语怎么说？###You must/can't...
-# Unit 5 Why do you like pandas?
-你为什么喜欢熊猫？用英语怎么说？###Why do you like pandas?
-因为它们很可爱用英语怎么说？###Because they are cute.
-# Unit 6 I'm watching TV.
-你正在做什么？用英语怎么说？###What are you doing?
-我正在做作业用英语怎么说？###I'm doing homework.
-他/她正在看电视用英语怎么说？###He's/She's watching TV.
-# Unit 7 It's raining!
-天气怎么样？用英语怎么说？###How's the weather?
-正在下雨用英语怎么说？###It's raining.
-# Unit 8 Is there a post office near here?
-这附近有邮局吗？用英语怎么说？###Is there a post office near here?
-邮局在医院旁边用英语怎么说？###The post office is next to the hospital.
-# Unit 9 What does he look like?
-他/她长什么样？用英语怎么说？###What does he/she look like?
-他/她又高又瘦用英语怎么说？###He/She is tall and thin.
-# Unit 10 I'd like some noodles.
-你想要什么样的面条？用英语怎么说？###What kind of noodles would you like?
-我想要牛肉面用英语怎么说？###I'd like beef noodles.
-# Unit 11 How was your school trip?
-你的学校旅行怎么样？用英语怎么说？###How was your school trip?
-你做了什么？用英语怎么说？###What did you do?
-# Unit 12 What did you do last weekend?
-你上个周末做了什么？用英语怎么说？###What did you do last weekend?
-我去看了电影用英语怎么说？###I went to the cinema.
+# ===== Unit 4 Eat Well =====
+# 点餐 + 选择疑问句 + 可数不可数
+服务员询问"你想吃什么"的句型？###What would you like to order? / Would you like rice or noodles?
+用 would like 表达"我想要..."？###I'd like a hot tofu dish.
+选择疑问句"A 还是 B"怎么问？###Would you like chicken soup or fish soup?
+询问"有没有豆腐"的句型？###Do you have anything with tofu?
+建议点菜的句型？###How about a chicken and cabbage salad? / What about Mapo tofu?
+
+# ===== Unit 5 Here and Now =====
+# 现在进行时 + 打电话用语
+询问"你现在正在做什么"的句型？###What are you doing right now? — I'm doing my homework.
+询问"他现在在做什么"的句型？###What is he doing at the moment? — He's watching a film.
+一般疑问句"你正在做...吗"？###Are you making zongzi? — Yes, we are.
+打电话时"喂，我是..."怎么说？###Hello, this is... speaking. / It's... calling.
+请找某人接电话怎么说？###Could I speak to...? / Is... there, please? — Hold on, please.
+
+# ===== Unit 6 Rain or Shine =====
+# 天气 + 进行时
+询问"天气怎么样"的两种句型？###What's the weather like? / How's the weather?
+描述天气（下雨/晴朗/刮风/温暖）的句型？###It's raining / sunny / windy / warm / cold.
+描述温度的表达？###Today, it's about 28°C (degrees).
+问"外面的人/你正在做什么"的句型？###What are you doing now? Are you outside at the moment?
+根据天气建议活动？###When it snows, we usually stay in. / Let's go swimming when it's hot.
+
+# ===== Unit 7 A Day to Remember =====
+# 一般过去时描述难忘一天
+询问"学校旅行怎么样"的句型？###How was your school trip? — It was really interesting.
+问"你看了/做了什么"（过去）？###What did you see / do? — We went to the theatre.
+过去式的两种情况/-ed 怎么发音？###动词过去式 -ed：talked/t/、moved/d/、wanted/ɪd/
+描述过去去了哪里的句型？###We went to a factory / zoo / museum / farm last week.
+描述过去感受/评价，###Was it boring? — No, it was amazing! It was not dull.
+
+# ===== Unit 8 Once upon a Time =====
+# 讲故事的一般过去时
+开头"从前/很久以前"怎么用英文起语？###Once upon a time, there was / lived an emperor...
+问"你喜欢/听过这个故事吗"类似？###Did you like / understand the story? — Yes, I did.
+讲故事叙述过去动作（came/wanted/said/decided/cried）—Once upon a time, two brothers came and lied to the emperor. Everyone started laughing.
+询问故事内容（角色/题/结）？Who are the characters? / What happened at the end?
+用过去时描述故事情节走线，###At first they went, then they piled the clothes, finally the boy told the truth.

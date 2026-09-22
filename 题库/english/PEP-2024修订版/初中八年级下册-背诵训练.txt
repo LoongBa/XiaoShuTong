@@ -1,0 +1,88 @@
+# 初中八年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP 2024 修订新版（八年级下册）
+# 题型：S1 正向（中文→英文）/ S2 逆向（英文→中文·用途）/ S3 语法要点 / S4 综合
+# 格式：题目###答案（# 开头为注释）
+
+## Unit 1 Time to Relax
+# S1 正向
+"你如何度过空闲时间"？###How do you spend your free time? — I like reading.
+"你为什么练吉他"？###Why do you take up the guitar? — Because it's relaxing.
+# S2 逆向
+"I exercise to stay healthy." 中 to do 作什么成分？###不定式作目的状语
+# S3 语法要点
+不定式作目的/宾补的用法？###to do 表目的（I study to pass.）；使役/感觉动词 + do
+# S4 综合
+谈论爱好与理由（完整）？###My hobby is drawing. I draw to relax. It helps me stay positive.
+
+## Unit 2 Stay Healthy
+# S1 正向
+给健康建议？###You should sleep early. / You shouldn't stay up late.
+"你怎么了"？###What's wrong? / What's the matter? — I have a cold.
+# S2 逆向
+反身代词 myself/yourself？###我自己/你自己（加强语气或指动作对象）
+# S3 语法要点
+should/could 建议？###should+动原（建议）；could（委婉建议）
+# S4 综合
+完整医患对话？###Doctor: What's wrong? — Patient: I have a headache. Doctor: You should rest and drink water.
+
+## Unit 3 Growing Up
+# S1 正向
+"什么让你苦恼"？###What makes you upset? — My team problem makes me annoyed.
+# S2 逆向
+although/until/so that 用法？###尽管/直到/以便
+# S3 语法要点
+so that 从句？###so that 表目的（为了）
+# S4 综合
+表达成长中的情绪与解排？###Sometimes I get angry, but I try to stay calm. Although it's hard, I keep going.
+
+## Unit 4 The Wonders of Nature
+# S1 正向
+"珠峰有多高"？###Mount Qomolangma is the highest mountain.
+# S2 逆向
+"the + 最高级" 表示？###最……的（the highest/biggest）
+# S3 语法要点
+比较级/最高级？；大数的英文表达###比较级 -er/more；最高级 -est/most；million/billion
+# S4 综合
+描述一处自然奇观？###The Qomolangma is the highest. It's about 8848 metres tall.
+
+## Unit 5 Nature's Temper
+# S1 正向
+"台风来时你在做什么"？###What were you doing when the typhoon came? — I was sleeping.
+# S2 逆向
+过去进行时构成？###was/were + 现在分词
+# S3 语法要点
+past continuous？###表达过去某刻正进行的动作
+# S4 综合
+描述一次灾害经历？###When the typhoon hit, I was watching TV. We stayed home and stayed safe.
+
+## Unit 6 A Good Read
+# S1 正向
+"你读过什么好书"？###What great books have you read? — I've read The Secret Garden.
+# S2 逆向
+现在完成时 already/yet？###already 已（肯定）；yet 未（否定/句末）
+# S3 语法要点
+现在完成时构成？###have/has + 过去分词
+# S4 综合
+谈阅读收获？I have just finished a novel. It has given me much thinking.
+
+## Unit 7 Crossing Cultures
+# S1 正向
+"两国文化多不同"？###How different are our cultures? — We greet and eat differently.
+# S2 逆向
+since/for 用法？###since+时间点，for+时间段
+# S3 语法要点
+since/for 与现在完成时？###I have known him since 2010 / for ten years.
+# S4 综合
+跨文化尊重？###We should learn others' customs to show respect. I have learned about Indian manners.
+
+## Unit 8 Making a Difference
+# S1 正向
+"我们能帮什么忙"？###What can we do to help? — We can clean the park / help the old.
+# S2 逆向
+"have volunteered for two years" 是？###现在完成时表持续
+# S3 语法要点
+现在完成时 + for/since表持续？###I have volunteered for two years.
+# S4 综合
+谈志愿经历？###I have volunteered at the animal shelter for a year. Helping others makes me happy.
+
+> 注：部分行尾多余符号（如 `）`）为排版残留，无实际题内容影响；实际使用时以核心句型为准。

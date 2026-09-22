@@ -1,0 +1,111 @@
+# 初中七年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP版 2024 修订新版（8 主题单元）
+# 题型：# S1 正向检索（中文→英文）/ # S2 逆向检索（英文→中文/用途）/ # S3 要点默写 / # S4 综合表达
+# 格式：题目###答案（# 开头为注释）
+# 用法：✕→S1 跟读 | △→S1/S2 | ○→S2/S3 | ★→S4
+
+# ===== Unit 1 Animal Friends =====
+## Unit 1 Animal Friends
+# S1 正向检索
+询问"你最喜欢的动物是什么"？###What's your favourite animal?
+询问"你为什么喜欢企鹅"？###Why do you like penguins? — Because they're very cute.
+# S2 逆向检索
+"What's your favourite animal?" 用于什么场景？###询问对方最喜欢的动物
+"Where are penguins from?" 的回答是？###They're from Antarctica.
+# S3 要点默写
+默写用形容词描述动物的句型###It's the monkey. / They're clever/cute/funny/scary/lovely/amazing.
+默写 What/Why/Where 特殊疑问句构成？###特殊疑问词(What/Why/Where) + 一般疑问句语序
+# S4 综合默写
+默写"完整介绍一种喜欢的宠物或动物"？###What's my favourite animal? It's the elephant. They're from Africa. They eat plants. They can carry things with their trunks.
+
+# ===== Unit 2 No Rules, No Order =====
+## Unit 2 No Rules, No Order
+# S1 正向检索
+用英文表达"上课不能吃零食"？###We can't / mustn't eat snacks in class.
+用英文表达"必须上交并关掉手机"？###We have to turn them off and put them in our lockers.
+# S2 逆向检索
+"We must keep quiet." 用于什么场景？###图书馆/需保持安静的场景
+"What rules do we have at school?" 用于？###询问校规
+# S3 要点默写
+默写 5 种表达规则的句型###We must/mustn't... / We can/can't... / We have to... / Don't... / We should...
+# S4 综合默写
+默写"制定三条校规"？###We must be on time. Don't be late for class. We can't eat snacks in class. We must keep our school clean.
+
+# ===== Unit 3 Keep Fit =====
+## Unit 3 Keep Fit
+# S1 正向检索
+询问"这是你的球拍吗"？###Is this your bat? / Is it yours?
+询问运动频率"你多久打一次"？###How often do you play?
+# S2 逆向检索
+"mine, yours, his, hers, ours, theirs" 是什么？###名词性物主代词（我的/你的/他的/她的/我们的/他们的）
+"always, usually, often, sometimes, seldom, never"？###频率副词（从高频到低频）
+# S3 要点默写
+默写物主代词问句？###Is it yours/mine/his/hers? — Yes, it's mine. / No, it isn't mine.
+# S4 综合默写
+默写"谈论运动频率"？###A: How often do you play ping-pong? B: I play twice a week. I always exercise to keep fit.
+
+# ===== Unit 4 Eat Well =====
+## Unit 4 Eat Well
+# S1 正向
+询问"你想点什么菜"？###What would you like to order?
+选择问"A 米饭还是饺子"？###Would you like rice or dumplings?
+# S2 逆向检索
+"I'd like a hot tofu dish." 表达什么？###我想要一份麻婆豆腐（点餐选择句）
+"Would you like...?" 用于？###礼貌询问对方想要什么/选择问句
+# S3 要点默写
+默写点餐对话核心句型？###A: What would you like to eat? B: I'd like... A: Would you like A or B? B: ..., please.
+# S4 综合默写
+默写"餐厅点餐完整对话"？###A: Welcome! What would you like to drink? B: I'd like juice. A: How about chicken or fish? B: Fish, please.
+
+# ===== Unit 5 Here and Now =====
+## Unit 5 Here and Now
+# S1 正向
+询问"你现在正在做什么"？###What are you doing right now? — I'm doing my homework.
+打电话自报家门？###This is... speaking. / Hello, it's... calling.
+# S2 逆向检索
+"Are you making zongzi?" 回答？###Yes, we are. / No, we aren't.
+"Could I speak to...?" 用于？###电话请求找某人
+# S3 要点默写
+默写"现在进行时构成"？###主语 + be(am/is/are) + 动词-ing
+默写打电话常用语###This is...speaking. / Is... there? / Hold on, please. / Can I take a message?
+# S4 综合默写
+默写"完整现在进行时对话"？###A: What are you doing? B: I'm cooking. A: What is your brother doing? B: He's watching TV.
+
+# ===== Unit 6 Rain or Shine =====
+## Unit 6 Rain or Shine
+# S1 正向
+询问"天气怎么样"？###What's the weather like? / How's the weather?
+描述温度？###It's about 28°C today.
+# S2 逆向
+"It's raining heavily." 表达？###正在下大雨
+"What are you doing there?" 用于？###交流进行式里的活动
+# S3 要点默写
+默写天气形容词？###sunny, rainy, windy, cloudy, snowy, warm, cold, hot
+# S4 综合默写
+默写"询问并描述天气"？###A: How's the weather? B: It's sunny and warm. A: What are you doing? B: I'm swimming.
+
+# ===== Unit 7 A Day to Remember =====
+## Unit 7 A Day to Remember
+# S1 正向
+询问"学校旅行怎么样"？###How was your school trip? — It was really interesting.
+问"你看了什么（过去）"？###What did you see / do?
+# S2 逆向
+"was / were" 用法？###be动词过去式：I/He/She was...；We/They were...
+"Did" 开头疑问句（过去式一般疑问）###Did you go...? — Yes, I did. / No, I didn't.
+# S3 要点默写
+默写三种 -ed 发音？###  /t/(talked) /d/(moved) /ɪd/(wanted)
+# S4 综合默写
+默写"一般过去时描述经历"###  Last week we went to a museum. We saw many old things. It was great.
+
+# ===== Unit 8 Once upon a Time =====
+## Unit 8 Once upon a Time
+# S1 正向
+英文讲故事开头"从前"？###Once upon a time, an emperor loved clothes.
+讲述过去发生的事？###Did you like the story? — Yes, I did. / No, I didn't.
+# S2 逆向 
+"child, cried, shouted, praised" 是什么时态？###一般过去时动词（讲述故事）
+"Who are the characters?" 用于？###询问故事人物 
+# S3 要点默写
+默写讲故事的一般过去动词语链？###Once upon a time there was... one day he came... then he wanted... finally he decided...
+# S4 综合默写
+默写"复述《国王的新装》结尾"？###Did you like the story? The emperor was tricked, but a boy cried out the truth, and everyone started laughing.

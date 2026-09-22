@@ -1,0 +1,91 @@
+# 初中八年级 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP 2024 修订新版（8 主题单元）
+# 题型：S1 正向（中文→英文）/ S2 逆向（英文→中文·用途）/ S3 语法要点 / S4 综合
+# 格式：题目###答案（# 开头为注释）
+
+# ===== 八年级上册 =====
+
+## Unit 1 Happy Holiday
+# S1 正向
+询问"假期过得怎样"？###How was your holiday? — It was fantastic.
+问"你去过什么有趣的地方吗"？###Did you go anywhere interesting?
+# S2 逆向
+"You went to Yunnan with my family." 是什么时态？###一般过去时（假期经历）
+"took my breath away" 意思？###令人惊叹 / 美得让人窒息
+# S3 语法要点
+默写不定代词？###someone, anyone, everyone, nothing, something, anything, everything
+# S4 综合
+默写"分享假期经历"？###A: How was your holiday? B: It was great! I went to Yunnan. I saw the mountains and ate nice food.
+
+## Unit 2 Home Sweet Home
+# S1 正向
+请求帮忙？###Can you help me clean the room?
+"你想拖地还是擦窗"？###Would you like to mop the floor or clean the windows?
+# S2 逆向
+"Could you please...?" 用于？###礼貌请求帮助
+# S3 语法要点
+情态动词 can/could 的礼貌请求？###Could you please + 动词原形? — Sure / No problem.
+# S4 综合
+默写"为客人到来做准备"的分工？###A: Can you help me clean up for grandma's visit? B: Sure. I'd like to mop the floor. C: I'll water the plants.
+
+## Unit 3 Same or Different?
+# S1 正向
+比较两个人？###She is funnier than me. / He is taller than I.
+# S2 逆向
+"as...as" 表示什么？###"和……一样"（as tall as）
+# S3 语法要点
+形容词比较级构成？###单音节 -er；多音节 more + adj.（taller, more interesting）
+# S4 综合
+默写"比较双胞胎差异"？###A: How are you different? B: I'm taller than my sister, but she is nicer than me.
+
+## Unit 4 Amazing Plants and Animals
+# S1 正向
+描述竹子？###Bamboo grows very fast and is used for many things.
+问"什么让生物奇妙"？###What makes plants and animals amazing?
+# S2 逆向
+"is used for" 表示？###被用来做某事（被动语态）
+# S3 语法要点
+一般现在时 + 被动结构？###主 + am/is/are + 过去分词（is used, is made）
+# S4 综合
+描述一种动物？###The elephant is huge and strong. It is friendly to people and is used to carry things.
+
+## Unit 5 What a Delicious Meal
+# S1 正向
+问"怎么做"？###How do you make it? — First boil the noodles...
+用顺序词？###First, Then, Next, After that, Finally
+# S2 逆向
+"first → finally" 是什么？###顺序副词（过程描述）
+# S3 语法要点
+叙述过程的顺序副词？###（叙述流程与动作的顺序连贯）
+# S4 综合
+描述一道菜的做法？###First I boil the noodles. Then I add the sauce and vegetables. Finally I serve.
+
+## Unit 6 Plan for Yourself
+# S1 正向
+谈未来理想？###I would like to be an engineer in the future.
+# S2 综合
+"want to be / would like to be" 区别？###想要成为（将来）
+# S3 语法要点
+would like to do / be going to？###would like 表意愿；be going to 表计划
+# S4 综合
+为未来做计划？###My plan is to exercise every day. I would like to be healthy and strong.
+
+## Unit 7 When Tomorrow Comes
+# S1 正向
+预测未来 will？###In the future, robots will help us do housework.
+# S2 逆向
+"will" 后接什么？###动词原形
+# S3 语法要点
+一般将来时 will+动词原形？###主语 + will + 动词原形（won't 否定）
+# S4 综合
+谈论 20 年后的生活？###In 20 years, I will live in a bigger city. Maybe I will have a robot.
+
+## Unit 8 Let's Communicate
+# S1 正向
+提建议 Let's / should？###We should listen carefully. / You'd better speak clearly.
+# S2 逆向
+"Would you like...?" 用于？###礼貌邀请
+# S3 语法要点
+建议、邀请的句型？###Let's..., Shall we...?, Would you like...?
+# S4 综合
+礼貌邀请与接受？###A: Would you like to have dinner with us? B: Yes, I'd love to. / Thank you!

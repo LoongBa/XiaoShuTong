@@ -1,0 +1,45 @@
+# 初中九年级 英语 背诵内容测试题
+# 教材：人教PEP 2024 修订新版（九年级上册）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 九年级上册 =====
+
+# Unit 1 The Changing World（变化的世界）
+用现在完成时谈变化？###What changes have taken place? — My hometown has changed a lot in the last 10 years.
+对比过去与现在？###Things were... before, but now they have become... / I used to..., but now I...
+问"什么带来了变化"？###What brings about changes? — Technology and new roads.
+
+# Unit 2 Inspiring People 激励他人
+谈论敬佩的人？###Who do you admire? — I admire the seed scientist who works hard.
+用 It is... to do 表达品质？###It is kind of him to help the farmers. / It is important for us to learn from her.
+"什么使人可敬"？What makes people admirable? — When they work hard and never give up.
+
+# Unit 3 Smart Learning 智慧学习
+宾语从句(that)？###I think (that) active learning is important.
+用 if/whether 表达不确定？###I don't know if/whether the method works.
+"如何学得更好"？How can we get better at learning? — I believe we should practice often.
+
+# Unit 4 Our Memory 我们的记忆
+用疑问词宾语从句？###Do you know what helps us remember? — I wonder why we forget things.
+谈论如何记更好？How can we improve our memory? — Repeating things helps.
+问"你记得什么"？What do we remember — 用过去时谈家庭美好回忆。
+
+# Unit 5 Power of Ideas 创意之力
+用被动语态描述物品发明？###The telephone was invented in 1876. / It is used to call people.
+问"这项发明有何用"？What is / was it used for? — It is used for recording.
+谈论发明带来的改变？What changes do inventions bring? — They have made our lives easier.
+
+# Unit 6 Beyond Earth 太空探索
+用一般将来被动语态？###A new space station will be built soon. Robots will be sent to Mars.
+问"为何探索太空"？Why do we explore space? — It will be explored for knowledge.
+谈论太空新闻？News about space exploration——中国航天现在进行时。
+
+# Unit 7 Feel the Rhythm 感受音乐
+用关系从句修饰事物？###I like music which / that is relaxing.
+描述喜欢的音乐？What do you like about music? — I enjoy songs which have good lyrics.
+"为何需要音乐"？Why do we need music? — Because music that speaks to heart helps us.
+
+# Unit 8 More than a Game 体育竞技
+谈论体育比赛？###The athletes who / that play well inspire us. / Sports Day is held every year.
+用主谓一致？ The sport events are exciting / 一支队伍 team is/was.
+"体育如何激励我们"？How does sport inspire us? — It teaches us to never give up.

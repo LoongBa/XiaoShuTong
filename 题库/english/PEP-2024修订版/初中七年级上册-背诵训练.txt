@@ -1,0 +1,128 @@
+# 初中七年级上册 英语 背诵训练题库（分阶检索法）
+# 教材：人教PEP 2024 修订新版（Starter 1-3 + Unit 1-7）
+# 题型：S1 正向（中文→英文）/ S2 逆向（英文→中文·用途）/ S3 语法要点 / S4 综合
+# 格式：题目###答案（# 开头为注释）
+
+# ===== Starter Unit 1 Welcome! =====
+## Starter Unit 1 Welcome!
+# S1 正向检索
+"早上好"用英语怎么说？###Good morning.
+询问"你叫什么名字"？###What's your name? — My name is Peter.
+# S2 逆向检索
+"How are you?" 怎么回答？###I'm fine, thank you. / I'm good.
+"Nice to meet you." 用于什么场合？###初次见面打招呼
+# S3 要点默写
+默写 be 动词三变位？###I am; He/She/It is; You/We/They are
+# S4 综合默写
+默写完整自我介绍？###Hello! My name is Peter. I'm 12 years old. I'm from China. Nice to meet you!
+
+# ===== Starter Unit 2 Keep Tidy! =====
+## Starter Unit 2 Keep Tidy!
+# S1 正向检索
+询问"书包里有什么"？###What do you have in your schoolbag?
+询问"帽子是什么颜色"？###What colour is the cap? — It's red.
+# S2 逆向检索
+"What colour ...?" 用于？###询问颜色
+"in / on / under the box" 的区别？###在盒子里 / 上 / 下
+# S3 要点默写
+默写询问颜色句型？###What colour is + 单数? — It's + 颜色. / What colour are + 复数?
+# S4 综合默写
+默写描述随身物品及位置？###I have a pencil box. My ruler is in it. The books are on the desk.
+
+# ===== Starter Unit 3 My Yard =====
+## Starter Unit 3 My Yard
+# S1 正向检索
+指着近处问"这是什么"？###What's this? — It's a rabbit.
+询问复数"这些是什么"？###What are these? — They're ducks.
+# S2 逆向检索
+"What are these/those?" 回答用什么主语？###They（复数）
+"this/that" 与 "these/those" 的区别？###近/远 + 单/复数
+# S3 要点默写
+how many 后接什么？###how many + 可数名词复数
+# S4 综合默写
+描述院子里的动物？###There are three rabbits and two ducks in the yard.
+
+# ===== Unit 1 You and Me =====
+## Unit 1 You and Me
+# S1 正向检索
+"你多大了"？###How old are you?
+用 be 动词介绍新朋友？###This is my friend Peter. He's from the US.
+# S2 逆向检索
+"What class are you in?" 回答？###I'm in Class 1.
+"Who's" 的完整形式？###Who is
+# S3 要点默写
+默写人称代词主格？###I, you, he, she, it, we, they
+# S4 综合默写
+默写认识朋友的对话？###A: Hello! How are you? B: I'm fine, thanks. A: This is my friend Peter. B: Nice to meet you, Peter!
+
+# ===== Unit 2 We're Family! =====
+## Unit 2 We're Family!
+# S1 正向检索
+介绍父母？###These are my parents.
+问"他长什么样"？###What does he look like? — He's tall and thin.
+# S2 逆向检索
+名词所有格 's 表示什么？###表示所属关系（Tom's father = 汤姆的父亲）
+# S3 要点默写
+默写询问外形容的句型？###What does he/she look like? — He/She is tall/short/thin...
+# S4 综合默写
+默写介绍家庭？###This is my family photo. My father is tall. My mother is kind. I love my family.
+
+# ===== Unit 3 My School =====
+## Unit 3 My School
+# S1 正向检索
+用 There be 表达"学校有图书馆"？###There is a library in our school.
+问"图书馆在哪里"？###Where is the library? — It's next to the office.
+# S2 逆向检索
+"in front of / behind / between"？###在...前面 / 后面 / 之间
+# S3 要点默写
+there is 与 there are 的区别？###there is + 单数；there are + 复数
+# S4 综合默写
+描述学校布局？###There are many trees around our school. The library is between the gym and the classroom.
+
+# ===== Unit 4 My Favourite Subject =====
+## Unit 4 My Favourite Subject
+# S1 正向检索
+问"你最喜欢的科目"？###What's your favourite subject? — It's English.
+问"为什么喜欢"？###Why do you like English? — Because it's interesting.
+# S2 逆向检索
+"because" 引导什么从句？###原因状语从句
+# S3 要点默写
+默写连词 and/but/because？###and(并列) but(转折) because(原因)
+# S4 综合默写
+谈论喜欢与不喜欢的科目？###I like English and art, but I don't like maths because it's difficult.
+
+# ===== Unit 5 Fun Clubs =====
+## Unit 5 Fun Clubs
+# S1 正向检索
+"你会弹吉他吗"？###Can you play the guitar? — Yes, I can.
+"我想加入音乐俱乐部"？###I'd like to join the music club.
+# S2 逆向检索
+"can" 情态动词表达什么？###能力或准许
+# S3 要点默写
+can 的用法？###can + 动词原形，否定 can't
+# S4 综合默写
+默写加入俱乐部的交流？###A: Can you swim? B: Yes, I can. I like swimming. Can I join the swimming club?
+
+# ===== Unit 6 A Day in the Life =====
+## Unit 6 A Day in the Life
+# S1 正向检索
+"你几点起床"？###What time do you get up? — I get up at seven.
+"你几点去上学"？###When do you go to school? — At eight.
+# S2 逆向检索
+at/on/in 时间介词？###at 时刻；on 星期；in 时段/月
+# S3 要点默写
+询问日常时间的句型？###What time do you + 动词原形...? / When do you...?
+# S4 综合默写
+默写一天作息？###I get up at 6:30. I go to school at 7:00. I go to bed at 9:30.
+
+# ===== Unit 7 Happy Birthday! =====
+## Unit 7 Happy Birthday!
+# S1 正向检索
+"你什么时候生日"？###When is your birthday? — It's on June 1st.
+# "你多大了"？###How old are you? — I'm 13.
+# S2 逆向检索
+"first / second / third"？###第一/第二/第三（序数词）
+# S3 要点默写
+序数词表达日期？###June 1st, May 2nd, December 25th
+# S4 综合默写
+默写庆祝生日？###A: When is your birthday? B: It's on May 5th. Let's have a birthday party!

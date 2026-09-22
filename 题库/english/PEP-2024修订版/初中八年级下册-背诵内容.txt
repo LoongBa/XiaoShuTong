@@ -1,0 +1,45 @@
+# 初中八年级 英语 背诵内容测试题
+# 教材：人教PEP 2024 修订新版（八年级下册）
+# 格式：问题###答案（# 开头为注释）
+
+# ===== 八年级下册 =====
+
+# Unit 1 Time to Relax（放松时间）
+询问"你如何度过空闲时间"？###How do you spend your free time? — I like reading / playing sports.
+谈论爱好及原因？###Taking up a hobby makes me happy. / I enjoy singing because it relaxes me.
+用不定式作目的状语？###I exercise to stay healthy. / He listens to music to relax.
+
+# Unit 2 Stay Healthy（保持健康）
+给出健康建议（should）？###You should exercise every day. / You shouldn't eat too much sugar.
+咨询病情的对话句式？###What's wrong? — I have a headache / a fever. / You should see a doctor.
+用反身代词？###He hurt himself. / Take care of yourself. / I taught myself English.
+
+# Unit 3 Growing Up（成长）
+谈论情绪与烦恼？###What makes you upset? — My problem with my team makes me angry.
+用连接词 although/until/so that？###Although it's hard, I keep trying. / He worked hard so that he could win.
+表达积极心态？###We should stay positive. / Keep calm and carry on.
+
+# Unit 4 The Wonders of Nature（大自然的奇观）
+用最高级描述自然奇观？###Mount Qomolangma is the highest mountain in the world.
+谈论地理特征与大数？###China is about 9.6 million square kilometres in area.
+问"大自然有何奇妙之处"？###What is amazing about nature? — Why do we explore nature?
+
+# Unit 5 Nature's Temper（自然之怒/自然灾害）
+用过去进行时描述灾害时在做什么？###What were you doing when the typhoon came? — I was sleeping.
+描述台风/地震经历？###The typhoon hit our city. We were at home at that time.
+防灾建议？###We should prepare for the worst. / Stay safe during a disaster.
+
+# Unit 6 A Good Read（好书）
+用现在完成时谈阅读经历？###I have already read The Secret Garden. / Have you ever read it?
+问/聊读过什么好书？###What great books have you read? — I've just finished a book about...
+推荐好书给他人？###You should read this book. It has taught me a lot.
+
+# Unit 7 Crossing Cultures（跨文化）
+谈论文化差异？###How different are our cultures? — We greet differently.
+用 since/for 谈持续状态？###I have lived here since 2000 / for ten years.
+跨文化沟通建议？###How do we respect other cultures? — We should learn about their customs.
+
+# Unit 8 Making a Difference（做出改变）
+谈论志愿者活动？###What can we do to help? — We can help the old / clean the park.
+现在完成时谈志愿服务？###I have volunteered for two years. / We have helped many people.
+"帮助他人有何不同"？###Why should we help others? — Helping others makes a better world.
