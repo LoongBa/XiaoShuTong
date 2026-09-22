@@ -15,7 +15,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 
 ## 2. 版本体系
 
-- **产品版本**：MinVer 自动管理，`git tag` 即版本确认。前缀 `v0.`（如 `v0.1.0`）。
+- **产品版本**：MinVer 自动管理，`git tag` 即版本确认。前缀 `V0.`（如 `V0.1.0`）——MinVer 前缀匹配不区分大小写，仓库 tag 惯例大写 `V`；子产品线用项目前缀（`AdminWasm-V0.x.x` / `WebH5-V0.x.x`），见 `docs/AGENTS.md` 核心规则。
 - **文档版本**：文件名中**不出现版本号**。
 
 ## 3. 迭代开发流程

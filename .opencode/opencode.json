@@ -1,6 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
-    "Agents_Use_TKWF.md"
+    "Agents_Use_TKWF.md",
+    "src/*/AGENTS.md",
+    "tests/*/AGENTS.md",
+    "题库/AGENTS.md"
   ]
 }
