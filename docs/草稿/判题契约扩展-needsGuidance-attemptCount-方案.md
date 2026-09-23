@@ -184,9 +184,10 @@ var attemptCount = prevAttempts.Count + 1;   // 含本次（幂等命中时走 B
 // 步骤 2：决策引导/兜底（状态迁移后、返回前）
 var isWrong = result is JudgmentResult.Wrong;
 var isPartial = result is JudgmentResult.Partial;
-var showAnswer = (isWrong && attemptCount >= MaxAttempts)   // 达上限
+var showAnswer = (isWrong || isPartial) && attemptCount >= MaxAttempts   // 达上限
                  || hintLevel == HintLevel.Full;             // 已看答案（对齐 BR-16）
 var needsGuidance = (isPartial || isWrong) && !showAnswer;
+// Hint = (needsGuidance || hintLevel == Partial) ? TruncateHint(question.Hint, 20) : string.Empty  — 引导分支必带线索（决策表 #2/#5）
 
 // 步骤 3：返回扩展字段
 return new SubmitAttemptResDto
@@ -299,13 +300,13 @@ v0.1 的"Judge-Encourage-Verify 三环节映射"作为**产品交互模型**分�
 
 > 按 `Agents_Use_TKWF.md §3 进度同步纪律`：本方案**实施完成后**再向 `docs/变更记录.md` 追加正式条目（含关联 ADR）；本清单为实施前登记。
 
-- [ ] **步骤 0（独立前置）**：`SubmitAttemptService` 接入 `JudgingEngineService`（替换 LocalJudgmentEngine 桩）——LLM 统一网关真正生效
-- [ ] **步骤 1**：`SubmitAttemptResDto` 新增 5 字段（§5.1）
-- [ ] **步骤 2**：`ExecuteAsync` 统计 attemptCount + 决策 needsGuidance/showAnswer（§六）
-- [ ] **步骤 3**：tkwf-test 补 8 个分支用例（§八）
-- [ ] **步骤 4**：`buildSchema.ps1` + `pnpm gen-ts-client` 刷新 ts-client.g.ts
-- [ ] **步骤 5**：WebH5 新建 `hooks/useAttemptFlow.ts` 消费新字段
-- [ ] **步骤 6**：审核报告 + 变更记录登记（走进度同步纪律）
+- [x] **步骤 0（独立前置）**：`SubmitAttemptService` 接入 `JudgingEngineService`（替换 LocalJudgmentEngine 桩）——LLM 统一网关真正生效
+- [x] **步骤 1**：`SubmitAttemptResDto` 新增 5 字段（§5.1）
+- [x] **步骤 2**：`ExecuteAsync` 统计 attemptCount + 决策 needsGuidance/showAnswer（§六）
+- [x] **步骤 3**：tkwf-test 补 8 个分支用例（§八）
+- [x] **步骤 4**：`buildSchema.ps1` + `pnpm gen-ts-client` 刷新 ts-client.g.ts
+- [x] **步骤 5**：WebH5 新建 `hooks/useAttemptFlow.ts` 消费新字段
+- [x] **步骤 6**：审核报告 + 变更记录登记（走进度同步纪律）
 
 ## 变更记录（本文件）
 

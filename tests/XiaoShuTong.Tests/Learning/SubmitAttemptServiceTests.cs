@@ -465,6 +465,70 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.Equal(2, result.MaxAttempts);
     }
 
+    /// <summary>T1：correct 无引导 → needsGuidance=false, showAnswer=false, postState 升级（BR-11 △→○）</summary>
+    [Fact]
+    public async Task ExecuteAsync_Correct_NoGuidance_StateUpgrades()
+    {
+        var userId = SetUser(42060);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42060");
+        await SeedStateAsync(userId, "Q-42060", MemoryState.Fuzzy); // BR-11 △→○ 升级路径
+
+        var result = await SubmitAsync(userId, session.UId, "Q-42060", FullAnswer()); // hintLevel 默认 None
+
+        Assert.True(result.Success);
+        Assert.Equal("Correct", result.Result);
+        Assert.False(result.NeedsGuidance);
+        Assert.False(result.ShowAnswer);
+        Assert.Equal(1, result.AttemptCount);
+        Assert.Equal(2, result.MaxAttempts);
+        Assert.Equal("Fuzzy", result.PreState);
+        Assert.Equal("Mastered", result.PostState); // 状态升级（△→○）
+    }
+
+    /// <summary>T3：partial 达上限（attemptCount≥MaxAttempts）→ needsGuidance=false, showAnswer=true（决策表 #4，防引导死循环）</summary>
+    [Fact]
+    public async Task ExecuteAsync_PartialReachesLimit_ShowAnswer()
+    {
+        var userId = SetUser(42062);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42062", keywords: FullKeywords);
+
+        // 第 1 次 partial（3/4=0.75，与 T2 同串实证）→ 引导
+        var first = await SubmitAsync(userId, session.UId, "Q-42062", "若出其中 星汉灿烂 幸甚至哉");
+        Assert.Equal("Partial", first.Result);
+        Assert.True(first.NeedsGuidance);
+        Assert.False(first.ShowAnswer);
+        Assert.Equal(1, first.AttemptCount);
+
+        // 第 2 次 partial（另一 3/4 答案，AnswerHash 不同 → 幂等放行，attemptCount=2）→ 达上限 showAnswer=true
+        var second = await SubmitAsync(userId, session.UId, "Q-42062", "若出其中 星汉灿烂 歌以咏志");
+        Assert.Equal("Partial", second.Result);
+        Assert.False(second.NeedsGuidance);
+        Assert.True(second.ShowAnswer);
+        Assert.Equal(2, second.AttemptCount);
+        Assert.Equal(2, second.MaxAttempts);
+    }
+
+    /// <summary>T4：wrong 第 1 次 → needsGuidance=true, hint 非空（决策表 #5，hintLevel=None 亦带 S1 线索，BR-29 ≤20 字）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WrongFirstAttempt_GuidanceWithHint()
+    {
+        var userId = SetUser(42064);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42064"); // Hint 默认 "首字：若"
+
+        var result = await SubmitAsync(userId, session.UId, "Q-42064", WrongAnswer); // hintLevel 默认 None
+
+        Assert.True(result.Success);
+        Assert.Equal("Wrong", result.Result);
+        Assert.True(result.NeedsGuidance);
+        Assert.False(result.ShowAnswer);
+        Assert.Equal(1, result.AttemptCount);
+        Assert.False(string.IsNullOrWhiteSpace(result.Hint)); // BR-29 引导分支必带线索（S1 首字/意象）
+        Assert.True(result.Hint.Length <= 20); // BR-29 ≤20 字
+    }
+
     /// <summary>T5：wrong 重试达上限 → showAnswer=true（防死循环，展示答案必进下一题）</summary>
     [Fact]
     public async Task ExecuteAsync_WrongRetryReachesLimit_ShowAnswer()

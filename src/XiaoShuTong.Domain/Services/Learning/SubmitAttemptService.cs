@@ -224,7 +224,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         // BR-24：TaskAssignments.Progress（跨模块，任务域切片 04）——本切片不实施
 
         // 决策：引导/兜底（方案 §六 步骤 2 + 决策表 #2-#8）
-        var showAnswer = result == JudgmentResult.Wrong && attemptCount >= MaxAttempts; // 达上限展示答案
+        var showAnswer = (result is JudgmentResult.Wrong or JudgmentResult.Partial) && attemptCount >= MaxAttempts; // 达上限展示答案（决策表 #4 partial / #8 wrong 均兜底，防引导死循环）
         var needsGuidance = (result is JudgmentResult.Partial or JudgmentResult.Wrong) && !showAnswer;
 
         // BR-25：返回迁移结果
@@ -235,7 +235,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             Confidence = confidence,
             MatchedKeywords = MatchedKeywords(request.UserAnswer, question.AnswerKeywords),
             MissingKeywords = MissingKeywords(request.UserAnswer, question.AnswerKeywords),
-            Hint = hintLevel == HintLevel.Partial ? TruncateHint(question.Hint, 20) : string.Empty,
+            Hint = (needsGuidance || hintLevel == HintLevel.Partial) ? TruncateHint(question.Hint, 20) : string.Empty, // 引导分支必带线索（决策表 #2/#5，BR-29 ≤20 字）
             PreState = preState.ToString(),
             PostState = postState.ToString(),
             NextReviewAt = nextReviewAt,
