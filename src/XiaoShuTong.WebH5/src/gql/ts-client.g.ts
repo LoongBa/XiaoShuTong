@@ -35,6 +35,7 @@ export const Query = {
   hint_Execute                    : { field: 'hint_Execute', type: 'query' } as const,
   memoryStates_Execute            : { field: 'memoryStates_Execute', type: 'query' } as const,
   reviewQueue_Execute             : { field: 'reviewQueue_Execute', type: 'query' } as const,
+  sessionQuestion_Execute         : { field: 'sessionQuestion_Execute', type: 'query' } as const,
   sessionResult_Execute           : { field: 'sessionResult_Execute', type: 'query' } as const,
   wrongQuestions_Execute          : { field: 'wrongQuestions_Execute', type: 'query' } as const,
   submitAttempt_Execute           : { field: 'submitAttempt_Execute', type: 'query' } as const,
@@ -86,7 +87,7 @@ export const Mutation = {
 export const operationSelection: Record<string, string> = {
   'acceptBuddyInvite_Execute': 'success errorCode buddyId',
   'activateMember_Execute': 'success errorCode groupId groupName role memberId',
-  'bankDetail_Execute': 'success errorCode bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topics { chapterId title subTopics questionIds } previewQuestions { isFromPersistentSource id uId questionId bankId chapterId qType content knowledgePoints difficulty status supersededBy createTime updateTime }',
+  'bankDetail_Execute': 'success errorCode bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topics { chapterId title subTopics questionIds } previewQuestions { isFromPersistentSource id uId questionId bankId chapterId qType content knowledgePoints difficulty status supersededBy createTime updateTime hint }',
   'buddyRank_Execute': 'success errorCode rank metricValue trend snapshotDate',
   'cancelSubscription_Execute': 'success errorCode',
   'changePasswordSecure': 'success message',
@@ -141,6 +142,7 @@ export const operationSelection: Record<string, string> = {
   'reviewBackingPoints_Execute': 'success errorCode imported skipped',
   'reviewQueue_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } overdueCount',
   'rosterPreview_Execute': 'success errorCode importId status sourceCount cleanedCount duplicateCount invalidCount preview',
+  'sessionQuestion_Execute': 'success errorCode questionId type content knowledgePoint knowledgeCardId',
   'sessionResult_Execute': 'success errorCode correctCount totalCount newStarCount blockedPoints { questionId knowledgePoint state }',
   'setEnabled': 'success errorCode uId enabled',
   'setRankEnabled_Execute': 'success errorCode groupId rankEnabled',
@@ -527,6 +529,23 @@ export interface GetReviewQueueReqDtoInput {
   date: string;
   pageIndex: number;
   pageSize: number;
+}
+
+export interface GetNextQuestionResDto {
+  success: boolean;
+  errorCode: string | null;
+  questionId: string;
+  type: string | null;
+  content: string;
+  knowledgePoint: string | null;
+  knowledgeCardId: string | null;
+}
+
+export interface GetSessionQuestionReqDtoInput {
+  sessionUid: string;
+  bankId: string;
+  type: string | null;
+  knowledgePoint: string | null;
 }
 
 export interface GetSessionResultResDto {
@@ -1073,6 +1092,7 @@ export interface QuestionsDto {
   supersededBy: string | null;
   createTime: string;
   updateTime: string;
+  hint: string | null;
 }
 
 export interface DraftItemDto {
@@ -1519,6 +1539,10 @@ export interface ReviewQueue_ExecuteArgs {
   request?: GetReviewQueueReqDtoInput;
 }
 
+export interface SessionQuestion_ExecuteArgs {
+  request?: GetSessionQuestionReqDtoInput;
+}
+
 export interface SessionResult_ExecuteArgs {
   request?: GetSessionResultReqDtoInput;
 }
@@ -1857,6 +1881,10 @@ export interface ReviewQueue_ExecuteService {
 
 export interface RosterPreview_ExecuteService {
   rosterPreview_Execute(args?: RosterPreview_ExecuteArgs): ChainablePromise<RosterPreviewResDto>;
+}
+
+export interface SessionQuestion_ExecuteService {
+  sessionQuestion_Execute(args?: SessionQuestion_ExecuteArgs): ChainablePromise<GetNextQuestionResDto>;
 }
 
 export interface SessionResult_ExecuteService {

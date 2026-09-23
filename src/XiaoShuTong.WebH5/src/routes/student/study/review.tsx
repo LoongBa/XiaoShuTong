@@ -40,8 +40,11 @@ function ReviewQueuePage() {
   });
   
   const handleReviewClick = (itemId: string) => {
-    // 进入复习会话
-    navigate({ to: '/student/study/task' });
+    // 进入复习会话：携带 reviewQuestionId 触发 task 页复习分支（Assess 场景）
+    navigate({
+      to: '/student/study/task',
+      search: { reviewQuestionId: itemId },
+    });
   };
   
   const totalItems = reviewItems.length;

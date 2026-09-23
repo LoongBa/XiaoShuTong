@@ -1,265 +1,407 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useAppStore } from '@/store/appStore';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { TaskProgressBar } from '@/components/TaskProgressBar';
-import { 
-  ArrowLeft, 
-  Mic, 
+import { MemoryStateBadge } from '@/components/MemoryStateBadge';
+import { useAttemptFlow } from '@/hooks/use-attempt-flow';
+import { Tkwf } from '@tkwf/tsclient';
+import type { GetNextQuestionResDto, SessionQuestion_ExecuteService, Hint_ExecuteService } from '@/gql/ts-client.g';
+import { serverStateToMemoryState } from '@/lib/memory-state';
+import {
+  ArrowLeft,
+  Mic,
   Lightbulb,
   CheckCircle2,
   XCircle,
   RotateCcw,
   ChevronRight,
-  Sparkles
+  Sparkles,
+  Loader2,
+  BookOpen
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-// 模拟题目数据
-const MOCK_QUESTIONS = [
-  {
-    id: 'q-1',
-    type: 'R2',
-    content: '"黄河远上白云间，____"',
-    hint: '这是一首描写边塞风光的诗',
-    answer: '一片孤城万仞山',
-    order: 1
-  },
-  {
-    id: 'q-2',
-    type: 'R1',
-    content: '"____，春风不度玉门关"',
-    hint: '前一句提到了柳树',
-    answer: '羌笛何须怨杨柳',
-    order: 2
-  },
-  {
-    id: 'q-3',
-    type: 'R2',
-    content: '"白日依山尽，____"',
-    hint: '描写黄河入海',
-    answer: '黄河入海流',
-    order: 3
-  },
-  {
-    id: 'q-4',
-    type: 'R1',
-    content: '"____，更上一层楼"',
-    hint: '前一句说想看更远的地方',
-    answer: '欲穷千里目',
-    order: 4
-  },
-  {
-    id: 'q-5',
-    type: 'R2',
-    content: '"床前明月光，____"',
-    hint: '地上像结了霜',
-    answer: '疑是地上霜',
-    order: 5
-  }
-];
+// 默认题库（task 未关联题库时的兜底，来源：MOCK_SPEC listBanksResDtos.bank-001）
+const DEFAULT_BANK_ID = 'bank-001';
+// 会话期望题数兜底（createStudySession 请求必需；响应 questionCount 为权威值）
+const DEFAULT_QUESTION_COUNT = 10;
 
-// 鼓励语库
-const ENCOURAGEMENTS = [
-  '全对！今天的★都被你点亮了',
-  '这句百分百原味，老师都要给你点赞',
-  '背得很顺！下次试试不看提示',
-  '提示一下就想起来了，记忆正在长出来',
-  '这题还不熟，谁都会卡，再看一眼就熟了',
-  '记得牢，才是真的会'
-];
+// 求助档位：None → Partial → Full（回填 submitAttempt.hintLevel；Full 时后端 BR-16 showAnswer 早退）
+type HintLevel = 'None' | 'Partial' | 'Full';
+
+// hintLevel → GetHint difficultySlot 映射（后端仅允许 S1/S2/S3，BR-30 状态越低提示越深）
+// None（首次求助，未掌握）→ S3 最深 / Partial（二次求助，模糊）→ S2 / Full（三次求助）→ S1 最浅
+const HINT_LEVEL_TO_DIFFICULTY_SLOT: Record<HintLevel, string> = {
+  None: 'S3',
+  Partial: 'S2',
+  Full: 'S1',
+};
+
+// 判题反馈四态（决策表 §4.2 + §4.3；hook 已降维，本组件仅渲染分支）
+type FeedbackState =
+  | { type: 'celebrate'; postState: string; matchedKeywords: string[] }
+  | { type: 'guidance'; hint: string; attemptCount: number; maxAttempts: number }
+  | { type: 'answer-sheet'; matchedKeywords: string[]; missingKeywords: string[]; postState: string }
+  | { type: 'error'; message: string }
+  | null;
+
+// 会话初始化状态（含加载失败 / 无参数空态兜底）
+type InitStatus = 'idle' | 'loading' | 'error' | 'guide' | 'ready';
 
 export const Route = createFileRoute('/student/study/task')({
+  validateSearch: (search: Record<string, unknown>): { taskId?: string; reviewQuestionId?: string } => ({
+    taskId: typeof search?.taskId === 'string' ? search.taskId : undefined,
+    reviewQuestionId: typeof search?.reviewQuestionId === 'string' ? search.reviewQuestionId : undefined,
+  }),
   component: TaskStudyPage,
 });
 
 function TaskStudyPage() {
   const navigate = useNavigate();
-  const { 
-    currentUser, 
-    isLoggedIn, 
-    currentTaskId, 
+  const search = Route.useSearch();
+  const {
+    isLoggedIn,
+    currentTaskId,
     tasks,
+    sessionUid,
+    questionCount,
     currentQuestionIndex,
-    answers,
-    submitAnswer,
+    startSession,
+    recordAnswer,
     nextQuestion,
-    completeTask
   } = useAppStore();
-  
+
+  const { submitAttempt, isSubmitting: isSubmittingAttempt, error: submitError } = useAttemptFlow();
+
   const [userAnswer, setUserAnswer] = useState('');
-  const [showHint, setShowHint] = useState(false);
-  const [feedback, setFeedback] = useState<{
-    type: 'correct' | 'wrong' | 'hint-correct';
-    message: string;
-    correctAnswer?: string;
-  } | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hintLevel, setHintLevel] = useState<HintLevel>('None');
+  const [serverHint, setServerHint] = useState<string | null>(null);
+  const [question, setQuestion] = useState<GetNextQuestionResDto | null>(null);
+  const [feedback, setFeedback] = useState<FeedbackState>(null);
   const [showNextButton, setShowNextButton] = useState(false);
+  const [initStatus, setInitStatus] = useState<InitStatus>('idle');
+  const [degradedNotice, setDegradedNotice] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  
+  const cancelledRef = useRef(false);
+  const bankIdRef = useRef<string>(DEFAULT_BANK_ID);
+  const questionStartRef = useRef<number>(Date.now());
+  const nextTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   // 检查登录状态
   useEffect(() => {
     if (!isLoggedIn) {
       navigate({ to: '/auth/login' });
     }
   }, [isLoggedIn, navigate]);
-  
-  // 获取当前任务
-  const currentTask = tasks.find(t => t.id === currentTaskId);
-  
-  // 获取当前题目
-  const currentQuestion = MOCK_QUESTIONS[currentQuestionIndex];
-  
+
+  // 任务关联（新学会话：search.taskId 优先，其次 store.currentTaskId）
+  const effectiveTaskId = search.taskId ?? currentTaskId;
+  const currentTask = tasks.find(t => t.id === effectiveTaskId);
+
+  // 会话初始化（T5）：createStudySession → sessionUid 存 store → 首次 getSessionQuestion 取第 1 题
+  // 归口为 useCallback：错误态"重试"直接复调，无需 trigger 计数器（会话重建走 BR-05 幂等）
+  const initSession = useCallback(async () => {
+    // 无参数进入（无 taskId / reviewQuestionId / currentTaskId）→ 任务选择引导（验收 B1）
+    if (!search.taskId && !search.reviewQuestionId && !currentTaskId) {
+      setInitStatus('guide');
+      return;
+    }
+    setInitStatus('loading');
+    try {
+      const isReview = Boolean(search.reviewQuestionId);
+      const bankId = currentTask?.bankId ?? DEFAULT_BANK_ID;
+      bankIdRef.current = bankId;
+      const result = await startSession(bankId, {
+        scenario: isReview ? 'Assess' : 'Memorize', // 复习=Assess、新学=Memorize
+        sessionType: 'Progressive',
+        taskId: search.taskId ? Number(search.taskId) || null : null,
+        questionCount: currentTask?.totalQuestions ?? DEFAULT_QUESTION_COUNT,
+      });
+      if (cancelledRef.current) return;
+
+      const firstQuestion = result.question;
+      // 首次取题失败（BankNotFound / Forbidden 等）→ 错误态卡片（Oracle #7 修订）
+      if (!firstQuestion.success) {
+        setInitStatus('error');
+        return;
+      }
+      // 题集耗尽（BR-18：success=true 且 questionId 为空）→ 直接结果页
+      if (!firstQuestion.questionId) {
+        navigate({ to: '/student/study/result' });
+        return;
+      }
+      setQuestion(firstQuestion);
+      questionStartRef.current = Date.now();
+      setInitStatus('ready');
+    } catch {
+      setInitStatus('error');
+    }
+  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, startSession, navigate]);
+
+  useEffect(() => {
+    void initSession();
+    return () => {
+      cancelledRef.current = true;
+      if (nextTimerRef.current) clearTimeout(nextTimerRef.current);
+    };
+  }, [initSession]);
+
   // 自动聚焦输入框
   useEffect(() => {
-    if (inputRef.current && !feedback) {
+    if (inputRef.current && !feedback && initStatus === 'ready') {
       inputRef.current.focus();
     }
-  }, [currentQuestionIndex, feedback]);
-  
-  const handleSubmit = async () => {
-    if (!userAnswer.trim() || !currentQuestion || isSubmitting) return;
-    
-    setIsSubmitting(true);
-    
-    // 模拟判题（简化版：包含关键词即算对）
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    const isCorrect = currentQuestion.answer.includes(userAnswer.trim()) || 
-                      userAnswer.trim().includes(currentQuestion.answer.slice(0, 4));
-    const usedHint = showHint;
-    
-    submitAnswer(currentQuestion.id, userAnswer.trim(), isCorrect, usedHint);
-    
-    if (isCorrect) {
-      const encouragement = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
-      setFeedback({
-        type: usedHint ? 'hint-correct' : 'correct',
-        message: usedHint ? '提示一下就想起来了，记忆正在长出来' : encouragement
+  }, [feedback, initStatus]);
+
+  // 取下一题（T6：celebrate / answer-sheet 后调用；也供错误态重试）
+  const fetchNextQuestion = async (): Promise<'ok' | 'exhausted' | 'error'> => {
+    if (!sessionUid) return 'error';
+    try {
+      const res = await Tkwf.User.Use<SessionQuestion_ExecuteService>().sessionQuestion_Execute({
+        request: { sessionUid, bankId: bankIdRef.current, type: null, knowledgePoint: null },
       });
-      
-      // 1.5秒后显示下一题按钮
-      setTimeout(() => {
-        setShowNextButton(true);
-      }, 1500);
-    } else {
-      setFeedback({
-        type: 'wrong',
-        message: '这题还不熟，谁都会卡，再看一眼就熟了',
-        correctAnswer: currentQuestion.answer
-      });
-    }
-    
-    setIsSubmitting(false);
-  };
-  
-  const handleNext = () => {
-    if (currentQuestionIndex < MOCK_QUESTIONS.length - 1) {
-      nextQuestion();
+      if (!res.success) return 'error';
+      // 题集耗尽（BR-18：success=true 无 questionId）= 会话结束信号
+      if (!res.questionId) return 'exhausted';
+      setQuestion(res);
+      nextQuestion(); // 服务端已答排除（BR-18/GetNextQuestion Callee），本地索引跟随推进
+      questionStartRef.current = Date.now();
       setUserAnswer('');
-      setShowHint(false);
+      setHintLevel('None');
+      setServerHint(null);
       setFeedback(null);
       setShowNextButton(false);
-    } else {
-      // 完成任务
-      completeTask();
-      navigate({ to: '/student/study/result' });
+      setDegradedNotice(false);
+      return 'ok';
+    } catch {
+      return 'error';
     }
   };
-  
+
+  const goNext = async () => {
+    const result = await fetchNextQuestion();
+    if (result === 'exhausted') {
+      navigate({ to: '/student/study/result' });
+    } else if (result === 'error') {
+      setFeedback({ type: 'error', message: '下一题加载失败，请重试' });
+    }
+  };
+
+  // 判题接线（T6）：useAttemptFlow 四态驱动，替换本地 includes() 判题
+  const handleSubmit = async () => {
+    if (!question || !sessionUid || isSubmittingAttempt) return;
+    const trimmed = userAnswer.trim();
+    if (!trimmed) return;
+
+    const { action, response } = await submitAttempt({
+      sessionUid,
+      questionId: question.questionId,
+      userAnswer: trimmed,
+      hintLevel,
+      timeCostMs: Math.max(0, Date.now() - questionStartRef.current),
+    });
+
+    // 原始响应透传：答案记录扩展为服务端字段（result/preState/postState/needsGuidance/...）
+    if (response) recordAnswer(question.questionId, response);
+    if (response?.isDegraded) setDegradedNotice(true);
+
+    switch (action.type) {
+      case 'celebrate':
+        setFeedback({
+          type: 'celebrate',
+          postState: response?.postState ?? '',
+          matchedKeywords: action.matchedKeywords,
+        });
+        setShowNextButton(false);
+        // 1.5s 后出"下一题"按钮（delay 归调用方，hook 已注明）
+        nextTimerRef.current = setTimeout(() => setShowNextButton(true), 1500);
+        break;
+      case 'guidance':
+        // 停当前题：橙色△ + hint + 鼓励 → 「再试一次」+「求助升级」（T7）
+        setFeedback({
+          type: 'guidance',
+          hint: action.hint,
+          attemptCount: action.attemptCount,
+          maxAttempts: action.maxAttempts,
+        });
+        break;
+      case 'answer-sheet':
+        // 展示 matched+missing 合集（matched 标绿 / missing 标红 = 完整答案要点，Oracle #5）→ 必进下一题
+        setFeedback({
+          type: 'answer-sheet',
+          matchedKeywords: response?.matchedKeywords ?? [],
+          missingKeywords: action.missingKeywords,
+          postState: response?.postState ?? '',
+        });
+        nextTimerRef.current = setTimeout(() => { void goNext(); }, 1500);
+        break;
+      case 'error':
+        // 停留当前题（action.code/message 提示；全局 onUnauthorized/onGlobalError 已兜底）
+        setFeedback({ type: 'error', message: action.message ?? action.code ?? '提交失败，请稍后重试' });
+        break;
+    }
+  };
+
+  const handleNext = () => {
+    void goNext();
+  };
+
+  // 再试一次（guidance / error 分支）：清反馈、保持当前题与 hintLevel 档位
   const handleRetry = () => {
+    if (nextTimerRef.current) clearTimeout(nextTimerRef.current);
     setUserAnswer('');
-    setShowHint(false);
     setFeedback(null);
     setShowNextButton(false);
+    setDegradedNotice(false);
+    questionStartRef.current = Date.now();
+    if (inputRef.current) inputRef.current.focus();
   };
-  
-  const handleHint = () => {
-    setShowHint(true);
+
+  // 求助升级（T7）：None → Partial → Full 递增，取服务端 hint（BR-29 ≤20 字）
+  const handleHint = async () => {
+    if (!question || hintLevel === 'Full') return;
+    const nextLevel: Exclude<HintLevel, 'None'> = hintLevel === 'None' ? 'Partial' : 'Full';
+    try {
+      const res = await Tkwf.User.Use<Hint_ExecuteService>().hint_Execute({
+        request: { questionId: question.questionId, difficultySlot: HINT_LEVEL_TO_DIFFICULTY_SLOT[nextLevel] },
+      });
+      if (res.success) {
+        setServerHint(res.hint || '再想想，回忆下要点'); // R1：空 hint → 通用鼓励语兜底
+        setHintLevel(nextLevel); // 仅成功升档（失败不升级，避免 BR-16 误触发）
+      } else {
+        setServerHint('再想想，回忆下要点');
+      }
+    } catch {
+      setServerHint('再想想，回忆下要点');
+    }
   };
-  
-  if (!currentTask || !currentQuestion) {
+
+  // ── 无参数进入：任务选择引导 ──
+  if (initStatus === 'guide') {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p className="text-muted-foreground">题目加载失败</p>
-        <Button onClick={() => navigate({ to: '/student/home' })} className="mt-4">
-          返回首页
-        </Button>
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <Card className="p-8 max-w-sm w-full text-center">
+          <div className="text-5xl mb-4">📚</div>
+          <h2 className="font-semibold text-lg mb-2">请从任务中心或复习队列进入</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            作答会话需要关联任务或复习知识点，先去任务中心选一个任务开始吧。
+          </p>
+          <Button onClick={() => navigate({ to: '/student/home' })} className="w-full h-12">
+            <BookOpen className="mr-2 h-4 w-4" />
+            返回首页
+          </Button>
+        </Card>
       </div>
     );
   }
-  
+
+  // ── 加载中 ──
+  if (initStatus === 'loading') {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  // ── 题目加载失败（首次 getSessionQuestion 失败 / 网络错误）→ 错误态卡片 + 重试 ──
+  if (initStatus === 'error') {
+    return (
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
+        <Card className="p-8 max-w-sm w-full text-center">
+          <XCircle className="w-12 h-12 text-destructive mx-auto mb-4" />
+          <h2 className="font-semibold text-lg mb-2">题目加载失败</h2>
+          <p className="text-sm text-muted-foreground mb-6">网络开小差了，点重试再试一次。</p>
+          <Button
+            onClick={() => void initSession()}
+            className="w-full h-12"
+            size="lg"
+          >
+            <RotateCcw className="mr-2 h-4 w-4" />
+            重试
+          </Button>
+        </Card>
+      </div>
+    );
+  }
+
+  // ── 就绪：题目区 + 答题区 + 反馈区 ──
   return (
     <div className="min-h-screen bg-background">
       {/* 顶部导航 */}
       <header className="sticky top-0 z-10 bg-card border-b border-border px-4 py-3">
         <div className="flex items-center gap-3">
           <button
+            type="button"
             onClick={() => navigate({ to: '/student/home' })}
             className="p-2 -ml-2 rounded-full hover:bg-muted transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div className="flex-1 min-w-0">
-            <h1 className="font-semibold text-sm truncate">{currentTask.title}</h1>
+            <h1 className="font-semibold text-sm truncate">
+              {currentTask?.title ?? (search.reviewQuestionId ? '复习会话' : '学习任务')}
+            </h1>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>{currentTask.teacherName}</span>
-              <span>·</span>
-              <span>第 {currentQuestionIndex + 1}/{MOCK_QUESTIONS.length} 题</span>
+              {currentTask && <span>{currentTask.teacherName}</span>}
+              {currentTask && <span>·</span>}
+              {/* 第 x/y 题分母 = 真实会话题数（createStudySession.questionCount），非 MOCK_QUESTIONS.length */}
+              <span>第 {currentQuestionIndex + 1}/{questionCount || 1} 题</span>
             </div>
           </div>
         </div>
-        
+
         {/* 进度条 */}
         <div className="mt-3">
           <TaskProgressBar
-            current={currentQuestionIndex + (feedback?.type === 'correct' || feedback?.type === 'hint-correct' ? 1 : 0)}
-            total={MOCK_QUESTIONS.length}
+            current={currentQuestionIndex + (feedback?.type === 'celebrate' ? 1 : 0)}
+            total={questionCount || 1}
             size="sm"
             showText={false}
           />
         </div>
       </header>
-      
+
       {/* 题目区 */}
       <div className="p-4">
         <Card className="p-6 min-h-[200px] flex flex-col items-center justify-center">
           {/* 题型标签 */}
           <span className="text-xs text-muted-foreground mb-4 px-2 py-1 bg-muted rounded-full">
-            {currentQuestion.type === 'R1' ? '上句接下句' : 
-             currentQuestion.type === 'R2' ? '下句接上句' : '段落默写'}
+            {question?.type === 'R1' ? '上句接下句' :
+             question?.type === 'R2' ? '下句接上句' : '段落默写'}
           </span>
-          
-          {/* 题目内容 */}
+
+          {/* 题目内容（服务端展示镜像，不含答案与关键词，BR-19） */}
           <p className="question-text text-foreground">
-            {currentQuestion.content}
+            {question?.content}
           </p>
-          
-          {/* 提示按钮 */}
-          {!showHint && !feedback && (
+
+          {/* 提示按钮（T7：None→Partial→Full 逐级加深） */}
+          {!feedback && hintLevel !== 'Full' && (
             <button
+              type="button"
               onClick={handleHint}
               className="mt-4 text-xs text-muted-foreground flex items-center gap-1 hover:text-primary transition-colors"
             >
               <Lightbulb className="w-3 h-3" />
-              想不起来？
+              {hintLevel === 'None' ? '想不起来？' : '再给点提示'}
             </button>
           )}
-          
-          {/* 提示内容 */}
-          {showHint && !feedback && (
+
+          {/* 提示内容（服务端 hint，≤20 字 BR-29） */}
+          {serverHint && !feedback && (
             <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
               <p className="text-sm text-amber-800 flex items-start gap-2">
                 <Lightbulb className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                {currentQuestion.hint}
+                {serverHint}
               </p>
             </div>
           )}
         </Card>
-        
+
         {/* 答题区 */}
         {!feedback && (
           <div className="mt-6 space-y-4">
@@ -271,23 +413,24 @@ function TaskStudyPage() {
                 onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
                 placeholder="请输入答案..."
                 className="h-14 text-base pr-12"
-                disabled={isSubmitting}
+                disabled={isSubmittingAttempt}
               />
               <button
+                type="button"
                 onClick={() => {}}
                 className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mic className="w-5 h-5" />
               </button>
             </div>
-            
+
             <Button
               onClick={handleSubmit}
-              disabled={!userAnswer.trim() || isSubmitting}
+              disabled={!userAnswer.trim() || isSubmittingAttempt}
               className="w-full h-12 text-base"
               size="lg"
             >
-              {isSubmitting ? (
+              {isSubmittingAttempt ? (
                 <>
                   <Sparkles className="mr-2 h-4 w-4 animate-spin" />
                   判题中…
@@ -296,76 +439,115 @@ function TaskStudyPage() {
                 '提交'
               )}
             </Button>
+
+            {/* 域级失败（success=false / RPC 抛错）→ 停留当前题，提示 + 再试（T6 error 分支） */}
+            {submitError && (
+              <p className="text-center text-xs text-destructive">
+                {submitError}，请再试一次
+              </p>
+            )}
           </div>
         )}
-        
-        {/* 反馈区 */}
+
+        {/* 反馈区（四态渲染） */}
         {feedback && (
           <div className="mt-6 space-y-4">
             <Card
               className={cn(
                 'p-6 text-center',
-                feedback.type === 'correct' && 'bg-green-50 border-green-200',
-                feedback.type === 'hint-correct' && 'bg-amber-50 border-amber-200',
-                feedback.type === 'wrong' && 'bg-red-50 border-red-200'
+                feedback.type === 'celebrate' && 'bg-green-50 border-green-200',
+                feedback.type === 'guidance' && 'bg-amber-50 border-amber-200',
+                (feedback.type === 'answer-sheet' || feedback.type === 'error') && 'bg-red-50 border-red-200'
               )}
             >
-              {feedback.type === 'correct' && (
+              {feedback.type === 'celebrate' && (
                 <div className="animate-star-pop inline-block mb-3">
                   <CheckCircle2 className="w-12 h-12 text-green-500" />
                 </div>
               )}
-              {feedback.type === 'hint-correct' && (
+              {feedback.type === 'guidance' && (
                 <div className="inline-block mb-3">
                   <span className="text-3xl">△</span>
                 </div>
               )}
-              {feedback.type === 'wrong' && (
+              {feedback.type === 'answer-sheet' && (
                 <div className="inline-block mb-3">
                   <XCircle className="w-12 h-12 text-red-500" />
                 </div>
               )}
-              
-              <p className={cn(
-                'font-medium mb-2',
-                feedback.type === 'correct' && 'text-green-700',
-                feedback.type === 'hint-correct' && 'text-amber-700',
-                feedback.type === 'wrong' && 'text-red-700'
-              )}>
-                {feedback.type === 'correct' ? '回答正确！' : 
-                 feedback.type === 'hint-correct' ? '求助后答对' : '回答错误'}
-              </p>
-              
-              <p className="text-sm text-muted-foreground">
-                {feedback.message}
-              </p>
-              
-              {feedback.correctAnswer && (
-                <div className="mt-4 p-3 bg-white rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">正确答案：</p>
-                  <p className="question-text text-base">{feedback.correctAnswer}</p>
+              {feedback.type === 'error' && (
+                <div className="inline-block mb-3">
+                  <XCircle className="w-12 h-12 text-destructive" />
                 </div>
               )}
+
+              <p className={cn(
+                'font-medium mb-2',
+                feedback.type === 'celebrate' && 'text-green-700',
+                feedback.type === 'guidance' && 'text-amber-700',
+                (feedback.type === 'answer-sheet' || feedback.type === 'error') && 'text-red-700'
+              )}>
+                {feedback.type === 'celebrate' ? '回答正确！' :
+                 feedback.type === 'guidance' ? '还没答对，再试试' :
+                 feedback.type === 'answer-sheet' ? '看看答案要点' : '出错了'}
+              </p>
+
+              {/* celebrate：postState 记忆状态徽章（preState→postState 由服务端驱动） */}
+              {feedback.type === 'celebrate' && feedback.postState && (
+                <div className="flex justify-center mb-2">
+                  <MemoryStateBadge state={serverStateToMemoryState(feedback.postState)} size="md" />
+                </div>
+              )}
+
+              {feedback.type === 'guidance' && (
+                <>
+                  <p className="text-sm text-amber-800">{feedback.hint}</p>
+                  <p className="text-xs text-muted-foreground mt-1">再想想，回忆下要点</p>
+                </>
+              )}
+
+              {/* answer-sheet：matched 标绿 / missing 标红 = 完整答案要点（Oracle #5） */}
+              {feedback.type === 'answer-sheet' && (
+                <div className="mt-4 p-3 bg-white rounded-lg text-left">
+                  <p className="text-xs text-muted-foreground mb-1">答案要点：</p>
+                  <div className="space-y-1">
+                    {feedback.matchedKeywords.length === 0 && feedback.missingKeywords.length === 0 && (
+                      <p className="text-sm text-muted-foreground">暂无要点</p>
+                    )}
+                    {feedback.matchedKeywords.map((kw) => (
+                      <p key={kw} className="text-sm text-green-700">✓ {kw}</p>
+                    ))}
+                    {feedback.missingKeywords.map((kw) => (
+                      <p key={kw} className="text-sm text-red-600">✗ {kw}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {feedback.type === 'error' && (
+                <p className="text-sm text-muted-foreground">{feedback.message}</p>
+              )}
+
+              {/* isDegraded 轻提示（判题引擎降级，UI 提示"判题可能不精确"） */}
+              {degradedNotice && (
+                <p className="text-xs text-muted-foreground mt-2">判题可能不精确</p>
+              )}
             </Card>
-            
-            {showNextButton && (
+
+            {/* celebrate：1.5s 后出现"下一题"按钮（既有交互保留） */}
+            {showNextButton && feedback.type === 'celebrate' && (
               <Button
                 onClick={handleNext}
                 className="w-full h-12 text-base"
                 size="lg"
               >
-                {currentQuestionIndex < MOCK_QUESTIONS.length - 1 ? (
-                  <>
-                    下一题
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </>
-                ) : (
-                  '完成任务'
-                )}
+                下一题
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             )}
-            
-            {feedback.type === 'wrong' && (
+
+            {/* guidance：再试一次 + 求助升级（T7） */}
+            {feedback.type === 'guidance' && (
               <div className="flex gap-3">
                 <Button
                   variant="outline"
@@ -373,40 +555,59 @@ function TaskStudyPage() {
                   className="flex-1 h-12"
                 >
                   <RotateCcw className="mr-2 h-4 w-4" />
-                  再看一遍
+                  再试一次
                 </Button>
                 <Button
-                  onClick={handleNext}
+                  onClick={handleHint}
                   variant="secondary"
                   className="flex-1 h-12"
                 >
-                  下一题
-                  <ChevronRight className="ml-2 h-4 w-4" />
+                  <Lightbulb className="mr-2 h-4 w-4" />
+                  求助升级
                 </Button>
               </div>
+            )}
+
+            {/* answer-sheet：必进下一题（自动推进中提示） */}
+            {feedback.type === 'answer-sheet' && (
+              <p className="text-center text-xs text-muted-foreground">即将进入下一题…</p>
+            )}
+
+            {/* error：再试一次（停留当前题） */}
+            {feedback.type === 'error' && (
+              <Button
+                variant="outline"
+                onClick={handleRetry}
+                className="w-full h-12"
+              >
+                <RotateCcw className="mr-2 h-4 w-4" />
+                再试一次
+              </Button>
             )}
           </div>
         )}
       </div>
-      
-      {/* 底部进度点阵 */}
+
+      {/* 底部进度点阵（当前高亮；已完成绿点；答案展示/引导当前题红点） */}
       <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-4 safe-bottom">
-        <div className="flex justify-center gap-2">
-          {MOCK_QUESTIONS.map((q, index) => {
+        <div className="flex justify-center gap-2 flex-wrap">
+          {Array.from({ length: Math.max(1, questionCount || 1) }, (_, index) => {
             const isCurrent = index === currentQuestionIndex;
-            const isCompleted = index < currentQuestionIndex || 
-              (index === currentQuestionIndex && feedback?.type === 'correct');
-            const isWrong = index === currentQuestionIndex && feedback?.type === 'wrong';
-            
+            const isCompleted = index < currentQuestionIndex ||
+              (index === currentQuestionIndex && feedback?.type === 'celebrate');
+            const isBlocked = index === currentQuestionIndex &&
+              (feedback?.type === 'answer-sheet' || feedback?.type === 'guidance');
+
             return (
               <div
-                key={q.id}
+                // biome-ignore lint/suspicious/noArrayIndexKey: 进度点阵为纯占位圆点（无业务 id），索引即语义位置
+                key={index}
                 className={cn(
                   'w-2 h-2 rounded-full transition-all',
                   isCurrent && 'w-3 h-3 bg-primary scale-125',
                   isCompleted && 'bg-green-500',
-                  isWrong && 'bg-red-500',
-                  !isCurrent && !isCompleted && !isWrong && 'bg-muted'
+                  isBlocked && 'bg-red-500',
+                  !isCurrent && !isCompleted && !isBlocked && 'bg-muted'
                 )}
               />
             );

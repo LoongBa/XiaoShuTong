@@ -1,6 +1,43 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { User, Task, ReviewItem, KnowledgePoint, Subject, WrongAnswer, LearningStats } from '@/types';
+import { Tkwf } from '@tkwf/tsclient';
+import type {
+  StudySession_ExecuteService,
+  SessionQuestion_ExecuteService,
+  GetNextQuestionResDto,
+  SubmitAttemptResDto,
+} from '@/gql/ts-client.g';
+
+// 服务端判题结果记录（替换本地 { answer, isCorrect, usedHint } 推导）
+export interface ServerAnswerRecord {
+  result: string;
+  preState: string;
+  postState: string;
+  needsGuidance: boolean;
+  showAnswer: boolean;
+  attemptCount: number;
+  matchedKeywords: string[];
+  missingKeywords: string[];
+}
+
+// startSession 入参（新学 / 复习两分支）
+export interface StartSessionOptions {
+  /** 会话场景：新学=Memorize、复习=Assess（BR-01 场景区分） */
+  scenario: string;
+  /** 会话类型：本迭代固定 Progressive */
+  sessionType: string;
+  /** 关联任务 ID（可空——自由/复习会话无任务） */
+  taskId: number | null;
+  /** 期望题数 */
+  questionCount: number;
+}
+
+// startSession 结果：sessionUid 活源 + 第 1 题（题集耗尽时 question.questionId 为空）
+export interface StartSessionResult {
+  sessionUid: string;
+  question: GetNextQuestionResDto;
+}
 
 interface AppState {
   // 用户状态
@@ -16,10 +53,12 @@ interface AppState {
   wrongAnswers: WrongAnswer[];
   learningStats: LearningStats[];
   
-  // 当前学习会话
+  // 当前学习会话（服务端驱动；不进 persist partialize，会话恢复靠 createStudySession BR-05 幂等）
   currentTaskId: string | null;
+  sessionUid: string | null;
+  questionCount: number;
   currentQuestionIndex: number;
-  answers: Record<string, { answer: string; isCorrect: boolean; usedHint: boolean }>;
+  answers: Record<string, ServerAnswerRecord>;
   
   // Actions
   setCurrentUser: (user: User | null) => void;
@@ -35,7 +74,10 @@ interface AppState {
   setLearningStats: (stats: LearningStats[]) => void;
   
   startTask: (taskId: string) => void;
-  submitAnswer: (questionId: string, answer: string, isCorrect: boolean, usedHint: boolean) => void;
+  /** 会话初始化归口：createStudySession → 存 sessionUid + 取第 1 题（T5 消费） */
+  startSession: (bankId: string, opts: StartSessionOptions) => Promise<StartSessionResult>;
+  /** 记录服务端判题结果（T6 消费，答案记录扩展为服务端字段） */
+  recordAnswer: (questionId: string, res: SubmitAttemptResDto) => void;
   nextQuestion: () => void;
   completeTask: () => void;
   
@@ -59,6 +101,8 @@ export const useAppStore = create<AppState>()(
       learningStats: [],
       
       currentTaskId: null,
+      sessionUid: null,
+      questionCount: 0,
       currentQuestionIndex: 0,
       answers: {},
       
@@ -74,6 +118,8 @@ export const useAppStore = create<AppState>()(
         currentUser: null, 
         isLoggedIn: false,
         currentTaskId: null,
+        sessionUid: null,
+        questionCount: 0,
         currentQuestionIndex: 0,
         answers: {}
       }),
@@ -93,10 +139,54 @@ export const useAppStore = create<AppState>()(
         answers: {}
       }),
       
-      submitAnswer: (questionId, answer, isCorrect, usedHint) => set((state) => ({
+      // 会话初始化归口：createStudySession_Execute → sessionUid 活源 → 首次 getSessionQuestion 取第 1 题
+      startSession: async (bankId, opts) => {
+        const res = await Tkwf.User.Use<StudySession_ExecuteService>().createStudySession_Execute({
+          request: {
+            scenario: opts.scenario,
+            bankId,
+            sessionType: opts.sessionType,
+            taskId: opts.taskId ?? null,
+            questionCount: opts.questionCount,
+          },
+        });
+        
+        // 域级失败（BankNotFound / Forbidden / SessionError 等）——抛错由调用方进入错误态兜底
+        if (!res.success) {
+          throw new Error(res.errorCode || '会话创建失败');
+        }
+        
+        const sessionUid = res.sessionUid;
+        // 会话三件套（sessionUid/questionCount/answers）——均不进 persist partialize
+        set({
+          sessionUid,
+          questionCount: res.questionCount,
+          currentQuestionIndex: 0,
+          answers: {}
+        });
+        
+        // 首次取第 1 题（BR-18 题集耗尽时 questionId 为空，由调用方导航结果页）
+        const question = await Tkwf.User.Use<SessionQuestion_ExecuteService>().sessionQuestion_Execute({
+          request: { sessionUid, bankId, type: null, knowledgePoint: null },
+        });
+        
+        return { sessionUid, question };
+      },
+      
+      // 答案记录扩展为服务端判题结果字段（本地 isCorrect/usedHint 推导废弃）
+      recordAnswer: (questionId, res) => set((state) => ({
         answers: {
           ...state.answers,
-          [questionId]: { answer, isCorrect, usedHint }
+          [questionId]: {
+            result: res.result,
+            preState: res.preState,
+            postState: res.postState,
+            needsGuidance: res.needsGuidance,
+            showAnswer: res.showAnswer,
+            attemptCount: res.attemptCount,
+            matchedKeywords: res.matchedKeywords,
+            missingKeywords: res.missingKeywords,
+          },
         }
       })),
       
@@ -125,6 +215,8 @@ export const useAppStore = create<AppState>()(
           tasks: updatedTasks,
           currentUser: updatedUser,
           currentTaskId: null,
+          sessionUid: null,
+          questionCount: 0,
           currentQuestionIndex: 0,
           answers: {}
         });
@@ -140,6 +232,7 @@ export const useAppStore = create<AppState>()(
             teacherName: '王老师',
             teacherId: 'teacher-1',
             classId: 'class-1',
+            bankId: 'bank-001',
             totalQuestions: 10,
             completedQuestions: 4,
             deadline: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
@@ -154,6 +247,7 @@ export const useAppStore = create<AppState>()(
             teacherName: '李老师',
             teacherId: 'teacher-2',
             classId: 'class-1',
+            bankId: 'bank-002',
             totalQuestions: 8,
             completedQuestions: 0,
             deadline: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString(),
@@ -168,6 +262,7 @@ export const useAppStore = create<AppState>()(
             teacherName: '我',
             teacherId: 'self',
             classId: '',
+            bankId: 'bank-002',
             totalQuestions: 5,
             completedQuestions: 2,
             deadline: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString(),

@@ -120,34 +120,103 @@ export const initialData: DatasetSeed = {
     { success: true, errorCode: null, sessionUid: "sess-001", questionCount: 20 },
   ],
 
-  // submitAttemptResDtos — 3 条，覆盖 Correct/Partial/Wrong
+  // submitAttemptResDtos — 4 条，覆盖四态（新契约 15 字段；queryOne 取首条=Correct 默认庆祝路径）
   submitAttemptResDtos: [
+    // 条 1：Correct（决策表 #1：celebrate → 下一题）
     {
       success: true, errorCode: null,
       result: "Correct",
+      confidence: 0.92,
+      matchedKeywords: ["一片孤城", "万仞山"],
+      missingKeywords: [],
+      hint: "",
       preState: "✕", postState: "△",
-      isCorrect: true, hintLevel: "None", spentMs: 5000,
       nextReviewAt: new Date(Date.now() + 86400000).toISOString(),
+      needsGuidance: false, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: false,
     },
+    // 条 2：Partial 第 1 次（决策表 #2：guidance → 再试一次/求助升级）
     {
       success: true, errorCode: null,
       result: "Partial",
+      confidence: 0.62,
+      matchedKeywords: ["一片孤城"],
+      missingKeywords: ["万仞山"],
+      hint: "孤城与山势意象",
       preState: "△", postState: "△",
-      isCorrect: false, hintLevel: "Partial", spentMs: 8000,
       nextReviewAt: new Date(Date.now() + 43200000).toISOString(),
+      needsGuidance: true, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: false,
     },
+    // 条 3：Wrong 达上限（决策表 #8：answer-sheet 展示答案 → 必进下一题）
     {
       success: true, errorCode: null,
       result: "Wrong",
+      confidence: 0.3,
+      matchedKeywords: [],
+      missingKeywords: ["一片孤城", "万仞山"],
+      hint: "",
       preState: "○", postState: "✕",
-      isCorrect: false, hintLevel: "Full", spentMs: 3000,
       nextReviewAt: new Date(Date.now() + 14400000).toISOString(),
+      needsGuidance: false, attemptCount: 2, maxAttempts: 2, showAnswer: true, isDegraded: false,
+    },
+    // 条 4：degraded 样例（isDegraded=true → UI"判题可能不精确"轻提示）
+    {
+      success: true, errorCode: null,
+      result: "Correct",
+      confidence: 0.71,
+      matchedKeywords: ["疑是地上霜"],
+      missingKeywords: [],
+      hint: "",
+      preState: "△", postState: "○",
+      nextReviewAt: new Date(Date.now() + 172800000).toISOString(),
+      needsGuidance: false, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: true,
     },
   ],
 
-  // getHintResDtos — 1 条，hint ≤20 字
+  // getNextQuestionResDtos — 6 条（5 首唐诗 + 1 条耗尽空结果；content 为不含答案的展示镜像，BR-19）
+  getNextQuestionResDtos: [
+    {
+      success: true, errorCode: null,
+      questionId: "q-1", type: "R2",
+      content: "黄河远上白云间，____",
+      knowledgePoint: "凉州词二首·其一", knowledgeCardId: "kc-001",
+    },
+    {
+      success: true, errorCode: null,
+      questionId: "q-2", type: "R1",
+      content: "____，春风不度玉门关",
+      knowledgePoint: "凉州词二首·其一", knowledgeCardId: "kc-002",
+    },
+    {
+      success: true, errorCode: null,
+      questionId: "q-3", type: "R2",
+      content: "白日依山尽，____",
+      knowledgePoint: "登鹳雀楼", knowledgeCardId: "kc-003",
+    },
+    {
+      success: true, errorCode: null,
+      questionId: "q-4", type: "R1",
+      content: "____，更上一层楼",
+      knowledgePoint: "登鹳雀楼", knowledgeCardId: "kc-004",
+    },
+    {
+      success: true, errorCode: null,
+      questionId: "q-5", type: "R2",
+      content: "床前明月光，____",
+      knowledgePoint: "静夜思", knowledgeCardId: "kc-005",
+    },
+    // 条 6：题集耗尽（success=true 且 questionId 空 = 会话结束信号，BR-18 → task 页导航 result）
+    {
+      success: true, errorCode: null,
+      questionId: "", type: null,
+      content: "",
+      knowledgePoint: null, knowledgeCardId: null,
+    },
+  ],
+
+  // getHintResDtos — 2 条语文唐诗背景钩子（≤20 字，BR-29；difficultySlot 对齐契约 S1/S2/S3，前端求助按 None→S3 / Partial→S2 / Full→S1 请求）
   getHintResDtos: [
-    { success: true, errorCode: null, hint: "注意乘法分配律的应用" },
+    { success: true, errorCode: null, hint: "王之涣边塞名篇，黄河入海意象", difficultySlot: "S3", hintSource: "bank.hint" },
+    { success: true, errorCode: null, hint: "孤城与万仞山相衬", difficultySlot: "S2", hintSource: "bank.hint" },
   ],
 
   // getReviewQueueResDtos — 2 条，到期复习
@@ -191,7 +260,7 @@ export const initialData: DatasetSeed = {
     {
       success: true, errorCode: null, correctCount: 15, totalCount: 20,
       blockedPoints: [
-        { questionId: "q-001", knowledgePoint: "乘法分配律", summary: "注意括号展开" },
+        { questionId: "q-001", knowledgePoint: "乘法分配律", state: "NotMastered" },
       ],
     },
   ],
@@ -645,6 +714,72 @@ export const scenarioOverrides: ScenarioOverrides = {
     ],
     getHeatmapResDtos: [
       { success: false, errorCode: "NETWORK_ERROR", days: [] },
+    ],
+    // task 页首次取题失败（success=false）→ 错误态卡片"题目加载失败"+重试
+    getNextQuestionResDtos: [
+      { success: false, errorCode: "INTERNAL_ERROR", questionId: "", type: null, content: "", knowledgePoint: null, knowledgeCardId: null },
+    ],
+    // submitAttempt 域级失败 → 停留当前题 + errorCode 提示
+    submitAttemptResDtos: [
+      { success: false, errorCode: "INTERNAL_ERROR", result: "", confidence: null, matchedKeywords: [], missingKeywords: [], hint: "", preState: "", postState: "", nextReviewAt: new Date(0).toISOString(), needsGuidance: false, attemptCount: 0, maxAttempts: 2, showAnswer: false, isDegraded: false },
+    ],
+  },
+
+  // ── 引导态（Partial 第 1 次：needsGuidance=true → 橙色△ + 再试一次/求助升级） ──
+  guidance: {
+    submitAttemptResDtos: [
+      {
+        success: true, errorCode: null,
+        result: "Partial",
+        confidence: 0.62,
+        matchedKeywords: ["一片孤城"],
+        missingKeywords: ["万仞山"],
+        hint: "孤城与山势意象",
+        preState: "△", postState: "△",
+        nextReviewAt: new Date(Date.now() + 43200000).toISOString(),
+        needsGuidance: true, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: false,
+      },
+    ],
+  },
+
+  // ── 答案展示态（Wrong 达上限：showAnswer=true → 答案要点合集 → 必进下一题） ──
+  answerSheet: {
+    submitAttemptResDtos: [
+      {
+        success: true, errorCode: null,
+        result: "Wrong",
+        confidence: 0.3,
+        matchedKeywords: [],
+        missingKeywords: ["一片孤城", "万仞山"],
+        hint: "",
+        preState: "○", postState: "✕",
+        nextReviewAt: new Date(Date.now() + 14400000).toISOString(),
+        needsGuidance: false, attemptCount: 2, maxAttempts: 2, showAnswer: true, isDegraded: false,
+      },
+    ],
+  },
+
+  // ── 降级态（isDegraded=true → "判题可能不精确"轻提示） ──
+  degraded: {
+    submitAttemptResDtos: [
+      {
+        success: true, errorCode: null,
+        result: "Correct",
+        confidence: 0.71,
+        matchedKeywords: ["疑是地上霜"],
+        missingKeywords: [],
+        hint: "",
+        preState: "△", postState: "○",
+        nextReviewAt: new Date(Date.now() + 172800000).toISOString(),
+        needsGuidance: false, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: true,
+      },
+    ],
+  },
+
+  // ── 题集耗尽态（首次取题即 questionId 空 → 直接导航 result 页） ──
+  exhausted: {
+    getNextQuestionResDtos: [
+      { success: true, errorCode: null, questionId: "", type: null, content: "", knowledgePoint: null, knowledgeCardId: null },
     ],
   },
 

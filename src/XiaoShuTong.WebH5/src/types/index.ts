@@ -24,6 +24,8 @@ export interface Task {
   teacherName: string;
   teacherId: string;
   classId: string;
+  /** 关联题库业务键（会话初始化 createStudySession 的 bankId 来源；可空→默认题库） */
+  bankId?: string;
   totalQuestions: number;
   completedQuestions: number;
   deadline: string;

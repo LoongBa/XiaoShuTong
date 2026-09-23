@@ -124,8 +124,9 @@
 | 表 | 最少条数 | 关键字段约束 | 填写参考 |
 |----|---------|-------------|---------|
 | `createStudySessionResDtos` | 1 | sessionUid 非空；questionCount 10/20/30/50 | 学习-BR-01~05 |
-| `submitAttemptResDtos` | 3 | 覆盖 result=Correct/Partial/Wrong；preState/postState 展示四阶迁移；nextReviewAt 相对当前 | 学习-BR-07~25 |
-| `getHintResDtos` | 1 | hint ≤20 字；不含答案 | 学习-BR-28~30 |
+| `getNextQuestionResDtos` | 5 + 1 | 5 条正常题（questionId 唯一，content 不含答案）+ 1 条耗尽空结果（success=true, questionId=""）触发会话结束；type 覆盖 R1/R2 | 学习-BR-18/19/20（sessionQuestion_Execute） |
+| `submitAttemptResDtos` | 3~4 | 覆盖 result=Correct/Partial/Wrong 四态（含 5 新字段：needsGuidance/attemptCount/maxAttempts/showAnswer/isDegraded）；preState/postState 展示四阶迁移；nextReviewAt 相对当前 | 学习-BR-07~25 |
+| `getHintResDtos` | 1~2 | hint ≤20 字；不含答案；语文唐诗背景钩子文案（非数学解题 hint） | 学习-BR-28~30 |
 | `getReviewQueueResDtos` | 2 | items[].nextReviewAt ≤ 今日（到期）；不含答案字段 | 学习-BR-31~34 |
 | `getMemoryStatesResDtos` | 4 | items[] 覆盖 ✕/△/○/★ 四阶；totalCount 正确 | 学习-BR-36~38 |
 | `getSessionResultResDtos` | 2 | 一空一满；correctCount ≤ totalCount；blockedPoints 含知识点 | 学习-BR-39~42 |
