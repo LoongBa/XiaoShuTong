@@ -17,6 +17,7 @@ namespace XiaoShuTong.Entities.Learning;
 [Index("idx_attempts_sessionid", nameof(SessionId), IsUnique = false)]
 [Index("idx_attempts_userid_questionid", "UserId,QuestionId", IsUnique = false)]
 [Index("idx_attempts_userid_result", "UserId,Result", IsUnique = false)]
+[Index("idx_attempts_idem", "SessionId,QuestionId,AnswerHash", IsUnique = true)]
 public partial class Attempts
 {
     /// <summary>自增主键</summary>
@@ -80,16 +81,21 @@ public partial class Attempts
     [Column(Position = 14)]
     public int? TimeCostMs { get; set; }
 
+    /// <summary>作答内容哈希（SHA-256，幂等键：同会话同题同答案唯一防重发；改答案重试放行）</summary>
+    [Column(Position = 15, StringLength = 64)]
+    [DtoFieldIgnore]
+    public string AnswerHash { get; set; } = string.Empty;
+
     /// <summary>作答时间</summary>
-    [Column(Position = 15)]
+    [Column(Position = 16)]
     public DateTime AnsweredAt { get; set; } = DateTime.UtcNow;
 
     /// <summary>创建时间（框架审计字段）</summary>
-    [Column(Position = 16)]
+    [Column(Position = 17)]
     [DtoField(CanModify = false)]
     public DateTime CreateTime { get; set; } = DateTime.UtcNow;
 
     /// <summary>更新时间（框架审计字段）</summary>
-    [Column(Position = 17, CanUpdate = true)]
+    [Column(Position = 18, CanUpdate = true)]
     public DateTime UpdateTime { get; set; } = DateTime.UtcNow;
 }

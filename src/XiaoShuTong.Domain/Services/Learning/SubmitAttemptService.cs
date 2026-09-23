@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.Json;
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
@@ -26,6 +28,9 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
     : DomainServiceBase<XiaoShuTongUserInfo>(user)
 {
     private const int HistoryWindow = 20;
+
+    /// <summary>引导/重试上限：达上限后 showAnswer=true（方案 §5.1，防死循环）</summary>
+    private const int MaxAttempts = 2;
 
     private StudySessionsDataService? _sessionsDs;
     private StudySessionsDataService SessionsDs => _sessionsDs ??= User.Use<StudySessionsDataService>();
@@ -63,9 +68,10 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         if (question == null || question.BankId != session.BankId)
             return Fail(LearningErrorCodes.QuestionNotInBank);
 
-        // BR-27：幂等——同会话同题已记录则返回已有结果，不重复写
+        // BR-27：幂等——同会话同题**同答案**已记录则返回已有结果（防网络重发/双击；用户改答案重试放行，idx_attempts_idem 唯一约束兜底）
+        var answerHash = ComputeAnswerHash(request.UserAnswer);
         var existingAttempt = await AttemptsDs.EntityGetAsync(
-            x => x.SessionId == session.Id && x.QuestionId == request.QuestionId, ct);
+            x => x.SessionId == session.Id && x.QuestionId == request.QuestionId && x.AnswerHash == answerHash, ct);
         if (existingAttempt != null)
             return await BuildFromExistingAsync(existingAttempt, userId, ct);
 
@@ -99,7 +105,13 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             _ => JudgmentResult.Wrong,
         };
         var confidence = verdict.Confidence;
-        // 降级标记（verdict.IsDegraded）预留：步骤 1 扩展 SubmitAttemptResDto 时透出（方案 §五）
+        var isDegraded = verdict.IsDegraded; // 降级标记（方案 §五：isDegraded 透出）
+
+        // 统计本题本会话累计作答次数（幂等检查之后：幂等命中已提前返回，此处为首次/重试路径）
+        var prevAttempts = await AttemptsDs.EntitySelectAsync(
+            x => x.SessionId == session.Id && x.QuestionId == request.QuestionId,
+            ct: ct);
+        var attemptCount = prevAttempts.Count + 1; // 含本次
 
         // BR-16：直接看答案（Full）——不迁移状态、不计入作答记录
         if (hintLevel == HintLevel.Full)
@@ -115,6 +127,11 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
                 PreState = preState.ToString(),
                 PostState = preState.ToString(),
                 NextReviewAt = state?.NextReviewAt ?? DateTime.UtcNow,
+                NeedsGuidance = false,
+                AttemptCount = 1,
+                MaxAttempts = MaxAttempts,
+                ShowAnswer = true, // 已看答案（方案决策表 #7）
+                IsDegraded = verdict.IsDegraded,
             };
         }
 
@@ -132,6 +149,11 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
                 PreState = preState.ToString(),
                 PostState = preState.ToString(),
                 NextReviewAt = state?.NextReviewAt ?? DateTime.UtcNow,
+                NeedsGuidance = false, // Play 场景不引导（PK 答错直接下一题，方案决策表 #9 附加）
+                AttemptCount = 1,
+                MaxAttempts = MaxAttempts,
+                ShowAnswer = false,
+                IsDegraded = verdict.IsDegraded,
             };
         }
 
@@ -159,6 +181,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             Confidence = confidence,
             HintLevel = hintLevel,
             TimeCostMs = request.TimeCostMs,
+            AnswerHash = answerHash,
             AnsweredAt = now,
         }, ct);
 
@@ -200,6 +223,10 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
 
         // BR-24：TaskAssignments.Progress（跨模块，任务域切片 04）——本切片不实施
 
+        // 决策：引导/兜底（方案 §六 步骤 2 + 决策表 #2-#8）
+        var showAnswer = result == JudgmentResult.Wrong && attemptCount >= MaxAttempts; // 达上限展示答案
+        var needsGuidance = (result is JudgmentResult.Partial or JudgmentResult.Wrong) && !showAnswer;
+
         // BR-25：返回迁移结果
         return new SubmitAttemptResDto
         {
@@ -212,6 +239,11 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             PreState = preState.ToString(),
             PostState = postState.ToString(),
             NextReviewAt = nextReviewAt,
+            NeedsGuidance = needsGuidance,
+            AttemptCount = attemptCount,
+            MaxAttempts = MaxAttempts,
+            ShowAnswer = showAnswer,
+            IsDegraded = isDegraded,
         };
     }
 
@@ -344,11 +376,20 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             PreState = attempt.PreState.ToString(),
             PostState = attempt.PostState.ToString(),
             NextReviewAt = state?.NextReviewAt ?? DateTime.UtcNow,
+            NeedsGuidance = false, // 幂等：已有结果不再引导
+            AttemptCount = 1,      // 同会话同题唯一（BR-27），已有 1 条
+            MaxAttempts = MaxAttempts,
+            ShowAnswer = false,
+            IsDegraded = false,
         };
     }
 
     private static string[] MatchedKeywords(string userAnswer, string[]? keywords)
         => (keywords ?? []).Where(k => userAnswer.Contains(k, StringComparison.OrdinalIgnoreCase)).ToArray();
+
+    /// <summary>作答内容 SHA-256 哈希（hex，幂等键区分重发 vs 重试）</summary>
+    private static string ComputeAnswerHash(string answer)
+        => Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(answer)));
 
     private static string[] MissingKeywords(string userAnswer, string[]? keywords)
         => (keywords ?? []).Where(k => !userAnswer.Contains(k, StringComparison.OrdinalIgnoreCase)).ToArray();
@@ -416,4 +457,19 @@ public sealed record SubmitAttemptResDto
 
     /// <summary>下次复习时间</summary>
     public DateTime NextReviewAt { get; init; }
+
+    /// <summary>是否应提供引导（result=Partial/Wrong 且未达上限）——前端据此决定是否给"再试一次"</summary>
+    public bool NeedsGuidance { get; init; }
+
+    /// <summary>本题本会话累计作答次数（含本次）</summary>
+    public int AttemptCount { get; init; }
+
+    /// <summary>引导/重试上限（达上限后 showAnswer=true，防死循环）</summary>
+    public int MaxAttempts { get; init; } = 2;
+
+    /// <summary>是否应展示标准答案（达上限或已看答案）——前端展示后必进下一题</summary>
+    public bool ShowAnswer { get; init; }
+
+    /// <summary>判题是否降级（LLM 失败→本地规则，UI 提示"判题可能不精确"）</summary>
+    public bool IsDegraded { get; init; }
 }

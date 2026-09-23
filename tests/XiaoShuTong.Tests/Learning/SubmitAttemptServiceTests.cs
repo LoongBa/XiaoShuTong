@@ -375,7 +375,10 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
 
     // ── 幂等与结果（BR-25/27）──
 
-    /// <summary>BR-27：同会话同题重复提交 → 返回首次结果，不重复写 Attempts</summary>
+    /// <summary>
+    /// BR-27：幂等（细化）——同会话同题**同答案**重复提交 → 返回首次结果，不重复写 Attempts；
+    /// 同会话同题**改答案重试** → 放行写入新 Attempts（幂等键含 AnswerHash，idx_attempts_idem 兜底）
+    /// </summary>
     [Fact]
     public async Task ExecuteAsync_SameQuestionTwice_Idempotent()
     {
@@ -384,16 +387,23 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         RegisterQuestion("Q-42027");
 
         var first = await SubmitAsync(userId, session.UId, "Q-42027", FullAnswer());
-        var second = await SubmitAsync(userId, session.UId, "Q-42027", WrongAnswer); // 第二次换答案
+        // 同答案重发 → 幂等返回首次结果（网络重发/双击防抖）
+        var resend = await SubmitAsync(userId, session.UId, "Q-42027", FullAnswer());
+        Assert.True(resend.Success);
+        Assert.Equal(first.Result, resend.Result);
+        Assert.Equal(first.PostState, resend.PostState);
+        Assert.Equal(1, resend.AttemptCount); // T7：幂等不累加
 
-        Assert.True(second.Success);
-        Assert.Equal(first.Result, second.Result); // 返回首次结果
-        Assert.Equal(first.PostState, second.PostState);
+        // 改答案重试（partial）→ 放行新记录，attemptCount 递增
+        var retry = await SubmitAsync(userId, session.UId, "Q-42027", "若出其中 星汉灿烂 幸甚至哉");
+        Assert.True(retry.Success);
+        Assert.Equal(2, retry.AttemptCount);
+        Assert.Equal("Partial", retry.Result);
 
         var attemptsDs = User.Use<AttemptsDataService>();
         var attempts = await attemptsDs.EntitySelectAsync(
             x => x.SessionId == session.Id && x.QuestionId == "Q-42027", ct: TestContext.Current.CancellationToken);
-        Assert.Single(attempts);
+        Assert.Equal(2, attempts.Count); // 首次 + 重试各一条（同答案重发不重复写）
     }
 
     /// <summary>BR-25：响应含状态迁移结果（PreState/PostState/NextReviewAt）</summary>
@@ -434,5 +444,80 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.Equal("Partial", result.Result);
         Assert.Equal(2, result.MatchedKeywords.Length);
         Assert.Equal(2, result.MissingKeywords.Length);
+    }
+
+    // ── 判题契约扩展（方案 §五/§六：needsGuidance/attemptCount/showAnswer/isDegraded）──
+
+    /// <summary>T2：partial 第 1 次 → needsGuidance=true, showAnswer=false（提供"再试一次"）</summary>
+    [Fact]
+    public async Task ExecuteAsync_PartialFirstAttempt_NeedsGuidance()
+    {
+        var userId = SetUser(42061);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42061", keywords: FullKeywords);
+
+        var result = await SubmitAsync(userId, session.UId, "Q-42061", "若出其中 星汉灿烂 幸甚至哉"); // 3/4=0.75 → Partial
+
+        Assert.Equal("Partial", result.Result);
+        Assert.True(result.NeedsGuidance);
+        Assert.False(result.ShowAnswer);
+        Assert.Equal(1, result.AttemptCount);
+        Assert.Equal(2, result.MaxAttempts);
+    }
+
+    /// <summary>T5：wrong 重试达上限 → showAnswer=true（防死循环，展示答案必进下一题）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WrongRetryReachesLimit_ShowAnswer()
+    {
+        var userId = SetUser(42065);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42065", keywords: FullKeywords);
+
+        // 第 1 次答错（无关内容）→ needsGuidance=true
+        var first = await SubmitAsync(userId, session.UId, "Q-42065", "完全无关的第一种答案");
+        Assert.Equal("Wrong", first.Result);
+        Assert.True(first.NeedsGuidance);
+        Assert.False(first.ShowAnswer);
+        Assert.Equal(1, first.AttemptCount);
+
+        // 第 2 次重试（另一种错误答案，幂等键不同放行）→ 达上限 showAnswer=true
+        var second = await SubmitAsync(userId, session.UId, "Q-42065", "完全无关的第二种答案");
+        Assert.Equal("Wrong", second.Result);
+        Assert.False(second.NeedsGuidance);
+        Assert.True(second.ShowAnswer);
+        Assert.Equal(2, second.AttemptCount);
+    }
+
+    /// <summary>T6：hintLevel=Full（看过答案）→ showAnswer=true（对齐 BR-16 不迁移状态）</summary>
+    [Fact]
+    public async Task ExecuteAsync_FullHint_ShowAnswer()
+    {
+        var userId = SetUser(42066);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42066");
+        await SeedStateAsync(userId, "Q-42066", MemoryState.Mastered, cc: 1);
+
+        var result = await SubmitAsync(userId, session.UId, "Q-42066", WrongAnswer, hintLevel: "Full");
+
+        Assert.True(result.Success);
+        Assert.True(result.ShowAnswer);
+        Assert.False(result.NeedsGuidance);
+        Assert.Equal("Mastered", result.PostState); // 状态不变（BR-16）
+    }
+
+    /// <summary>T8：LLM 降级 → isDegraded 透出（无启用 AI 模型 → 平台-BR-04 Degraded → 保守 Partial）</summary>
+    [Fact]
+    public async Task ExecuteAsync_NoAiModel_IsDegradedTrue()
+    {
+        var userId = SetUser(42068);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42068", keywords: FullKeywords);
+
+        // 0.50 命中率 < 0.6 → PreferLlm 触发 LLM 路径 → 无启用模型 → 降级
+        var result = await SubmitAsync(userId, session.UId, "Q-42068", "若出其中 星汉灿烂");
+
+        Assert.True(result.Success);
+        Assert.True(result.IsDegraded); // 降级标记透出
+        Assert.Equal("Partial", result.Result); // BR-34 保守 Partial
     }
 }

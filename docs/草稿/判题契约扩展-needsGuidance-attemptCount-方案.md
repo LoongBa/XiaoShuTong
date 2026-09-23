@@ -202,6 +202,17 @@ return new SubmitAttemptResDto
 
 > **常量**：`MaxAttempts = 2` 建议置于 `SubmitAttemptService` 内 `private const int MaxAttempts = 2`（与 BR-29 引导纪律同源）；如未来多题型差异化可入 `题型注册表.json` 扩展。
 
+### 6.1 实施决策记录：幂等键细化（AnswerHash）
+
+> **实施中发现的关键调整（2026-09-23）**：原 §六 步骤 1 按"同会话同题"统计 attemptCount，但 **BR-27 幂等（同会话同题已记录则返回已有结果）会拦截"引导后重试"**——第 2 次提交（改答案）幂等命中直接返回第 1 次结果，attemptCount 永远=1，"再试一次"死循环，T5 无法成立。
+
+**决策**：幂等键细化为 **同会话同题同答案（AnswerHash）**：
+- **Attempts 实体**新增 `AnswerHash`（作答内容 SHA-256 hex，`[DtoFieldIgnore]` 不对外）+ 唯一索引 `idx_attempts_idem(SessionId, QuestionId, AnswerHash)`
+- 幂等检查 = `SessionId + QuestionId + AnswerHash`：**同答案重发 → 幂等返回（防网络重发/双击）**；**改答案重试 → 放行写入新 Attempts**，attemptCount 递增，达上限触发 showAnswer
+- 既符合"防重发"幂等本意，又让"引导后重试"成立；唯一索引 DB 级兜底
+
+**影响**：BR-27 语义从"同会话同题唯一"微调为"同会话同题同答案唯一"；`ExecuteAsync_SameQuestionTwice_Idempotent` 测试同步更新（同答案幂等 + 改答案重试各一条）。
+
 ## 七、ts-client 类型更新链路（交付物 2c）
 
 前端**禁止手改** `ts-client.g.ts`（生成物）。更新链路：
