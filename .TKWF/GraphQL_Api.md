@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-24 04:29:12
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-24 07:05:47
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -18,14 +18,14 @@
 | member | 0 | 1 | 1 | 0 |
 | model | 1 | 3 | 4 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 47 | 1 | 48 | 0 |
+| other | 48 | 1 | 49 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **62** | **8** | **70** | **0** |
+| **合计** | **63** | **8** | **71** | **0** |
 
 ## 二、按域操作清单
 
@@ -224,6 +224,13 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `feedbackUid`: string | | | | | |
 | | ⤷ `status`: string | | | | | |
+| other | `endStudySession_Execute` | Query |  | { request?: EndStudySessionReqDtoInput | null } | `EndStudySessionResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `sessionUid`: string | | | | | |
+| | ⤷ `endedAt`: string | null | | | | | |
+| | ⤷ `correctCount`: number | | | | | |
+| | ⤷ `totalTimeMs`: number | | | | | |
 | other | `hint_Execute` | Query |  | { request?: GetHintReqDtoInput | null } | `GetHintResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -456,6 +463,7 @@
 | `CreateStudySessionResDto` | success, errorCode, sessionUid, questionCount |
 | `CreateTaskResDto` | success, errorCode, taskUid, assignedCount |
 | `DeleteAiModelConfigResDto` | success, errorCode, removed |
+| `EndStudySessionResDto` | success, errorCode, sessionUid, endedAt, correctCount, totalTimeMs |
 | `ExportRosterCsvResDto` | success, errorCode, csvFileUrl, expiresAt, columns |
 | `ExportWeeklyReportResDto` | success, errorCode, weekStart, weekEnd, taskCount, memberCount, totalAssignments, completedCount, executionRate, avgProgress, learnedCount, memberReports → 见 \`WeeklyMemberReportDto\`, csvFileUrl |
 | `GenerateInviteCodesResDto` | success, errorCode, generatedCount |

@@ -58,18 +58,10 @@ internal class GetSessionResultService(DomainUser<XiaoShuTongUserInfo> user)
             };
         }
 
-        var correctCount = attempts.Count(a => a.Result == JudgmentResult.Correct);
-
-        // BR-41：新增 ★ = PostState=Proficient 且 PreState<Proficient 的次数
-        var newStarCount = attempts.Count(a =>
-            a.PostState == MemoryState.Proficient && a.PreState != MemoryState.Proficient);
+        var (correctCount, _, newStarCount, blockedQuestionIds) =
+            SessionResultAggregator.AggregateFromAttempts(attempts);
 
         // BR-42：卡壳知识点 = ✕/△ 题目 + 知识点（真实题库读取，批量预取防 N+1，ADR-008 决策二）
-        var blockedQuestionIds = attempts
-            .Where(a => a.PostState is MemoryState.NotMastered or MemoryState.Fuzzy)
-            .Select(a => a.QuestionId)
-            .Distinct()
-            .ToArray();
         var metaMap = await QuestionMeta.GetManyAsync(blockedQuestionIds, ct);
         var blockedPoints = attempts
             .Where(a => a.PostState is MemoryState.NotMastered or MemoryState.Fuzzy)

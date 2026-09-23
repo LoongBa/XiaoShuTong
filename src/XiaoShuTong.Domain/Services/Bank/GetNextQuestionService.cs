@@ -12,11 +12,15 @@ namespace XiaoShuTong.Services.Bank;
 /// <remarks>
 /// BR-17 题库存在且有访问权 | BR-18 题集耗尽返回空 | BR-19 响应不含答案与关键词（防爬 DRM 核心）
 /// BR-20 出题按状态机排序（到期复习 → 未掌握 → 新题）
+/// 学习-BR-04 混合比（30% 新题 + 70% 复习）：按已答复习占比动态池选择（ADR-009 决策一，Oracle 评审闭环）
 /// 状态机排序依赖学习域 MemoryStates（切片 02 数据，跨模块读）；会话已答题目排除（Attempts 跨模块读）。
 /// </remarks>
 internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
     : DomainServiceBase<XiaoShuTongUserInfo>(user)
 {
+    /// <summary>学习-BR-04 混合比：70% 复习 + 30% 新题（ADR-009 决策一常量起步，Config 化后续）</summary>
+    private const double ReviewRatio = 0.7;
+
     private BanksDataService? _banksDs;
     private BanksDataService BanksDs => _banksDs ??= User.Use<BanksDataService>();
 
@@ -33,7 +37,7 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
     private AttemptsDataService AttemptsDs => _attemptsDs ??= User.Use<AttemptsDataService>();
 
     /// <summary>
-    /// 按状态机排序取下一题（不含答案/关键词）
+    /// 按混合比 + 状态机排序取下一题（不含答案/关键词）
     /// </summary>
     public async Task<GetNextQuestionResDto> ExecuteAsync(GetNextQuestionReqDto request, CancellationToken ct = default)
     {
@@ -47,15 +51,16 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
             return new GetNextQuestionResDto { Success = false, ErrorCode = BankErrorCodes.Forbidden };
 
         // 会话已答题目（跨模块：SessionUid → StudySessions.Id → Attempts）
+        List<Attempts> sessionAttempts = [];
         string[]? answeredQuestionIds = null;
         if (!string.IsNullOrWhiteSpace(request.SessionId))
         {
             var session = await SessionsDs.EntityGetAsync(x => x.UId == request.SessionId, ct);
             if (session != null)
             {
-                var attempts = await AttemptsDs.EntitySelectAsync(
+                sessionAttempts = await AttemptsDs.EntitySelectAsync(
                     x => x.SessionId == session.Id, ct: ct);
-                answeredQuestionIds = attempts.Select(a => a.QuestionId).ToArray();
+                answeredQuestionIds = sessionAttempts.Select(a => a.QuestionId).ToArray();
             }
         }
 
@@ -77,12 +82,59 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
         if (available.Count == 0)
             return new GetNextQuestionResDto { Success = true };
 
-        // BR-20：状态机排序——到期复习（NextReviewAt ≤ now 且非熟练）→ 未掌握/模糊 → 新题（无状态）
         var now = DateTime.UtcNow;
-        var ordered = await OrderByStatePriorityAsync(available, userId, now, ct);
-        var next = ordered.First();
 
-        var content = JsonSafeParseContent(next.Content);
+        // 无会话/直接 Callee 调用（SessionId 空）：不分池，保持原 BR-20 状态机排序（兼容既有行为）
+        if (string.IsNullOrWhiteSpace(request.SessionId))
+        {
+            var ordered = await OrderByStatePriorityAsync(available, userId, now, ct);
+            var next = ordered.First();
+            return BuildResponse(next);
+        }
+
+        // 学习-BR-04 混合比：分池 + 按已答复习占比动态池选择（无状态，Oracle 评审闭环）
+        // states 单次查询覆盖 available ∪ 已答题（供已答复习占比稳定分类）
+        var stateMap = await LoadStateMapAsync(available, answeredQuestionIds, userId, ct);
+
+        // 复习题判定集合（状态机：有状态 + 到期 + 非熟练；跨 available ∪ 已答，稳定分类）
+        var reviewQuestionIds = stateMap
+            .Where(kv => kv.Value.NextReviewAt <= now && kv.Value.State != MemoryState.Proficient)
+            .Select(kv => kv.Key)
+            .ToHashSet(StringComparer.Ordinal);
+
+        var reviewPool = available.Where(q => reviewQuestionIds.Contains(q.QuestionId)).ToList();
+        var newPool = available.Where(q => !stateMap.ContainsKey(q.QuestionId)).ToList();
+
+        // 两池合计空（available 均为"有状态但未到期/熟练"）→ BR-18 空结果（会话结束信号）
+        if (reviewPool.Count == 0 && newPool.Count == 0)
+            return new GetNextQuestionResDto { Success = true };
+
+        // 已答复习占比（复用已查 attempts；已答 0 视为 0 → 首题必进复习池）
+        var answeredTotal = sessionAttempts.Count;
+        var reviewAnswered = sessionAttempts.Count(a => reviewQuestionIds.Contains(a.QuestionId));
+        var reviewRatio = answeredTotal == 0 ? 0d : (double)reviewAnswered / answeredTotal;
+
+        var preferReviewPool = reviewRatio < ReviewRatio;
+        Questions chosenQuestion;
+        if (preferReviewPool)
+        {
+            chosenQuestion = reviewPool.Count > 0
+                ? SortByStatePriority(reviewPool, stateMap, now).First()
+                : newPool.OrderBy(q => q.Id).First();   // 目标池空 → 另一池补齐
+        }
+        else
+        {
+            chosenQuestion = newPool.Count > 0
+                ? newPool.OrderBy(q => q.Id).First()
+                : SortByStatePriority(reviewPool, stateMap, now).First();   // 目标池空 → 另一池补齐
+        }
+
+        return BuildResponse(chosenQuestion);
+    }
+
+    private GetNextQuestionResDto BuildResponse(Questions next)
+    {
+        var content = StripAnswerFromContent(next.Content, next.QType);
         return new GetNextQuestionResDto
         {
             Success = true,
@@ -94,16 +146,34 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
         };
     }
 
+    /// <summary>查询 states（覆盖 available ∪ 已答，供混合比稳定分类；单次查询共享）</summary>
+    private async Task<Dictionary<string, MemoryStates>> LoadStateMapAsync(
+        List<Questions> questions, string[]? answeredQuestionIds, long userId, CancellationToken ct)
+    {
+        var bankId = questions.FirstOrDefault()?.BankId ?? string.Empty;
+        var ids = questions.Select(q => q.QuestionId)
+            .Concat(answeredQuestionIds ?? [])
+            .Distinct()
+            .ToArray();
+        if (ids.Length == 0)
+            return new Dictionary<string, MemoryStates>(StringComparer.Ordinal);
+
+        var states = await StatesDs.EntitySelectAsync(
+            x => x.UserId == userId && x.BankId == bankId && ids.Contains(x.QuestionId),
+            ct: ct);
+        return states.ToDictionary(s => s.QuestionId, s => s);
+    }
+
     private async Task<List<Questions>> OrderByStatePriorityAsync(
         List<Questions> questions, long userId, DateTime now, CancellationToken ct)
     {
-        var bankId = questions.FirstOrDefault()?.BankId ?? string.Empty;
-        var states = await StatesDs.EntitySelectAsync(
-            x => x.UserId == userId && x.BankId == bankId
-                 && questions.Select(q => q.QuestionId).Contains(x.QuestionId),
-            ct: ct);
-        var stateMap = states.ToDictionary(s => s.QuestionId, s => s);
+        var stateMap = await LoadStateMapAsync(questions, null, userId, ct);
+        return SortByStatePriority(questions, stateMap, now);
+    }
 
+    private static List<Questions> SortByStatePriority(
+        List<Questions> questions, Dictionary<string, MemoryStates> stateMap, DateTime now)
+    {
         return questions
             .OrderByDescending(q => stateMap.TryGetValue(q.QuestionId, out var s)
                 && s.NextReviewAt <= now && s.State != MemoryState.Proficient)  // 到期复习优先
@@ -122,9 +192,53 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
             _ => 4,
         };
 
-    /// <summary>Content 内容 JSON（不含答案）</summary>
-    private static string JsonSafeParseContent(string content)
-        => string.IsNullOrWhiteSpace(content) ? "{}" : content;
+    /// <summary>
+    /// 题库-BR-19 防爬：按题型白名单保留展示字段、剔除答案侧字段（answer/keywords/correct_option）
+    /// R1/R2/R3a/R3b → question+cardId；R4 → question+answer+cardId（answer=卡片正文展示载荷特例）；
+    /// O1/O2/O3 → question+options+cardId；O5/O4 → question；非法 JSON 原样透传（容错）
+    /// </summary>
+    private static string StripAnswerFromContent(string content, QuestionType qType)
+    {
+        if (string.IsNullOrWhiteSpace(content))
+            return "{}";
+        try
+        {
+            using var doc = System.Text.Json.JsonDocument.Parse(content);
+            if (doc.RootElement.ValueKind != System.Text.Json.JsonValueKind.Object)
+                return content;  // 非对象 JSON → 原样透传（容错，正常不触发）
+
+            var keep = qType switch
+            {
+                QuestionType.R4 => new[] { "question", "answer", "cardId" },
+                QuestionType.O1 or QuestionType.O2 or QuestionType.O3 => new[] { "question", "options", "cardId" },
+                QuestionType.O5 or QuestionType.O4 => new[] { "question" },
+                _ => new[] { "question", "cardId" },   // R1/R2/R3a/R3b 及未知题型默认
+            };
+
+            var obj = doc.RootElement;
+            var sb = new System.Text.StringBuilder();
+            sb.Append('{');
+            var first = true;
+            foreach (var key in keep)
+            {
+                if (obj.TryGetProperty(key, out var value))
+                {
+                    if (!first)
+                        sb.Append(',');
+                    sb.Append(System.Text.Json.JsonSerializer.Serialize(key));
+                    sb.Append(':');
+                    sb.Append(value.GetRawText());
+                    first = false;
+                }
+            }
+            sb.Append('}');
+            return sb.ToString();
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            return content;  // 非法 JSON → 原样透传（容错）
+        }
+    }
 
     /// <summary>从内容 JSON 提取知识卡片 ID（无则 null）</summary>
     private static string? ExtractCardId(string content)

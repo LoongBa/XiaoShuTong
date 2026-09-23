@@ -59,6 +59,8 @@ type Query {
     @cost(weight: "10")
   createStudySession_Execute(request: CreateStudySessionReqDtoInput): CreateStudySessionResDto
     @cost(weight: "10")
+  endStudySession_Execute(request: EndStudySessionReqDtoInput): EndStudySessionResDto
+    @cost(weight: "10")
   hint_Execute(request: GetHintReqDtoInput): GetHintResDto @cost(weight: "10")
   memoryStates_Execute(request: GetMemoryStatesReqDtoInput): GetMemoryStatesResDto
     @cost(weight: "10")
@@ -462,6 +464,22 @@ type DraftItemDto {
   keywords: [String!]!
   "是否已校验"
   reviewed: Boolean!
+}
+
+"结束学习会话响应 DTO（独立响应形状：回显写回值，供前端结果页兜底）"
+type EndStudySessionResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "会话外部键回显"
+  sessionUid: String!
+  "结束时间（ISO8601 UTC；幂等时回读原值）"
+  endedAt: DateTime
+  "答对数（写回值回显）"
+  correctCount: Int!
+  "总耗时毫秒（写回值回显）"
+  totalTimeMs: Long!
 }
 
 "导出 CSV 响应 DTO"
@@ -1847,6 +1865,14 @@ input CreateTaskReqDtoInput {
 input DeleteAiModelConfigReqDtoInput {
   "目标配置业务键"
   uId: String!
+}
+
+"结束学习会话请求 DTO"
+input EndStudySessionReqDtoInput {
+  "会话外部键（createStudySession 产出）"
+  sessionUid: String!
+  "可选结束原因（NaturalExhaust/UserExit/Timeout 语义标记；V0.5.0 预留不落库，V0.6.0+ 评估加列）"
+  endReason: String
 }
 
 "导出 CSV 请求 DTO"

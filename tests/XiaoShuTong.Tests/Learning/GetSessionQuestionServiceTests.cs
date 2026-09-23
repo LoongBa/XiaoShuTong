@@ -216,4 +216,24 @@ public class GetSessionQuestionServiceTests(XiaoShuTongDomainTestFixture fixture
         Assert.True(result.Success);
         Assert.Equal("Q-43907b", result.QuestionId); // 到期复习优先（BR-20）
     }
+
+    /// <summary>学习-BR-05 语义配合（G-4 联动）：会话已结束 → SESSION_ENDED（3003）</summary>
+    [Fact]
+    public async Task ExecuteAsync_EndedSession_ReturnsSessionEnded()
+    {
+        var userId = SetUser(43908);
+        await SeedBankAsync(null, BankPrivacy.Public, "bank-sq-43908");
+        await SeedQuestionAsync("bank-sq-43908", "Q-43908a");
+        var session = await SeedSessionAsync(userId, "bank-sq-43908");
+
+        // 标记会话已结束（EndStudySession 写入 EndedAt）
+        var sessionsDs = User.Use<StudySessionsDataService>();
+        session.EndedAt = DateTime.UtcNow.AddMinutes(-1);
+        await sessionsDs.EntityUpdateAsync(session, TestContext.Current.CancellationToken);
+
+        var result = await ExecuteAsync(session.UId, "bank-sq-43908");
+
+        Assert.False(result.Success);
+        Assert.Equal(LearningErrorCodes.SessionEnded, result.ErrorCode);
+    }
 }

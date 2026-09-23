@@ -29,6 +29,9 @@ public static class LearningErrorCodes
     /// <summary>答案格式错误 (3002)</summary>
     public const string AnswerFormatInvalid = "ANSWER_FORMAT_INVALID";
 
+    /// <summary>会话已结束 (3003；ADR-009"3002"笔误勘误——3002 已被 AnswerFormatInvalid 占用，以 3003 为准)</summary>
+    public const string SessionEnded = "SESSION_ENDED";
+
     /// <summary>任务不存在 (5101)</summary>
     public const string TaskNotFound = "TASK_NOT_FOUND";
 

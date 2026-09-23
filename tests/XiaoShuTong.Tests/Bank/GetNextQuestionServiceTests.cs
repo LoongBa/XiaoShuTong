@@ -202,4 +202,98 @@ public class GetNextQuestionServiceTests(XiaoShuTongDomainTestFixture fixture, I
         Assert.True(result.Success);
         Assert.Equal(string.Empty, result.QuestionId); // 空结果 = 会话结束信号
     }
+
+    /// <summary>
+    /// 学习-BR-04 混合比：14 复习 + 6 新题，逐题取 → 已答序列复习:新题趋近 7:3 且无连续 ≥4 同池题
+    /// （ADR-009 决策一 + Oracle 评审闭环：按已答复习占比动态池选择，非窗口交错）
+    /// </summary>
+    [Fact]
+    public async Task ExecuteAsync_MixedRatio_InterleavesSevenThree()
+    {
+        var userId = SetUser(35006);
+        await SeedBankAsync(ownerId: null, BankPrivacy.Public, "bank-next-35006");
+        var session = await SeedSessionAsync(userId);
+
+        // 14 道到期复习（NotMastered，NextReviewAt 过去）+ 6 道新题
+        var statesDs = User.Use<MemoryStatesDataService>();
+        var attemptsDs = User.Use<AttemptsDataService>();
+        for (var i = 1; i <= 14; i++)
+        {
+            await SeedQuestionAsync("bank-next-35006", $"Q-35006R{i:D2}");
+            await statesDs.EntityCreateAsync(new MemoryStates
+            {
+                UId = UidGenerator.NewId(),
+                UserId = userId,
+                QuestionId = $"Q-35006R{i:D2}",
+                BankId = "bank-next-35006",
+                State = MemoryState.NotMastered,
+                ConsecutiveCorrect = 0,
+                HistoryAccuracy = 0.5,
+                NextReviewAt = DateTime.UtcNow.AddMinutes(-5),
+            }, TestContext.Current.CancellationToken);
+        }
+        for (var i = 1; i <= 6; i++)
+        {
+            await SeedQuestionAsync("bank-next-35006", $"Q-35006N{i:D2}");
+        }
+
+        var svc = User.Use<GetNextQuestionService>();
+        var answered = new List<string>();
+        for (var step = 0; step < 20; step++)
+        {
+            var result = await svc.ExecuteAsync(new GetNextQuestionReqDto
+            {
+                SessionId = session.UId,
+                BankId = "bank-next-35006",
+            }, TestContext.Current.CancellationToken);
+
+            Assert.True(result.Success);
+            Assert.False(string.IsNullOrEmpty(result.QuestionId), $"第 {step + 1} 题不应为空（题集未耗尽）");
+            answered.Add(result.QuestionId);
+
+            // 记录已答（供下一次调用的已答复习占比判定）
+            await attemptsDs.EntityCreateAsync(new Attempts
+            {
+                UId = UidGenerator.NewId(),
+                UserId = userId,
+                SessionId = session.Id,
+                QuestionId = result.QuestionId,
+                BankId = "bank-next-35006",
+                Scenario = LearningScenario.Memorize,
+                QType = "R1",
+                PreState = MemoryState.NotMastered,
+                PostState = MemoryState.Fuzzy,
+                Result = JudgmentResult.Correct,
+                HintLevel = HintLevel.None,
+                AnsweredAt = DateTime.UtcNow,
+            }, TestContext.Current.CancellationToken);
+        }
+
+        // 第 21 题 → 题集耗尽空结果
+        var final = await svc.ExecuteAsync(new GetNextQuestionReqDto
+        {
+            SessionId = session.UId,
+            BankId = "bank-next-35006",
+        }, TestContext.Current.CancellationToken);
+        Assert.True(final.Success);
+        Assert.Equal(string.Empty, final.QuestionId);
+
+        // 断言 1：复习:新题比例趋近 7:3（复习 14 ± 1 / 新题 6 ∓ 1）
+        var reviewCount = answered.Count(id => id.Contains("R"));
+        var newCount = answered.Count(id => id.Contains("N"));
+        Assert.Equal(14, reviewCount);
+        Assert.Equal(6, newCount);
+
+        // 断言 2：无连续 ≥4 同池题（交错性）
+        var maxRun = 1;
+        var currentRun = 1;
+        for (var i = 1; i < answered.Count; i++)
+        {
+            var isReview = answered[i].Contains("R");
+            var prevIsReview = answered[i - 1].Contains("R");
+            currentRun = isReview == prevIsReview ? currentRun + 1 : 1;
+            maxRun = Math.Max(maxRun, currentRun);
+        }
+        Assert.True(maxRun < 4, $"不应出现连续 ≥4 同池题，实际最大连续 {maxRun}：{string.Join(",", answered)}");
+    }
 }
