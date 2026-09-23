@@ -1,9 +1,11 @@
+using System.Text.Json;
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
 using TKW.Framework.Domain.Transactions;
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.Entities.Learning;
+using XiaoShuTong.Services.Judging;
 using XiaoShuTong.Tools;
 
 namespace XiaoShuTong.Services.Learning;
@@ -77,8 +79,27 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         var preState = state?.State ?? MemoryState.NotMastered;
         var preCc = state?.ConsecutiveCorrect ?? 0;
 
-        // BR-10：判题（关键词命中率；生产为判题服务五键契约，LLM 超时降级本地规则）
-        var (result, confidence) = LocalJudgmentEngine.Judge(request.UserAnswer, question.AnswerKeywords);
+        // BR-10：判题——接入 JudgingEngineService（五键契约：本地规则 + PreferLlm 交统一 AI 网关，BR-32~36）
+        // 题库跨模块桩 AnswerKeywords 为平铺 string[] → 映射 KeywordGroup[]（默认组 weight=1/required=false）
+        var judging = User.Use<JudgingEngineService>();
+        var verdict = await judging.JudgeAsync(new JudgingRequestDto
+        {
+            QuestionId = request.QuestionId,
+            QType = question.QType,
+            Keywords = JsonSerializer.Serialize(
+                question.AnswerKeywords.Select(k => new KeywordGroup([k], Weight: 1d, Required: false)).ToArray()),
+            UserAnswer = request.UserAnswer,
+            HintLevel = request.HintLevel,
+            PreferLlm = true,
+        }, ct);
+        var result = verdict.Result switch
+        {
+            "Correct" => JudgmentResult.Correct,
+            "Partial" => JudgmentResult.Partial,
+            _ => JudgmentResult.Wrong,
+        };
+        var confidence = verdict.Confidence;
+        // 降级标记（verdict.IsDegraded）预留：步骤 1 扩展 SubmitAttemptResDto 时透出（方案 §五）
 
         // BR-16：直接看答案（Full）——不迁移状态、不计入作答记录
         if (hintLevel == HintLevel.Full)

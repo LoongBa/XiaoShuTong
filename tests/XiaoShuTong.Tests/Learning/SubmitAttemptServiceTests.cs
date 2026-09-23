@@ -412,4 +412,27 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.True(result.NextReviewAt > DateTime.UtcNow);
         Assert.Equal(4, result.MatchedKeywords.Length); // 全命中
     }
+
+    // ── 判题引擎接入（步骤 0：JudgingEngineService 替换 LocalJudgmentEngine）──
+
+    /// <summary>
+    /// 接入实证：0.50 命中率边界 → JudgingEngineService 判 Partial（阈值 ≥0.50，BR-35）
+    /// 旧 LocalJudgmentEngine 阈值 0.60 在此边界判 Wrong——本用例锁定"接入已生效"。
+    /// 同时验证 PreferLlm 降级链（平台-BR-04 无启用模型 → Degraded → 保守 Partial，BR-34）不抛异常。
+    /// </summary>
+    [Fact]
+    public async Task ExecuteAsync_JudgingEngineIntegrated_Boundary0050IsPartial()
+    {
+        var userId = SetUser(42050);
+        var session = await SeedSessionAsync(userId);
+        RegisterQuestion("Q-42050", keywords: FullKeywords); // 4 关键词
+
+        // 命中 2/4 = 0.50：JudgingEngine(≥0.50→Partial) vs LocalJudgmentEngine(<0.60→Wrong)
+        var result = await SubmitAsync(userId, session.UId, "Q-42050", "若出其中 星汉灿烂");
+
+        Assert.True(result.Success);
+        Assert.Equal("Partial", result.Result);
+        Assert.Equal(2, result.MatchedKeywords.Length);
+        Assert.Equal(2, result.MissingKeywords.Length);
+    }
 }
