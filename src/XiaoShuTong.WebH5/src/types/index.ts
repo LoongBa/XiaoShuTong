@@ -46,11 +46,15 @@ export interface KnowledgePoint {
   reviewCount: number;
 }
 
+// 题目（题型键对齐题库/schema/题型注册表.json：R1 补全记忆 / R2 逆向补全 / R3a 段落默写 / R3b 整篇默写
+// / R4 知识卡片(display_only) / O1 单选 / O2 多选 / O3 判断 / O4 连线 / O5 填空）
+export type QuestionTypeKey = 'R1' | 'R2' | 'R3a' | 'R3b' | 'R4' | 'O1' | 'O2' | 'O3' | 'O4' | 'O5';
+
 // 题目
 export interface Question {
   id: string;
   taskId: string;
-  type: 'R1' | 'R2' | 'R3' | 'O1' | 'O2';
+  type: QuestionTypeKey;
   content: string;
   hint?: string;
   answer: string;

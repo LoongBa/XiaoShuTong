@@ -32,6 +32,7 @@ export const Query = {
   setRankEnabled_Execute          : { field: 'setRankEnabled_Execute', type: 'query' } as const,
   submitJudgmentFeedback_Execute  : { field: 'submitJudgmentFeedback_Execute', type: 'query' } as const,
   createStudySession_Execute      : { field: 'createStudySession_Execute', type: 'query' } as const,
+  endStudySession_Execute         : { field: 'endStudySession_Execute', type: 'query' } as const,
   hint_Execute                    : { field: 'hint_Execute', type: 'query' } as const,
   memoryStates_Execute            : { field: 'memoryStates_Execute', type: 'query' } as const,
   reviewQueue_Execute             : { field: 'reviewQueue_Execute', type: 'query' } as const,
@@ -101,6 +102,7 @@ export const operationSelection: Record<string, string> = {
   'dashboardReport_Execute': 'success errorCode subscription { status trialEndAt } todayCompleted streakDays weekProgress { learnedCount accuracy } subjectsMastery { subject accuracy } locked',
   'deleteModel': 'success errorCode removed',
   'draftBatch_Execute': 'success errorCode batchId bankId items { questionId stem answer subject knowledgePoint keywords reviewed }',
+  'endStudySession_Execute': 'success errorCode sessionUid endedAt correctCount totalTimeMs',
   'exportRosterCsv_Execute': 'success errorCode csvFileUrl expiresAt columns',
   'exportWeeklyReport_Execute': 'success errorCode weekStart weekEnd taskCount memberCount totalAssignments completedCount executionRate avgProgress learnedCount memberReports { userId nickname executionRate avgProgress learnedCount } csvFileUrl',
   'generateInviteCodes_Execute': 'success errorCode generatedCount',
@@ -487,6 +489,20 @@ export interface CreateStudySessionReqDtoInput {
   sessionType: string;
   taskId: number | null;
   questionCount: number;
+}
+
+export interface EndStudySessionResDto {
+  success: boolean;
+  errorCode: string | null;
+  sessionUid: string;
+  endedAt: string | null;
+  correctCount: number;
+  totalTimeMs: number;
+}
+
+export interface EndStudySessionReqDtoInput {
+  sessionUid: string;
+  endReason: string | null;
 }
 
 export interface GetHintResDto {
@@ -1527,6 +1543,10 @@ export interface CreateStudySession_ExecuteArgs {
   request?: CreateStudySessionReqDtoInput;
 }
 
+export interface EndStudySession_ExecuteArgs {
+  request?: EndStudySessionReqDtoInput;
+}
+
 export interface Hint_ExecuteArgs {
   request?: GetHintReqDtoInput;
 }
@@ -1741,6 +1761,10 @@ export interface DashboardReport_ExecuteService {
 
 export interface DraftBatch_ExecuteService {
   draftBatch_Execute(args?: DraftBatch_ExecuteArgs): ChainablePromise<GetDraftBatchResDto>;
+}
+
+export interface EndStudySession_ExecuteService {
+  endStudySession_Execute(args?: EndStudySession_ExecuteArgs): ChainablePromise<EndStudySessionResDto>;
 }
 
 export interface ExportRosterCsv_ExecuteService {

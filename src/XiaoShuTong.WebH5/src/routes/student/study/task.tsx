@@ -3,16 +3,15 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useAppStore } from '@/store/appStore';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { TaskProgressBar } from '@/components/TaskProgressBar';
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
+import { QuestionCard } from '@/components/QuestionCard';
 import { useAttemptFlow } from '@/hooks/use-attempt-flow';
 import { Tkwf } from '@tkwf/tsclient';
-import type { GetNextQuestionResDto, SessionQuestion_ExecuteService, Hint_ExecuteService } from '@/gql/ts-client.g';
+import type { GetNextQuestionResDto, SessionQuestion_ExecuteService, Hint_ExecuteService, EndStudySession_ExecuteService } from '@/gql/ts-client.g';
 import { serverStateToMemoryState } from '@/lib/memory-state';
 import {
   ArrowLeft,
-  Mic,
   Lightbulb,
   CheckCircle2,
   XCircle,
@@ -76,7 +75,6 @@ function TaskStudyPage() {
 
   const { submitAttempt, isSubmitting: isSubmittingAttempt, error: submitError } = useAttemptFlow();
 
-  const [userAnswer, setUserAnswer] = useState('');
   const [hintLevel, setHintLevel] = useState<HintLevel>('None');
   const [serverHint, setServerHint] = useState<string | null>(null);
   const [question, setQuestion] = useState<GetNextQuestionResDto | null>(null);
@@ -84,11 +82,26 @@ function TaskStudyPage() {
   const [showNextButton, setShowNextButton] = useState(false);
   const [initStatus, setInitStatus] = useState<InitStatus>('idle');
   const [degradedNotice, setDegradedNotice] = useState(false);
+  const [questionKey, setQuestionKey] = useState(0); // QuestionCard 重挂载键（下一题/重试清空输入）
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelledRef = useRef(false);
   const bankIdRef = useRef<string>(DEFAULT_BANK_ID);
   const questionStartRef = useRef<number>(Date.now());
   const nextTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const endedRef = useRef(false); // 防止 endStudy fire-and-forget 重复调用
+
+  // 结束会话（T9：题集耗尽/中途退出 → endStudySession_Execute 写 EndedAt；fire-and-forget，幂等后端）
+  const endStudy = useCallback(async (endReason: 'NaturalExhaust' | 'UserExit' = 'UserExit') => {
+    if (!sessionUid || endedRef.current) return;
+    endedRef.current = true;
+    try {
+      await Tkwf.User.Use<EndStudySession_ExecuteService>().endStudySession_Execute({
+        request: { sessionUid, endReason },
+      });
+    } catch {
+      // fire-and-forget：失败不阻塞跳转（后端幂等 + BR-05 续做兜底，悬挂会话可继续）
+    }
+  }, [sessionUid]);
 
   // 检查登录状态
   useEffect(() => {
@@ -128,8 +141,9 @@ function TaskStudyPage() {
         setInitStatus('error');
         return;
       }
-      // 题集耗尽（BR-18：success=true 且 questionId 为空）→ 直接结果页
+      // 题集耗尽（BR-18：success=true 且 questionId 为空）→ 先 endStudy 再直接结果页
       if (!firstQuestion.questionId) {
+        await endStudy('NaturalExhaust');
         navigate({ to: '/student/study/result' });
         return;
       }
@@ -139,15 +153,17 @@ function TaskStudyPage() {
     } catch {
       setInitStatus('error');
     }
-  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, startSession, navigate]);
+  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, startSession, navigate, endStudy]);
 
   useEffect(() => {
     void initSession();
     return () => {
       cancelledRef.current = true;
       if (nextTimerRef.current) clearTimeout(nextTimerRef.current);
+      // 中途退出：fire-and-forget 结束会话（beforeunload 移动端受限；失败由 BR-05 续做兜底）
+      void endStudy('UserExit');
     };
-  }, [initSession]);
+  }, [initSession, endStudy]);
 
   // 自动聚焦输入框
   useEffect(() => {
@@ -169,7 +185,7 @@ function TaskStudyPage() {
       setQuestion(res);
       nextQuestion(); // 服务端已答排除（BR-18/GetNextQuestion Callee），本地索引跟随推进
       questionStartRef.current = Date.now();
-      setUserAnswer('');
+      setQuestionKey((k) => k + 1); // 重挂 QuestionCard 清空输入
       setHintLevel('None');
       setServerHint(null);
       setFeedback(null);
@@ -184,6 +200,7 @@ function TaskStudyPage() {
   const goNext = async () => {
     const result = await fetchNextQuestion();
     if (result === 'exhausted') {
+      await endStudy('NaturalExhaust');
       navigate({ to: '/student/study/result' });
     } else if (result === 'error') {
       setFeedback({ type: 'error', message: '下一题加载失败，请重试' });
@@ -191,9 +208,10 @@ function TaskStudyPage() {
   };
 
   // 判题接线（T6）：useAttemptFlow 四态驱动，替换本地 includes() 判题
-  const handleSubmit = async () => {
+  // QuestionCard 分发各题型输入 → answer 字符串（R 系列文本 / O 系列选中标识 "B" / "A,B,D"）
+  const handleSubmit = async (answer: string) => {
     if (!question || !sessionUid || isSubmittingAttempt) return;
-    const trimmed = userAnswer.trim();
+    const trimmed = answer.trim();
     if (!trimmed) return;
 
     const { action, response } = await submitAttempt({
@@ -252,10 +270,10 @@ function TaskStudyPage() {
   // 再试一次（guidance / error 分支）：清反馈、保持当前题与 hintLevel 档位
   const handleRetry = () => {
     if (nextTimerRef.current) clearTimeout(nextTimerRef.current);
-    setUserAnswer('');
     setFeedback(null);
     setShowNextButton(false);
     setDegradedNotice(false);
+    setQuestionKey((k) => k + 1); // 重挂 QuestionCard 清空输入
     questionStartRef.current = Date.now();
     if (inputRef.current) inputRef.current.focus();
   };
@@ -336,7 +354,10 @@ function TaskStudyPage() {
         <div className="flex items-center gap-3">
           <button
             type="button"
-            onClick={() => navigate({ to: '/student/home' })}
+            onClick={() => {
+              void endStudy('UserExit'); // 中途退出：fire-and-forget 结束会话
+              navigate({ to: '/student/home' });
+            }}
             className="p-2 -ml-2 rounded-full hover:bg-muted transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -368,23 +389,12 @@ function TaskStudyPage() {
       {/* 题目区 */}
       <div className="p-4">
         <Card className="p-6 min-h-[200px] flex flex-col items-center justify-center">
-          {/* 题型标签 */}
-          <span className="text-xs text-muted-foreground mb-4 px-2 py-1 bg-muted rounded-full">
-            {question?.type === 'R1' ? '上句接下句' :
-             question?.type === 'R2' ? '下句接上句' : '段落默写'}
-          </span>
-
-          {/* 题目内容（服务端展示镜像，不含答案与关键词，BR-19） */}
-          <p className="question-text text-foreground">
-            {question?.content}
-          </p>
-
           {/* 提示按钮（T7：None→Partial→Full 逐级加深） */}
-          {!feedback && hintLevel !== 'Full' && (
+          {!feedback && hintLevel !== 'Full' && question && (
             <button
               type="button"
               onClick={handleHint}
-              className="mt-4 text-xs text-muted-foreground flex items-center gap-1 hover:text-primary transition-colors"
+              className="mb-4 text-xs text-muted-foreground flex items-center gap-1 hover:text-primary transition-colors self-start"
             >
               <Lightbulb className="w-3 h-3" />
               {hintLevel === 'None' ? '想不起来？' : '再给点提示'}
@@ -393,60 +403,33 @@ function TaskStudyPage() {
 
           {/* 提示内容（服务端 hint，≤20 字 BR-29） */}
           {serverHint && !feedback && (
-            <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+            <div className="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg self-start">
               <p className="text-sm text-amber-800 flex items-start gap-2">
                 <Lightbulb className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 {serverHint}
               </p>
             </div>
           )}
+
+          {/* 题目 + 答题（QuestionCard 按题型分发：R1/R2 文本、R3a/R3b textarea、O1 单选、O2 多选、
+              O3 对错双键、O5 填空、R4 展示；含语音输入 use-voice-input） */}
+          {question && (
+            <QuestionCard
+              key={questionKey}
+              type={question.type}
+              content={question.content}
+              onSubmit={handleSubmit}
+              submitting={isSubmittingAttempt}
+              inputRef={inputRef}
+            />
+          )}
         </Card>
 
-        {/* 答题区 */}
-        {!feedback && (
-          <div className="mt-6 space-y-4">
-            <div className="relative">
-              <Input
-                ref={inputRef}
-                value={userAnswer}
-                onChange={(e) => setUserAnswer(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
-                placeholder="请输入答案..."
-                className="h-14 text-base pr-12"
-                disabled={isSubmittingAttempt}
-              />
-              <button
-                type="button"
-                onClick={() => {}}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Mic className="w-5 h-5" />
-              </button>
-            </div>
-
-            <Button
-              onClick={handleSubmit}
-              disabled={!userAnswer.trim() || isSubmittingAttempt}
-              className="w-full h-12 text-base"
-              size="lg"
-            >
-              {isSubmittingAttempt ? (
-                <>
-                  <Sparkles className="mr-2 h-4 w-4 animate-spin" />
-                  判题中…
-                </>
-              ) : (
-                '提交'
-              )}
-            </Button>
-
-            {/* 域级失败（success=false / RPC 抛错）→ 停留当前题，提示 + 再试（T6 error 分支） */}
-            {submitError && (
-              <p className="text-center text-xs text-destructive">
-                {submitError}，请再试一次
-              </p>
-            )}
-          </div>
+        {/* 域级失败（success=false / RPC 抛错）→ 停留当前题，提示 + 再试（T6 error 分支） */}
+        {submitError && !feedback && (
+          <p className="text-center text-xs text-destructive mt-4">
+            {submitError}，请再试一次
+          </p>
         )}
 
         {/* 反馈区（四态渲染） */}

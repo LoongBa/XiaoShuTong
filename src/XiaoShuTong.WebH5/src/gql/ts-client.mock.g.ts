@@ -4,7 +4,7 @@
 import type { MockHandler, ScenarioConfig } from "@tkwf/tsclient-mock";
 import { createMockDb, defineMock, createMockFactory } from "@tkwf/tsclient-mock";
 import { Query, Mutation } from "./ts-client.g.js";
-import type { AcceptBuddyInvite_ExecuteArgs, ActivateMember_ExecuteArgs, LoginByContextArgs, CreateBank_ExecuteArgs, BankDetail_ExecuteArgs, ListBanks_ExecuteArgs, RemoveBuddy_ExecuteArgs, BuddyRank_ExecuteArgs, CancelSubscription_ExecuteArgs, ChangePasswordSecureArgs, DashboardReport_ExecuteArgs, DraftBatch_ExecuteArgs, ExportRosterCsv_ExecuteArgs, ExportWeeklyReport_ExecuteArgs, GenerateInviteCodes_ExecuteArgs, CreateGroup_ExecuteArgs, ListGroups_ExecuteArgs, Heatmap_ExecuteArgs, Hint_ExecuteArgs, ImportQuestions_ExecuteArgs, ImportRoster_ExecuteArgs, InviteBuddy_ExecuteArgs, JoinPkMatch_ExecuteArgs, KnowledgeCard_ExecuteArgs, RemoveMemberArgs, MembersArgs, MemoryStates_ExecuteArgs, CreateModelArgs, UpdateModelArgs, DeleteModelArgs, ListModelsArgs, MyRanking_ExecuteArgs, ListMyTasks_ExecuteArgs, OwnerDashboard_ExecuteArgs, CreateParentRelation_ExecuteArgs, PeriodReport_ExecuteArgs, CreatePkMatch_ExecuteArgs, PkPlayerStatsViewArgs, PkPlayerStatsView_aggregateArgs, PkResult_ExecuteArgs, PkStats_ExecuteArgs, PreprocessContent_ExecuteArgs, ProgressReport_ExecuteArgs, Rankings_ExecuteArgs, RegisterSecureArgs, RejectBuddyInvite_ExecuteArgs, ReviewBackingPoints_ExecuteArgs, ReviewQueue_ExecuteArgs, RosterPreview_ExecuteArgs, SessionQuestion_ExecuteArgs, SessionResult_ExecuteArgs, SetEnabledArgs, SetRankEnabled_ExecuteArgs, StartTrial_ExecuteArgs, CreateStudySession_ExecuteArgs, SubmitAttempt_ExecuteArgs, SubmitJudgmentFeedback_ExecuteArgs, SubmitPkAnswer_ExecuteArgs, CreateTask_ExecuteArgs, TaskDetail_ExecuteArgs, ListTasks_ExecuteArgs, WeaknessReport_ExecuteArgs, WrongQuestions_ExecuteArgs, AcceptBuddyInviteResDto, ActivateMemberResDto, LoginPayload, CreateBankResDto, GetBankDetailResDto, ListBanksResDto, ListBuddiesResDto, RemoveBuddyResDto, GetBuddyRankResDto, CancelSubscriptionResDto, RegisterResult, ListChildrenResDto, GetDashboardReportResDto, GetDraftBatchResDto, ExportRosterCsvResDto, ExportWeeklyReportResDto, GenerateInviteCodesResDto, CreateGroupResDto, ListGroupsResDto, GetHeatmapResDto, GetHintResDto, ImportQuestionsResDto, ImportRosterResDto, InviteBuddyResDto, JoinPkMatchResDto, GetKnowledgeCardResDto, RemoveMemberResDto, GroupDetailResDto, GetMemoryStatesResDto, CreateAiModelConfigResDto, UpdateAiModelConfigResDto, DeleteAiModelConfigResDto, ListAiModelConfigResDto, GetMyRankingResDto, ListMyTasksResDto, GetOwnerDashboardResDto, CreateParentRelationResDto, GetPeriodReportResDto, CreatePkMatchResDto, PkPlayerStatsViewConnection, PkPlayerStatsViewAggregate, GetPkResultResDto, GetPkStatsResDto, PreprocessContentResDto, GetProgressReportResDto, GetRankingsResDto, RejectBuddyInviteResDto, ChallengeResponse, ReviewBackingPointsResDto, GetReviewQueueResDto, RosterPreviewResDto, GetNextQuestionResDto, GetSessionResultResDto, SetEnabledResDto, SetRankEnabledResDto, StartTrialResDto, GetStreakResDto, CreateStudySessionResDto, SubmitAttemptResDto, SubmitJudgmentFeedbackResDto, SubmitPkAnswerResDto, ListSubscriptionsResDto, CreateTaskResDto, GetTaskDetailResDto, ListTasksResDto, GetWeaknessReportResDto, GetWrongQuestionsResDto, PkPlayerStatsView, BanksDto, TopicNodeDto, QuestionsDto, DraftItemDto, BankListItemDto, BuddyListItemDto, GroupListItemDto, MemberItemDto, MemoryStatesDto, BlockedPointDto, WrongQuestionsDto, SubscriptionBriefDto, WeekProgressDto, SubjectMasteryDto, DailyStatsDto, VsLastWeekDto, ParentWeakPointDto, ChildItemDto, SubscriptionItemDto, PkPlayerResultDto, AiModelConfigDto, RankingItemDto, WeakPointDto, WeeklyMemberReportDto, DashboardTaskDto, TasksDto, TaskAssignmentsDto, MyTaskItemDto, TaskListItemDto, PkPlayerStatsViewSumFields, PkPlayerStatsViewAvgFields, PkPlayerStatsViewMinFields, PkPlayerStatsViewMaxFields, ExtensionEntry, RankSnapshotsDto, PkPlayerStatsViewFields } from "./ts-client.g.js";
+import type { AcceptBuddyInvite_ExecuteArgs, ActivateMember_ExecuteArgs, LoginByContextArgs, CreateBank_ExecuteArgs, BankDetail_ExecuteArgs, ListBanks_ExecuteArgs, RemoveBuddy_ExecuteArgs, BuddyRank_ExecuteArgs, CancelSubscription_ExecuteArgs, ChangePasswordSecureArgs, DashboardReport_ExecuteArgs, DraftBatch_ExecuteArgs, EndStudySession_ExecuteArgs, ExportRosterCsv_ExecuteArgs, ExportWeeklyReport_ExecuteArgs, GenerateInviteCodes_ExecuteArgs, CreateGroup_ExecuteArgs, ListGroups_ExecuteArgs, Heatmap_ExecuteArgs, Hint_ExecuteArgs, ImportQuestions_ExecuteArgs, ImportRoster_ExecuteArgs, InviteBuddy_ExecuteArgs, JoinPkMatch_ExecuteArgs, KnowledgeCard_ExecuteArgs, RemoveMemberArgs, MembersArgs, MemoryStates_ExecuteArgs, CreateModelArgs, UpdateModelArgs, DeleteModelArgs, ListModelsArgs, MyRanking_ExecuteArgs, ListMyTasks_ExecuteArgs, OwnerDashboard_ExecuteArgs, CreateParentRelation_ExecuteArgs, PeriodReport_ExecuteArgs, CreatePkMatch_ExecuteArgs, PkPlayerStatsViewArgs, PkPlayerStatsView_aggregateArgs, PkResult_ExecuteArgs, PkStats_ExecuteArgs, PreprocessContent_ExecuteArgs, ProgressReport_ExecuteArgs, Rankings_ExecuteArgs, RegisterSecureArgs, RejectBuddyInvite_ExecuteArgs, ReviewBackingPoints_ExecuteArgs, ReviewQueue_ExecuteArgs, RosterPreview_ExecuteArgs, SessionQuestion_ExecuteArgs, SessionResult_ExecuteArgs, SetEnabledArgs, SetRankEnabled_ExecuteArgs, StartTrial_ExecuteArgs, CreateStudySession_ExecuteArgs, SubmitAttempt_ExecuteArgs, SubmitJudgmentFeedback_ExecuteArgs, SubmitPkAnswer_ExecuteArgs, CreateTask_ExecuteArgs, TaskDetail_ExecuteArgs, ListTasks_ExecuteArgs, WeaknessReport_ExecuteArgs, WrongQuestions_ExecuteArgs, AcceptBuddyInviteResDto, ActivateMemberResDto, LoginPayload, CreateBankResDto, GetBankDetailResDto, ListBanksResDto, ListBuddiesResDto, RemoveBuddyResDto, GetBuddyRankResDto, CancelSubscriptionResDto, RegisterResult, ListChildrenResDto, GetDashboardReportResDto, GetDraftBatchResDto, EndStudySessionResDto, ExportRosterCsvResDto, ExportWeeklyReportResDto, GenerateInviteCodesResDto, CreateGroupResDto, ListGroupsResDto, GetHeatmapResDto, GetHintResDto, ImportQuestionsResDto, ImportRosterResDto, InviteBuddyResDto, JoinPkMatchResDto, GetKnowledgeCardResDto, RemoveMemberResDto, GroupDetailResDto, GetMemoryStatesResDto, CreateAiModelConfigResDto, UpdateAiModelConfigResDto, DeleteAiModelConfigResDto, ListAiModelConfigResDto, GetMyRankingResDto, ListMyTasksResDto, GetOwnerDashboardResDto, CreateParentRelationResDto, GetPeriodReportResDto, CreatePkMatchResDto, PkPlayerStatsViewConnection, PkPlayerStatsViewAggregate, GetPkResultResDto, GetPkStatsResDto, PreprocessContentResDto, GetProgressReportResDto, GetRankingsResDto, RejectBuddyInviteResDto, ChallengeResponse, ReviewBackingPointsResDto, GetReviewQueueResDto, RosterPreviewResDto, GetNextQuestionResDto, GetSessionResultResDto, SetEnabledResDto, SetRankEnabledResDto, StartTrialResDto, GetStreakResDto, CreateStudySessionResDto, SubmitAttemptResDto, SubmitJudgmentFeedbackResDto, SubmitPkAnswerResDto, ListSubscriptionsResDto, CreateTaskResDto, GetTaskDetailResDto, ListTasksResDto, GetWeaknessReportResDto, GetWrongQuestionsResDto, PkPlayerStatsView, BanksDto, TopicNodeDto, QuestionsDto, DraftItemDto, BankListItemDto, BuddyListItemDto, GroupListItemDto, MemberItemDto, MemoryStatesDto, BlockedPointDto, WrongQuestionsDto, SubscriptionBriefDto, WeekProgressDto, SubjectMasteryDto, DailyStatsDto, VsLastWeekDto, ParentWeakPointDto, ChildItemDto, SubscriptionItemDto, PkPlayerResultDto, AiModelConfigDto, RankingItemDto, WeakPointDto, WeeklyMemberReportDto, DashboardTaskDto, TasksDto, TaskAssignmentsDto, MyTaskItemDto, TaskListItemDto, PkPlayerStatsViewSumFields, PkPlayerStatsViewAvgFields, PkPlayerStatsViewMinFields, PkPlayerStatsViewMaxFields, ExtensionEntry, RankSnapshotsDto, PkPlayerStatsViewFields } from "./ts-client.g.js";
 
 
 // ── 内存数据库（骨架，Agent 填充初始数据） ──
@@ -23,6 +23,7 @@ export const db = createMockDb({
   listChildrenResDtos: [] satisfies ListChildrenResDto[],  // → API: listChildren_Execute
   getDashboardReportResDtos: [] satisfies GetDashboardReportResDto[],  // → API: dashboardReport_Execute
   getDraftBatchResDtos: [] satisfies GetDraftBatchResDto[],  // → API: draftBatch_Execute
+  endStudySessionResDtos: [] satisfies EndStudySessionResDto[],  // → API: endStudySession_Execute
   exportRosterCsvResDtos: [] satisfies ExportRosterCsvResDto[],  // → API: exportRosterCsv_Execute
   exportWeeklyReportResDtos: [] satisfies ExportWeeklyReportResDto[],  // → API: exportWeeklyReport_Execute
   generateInviteCodesResDtos: [] satisfies GenerateInviteCodesResDto[],  // → API: generateInviteCodes_Execute
@@ -346,6 +347,14 @@ export const CreateStudySessionResDtoSchema = {
     errorCode: { kind: "string" },
     sessionUid: { kind: "string" },
     questionCount: { kind: "number" }
+} as const;
+export const EndStudySessionResDtoSchema = {
+    success: { kind: "boolean" },
+    errorCode: { kind: "string" },
+    sessionUid: { kind: "string" },
+    endedAt: { kind: "date" },
+    correctCount: { kind: "number" },
+    totalTimeMs: { kind: "number" }
 } as const;
 export const GetHintResDtoSchema = {
     success: { kind: "boolean" },
@@ -1290,6 +1299,7 @@ export const defineGroupDetailResDto = createMockFactory<GroupDetailResDto>({ _t
 export const defineSetRankEnabledResDto = createMockFactory<SetRankEnabledResDto>({ _types: SetRankEnabledResDtoSchema });
 export const defineSubmitJudgmentFeedbackResDto = createMockFactory<SubmitJudgmentFeedbackResDto>({ _types: SubmitJudgmentFeedbackResDtoSchema });
 export const defineCreateStudySessionResDto = createMockFactory<CreateStudySessionResDto>({ _types: CreateStudySessionResDtoSchema });
+export const defineEndStudySessionResDto = createMockFactory<EndStudySessionResDto>({ _types: EndStudySessionResDtoSchema });
 export const defineGetHintResDto = createMockFactory<GetHintResDto>({ _types: GetHintResDtoSchema });
 export const defineGetMemoryStatesResDto = createMockFactory<GetMemoryStatesResDto>({ _types: GetMemoryStatesResDtoSchema });
 export const defineGetReviewQueueResDto = createMockFactory<GetReviewQueueResDto>({ _types: GetReviewQueueResDtoSchema });
@@ -1384,6 +1394,7 @@ export const scenarios = {
     listChildrenResDtos: defineListChildrenResDto.makeN(5),  // → API: listChildren_Execute
     getDashboardReportResDtos: defineGetDashboardReportResDto.makeN(5),  // → API: dashboardReport_Execute
     getDraftBatchResDtos: defineGetDraftBatchResDto.makeN(5),  // → API: draftBatch_Execute
+    endStudySessionResDtos: defineEndStudySessionResDto.makeN(5),  // → API: endStudySession_Execute
     exportRosterCsvResDtos: defineExportRosterCsvResDto.makeN(5),  // → API: exportRosterCsv_Execute
     exportWeeklyReportResDtos: defineExportWeeklyReportResDto.makeN(5),  // → API: exportWeeklyReport_Execute
     generateInviteCodesResDtos: defineGenerateInviteCodesResDto.makeN(5),  // → API: generateInviteCodes_Execute
@@ -1453,6 +1464,7 @@ export const scenarios = {
     listChildrenResDtos: [] satisfies ListChildrenResDto[],
     getDashboardReportResDtos: [] satisfies GetDashboardReportResDto[],
     getDraftBatchResDtos: [] satisfies GetDraftBatchResDto[],
+    endStudySessionResDtos: [] satisfies EndStudySessionResDto[],
     exportRosterCsvResDtos: [] satisfies ExportRosterCsvResDto[],
     exportWeeklyReportResDtos: [] satisfies ExportWeeklyReportResDto[],
     generateInviteCodesResDtos: [] satisfies GenerateInviteCodesResDto[],
@@ -1755,6 +1767,15 @@ export async function validateCreateStudySessionResDto(data: unknown) {
   try {
     const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
     return mockFieldSchemaToZod({ kind: "object", fields: { ...CreateStudySessionResDtoSchema } }).safeParse(data);
+  } catch {
+    throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
+  }
+};
+
+export async function validateEndStudySessionResDto(data: unknown) {
+  try {
+    const { mockFieldSchemaToZod } = await import("@tkwf/tsclient-mock");
+    return mockFieldSchemaToZod({ kind: "object", fields: { ...EndStudySessionResDtoSchema } }).safeParse(data);
   } catch {
     throw new Error("zod is required for runtime validation. Run: npm install zod@^4");
   }
@@ -2573,6 +2594,14 @@ export const handlers = {
     result: GetDraftBatchResDto;
   }>((_vars) => {
     return db.queryOne("getDraftBatchResDtos") as GetDraftBatchResDto;
+  }),
+  // endStudySession_Execute (query, 单条)
+  endStudySession_Execute: defineMock<{
+    field: "endStudySession_Execute";
+    args: EndStudySession_ExecuteArgs;
+    result: EndStudySessionResDto;
+  }>((_vars) => {
+    return db.queryOne("endStudySessionResDtos") as EndStudySessionResDto;
   }),
   // exportRosterCsv_Execute (query, 单条)
   exportRosterCsv_Execute: defineMock<{

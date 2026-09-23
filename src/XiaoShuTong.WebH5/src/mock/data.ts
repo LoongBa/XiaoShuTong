@@ -172,44 +172,68 @@ export const initialData: DatasetSeed = {
     },
   ],
 
-  // getNextQuestionResDtos — 6 条（5 首唐诗 + 1 条耗尽空结果；content 为不含答案的展示镜像，BR-19）
+  // getNextQuestionResDtos — 8 条（覆盖 R1/R2/R3a/O1/O2/O3 + 1 条耗尽空结果；
+  // content 为 JSON 形态对齐真实契约（BR-19 白名单：question/options/cardId，无 answer/keywords/correct_option））
   getNextQuestionResDtos: [
     {
       success: true, errorCode: null,
       questionId: "q-1", type: "R2",
-      content: "黄河远上白云间，____",
+      content: '{"question":"黄河远上白云间，____","cardId":"kc-001"}',
       knowledgePoint: "凉州词二首·其一", knowledgeCardId: "kc-001",
     },
     {
       success: true, errorCode: null,
       questionId: "q-2", type: "R1",
-      content: "____，春风不度玉门关",
+      content: '{"question":"____，春风不度玉门关","cardId":"kc-002"}',
       knowledgePoint: "凉州词二首·其一", knowledgeCardId: "kc-002",
     },
     {
       success: true, errorCode: null,
-      questionId: "q-3", type: "R2",
-      content: "白日依山尽，____",
+      questionId: "q-3", type: "R3a",
+      content: '{"question":"请默写《登鹳雀楼》全诗（段落默写）","cardId":"kc-003"}',
       knowledgePoint: "登鹳雀楼", knowledgeCardId: "kc-003",
     },
     {
       success: true, errorCode: null,
-      questionId: "q-4", type: "R1",
-      content: "____，更上一层楼",
-      knowledgePoint: "登鹳雀楼", knowledgeCardId: "kc-004",
+      questionId: "q-4", type: "O1",
+      content: '{"question":"《静夜思》中\\"举头望明月\\"的下一句是？","options":["低头思故乡","疑是地上霜","举杯邀明月","对影成三人"],"cardId":"kc-004"}',
+      knowledgePoint: "静夜思", knowledgeCardId: "kc-004",
     },
     {
       success: true, errorCode: null,
-      questionId: "q-5", type: "R2",
-      content: "床前明月光，____",
-      knowledgePoint: "静夜思", knowledgeCardId: "kc-005",
+      questionId: "q-5", type: "O2",
+      content: '{"question":"下列哪些诗句出自《将进酒》？（多选）","options":["天生我材必有用","千金散尽还复来","会当凌绝顶","黄河之水天上来"],"cardId":"kc-005"}',
+      knowledgePoint: "将进酒", knowledgeCardId: "kc-005",
     },
-    // 条 6：题集耗尽（success=true 且 questionId 空 = 会话结束信号，BR-18 → task 页导航 result）
+    {
+      success: true, errorCode: null,
+      questionId: "q-6", type: "O3",
+      content: '{"question":"\\"飞流直下三千尺，疑是银河落九天\\"描写的是庐山瀑布。","options":["对","错"],"cardId":"kc-006"}',
+      knowledgePoint: "望庐山瀑布", knowledgeCardId: "kc-006",
+    },
+    {
+      success: true, errorCode: null,
+      questionId: "q-7", type: "R2",
+      content: '{"question":"床前明月光，____","cardId":"kc-007"}',
+      knowledgePoint: "静夜思", knowledgeCardId: "kc-007",
+    },
+    // 条 8：题集耗尽（success=true 且 questionId 空 = 会话结束信号，BR-18 → task 页 endStudy + 导航 result）
     {
       success: true, errorCode: null,
       questionId: "", type: null,
       content: "",
       knowledgePoint: null, knowledgeCardId: null,
+    },
+  ],
+
+  // endStudySessionResDtos — 1 条（结束会话：写回 EndedAt/CorrectCount/TotalTimeMs；幂等回读）
+  endStudySessionResDtos: [
+    {
+      success: true, errorCode: null,
+      sessionUid: "sess-001",
+      endedAt: new Date().toISOString(),
+      correctCount: 3,
+      totalTimeMs: 12500,
     },
   ],
 
