@@ -22,6 +22,9 @@ internal class KnowledgeMasteryAggregationJob(DomainUser<XiaoShuTongUserInfo> us
     private KnowledgeMasteryDataService? _masteryDs;
     private KnowledgeMasteryDataService MasteryDs => _masteryDs ??= User.Use<KnowledgeMasteryDataService>();
 
+    private QuestionMetaProvider? _questionMetaProvider;
+    private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
+
     /// <summary>
     /// 扫描作答 → 按 Subject×KnowledgePoint 聚合 → Upsert KnowledgeMastery
     /// </summary>
@@ -49,9 +52,12 @@ internal class KnowledgeMasteryAggregationJob(DomainUser<XiaoShuTongUserInfo> us
 
     private async Task AggregateUserAsync(long userId, List<Attempts> userAttempts, CancellationToken ct)
     {
+        // 真实题库读取（ADR-008 决策二）：批量预取题目元数据（Subject 经 BankId→Subject 映射，防 N+1 join）
+        var metaMap = await QuestionMeta.GetManyAsync(userAttempts.Select(a => a.QuestionId).Distinct(), ct);
         var grouped = userAttempts
-            .GroupBy(a => (Subject: LearningQuestionRegistry.Get(a.QuestionId)?.Subject ?? string.Empty,
-                           Point: LearningQuestionRegistry.Get(a.QuestionId)?.KnowledgePoint ?? string.Empty))
+            .GroupBy(a => metaMap.TryGetValue(a.QuestionId, out var meta)
+                ? (Subject: meta.Subject, Point: meta.KnowledgePoint)
+                : (Subject: string.Empty, Point: string.Empty))
             .Where(g => !string.IsNullOrEmpty(g.Key.Subject) && !string.IsNullOrEmpty(g.Key.Point));
 
         foreach (var group in grouped)

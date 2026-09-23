@@ -17,7 +17,7 @@ namespace XiaoShuTong.Services.Learning;
 /// </summary>
 /// <remarks>
 /// BR-43 空错题本正常返回 | BR-44 仅当前用户（RLS）| BR-45 Mastered/Subject 过滤可空 | BR-46 参数校验
-/// 富化：KnowledgePoint（题库注册表）+ Summary（题库域题目摘要，跨域按行富化，批处理防 N+1）。
+/// 富化：KnowledgePoint（真实题库读取，QuestionMetaProvider）+ Summary（题库域题目摘要，批处理防 N+1）。
 /// 注：2026-09-09 合并 Stats 版 GetWrongQuestionsService（原 UC-6.4 重复实现，StatsWrongQuestions 控制器删除），
 /// DTO 对齐学习域 U01 分页决策 {items,total}。
 /// 错题写入与"连续 2 次 → 已掌握"置位发生在 UC-4.2（BR-23）；本 UC 仅列表查询。
@@ -32,6 +32,9 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
 
     private QuestionsDataService? _questionsDs;
     private QuestionsDataService QuestionsDs => _questionsDs ??= User.Use<QuestionsDataService>();
+
+    private QuestionMetaProvider? _questionMetaProvider;
+    private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
 
     /// <summary>
     /// 分页查询当前用户错题（Mastered 分组 + 学科过滤 + 富化知识点/题目摘要）
@@ -60,8 +63,9 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
             ct);
         var totalCount = await WrongDs.CountAsync(predicate, ct);
 
-        // 富化：题目摘要（题库域，批处理一次取回防 N+1）+ 知识点（注册表）
+        // 富化：题目摘要（题库域，批处理一次取回防 N+1）+ 知识点（真实题库读取，与摘要同源，ADR-008 决策二）
         var stemMap = await LoadStemMapAsync(items.Select(i => i.QuestionId).Distinct().ToArray(), ct);
+        var metaMap = await QuestionMeta.GetManyAsync(items.Select(i => i.QuestionId).Distinct(), ct);
 
         // BR-43：空列表正常返回
         return new GetWrongQuestionsResDto
@@ -71,7 +75,7 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
                 .Select(x => x.ToDto() with
                 {
                     // DTO 最小化：复用 WrongQuestionsDto + 计算字段（Service 赋值）
-                    KnowledgePoint = LearningQuestionRegistry.Get(x.QuestionId)?.KnowledgePoint ?? string.Empty,
+                    KnowledgePoint = metaMap.GetValueOrDefault(x.QuestionId)?.KnowledgePoint ?? string.Empty,
                     Summary = stemMap.GetValueOrDefault(x.QuestionId) ?? string.Empty,
                 })
                 .ToList(),

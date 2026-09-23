@@ -64,6 +64,8 @@ type Query {
     @cost(weight: "10")
   reviewQueue_Execute(request: GetReviewQueueReqDtoInput): GetReviewQueueResDto
     @cost(weight: "10")
+  sessionQuestion_Execute(request: GetSessionQuestionReqDtoInput): GetNextQuestionResDto
+    @cost(weight: "10")
   sessionResult_Execute(request: GetSessionResultReqDtoInput): GetSessionResultResDto
     @cost(weight: "10")
   wrongQuestions_Execute(request: GetWrongQuestionsReqDtoInput): GetWrongQuestionsResDto
@@ -654,6 +656,24 @@ type GetMyRankingResDto {
   rankChange: Int!
   "战绩榜开关"
   rankEnabled: Boolean!
+}
+
+"取下一题响应 DTO（不含答案与关键词）"
+type GetNextQuestionResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "题目业务键"
+  questionId: String!
+  "题型"
+  type: String
+  "题目展示内容（不含答案）"
+  content: String!
+  "知识点"
+  knowledgePoint: String
+  "关联知识卡片"
+  knowledgeCardId: String
 }
 
 "群主看板响应 DTO"
@@ -1258,6 +1278,8 @@ type QuestionsDto {
   createTime: DateTime!
   "更新时间"
   updateTime: DateTime!
+  "背景钩子提示（可空，来源 bank.v1.json；API 侧 BR-29 截断 ≤20 字）"
+  hint: String
 }
 
 "排名项 DTO"
@@ -1999,6 +2021,18 @@ input GetRosterPreviewReqDtoInput {
   groupId: Long!
   "批次 Id"
   importId: Long!
+}
+
+"会话取题请求 DTO"
+input GetSessionQuestionReqDtoInput {
+  "会话外部键（createStudySession 产出）"
+  sessionUid: String!
+  "题库业务键"
+  bankId: String!
+  "题型过滤"
+  type: String
+  "知识点过滤"
+  knowledgePoint: String
 }
 
 "会话结果请求 DTO"

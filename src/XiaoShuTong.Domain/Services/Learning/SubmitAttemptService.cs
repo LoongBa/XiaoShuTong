@@ -1,6 +1,5 @@
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json;
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
@@ -19,7 +18,8 @@ namespace XiaoShuTong.Services.Learning;
 /// CROSS：Attempts + MemoryStates + DailyStats + WrongQuestions 同生共死（事实源单一原则）。
 /// BR-06 会话归属 | BR-07 答案格式 | BR-09 判题降级（本地引擎）| BR-10 三分判题
 /// BR-11~21 四阶状态机 | BR-22 DailyStats | BR-23 WrongQuestions | BR-25 迁移结果 | BR-26 题目归属 | BR-27 幂等
-/// 跨模块（本切片桩）：判题服务（LocalJudgmentEngine）、题目元数据（LearningQuestionRegistry）、TaskAssignments（切片 04）。
+/// 跨模块（本切片桩）：判题服务（LocalJudgmentEngine）、TaskAssignments（切片 04）。
+/// 题目元数据经 QuestionMetaProvider 真实读取（ADR-008 决策二，注册表降级测试专用）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -47,6 +47,9 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
     private WrongQuestionsDataService? _wrongDs;
     private WrongQuestionsDataService WrongDs => _wrongDs ??= User.Use<WrongQuestionsDataService>();
 
+    private QuestionMetaProvider? _questionMetaProvider;
+    private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
+
     /// <summary>
     /// 提交作答：判题 → 状态迁移 → 写入事实源 → 同步派生表
     /// </summary>
@@ -63,8 +66,8 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         if (string.IsNullOrWhiteSpace(request.UserAnswer))
             return Fail(LearningErrorCodes.AnswerFormatInvalid);
 
-        // BR-26：题目必须存在且属于会话题库（题库域跨模块桩）
-        var question = LearningQuestionRegistry.Get(request.QuestionId);
+        // BR-26：题目必须存在且属于会话题库（真实题库读取，ADR-008 决策二）
+        var question = await QuestionMeta.GetAsync(request.QuestionId, ct);
         if (question == null || question.BankId != session.BankId)
             return Fail(LearningErrorCodes.QuestionNotInBank);
 
@@ -86,14 +89,13 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         var preCc = state?.ConsecutiveCorrect ?? 0;
 
         // BR-10：判题——接入 JudgingEngineService（五键契约：本地规则 + PreferLlm 交统一 AI 网关，BR-32~36）
-        // 题库跨模块桩 AnswerKeywords 为平铺 string[] → 映射 KeywordGroup[]（默认组 weight=1/required=false）
+        // 关键词原样传递：Questions.Keywords（KeywordGroup[] JSON 原文，Weight/Required/Aliases 保留，ADR-008 决策二）
         var judging = User.Use<JudgingEngineService>();
         var verdict = await judging.JudgeAsync(new JudgingRequestDto
         {
             QuestionId = request.QuestionId,
             QType = question.QType,
-            Keywords = JsonSerializer.Serialize(
-                question.AnswerKeywords.Select(k => new KeywordGroup([k], Weight: 1d, Required: false)).ToArray()),
+            Keywords = question.KeywordsJson,
             UserAnswer = request.UserAnswer,
             HintLevel = request.HintLevel,
             PreferLlm = true,
@@ -121,8 +123,8 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
                 Success = true,
                 Result = result.ToString(),
                 Confidence = confidence,
-                MatchedKeywords = MatchedKeywords(request.UserAnswer, question.AnswerKeywords),
-                MissingKeywords = MissingKeywords(request.UserAnswer, question.AnswerKeywords),
+                MatchedKeywords = [], // Full 已看答案：不展示组命中明细（早退路径空数组，方案 §四 T3）
+                MissingKeywords = [],
                 Hint = TruncateHint(question.Hint, 20),
                 PreState = preState.ToString(),
                 PostState = preState.ToString(),
@@ -143,8 +145,8 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
                 Success = true,
                 Result = result.ToString(),
                 Confidence = confidence,
-                MatchedKeywords = MatchedKeywords(request.UserAnswer, question.AnswerKeywords),
-                MissingKeywords = MissingKeywords(request.UserAnswer, question.AnswerKeywords),
+                MatchedKeywords = verdict.MatchedKeywords, // 组感知 "alias1/alias2"（判题引擎，Oracle P1）
+                MissingKeywords = verdict.MissingKeywords,
                 Hint = hintLevel == HintLevel.Partial ? TruncateHint(question.Hint, 20) : string.Empty,
                 PreState = preState.ToString(),
                 PostState = preState.ToString(),
@@ -233,8 +235,8 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             Success = true,
             Result = result.ToString(),
             Confidence = confidence,
-            MatchedKeywords = MatchedKeywords(request.UserAnswer, question.AnswerKeywords),
-            MissingKeywords = MissingKeywords(request.UserAnswer, question.AnswerKeywords),
+            MatchedKeywords = verdict.MatchedKeywords, // 组感知 "alias1/alias2"（判题引擎 L72-73，Oracle P1）
+            MissingKeywords = verdict.MissingKeywords,
             Hint = (needsGuidance || hintLevel == HintLevel.Partial) ? TruncateHint(question.Hint, 20) : string.Empty, // 引导分支必带线索（决策表 #2/#5，BR-29 ≤20 字）
             PreState = preState.ToString(),
             PostState = postState.ToString(),
@@ -384,18 +386,12 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         };
     }
 
-    private static string[] MatchedKeywords(string userAnswer, string[]? keywords)
-        => (keywords ?? []).Where(k => userAnswer.Contains(k, StringComparison.OrdinalIgnoreCase)).ToArray();
-
     /// <summary>作答内容 SHA-256 哈希（hex，幂等键区分重发 vs 重试）</summary>
     private static string ComputeAnswerHash(string answer)
         => Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(answer)));
 
-    private static string[] MissingKeywords(string userAnswer, string[]? keywords)
-        => (keywords ?? []).Where(k => !userAnswer.Contains(k, StringComparison.OrdinalIgnoreCase)).ToArray();
-
-    /// <summary>提示 ≤20 字（BR-29：严禁直接给答案，提示从知识卡片提取）</summary>
-    internal static string TruncateHint(string hint, int maxLength)
+    /// <summary>提示 ≤20 字（BR-29：严禁直接给答案，提示从知识卡片提取；可空 → 空串）</summary>
+    internal static string TruncateHint(string? hint, int maxLength)
     {
         if (string.IsNullOrWhiteSpace(hint))
             return string.Empty;

@@ -43,8 +43,9 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         }, TestContext.Current.CancellationToken);
     }
 
-    private async Task SeedQuestionAsync(string questionId, string stem)
+    private async Task SeedQuestionAsync(string questionId, string stem, string knowledgePoint = "诗歌鉴赏")
     {
+        await SeedBankAsync();
         var ds = User.Use<QuestionsDataService>();
         await ds.EntityCreateAsync(new Questions
         {
@@ -54,16 +55,30 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
             QType = QuestionType.R1,
             Content = $"{{\"questionId\":\"{questionId}\",\"stem\":\"{stem}\"}}",
             Keywords = "[]",
-            KnowledgePoints = [],
+            KnowledgePoints = [knowledgePoint],
             Difficulty = 0,
             Status = QuestionStatus.Active,
         }, TestContext.Current.CancellationToken);
     }
 
-    private void RegisterMeta(string questionId, string knowledgePoint)
+    private async Task SeedBankAsync()
     {
-        LearningQuestionRegistry.Register(new LearningQuestionMeta(
-            questionId, "bank-learning-47001", "chinese", knowledgePoint, "R1", [], ""));
+        var ds = User.Use<BanksDataService>();
+        var existing = await ds.EntityGetAsync(x => x.BankId == "bank-learning-47001", TestContext.Current.CancellationToken);
+        if (existing != null) return;
+        await ds.EntityCreateAsync(new Banks
+        {
+            UId = UidGenerator.NewId(),
+            BankId = "bank-learning-47001",
+            Name = "错题本测试题库",
+            Subject = Subject.Chinese,
+            Purpose = BankPurpose.Memorize,
+            Privacy = BankPrivacy.Public,
+            OwnerId = null,
+            JsonPath = "bank.bank-learning-47001.json",
+            Tags = [],
+            Status = BankStatus.Active,
+        }, TestContext.Current.CancellationToken);
     }
 
     /// <summary>主流程 + 富化：错题列表 + KnowledgePoint（注册表）+ Summary（题目摘要，无答案）</summary>
@@ -72,8 +87,7 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
     {
         var userId = SetUser(47001);
         await SeedWrongAsync(userId, "Q-47001a", "chinese", 3, mastered: false);
-        await SeedQuestionAsync("Q-47001a", "东临碣石，___");
-        RegisterMeta("Q-47001a", "诗歌鉴赏");
+        await SeedQuestionAsync("Q-47001a", "东临碣石，___"); // KnowledgePoint 默认 "诗歌鉴赏"（真实题库同源富化）
         var svc = User.Use<GetWrongQuestionsService>();
 
         var result = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false }, TestContext.Current.CancellationToken);

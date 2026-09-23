@@ -1,4 +1,7 @@
+using System.Text.Json;
+using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.DataServices.Learning;
+using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Services.Learning;
 using XiaoShuTong.Tools;
@@ -26,16 +29,45 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         return id;
     }
 
-    private static void RegisterQuestion(string questionId, string bankId = "bank-ch-7a", string[]? keywords = null)
+    private async Task SeedQuestionAsync(string questionId, string bankId = "bank-ch-7a", string[]? keywords = null, string? hint = "首字：若")
     {
-        LearningQuestionRegistry.Register(new LearningQuestionMeta(
-            QuestionId: questionId,
-            BankId: bankId,
-            Subject: "chinese",
-            KnowledgePoint: "岳阳楼记-背诵",
-            QType: "R1",
-            AnswerKeywords: keywords ?? FullKeywords,
-            Hint: "首字：若"));
+        await SeedBankAsync(bankId);
+        var ds = User.Use<QuestionsDataService>();
+        await ds.EntityCreateAsync(new Questions
+        {
+            UId = UidGenerator.NewId(),
+            QuestionId = questionId,
+            BankId = bankId,
+            ChapterId = "7a",
+            QType = QuestionType.R1,
+            Content = $"{{\"questionId\":\"{questionId}\",\"stem\":\"补全：东临碣石，___\"}}",
+            // KeywordGroup[] JSON 原文（Weight/Required 保留，ADR-008 决策二——判题服务端真实读取）
+            Keywords = JsonSerializer.Serialize((keywords ?? FullKeywords).Select(k => new KeywordGroup([k])).ToList()),
+            KnowledgePoints = ["岳阳楼记-背诵"],
+            Difficulty = 0,
+            Status = QuestionStatus.Active,
+            Hint = hint,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task SeedBankAsync(string bankId)
+    {
+        var ds = User.Use<BanksDataService>();
+        var existing = await ds.EntityGetAsync(x => x.BankId == bankId, TestContext.Current.CancellationToken);
+        if (existing != null) return;
+        await ds.EntityCreateAsync(new Banks
+        {
+            UId = UidGenerator.NewId(),
+            BankId = bankId,
+            Name = "判题测试题库",
+            Subject = Subject.Chinese,
+            Purpose = BankPurpose.Memorize,
+            Privacy = BankPrivacy.Public,
+            OwnerId = null,
+            JsonPath = $"bank.{bankId}.json",
+            Tags = [],
+            Status = BankStatus.Active,
+        }, TestContext.Current.CancellationToken);
     }
 
     private async Task<StudySessions> SeedSessionAsync(long userId, LearningScenario scenario = LearningScenario.Memorize, string bankId = "bank-ch-7a")
@@ -106,7 +138,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42003);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42003");
+        await SeedQuestionAsync("Q-42003");
 
         var result = await SubmitAsync(userId, session.UId, "Q-42003", "  ");
 
@@ -120,7 +152,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42004);
         var session = await SeedSessionAsync(userId, bankId: "bank-ch-7a");
-        RegisterQuestion("Q-42004", bankId: "bank-other-9x"); // 属于其他题库
+        await SeedQuestionAsync("Q-42004", bankId: "bank-other-9x"); // 属于其他题库
 
         var result = await SubmitAsync(userId, session.UId, "Q-42004", FullAnswer());
 
@@ -134,17 +166,17 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42005);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42005", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42005", keywords: FullKeywords);
 
         var full = await SubmitAsync(userId, session.UId, "Q-42005", FullAnswer());
         Assert.Equal("Correct", full.Result);
         Assert.NotNull(full.Confidence);
 
-        RegisterQuestion("Q-42005b", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42005b", keywords: FullKeywords);
         var partial = await SubmitAsync(userId, session.UId, "Q-42005b", "若出其中 星汉灿烂 幸甚至哉");
         Assert.Equal("Partial", partial.Result);
 
-        RegisterQuestion("Q-42005c", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42005c", keywords: FullKeywords);
         var wrong = await SubmitAsync(userId, session.UId, "Q-42005c", WrongAnswer);
         Assert.Equal("Wrong", wrong.Result);
     }
@@ -157,7 +189,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42011);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42011");
+        await SeedQuestionAsync("Q-42011");
 
         var result = await SubmitAsync(userId, session.UId, "Q-42011", FullAnswer());
 
@@ -173,7 +205,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42012);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42012");
+        await SeedQuestionAsync("Q-42012");
         await SeedStateAsync(userId, "Q-42012", MemoryState.Fuzzy);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42012", FullAnswer());
@@ -188,7 +220,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42013);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42013");
+        await SeedQuestionAsync("Q-42013");
         await SeedStateAsync(userId, "Q-42013", MemoryState.Mastered, cc: 1);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42013", FullAnswer());
@@ -210,7 +242,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42014);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42014");
+        await SeedQuestionAsync("Q-42014");
         await SeedStateAsync(userId, "Q-42014", MemoryState.Mastered, cc: 2);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42014", FullAnswer(), hintLevel: "Partial");
@@ -231,17 +263,17 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         var userId = SetUser(42015);
         var session = await SeedSessionAsync(userId);
 
-        RegisterQuestion("Q-42015a");
+        await SeedQuestionAsync("Q-42015a");
         await SeedStateAsync(userId, "Q-42015a", MemoryState.Mastered);
         var m = await SubmitAsync(userId, session.UId, "Q-42015a", WrongAnswer);
         Assert.Equal("Fuzzy", m.PostState);
 
-        RegisterQuestion("Q-42015b");
+        await SeedQuestionAsync("Q-42015b");
         await SeedStateAsync(userId, "Q-42015b", MemoryState.Proficient);
         var p = await SubmitAsync(userId, session.UId, "Q-42015b", WrongAnswer);
         Assert.Equal("Mastered", p.PostState);
 
-        RegisterQuestion("Q-42015c");
+        await SeedQuestionAsync("Q-42015c");
         await SeedStateAsync(userId, "Q-42015c", MemoryState.Fuzzy);
         var f = await SubmitAsync(userId, session.UId, "Q-42015c", WrongAnswer);
         Assert.Equal("NotMastered", f.PostState);
@@ -253,7 +285,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42016);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42016");
+        await SeedQuestionAsync("Q-42016");
         await SeedStateAsync(userId, "Q-42016", MemoryState.Mastered, cc: 1);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42016", WrongAnswer, hintLevel: "Full");
@@ -277,7 +309,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42018);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42018");
+        await SeedQuestionAsync("Q-42018");
         var before = DateTime.UtcNow;
 
         var result = await SubmitAsync(userId, session.UId, "Q-42018", WrongAnswer);
@@ -292,7 +324,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42020);
         var session = await SeedSessionAsync(userId, scenario: LearningScenario.Assess);
-        RegisterQuestion("Q-42020");
+        await SeedQuestionAsync("Q-42020");
         await SeedStateAsync(userId, "Q-42020", MemoryState.NotMastered);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42020", FullAnswer());
@@ -307,7 +339,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42021);
         var session = await SeedSessionAsync(userId, scenario: LearningScenario.PlayPk);
-        RegisterQuestion("Q-42021");
+        await SeedQuestionAsync("Q-42021");
         await SeedStateAsync(userId, "Q-42021", MemoryState.Mastered);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42021", FullAnswer());
@@ -328,8 +360,8 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42022);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42022a");
-        RegisterQuestion("Q-42022b");
+        await SeedQuestionAsync("Q-42022a");
+        await SeedQuestionAsync("Q-42022b");
 
         await SubmitAsync(userId, session.UId, "Q-42022a", FullAnswer());   // ✕→△（无★）
         await SubmitAsync(userId, session.UId, "Q-42022b", FullAnswer());   // ✕→△（无★）
@@ -348,7 +380,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     public async Task ExecuteAsync_WrongThenTwoCorrect_Mastered()
     {
         var userId = SetUser(42023);
-        RegisterQuestion("Q-42023");
+        await SeedQuestionAsync("Q-42023");
 
         // 1 次答错 → 错题 WrongCount=1（会话 A）
         var sessionA = await SeedSessionAsync(userId);
@@ -384,7 +416,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42027);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42027");
+        await SeedQuestionAsync("Q-42027");
 
         var first = await SubmitAsync(userId, session.UId, "Q-42027", FullAnswer());
         // 同答案重发 → 幂等返回首次结果（网络重发/双击防抖）
@@ -412,7 +444,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42025);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42025");
+        await SeedQuestionAsync("Q-42025");
 
         var result = await SubmitAsync(userId, session.UId, "Q-42025", FullAnswer());
 
@@ -435,7 +467,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42050);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42050", keywords: FullKeywords); // 4 关键词
+        await SeedQuestionAsync("Q-42050", keywords: FullKeywords); // 4 关键词
 
         // 命中 2/4 = 0.50：JudgingEngine(≥0.50→Partial) vs LocalJudgmentEngine(<0.60→Wrong)
         var result = await SubmitAsync(userId, session.UId, "Q-42050", "若出其中 星汉灿烂");
@@ -454,7 +486,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42061);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42061", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42061", keywords: FullKeywords);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42061", "若出其中 星汉灿烂 幸甚至哉"); // 3/4=0.75 → Partial
 
@@ -471,7 +503,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42060);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42060");
+        await SeedQuestionAsync("Q-42060");
         await SeedStateAsync(userId, "Q-42060", MemoryState.Fuzzy); // BR-11 △→○ 升级路径
 
         var result = await SubmitAsync(userId, session.UId, "Q-42060", FullAnswer()); // hintLevel 默认 None
@@ -492,7 +524,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42062);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42062", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42062", keywords: FullKeywords);
 
         // 第 1 次 partial（3/4=0.75，与 T2 同串实证）→ 引导
         var first = await SubmitAsync(userId, session.UId, "Q-42062", "若出其中 星汉灿烂 幸甚至哉");
@@ -516,7 +548,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42064);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42064"); // Hint 默认 "首字：若"
+        await SeedQuestionAsync("Q-42064"); // Hint 默认 "首字：若"
 
         var result = await SubmitAsync(userId, session.UId, "Q-42064", WrongAnswer); // hintLevel 默认 None
 
@@ -529,13 +561,29 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.True(result.Hint.Length <= 20); // BR-29 ≤20 字
     }
 
+    /// <summary>Hint 去桩回归：引导分支 hint 来自真实 Questions.Hint；空 Hint → 空串（不假造 hint，前端兜底鼓励语）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WrongFirstAttempt_EmptyHint_ReturnsEmpty()
+    {
+        var userId = SetUser(42069);
+        var session = await SeedSessionAsync(userId);
+        await SeedQuestionAsync("Q-42069", hint: null); // 存量题 Hint 可空（bank.v1.json 暂无背景钩子）
+
+        var result = await SubmitAsync(userId, session.UId, "Q-42069", WrongAnswer); // hintLevel 默认 None
+
+        Assert.True(result.Success);
+        Assert.Equal("Wrong", result.Result);
+        Assert.True(result.NeedsGuidance);
+        Assert.Equal(string.Empty, result.Hint); // 空 Hint → 空串（不致命，前端兜底）
+    }
+
     /// <summary>T5：wrong 重试达上限 → showAnswer=true（防死循环，展示答案必进下一题）</summary>
     [Fact]
     public async Task ExecuteAsync_WrongRetryReachesLimit_ShowAnswer()
     {
         var userId = SetUser(42065);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42065", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42065", keywords: FullKeywords);
 
         // 第 1 次答错（无关内容）→ needsGuidance=true
         var first = await SubmitAsync(userId, session.UId, "Q-42065", "完全无关的第一种答案");
@@ -558,7 +606,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42066);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42066");
+        await SeedQuestionAsync("Q-42066");
         await SeedStateAsync(userId, "Q-42066", MemoryState.Mastered, cc: 1);
 
         var result = await SubmitAsync(userId, session.UId, "Q-42066", WrongAnswer, hintLevel: "Full");
@@ -575,7 +623,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
     {
         var userId = SetUser(42068);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-42068", keywords: FullKeywords);
+        await SeedQuestionAsync("Q-42068", keywords: FullKeywords);
 
         // 0.50 命中率 < 0.6 → PreferLlm 触发 LLM 路径 → 无启用模型 → 降级
         var result = await SubmitAsync(userId, session.UId, "Q-42068", "若出其中 星汉灿烂");

@@ -1,4 +1,6 @@
+using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.DataServices.Learning;
+using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Services.Learning;
 using XiaoShuTong.Tools;
@@ -23,16 +25,44 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
         return id;
     }
 
-    private static void RegisterQuestion(string questionId)
+    private async Task SeedQuestionAsync(string questionId, string? hint = "首字：若")
     {
-        LearningQuestionRegistry.Register(new LearningQuestionMeta(
-            QuestionId: questionId,
-            BankId: "bank-ch-7a",
-            Subject: "chinese",
-            KnowledgePoint: "岳阳楼记-背诵",
-            QType: "R1",
-            AnswerKeywords: ["若出其中", "星汉灿烂"],
-            Hint: "首字：若"));
+        await SeedBankAsync();
+        var ds = User.Use<QuestionsDataService>();
+        await ds.EntityCreateAsync(new Questions
+        {
+            UId = UidGenerator.NewId(),
+            QuestionId = questionId,
+            BankId = "bank-ch-7a",
+            ChapterId = "7a",
+            QType = QuestionType.R1,
+            Content = $"{{\"questionId\":\"{questionId}\",\"stem\":\"补全：东临碣石，___\"}}",
+            Keywords = "[{\"Aliases\":[\"若出其中\"],\"Weight\":1,\"Required\":false}]",
+            KnowledgePoints = ["岳阳楼记-背诵"],
+            Difficulty = 0,
+            Status = QuestionStatus.Active,
+            Hint = hint,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task SeedBankAsync()
+    {
+        var ds = User.Use<BanksDataService>();
+        var existing = await ds.EntityGetAsync(x => x.BankId == "bank-ch-7a", TestContext.Current.CancellationToken);
+        if (existing != null) return;
+        await ds.EntityCreateAsync(new Banks
+        {
+            UId = UidGenerator.NewId(),
+            BankId = "bank-ch-7a",
+            Name = "提示测试题库",
+            Subject = Subject.Chinese,
+            Purpose = BankPurpose.Memorize,
+            Privacy = BankPrivacy.Public,
+            OwnerId = null,
+            JsonPath = "bank.bank-ch-7a.json",
+            Tags = [],
+            Status = BankStatus.Active,
+        }, TestContext.Current.CancellationToken);
     }
 
     private async Task SeedStateAsync(long userId, string questionId, MemoryState state)
@@ -70,7 +100,7 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
     {
         SetUser(43002);
         var questionId = "Q-43002";
-        RegisterQuestion(questionId);
+        await SeedQuestionAsync(questionId);
         var svc = User.Use<GetHintService>();
 
         var result = await svc.ExecuteAsync(new GetHintReqDto { QuestionId = questionId, DifficultySlot = "S1" }, TestContext.Current.CancellationToken);
@@ -87,7 +117,7 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
     {
         var userId = SetUser(43003);
         var questionId = "Q-43003";
-        RegisterQuestion(questionId);
+        await SeedQuestionAsync(questionId);
         await SeedStateAsync(userId, questionId, MemoryState.NotMastered);
         var svc = User.Use<GetHintService>();
 
@@ -104,8 +134,8 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
         var userId = SetUser(43004);
         var qFuzzy = "Q-43004a";
         var qMastered = "Q-43004b";
-        RegisterQuestion(qFuzzy);
-        RegisterQuestion(qMastered);
+        await SeedQuestionAsync(qFuzzy);
+        await SeedQuestionAsync(qMastered);
         await SeedStateAsync(userId, qFuzzy, MemoryState.Fuzzy);
         await SeedStateAsync(userId, qMastered, MemoryState.Mastered);
         var svc = User.Use<GetHintService>();
@@ -123,7 +153,7 @@ public class GetHintServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOutp
     {
         SetUser(43005);
         var questionId = "Q-43005";
-        RegisterQuestion(questionId);
+        await SeedQuestionAsync(questionId);
         var svc = User.Use<GetHintService>();
 
         var result = await svc.ExecuteAsync(new GetHintReqDto { QuestionId = questionId, DifficultySlot = "S9" }, TestContext.Current.CancellationToken);

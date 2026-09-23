@@ -12,7 +12,7 @@ namespace XiaoShuTong.Services.Learning;
 /// </summary>
 /// <remarks>
 /// BR-28 题目必须存在 → 1502 | BR-29 提示 ≤20 字、严禁给答案 | BR-30 难度档按状态路由（状态越低提示越深）
-/// 提示生成服务（跨模块判题服务）以注册表 Hint 桩代替。
+/// 提示来源经 QuestionMetaProvider 真实读取 Questions.Hint（ADR-008 决策二，注册表降级测试专用）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -24,6 +24,9 @@ internal class GetHintService(DomainUser<XiaoShuTongUserInfo> user)
     private MemoryStatesDataService? _statesDs;
     private MemoryStatesDataService StatesDs => _statesDs ??= User.Use<MemoryStatesDataService>();
 
+    private QuestionMetaProvider? _questionMetaProvider;
+    private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
+
     /// <summary>
     /// 获取提示（按状态路由难度档，≤20 字）
     /// </summary>
@@ -31,8 +34,8 @@ internal class GetHintService(DomainUser<XiaoShuTongUserInfo> user)
     {
         var userId = User.UserInfo?.Id ?? 0;
 
-        // BR-28：题目必须存在 → 1502
-        var question = LearningQuestionRegistry.Get(request.QuestionId);
+        // BR-28：题目必须存在 → 1502（真实题库读取，ADR-008 决策二）
+        var question = await QuestionMeta.GetAsync(request.QuestionId, ct);
         if (question == null)
             return new GetHintResDto { Success = false, ErrorCode = LearningErrorCodes.QuestionNotInBank };
 

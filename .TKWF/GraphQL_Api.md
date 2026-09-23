@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-23 15:16:34
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-24 04:29:12
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -18,14 +18,14 @@
 | member | 0 | 1 | 1 | 0 |
 | model | 1 | 3 | 4 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 46 | 1 | 47 | 0 |
+| other | 47 | 1 | 48 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **61** | **8** | **69** | **0** |
+| **合计** | **62** | **8** | **70** | **0** |
 
 ## 二、按域操作清单
 
@@ -242,6 +242,14 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `items`: `MemoryStatesDto` | | | | | |
 | | ⤷ `overdueCount`: number | | | | | |
+| other | `sessionQuestion_Execute` | Query |  | { request?: GetSessionQuestionReqDtoInput | null } | `GetNextQuestionResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `questionId`: string | | | | | |
+| | ⤷ `type`: string | null | | | | | |
+| | ⤷ `content`: string | | | | | |
+| | ⤷ `knowledgePoint`: string | null | | | | | |
+| | ⤷ `knowledgeCardId`: string | null | | | | | |
 | other | `sessionResult_Execute` | Query |  | { request?: GetSessionResultReqDtoInput | null } | `GetSessionResultResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -460,6 +468,7 @@
 | `GetKnowledgeCardResDto` | success, errorCode, cardType, content |
 | `GetMemoryStatesResDto` | success, errorCode, items → 见 \`MemoryStatesDto\`, totalCount, pageIndex, pageSize |
 | `GetMyRankingResDto` | success, errorCode, rank, value, trend, rankChange, rankEnabled |
+| `GetNextQuestionResDto` | success, errorCode, questionId, type, content, knowledgePoint, knowledgeCardId |
 | `GetOwnerDashboardResDto` | success, errorCode, todayExecutionRate, avgProgress, overdueCount, weakPointsTop5 → 见 \`WeakPointDto\`, taskList → 见 \`DashboardTaskDto\` |
 | `GetPeriodReportResDto` | success, errorCode, learnedCount, accuracy, starredCount, weakPoints → 见 \`WeakPointDto\` |
 | `GetPkResultResDto` | success, errorCode, status, winnerId, finishReason, winReason, players → 见 \`PkPlayerResultDto\` |
@@ -518,4 +527,4 @@
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| v1.0.6 | 09/23/2026 | 自动生成初版 |
+| v1.0.6 | 09/24/2026 | 自动生成初版 |

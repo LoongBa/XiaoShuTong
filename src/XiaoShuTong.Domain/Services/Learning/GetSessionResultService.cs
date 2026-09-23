@@ -14,7 +14,7 @@ namespace XiaoShuTong.Services.Learning;
 /// <remarks>
 /// BR-39 会话必须存在且属于当前用户 → 3001 | BR-40 空会话返回空统计
 /// BR-41 NewStarCount = PostState=Proficient 且 PreState&lt;Proficient 的次数 | BR-42 BlockedPoints = ✕/△ 题目 + 知识点
-/// 知识点映射（跨模块题库域）以 LearningQuestionRegistry 桩代替。
+/// 知识点经 QuestionMetaProvider 真实读取（ADR-008 决策二，注册表降级测试专用）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -26,6 +26,9 @@ internal class GetSessionResultService(DomainUser<XiaoShuTongUserInfo> user)
 
     private AttemptsDataService? _attemptsDs;
     private AttemptsDataService AttemptsDs => _attemptsDs ??= User.Use<AttemptsDataService>();
+
+    private QuestionMetaProvider? _questionMetaProvider;
+    private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
 
     /// <summary>
     /// 聚合会话作答统计（答对数/新增★/卡壳知识点）
@@ -61,13 +64,19 @@ internal class GetSessionResultService(DomainUser<XiaoShuTongUserInfo> user)
         var newStarCount = attempts.Count(a =>
             a.PostState == MemoryState.Proficient && a.PreState != MemoryState.Proficient);
 
-        // BR-42：卡壳知识点 = ✕/△ 题目 + 知识点（跨模块映射桩）
+        // BR-42：卡壳知识点 = ✕/△ 题目 + 知识点（真实题库读取，批量预取防 N+1，ADR-008 决策二）
+        var blockedQuestionIds = attempts
+            .Where(a => a.PostState is MemoryState.NotMastered or MemoryState.Fuzzy)
+            .Select(a => a.QuestionId)
+            .Distinct()
+            .ToArray();
+        var metaMap = await QuestionMeta.GetManyAsync(blockedQuestionIds, ct);
         var blockedPoints = attempts
             .Where(a => a.PostState is MemoryState.NotMastered or MemoryState.Fuzzy)
             .GroupBy(a => a.QuestionId)
             .Select(g =>
             {
-                var meta = LearningQuestionRegistry.Get(g.Key);
+                var meta = metaMap.GetValueOrDefault(g.Key);
                 return new BlockedPointDto
                 {
                     QuestionId = g.Key,

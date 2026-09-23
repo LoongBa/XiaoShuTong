@@ -1,4 +1,6 @@
+using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.DataServices.Learning;
+using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Services.Learning;
 using XiaoShuTong.Tools;
@@ -23,16 +25,44 @@ public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, 
         return id;
     }
 
-    private static void RegisterQuestion(string questionId, string kp = "岳阳楼记-背诵")
+    private async Task SeedQuestionAsync(string questionId, string kp = "岳阳楼记-背诵")
     {
-        LearningQuestionRegistry.Register(new LearningQuestionMeta(
-            QuestionId: questionId,
-            BankId: "bank-ch-7a",
-            Subject: "chinese",
-            KnowledgePoint: kp,
-            QType: "R1",
-            AnswerKeywords: ["若出其中", "星汉灿烂"],
-            Hint: "首字：若"));
+        await SeedBankAsync();
+        var ds = User.Use<QuestionsDataService>();
+        await ds.EntityCreateAsync(new Questions
+        {
+            UId = UidGenerator.NewId(),
+            QuestionId = questionId,
+            BankId = "bank-ch-7a",
+            ChapterId = "7a",
+            QType = QuestionType.R1,
+            Content = $"{{\"questionId\":\"{questionId}\",\"stem\":\"补全：东临碣石，___\"}}",
+            Keywords = "[{\"Aliases\":[\"若出其中\"],\"Weight\":1,\"Required\":false}]",
+            KnowledgePoints = [kp],
+            Difficulty = 0,
+            Status = QuestionStatus.Active,
+            Hint = "首字：若",
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task SeedBankAsync()
+    {
+        var ds = User.Use<BanksDataService>();
+        var existing = await ds.EntityGetAsync(x => x.BankId == "bank-ch-7a", TestContext.Current.CancellationToken);
+        if (existing != null) return;
+        await ds.EntityCreateAsync(new Banks
+        {
+            UId = UidGenerator.NewId(),
+            BankId = "bank-ch-7a",
+            Name = "会话结果测试题库",
+            Subject = Subject.Chinese,
+            Purpose = BankPurpose.Memorize,
+            Privacy = BankPrivacy.Public,
+            OwnerId = null,
+            JsonPath = "bank.bank-ch-7a.json",
+            Tags = [],
+            Status = BankStatus.Active,
+        }, TestContext.Current.CancellationToken);
     }
 
     private async Task<StudySessions> SeedSessionAsync(long userId)
@@ -108,8 +138,8 @@ public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, 
     {
         var userId = SetUser(46004);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-46004a");
-        RegisterQuestion("Q-46004b");
+        await SeedQuestionAsync("Q-46004a");
+        await SeedQuestionAsync("Q-46004b");
         await SeedAttemptAsync(userId, session.Id, "Q-46004a", MemoryState.Fuzzy, MemoryState.Proficient);   // 升★
         await SeedAttemptAsync(userId, session.Id, "Q-46004b", MemoryState.Mastered, MemoryState.Mastered);  // 无升★
         var svc = User.Use<GetSessionResultService>();
@@ -127,7 +157,7 @@ public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, 
     {
         var userId = SetUser(46005);
         var session = await SeedSessionAsync(userId);
-        RegisterQuestion("Q-46005a", kp: "岳阳楼记-背诵");
+        await SeedQuestionAsync("Q-46005a", kp: "岳阳楼记-背诵");
         await SeedAttemptAsync(userId, session.Id, "Q-46005a", MemoryState.Mastered, MemoryState.NotMastered); // 卡壳
         var svc = User.Use<GetSessionResultService>();
 

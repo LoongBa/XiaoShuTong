@@ -86,4 +86,8 @@ public partial class Questions
     /// <summary>更新时间</summary>
     [Column(Position = 14, CanUpdate = true)]
     public DateTime UpdateTime { get; set; } = DateTime.UtcNow;
+
+    /// <summary>背景钩子提示（可空，来源 bank.v1.json；API 侧 BR-29 截断 ≤20 字）</summary>
+    [Column(Position = 15, StringLength = 200)]
+    public string? Hint { get; set; }
 }
