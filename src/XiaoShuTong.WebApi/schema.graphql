@@ -1441,6 +1441,16 @@ type SubmitAttemptResDto {
   postState: String!
   "下次复习时间"
   nextReviewAt: DateTime!
+  "是否应提供引导（result=Partial/Wrong 且未达上限）——前端据此决定是否给\"再试一次\""
+  needsGuidance: Boolean!
+  "本题本会话累计作答次数（含本次）"
+  attemptCount: Int!
+  "引导/重试上限（达上限后 showAnswer=true，防死循环）"
+  maxAttempts: Int!
+  "是否应展示标准答案（达上限或已看答案）——前端展示后必进下一题"
+  showAnswer: Boolean!
+  "判题是否降级（LLM 失败→本地规则，UI 提示\"判题可能不精确\"）"
+  isDegraded: Boolean!
 }
 
 "判错反馈响应 DTO"

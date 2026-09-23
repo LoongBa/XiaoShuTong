@@ -441,7 +441,12 @@ export const SubmitAttemptResDtoSchema = {
     hint: { kind: "string" },
     preState: { kind: "string" },
     postState: { kind: "string" },
-    nextReviewAt: { kind: "date" }
+    nextReviewAt: { kind: "date" },
+    needsGuidance: { kind: "boolean" },
+    attemptCount: { kind: "number" },
+    maxAttempts: { kind: "number" },
+    showAnswer: { kind: "boolean" },
+    isDegraded: { kind: "boolean" }
 } as const;
 export const CancelSubscriptionResDtoSchema = {
     success: { kind: "boolean" },

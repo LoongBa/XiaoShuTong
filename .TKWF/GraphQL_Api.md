@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-14 08:13:25
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-23 15:16:34
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -265,6 +265,11 @@
 | | ⤷ `preState`: string | | | | | |
 | | ⤷ `postState`: string | | | | | |
 | | ⤷ `nextReviewAt`: string | | | | | |
+| | ⤷ `needsGuidance`: boolean | | | | | |
+| | ⤷ `attemptCount`: number | | | | | |
+| | ⤷ `maxAttempts`: number | | | | | |
+| | ⤷ `showAnswer`: boolean | | | | | |
+| | ⤷ `isDegraded`: boolean | | | | | |
 | other | `cancelSubscription_Execute` | Query |  | { request?: CancelSubscriptionReqDtoInput | null } | `CancelSubscriptionResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -493,7 +498,7 @@
 | `SetEnabledResDto` | success, errorCode, uId, enabled |
 | `SetRankEnabledResDto` | success, errorCode, groupId, rankEnabled |
 | `StartTrialResDto` | success, errorCode, subscriptionUid, status, trialEndAt |
-| `SubmitAttemptResDto` | success, errorCode, result, confidence, matchedKeywords, missingKeywords, hint, preState, postState, nextReviewAt |
+| `SubmitAttemptResDto` | success, errorCode, result, confidence, matchedKeywords, missingKeywords, hint, preState, postState, nextReviewAt, needsGuidance, attemptCount, maxAttempts, showAnswer, isDegraded |
 | `SubmitJudgmentFeedbackResDto` | success, errorCode, feedbackUid, status |
 | `SubmitPkAnswerResDto` | success, errorCode, isCorrect, result, confidence, score |
 | `UpdateAiModelConfigResDto` | success, errorCode, uId |
@@ -513,4 +518,4 @@
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| v1.0.6 | 09/14/2026 | 自动生成初版 |
+| v1.0.6 | 09/23/2026 | 自动生成初版 |
