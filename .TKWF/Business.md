@@ -88,7 +88,7 @@
 | 学习-BR-21 | Play 场景（isolated）：不影响 MemoryStates（PK 答题入 PkAttempts，非本域） | MemoryStates, PkAttempts | UC-4.2 |
 | 学习-BR-22 | 同步派生：DailyStats 当日累加（LearnedCount/StarredCount/ReviewCount/Accuracy/StudySeconds） | DailyStats | UC-4.2 |
 | 学习-BR-23 | 同步派生：WrongQuestions 归集（Result=Wrong/Partial）；连续 2 次 Correct（跨会话）→ Mastered=true | WrongQuestions | UC-4.2 |
-| 学习-BR-24 | 同步派生：TaskAssignments.Progress 更新；全部完成 → Status=Completed | TaskAssignments | UC-4.2 |
+| 学习-BR-24 | 同步派生：TaskAssignments.Progress 更新；全部完成 → Status=Completed。**判定口径（ADR-010）**：重算式（非增量）——跨会话聚合该任务全部作答（经 SessionId→StudySessions.TaskId 桥接），"消费"= Correct 或该题尝试数 ≥ MaxAttempts(2)；Progress = 消费题数 / Tasks.QuestionCount × 100；Pending→InProgress（首次推进）、Progress≥100 → Completed + CompletedAt；TaskId=null（个人会话）不推进；Completed 幂等（AllowRedo 重做不改变） | TaskAssignments | UC-4.2 |
 | 学习-BR-25 | 作答后必须返回状态迁移结果（PreState/PostState/NextReviewAt），供前端渲染状态变化 | MemoryStates | UC-4.2 |
 | 学习-BR-26 | 题目必须存在且属于会话题库 | Questions, StudySessions | UC-4.2 |
 | 学习-BR-27 | 幂等：同一 SessionUid + QuestionId 已记录则返回已有结果，不重复写 | Attempts | UC-4.2 |
@@ -362,8 +362,9 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-    TaskAssignments: Pending → InProgress（创建会话）→ Completed（全部完成）
+    TaskAssignments: Pending → InProgress（首次作答推进）→ Completed（全部消费）
     TaskAssignments: Pending/InProgress → Overdue（逾期扫描）；Completed/Overdue 不被扫描变更
+    TaskAssignments: Overdue → Completed（作答驱动全部完成时允许——BR-23 的"不改变"指复习/重做行为本身不迁移状态；BR-24 的"全部完成→Completed"是独立完成驱动迁移，Progress≥100 时优先触发，见 学习-BR-24 交叉引用）
 ```
 - 逾期扫描：Hangfire 每日 0:00(UTC+8) + 发布时触发；条件 DeadlineAt<now 且 Status=Active；任务保持 Active（任务-BR-20~23）
 
@@ -465,9 +466,9 @@ stateDiagram-v2
 | C-15 | 快照唯一约束：UNQ(UserId, ScopeType, ScopeId, Subject, MetricType, SnapshotDate) 幂等 upsert | RankSnapshots | 搭子-BR-13 |
 | C-16 | 移除成员/解除搭子不删历史学习数据与 PK 记录 | GroupMembers, Attempts, StudyBuddies | 群组-BR-10、搭子-BR-31 |
 | C-17 | 幂等全局约束：作答唯一、任务分配 UNIQUE、逾期扫描幂等、支付回调幂等、取消/激活幂等 | Attempts, TaskAssignments, Subscriptions | 学习-BR-27、任务-BR-20、家长-BR-09/28 |
-| C-18 | 跨模块消费边界：判题引擎不写库（纯计算，落库由学习/PK 域编排）；错题本/排行榜/看板等只读消费方不反向写源 | Judging, Learning, Stats, Rank | 题库-BR-36、激励-BR-15 |
+| C-18 | 跨模块消费边界：判题引擎不写库（纯计算，落库由学习/PK 域编排）；错题本/排行榜/看板等只读消费方不反向写源。**例外（ADR-010）**：任务进度（TaskAssignments.Progress）由学习作答事件驱动派生（BR-24），属源事件消费方写派生物，非反向写源 | Judging, Learning, Stats, Rank, TaskAssignments | 题库-BR-36、激励-BR-15、学习-BR-24 |
 | C-19 | 内容准确性人工门槛：AI 生成的背诵点/判题草稿必须人工校验后才能入库，禁止静默入库 | Questions | 题库-BR-26/29 |
-| C-20 | 派生单一事实源：DailyStats/WrongQuestions/KnowledgeMastery/RankSnapshots 全部由源事件驱动派生，派生数据与源一致 | DailyStats, WrongQuestions, KnowledgeMastery, RankSnapshots | 学习-BR-22~24、搭子-BR-09~13 |
+| C-20 | 派生单一事实源：DailyStats/WrongQuestions/KnowledgeMastery/RankSnapshots/**TaskAssignments.Progress** 全部由源事件驱动派生，派生数据与源一致（TaskAssignments.Progress 由学习作答事件驱动，ADR-010） | DailyStats, WrongQuestions, KnowledgeMastery, RankSnapshots, TaskAssignments | 学习-BR-22~24、搭子-BR-09~13 |
 
 ---
 
