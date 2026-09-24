@@ -6,6 +6,9 @@ import { Button } from '@/components/ui/button';
 import { TaskProgressBar } from '@/components/TaskProgressBar';
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
 import { StreakBadge } from '@/components/StreakBadge';
+import { Tkwf } from '@tkwf/tsclient';
+import type { DashboardReport_ExecuteService, SubjectMasteryDto } from '@/gql/ts-client.g';
+import { accuracyToPercent, accuracyToState } from '@/lib/accuracy';
 import { 
   ArrowLeft,
   ChevronRight,
@@ -15,7 +18,8 @@ import {
   XCircle,
   TrendingUp,
   Target,
-  Clock
+  Clock,
+  Loader2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
@@ -26,16 +30,9 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
-// 模拟孩子数据
+// 模拟孩子数据（studentId 对齐联调种子 ParentStudentRelations：10003 家长 → 10001 小明）
 const MOCK_CHILDREN = [
-  { id: 'child-1', name: '小明', grade: '初二(3)班', streakDays: 7, todayTaskCompleted: true },
-];
-
-// 模拟学科掌握度
-const MOCK_SUBJECT_MASTERY = [
-  { subject: '语文', state: 'gold' as const },
-  { subject: '历史', state: 'green' as const },
-  { subject: '地理', state: 'yellow' as const },
+  { id: 'child-1', name: '小明', grade: '初二(3)班', streakDays: 7, todayTaskCompleted: true, studentId: 10001 },
 ];
 
 export const Route = createFileRoute('/parent/dashboard')({
@@ -49,6 +46,8 @@ function ParentDashboardPage() {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [showSubscribeDialog, setShowSubscribeDialog] = useState(false);
   const [trialDaysLeft, setTrialDaysLeft] = useState(7);
+  const [masteryLoading, setMasteryLoading] = useState(true);
+  const [subjectMastery, setSubjectMastery] = useState<SubjectMasteryDto[]>([]);
   
   // 检查登录状态
   useEffect(() => {
@@ -56,6 +55,32 @@ function ParentDashboardPage() {
       navigate({ to: '/auth/login' });
     }
   }, [isLoggedIn, navigate]);
+  
+  // 加载各学科掌握度（dashboardReport_Execute → subjectsMastery 真实契约；V0.6.3 接线，替换原硬编码 MOCK_SUBJECT_MASTERY）
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    let cancelled = false;
+    const loadMastery = async () => {
+      setMasteryLoading(true);
+      try {
+        const res = await Tkwf.User.Use<DashboardReport_ExecuteService>().dashboardReport_Execute({
+          request: { studentId: selectedChild.studentId },
+        });
+        if (cancelled) return;
+        if (res.success) {
+          setSubjectMastery(res.subjectsMastery ?? []);
+        } else {
+          setSubjectMastery([]);
+        }
+      } catch {
+        if (!cancelled) setSubjectMastery([]);
+      } finally {
+        if (!cancelled) setMasteryLoading(false);
+      }
+    };
+    void loadMastery();
+    return () => { cancelled = true; };
+  }, [isLoggedIn, selectedChild.studentId]);
   
   const weeklyProgress = { current: 5, total: 10 };
   
@@ -146,20 +171,32 @@ function ParentDashboardPage() {
           </p>
         </Card>
         
-        {/* 各学科掌握度 */}
+        {/* 各学科掌握度（V0.6.3：真实 dashboardReport_Execute → subjectsMastery.accuracy 渲染百分比 + 四阶徽章） */}
         <Card className="p-4">
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <Target className="w-4 h-4" />
             各学科掌握度
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {MOCK_SUBJECT_MASTERY.map((item) => (
-              <div key={item.subject} className="flex items-center gap-1.5">
-                <span className="text-sm">{item.subject}</span>
-                <MemoryStateBadge state={item.state} size="sm" showLabel={false} />
-              </div>
-            ))}
-          </div>
+          {masteryLoading ? (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground py-2">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              加载中…
+            </div>
+          ) : subjectMastery.length === 0 ? (
+            <p className="text-sm text-muted-foreground">暂无掌握度数据（完成作答后可查看）</p>
+          ) : (
+            <div className="flex flex-wrap gap-2">
+              {subjectMastery.map((item) => (
+                <div key={item.subject} className="flex items-center gap-1.5">
+                  <span className="text-sm">{item.subject}</span>
+                  <MemoryStateBadge state={accuracyToState(item.accuracy)} size="sm" showLabel={false} />
+                  <span className="text-sm font-medium text-muted-foreground">
+                    {accuracyToPercent(item.accuracy)}%
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </Card>
         
         {/* 付费功能入口 */}

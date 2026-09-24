@@ -43,8 +43,8 @@ function LoginPage() {
         'xiaoming',              // userName（Mock：微信绑定的小明）
         'mock-credential',       // credential（Mock：微信授权码）
         {
-          loginFrom: 'wechat',
-          authType: 'wechat',
+          loginFrom: 'MOBILE_WEB',
+          authType: 'WE_CHAT_APPLET',
           authInfo: 'mock-wechat-openid',
           deviceId: 'web-001',
         }

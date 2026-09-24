@@ -56,7 +56,8 @@ export default defineConfig({
     hmr: false,
     proxy: {
       "/graphql": {
-        target: "http://localhost:5157",
+        // V0.6.3：真实 WebApi 权威端口 = 5020（launchSettings http profile，摸底确认）
+        target: "http://localhost:5020",
         changeOrigin: true,
       },
     },

@@ -1,7 +1,7 @@
 // ── mock HTTP server（tkwf-tsclient-mock-server 启动脚本）──
 // 独立 Node 进程，纯 ESM，无浏览器依赖
 // 数据来源：src/mock/data.ts（MOCK_SPEC.md §2 填充）
-// 端口 5157（不与真实 WebApi 5156 冲突）
+// 端口 5157 为 mock 专用；真实 WebApi = 5020（launchSettings http profile 权威值，V0.6.3 摸底确认）
 
 import { MockHttpServer } from "@tkwf/tsclient-mock/server";
 import { MockTransport } from "@tkwf/tsclient-mock";

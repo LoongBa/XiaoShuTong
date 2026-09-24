@@ -133,6 +133,7 @@ export const initialData: DatasetSeed = {
       preState: "✕", postState: "△",
       nextReviewAt: new Date(Date.now() + 86400000).toISOString(),
       needsGuidance: false, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: false,
+      historyAccuracy: 0.6,
     },
     // 条 2：Partial 第 1 次（决策表 #2：guidance → 再试一次/求助升级）
     {
@@ -145,6 +146,7 @@ export const initialData: DatasetSeed = {
       preState: "△", postState: "△",
       nextReviewAt: new Date(Date.now() + 43200000).toISOString(),
       needsGuidance: true, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: false,
+      historyAccuracy: 0.5,
     },
     // 条 3：Wrong 达上限（决策表 #8：answer-sheet 展示答案 → 必进下一题）
     {
@@ -157,6 +159,7 @@ export const initialData: DatasetSeed = {
       preState: "○", postState: "✕",
       nextReviewAt: new Date(Date.now() + 14400000).toISOString(),
       needsGuidance: false, attemptCount: 2, maxAttempts: 2, showAnswer: true, isDegraded: false,
+      historyAccuracy: 0.3,
     },
     // 条 4：degraded 样例（isDegraded=true → UI"判题可能不精确"轻提示）
     {
@@ -169,6 +172,7 @@ export const initialData: DatasetSeed = {
       preState: "△", postState: "○",
       nextReviewAt: new Date(Date.now() + 172800000).toISOString(),
       needsGuidance: false, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: true,
+      historyAccuracy: 0.71,
     },
   ],
 
@@ -751,7 +755,7 @@ export const scenarioOverrides: ScenarioOverrides = {
     ],
     // submitAttempt 域级失败 → 停留当前题 + errorCode 提示
     submitAttemptResDtos: [
-      { success: false, errorCode: "INTERNAL_ERROR", result: "", confidence: null, matchedKeywords: [], missingKeywords: [], hint: "", preState: "", postState: "", nextReviewAt: new Date(0).toISOString(), needsGuidance: false, attemptCount: 0, maxAttempts: 2, showAnswer: false, isDegraded: false },
+      { success: false, errorCode: "INTERNAL_ERROR", result: "", confidence: null, matchedKeywords: [], missingKeywords: [], hint: "", preState: "", postState: "", nextReviewAt: new Date(0).toISOString(), needsGuidance: false, attemptCount: 0, maxAttempts: 2, showAnswer: false, isDegraded: false, historyAccuracy: 0 },
     ],
   },
 
@@ -768,6 +772,7 @@ export const scenarioOverrides: ScenarioOverrides = {
         preState: "△", postState: "△",
         nextReviewAt: new Date(Date.now() + 43200000).toISOString(),
         needsGuidance: true, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: false,
+        historyAccuracy: 0.5,
       },
     ],
   },
@@ -785,6 +790,7 @@ export const scenarioOverrides: ScenarioOverrides = {
         preState: "○", postState: "✕",
         nextReviewAt: new Date(Date.now() + 14400000).toISOString(),
         needsGuidance: false, attemptCount: 2, maxAttempts: 2, showAnswer: true, isDegraded: false,
+        historyAccuracy: 0.7,
       },
     ],
   },
@@ -802,6 +808,7 @@ export const scenarioOverrides: ScenarioOverrides = {
         preState: "△", postState: "○",
         nextReviewAt: new Date(Date.now() + 172800000).toISOString(),
         needsGuidance: false, attemptCount: 1, maxAttempts: 2, showAnswer: false, isDegraded: true,
+        historyAccuracy: 0.4,
       },
     ],
   },
