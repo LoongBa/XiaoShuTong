@@ -249,3 +249,13 @@
 **决策/修复**：SubmitAttemptResDto 新增 HistoryAccuracy（double 0~1，Correct=1/Partial=0.5/Wrong=0 近 20 次均值）。四处返回路径透出：① 正常路径 state==null ? 0.8 : newAccuracy（新题首答中性 0.8，与间隔计算 L175 口径一致）；② 幂等命中 BuildFromExistingAsync state?.HistoryAccuracy ?? 0.8（实施中发现第 4 路径，方案 T1 原只列 3 处）；③ Full 早退 state?.HistoryAccuracy ?? 0.8；④ Play state?.HistoryAccuracy ?? 0.8。契约四文件经 buildSchema.ps1 + gen-mock 全链路刷新（schema.graphql / GraphQL_Api.md / ts-client.g.ts / ts-client.mock.g.ts）。
 
 **避坑指南**：① 契约扩展须枚举**全部**返回路径（SubmitAttempt 有 4 处 return，非 3 处——幂等命中路径最易漏，其复用已有 attempt 不走新计算）；② 透出值口径区分"含本次的最新值"（正常路径 newAccuracy）vs"存量值"（幂等/Full/Play 不新增 attempt）；③ 契约字段改动后必须跑 buildSchema.ps1（导出 schema + gen-ts-client）再 npm run gen-mock（mock schema 独立于 gen-ts-client，2 个脚本分开）。
+
+### 2026-09-25 — [Update] — V0.6.3 联调环境与登录放行（SQLite + 白名单 + 种子）
+
+**涉及模块**：WebApi（Program.cs/appsettings.Development）+ XiaoShuTongUserHelper + XiaoShuTongDomainInitializer.data
+
+**上下文**：V0.6.3 真实端到端联调（历 V0.4.0~V0.6.2 五连优先建议）——首次真实启动 WebApi 的阻塞消解。
+
+**决策/修复**：① SQLite 文件库（DomainOptions.FreeSqlDataTypeName 配置键 + Program.cs 显式 UseFreeSqlEntityDAC(DataType,...) 重载——XML 明示无参重载不设 DataType 默认 PG；appsettings.Development 切 SQLite，生产 appsettings.json 保持 PG 不动）；② Domain.csproj 补 FreeSql.Provider.Sqlite + Microsoft.Data.Sqlite（Dll 模式 refs 不传 NuGet 依赖）；③ 登录放行（OnLoginByWeChatAppletAsync 白名单 xiaoming=10001/owner01=10002/parent01=10003 + DomainHost.Options.IsDevelopment 运行时守卫——ServiceProvider 解析 DomainOptions 为 null 的坑，改用 Host.Options 直取）；④ 最小链路种子（OnEnsureDataReadyAsync：Groups/GroupMembers/Banks/Questions/Tasks/TaskAssignments/ParentStudentRelations，UId 显式 UidGenerator.NewId() 赋值，IFreeSql 需 CreateScope 包裹——Scoped 注册 root 解析抛错）；⑤ 前端 authType 'wechat'→'WE_CHAT_APPLET' + loginFrom 'MOBILE_WEB'（合法枚举，schema L2472-2496）；⑥ vite proxy 5157→5020 + mock-server 注释 5156 勘误 + schema-settings 5000→5020。
+
+**避坑指南**：① FreeSqlDataTypeName 配置键仅在显式 UseFreeSqlEntityDAC(DataType,...) 重载生效，无参重载恒默认 PG——切库必须改 Program.cs；② DomainHost.Options 直取 DomainOptions（比 ServiceProvider.GetService 可靠，后者该类型未注册可解析）；③ IFreeSql 是 Scoped，OnEnsureDataReadyAsync 必须 CreateScope 包裹否则 root 解析抛 "Cannot resolve scoped service"；④ 未实现 IEntityTracked 的实体种子必须显式 UId，否则唯一索引冲突；⑤ 起 WebApi 用 Start-Process 后台（dotnet run 会阻塞），停服先杀 5020 占用 PID 再重建（锁 DLL MSB3027）。
