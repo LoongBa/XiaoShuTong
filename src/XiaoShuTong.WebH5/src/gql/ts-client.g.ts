@@ -11,6 +11,7 @@ export const Query = {
   bankDetail_Execute              : { field: 'bankDetail_Execute', type: 'query' } as const,
   draftBatch_Execute              : { field: 'draftBatch_Execute', type: 'query' } as const,
   knowledgeCard_Execute           : { field: 'knowledgeCard_Execute', type: 'query' } as const,
+  importBankJson_Execute          : { field: 'importBankJson_Execute', type: 'query' } as const,
   importQuestions_Execute         : { field: 'importQuestions_Execute', type: 'query' } as const,
   listBanks_Execute               : { field: 'listBanks_Execute', type: 'query' } as const,
   preprocessContent_Execute       : { field: 'preprocessContent_Execute', type: 'query' } as const,
@@ -108,6 +109,7 @@ export const operationSelection: Record<string, string> = {
   'generateInviteCodes_Execute': 'success errorCode generatedCount',
   'heatmap_Execute': 'success errorCode days { isFromPersistentSource id uId userId statDate learnedCount starredCount reviewCount accuracy studySeconds createTime updateTime }',
   'hint_Execute': 'success errorCode hint difficultySlot hintSource',
+  'importBankJson_Execute': 'success errorCode imported skipped hintFilled failures',
   'importQuestions_Execute': 'success errorCode imported failed failures',
   'importRoster_Execute': 'success errorCode importId status sourceCount',
   'inviteBuddy_Execute': 'success errorCode inviteId expiresAt',
@@ -226,6 +228,22 @@ export interface GetKnowledgeCardResDto {
 
 export interface GetKnowledgeCardReqDtoInput {
   questionId: string;
+}
+
+export interface ImportBankJsonResDto {
+  success: boolean;
+  errorCode: string | null;
+  imported: number;
+  skipped: number;
+  hintFilled: number;
+  failures: Array<string>;
+}
+
+export interface ImportBankJsonReqDtoInput {
+  bankId: string;
+  jsonPath: string | null;
+  jsonContent: string | null;
+  knowledgeCardsJson: string | null;
 }
 
 export interface ImportQuestionsResDto {
@@ -1463,6 +1481,10 @@ export interface KnowledgeCard_ExecuteArgs {
   request?: GetKnowledgeCardReqDtoInput;
 }
 
+export interface ImportBankJson_ExecuteArgs {
+  request?: ImportBankJsonReqDtoInput;
+}
+
 export interface ImportQuestions_ExecuteArgs {
   request?: ImportQuestionsReqDtoInput;
 }
@@ -1793,6 +1815,10 @@ export interface Heatmap_ExecuteService {
 
 export interface Hint_ExecuteService {
   hint_Execute(args?: Hint_ExecuteArgs): ChainablePromise<GetHintResDto>;
+}
+
+export interface ImportBankJson_ExecuteService {
+  importBankJson_Execute(args?: ImportBankJson_ExecuteArgs): ChainablePromise<ImportBankJsonResDto>;
 }
 
 export interface ImportQuestions_ExecuteService {

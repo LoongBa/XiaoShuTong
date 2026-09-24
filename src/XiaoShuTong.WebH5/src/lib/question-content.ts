@@ -19,6 +19,8 @@ export interface ParsedQuestionContent {
   answer?: string;
   /** 关联知识卡片 ID（R1~R3b 保留） */
   cardId?: string;
+  /** O4 连线配对（左列标签 → 右列标签；correct_pair 已剔除答案侧） */
+  pairs?: { left: string; right: string }[];
 }
 
 export function parseQuestionContent(content: string | null | undefined): ParsedQuestionContent {
@@ -35,6 +37,16 @@ export function parseQuestionContent(content: string | null | undefined): Parsed
         : undefined,
       answer: typeof obj.answer === 'string' ? obj.answer : undefined,
       cardId: typeof obj.cardId === 'string' ? obj.cardId : undefined,
+      // O4 pairs：选项对象数组（left 题干项 / right 可连线项）
+      pairs: Array.isArray(obj.pairs)
+        ? (obj.pairs as unknown[]).map((p) => {
+            const pair = p as Record<string, unknown>;
+            return {
+              left: typeof pair.left === 'string' ? pair.left : JSON.stringify(pair.left ?? ''),
+              right: typeof pair.right === 'string' ? pair.right : JSON.stringify(pair.right ?? ''),
+            };
+          })
+        : undefined,
     };
   } catch {
     return { question: trimmed }; // 非法 JSON → 原样兜底

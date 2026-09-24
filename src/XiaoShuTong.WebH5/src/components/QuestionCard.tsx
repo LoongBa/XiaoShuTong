@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -41,6 +42,9 @@ export function QuestionCard({
   const [text, setText] = useState('');
   const [selectedSingle, setSelectedSingle] = useState<string>('');
   const [selectedMulti, setSelectedMulti] = useState<string[]>([]);
+  // O4 连线：左列已选索引 → 右列索引（未选 = null）
+  const [pairMap, setPairMap] = useState<Record<number, number | null>>({});
+  const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const voice = useVoiceInput(inputRef ?? null);
 
@@ -70,6 +74,8 @@ export function QuestionCard({
     setText('');
     setSelectedSingle('');
     setSelectedMulti([]);
+    setPairMap({});
+    setSelectedLeft(null);
   }, [type]);
 
   // textarea 超长滚动（3 行初始高度非硬限高，R3b 整篇默写可滚动）
@@ -95,6 +101,34 @@ export function QuestionCard({
   };
 
   const submitJudgement = (value: string) => onSubmit(value);
+
+  // O4 连线：点击左列项选中 → 点击右列项建立配对（替换该行已有配对）；重复点击左列取消选中
+  const handleLeftClick = (leftIdx: number) => {
+    setSelectedLeft((prev) => (prev === leftIdx ? null : leftIdx));
+  };
+
+  const handleRightClick = (rightIdx: number) => {
+    if (selectedLeft === null) return; // 必须先选左列
+    setPairMap((prev) => {
+      const next = { ...prev };
+      // 该左列已有配对 → 替换；否则建立新配对（同一 right 不能配多个左列）
+      next[selectedLeft] = rightIdx;
+      return next;
+    });
+    setSelectedLeft(null);
+  };
+
+  const submitPairs = () => {
+    const pairs = parsed.pairs ?? [];
+    const answered = Object.entries(pairMap)
+      .filter(([, right]) => right !== null)
+      .map(([leftIdx, rightIdx]) => ({ left: pairs[Number(leftIdx)]?.left, right: pairs[rightIdx!]?.right }))
+      .filter((p) => p.left && p.right);
+    if (answered.length > 0) {
+      // 提交 canonical JSON（Oracle 评审闭环定案：{"pairs":{...}} 可扩展可校验）
+      onSubmit(JSON.stringify({ pairs: Object.fromEntries(answered.map((p) => [p.left!, p.right!])) }));
+    }
+  };
 
   const handleMicClick = () => {
     // 主路径：唤起系统输入法语音（focus+click）；桌面兜底 Web Speech API
@@ -213,22 +247,36 @@ export function QuestionCard({
             </div>
           )}
 
-          {/* O3 判断：对/错双键（swipe 后置，ADR-009 决策五） */}
+          {/* O3 判断：swipe 对/错（framer-motion：左滑=对 / 右滑=错；双键保留为降级） */}
           {type === 'O3' && (
-            <div className="flex gap-3">
-              <Button variant={selectedSingle === '对' ? 'default' : 'outline'} className="flex-1 h-12" onClick={() => submitJudgement('对')}>
-                对
-              </Button>
-              <Button variant={selectedSingle === '错' ? 'default' : 'outline'} className="flex-1 h-12" onClick={() => submitJudgement('错')}>
-                错
-              </Button>
+            <div className="space-y-3">
+              <motion.div
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.3}
+                onDragEnd={(_, info) => {
+                  if (info.offset.x < -60) submitJudgement('对'); // 左滑 = 对
+                  else if (info.offset.x > 60) submitJudgement('错'); // 右滑 = 错
+                }}
+                className="flex items-center justify-center py-6 rounded-xl border-2 border-dashed border-muted-foreground/30 cursor-grab active:cursor-grabbing select-none"
+              >
+                <span className="text-sm text-muted-foreground">左右滑动判断 · 左=对 右=错</span>
+              </motion.div>
+              <div className="flex gap-3">
+                <Button variant={selectedSingle === '对' ? 'default' : 'outline'} className="flex-1 h-11 text-sm" onClick={() => submitJudgement('对')}>
+                  对
+                </Button>
+                <Button variant={selectedSingle === '错' ? 'default' : 'outline'} className="flex-1 h-11 text-sm" onClick={() => submitJudgement('错')}>
+                  错
+                </Button>
+              </div>
             </div>
           )}
         </div>
       )}
 
-      {/* 提交按钮（R4 无） */}
-      {!isR4 && (
+      {/* 提交按钮（R4 无输入 / O4 自带提交连线，均不渲染通用按钮） */}
+      {!isR4 && type !== 'O4' && (
         <Button
           onClick={() => {
             if (isOSelect) {

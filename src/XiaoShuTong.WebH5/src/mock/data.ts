@@ -217,6 +217,12 @@ export const initialData: DatasetSeed = {
       content: '{"question":"床前明月光，____","cardId":"kc-007"}',
       knowledgePoint: "静夜思", knowledgeCardId: "kc-007",
     },
+    {
+      success: true, errorCode: null,
+      questionId: "q-8", type: "O4",
+      content: '{"question":"请将诗句与作者连线","pairs":[{"left":"黄河远上白云间","right":"王之涣"},{"left":"白日依山尽","right":"王之涣"},{"left":"床前明月光","right":"李白"},{"left":"举头望明月","right":"李白"}],"cardId":"kc-008"}',
+      knowledgePoint: "唐诗连线", knowledgeCardId: "kc-008",
+    },
     // 条 8：题集耗尽（success=true 且 questionId 空 = 会话结束信号，BR-18 → task 页 endStudy + 导航 result）
     {
       success: true, errorCode: null,
