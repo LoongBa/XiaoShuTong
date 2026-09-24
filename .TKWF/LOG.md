@@ -229,3 +229,13 @@
 ---
 
 > **Agent 注意**：请在此记录你对复杂业务逻辑的理解补丁，或在修改代码后手动同步你的"避坑指南"。
+
+### 2026-09-25 — [Update] — 学习-BR-24 实现路径增补（V0.6.1）
+
+**涉及模块**：SubmitAttemptService.SyncTaskProgressAsync（学习域 → 任务域 TaskAssignments）
+
+**上下文**：V0.6.1 重算热路径优化（ADR-010 实现路径增补，Oracle 评审闭环 7 条）。
+
+**决策/修复**：BR-24 判定语义不变（Correct 或达 MaxAttempts 计消费、Progress 百分比、状态迁移、Completed 幂等、个人会话豁免），实现路径从"每次作答全量跨会话重算（O(N²)）"改为"增量维护 TaskAssignments.ConsumedQuestionIds 集合 + 近完成全量校验"；每次作答仅按 QuestionId 查本题跨会话 attempts（O(1-2)）；新字段 [DtoFieldIgnore][JsonIgnore] 不进 Dto/对外契约，schema.graphql 零变化。
+
+**避坑指南**：① Attempts.QuestionId 为 string 业务键（非 long），消费集合须用 HashSet<string>(StringComparer.Ordinal)；② 近完成校验触发条件用 set.Count >= totalCount-1（而非 Progress==100），防漂移缺题导致校验永不触发；③ 损坏集合串（尾逗号/空元素）ParseConsumedSet 安全降级空集合。
