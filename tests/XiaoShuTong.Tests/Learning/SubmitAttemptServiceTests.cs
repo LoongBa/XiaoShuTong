@@ -1006,4 +1006,97 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.Equal("Q-43013a,Q-43013b", updated.ConsumedQuestionIds); // 含旧版 Q1
         Assert.Equal(AssignmentStatus.Completed, updated.Status);
     }
+
+    // ── V0.6.2：HistoryAccuracy 透出（走查缺口④ masteryLevel，PRD L187 间隔系数数据基础）──
+
+    /// <summary>V0.6.2 T4-1：正常路径加权均值——同题 3 次（Correct/Partial/Wrong）→ 第 3 次透出近 20 次正确率均值 (1+0.5+0)/3=0.5</summary>
+    [Fact]
+    public async Task ExecuteAsync_HistoryAccuracy_WeightedAverage()
+    {
+        var userId = SetUser(43021);
+        var session = await SeedSessionAsync(userId);
+        await SeedQuestionAsync("Q-43021", keywords: FullKeywords);
+
+        await SubmitAsync(userId, session.UId, "Q-43021", FullAnswer()); // Correct = 1.0
+        await SubmitAsync(userId, session.UId, "Q-43021", "若出其中 星汉灿烂 幸甚至哉"); // Partial = 0.5
+        var third = await SubmitAsync(userId, session.UId, "Q-43021", WrongAnswer); // Wrong = 0
+
+        Assert.True(third.Success);
+        Assert.Equal("Wrong", third.Result);
+        Assert.Equal(0.5, third.HistoryAccuracy, 4); // (1+0.5+0)/3，Math.Round(,4) 口径
+    }
+
+    /// <summary>V0.6.2 T4-2：新题首次（无 MemoryStates）→ 中性 0.8（与 L175 间隔计算口径一致，单次样本不代表性）</summary>
+    [Fact]
+    public async Task ExecuteAsync_HistoryAccuracy_NewQuestionNeutral()
+    {
+        var userId = SetUser(43022);
+        var session = await SeedSessionAsync(userId);
+        await SeedQuestionAsync("Q-43022");
+
+        var result = await SubmitAsync(userId, session.UId, "Q-43022", FullAnswer());
+
+        Assert.True(result.Success);
+        Assert.Equal("Correct", result.Result);
+        Assert.Equal(0.8, result.HistoryAccuracy); // state==null → 中性 0.8（即便本次答对）
+    }
+
+    /// <summary>V0.6.2 T4-3：Full 早退路径（直接看答案）→ 透出存量 HistoryAccuracy（不迁移不更新）</summary>
+    [Fact]
+    public async Task ExecuteAsync_HistoryAccuracy_FullViewAnswer()
+    {
+        var userId = SetUser(43023);
+        var session = await SeedSessionAsync(userId);
+        await SeedQuestionAsync("Q-43023");
+        await SeedStateAsync(userId, "Q-43023", MemoryState.Mastered, cc: 2, accuracy: 0.6);
+
+        var result = await SubmitAsync(userId, session.UId, "Q-43023", FullAnswer(), hintLevel: "Full");
+
+        Assert.True(result.Success);
+        Assert.Equal(0.6, result.HistoryAccuracy); // 存量值透出，Full 不更新 MemoryStates
+    }
+
+    /// <summary>V0.6.2 T4-4：Play 路径（PK 场景）→ 透出存量 HistoryAccuracy（Play 不更新状态）</summary>
+    [Fact]
+    public async Task ExecuteAsync_HistoryAccuracy_PlayScenario()
+    {
+        var userId = SetUser(43024);
+        var session = await SeedSessionAsync(userId, scenario: LearningScenario.PlayPk);
+        await SeedQuestionAsync("Q-43024");
+        await SeedStateAsync(userId, "Q-43024", MemoryState.Mastered, cc: 3, accuracy: 0.6);
+
+        var result = await SubmitAsync(userId, session.UId, "Q-43024", FullAnswer());
+
+        Assert.True(result.Success);
+        Assert.Equal(0.6, result.HistoryAccuracy); // Play 不更新 MemoryStates → 存量值
+    }
+
+    /// <summary>V0.6.2 T4-5：连续作答收敛——4 次不同措辞但均 Correct → HistoryAccuracy 升至 1.0（均值上限；答案变体避开 BR-27 幂等键）</summary>
+    [Fact]
+    public async Task ExecuteAsync_HistoryAccuracy_ConvergesToPerfect()
+    {
+        var userId = SetUser(43025);
+        var session = await SeedSessionAsync(userId);
+        await SeedQuestionAsync("Q-43025");
+
+        // 4 个 Correct 答案变体（均含全部关键词 → 判题 Correct；AnswerHash 不同 → 幂等放行）
+        string[] correctVariants =
+        [
+            "若出其中 星汉灿烂 幸甚至哉 歌以咏志",
+            "若出其中，星汉灿烂，幸甚至哉，歌以咏志",
+            "若出其中 幸甚至哉 歌以咏志 星汉灿烂",
+            "歌以咏志 星汉灿烂 若出其中 幸甚至哉",
+        ];
+
+        SubmitAttemptResDto? final = null;
+        foreach (var answer in correctVariants)
+        {
+            final = await SubmitAsync(userId, session.UId, "Q-43025", answer);
+            Assert.True(final.Success);
+            Assert.Equal("Correct", final.Result);
+        }
+
+        // 第 4 次后：4 条全 Correct → 均值 1.0（第 4 次响应已含本次）
+        Assert.Equal(1.0, final!.HistoryAccuracy);
+    }
 }

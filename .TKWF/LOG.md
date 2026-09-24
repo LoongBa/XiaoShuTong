@@ -239,3 +239,13 @@
 **决策/修复**：BR-24 判定语义不变（Correct 或达 MaxAttempts 计消费、Progress 百分比、状态迁移、Completed 幂等、个人会话豁免），实现路径从"每次作答全量跨会话重算（O(N²)）"改为"增量维护 TaskAssignments.ConsumedQuestionIds 集合 + 近完成全量校验"；每次作答仅按 QuestionId 查本题跨会话 attempts（O(1-2)）；新字段 [DtoFieldIgnore][JsonIgnore] 不进 Dto/对外契约，schema.graphql 零变化。
 
 **避坑指南**：① Attempts.QuestionId 为 string 业务键（非 long），消费集合须用 HashSet<string>(StringComparer.Ordinal)；② 近完成校验触发条件用 set.Count >= totalCount-1（而非 Progress==100），防漂移缺题导致校验永不触发；③ 损坏集合串（尾逗号/空元素）ParseConsumedSet 安全降级空集合。
+
+### 2026-09-25 — [Update] — 学习-BR-25 透出口径增补（V0.6.2）
+
+**涉及模块**：SubmitAttemptService.SubmitAttemptResDto（学习域提交通道契约）
+
+**上下文**：走查文档《背记场景模拟走查-历史》附录缺口④ masteryLevel——PRD L187"Next_Interval = 状态基础间隔 × 历史正确率系数（0.5~1.5）"的数据基础（近 20 次正确率）已存库（MemoryStates.HistoryAccuracy）但未对外透出。走查附录另 3 项缺口（JudgingEngineService 接入 / needsGuidance / attemptCount+maxAttempts）经 git 核验已闭环（d3c1a56 / 93f9f78 / 39ebf50），仅此 1 项真实。
+
+**决策/修复**：SubmitAttemptResDto 新增 HistoryAccuracy（double 0~1，Correct=1/Partial=0.5/Wrong=0 近 20 次均值）。四处返回路径透出：① 正常路径 state==null ? 0.8 : newAccuracy（新题首答中性 0.8，与间隔计算 L175 口径一致）；② 幂等命中 BuildFromExistingAsync state?.HistoryAccuracy ?? 0.8（实施中发现第 4 路径，方案 T1 原只列 3 处）；③ Full 早退 state?.HistoryAccuracy ?? 0.8；④ Play state?.HistoryAccuracy ?? 0.8。契约四文件经 buildSchema.ps1 + gen-mock 全链路刷新（schema.graphql / GraphQL_Api.md / ts-client.g.ts / ts-client.mock.g.ts）。
+
+**避坑指南**：① 契约扩展须枚举**全部**返回路径（SubmitAttempt 有 4 处 return，非 3 处——幂等命中路径最易漏，其复用已有 attempt 不走新计算）；② 透出值口径区分"含本次的最新值"（正常路径 newAccuracy）vs"存量值"（幂等/Full/Play 不新增 attempt）；③ 契约字段改动后必须跑 buildSchema.ps1（导出 schema + gen-ts-client）再 npm run gen-mock（mock schema 独立于 gen-ts-client，2 个脚本分开）。

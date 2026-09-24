@@ -89,7 +89,7 @@
 | 学习-BR-22 | 同步派生：DailyStats 当日累加（LearnedCount/StarredCount/ReviewCount/Accuracy/StudySeconds） | DailyStats | UC-4.2 |
 | 学习-BR-23 | 同步派生：WrongQuestions 归集（Result=Wrong/Partial）；连续 2 次 Correct（跨会话）→ Mastered=true | WrongQuestions | UC-4.2 |
 | 学习-BR-24 | 同步派生：TaskAssignments.Progress 更新；全部完成 → Status=Completed。**判定口径（ADR-010）**：跨会话聚合该任务全部作答（经 SessionId→StudySessions.TaskId 桥接），"消费"= Correct 或该题尝试数 ≥ MaxAttempts(2)；Progress = 消费题数 / Tasks.QuestionCount × 100；Pending→InProgress（首次推进）、Progress≥100 → Completed + CompletedAt；TaskId=null（个人会话）不推进；Completed 幂等（AllowRedo 重做不改变）。（**V0.6.1 实现路径：增量集合**——判定语义不变，实现改为每次作答仅按 QuestionId 查本题跨会话 attempts 判定"新消费"后增量入 TaskAssignments.ConsumedQuestionIds（内部字段，逗号分隔，不进 Dto/对外契约），Progress = 集合大小 / QuestionCount × 100；近完成（集合数 ≥ total-1）触发一次全量重算校验防漂移，见 ADR-010 实现路径增补） | TaskAssignments | UC-4.2 |
-| 学习-BR-25 | 作答后必须返回状态迁移结果（PreState/PostState/NextReviewAt），供前端渲染状态变化 | MemoryStates | UC-4.2 |
+| 学习-BR-25 | 作答后必须返回状态迁移结果（PreState/PostState/NextReviewAt），供前端渲染状态变化。（**V0.6.2 透出口径**：响应含 HistoryAccuracy——近 20 次正确率（Correct=1/Partial=0.5/Wrong=0 均值，0~1），PRD L187 间隔系数数据基础，走查缺口④ masteryLevel 闭环；新题首次/未迁移路径（幂等命中/Full/Play）透出存量值或中性 0.8） | MemoryStates | UC-4.2 |
 | 学习-BR-26 | 题目必须存在且属于会话题库 | Questions, StudySessions | UC-4.2 |
 | 学习-BR-27 | 幂等：同一 SessionUid + QuestionId 已记录则返回已有结果，不重复写 | Attempts | UC-4.2 |
 | 学习-BR-28 | 题目必须存在 → 1502 | Questions | UC-4.3 |

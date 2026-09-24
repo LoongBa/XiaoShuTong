@@ -20,7 +20,7 @@ namespace XiaoShuTong.Services.Learning;
 /// CROSS：Attempts + MemoryStates + DailyStats + WrongQuestions 同生共死（事实源单一原则）。
 /// BR-06 会话归属 | BR-07 答案格式 | BR-09 判题降级（本地引擎）| BR-10 三分判题
 /// BR-11~21 四阶状态机 | BR-22 DailyStats | BR-23 WrongQuestions | BR-25 迁移结果 | BR-26 题目归属 | BR-27 幂等
-/// 跨模块（本切片桩）：判题服务（LocalJudgmentEngine）、TaskAssignments（切片 04）。
+/// 跨模块：判题经 JudgingEngineService（d3c1a56 接入，替换 LocalJudgmentEngine 桩）；TaskAssignments 进度联动（BR-24，V0.6.0 落地）。
 /// 题目元数据经 QuestionMetaProvider 真实读取（ADR-008 决策二，注册表降级测试专用）。
 /// </remarks>
 [GenerateController]
@@ -142,6 +142,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
                 MaxAttempts = MaxAttempts,
                 ShowAnswer = true, // 已看答案（方案决策表 #7）
                 IsDegraded = verdict.IsDegraded,
+                HistoryAccuracy = state?.HistoryAccuracy ?? 0.8, // 不迁移状态 → 存量值；新题中性 0.8
             };
         }
 
@@ -164,6 +165,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
                 MaxAttempts = MaxAttempts,
                 ShowAnswer = false,
                 IsDegraded = verdict.IsDegraded,
+                HistoryAccuracy = state?.HistoryAccuracy ?? 0.8, // Play 不更新状态 → 存量值；新题中性 0.8
             };
         }
 
@@ -255,6 +257,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             MaxAttempts = MaxAttempts,
             ShowAnswer = showAnswer,
             IsDegraded = isDegraded,
+            HistoryAccuracy = state == null ? 0.8 : newAccuracy, // 新题首答中性 0.8（与 L175 间隔口径一致）；有状态透出最新近 20 次正确率（含本次）
         };
     }
 
@@ -516,6 +519,7 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             MaxAttempts = MaxAttempts,
             ShowAnswer = false,
             IsDegraded = false,
+            HistoryAccuracy = state?.HistoryAccuracy ?? 0.8, // 幂等命中不新增 attempt → 透出存量值（与 Full/Play 口径一致）
         };
     }
 
@@ -601,4 +605,7 @@ public sealed record SubmitAttemptResDto
 
     /// <summary>判题是否降级（LLM 失败→本地规则，UI 提示"判题可能不精确"）</summary>
     public bool IsDegraded { get; init; }
+
+    /// <summary>近 20 次正确率（Correct=1/Partial=0.5/Wrong=0 均值，0~1；PRD L187 间隔系数数据基础，走查缺口④ masteryLevel 透出；新题首次/未迁移路径中性 0.8）</summary>
+    public double HistoryAccuracy { get; init; }
 }

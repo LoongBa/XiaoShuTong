@@ -152,7 +152,7 @@ export const operationSelection: Record<string, string> = {
   'setRankEnabled_Execute': 'success errorCode groupId rankEnabled',
   'startTrial_Execute': 'success errorCode subscriptionUid status trialEndAt',
   'streak_Execute': 'success errorCode currentStreak longestStreak',
-  'submitAttempt_Execute': 'success errorCode result confidence matchedKeywords missingKeywords hint preState postState nextReviewAt needsGuidance attemptCount maxAttempts showAnswer isDegraded',
+  'submitAttempt_Execute': 'success errorCode result confidence matchedKeywords missingKeywords hint preState postState nextReviewAt needsGuidance attemptCount maxAttempts showAnswer isDegraded historyAccuracy',
   'submitJudgmentFeedback_Execute': 'success errorCode feedbackUid status',
   'submitPkAnswer_Execute': 'success errorCode isCorrect result confidence score',
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
@@ -625,6 +625,7 @@ export interface SubmitAttemptResDto {
   maxAttempts: number;
   showAnswer: boolean;
   isDegraded: boolean;
+  historyAccuracy: number;
 }
 
 export interface SubmitAttemptReqDtoInput {

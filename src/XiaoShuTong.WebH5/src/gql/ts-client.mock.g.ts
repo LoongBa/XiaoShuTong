@@ -475,7 +475,8 @@ export const SubmitAttemptResDtoSchema = {
     attemptCount: { kind: "number" },
     maxAttempts: { kind: "number" },
     showAnswer: { kind: "boolean" },
-    isDegraded: { kind: "boolean" }
+    isDegraded: { kind: "boolean" },
+    historyAccuracy: { kind: "number" }
 } as const;
 export const CancelSubscriptionResDtoSchema = {
     success: { kind: "boolean" },

@@ -1509,6 +1509,8 @@ type SubmitAttemptResDto {
   showAnswer: Boolean!
   "判题是否降级（LLM 失败→本地规则，UI 提示\"判题可能不精确\"）"
   isDegraded: Boolean!
+  "近 20 次正确率（Correct=1/Partial=0.5/Wrong=0 均值，0~1；PRD L187 间隔系数数据基础，走查缺口④ masteryLevel 透出；新题首次/未迁移路径中性 0.8）"
+  historyAccuracy: Float!
 }
 
 "判错反馈响应 DTO"
