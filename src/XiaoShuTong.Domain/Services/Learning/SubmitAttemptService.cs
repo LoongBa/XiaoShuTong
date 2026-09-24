@@ -5,6 +5,7 @@ using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
 using TKW.Framework.Domain.Transactions;
 using XiaoShuTong.DataServices.Learning;
+using XiaoShuTong.DataServices.TaskManagement;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Services.Judging;
 using XiaoShuTong.Tools;
@@ -46,6 +47,12 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
 
     private WrongQuestionsDataService? _wrongDs;
     private WrongQuestionsDataService WrongDs => _wrongDs ??= User.Use<WrongQuestionsDataService>();
+
+    private TaskAssignmentsDataService? _assignmentsDs;
+    private TaskAssignmentsDataService AssignmentsDs => _assignmentsDs ??= User.Use<TaskAssignmentsDataService>();
+
+    private TasksDataService? _tasksDs;
+    private TasksDataService TasksDs => _tasksDs ??= User.Use<TasksDataService>();
 
     private QuestionMetaProvider? _questionMetaProvider;
     private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
@@ -223,7 +230,8 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         // BR-23：同步 WrongQuestions（归集/连续 2 次 Mastered）
         await SyncWrongQuestionsAsync(userId, request.QuestionId, question.Subject, result, attempt, ct);
 
-        // BR-24：TaskAssignments.Progress（跨模块，任务域切片 04）——本切片不实施
+        // BR-24：TaskAssignments.Progress 同步派生（ADR-010：重算式跨会话聚合；任务域切片 04 落地）
+        await SyncTaskProgressAsync(session, userId, ct);
 
         // 决策：引导/兜底（方案 §六 步骤 2 + 决策表 #2-#8）
         var showAnswer = (result is JudgmentResult.Wrong or JudgmentResult.Partial) && attemptCount >= MaxAttempts; // 达上限展示答案（决策表 #4 partial / #8 wrong 均兜底，防引导死循环）
@@ -359,6 +367,73 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
             wrong.Mastered = recent.Count >= 2 && recent.All(a => a.Result == JudgmentResult.Correct);
             await WrongDs.EntityUpdateAsync(wrong, ct);
         }
+    }
+
+    /// <summary>
+    /// BR-24：TaskAssignments.Progress 同步派生（ADR-010 决策一~五）
+    /// 重算式（非增量）：跨会话聚合该任务全部 attempts，Correct 或达 MaxAttempts 计"消费"；
+    /// 全部消费 → Status=Completed + CompletedAt；Pending→InProgress（首次推进）；
+    /// 三预留字段（SessionId/StartedAt/CompletedAt）接线；个人会话（TaskId=null）不推进。
+    /// </summary>
+    private async Task SyncTaskProgressAsync(StudySessions session, long userId, CancellationToken ct)
+    {
+        // 个人/自由会话（无任务归属）→ 不推进（ADR-010 使用场景 S5）
+        if (session.TaskId is null or <= 0)
+            return;
+
+        // 任务分配定位（BR-05：TaskId+UserId 唯一）
+        var assignment = await AssignmentsDs.EntityGetAsync(
+            x => x.TaskId == session.TaskId && x.UserId == userId, ct);
+        if (assignment == null)
+            return;
+
+        // Completed 幂等：不再变更（AllowRedo 重做不改变，对齐 BR-23）
+        if (assignment.Status == AssignmentStatus.Completed)
+            return;
+
+        var now = DateTime.UtcNow;
+
+        // 三预留字段接线（Oracle 评审闭环：SessionId 仅作最新会话指针，不参与重算）
+        assignment.SessionId = session.Id;
+        assignment.StartedAt ??= now;
+
+        // 跨会话聚合（Oracle 评审闭环：Attempts 无 TaskId，两步查询经 StudySessions 桥接）
+        var taskSessions = await SessionsDs.EntitySelectAsync(
+            x => x.TaskId == session.TaskId && x.UserId == userId, ct: ct);
+        var sessionIds = taskSessions.Select(s => s.Id).ToHashSet();
+        if (sessionIds.Count == 0)
+            sessionIds.Add(session.Id);
+        var taskAttempts = await AttemptsDs.EntitySelectAsync(
+            a => a.UserId == userId && a.SessionId != null && sessionIds.Contains(a.SessionId.Value), ct: ct);
+
+        // 完成判定（ADR-010 决策二，Oracle 评审勘误）：Attempts 无 AttemptCount 字段，
+        // "达 MaxAttempts" 按题分组计数判定——Correct 或该题尝试数 ≥ MaxAttempts 计"消费"
+        var consumedQuestionIds = taskAttempts
+            .GroupBy(a => a.QuestionId)
+            .Where(g => g.Any(a => a.Result == JudgmentResult.Correct) || g.Count() >= MaxAttempts)
+            .Select(g => g.Key)
+            .ToHashSet(StringComparer.Ordinal);
+
+        // 分母 = 任务题集规模（Tasks.QuestionCount）
+        var task = await TasksDs.EntityGetAsync(x => x.Id == session.TaskId.Value, ct);
+        var totalCount = task?.QuestionCount ?? consumedQuestionIds.Count;
+        if (totalCount <= 0)
+            return;
+
+        // 重算 Progress（百分比制，DOMAIN_MAP L447）
+        var progress = (int)Math.Round((double)consumedQuestionIds.Count / totalCount * 100);
+        assignment.Progress = Math.Clamp(progress, 0, 100);
+
+        // 状态迁移（ADR-010 决策四）：Pending→InProgress（首次推进）；全部消费→Completed
+        if (assignment.Status == AssignmentStatus.Pending)
+            assignment.Status = AssignmentStatus.InProgress;
+        if (assignment.Progress >= 100)
+        {
+            assignment.Status = AssignmentStatus.Completed;
+            assignment.CompletedAt = now;
+        }
+
+        await AssignmentsDs.EntityUpdateAsync(assignment, ct);
     }
 
     /// <summary>BR-27：幂等返回——复用已有作答记录 + 当前记忆状态</summary>

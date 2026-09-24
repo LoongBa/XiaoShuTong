@@ -19,6 +19,8 @@ type Query {
     @cost(weight: "10")
   knowledgeCard_Execute(request: GetKnowledgeCardReqDtoInput): GetKnowledgeCardResDto
     @cost(weight: "10")
+  importBankJson_Execute(request: ImportBankJsonReqDtoInput): ImportBankJsonResDto
+    @cost(weight: "10")
   importQuestions_Execute(request: ImportQuestionsReqDtoInput): ImportQuestionsResDto
     @cost(weight: "10")
   listBanks_Execute(request: ListBanksReqDtoInput): ListBanksResDto
@@ -894,6 +896,22 @@ type GroupListItemDto {
   executionRate: Int!
   "战绩榜开关"
   rankEnabled: Boolean!
+}
+
+"题库 JSON 导入响应 DTO"
+type ImportBankJsonResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "成功导入数"
+  imported: Int!
+  "跳过数"
+  skipped: Int!
+  "Hint 填充数（knowledge_card_id join 卡片记忆钩子成功）"
+  hintFilled: Int!
+  "失败明细"
+  failures: [String!]!
 }
 
 "导入题目响应 DTO"
@@ -2089,6 +2107,18 @@ input GetWrongQuestionsReqDtoInput {
   pageIndex: Int!
   "每页数（1~100，默认 20）"
   pageSize: Int!
+}
+
+"题库 JSON 导入请求 DTO"
+input ImportBankJsonReqDtoInput {
+  "题库业务键"
+  bankId: String!
+  "生产首选：服务端读题库目录背诵内容 JSON 路径（避免大 payload 经 RPC，Oracle 评审闭环 #5）"
+  jsonPath: String
+  "仅小批量/测试用例：背诵内容 JSON 全量文本"
+  jsonContent: String
+  "背景钩子-知识卡片 JSON（可选，缺省从题库目录读）"
+  knowledgeCardsJson: String
 }
 
 "导入题目请求 DTO"

@@ -1,8 +1,10 @@
 using System.Text.Json;
 using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.DataServices.Learning;
+using XiaoShuTong.DataServices.TaskManagement;
 using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.Learning;
+using XiaoShuTong.Entities.TaskManagement;
 using XiaoShuTong.Services.Learning;
 using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Testing.xUnit;
@@ -83,6 +85,63 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
             QuestionCount = 10,
             StartedAt = DateTime.UtcNow,
         }, TestContext.Current.CancellationToken);
+    }
+
+    /// <summary>BR-24：带任务归属的会话（TaskId 非空 → Progress 派生）</summary>
+    private async Task<StudySessions> SeedTaskSessionAsync(long userId, long taskId, string bankId = "bank-ch-7a")
+    {
+        var ds = User.Use<StudySessionsDataService>();
+        return await ds.EntityCreateAsync(new StudySessions
+        {
+            UId = UidGenerator.NewId(),
+            UserId = userId,
+            Scenario = LearningScenario.Memorize,
+            BankId = bankId,
+            SessionType = SessionType.Progressive,
+            QuestionCount = 10,
+            TaskId = taskId,
+            StartedAt = DateTime.UtcNow,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    /// <summary>BR-24：任务种子（分母 = QuestionCount）</summary>
+    private async Task<Tasks> SeedTaskAsync(long ownerId, int questionCount, string[] questionIds)
+    {
+        var ds = User.Use<TasksDataService>();
+        return await ds.EntityCreateAsync(new Tasks
+        {
+            UId = UidGenerator.NewId(),
+            OwnerId = ownerId,
+            GroupId = 1,
+            Title = "BR-24 进度测试任务",
+            QuestionIds = questionIds,
+            QuestionCount = questionCount,
+            Scenario = TaskScenario.Memorize,
+            SessionType = TaskSessionType.Progressive,
+            AllowRedo = false,
+            Status = TaskStatus.Active,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    /// <summary>BR-24：任务分配种子（BR-05 TaskId+UserId 唯一）</summary>
+    private async Task<TaskAssignments> SeedTaskAssignmentAsync(long taskId, long userId, AssignmentStatus status = AssignmentStatus.Pending, int progress = 0)
+    {
+        var ds = User.Use<TaskAssignmentsDataService>();
+        return await ds.EntityCreateAsync(new TaskAssignments
+        {
+            UId = UidGenerator.NewId(),
+            TaskId = taskId,
+            UserId = userId,
+            Status = status,
+            Progress = progress,
+            AssignedAt = DateTime.UtcNow,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task<TaskAssignments?> GetAssignmentAsync(long taskId, long userId)
+    {
+        var ds = User.Use<TaskAssignmentsDataService>();
+        return await ds.EntityGetAsync(x => x.TaskId == taskId && x.UserId == userId, TestContext.Current.CancellationToken);
     }
 
     private async Task SeedStateAsync(long userId, string questionId, MemoryState state, int cc = 0, double accuracy = 0.8)
@@ -631,5 +690,147 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.True(result.Success);
         Assert.True(result.IsDegraded); // 降级标记透出
         Assert.Equal("Partial", result.Result); // BR-34 保守 Partial
+    }
+
+    // ── BR-24：TaskAssignments.Progress 同步派生（ADR-010，V0.6.0） ──
+
+    /// <summary>BR-24：任务会话首次作答 Correct → Progress 推进 + Pending→InProgress + SessionId/StartedAt 接线</summary>
+    [Fact]
+    public async Task ExecuteAsync_TaskAttempt_ProgressAdvancesAndInProgress()
+    {
+        var userId = SetUser(43001);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43001a");
+        await SeedQuestionAsync("Q-43001b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43001a", "Q-43001b"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        // 1 题 Correct（QuestionCount=2）→ 50%
+        var result = await SubmitAsync(userId, session.UId, "Q-43001a", FullAnswer());
+
+        Assert.True(result.Success);
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(50, assignment.Progress);
+        Assert.Equal(AssignmentStatus.InProgress, assignment.Status); // Pending → InProgress
+        Assert.Equal(session.Id, assignment.SessionId); // 最新会话指针
+        Assert.NotNull(assignment.StartedAt); // 首次推进时间
+    }
+
+    /// <summary>BR-24：全部消费 → Progress=100 + Status=Completed + CompletedAt</summary>
+    [Fact]
+    public async Task ExecuteAsync_TaskAllConsumed_CompletesAssignment()
+    {
+        var userId = SetUser(43002);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43002a");
+        await SeedQuestionAsync("Q-43002b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43002a", "Q-43002b"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43002a", FullAnswer()); // 50%
+        await SubmitAsync(userId, session.UId, "Q-43002b", FullAnswer()); // 100%
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(100, assignment.Progress);
+        Assert.Equal(AssignmentStatus.Completed, assignment.Status);
+        Assert.NotNull(assignment.CompletedAt);
+    }
+
+    /// <summary>BR-24：个人会话（TaskId=null）→ 不推进（无任务归属，SyncTaskProgress 直接 return）</summary>
+    [Fact]
+    public async Task ExecuteAsync_PersonalSession_DoesNotAdvanceProgress()
+    {
+        var userId = SetUser(43003);
+        var session = await SeedSessionAsync(userId); // TaskId=null（个人会话）
+        await SeedQuestionAsync("Q-43003x");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43003x", "Q-43003y"]);
+
+        _ = await SubmitAsync(userId, session.UId, "Q-43003x", FullAnswer()); // 个人会话作答正常
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.Null(assignment); // 个人会话不产生任务分配（TaskId=null 早退，无副作用）
+    }
+
+    /// <summary>BR-24：Full 早退 → 不推进（BR-16 不入 Attempts）</summary>
+    [Fact]
+    public async Task ExecuteAsync_FullHint_DoesNotAdvanceProgress()
+    {
+        var userId = SetUser(43004);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43004", keywords: FullKeywords);
+        var task = await SeedTaskAsync(userId, questionCount: 1, questionIds: ["Q-43004"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43004", WrongAnswer, hintLevel: "Full"); // Full 早退
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(0, assignment.Progress); // 未推进
+        Assert.Equal(AssignmentStatus.Pending, assignment.Status); // 保持 Pending
+    }
+
+    /// <summary>BR-24：幂等命中（同答案重发）→ 不重复推进</summary>
+    [Fact]
+    public async Task ExecuteAsync_IdempotentHit_DoesNotReAdvanceProgress()
+    {
+        var userId = SetUser(43005);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43005", keywords: FullKeywords);
+        var task = await SeedTaskAsync(userId, questionCount: 1, questionIds: ["Q-43005"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43005", FullAnswer()); // 首次 → 100%/Completed
+        await SubmitAsync(userId, session.UId, "Q-43005", FullAnswer()); // 幂等命中（同答案重发）
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(100, assignment.Progress);
+        Assert.Equal(AssignmentStatus.Completed, assignment.Status); // 不重复变化
+    }
+
+    /// <summary>BR-24：Wrong 未达上限（NeedsGuidance=true）→ 不计数（学生还在重试中）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WrongUnderLimit_DoesNotConsume()
+    {
+        var userId = SetUser(43006);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43006", keywords: FullKeywords);
+        var task = await SeedTaskAsync(userId, questionCount: 1, questionIds: ["Q-43006"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43006", WrongAnswer); // Wrong 第 1 次，未达上限
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(0, assignment.Progress); // 未消费
+        Assert.Equal(AssignmentStatus.InProgress, assignment.Status); // 首次作答已推进状态（Pending→InProgress）
+    }
+
+    /// <summary>BR-24：达上限（第 2 次作答，不同答案触发重试）→ 消费（Progress 推进）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WrongAtLimit_Consumes()
+    {
+        var userId = SetUser(43007);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43007", keywords: FullKeywords);
+        var task = await SeedTaskAsync(userId, questionCount: 1, questionIds: ["Q-43007"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43007", WrongAnswer); // 第 1 次 Wrong（未达上限）
+        // 第 2 次必须用不同答案（同答案会命中 BR-27 幂等不新增 Attempt），触发重试放行
+        await SubmitAsync(userId, session.UId, "Q-43007", "另一个完全错误的答案"); // 第 2 次 Wrong（达上限，showAnswer）
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(100, assignment.Progress); // 达上限 → 消费 → 100%
+        Assert.Equal(AssignmentStatus.Completed, assignment.Status);
     }
 }

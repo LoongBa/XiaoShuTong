@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-24 07:05:47
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-24 19:51:10
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -18,14 +18,14 @@
 | member | 0 | 1 | 1 | 0 |
 | model | 1 | 3 | 4 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 48 | 1 | 49 | 0 |
+| other | 49 | 1 | 50 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **63** | **8** | **71** | **0** |
+| **合计** | **64** | **8** | **72** | **0** |
 
 ## 二、按域操作清单
 
@@ -142,6 +142,13 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `cardType`: string | | | | | |
 | | ⤷ `content`: string | | | | | |
+| other | `importBankJson_Execute` | Query |  | { request?: ImportBankJsonReqDtoInput | null } | `ImportBankJsonResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `imported`: number | | | | | |
+| | ⤷ `skipped`: number | | | | | |
+| | ⤷ `hintFilled`: number | | | | | |
+| | ⤷ `failures`: string[] | | | | | |
 | other | `importQuestions_Execute` | Query |  | { request?: ImportQuestionsReqDtoInput | null } | `ImportQuestionsResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -490,6 +497,7 @@
 | `GetWeaknessReportResDto` | success, errorCode, weakPoints → 见 \`ParentWeakPointDto\` |
 | `GetWrongQuestionsResDto` | success, errorCode, items → 见 \`WrongQuestionsDto\`, total |
 | `GroupDetailResDto` | success, errorCode, groupId, members → 见 \`MemberItemDto\` |
+| `ImportBankJsonResDto` | success, errorCode, imported, skipped, hintFilled, failures |
 | `ImportQuestionsResDto` | success, errorCode, imported, failed, failures |
 | `ImportRosterResDto` | success, errorCode, importId, status, sourceCount |
 | `InviteBuddyResDto` | success, errorCode, inviteId, expiresAt |
