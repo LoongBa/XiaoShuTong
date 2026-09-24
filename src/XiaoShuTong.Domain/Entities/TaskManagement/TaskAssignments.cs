@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using FreeSql.DataAnnotations;
 using TKW.Framework.CodeGeneration;
 
@@ -69,4 +70,16 @@ public partial class TaskAssignments
     /// <summary>更新时间（框架审计字段）</summary>
     [Column(Position = 12, CanUpdate = true)]
     public DateTime UpdateTime { get; set; } = DateTime.UtcNow;
+
+    /// <summary>
+    /// 已消费题 ID 集合（逗号分隔，BR-24 增量维护派生，内部字段不进 Dto/对外契约）
+    /// </summary>
+    /// <remarks>
+    /// V0.6.1 重算热路径优化（ADR-010 实现路径增补）：从"每次作答全量跨会话重算"改为
+    /// "增量维护本集合 + 近完成全量校验"，判定口径（Correct 或达 MaxAttempts 计消费）不变。
+    /// </remarks>
+    [Column(Position = 13, MapType = typeof(string), StringLength = 2000)]
+    [DtoFieldIgnore]
+    [JsonIgnore]
+    public string ConsumedQuestionIds { get; set; } = string.Empty;
 }

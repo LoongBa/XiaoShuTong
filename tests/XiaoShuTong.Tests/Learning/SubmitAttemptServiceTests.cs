@@ -123,8 +123,8 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         }, TestContext.Current.CancellationToken);
     }
 
-    /// <summary>BR-24：任务分配种子（BR-05 TaskId+UserId 唯一）</summary>
-    private async Task<TaskAssignments> SeedTaskAssignmentAsync(long taskId, long userId, AssignmentStatus status = AssignmentStatus.Pending, int progress = 0)
+    /// <summary>BR-24：任务分配种子（BR-05 TaskId+UserId 唯一）；consumed 参数构造漂移/历史场景（V0.6.1）</summary>
+    private async Task<TaskAssignments> SeedTaskAssignmentAsync(long taskId, long userId, AssignmentStatus status = AssignmentStatus.Pending, int progress = 0, string consumed = "")
     {
         var ds = User.Use<TaskAssignmentsDataService>();
         return await ds.EntityCreateAsync(new TaskAssignments
@@ -134,6 +134,7 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
             UserId = userId,
             Status = status,
             Progress = progress,
+            ConsumedQuestionIds = consumed,
             AssignedAt = DateTime.UtcNow,
         }, TestContext.Current.CancellationToken);
     }
@@ -832,5 +833,177 @@ public class SubmitAttemptServiceTests(XiaoShuTongDomainTestFixture fixture, ITe
         Assert.NotNull(assignment);
         Assert.Equal(100, assignment.Progress); // 达上限 → 消费 → 100%
         Assert.Equal(AssignmentStatus.Completed, assignment.Status);
+    }
+
+    // ── BR-24：V0.6.1 增量集合 + 完成时校验（Oracle 评审闭环 #6） ──
+
+    /// <summary>V0.6.1 T4-1：增量累积——3 题任务跨 2 会话续做，集合正确排序序列化，33→66→100 + Completed</summary>
+    [Fact]
+    public async Task ExecuteAsync_IncrementalAcrossSessions_AccumulatesAndCompletes()
+    {
+        var userId = SetUser(43008);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43008a");
+        await SeedQuestionAsync("Q-43008b");
+        await SeedQuestionAsync("Q-43008c");
+        var task = await SeedTaskAsync(userId, questionCount: 3, questionIds: ["Q-43008a", "Q-43008b", "Q-43008c"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var s1 = await SeedTaskSessionAsync(userId, task.Id);
+        var s2 = await SeedTaskSessionAsync(userId, task.Id); // 续做新会话
+
+        await SubmitAsync(userId, s1.UId, "Q-43008a", FullAnswer()); // 33%
+        var a1 = await GetAssignmentAsync(task.Id, userId);
+        Assert.Equal(33, a1!.Progress);
+        Assert.Equal("Q-43008a", a1.ConsumedQuestionIds);
+
+        await SubmitAsync(userId, s2.UId, "Q-43008b", FullAnswer()); // 67%（2/3 Round 进位）
+        var a2 = await GetAssignmentAsync(task.Id, userId);
+        Assert.Equal(67, a2!.Progress);
+        Assert.Equal("Q-43008a,Q-43008b", a2.ConsumedQuestionIds); // 排序序列化
+
+        await SubmitAsync(userId, s2.UId, "Q-43008c", FullAnswer()); // 100%
+        var a3 = await GetAssignmentAsync(task.Id, userId);
+        Assert.Equal(100, a3!.Progress);
+        Assert.Equal(AssignmentStatus.Completed, a3.Status);
+        Assert.NotNull(a3.CompletedAt);
+        Assert.Equal("Q-43008a,Q-43008b,Q-43008c", a3.ConsumedQuestionIds);
+    }
+
+    /// <summary>V0.6.1 T4-2：同题重复作答（Correct 后再次 Correct，不同答案防幂等）→ 集合幂等不重复 +1</summary>
+    [Fact]
+    public async Task ExecuteAsync_SameQuestionRepeated_DoesNotDoubleCount()
+    {
+        var userId = SetUser(43009);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43009a");
+        await SeedQuestionAsync("Q-43009b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43009a", "Q-43009b"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43009a", FullAnswer()); // 50%
+        // 同题再次 Correct（不同措辞不命中幂等）→ 集合 Contains 判定不再 +1
+        await SubmitAsync(userId, session.UId, "Q-43009a", "星汉灿烂，若出其中，幸甚至哉，歌以咏志");
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(50, assignment.Progress); // 不重复推进
+        Assert.Equal("Q-43009a", assignment.ConsumedQuestionIds);
+    }
+
+    /// <summary>V0.6.1 T4-3：达 MaxAttempts 消费后再次 Correct → 不再 +1（集合幂等）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WrongAtLimitThenCorrect_NoDoubleCount()
+    {
+        var userId = SetUser(43010);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43010a");
+        await SeedQuestionAsync("Q-43010b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43010a", "Q-43010b"]);
+        await SeedTaskAssignmentAsync(task.Id, userId);
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43010a", WrongAnswer); // 第1次 Wrong
+        await SubmitAsync(userId, session.UId, "Q-43010a", "另一个完全错误的答案"); // 第2次 Wrong 达上限 → 消费
+        var a1 = await GetAssignmentAsync(task.Id, userId);
+        Assert.Equal(50, a1!.Progress);
+        Assert.Equal("Q-43010a", a1.ConsumedQuestionIds);
+
+        await SubmitAsync(userId, session.UId, "Q-43010a", FullAnswer()); // 达上限后再答 Correct → 仍不重复
+        var a2 = await GetAssignmentAsync(task.Id, userId);
+        Assert.Equal(50, a2!.Progress);
+        Assert.Equal("Q-43010a", a2.ConsumedQuestionIds);
+    }
+
+    /// <summary>V0.6.1 T4-4：幽灵题重建——seed 集合含幽灵（Attempts 无对应）→ 近完成校验重建为真实消费集</summary>
+    [Fact]
+    public async Task ExecuteAsync_GhostConsumed_ReconstructedByFullCheck()
+    {
+        var userId = SetUser(43011);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43011a");
+        await SeedQuestionAsync("Q-43011b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43011a", "Q-43011b"]);
+        // 幽灵集合：2 个 Attempts 不存在的题 → count>=total-1 触发全量校验
+        await SeedTaskAssignmentAsync(task.Id, userId, consumed: "G-ghost1,G-ghost2");
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        await SubmitAsync(userId, session.UId, "Q-43011a", FullAnswer()); // 触发校验 → 重建 = {Q-43011a}
+
+        var assignment = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(assignment);
+        Assert.Equal(50, assignment.Progress); // 幽灵不计入分母（重建后仅 1 真实）
+        Assert.Equal("Q-43011a", assignment.ConsumedQuestionIds); // 幽灵被清除
+    }
+
+    /// <summary>V0.6.1 T4-5：损坏集合串（尾逗号/空元素）→ ParseConsumedSet 安全降级，继续累积不抛异常</summary>
+    [Fact]
+    public async Task ExecuteAsync_CorruptedConsumedSet_SafelyDegrades()
+    {
+        var userId = SetUser(43012);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43012a");
+        await SeedQuestionAsync("Q-43012b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43012a", "Q-43012b"]);
+        // 损坏串：尾逗号/空元素（合法题 Q-43012a 保留；幽灵题会由校验重建清除，故此处只放合法题）
+        await SeedTaskAssignmentAsync(task.Id, userId, consumed: ",,Q-43012a,,,");
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        // Q-43012a 合法题：先作答真实消费（避免幽灵）→ 集合含它
+        await SubmitAsync(userId, session.UId, "Q-43012a", FullAnswer()); // 损坏串解析保留 Q-43012a → 50%
+
+        var a1 = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(a1);
+        Assert.Equal(50, a1.Progress); // 损坏串解析成功（Q-43012a 已消费）
+        Assert.Equal("Q-43012a", a1.ConsumedQuestionIds); // 规范化去空元素
+
+        // 续作 Q-43012b → 100%（集合幂等不重复 + 累积）
+        await SubmitAsync(userId, session.UId, "Q-43012b", FullAnswer());
+        var a2 = await GetAssignmentAsync(task.Id, userId);
+        Assert.Equal(100, a2!.Progress);
+        Assert.Equal("Q-43012a,Q-43012b", a2.ConsumedQuestionIds);
+    }
+
+    /// <summary>V0.6.1 T4-6：历史数据升级兼容——空集合 + 预存旧版 Attempts（Q1 已答）→ 首次作答 Q2 触发校验收敛为全量一致</summary>
+    [Fact]
+    public async Task ExecuteAsync_UpgradeFromEmptySet_ConvergesViaFullCheck()
+    {
+        var userId = SetUser(43013);
+        await SeedBankAsync("bank-ch-7a");
+        await SeedQuestionAsync("Q-43013a");
+        await SeedQuestionAsync("Q-43013b");
+        var task = await SeedTaskAsync(userId, questionCount: 2, questionIds: ["Q-43013a", "Q-43013b"]);
+        var assignment = await SeedTaskAssignmentAsync(task.Id, userId); // 空集合（默认）——模拟旧版无字段
+        var session = await SeedTaskSessionAsync(userId, task.Id);
+
+        // 模拟旧版：Q1 已消费（直接插 Attempts，空集合）
+        var attemptsDs = User.Use<AttemptsDataService>();
+        await attemptsDs.EntityCreateAsync(new Attempts
+        {
+            UId = UidGenerator.NewId(),
+            UserId = userId,
+            SessionId = session.Id,
+            QuestionId = "Q-43013a",
+            BankId = "bank-ch-7a",
+            Scenario = LearningScenario.Memorize,
+            QType = "R1",
+            PreState = MemoryState.NotMastered,
+            PostState = MemoryState.Mastered,
+            Result = JudgmentResult.Correct,
+            Confidence = 0.98,
+            HintLevel = HintLevel.None,
+            TimeCostMs = 1000,
+            AnswerHash = "old-hash-a",
+            AnsweredAt = DateTime.UtcNow.AddDays(-1),
+        }, TestContext.Current.CancellationToken);
+
+        // 首次作答 Q2（新版本代码）→ 集合 {Q2} count=1 >= total-1 → 全量校验重建 {Q1,Q2} → 100%
+        await SubmitAsync(userId, session.UId, "Q-43013b", FullAnswer());
+
+        var updated = await GetAssignmentAsync(task.Id, userId);
+        Assert.NotNull(updated);
+        Assert.Equal(100, updated.Progress); // 与全量重算一致
+        Assert.Equal("Q-43013a,Q-43013b", updated.ConsumedQuestionIds); // 含旧版 Q1
+        Assert.Equal(AssignmentStatus.Completed, updated.Status);
     }
 }

@@ -7,6 +7,7 @@ using TKW.Framework.Domain.Transactions;
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.DataServices.TaskManagement;
 using XiaoShuTong.Entities.Learning;
+using XiaoShuTong.Entities.TaskManagement;
 using XiaoShuTong.Services.Judging;
 using XiaoShuTong.Tools;
 
@@ -230,8 +231,8 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         // BR-23：同步 WrongQuestions（归集/连续 2 次 Mastered）
         await SyncWrongQuestionsAsync(userId, request.QuestionId, question.Subject, result, attempt, ct);
 
-        // BR-24：TaskAssignments.Progress 同步派生（ADR-010：重算式跨会话聚合；任务域切片 04 落地）
-        await SyncTaskProgressAsync(session, userId, ct);
+        // BR-24：TaskAssignments.Progress 同步派生（ADR-010：增量集合 + 近完成全量校验；任务域切片 04 落地）
+        await SyncTaskProgressAsync(session, userId, request.QuestionId, ct);
 
         // 决策：引导/兜底（方案 §六 步骤 2 + 决策表 #2-#8）
         var showAnswer = (result is JudgmentResult.Wrong or JudgmentResult.Partial) && attemptCount >= MaxAttempts; // 达上限展示答案（决策表 #4 partial / #8 wrong 均兜底，防引导死循环）
@@ -370,12 +371,14 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
     }
 
     /// <summary>
-    /// BR-24：TaskAssignments.Progress 同步派生（ADR-010 决策一~五）
-    /// 重算式（非增量）：跨会话聚合该任务全部 attempts，Correct 或达 MaxAttempts 计"消费"；
-    /// 全部消费 → Status=Completed + CompletedAt；Pending→InProgress（首次推进）；
-    /// 三预留字段（SessionId/StartedAt/CompletedAt）接线；个人会话（TaskId=null）不推进。
+    /// BR-24：TaskAssignments.Progress 同步派生（ADR-010 决策一~五 + V0.6.1 实现路径增补）
+    /// 增量式（非全量重算）：每次作答仅按 QuestionId 查本题跨会话 attempts，判定"新消费"
+    /// 后增量入持久化集合 ConsumedQuestionIds；Progress = 集合大小 / Tasks.QuestionCount；
+    /// 近完成（集合数 ≥ total-1）触发一次全量重算校验防漂移（Oracle 闭环#4，漂移缺题致
+    /// Progress 永不达 100 时仍能触发）。判定口径（Correct 或达 MaxAttempts 计消费）、
+    /// 状态迁移、Completed 幂等、个人会话（TaskId=null）不推进——全部不变。
     /// </summary>
-    private async Task SyncTaskProgressAsync(StudySessions session, long userId, CancellationToken ct)
+    private async Task SyncTaskProgressAsync(StudySessions session, long userId, string questionId, CancellationToken ct)
     {
         // 个人/自由会话（无任务归属）→ 不推进（ADR-010 使用场景 S5）
         if (session.TaskId is null or <= 0)
@@ -393,36 +396,47 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
 
         var now = DateTime.UtcNow;
 
-        // 三预留字段接线（Oracle 评审闭环：SessionId 仅作最新会话指针，不参与重算）
+        // 三预留字段接线（Oracle 评审闭环：SessionId 仅作最新会话指针，不参与派生）
         assignment.SessionId = session.Id;
         assignment.StartedAt ??= now;
 
-        // 跨会话聚合（Oracle 评审闭环：Attempts 无 TaskId，两步查询经 StudySessions 桥接）
+        // 增量核心（V0.6.1）：解析持久化集合（损坏/空串 → 空集合，Oracle 闭环#6a）
+        var consumedSet = ParseConsumedSet(assignment.ConsumedQuestionIds);
+
+        // 跨会话桥接保留（会话数少、代价小；Attempts 无 TaskId，两步查询经 StudySessions）
         var taskSessions = await SessionsDs.EntitySelectAsync(
             x => x.TaskId == session.TaskId && x.UserId == userId, ct: ct);
         var sessionIds = taskSessions.Select(s => s.Id).ToHashSet();
         if (sessionIds.Count == 0)
             sessionIds.Add(session.Id);
-        var taskAttempts = await AttemptsDs.EntitySelectAsync(
-            a => a.UserId == userId && a.SessionId != null && sessionIds.Contains(a.SessionId.Value), ct: ct);
 
-        // 完成判定（ADR-010 决策二，Oracle 评审勘误）：Attempts 无 AttemptCount 字段，
-        // "达 MaxAttempts" 按题分组计数判定——Correct 或该题尝试数 ≥ MaxAttempts 计"消费"
-        var consumedQuestionIds = taskAttempts
-            .GroupBy(a => a.QuestionId)
-            .Where(g => g.Any(a => a.Result == JudgmentResult.Correct) || g.Count() >= MaxAttempts)
-            .Select(g => g.Key)
-            .ToHashSet(StringComparer.Ordinal);
+        // 只查本题（关键优化：全任务 attempts 扫描 → 单题过滤；含本次已写入 L178-195）
+        var questionAttempts = await AttemptsDs.EntitySelectAsync(
+            a => a.UserId == userId && a.QuestionId == questionId
+                && a.SessionId != null && sessionIds.Contains(a.SessionId.Value),
+            ct: ct);
+
+        // 消费判定（口径不变，ADR-010 决策二勘误）：Correct 或该题尝试数 ≥ MaxAttempts
+        if (questionAttempts.Any(a => a.Result == JudgmentResult.Correct)
+            || questionAttempts.Count >= MaxAttempts)
+        {
+            consumedSet.Add(questionId);
+        }
 
         // 分母 = 任务题集规模（Tasks.QuestionCount）
         var task = await TasksDs.EntityGetAsync(x => x.Id == session.TaskId.Value, ct);
-        var totalCount = task?.QuestionCount ?? consumedQuestionIds.Count;
+        var totalCount = task?.QuestionCount ?? consumedSet.Count;
         if (totalCount <= 0)
             return;
 
-        // 重算 Progress（百分比制，DOMAIN_MAP L447）
-        var progress = (int)Math.Round((double)consumedQuestionIds.Count / totalCount * 100);
+        // 近完成校验（Oracle 闭环#4：set.Count >= total-1 即触发，防漂移漏触发）
+        if (consumedSet.Count >= totalCount - 1)
+            await RebuildIfDriftedAsync(assignment, session, userId, consumedSet, ct);
+
+        // 重算 Progress（百分比制，DOMAIN_MAP L447；集合幂等 Contains 防重复）
+        var progress = (int)Math.Round((double)consumedSet.Count / totalCount * 100);
         assignment.Progress = Math.Clamp(progress, 0, 100);
+        assignment.ConsumedQuestionIds = string.Join(",", consumedSet.OrderBy(x => x, StringComparer.Ordinal));
 
         // 状态迁移（ADR-010 决策四）：Pending→InProgress（首次推进）；全部消费→Completed
         if (assignment.Status == AssignmentStatus.Pending)
@@ -434,6 +448,50 @@ internal class SubmitAttemptService(DomainUser<XiaoShuTongUserInfo> user)
         }
 
         await AssignmentsDs.EntityUpdateAsync(assignment, ct);
+    }
+
+    /// <summary>
+    /// 解析持久化消费集合（逗号分隔；损坏/空串/未知元素 → 安全降级为空集合，Oracle 闭环#6a）
+    /// </summary>
+    private static HashSet<string> ParseConsumedSet(string serialized)
+    {
+        if (string.IsNullOrWhiteSpace(serialized))
+            return new HashSet<string>(StringComparer.Ordinal);
+
+        return serialized
+            .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .Where(x => x.Length > 0)
+            .ToHashSet(StringComparer.Ordinal);
+    }
+
+    /// <summary>
+    /// 近完成全量校验（Oracle 闭环#4）：全量重算消费集合与增量集合比对，
+    /// 不一致 → 以全量结果重建（防并发/遗留/增量漂移，保留 ADR-010 决策一"抗漂移"）。
+    /// 仅近完成触发一次，不构成热路径。
+    /// </summary>
+    private async Task RebuildIfDriftedAsync(
+        TaskAssignments assignment, StudySessions session, long userId,
+        HashSet<string> consumedSet, CancellationToken ct)
+    {
+        var taskSessions = await SessionsDs.EntitySelectAsync(
+            x => x.TaskId == session.TaskId && x.UserId == userId, ct: ct);
+        var sessionIds = taskSessions.Select(s => s.Id).ToHashSet();
+        if (sessionIds.Count == 0)
+            sessionIds.Add(session.Id);
+        var taskAttempts = await AttemptsDs.EntitySelectAsync(
+            a => a.UserId == userId && a.SessionId != null && sessionIds.Contains(a.SessionId.Value), ct: ct);
+
+        var actualConsumed = taskAttempts
+            .GroupBy(a => a.QuestionId)
+            .Where(g => g.Any(a => a.Result == JudgmentResult.Correct) || g.Count() >= MaxAttempts)
+            .Select(g => g.Key)
+            .ToHashSet(StringComparer.Ordinal);
+
+        if (!actualConsumed.SetEquals(consumedSet))
+        {
+            consumedSet.Clear();
+            consumedSet.UnionWith(actualConsumed);
+        }
     }
 
     /// <summary>BR-27：幂等返回——复用已有作答记录 + 当前记忆状态</summary>
