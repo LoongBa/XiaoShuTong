@@ -12,7 +12,13 @@ var app = builder.ConfigWebAppDomain<XiaoShuTongUserInfo, XiaoShuTongDomainIniti
         "DomainOptions", cfg =>
         {
             cfg.UseWebExceptionMiddleware = true;
-            cfg.UseFreeSqlEntityDAC(); // 从配置绑定读取 ConnectionString，isDevelopment 自动获取
+            // V0.6.3 联调：显式 DataType 重载（XML 明示无参重载不设 DataType，默认 PG）。
+            // 从 DomainOptions.FreeSqlDataTypeName 配置键解析——null/解析失败回退 PostgreSQL（向后兼容），生产配置不受影响。
+            cfg.UseFreeSqlEntityDAC(
+                Enum.TryParse<FreeSql.DataType>(cfg.FreeSqlDataTypeName, ignoreCase: true, out var dt)
+                    ? dt
+                    : FreeSql.DataType.PostgreSQL,
+                cfg.ConnectionString);
         })
     .RegisterServices((services, cfg) =>
     {

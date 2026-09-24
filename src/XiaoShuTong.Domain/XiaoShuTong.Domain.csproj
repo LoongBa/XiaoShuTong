@@ -42,6 +42,8 @@
     <PackageReference Include="FreeSql.DbContext" />
     <PackageReference Include="FreeSql.Extensions.Linq" />
     <PackageReference Include="FreeSql.Provider.PostgreSQL" />
+    <PackageReference Include="FreeSql.Provider.Sqlite" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
   </ItemGroup>

@@ -52,3 +52,7 @@ __pycache__/
 
 # xCodeGen 生成物（Generated/ 目录，非模板）
 src/**/.xCodeGen/Generated/
+
+# 联调 SQLite 文件库（V0.6.3：WebApi Development 本地验证，不入库）
+*.dev.db
+*.dev.db-*
