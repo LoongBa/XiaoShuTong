@@ -126,6 +126,8 @@ interface FieldArg {
   gqlType: string; // e.g., "Int", "MerchantUserInfoFilterInput"
   optional: boolean;
   isList: boolean;
+  /** 原始 GraphQL 类型声明（含 !/[T!] 等可空性标记），供 operationVariableTypes 构建（V1.0.10）。 */
+  gqlTypeRaw?: string;
 }
 
 interface FieldInfo {
@@ -341,7 +343,7 @@ function parseArgs(argsStr: string): FieldArg[] {
 
     if (name && typeStr) {
       const { baseType, isList, optional } = parseGqlType(typeStr);
-      args.push({ name, gqlType: baseType, optional, isList });
+      args.push({ name, gqlType: baseType, optional, isList, gqlTypeRaw: typeStr });
     }
   }
 
@@ -369,7 +371,7 @@ function parseSingleArg(raw: string): FieldArg | null {
 
   const { baseType, optional } = parseGqlType(typeStr);
 
-  return { name, gqlType: baseType, optional };
+  return { name, gqlType: baseType, optional, gqlTypeRaw: typeStr };
 }
 
 /**
@@ -878,6 +880,36 @@ function generate(): void {
     const sortedOps = [...operationSelection.entries()].sort(([a], [b]) => a.localeCompare(b));
     for (const [fieldName, sel] of sortedOps) {
       lines.push(`  '${fieldName}': '${sel}',`);
+    }
+    lines.push('} as const;');
+    lines.push('');
+  }
+
+  // ===== Operation Variable Types Map (V1.0.10：Use() proxy 透传 GraphQL 变量类型) =====
+  // 复杂 DTO 入参（对象/列表）必须显式声明变量类型，否则 inferGraphQLType 退化为 JSON → HotChocolate 400。
+  const operationVariableTypes: Record<string, Record<string, string>> = {};
+  for (const f of allFields) {
+    if (f.args.length === 0) continue;
+    const vars: Record<string, string> = {};
+    for (const a of f.args) {
+      // 优先用 parse 保留的原始类型声明（含 !/[T!] 可空性），兜底按 gqlType+optional 重建
+      vars[a.name] = a.gqlTypeRaw && a.gqlTypeRaw.length > 0
+        ? a.gqlTypeRaw
+        : `${a.gqlType}${a.optional ? '' : '!'}`;
+    }
+    operationVariableTypes[f.name] = vars;
+  }
+  if (Object.keys(operationVariableTypes).length > 0) {
+    lines.push('// ===== Operation Variable Types Map =====');
+    lines.push('// Auto-generated GraphQL input type declarations for named-operation arguments.');
+    lines.push('// Used by Use()/Call() proxy to declare variable types (HotChocolate compliance).');
+    lines.push(`export const operationVariableTypes: Record<string, Record<string, string>> = {`);
+    const sortedVars = Object.keys(operationVariableTypes).sort((a, b) => a.localeCompare(b));
+    for (const fieldName of sortedVars) {
+      const inner = Object.entries(operationVariableTypes[fieldName])
+        .map(([k, v]) => `'${k}': '${v}'`)
+        .join(', ');
+      lines.push(`  '${fieldName}': { ${inner} },`);
     }
     lines.push('} as const;');
     lines.push('');

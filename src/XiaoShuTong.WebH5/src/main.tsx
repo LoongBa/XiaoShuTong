@@ -5,6 +5,7 @@ import { RouterProvider } from "@tanstack/react-router";
 import { getRouter } from "./router";
 import { initRevealEngine } from "./lib/reveal-engine";
 import { Tkwf } from "@tkwf/tsclient";
+import { operationSelection, operationVariableTypes } from "./gql/ts-client.g";
 import { initTheme } from "./lib/theme";
 import "./styles.css";
 
@@ -15,9 +16,17 @@ initTheme();
 initRevealEngine();
 
 // 初始化 tkwf-tsclient（V1.0.4 门面工厂）
+// selectionMap：注册 codegen 产物的 operationSelection（ts-client.g.ts）——Use<T>() 代理
+// 据此为对象返回值附加 GraphQL 子字段选择（HotChocolate 合规必需，缺失会 400
+// "must have a selection of subfields"）。调代码前先运行 npm run gen-ts-client 保持同步。
+// variableTypesMap（V1.0.10）：注册 codegen 产物的 operationVariableTypes——Use<T>() 代理
+// 据此为复杂 DTO 入参声明 GraphQL 变量类型（缺失时 inferGraphQLType 退化为 JSON → 400
+// "The variable ... is not compatible"）。
 Tkwf.configure("default", {
   endpoint: "/graphql",
   storage: localStorage,
+  selectionMap: operationSelection,
+  variableTypesMap: operationVariableTypes,
   retry: { maxAttempts: 3, retryOn: ["NETWORK_ERROR", "SERVER_ERROR"] },
   onUnauthorized: () => {
     // 会话过期 → 清除本地状态并跳登录
