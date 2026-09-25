@@ -53,6 +53,7 @@ internal class GetSessionResultService(DomainUser<XiaoShuTongUserInfo> user)
                 Success = true,
                 CorrectCount = 0,
                 TotalCount = 0,
+                Accuracy = 0,
                 NewStarCount = 0,
                 BlockedPoints = [],
             };
@@ -83,6 +84,7 @@ internal class GetSessionResultService(DomainUser<XiaoShuTongUserInfo> user)
             Success = true,
             CorrectCount = correctCount,
             TotalCount = attempts.Count,
+            Accuracy = attempts.Count > 0 ? Math.Round((double)correctCount / attempts.Count, 4) : 0,
             NewStarCount = newStarCount,
             BlockedPoints = blockedPoints,
         };
@@ -110,6 +112,9 @@ public sealed record GetSessionResultResDto
 
     /// <summary>总题数</summary>
     public int TotalCount { get; init; }
+
+    /// <summary>会话正确率（0~1，CorrectCount/TotalCount）</summary>
+    public double Accuracy { get; init; }
 
     /// <summary>新增 ★ 数</summary>
     public int NewStarCount { get; init; }

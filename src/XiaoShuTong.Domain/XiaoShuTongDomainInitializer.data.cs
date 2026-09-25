@@ -3,7 +3,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.GroupManagement;
+using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Entities.Parent;
+using XiaoShuTong.Entities.Rank;
 using XiaoShuTong.Entities.TaskManagement;
 using XiaoShuTong.Tools;
 
@@ -37,6 +39,11 @@ public partial class XiaoShuTongDomainInitializer
         private const string SeedBankId = "bank-ch-7a";
         private static readonly string[] SeedQuestionIds = ["Q-demo-7a-0001", "Q-demo-7a-0002", "Q-demo-7a-0003"];
 
+        // ── V0.6.4 战绩榜联调常量（群组 UId 固定供前端 rank.tsx 硬编码 scopeId；榜内补充 2 名学生） ──
+        private const string SeedGroupUid = "group-demo-73";
+        private const long SeedStudentBId = 10011;  // xiaomei（学生，战绩榜）
+        private const long SeedStudentCId = 10012;  // xiaogang（学生，战绩榜）
+
         /// <summary>
         /// 实体同步 + 种子数据插入入口。
         /// Agent：按业务需求在此添加/移除实体对应的种子数据（开发/测试环境）。
@@ -54,11 +61,13 @@ public partial class XiaoShuTongDomainInitializer
                 return;
 
             var now = DateTime.UtcNow;
+            // UTC+8 业务日（与 RankSnapshotFreezeJobTests.Today() 口径一致，DailyStats/RankSnapshots 共用）
+            var businessDay = DateOnly.FromDateTime(now.AddHours(8));
 
-            // 1. 群组链路（群主 10002 → 群 → 学生 10001/家长 10003 成员）
+            // 1. 群组链路（群主 10002 → 群 → 学生 10001/10011/10012、家长 10003 成员）
             var group = new Groups
             {
-                UId = UidGenerator.NewId(),
+                UId = SeedGroupUid,
                 OwnerId = SeedOwnerId,
                 Name = "七(3)班（联调）",
                 Subject = "语文",
@@ -86,6 +95,24 @@ public partial class XiaoShuTongDomainInitializer
                 UserId = SeedParentId,
                 Role = MemberRole.Parent,
                 Nickname = "小明家长",
+                JoinedAt = now,
+            } as GroupMembers).ExecuteAffrowsAsync();
+            await repo.Insert(new GroupMembers
+            {
+                UId = UidGenerator.NewId(),
+                GroupId = group.Id,
+                UserId = SeedStudentBId,
+                Role = MemberRole.Student,
+                Nickname = "小美",
+                JoinedAt = now,
+            } as GroupMembers).ExecuteAffrowsAsync();
+            await repo.Insert(new GroupMembers
+            {
+                UId = UidGenerator.NewId(),
+                GroupId = group.Id,
+                UserId = SeedStudentCId,
+                Role = MemberRole.Student,
+                Nickname = "小刚",
                 JoinedAt = now,
             } as GroupMembers).ExecuteAffrowsAsync();
 
@@ -154,6 +181,150 @@ public partial class XiaoShuTongDomainInitializer
                 CreateTime = now,
                 UpdateTime = now,
             } as ParentStudentRelations).ExecuteAffrowsAsync();
+
+            // 5. 战绩榜链路（群组固定 UId 供前端 rank.tsx 硬编码 scopeId；
+            //    DailyStats/KnowledgeMastery 为业务底座，RankSnapshots 直插免 FreezeJob 立即可查）
+
+            // 5.1 每日统计（一人一日一行，Accuracy 为当日正确率，对齐 SeedDailyAsync 字段形状）
+            await repo.Insert(new DailyStats
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                StatDate = businessDay,
+                LearnedCount = 10,
+                StarredCount = 3,
+                ReviewCount = 5,
+                Accuracy = 0.9,
+                StudySeconds = 1800,
+            } as DailyStats).ExecuteAffrowsAsync();
+            await repo.Insert(new DailyStats
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                StatDate = businessDay,
+                LearnedCount = 8,
+                StarredCount = 2,
+                ReviewCount = 4,
+                Accuracy = 0.8,
+                StudySeconds = 1500,
+            } as DailyStats).ExecuteAffrowsAsync();
+            await repo.Insert(new DailyStats
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                StatDate = businessDay,
+                LearnedCount = 6,
+                StarredCount = 1,
+                ReviewCount = 3,
+                Accuracy = 0.7,
+                StudySeconds = 1200,
+            } as DailyStats).ExecuteAffrowsAsync();
+
+            // 5.2 知识点掌握度（一人一行，Accuracy 聚合正确率，对齐 SeedMasteryAsync 字段形状）
+            await repo.Insert(new KnowledgeMastery
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                Subject = "chinese",
+                KnowledgePoint = "观沧海-背诵",
+                State = MemoryState.Fuzzy,
+                Accuracy = 0.8,
+                AttemptCount = 1,
+            } as KnowledgeMastery).ExecuteAffrowsAsync();
+            await repo.Insert(new KnowledgeMastery
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                Subject = "chinese",
+                KnowledgePoint = "观沧海-背诵",
+                State = MemoryState.Fuzzy,
+                Accuracy = 0.7,
+                AttemptCount = 1,
+            } as KnowledgeMastery).ExecuteAffrowsAsync();
+            await repo.Insert(new KnowledgeMastery
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                Subject = "chinese",
+                KnowledgePoint = "观沧海-背诵",
+                State = MemoryState.Fuzzy,
+                Accuracy = 0.6,
+                AttemptCount = 1,
+            } as KnowledgeMastery).ExecuteAffrowsAsync();
+
+            // 5.3 排名快照直插（3 用户 × Accuracy/Mastery，ScopeType=Group + SeedGroupUid 供战绩榜查询）
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Accuracy,
+                MetricValue = 0.75m,
+                Rank = 1,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Mastery,
+                MetricValue = 0.6m,
+                Rank = 1,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Accuracy,
+                MetricValue = 0.70m,
+                Rank = 2,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Mastery,
+                MetricValue = 0.55m,
+                Rank = 2,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Accuracy,
+                MetricValue = 0.60m,
+                Rank = 3,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Mastery,
+                MetricValue = 0.40m,
+                Rank = 3,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
         }
 
         /// <summary>插入 3 道《观沧海》R1 补全题（Keywords 组感知 JSON，对齐 SubmitAttemptServiceTests 范式）</summary>

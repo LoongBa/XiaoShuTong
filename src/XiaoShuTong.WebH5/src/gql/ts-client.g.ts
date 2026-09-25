@@ -128,7 +128,7 @@ export const operationSelection: Record<string, string> = {
   'logout': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
   'members': 'success errorCode groupId members { userId nickname role joinedAt progress }',
   'memoryStates_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } totalCount pageIndex pageSize',
-  'myRanking_Execute': 'success errorCode rank value trend rankChange rankEnabled',
+  'myRanking_Execute': 'success errorCode rank value accuracy mastery trend rankChange rankEnabled',
   'ownerDashboard_Execute': 'success errorCode todayExecutionRate avgProgress overdueCount weakPointsTop5 { knowledgePoint accuracy } taskList { task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } completionRate status }',
   'periodReport_Execute': 'success errorCode learnedCount accuracy starredCount weakPoints { knowledgePoint accuracy }',
   'pkPlayerStatsView': 'pageInfo { hasNextPage hasPreviousPage startCursor endCursor } edges { cursor node { isFromPersistentSource id userId totalMatches wins draws totalScore } } nodes { isFromPersistentSource id userId totalMatches wins draws totalScore } totalCount',
@@ -137,7 +137,7 @@ export const operationSelection: Record<string, string> = {
   'pkStats_Execute': 'success errorCode totalMatches wins draws winRate totalScore',
   'preprocessContent_Execute': 'success errorCode batchId',
   'progressReport_Execute': 'success errorCode trend { isFromPersistentSource id uId userId statDate learnedCount starredCount reviewCount accuracy studySeconds createTime updateTime } vsLastWeek { learnedDelta weaknessShift }',
-  'rankings_Execute': 'success errorCode snapshotDate rankEnabled items { rank userId nickname avatarUrl value trend isMe }',
+  'rankings_Execute': 'success errorCode snapshotDate rankEnabled items { rank userId nickname avatarUrl value accuracy mastery trend isMe }',
   'registerSecure': 'success message',
   'rejectBuddyInvite_Execute': 'success errorCode',
   'removeBuddy_Execute': 'success errorCode',
@@ -147,7 +147,7 @@ export const operationSelection: Record<string, string> = {
   'reviewQueue_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } overdueCount',
   'rosterPreview_Execute': 'success errorCode importId status sourceCount cleanedCount duplicateCount invalidCount preview',
   'sessionQuestion_Execute': 'success errorCode questionId type content knowledgePoint knowledgeCardId',
-  'sessionResult_Execute': 'success errorCode correctCount totalCount newStarCount blockedPoints { questionId knowledgePoint state }',
+  'sessionResult_Execute': 'success errorCode correctCount totalCount accuracy newStarCount blockedPoints { questionId knowledgePoint state }',
   'setEnabled': 'success errorCode uId enabled',
   'setRankEnabled_Execute': 'success errorCode groupId rankEnabled',
   'startTrial_Execute': 'success errorCode subscriptionUid status trialEndAt',
@@ -587,6 +587,7 @@ export interface GetSessionResultResDto {
   errorCode: string | null;
   correctCount: number;
   totalCount: number;
+  accuracy: number;
   newStarCount: number;
   blockedPoints: Array<BlockedPointDto>;
 }
@@ -820,6 +821,8 @@ export interface GetMyRankingResDto {
   errorCode: string | null;
   rank: number;
   value: number;
+  accuracy: number;
+  mastery: number;
   trend: string;
   rankChange: number;
   rankEnabled: boolean;
@@ -1311,6 +1314,8 @@ export interface RankingItemDto {
   nickname: string;
   avatarUrl: string;
   value: number;
+  accuracy: number;
+  mastery: number;
   trend: string;
   isMe: boolean;
 }

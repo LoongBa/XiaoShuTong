@@ -75,6 +75,8 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
             Success = true,
             Rank = todayRank.Value.Rank,
             Value = todayRank.Value.Value,
+            Accuracy = todayRank.Value.Accuracy,
+            Mastery = todayRank.Value.Mastery,
             Trend = trend,
             RankChange = rankChange,
             RankEnabled = true,
@@ -82,7 +84,7 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
     }
 
     /// <summary>指定日期上当前用户组合求和后的名次</summary>
-    private async Task<(int Rank, decimal Value)?> RankOfUserAsync(
+    private async Task<(int Rank, decimal Value, double Accuracy, double Mastery)?> RankOfUserAsync(
         RankScopeType scopeType, string scopeId, string subject, RankMetricType[] metrics,
         DateOnly date, long userId, CancellationToken ct)
     {
@@ -93,14 +95,21 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
         if (rows.Count == 0)
             return null;
 
+        // 按用户组合求和；Accuracy/Mastery 单指标直读各组行（缺省 0）
         var combined = rows
             .GroupBy(r => r.UserId)
-            .Select(g => new { UserId = g.Key, Value = g.Sum(r => r.MetricValue) })
+            .Select(g => new
+            {
+                UserId = g.Key,
+                Value = g.Sum(r => r.MetricValue),
+                Accuracy = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Accuracy)?.MetricValue ?? 0m),
+                Mastery = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Mastery)?.MetricValue ?? 0m),
+            })
             .OrderByDescending(x => x.Value)
             .ToList();
 
         var index = combined.FindIndex(c => c.UserId == userId);
-        return index < 0 ? null : (index + 1, combined[index].Value);
+        return index < 0 ? null : (index + 1, combined[index].Value, combined[index].Accuracy, combined[index].Mastery);
     }
 
     private async Task<DateOnly> LatestSnapshotDateAsync(
@@ -144,6 +153,12 @@ public sealed record GetMyRankingResDto
 
     /// <summary>战力/战绩值</summary>
     public decimal Value { get; init; }
+
+    /// <summary>正确率单指标（0~1，RankSnapshots MetricType=Accuracy 冻结值）</summary>
+    public double Accuracy { get; init; }
+
+    /// <summary>掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）</summary>
+    public double Mastery { get; init; }
 
     /// <summary>趋势（Up/Down/Flat）</summary>
     public string Trend { get; init; } = "Flat";

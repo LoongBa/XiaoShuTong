@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-25 02:21:44
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-25 08:11:28
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -269,6 +269,7 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `correctCount`: number | | | | | |
 | | ⤷ `totalCount`: number | | | | | |
+| | ⤷ `accuracy`: number | | | | | |
 | | ⤷ `newStarCount`: number | | | | | |
 | | ⤷ `blockedPoints`: `BlockedPointDto` | | | | | |
 | other | `wrongQuestions_Execute` | Query |  | { request?: GetWrongQuestionsReqDtoInput | null } | `GetWrongQuestionsResDto` | ✅ |
@@ -360,6 +361,8 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `rank`: number | | | | | |
 | | ⤷ `value`: number | | | | | |
+| | ⤷ `accuracy`: number | | | | | |
+| | ⤷ `mastery`: number | | | | | |
 | | ⤷ `trend`: string | | | | | |
 | | ⤷ `rankChange`: number | | | | | |
 | | ⤷ `rankEnabled`: boolean | | | | | |
@@ -483,7 +486,7 @@
 | `GetHintResDto` | success, errorCode, hint, difficultySlot, hintSource |
 | `GetKnowledgeCardResDto` | success, errorCode, cardType, content |
 | `GetMemoryStatesResDto` | success, errorCode, items → 见 \`MemoryStatesDto\`, totalCount, pageIndex, pageSize |
-| `GetMyRankingResDto` | success, errorCode, rank, value, trend, rankChange, rankEnabled |
+| `GetMyRankingResDto` | success, errorCode, rank, value, accuracy, mastery, trend, rankChange, rankEnabled |
 | `GetNextQuestionResDto` | success, errorCode, questionId, type, content, knowledgePoint, knowledgeCardId |
 | `GetOwnerDashboardResDto` | success, errorCode, todayExecutionRate, avgProgress, overdueCount, weakPointsTop5 → 见 \`WeakPointDto\`, taskList → 见 \`DashboardTaskDto\` |
 | `GetPeriodReportResDto` | success, errorCode, learnedCount, accuracy, starredCount, weakPoints → 见 \`WeakPointDto\` |
@@ -492,7 +495,7 @@
 | `GetProgressReportResDto` | success, errorCode, trend → 见 \`DailyStatsDto\`, vsLastWeek → 见 \`VsLastWeekDto\` |
 | `GetRankingsResDto` | success, errorCode, snapshotDate, rankEnabled, items → 见 \`RankingItemDto\` |
 | `GetReviewQueueResDto` | success, errorCode, items → 见 \`MemoryStatesDto\`, overdueCount |
-| `GetSessionResultResDto` | success, errorCode, correctCount, totalCount, newStarCount, blockedPoints → 见 \`BlockedPointDto\` |
+| `GetSessionResultResDto` | success, errorCode, correctCount, totalCount, accuracy, newStarCount, blockedPoints → 见 \`BlockedPointDto\` |
 | `GetStreakResDto` | success, errorCode, currentStreak, longestStreak |
 | `GetTaskDetailResDto` | success, errorCode, task → 见 \`TasksDto\`, members → 见 \`TaskAssignmentsDto\` |
 | `GetWeaknessReportResDto` | success, errorCode, weakPoints → 见 \`ParentWeakPointDto\` |

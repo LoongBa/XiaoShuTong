@@ -124,4 +124,31 @@ public class GetMyRankingServiceTests(XiaoShuTongDomainTestFixture fixture, ITes
         Assert.Equal(RankErrorCodes.RankPerformanceDisabled, result.ErrorCode);
         Assert.False(result.RankEnabled);
     }
+
+    /// <summary>战绩榜：Accuracy/Mastery 单指标直读（当前用户冻结值）</summary>
+    [Fact]
+    public async Task ExecuteAsync_Performance_ExposesSingleMetrics()
+    {
+        var userId = SetUser(72004);
+        var group = await SeedGroupAsync("group-my-72004");
+        var today = Today();
+        // 当前用户：accuracy=0.75 + mastery=0.6 → 求和 1.35（第 2）
+        await SeedSnapshotAsync(userId, group.UId, RankMetricType.Accuracy, 0.75m, 2, today);
+        await SeedSnapshotAsync(userId, group.UId, RankMetricType.Mastery, 0.6m, 2, today);
+        // 对手：accuracy=0.9 + mastery=0.8 → 求和 1.7（第 1）
+        await SeedSnapshotAsync(72905, group.UId, RankMetricType.Accuracy, 0.9m, 1, today);
+        await SeedSnapshotAsync(72905, group.UId, RankMetricType.Mastery, 0.8m, 1, today);
+        var svc = User.Use<GetMyRankingService>();
+
+        var result = await svc.ExecuteAsync(new GetMyRankingReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Performance",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(2, result.Rank); // 对手 1.7 > 本人 1.35 → 第 2
+        Assert.Equal(1.35m, result.Value);
+        Assert.Equal(0.75, result.Accuracy);
+        Assert.Equal(0.6, result.Mastery);
+    }
 }

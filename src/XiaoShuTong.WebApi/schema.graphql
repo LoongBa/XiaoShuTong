@@ -670,6 +670,10 @@ type GetMyRankingResDto {
   rank: Int!
   "战力/战绩值"
   value: Decimal!
+  "正确率单指标（0~1，RankSnapshots MetricType=Accuracy 冻结值）"
+  accuracy: Float!
+  "掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）"
+  mastery: Float!
   "趋势（Up/Down/Flat）"
   trend: String!
   "今日 rank − 昨日 rank（正=上升）"
@@ -814,6 +818,8 @@ type GetSessionResultResDto {
   correctCount: Int!
   "总题数"
   totalCount: Int!
+  "会话正确率（0~1，CorrectCount/TotalCount）"
+  accuracy: Float!
   "新增 ★ 数"
   newStarCount: Int!
   "下次重点复习（卡壳知识点）"
@@ -1330,6 +1336,10 @@ type RankingItemDto {
   avatarUrl: String!
   "指标值（组合求和）"
   value: Decimal!
+  "正确率单指标（0~1，RankSnapshots MetricType=Accuracy 冻结值）"
+  accuracy: Float!
+  "掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）"
+  mastery: Float!
   "趋势（Up/Down/Flat）"
   trend: String!
   "是否本人"

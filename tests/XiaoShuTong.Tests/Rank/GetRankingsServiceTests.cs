@@ -181,4 +181,56 @@ public class GetRankingsServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         Assert.False(result.Success);
         Assert.Equal(RankErrorCodes.ParamInvalid, result.ErrorCode);
     }
+
+    /// <summary>战绩榜：Accuracy/Mastery 单指标直读（Value 仍为 accuracy+mastery 求和）</summary>
+    [Fact]
+    public async Task ExecuteAsync_PerformanceRanking_ExposesSingleMetrics()
+    {
+        SetUser(71007);
+        var group = await SeedGroupAsync("group-rank-71031", rankEnabled: true);
+        var today = Today();
+        // 用户 A：accuracy=0.75 + mastery=0.6 → 求和 1.35
+        await SeedSnapshotAsync(71031, group.UId, RankMetricType.Accuracy, 0.75m, 1, today);
+        await SeedSnapshotAsync(71031, group.UId, RankMetricType.Mastery, 0.6m, 1, today);
+        // 用户 B：accuracy=0.7 + mastery=0.5 → 求和 1.2
+        await SeedSnapshotAsync(71032, group.UId, RankMetricType.Accuracy, 0.7m, 2, today);
+        await SeedSnapshotAsync(71032, group.UId, RankMetricType.Mastery, 0.5m, 2, today);
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Performance",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(2, result.Items.Count);
+        Assert.Equal(71031, result.Items[0].UserId); // A=1.35 > B=1.2 按求和排序
+        Assert.Equal(1.35m, result.Items[0].Value);
+        Assert.Equal(0.75, result.Items[0].Accuracy);
+        Assert.Equal(0.6, result.Items[0].Mastery);
+        Assert.Equal(1.2m, result.Items[1].Value);
+        Assert.Equal(0.7, result.Items[1].Accuracy);
+    }
+
+    /// <summary>战绩榜：缺失单指标行 → 该项默认 0</summary>
+    [Fact]
+    public async Task ExecuteAsync_Performance_MissingMetricDefaultsToZero()
+    {
+        SetUser(71008);
+        var group = await SeedGroupAsync("group-rank-71041", rankEnabled: true);
+        var today = Today();
+        // 用户仅有 Accuracy 行（无 Mastery 行）
+        await SeedSnapshotAsync(71041, group.UId, RankMetricType.Accuracy, 0.9m, 1, today);
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Performance",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Single(result.Items);
+        Assert.Equal(0.9, result.Items[0].Accuracy);
+        Assert.Equal(0, result.Items[0].Mastery); // 缺失 → 默认 0
+    }
 }

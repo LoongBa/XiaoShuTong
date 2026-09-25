@@ -128,6 +128,7 @@ public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, 
         Assert.True(result.Success);
         Assert.Equal(0, result.TotalCount);
         Assert.Equal(0, result.CorrectCount);
+        Assert.Equal(0, result.Accuracy);
         Assert.Equal(0, result.NewStarCount);
         Assert.Empty(result.BlockedPoints);
     }
@@ -149,6 +150,30 @@ public class GetSessionResultServiceTests(XiaoShuTongDomainTestFixture fixture, 
         Assert.True(result.Success);
         Assert.Equal(2, result.TotalCount);
         Assert.Equal(1, result.NewStarCount);
+    }
+
+    /// <summary>Accuracy = 3 对 1 错 → 0.75（会话正确率）</summary>
+    [Fact]
+    public async Task ExecuteAsync_SessionWithMixedResults_ComputesAccuracy()
+    {
+        var userId = SetUser(46006);
+        var session = await SeedSessionAsync(userId);
+        await SeedQuestionAsync("Q-46006a");
+        await SeedQuestionAsync("Q-46006b");
+        await SeedQuestionAsync("Q-46006c");
+        await SeedQuestionAsync("Q-46006d");
+        await SeedAttemptAsync(userId, session.Id, "Q-46006a", MemoryState.Fuzzy, MemoryState.Proficient);   // 对
+        await SeedAttemptAsync(userId, session.Id, "Q-46006b", MemoryState.Proficient, MemoryState.Mastered); // 对
+        await SeedAttemptAsync(userId, session.Id, "Q-46006c", MemoryState.Mastered, MemoryState.Mastered);   // 对
+        await SeedAttemptAsync(userId, session.Id, "Q-46006d", MemoryState.Mastered, MemoryState.NotMastered); // 错
+        var svc = User.Use<GetSessionResultService>();
+
+        var result = await svc.ExecuteAsync(new GetSessionResultReqDto { SessionUid = session.UId }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(4, result.TotalCount);
+        Assert.Equal(3, result.CorrectCount);
+        Assert.Equal(0.75, result.Accuracy);
     }
 
     /// <summary>BR-42：BlockedPoints = ✕/△ 题目 + 知识点</summary>

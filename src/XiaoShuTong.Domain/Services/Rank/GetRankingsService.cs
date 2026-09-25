@@ -88,7 +88,7 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
                  && x.SnapshotDate == latest && metrics.Contains(x.MetricType),
             ct: ct);
 
-        // 按用户组合求和（BR-11/12 简单求和）
+        // 按用户组合求和（BR-11/12 简单求和）；Accuracy/Mastery 单指标直读各组行（缺省 0）
         var combined = rows
             .GroupBy(r => r.UserId)
             .Select(g => new
@@ -96,6 +96,8 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
                 UserId = g.Key,
                 Value = g.Sum(r => r.MetricValue),
                 Rank = g.Min(r => r.Rank),
+                Accuracy = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Accuracy)?.MetricValue ?? 0m),
+                Mastery = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Mastery)?.MetricValue ?? 0m),
             })
             .OrderByDescending(x => x.Value)
             .ToList();
@@ -123,6 +125,8 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
                 Nickname = string.Empty, // 账户域（跨模块），切片为空串
                 AvatarUrl = string.Empty,
                 Value = x.Value,
+                Accuracy = x.Accuracy,
+                Mastery = x.Mastery,
                 Trend = trend,
                 IsMe = x.UserId == meId,
             };
@@ -213,6 +217,12 @@ public sealed record RankingItemDto
 
     /// <summary>指标值（组合求和）</summary>
     public decimal Value { get; init; }
+
+    /// <summary>正确率单指标（0~1，RankSnapshots MetricType=Accuracy 冻结值）</summary>
+    public double Accuracy { get; init; }
+
+    /// <summary>掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）</summary>
+    public double Mastery { get; init; }
 
     /// <summary>趋势（Up/Down/Flat）</summary>
     public string Trend { get; init; } = "Flat";

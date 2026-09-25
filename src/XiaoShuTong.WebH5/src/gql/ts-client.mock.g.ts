@@ -432,6 +432,7 @@ export const GetSessionResultResDtoSchema = {
     errorCode: { kind: "string" },
     correctCount: { kind: "number" },
     totalCount: { kind: "number" },
+    accuracy: { kind: "number" },
     newStarCount: { kind: "number" },
     blockedPoints: { kind: "array", element: { kind: "object", fields: {
       questionId: { kind: "string" },
@@ -645,6 +646,8 @@ export const GetMyRankingResDtoSchema = {
     errorCode: { kind: "string" },
     rank: { kind: "number" },
     value: { kind: "number" },
+    accuracy: { kind: "number" },
+    mastery: { kind: "number" },
     trend: { kind: "string" },
     rankChange: { kind: "number" },
     rankEnabled: { kind: "boolean" }
@@ -660,6 +663,8 @@ export const GetRankingsResDtoSchema = {
       nickname: { kind: "string" },
       avatarUrl: { kind: "string" },
       value: { kind: "number" },
+      accuracy: { kind: "number" },
+      mastery: { kind: "number" },
       trend: { kind: "string" },
       isMe: { kind: "boolean" }
   } } }
@@ -1121,6 +1126,8 @@ export const RankingItemDtoSchema = {
     nickname: { kind: "string" },
     avatarUrl: { kind: "string" },
     value: { kind: "number" },
+    accuracy: { kind: "number" },
+    mastery: { kind: "number" },
     trend: { kind: "string" },
     isMe: { kind: "boolean" }
 } as const;
