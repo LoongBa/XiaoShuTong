@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-25 08:11:28
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-26 02:14:15
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -363,6 +363,9 @@
 | | ⤷ `value`: number | | | | | |
 | | ⤷ `accuracy`: number | | | | | |
 | | ⤷ `mastery`: number | | | | | |
+| | ⤷ `streak`: number | | | | | |
+| | ⤷ `volume`: number | | | | | |
+| | ⤷ `pkWins`: number | | | | | |
 | | ⤷ `trend`: string | | | | | |
 | | ⤷ `rankChange`: number | | | | | |
 | | ⤷ `rankEnabled`: boolean | | | | | |
@@ -486,7 +489,7 @@
 | `GetHintResDto` | success, errorCode, hint, difficultySlot, hintSource |
 | `GetKnowledgeCardResDto` | success, errorCode, cardType, content |
 | `GetMemoryStatesResDto` | success, errorCode, items → 见 \`MemoryStatesDto\`, totalCount, pageIndex, pageSize |
-| `GetMyRankingResDto` | success, errorCode, rank, value, accuracy, mastery, trend, rankChange, rankEnabled |
+| `GetMyRankingResDto` | success, errorCode, rank, value, accuracy, mastery, streak, volume, pkWins, trend, rankChange, rankEnabled |
 | `GetNextQuestionResDto` | success, errorCode, questionId, type, content, knowledgePoint, knowledgeCardId |
 | `GetOwnerDashboardResDto` | success, errorCode, todayExecutionRate, avgProgress, overdueCount, weakPointsTop5 → 见 \`WeakPointDto\`, taskList → 见 \`DashboardTaskDto\` |
 | `GetPeriodReportResDto` | success, errorCode, learnedCount, accuracy, starredCount, weakPoints → 见 \`WeakPointDto\` |
@@ -547,4 +550,4 @@
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| v1.0.6 | 09/25/2026 | 自动生成初版 |
+| v1.0.6 | 09/26/2026 | 自动生成初版 |

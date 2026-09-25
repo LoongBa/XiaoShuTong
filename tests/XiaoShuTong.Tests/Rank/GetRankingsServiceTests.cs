@@ -233,4 +233,53 @@ public class GetRankingsServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         Assert.Equal(0.9, result.Items[0].Accuracy);
         Assert.Equal(0, result.Items[0].Mastery); // 缺失 → 默认 0
     }
+
+    /// <summary>战力榜：Streak/Volume/PkWins 单指标直读（Value 仍为 streak+volume+pk_wins 求和）</summary>
+    [Fact]
+    public async Task ExecuteAsync_CombatRanking_ExposesSingleMetrics()
+    {
+        SetUser(71009);
+        var group = await SeedGroupAsync("group-rank-71051", rankEnabled: false);
+        var today = Today();
+        // 用户 A：streak=12 + volume=45 + pk_wins=3 → 求和 60（BR-11）
+        await SeedSnapshotAsync(71051, group.UId, RankMetricType.Streak, 12m, 1, today);
+        await SeedSnapshotAsync(71051, group.UId, RankMetricType.Volume, 45m, 1, today);
+        await SeedSnapshotAsync(71051, group.UId, RankMetricType.PkWins, 3m, 1, today);
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Combat",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success); // 战力榜不受 RankEnabled 影响（BR-04）
+        Assert.Single(result.Items);
+        Assert.Equal(60m, result.Items[0].Value);
+        Assert.Equal(12, result.Items[0].Streak);
+        Assert.Equal(45, result.Items[0].Volume);
+        Assert.Equal(3, result.Items[0].PkWins);
+    }
+
+    /// <summary>战力榜：缺失单指标行 → 该项默认 0</summary>
+    [Fact]
+    public async Task ExecuteAsync_Combat_MissingMetricDefaultsToZero()
+    {
+        SetUser(71010);
+        var group = await SeedGroupAsync("group-rank-71061", rankEnabled: true);
+        var today = Today();
+        // 用户仅有 Streak 行（无 Volume/PkWins 行）
+        await SeedSnapshotAsync(71061, group.UId, RankMetricType.Streak, 7m, 1, today);
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Combat",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Single(result.Items);
+        Assert.Equal(7, result.Items[0].Streak);
+        Assert.Equal(0, result.Items[0].Volume); // 缺失 → 默认 0
+        Assert.Equal(0, result.Items[0].PkWins);
+    }
 }

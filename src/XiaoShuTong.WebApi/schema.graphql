@@ -674,6 +674,12 @@ type GetMyRankingResDto {
   accuracy: Float!
   "掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）"
   mastery: Float!
+  "连续天数单指标（RankSnapshots MetricType=Streak 冻结值）"
+  streak: Float!
+  "背诵量单指标（RankSnapshots MetricType=Volume 冻结值）"
+  volume: Float!
+  "PK 胜利数单指标（RankSnapshots MetricType=PkWins 冻结值）"
+  pkWins: Float!
   "趋势（Up/Down/Flat）"
   trend: String!
   "今日 rank − 昨日 rank（正=上升）"
@@ -1340,6 +1346,12 @@ type RankingItemDto {
   accuracy: Float!
   "掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）"
   mastery: Float!
+  "连续天数单指标（RankSnapshots MetricType=Streak 冻结值）"
+  streak: Float!
+  "背诵量单指标（RankSnapshots MetricType=Volume 冻结值）"
+  volume: Float!
+  "PK 胜利数单指标（RankSnapshots MetricType=PkWins 冻结值）"
+  pkWins: Float!
   "趋势（Up/Down/Flat）"
   trend: String!
   "是否本人"

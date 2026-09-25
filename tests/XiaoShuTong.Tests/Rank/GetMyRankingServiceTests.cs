@@ -151,4 +151,34 @@ public class GetMyRankingServiceTests(XiaoShuTongDomainTestFixture fixture, ITes
         Assert.Equal(0.75, result.Accuracy);
         Assert.Equal(0.6, result.Mastery);
     }
+
+    /// <summary>战力榜：Streak/Volume/PkWins 单指标直读（当前用户冻结值）</summary>
+    [Fact]
+    public async Task ExecuteAsync_Combat_ExposesSingleMetrics()
+    {
+        var userId = SetUser(72005);
+        var group = await SeedGroupAsync("group-my-72005");
+        var today = Today();
+        // 当前用户：streak=12 + volume=45 + pk_wins=3 → 求和 60（第 2）
+        await SeedSnapshotAsync(userId, group.UId, RankMetricType.Streak, 12m, 2, today);
+        await SeedSnapshotAsync(userId, group.UId, RankMetricType.Volume, 45m, 2, today);
+        await SeedSnapshotAsync(userId, group.UId, RankMetricType.PkWins, 3m, 2, today);
+        // 对手：streak=20 + volume=50 + pk_wins=5 → 求和 75（第 1）
+        await SeedSnapshotAsync(72906, group.UId, RankMetricType.Streak, 20m, 1, today);
+        await SeedSnapshotAsync(72906, group.UId, RankMetricType.Volume, 50m, 1, today);
+        await SeedSnapshotAsync(72906, group.UId, RankMetricType.PkWins, 5m, 1, today);
+        var svc = User.Use<GetMyRankingService>();
+
+        var result = await svc.ExecuteAsync(new GetMyRankingReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Combat",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(2, result.Rank); // 对手 75 > 本人 60 → 第 2
+        Assert.Equal(60m, result.Value);
+        Assert.Equal(12, result.Streak);
+        Assert.Equal(45, result.Volume);
+        Assert.Equal(3, result.PkWins);
+    }
 }

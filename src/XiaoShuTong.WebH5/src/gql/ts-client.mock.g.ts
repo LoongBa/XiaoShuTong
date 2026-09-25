@@ -648,6 +648,9 @@ export const GetMyRankingResDtoSchema = {
     value: { kind: "number" },
     accuracy: { kind: "number" },
     mastery: { kind: "number" },
+    streak: { kind: "number" },
+    volume: { kind: "number" },
+    pkWins: { kind: "number" },
     trend: { kind: "string" },
     rankChange: { kind: "number" },
     rankEnabled: { kind: "boolean" }
@@ -665,6 +668,9 @@ export const GetRankingsResDtoSchema = {
       value: { kind: "number" },
       accuracy: { kind: "number" },
       mastery: { kind: "number" },
+      streak: { kind: "number" },
+      volume: { kind: "number" },
+      pkWins: { kind: "number" },
       trend: { kind: "string" },
       isMe: { kind: "boolean" }
   } } }
@@ -1128,6 +1134,9 @@ export const RankingItemDtoSchema = {
     value: { kind: "number" },
     accuracy: { kind: "number" },
     mastery: { kind: "number" },
+    streak: { kind: "number" },
+    volume: { kind: "number" },
+    pkWins: { kind: "number" },
     trend: { kind: "string" },
     isMe: { kind: "boolean" }
 } as const;

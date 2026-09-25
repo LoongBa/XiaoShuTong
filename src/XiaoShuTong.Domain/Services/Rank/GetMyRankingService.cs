@@ -77,6 +77,9 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
             Value = todayRank.Value.Value,
             Accuracy = todayRank.Value.Accuracy,
             Mastery = todayRank.Value.Mastery,
+            Streak = todayRank.Value.Streak,
+            Volume = todayRank.Value.Volume,
+            PkWins = todayRank.Value.PkWins,
             Trend = trend,
             RankChange = rankChange,
             RankEnabled = true,
@@ -84,7 +87,7 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
     }
 
     /// <summary>指定日期上当前用户组合求和后的名次</summary>
-    private async Task<(int Rank, decimal Value, double Accuracy, double Mastery)?> RankOfUserAsync(
+    private async Task<(int Rank, decimal Value, double Accuracy, double Mastery, double Streak, double Volume, double PkWins)?> RankOfUserAsync(
         RankScopeType scopeType, string scopeId, string subject, RankMetricType[] metrics,
         DateOnly date, long userId, CancellationToken ct)
     {
@@ -95,7 +98,7 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
         if (rows.Count == 0)
             return null;
 
-        // 按用户组合求和；Accuracy/Mastery 单指标直读各组行（缺省 0）
+        // 按用户组合求和；Accuracy/Mastery/Streak/Volume/PkWins 单指标直读各组行（缺省 0）
         var combined = rows
             .GroupBy(r => r.UserId)
             .Select(g => new
@@ -104,12 +107,18 @@ internal class GetMyRankingService(DomainUser<XiaoShuTongUserInfo> user)
                 Value = g.Sum(r => r.MetricValue),
                 Accuracy = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Accuracy)?.MetricValue ?? 0m),
                 Mastery = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Mastery)?.MetricValue ?? 0m),
+                Streak = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Streak)?.MetricValue ?? 0m),
+                Volume = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Volume)?.MetricValue ?? 0m),
+                PkWins = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.PkWins)?.MetricValue ?? 0m),
             })
             .OrderByDescending(x => x.Value)
             .ToList();
 
         var index = combined.FindIndex(c => c.UserId == userId);
-        return index < 0 ? null : (index + 1, combined[index].Value, combined[index].Accuracy, combined[index].Mastery);
+        return index < 0
+            ? null
+            : (index + 1, combined[index].Value, combined[index].Accuracy, combined[index].Mastery,
+               combined[index].Streak, combined[index].Volume, combined[index].PkWins);
     }
 
     private async Task<DateOnly> LatestSnapshotDateAsync(
@@ -159,6 +168,15 @@ public sealed record GetMyRankingResDto
 
     /// <summary>掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）</summary>
     public double Mastery { get; init; }
+
+    /// <summary>连续天数单指标（RankSnapshots MetricType=Streak 冻结值）</summary>
+    public double Streak { get; init; }
+
+    /// <summary>背诵量单指标（RankSnapshots MetricType=Volume 冻结值）</summary>
+    public double Volume { get; init; }
+
+    /// <summary>PK 胜利数单指标（RankSnapshots MetricType=PkWins 冻结值）</summary>
+    public double PkWins { get; init; }
 
     /// <summary>趋势（Up/Down/Flat）</summary>
     public string Trend { get; init; } = "Flat";

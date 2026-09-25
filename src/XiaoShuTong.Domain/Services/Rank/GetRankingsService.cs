@@ -88,7 +88,7 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
                  && x.SnapshotDate == latest && metrics.Contains(x.MetricType),
             ct: ct);
 
-        // 按用户组合求和（BR-11/12 简单求和）；Accuracy/Mastery 单指标直读各组行（缺省 0）
+        // 按用户组合求和（BR-11/12 简单求和）；Accuracy/Mastery/Streak/Volume/PkWins 单指标直读各组行（缺省 0）
         var combined = rows
             .GroupBy(r => r.UserId)
             .Select(g => new
@@ -98,6 +98,9 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
                 Rank = g.Min(r => r.Rank),
                 Accuracy = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Accuracy)?.MetricValue ?? 0m),
                 Mastery = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Mastery)?.MetricValue ?? 0m),
+                Streak = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Streak)?.MetricValue ?? 0m),
+                Volume = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.Volume)?.MetricValue ?? 0m),
+                PkWins = (double)(g.FirstOrDefault(r => r.MetricType == RankMetricType.PkWins)?.MetricValue ?? 0m),
             })
             .OrderByDescending(x => x.Value)
             .ToList();
@@ -127,6 +130,9 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
                 Value = x.Value,
                 Accuracy = x.Accuracy,
                 Mastery = x.Mastery,
+                Streak = x.Streak,
+                Volume = x.Volume,
+                PkWins = x.PkWins,
                 Trend = trend,
                 IsMe = x.UserId == meId,
             };
@@ -223,6 +229,15 @@ public sealed record RankingItemDto
 
     /// <summary>掌握度单指标（0~1，RankSnapshots MetricType=Mastery 冻结值）</summary>
     public double Mastery { get; init; }
+
+    /// <summary>连续天数单指标（RankSnapshots MetricType=Streak 冻结值）</summary>
+    public double Streak { get; init; }
+
+    /// <summary>背诵量单指标（RankSnapshots MetricType=Volume 冻结值）</summary>
+    public double Volume { get; init; }
+
+    /// <summary>PK 胜利数单指标（RankSnapshots MetricType=PkWins 冻结值）</summary>
+    public double PkWins { get; init; }
 
     /// <summary>趋势（Up/Down/Flat）</summary>
     public string Trend { get; init; } = "Flat";

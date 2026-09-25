@@ -325,6 +325,116 @@ public partial class XiaoShuTongDomainInitializer
                 Rank = 3,
                 SnapshotDate = businessDay,
             } as RankSnapshots).ExecuteAffrowsAsync();
+
+            // 5.4 战力榜快照直插（3 用户 × Streak/Volume/PkWins，供战力榜查询；PkWins 切片 07 未实施 → 0）
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Streak,
+                MetricValue = 3m,
+                Rank = 1,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Volume,
+                MetricValue = 10m,
+                Rank = 1,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.PkWins,
+                MetricValue = 0m,
+                Rank = 1,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Streak,
+                MetricValue = 2m,
+                Rank = 2,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Volume,
+                MetricValue = 8m,
+                Rank = 2,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentBId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.PkWins,
+                MetricValue = 0m,
+                Rank = 2,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Streak,
+                MetricValue = 1m,
+                Rank = 3,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.Volume,
+                MetricValue = 6m,
+                Rank = 3,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
+            await repo.Insert(new RankSnapshots
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentCId,
+                ScopeType = RankScopeType.Group,
+                ScopeId = SeedGroupUid,
+                Subject = "All",
+                MetricType = RankMetricType.PkWins,
+                MetricValue = 0m,
+                Rank = 3,
+                SnapshotDate = businessDay,
+            } as RankSnapshots).ExecuteAffrowsAsync();
         }
 
         /// <summary>插入 3 道《观沧海》R1 补全题（Keywords 组感知 JSON，对齐 SubmitAttemptServiceTests 范式）</summary>
