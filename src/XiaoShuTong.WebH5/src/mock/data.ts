@@ -522,9 +522,9 @@ export const initialData: DatasetSeed = {
       snapshotDate: new Date(Date.now() - 86400000).toISOString().slice(0, 10),
       rankEnabled: true,
       items: [
-        { rank: 1, userId: 1001, nickname: "小明", avatarUrl: "", value: 1.85, accuracy: 0.95, mastery: 0.9, trend: "Up", isMe: true },
-        { rank: 2, userId: 1002, nickname: "小红", avatarUrl: "", value: 1.75, accuracy: 0.9, mastery: 0.85, trend: "Flat", isMe: false },
-        { rank: 3, userId: 1003, nickname: "小刚", avatarUrl: "", value: 1.65, accuracy: 0.85, mastery: 0.8, trend: "Down", isMe: false },
+        { rank: 1, userId: 1001, nickname: "小明", avatarUrl: "", value: 1.85, accuracy: 0.95, mastery: 0.9, streak: 15, volume: 45, pkWins: 3, trend: "Up", isMe: true },
+        { rank: 2, userId: 1002, nickname: "小红", avatarUrl: "", value: 1.75, accuracy: 0.9, mastery: 0.85, streak: 12, volume: 42, pkWins: 0, trend: "Flat", isMe: false },
+        { rank: 3, userId: 1003, nickname: "小刚", avatarUrl: "", value: 1.65, accuracy: 0.85, mastery: 0.8, streak: 10, volume: 38, pkWins: 1, trend: "Down", isMe: false },
       ],
     },
     {
@@ -537,7 +537,7 @@ export const initialData: DatasetSeed = {
 
   // getMyRankingResDtos — 1 条
   getMyRankingResDtos: [
-    { success: true, errorCode: null, rank: 1, value: 1.85, accuracy: 0.95, mastery: 0.9, trend: "Up", rankChange: 2, rankEnabled: true },
+    { success: true, errorCode: null, rank: 1, value: 1.85, accuracy: 0.95, mastery: 0.9, streak: 15, volume: 45, pkWins: 3, trend: "Up", rankChange: 2, rankEnabled: true },
   ],
 
   // inviteBuddyResDtos — 1 条
@@ -887,7 +887,7 @@ export const scenarioOverrides: ScenarioOverrides = {
       },
     ],
     getMyRankingResDtos: [
-      { success: true, errorCode: null, rank: 1, value: 1.9, accuracy: 0.9, mastery: 0.85, trend: "Up", rankChange: 5, rankEnabled: true },
+      { success: true, errorCode: null, rank: 1, value: 1.9, accuracy: 0.9, mastery: 0.85, streak: 14, volume: 50, pkWins: 2, trend: "Up", rankChange: 5, rankEnabled: true },
     ],
   },
 };
