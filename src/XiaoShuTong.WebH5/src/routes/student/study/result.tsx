@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
 import { Tkwf } from '@tkwf/tsclient';
 import type { SessionResult_ExecuteService, BlockedPointDto } from '@/gql/ts-client.g';
+import { accuracyToPercent } from '@/lib/accuracy';
 import { serverStateToMemoryState } from '@/lib/memory-state';
 import {
   Sparkles,
@@ -25,6 +26,7 @@ interface SessionResult {
   correctCount: number;
   totalCount: number;
   newStarCount: number;
+  accuracy: number;
   blockedPoints: BlockedPointDto[];
 }
 
@@ -68,6 +70,7 @@ function StudyResultPage() {
           correctCount: res.correctCount,
           totalCount: res.totalCount,
           newStarCount: res.newStarCount,
+          accuracy: res.accuracy,
           blockedPoints: res.blockedPoints,
         });
         setLoadState('ready');
@@ -91,6 +94,7 @@ function StudyResultPage() {
   const totalQuestions = result?.totalCount ?? 0;
   const correctCount = result?.correctCount ?? 0;
   const newStars = result?.newStarCount ?? 0;
+  const accuracy = result?.accuracy ?? 0;
   const isAllCorrect = totalQuestions > 0 && correctCount === totalQuestions;
 
   // 卡住的知识点（BR-42：✕/△ 题目 + 知识点，State 徽章渲染；替换 stuckItems 硬编码）
@@ -167,6 +171,9 @@ function StudyResultPage() {
           <h1 className="text-2xl font-bold mb-2">
             这次背对了 {correctCount}/{totalQuestions}
           </h1>
+          <p className="text-muted-foreground mb-1">
+            本次正确率 {accuracyToPercent(accuracy)}%
+          </p>
           <p className="text-muted-foreground mb-4">
             新增 {newStars} 颗★
           </p>
