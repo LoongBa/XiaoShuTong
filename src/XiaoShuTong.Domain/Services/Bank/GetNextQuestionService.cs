@@ -14,6 +14,9 @@ namespace XiaoShuTong.Services.Bank;
 /// BR-20 出题按状态机排序（到期复习 → 未掌握 → 新题）
 /// 学习-BR-04 混合比（30% 新题 + 70% 复习）：按已答复习占比动态池选择（ADR-009 决策一，Oracle 评审闭环）
 /// 状态机排序依赖学习域 MemoryStates（切片 02 数据，跨模块读）；会话已答题目排除（Attempts 跨模块读）。
+/// ⚠️ WARN004 登记（V0.6.8）：本服务有 ExecuteAsync 但【有意不暴露】——Callee 仅供学习域内部调用，
+/// 不挂 [GenerateController]（无对外 RPC 字段）；对外取题走 Learning/GetSessionQuestionService
+/// （sessionQuestion_Execute，返回同 GetNextQuestionResDto）。若日后需要暴露须先评估双字段同 Dto 风险。
 /// </remarks>
 internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
     : DomainServiceBase<XiaoShuTongUserInfo>(user)

@@ -12,6 +12,8 @@ namespace XiaoShuTong.Services.Parent;
 /// CROSS：订阅激活 + 状态迁移。
 /// BR-08 授权链校验 → 8002 | BR-09 重复回调幂等 | BR-10 Plan=Month +1 月 / Year +1 年
 /// 微信支付回调签名验证对接（切片验证：直接调用）。
+/// ⚠️ WARN004 登记（V0.6.8）：本服务有 ExecuteAsync 但【有意不暴露】——支付回调 Callee，
+/// 不挂 [GenerateController]（无对外 RPC 字段）；对外订阅操作走 startTrial_Execute / listSubscriptions_Execute。
 /// </remarks>
 [Transactional]
 internal class ActivateSubscriptionService(DomainUser<XiaoShuTongUserInfo> user)
