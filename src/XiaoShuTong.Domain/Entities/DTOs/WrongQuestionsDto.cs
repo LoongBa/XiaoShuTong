@@ -14,6 +14,10 @@ public partial record WrongQuestionsDto
     [DtoField(IsComputed = true)]
     public string Summary { get; init; } = string.Empty;
 
+    /// <summary>标准答案（非 SQL 列，Service 赋值——内容权威源优先，Keywords 重组兜底）</summary>
+    [DtoField(IsComputed = true)]
+    public string Answer { get; init; } = string.Empty;
+
     /// <summary>根据需要添加自定义验证逻辑</summary>
     partial void OnCustomValidate(EnumSceneFlags scene, List<ValidationResult> results)
     {

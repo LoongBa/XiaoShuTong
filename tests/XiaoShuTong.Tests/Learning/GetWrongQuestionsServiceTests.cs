@@ -43,7 +43,7 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         }, TestContext.Current.CancellationToken);
     }
 
-    private async Task SeedQuestionAsync(string questionId, string stem, string knowledgePoint = "诗歌鉴赏")
+    private async Task SeedQuestionAsync(string questionId, string stem, string knowledgePoint = "诗歌鉴赏", string[]? keywords = null)
     {
         await SeedBankAsync();
         var ds = User.Use<QuestionsDataService>();
@@ -54,7 +54,8 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
             BankId = "bank-learning-47001",
             QType = QuestionType.R1,
             Content = $"{{\"questionId\":\"{questionId}\",\"stem\":\"{stem}\"}}",
-            Keywords = "[]",
+            Keywords = System.Text.Json.JsonSerializer.Serialize(
+                (keywords ?? []).Select(k => new KeywordGroup([k])).ToList()),
             KnowledgePoints = [knowledgePoint],
             Difficulty = 0,
             Status = QuestionStatus.Active,
@@ -87,7 +88,7 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
     {
         var userId = SetUser(47001);
         await SeedWrongAsync(userId, "Q-47001a", "chinese", 3, mastered: false);
-        await SeedQuestionAsync("Q-47001a", "东临碣石，___"); // KnowledgePoint 默认 "诗歌鉴赏"（真实题库同源富化）
+        await SeedQuestionAsync("Q-47001a", "东临碣石，___", keywords: ["若出其中", "星汉灿烂", "幸甚至哉"]); // KnowledgePoint 默认 "诗歌鉴赏"（真实题库同源富化）
         var svc = User.Use<GetWrongQuestionsService>();
 
         var result = await svc.ExecuteAsync(new GetWrongQuestionsReqDto { Mastered = false }, TestContext.Current.CancellationToken);
@@ -98,10 +99,10 @@ public class GetWrongQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         Assert.Equal(3, item.WrongCount);
         Assert.Equal("诗歌鉴赏", item.KnowledgePoint); // 注册表富化
         Assert.Equal("东临碣石，___", item.Summary);    // 题库域题目摘要
+        // 2c 配合项（V0.6.7 登记）：Answer 计算字段——错题本展示标准答案属作答后复习场景，
+        // 不违反防爬 BR-19（防爬针对作答前出题通道）；无内容文件时 Keywords 重组兜底
+        Assert.NotEmpty(item.Answer);
         Assert.Equal(1, result.Total);
-
-        var json = System.Text.Json.JsonSerializer.Serialize(result);
-        Assert.DoesNotContain("answer", json, StringComparison.OrdinalIgnoreCase);
     }
 
     /// <summary>BR-44：仅当前用户错题（RLS）</summary>

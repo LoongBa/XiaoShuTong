@@ -19,6 +19,8 @@ export interface User {
 // 任务
 export interface Task {
   id: string;
+  /** 任务数值主键（后端 MyTaskItemDto.taskId 直通；createStudySession taskId 入参来源，V0.6.7 配合项 2a） */
+  taskId?: number | null;
   title: string;
   description?: string;
   teacherName: string;

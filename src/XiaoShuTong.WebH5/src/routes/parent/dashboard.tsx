@@ -8,6 +8,7 @@ import { MemoryStateBadge } from '@/components/MemoryStateBadge';
 import { StreakBadge } from '@/components/StreakBadge';
 import { Tkwf } from '@tkwf/tsclient';
 import type { DashboardReport_ExecuteService, SubjectMasteryDto } from '@/gql/ts-client.g';
+import { Children_ExecuteService } from '@/gql/ts-client.g';
 import { accuracyToPercent, accuracyToState } from '@/lib/accuracy';
 import { 
   ArrowLeft,
@@ -30,12 +31,25 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
-// 模拟孩子数据（studentId 对齐联调种子 ParentStudentRelations：10003 家长 → 10001 小明）
-// 注：children_Execute → ChildItemDto.studentUid(string) 与 dashboardReport.studentId(number) 契约不直通
-// （Oracle V0.6.7 P1-5 前置阻塞，登记后端配合项），本次保留 mock 孩子 + 真实报告消费
-const MOCK_CHILDREN = [
-  { id: 'child-1', name: '小明', grade: '初二(3)班', streakDays: 7, todayTaskCompleted: true, studentId: 10001 },
-];
+// 孩子列表（2b 配合项闭环：children_Execute → ChildItemDto.studentId 数值直通，
+// 替换 MOCK_CHILDREN——nickname/className 跨账户域为空串占位；studentId 与 dashboardReport 同源）
+interface ChildLocal {
+  id: string;
+  name: string;
+  grade: string;
+  streakDays: number;
+  todayTaskCompleted: boolean;
+  studentId: number;
+}
+
+const toChildLocal = (c: { studentId: number; studentUid: string; nickname: string; className: string }): ChildLocal => ({
+  id: c.studentUid,
+  name: c.nickname || `学生${c.studentId}`,
+  grade: c.className || '',
+  streakDays: 0, // dashboardReport.streakDays 真实值（P1-5 已接）
+  todayTaskCompleted: false, // dashboardReport.todayCompleted 真实值（P1-5 已接）
+  studentId: c.studentId,
+});
 
 export const Route = createFileRoute('/parent/dashboard')({
   component: ParentDashboardPage,
@@ -44,7 +58,8 @@ export const Route = createFileRoute('/parent/dashboard')({
 function ParentDashboardPage() {
   const navigate = useNavigate();
   const { isLoggedIn, currentUser } = useAppStore();
-  const [selectedChild, setSelectedChild] = useState(MOCK_CHILDREN[0]);
+  const [selectedChild, setSelectedChild] = useState<ChildLocal | null>(null);
+  const [children, setChildren] = useState<ChildLocal[]>([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [showSubscribeDialog, setShowSubscribeDialog] = useState(false);
   const [trialDaysLeft, setTrialDaysLeft] = useState(7);
@@ -63,11 +78,32 @@ function ParentDashboardPage() {
       navigate({ to: '/auth/login' });
     }
   }, [isLoggedIn, navigate]);
+
+  // 加载孩子列表（2b 配合项闭环：children_Execute 真实拉取 → 默认选中第一个）
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    let cancelled = false;
+    const loadChildren = async () => {
+      try {
+        const res = await Tkwf.User.Use<Children_ExecuteService>().listChildren_Execute();
+        if (cancelled) return;
+        const items = (res.success && res.items ? res.items : []).map(toChildLocal);
+        setChildren(items);
+        if (items.length > 0) {
+          setSelectedChild((prev) => prev ?? items[0]);
+        }
+      } catch {
+        if (!cancelled) setChildren([]);
+      }
+    };
+    void loadChildren();
+    return () => { cancelled = true; };
+  }, [isLoggedIn]);
   
   // 加载各学科掌握度（dashboardReport_Execute → subjectsMastery 真实契约；V0.6.3 接线，替换原硬编码 MOCK_SUBJECT_MASTERY）
   // P1-5（Oracle V0.6.7）：同时消费已返回但未使用的 streakDays/weekProgress/todayCompleted/subscription/locked
   useEffect(() => {
-    if (!isLoggedIn) return;
+    if (!isLoggedIn || !selectedChild) return;
     let cancelled = false;
     const loadMastery = async () => {
       setMasteryLoading(true);
@@ -97,7 +133,7 @@ function ParentDashboardPage() {
     };
     void loadMastery();
     return () => { cancelled = true; };
-  }, [isLoggedIn, selectedChild.studentId]);
+  }, [isLoggedIn, selectedChild?.studentId]);
   
   return (
     <div className="min-h-screen bg-background">
@@ -113,16 +149,16 @@ function ParentDashboardPage() {
           <h1 className="font-semibold">成长报告</h1>
         </div>
         
-        {/* 孩子切换器 */}
-        {MOCK_CHILDREN.length > 1 && (
+        {/* 孩子切换器（2b：真实 children 列表；单孩子隐藏） */}
+        {children.length > 1 && (
           <div className="mt-3 flex gap-2">
-            {MOCK_CHILDREN.map((child) => (
+            {children.map((child) => (
               <button
                 key={child.id}
                 onClick={() => setSelectedChild(child)}
                 className={cn(
                   'px-3 py-1.5 rounded-full text-sm font-medium transition-colors',
-                  selectedChild.id === child.id
+                  selectedChild?.id === child.id
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-muted text-muted-foreground'
                 )}
@@ -145,12 +181,12 @@ function ParentDashboardPage() {
           </div>
         )}
         
-        {/* 孩子信息卡片 */}
+        {/* 孩子信息卡片（2b：children 未加载完前显示占位） */}
         <Card className="p-4">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="font-semibold text-lg">{selectedChild.name}</h2>
-              <p className="text-sm text-muted-foreground">{selectedChild.grade}</p>
+              <h2 className="font-semibold text-lg">{selectedChild?.name ?? '加载中…'}</h2>
+              <p className="text-sm text-muted-foreground">{selectedChild?.grade || '—'}</p>
             </div>
             {/* P1-5：streakDays 改用 dashboardReport 真实值（替代 mock selectedChild.streakDays） */}
             <StreakBadge days={streakDays} size="lg" />

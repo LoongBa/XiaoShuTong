@@ -47,6 +47,7 @@ internal class ListChildrenService(DomainUser<XiaoShuTongUserInfo> user)
 
         var items = relations.Select(relation => new ChildItemDto
         {
+            StudentId = relation.StudentId, // 数值主键直通（dashboardReport.studentId 同源，V0.6.7 登记配合项）
             StudentUid = relation.StudentId.ToString(), // 账户域 Uid 未实施，透传 Id
             Nickname = string.Empty, // 账户域（跨模块），切片为空串
             ClassName = string.Empty,
@@ -74,6 +75,9 @@ public sealed record ListChildrenResDto
 /// <summary>孩子项 DTO</summary>
 public sealed record ChildItemDto
 {
+    /// <summary>孩子数值主键（DB Id，与 dashboardReport.studentId 同源直通）</summary>
+    public long StudentId { get; init; }
+
     /// <summary>孩子外部键（账户域 Uid 未实施，透传 Id）</summary>
     public string StudentUid { get; init; } = string.Empty;
 

@@ -27,9 +27,11 @@ internal class ListGroupsService(DomainUser<XiaoShuTongUserInfo> user)
     /// <summary>
     /// 按 OwnerId 分页查询群组列表（含成员数聚合）
     /// </summary>
-    public async Task<ListGroupsResDto> ExecuteAsync(ListGroupsReqDto request, CancellationToken ct = default)
+    public async Task<ListGroupsResDto> ExecuteAsync(ListGroupsReqDto? request, CancellationToken ct = default)
     {
         var ownerId = User.UserInfo?.Id ?? 0;
+        // 契约参数可空（GQL 省略 request 合法）——null 兜底默认分页（防御 NRE，V0.6.8 走查实证）
+        request ??= new ListGroupsReqDto();
         var pageIndex = request.PageIndex < 1 ? 1 : request.PageIndex;
         var pageSize = request.PageSize is < 1 or > 100 ? 20 : request.PageSize;
 

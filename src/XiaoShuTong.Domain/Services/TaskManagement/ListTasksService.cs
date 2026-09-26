@@ -51,18 +51,26 @@ internal class ListTasksService(DomainUser<XiaoShuTongUserInfo> user)
         var pageSize = request.PageSize is < 1 or > 100 ? 20 : request.PageSize;
 
         // BR-09：群主仅见自己布置的任务（OwnerId 过滤）
+        // G8 同款（FreeSql SQLite 无法翻译 string.IsNullOrWhiteSpace/枚举 ToString 表达式）——
+        // SQL 层仅可翻译谓词（OwnerId/GroupId），状态过滤移内存层
         System.Linq.Expressions.Expression<Func<Tasks, bool>> predicate = x =>
             x.OwnerId == ownerId
-            && (!groupId.HasValue || x.GroupId == groupId.Value)
-            && (string.IsNullOrWhiteSpace(request.Status) || x.Status.ToString() == request.Status);
+            && (!groupId.HasValue || x.GroupId == groupId.Value);
 
-        var items = await TasksDs.EntitySelectAsync(
+        var dbItems = await TasksDs.EntitySelectAsync(
             predicate,
-            (pageIndex - 1) * pageSize,
-            pageSize,
-            q => q.OrderByDescending(x => x.CreateTime),
-            ct);
-        var totalCount = await TasksDs.CountAsync(predicate, ct);
+            ct: ct);
+
+        var filteredItems = (string.IsNullOrWhiteSpace(request.Status)
+                ? dbItems
+                : dbItems.Where(t => t.Status.ToString() == request.Status))
+            .OrderByDescending(t => t.CreateTime) // 保持原 SQL 排序语义（内存层）
+            .ToList();
+        var totalCount = filteredItems.Count;
+        var items = filteredItems
+            .Skip((pageIndex - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
 
         // 一次 IN 查询替代 foreach N+1：按 TaskId 分组组装完成率
         var taskIds = items.Select(t => t.Id).ToArray();

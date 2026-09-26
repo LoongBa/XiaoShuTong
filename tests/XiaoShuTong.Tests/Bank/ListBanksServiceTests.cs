@@ -134,4 +134,20 @@ public class ListBanksServiceTests(XiaoShuTongDomainTestFixture fixture, ITestOu
         var mine = result.Items.First(i => i.Bank?.BankId == "bank-ch-31005");
         Assert.Equal(2, mine.QuestionCount);
     }
+
+    /// <summary>V0.6.8 防御回归：契约 request 可空，null 省略不 NRE（默认分页）</summary>
+    [Fact]
+    public async Task ExecuteAsync_NullRequest_DefaultPagingNoNre()
+    {
+        SetUser(31006);
+        await SeedBankAsync(ownerId: null, BankPrivacy.Public, Subject.Chinese, bankId: "bank-null-31006");
+        var svc = User.Use<ListBanksService>();
+
+        // 契约允许省略 request（GQL 参数可空）——null 直接调用不抛 NRE
+        var result = await svc.ExecuteAsync(null, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(1, result.Total);
+        Assert.Contains(result.Items, i => i.Bank?.BankId == "bank-null-31006");
+    }
 }

@@ -117,10 +117,10 @@ export const operationSelection: Record<string, string> = {
   'knowledgeCard_Execute': 'success errorCode cardType content',
   'listBanks_Execute': 'success errorCode items { bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topicCount questionCount } total',
   'listBuddies_Execute': 'success errorCode items { buddyId userId nickname avatarUrl streakDays status rank { isFromPersistentSource id uId userId scopeType scopeId subject metricType metricValue rank snapshotDate createTime updateTime } }',
-  'listChildren_Execute': 'success errorCode items { studentUid nickname className hasSubscription }',
+  'listChildren_Execute': 'success errorCode items { studentId studentUid nickname className hasSubscription }',
   'listGroups_Execute': 'success errorCode items { groupId groupUid name subject grade memberCount executionRate rankEnabled } pageIndex pageSize totalCount',
   'listModels': 'success errorCode items { isFromPersistentSource id uId name provider baseUrl modelName enabled sortOrder timeoutSeconds remark createTime updateTime } total',
-  'listMyTasks_Execute': 'success errorCode items { taskUid title progress deadlineAt status ownerName }',
+  'listMyTasks_Execute': 'success errorCode items { taskId taskUid title progress deadlineAt status ownerName }',
   'listSubscriptions_Execute': 'success errorCode items { subscriptionUid studentUid studentNickname plan status trialEndAt periodEndAt }',
   'listTasks_Execute': 'success errorCode items { taskUid title deadlineAt status questionCount completionRate } total',
   'loginByContext': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
@@ -158,7 +158,7 @@ export const operationSelection: Record<string, string> = {
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
   'updateModel': 'success errorCode uId',
   'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText }',
-  'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
+  'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary answer isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
 } as const;
 
 // ===== Operation Variable Types Map =====
@@ -1288,6 +1288,7 @@ export interface BlockedPointDto {
 export interface WrongQuestionsDto {
   knowledgePoint: string;
   summary: string;
+  answer: string;
   isFromPersistentSource: boolean;
   id: number;
   uId: string;
@@ -1345,6 +1346,7 @@ export interface ParentWeakPointDto {
 }
 
 export interface ChildItemDto {
+  studentId: number;
   studentUid: string;
   nickname: string;
   className: string;
@@ -1457,6 +1459,7 @@ export interface TaskAssignmentsDto {
 }
 
 export interface MyTaskItemDto {
+  taskId: number;
   taskUid: string;
   title: string;
   progress: number;

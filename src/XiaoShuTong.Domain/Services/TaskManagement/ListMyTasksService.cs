@@ -32,12 +32,17 @@ internal class ListMyTasksService(DomainUser<XiaoShuTongUserInfo> user)
         var userId = User.UserInfo?.Id ?? 0;
 
         // BR-13：仅返回当前学生分配的任务
+        // G8 同款（FreeSql SQLite 无法翻译 string.IsNullOrWhiteSpace/枚举 ToString 表达式，
+        // 实测抛 "request.Status 不能为 null"）——SQL 层仅 UserId 谓词，状态过滤移内存层
         var assignments = await AssignmentsDs.EntitySelectAsync(
-            x => x.UserId == userId
-                 && (string.IsNullOrWhiteSpace(request.Status) || x.Status.ToString() == request.Status),
+            x => x.UserId == userId,
             ct: ct);
 
-        var orderedAssignments = assignments.OrderByDescending(a => a.AssignedAt).ToList();
+        var orderedAssignments = (string.IsNullOrWhiteSpace(request.Status)
+                ? assignments
+                : assignments.Where(a => a.Status.ToString() == request.Status))
+            .OrderByDescending(a => a.AssignedAt)
+            .ToList();
         var taskIds = orderedAssignments.Select(a => a.TaskId).ToArray();
         var tasks = taskIds.Length == 0
             ? new List<Tasks>()
@@ -58,6 +63,7 @@ internal class ListMyTasksService(DomainUser<XiaoShuTongUserInfo> user)
 
             items.Add(new MyTaskItemDto
             {
+                TaskId = task.Id,
                 TaskUid = task.UId,
                 Title = task.Title,
                 Progress = assignment.Progress,
@@ -94,6 +100,9 @@ public sealed record ListMyTasksResDto
 /// <summary>我的任务项 DTO</summary>
 public sealed record MyTaskItemDto
 {
+    /// <summary>任务数值主键（DB Id，createStudySession taskId 直通）</summary>
+    public long TaskId { get; init; }
+
     /// <summary>任务外部键</summary>
     public string TaskUid { get; init; } = string.Empty;
 

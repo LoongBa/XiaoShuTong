@@ -137,4 +137,22 @@ public class ListGroupsServiceTests(XiaoShuTongDomainTestFixture fixture, ITestO
         Assert.True(over.Success);
         Assert.Equal(20, over.PageSize);
     }
+
+    /// <summary>V0.6.8 防御回归：契约 request 可空，null 省略不 NRE（默认分页）</summary>
+    [Fact]
+    public async Task ExecuteAsync_NullRequest_DefaultPagingNoNre()
+    {
+        var userId = SetUser(60007);
+        await SeedGroupAsync(userId, "语文-防御测试");
+        var svc = User.Use<ListGroupsService>();
+
+        // 契约允许省略 request（GQL 参数可空）——null 直接调用不抛 NRE
+        var result = await svc.ExecuteAsync(null, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(1, result.TotalCount);
+        Assert.Equal(1, result.PageIndex);
+        Assert.Equal(20, result.PageSize);
+        Assert.Contains(result.Items, g => g.Name == "语文-防御测试");
+    }
 }

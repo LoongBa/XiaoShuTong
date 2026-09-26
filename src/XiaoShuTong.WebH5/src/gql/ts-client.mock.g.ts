@@ -446,6 +446,7 @@ export const GetWrongQuestionsResDtoSchema = {
     items: { kind: "array", element: { kind: "object", fields: {
       knowledgePoint: { kind: "string" },
       summary: { kind: "string" },
+      answer: { kind: "string" },
       isFromPersistentSource: { kind: "boolean" },
       id: { kind: "number", isId: true },
       uId: { kind: "string" },
@@ -543,6 +544,7 @@ export const ListChildrenResDtoSchema = {
     success: { kind: "boolean" },
     errorCode: { kind: "string" },
     items: { kind: "array", element: { kind: "object", fields: {
+      studentId: { kind: "number" },
       studentUid: { kind: "string" },
       nickname: { kind: "string" },
       className: { kind: "string" },
@@ -815,6 +817,7 @@ export const ListMyTasksResDtoSchema = {
     success: { kind: "boolean" },
     errorCode: { kind: "string" },
     items: { kind: "array", element: { kind: "object", fields: {
+      taskId: { kind: "number" },
       taskUid: { kind: "string" },
       title: { kind: "string" },
       progress: { kind: "number" },
@@ -1040,6 +1043,7 @@ export const BlockedPointDtoSchema = {
 export const WrongQuestionsDtoSchema = {
     knowledgePoint: { kind: "string" },
     summary: { kind: "string" },
+    answer: { kind: "string" },
     isFromPersistentSource: { kind: "boolean" },
     id: { kind: "number", isId: true },
     uId: { kind: "string" },
@@ -1090,6 +1094,7 @@ export const ParentWeakPointDtoSchema = {
     stateText: { kind: "string" }
 } as const;
 export const ChildItemDtoSchema = {
+    studentId: { kind: "number" },
     studentUid: { kind: "string" },
     nickname: { kind: "string" },
     className: { kind: "string" },
@@ -1211,6 +1216,7 @@ export const TaskAssignmentsDtoSchema = {
     updateTime: { kind: "date" }
 } as const;
 export const MyTaskItemDtoSchema = {
+    taskId: { kind: "number" },
     taskUid: { kind: "string" },
     title: { kind: "string" },
     progress: { kind: "number" },

@@ -33,6 +33,9 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
     private QuestionsDataService? _questionsDs;
     private QuestionsDataService QuestionsDs => _questionsDs ??= User.Use<QuestionsDataService>();
 
+    private BanksDataService? _banksDs;
+    private BanksDataService BanksDs => _banksDs ??= User.Use<BanksDataService>();
+
     private QuestionMetaProvider? _questionMetaProvider;
     private QuestionMetaProvider QuestionMeta => _questionMetaProvider ??= User.Use<QuestionMetaProvider>();
 
@@ -66,6 +69,7 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
         // 富化：题目摘要（题库域，批处理一次取回防 N+1）+ 知识点（真实题库读取，与摘要同源，ADR-008 决策二）
         var stemMap = await LoadStemMapAsync(items.Select(i => i.QuestionId).Distinct().ToArray(), ct);
         var metaMap = await QuestionMeta.GetManyAsync(items.Select(i => i.QuestionId).Distinct(), ct);
+        var answerMap = await LoadAnswerMapAsync(items.Select(i => i.QuestionId).Distinct().ToArray(), ct);
 
         // BR-43：空列表正常返回
         return new GetWrongQuestionsResDto
@@ -77,10 +81,91 @@ internal class GetWrongQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
                     // DTO 最小化：复用 WrongQuestionsDto + 计算字段（Service 赋值）
                     KnowledgePoint = metaMap.GetValueOrDefault(x.QuestionId)?.KnowledgePoint ?? string.Empty,
                     Summary = stemMap.GetValueOrDefault(x.QuestionId) ?? string.Empty,
+                    // 答案：内容权威源优先，Keywords 重组兜底（联调种子无内容文件）
+                    Answer = answerMap.GetValueOrDefault(x.QuestionId) ?? string.Empty,
                 })
                 .ToList(),
             Total = (int)totalCount,
         };
+    }
+
+    /// <summary>批量取标准答案（内容权威文件优先 → Questions.Keywords 重组兜底，防 N+1）</summary>
+    private async Task<Dictionary<string, string>> LoadAnswerMapAsync(string[] questionIds, CancellationToken ct)
+    {
+        var map = new Dictionary<string, string>(StringComparer.Ordinal);
+        if (questionIds.Length == 0) return map;
+
+        // 批取题目（含 Keywords 兜底数据）
+        var questions = await QuestionsDs.EntitySelectAsync(
+            x => questionIds.Contains(x.QuestionId), ct: ct);
+        if (questions.Count == 0) return map;
+
+        // 内容权威源：按 BankId 分组一次取 Banks（JsonPath → ContentFileStore）
+        var bankIds = questions.Select(q => q.BankId).Distinct().ToArray();
+        var banks = bankIds.Length == 0
+            ? new List<Banks>()
+            : await BanksDs.EntitySelectAsync(x => bankIds.Contains(x.BankId), ct: ct);
+        var bankByBankId = banks.ToDictionary(b => b.BankId);
+
+        // 内容文件反查：QuestionId → Answer（权威）
+        var authoritative = new Dictionary<string, string>(StringComparer.Ordinal);
+        foreach (var bank in banks)
+        {
+            var content = ContentFileStore.Read(bank.JsonPath);
+            if (content == null) continue;
+            try
+            {
+                using var doc = System.Text.Json.JsonDocument.Parse(content);
+                if (doc.RootElement.TryGetProperty("questions", out var questionsNode) &&
+                    questionsNode.ValueKind == System.Text.Json.JsonValueKind.Array)
+                {
+                    foreach (var qNode in questionsNode.EnumerateArray())
+                    {
+                        var qid = qNode.TryGetProperty("questionId", out var qidNode)
+                            ? qidNode.GetString() : null;
+                        var answer = qNode.TryGetProperty("answer", out var ansNode)
+                            ? ansNode.GetString() : null;
+                        if (qid != null && answer != null)
+                            authoritative[qid] = answer;
+                    }
+                }
+            }
+            catch (System.Text.Json.JsonException)
+            {
+                // 内容文件损坏：跳过权威源，走 Keywords 兜底
+            }
+        }
+
+        foreach (var question in questions)
+        {
+            // 权威源优先
+            if (authoritative.TryGetValue(question.QuestionId, out var ans) && !string.IsNullOrWhiteSpace(ans))
+            {
+                map[question.QuestionId] = ans;
+                continue;
+            }
+            // 兜底：Keywords（KeywordGroup[]）重组——Aliases[0] 主词空格连接
+            map[question.QuestionId] = RebuildAnswerFromKeywords(question.Keywords);
+        }
+        return map;
+    }
+
+    /// <summary>Keywords（KeywordGroup[] JSON）重组答案：各分组主词（Aliases[0]）空格连接</summary>
+    private static string RebuildAnswerFromKeywords(string keywordsJson)
+    {
+        if (string.IsNullOrWhiteSpace(keywordsJson)) return string.Empty;
+        try
+        {
+            var groups = System.Text.Json.JsonSerializer.Deserialize<List<KeywordGroup>>(keywordsJson);
+            if (groups == null || groups.Count == 0) return string.Empty;
+            return string.Join(" ", groups
+                .Select(g => g.Aliases.Length > 0 ? g.Aliases[0] : null)
+                .Where(a => !string.IsNullOrWhiteSpace(a)));
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            return string.Empty;
+        }
     }
 
     /// <summary>批量取题目题干摘要（一次 IN 查询，防 N+1）</summary>

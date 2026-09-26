@@ -78,6 +78,8 @@ function StudentHomePage() {
         if (tasksResult.success && tasksResult.items) {
           setTasks(tasksResult.items.map((item: any) => ({
             id: item.taskUid || item.id,
+            // 2a 配合项：后端 MyTaskItemDto.taskId 数值直通（createStudySession taskId 入参来源，task.tsx 消费）
+            taskId: item.taskId ?? null,
             title: item.title,
             description: '',
             teacherName: item.ownerName || '老师',

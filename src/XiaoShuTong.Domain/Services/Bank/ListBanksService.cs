@@ -28,8 +28,11 @@ internal class ListBanksService(DomainUser<XiaoShuTongUserInfo> user)
     /// <summary>
     /// 分页查询可见题库列表（学科/用途过滤 + 题量聚合）
     /// </summary>
-    public async Task<ListBanksResDto> ExecuteAsync(ListBanksReqDto request, CancellationToken ct = default)
+    public async Task<ListBanksResDto> ExecuteAsync(ListBanksReqDto? request, CancellationToken ct = default)
     {
+        // 契约参数可空（GQL 省略 request 合法）——null 兜底默认分页（防御 NRE，V0.6.8 走查实证）
+        request ??= new ListBanksReqDto();
+
         // BR-02：参数校验
         if (!string.IsNullOrWhiteSpace(request.Subject) && !Enum.TryParse<Subject>(request.Subject, true, out _))
             return new ListBanksResDto { Success = false, ErrorCode = BankErrorCodes.ParamInvalid };
@@ -40,20 +43,25 @@ internal class ListBanksService(DomainUser<XiaoShuTongUserInfo> user)
         var pageSize = request.PageSize;
         var userId = User.UserInfo?.Id ?? 0;
 
-        // BR-03：可见性过滤（Public → 所有人；Private → 仅 Owner；Group → 仅 Owner，切片简化）
+        // BR-03：可见性过滤——G8 同款（FreeSql SQLite 无法翻译 string.IsNullOrWhiteSpace 表达式）：
+        // SQL 层仅可翻译谓词（状态/隐私/分页），Subject/Purpose 过滤移内存层
         System.Linq.Expressions.Expression<Func<Banks, bool>> predicate = x =>
             x.Status == BankStatus.Active
-            && (string.IsNullOrWhiteSpace(request.Subject) || x.Subject.ToString() == request.Subject)
-            && (string.IsNullOrWhiteSpace(request.Purpose) || x.Purpose.ToString() == request.Purpose)
             && (x.Privacy == BankPrivacy.Public || x.OwnerId == userId);
 
-        var items = await BanksDs.EntitySelectAsync(
-            predicate,
-            (pageIndex - 1) * pageSize,
-            pageSize,
-            q => q.OrderByDescending(x => x.CreateTime),
-            ct);
-        var totalCount = await BanksDs.CountAsync(predicate, ct);
+        var dbItems = await BanksDs.EntitySelectAsync(predicate, ct: ct);
+
+        var filtered = (string.IsNullOrWhiteSpace(request.Subject)
+                ? dbItems
+                : dbItems.Where(b => b.Subject.ToString() == request.Subject))
+            .Where(b => string.IsNullOrWhiteSpace(request.Purpose) || b.Purpose.ToString() == request.Purpose)
+            .OrderByDescending(b => b.CreateTime)
+            .ToList();
+        var totalCount = filtered.Count;
+        var items = filtered
+            .Skip((pageIndex - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
 
         // 一次 IN 查询替代 foreach N+1：按 BankId 聚合活跃题数
         var bankIds = items.Select(b => b.BankId).ToArray();

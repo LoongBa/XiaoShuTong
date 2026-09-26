@@ -315,6 +315,8 @@ type ChallengeResponse {
 
 "孩子项 DTO"
 type ChildItemDto {
+  "孩子数值主键（DB Id，与 dashboardReport.studentId 同源直通）"
+  studentId: Long!
   "孩子外部键（账户域 Uid 未实施，透传 Id）"
   studentUid: String!
   "昵称（账户域，切片为空）"
@@ -1136,6 +1138,8 @@ type MemoryStatesDto {
 
 "我的任务项 DTO"
 type MyTaskItemDto {
+  "任务数值主键（DB Id，createStudySession taskId 直通）"
+  taskId: Long!
   "任务外部键"
   taskUid: String!
   "任务名"
@@ -1739,6 +1743,8 @@ type WrongQuestionsDto {
   knowledgePoint: String!
   "题目摘要（题库域关联，非 SQL 列，Service 赋值）"
   summary: String!
+  "标准答案（非 SQL 列，Service 赋值——内容权威源优先，Keywords 重组兜底）"
+  answer: String!
   isFromPersistentSource: Boolean!
   "自增主键"
   id: Long!
