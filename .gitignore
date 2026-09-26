@@ -56,3 +56,5 @@ src/**/.xCodeGen/Generated/
 # 联调 SQLite 文件库（V0.6.3：WebApi Development 本地验证，不入库）
 *.dev.db
 *.dev.db-*
+# V0.6.8：dev.db 手动备份（种子重建前快照，本地保留不入库）
+*.dev.db.bak-*
