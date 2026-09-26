@@ -130,7 +130,11 @@ function TaskStudyPage() {
       const result = await startSession(bankId, {
         scenario: isReview ? 'Assess' : 'Memorize', // 复习=Assess、新学=Memorize
         sessionType: 'Progressive',
-        taskId: search.taskId ? Number(search.taskId) || null : null,
+        // P0-3（Oracle V0.6.7）：契约 taskId 为数值 DB Id（number|null），而 search.taskId 是 UId 字符串
+        // （home.tsx 以 taskUid 作任务 id）——Number(UId)=NaN → 恒 null。任务进度归因依赖后端补
+        // MyTaskItemDto.taskId:number（登记后端配合项）；前端防退化：显式 null + 注释，会话仍正常
+        // （自由/复习模式，bankId 走 currentTask 查找或默认题库，不阻断作答链路）。
+        taskId: null,
         questionCount: currentTask?.totalQuestions ?? DEFAULT_QUESTION_COUNT,
       });
       if (cancelledRef.current) return;

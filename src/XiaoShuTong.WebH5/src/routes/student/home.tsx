@@ -20,6 +20,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { serverStateToMemoryState } from '@/lib/memory-state';
 import { Tkwf } from '@tkwf/tsclient';
 import type { 
   MyTasks_ExecuteService, 
@@ -34,11 +35,9 @@ export const Route = createFileRoute('/student/home')({
 
 function StudentHomePage() {
   const navigate = useNavigate();
-  const { currentUser, isLoggedIn, startTask } = useAppStore();
+  const { currentUser, isLoggedIn, startTask, tasks, reviewItems, learningStats, setTasks, setReviewItems, setLearningStats } = useAppStore();
   
-  const [tasks, setTasks] = useState<any[]>([]);
-  const [reviewItems, setReviewItems] = useState<any[]>([]);
-  const [learningStats, setLearningStats] = useState<any[]>([]);
+  // streakDays 仅本页消费（profile 走 currentUser.streakDays），保持本地 state（Oracle V0.6.7 M1 决策）
   const [streakDays, setStreakDays] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   
@@ -98,8 +97,10 @@ function StudentHomePage() {
           setReviewItems(reviewResult.items.map((item: any) => ({
             id: item.uId || item.questionId,
             knowledgePointId: item.questionId,
-            title: '',
-            memoryState: item.state === '✕' ? 'gray' : item.state === '△' ? 'yellow' : item.state === '○' ? 'green' : 'gold',
+            // MemoryStatesDto 无 title 字段，统一占位（Oracle V0.6.7 P1-2；避免与契约脱节的空串）
+            title: '知识点',
+            // 服务端下发 PascalCase 枚举（NotMastered/Fuzzy/Mastered/Proficient），统一走权威映射（P1-1）
+            memoryState: serverStateToMemoryState(item.state),
             daysSinceLastReview: Math.max(0, Math.ceil((Date.now() - new Date(item.nextReviewAt || Date.now()).getTime()) / 86400000)),
             isOverdue: new Date(item.nextReviewAt || Date.now()) < new Date()
           })));

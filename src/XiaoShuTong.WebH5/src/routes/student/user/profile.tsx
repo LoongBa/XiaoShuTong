@@ -5,6 +5,9 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BottomNav } from '@/components/BottomNav';
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
+import { Tkwf } from '@tkwf/tsclient';
+import type { MemoryStates_ExecuteService } from '@/gql/ts-client.g';
+import { serverStateToMemoryState } from '@/lib/memory-state';
 import { 
   User,
   Settings,
@@ -98,7 +101,12 @@ function ThemeSwitcher() {
 
 function UserProfilePage() {
   const navigate = useNavigate();
-  const { isLoggedIn, currentUser, logout, knowledgePoints } = useAppStore();
+  const { isLoggedIn, currentUser, logout } = useAppStore();
+  // 批次三：记忆状态统计接 memoryStates_Execute 真实数据（MemoryStatesDto 无 title，仅按 state 计数，
+  // 不经 store.knowledgePoints——该集合无填充者）
+  const [memoryCounts, setMemoryCounts] = useState<{ gray: number; yellow: number; green: number; gold: number }>({
+    gray: 0, yellow: 0, green: 0, gold: 0,
+  });
   
   // 检查登录状态
   useEffect(() => {
@@ -106,14 +114,33 @@ function UserProfilePage() {
       navigate({ to: '/auth/login' });
     }
   }, [isLoggedIn, navigate]);
+
+  // 批次三：拉取记忆状态列表，按 state 聚合四阶计数
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    let cancelled = false;
+    const loadMemoryStates = async () => {
+      try {
+        const res = await Tkwf.User.Use<MemoryStates_ExecuteService>().memoryStates_Execute({
+          request: { bankId: null, state: null, pageIndex: 1, pageSize: 100 },
+        });
+        if (cancelled || !res.success) return;
+        const counts = { gray: 0, yellow: 0, green: 0, gold: 0 };
+        for (const item of res.items ?? []) {
+          const ms = serverStateToMemoryState(item.state);
+          counts[ms] = (counts[ms] ?? 0) + 1;
+        }
+        if (!cancelled) setMemoryCounts(counts);
+      } catch {
+        // 加载失败保持全 0
+      }
+    };
+    void loadMemoryStates();
+    return () => { cancelled = true; };
+  }, [isLoggedIn]);
   
   // 计算记忆状态统计
-  const memoryStats = {
-    gray: knowledgePoints.filter(kp => kp.memoryState === 'gray').length,
-    yellow: knowledgePoints.filter(kp => kp.memoryState === 'yellow').length,
-    green: knowledgePoints.filter(kp => kp.memoryState === 'green').length,
-    gold: knowledgePoints.filter(kp => kp.memoryState === 'gold').length,
-  };
+  const memoryStats = memoryCounts;
   
   const handleLogout = () => {
     logout();

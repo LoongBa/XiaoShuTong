@@ -83,17 +83,18 @@ const SCOPE_OPTIONS = [
   { id: 'grade', label: '年级' },
 ];
 
+// 学科筛选：id 与后端契约对齐（DOMAIN_MAP RankSnapshots.Subject = All/语文/…/政治，P0-5）
 const SUBJECT_OPTIONS = [
-  { id: 'all', label: '全部学科' },
-  { id: 'chinese', label: '语文' },
-  { id: 'math', label: '数学' },
-  { id: 'english', label: '英语' },
-  { id: 'physics', label: '物理' },
-  { id: 'chemistry', label: '化学' },
-  { id: 'biology', label: '生物' },
-  { id: 'history', label: '历史' },
-  { id: 'geography', label: '地理' },
-  { id: 'politics', label: '政治' },
+  { id: 'All', label: '全部学科' },
+  { id: '语文', label: '语文' },
+  { id: '数学', label: '数学' },
+  { id: '英语', label: '英语' },
+  { id: '物理', label: '物理' },
+  { id: '化学', label: '化学' },
+  { id: '生物', label: '生物' },
+  { id: '历史', label: '历史' },
+  { id: '地理', label: '地理' },
+  { id: '政治', label: '政治' },
 ];
 
 export const Route = createFileRoute('/student/rank')({
@@ -105,10 +106,11 @@ function RankPage() {
   const { isLoggedIn, currentUser } = useAppStore();
   // 当前群组 Uid（联调种子群组占位；群组上下文接入后替换为真实值）+ 当前用户 Id
   const currentScopeId = GROUP_SCOPE_ID;
-  const currentUserId = Number(currentUser?.id ?? 0);
+  // 当前用户 Id：login 下发的 id 为字符串（'student-1'），Number() 得 NaN——仅用于 myRank 展示回退 0（P1-7）
+  const currentUserId = Number(currentUser?.id ?? 0) || 0;
   const [activeTab, setActiveTab] = useState<'power' | 'score'>('power');
   const [activeScope, setActiveScope] = useState('class');
-  const [activeSubject, setActiveSubject] = useState('all');
+  const [activeSubject, setActiveSubject] = useState('All');
   const [showSubjectDropdown, setShowSubjectDropdown] = useState(false);
 
   // 榜单真实数据（rankings_Execute / myRanking_Execute；按 activeTab 切换 Combat/Performance）
@@ -131,7 +133,8 @@ function RankPage() {
     setBoardLoading(true);
     setBoardError(false);
     try {
-      const subject = activeSubject === 'all' ? null : activeSubject;
+      // 'All' 表示全部学科（后端契约枚举值，P0-5；传 null 服务端归一化为 All）
+      const subject = activeSubject === 'All' ? null : activeSubject;
       const [listRes, myRes] = await Promise.all([
         Tkwf.User.Use<Rankings_ExecuteService>().rankings_Execute({
           request: { scopeType: 'Group', scopeId: currentScopeId, subject, metric, date: null, limit: 50 },

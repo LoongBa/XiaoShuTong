@@ -46,12 +46,18 @@ const MOCK_WEAK_POINTS = [
 ];
 
 export const Route = createFileRoute('/teacher/tasks/detail')({
+  // P0-4：从 teacher/dashboard 带 taskUid 跳转；最小闭环——路由参数链通，mock 占位保留（完整接线另立迭代）
+  validateSearch: (search: Record<string, unknown>): { taskUid?: string } => ({
+    taskUid: typeof search.taskUid === 'string' ? search.taskUid : undefined,
+  }),
   component: TaskDetailPage,
 });
 
 function TaskDetailPage() {
   const navigate = useNavigate();
   const { isLoggedIn } = useAppStore();
+  // P0-4：读取路由参数 taskUid（完整接线时供 taskDetail_Execute 使用）
+  const { taskUid } = Route.useSearch();
   
   // 检查登录状态
   useEffect(() => {

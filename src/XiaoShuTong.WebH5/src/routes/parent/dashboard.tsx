@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useAppStore } from '@/store/appStore';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { TaskProgressBar } from '@/components/TaskProgressBar';
+
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
 import { StreakBadge } from '@/components/StreakBadge';
 import { Tkwf } from '@tkwf/tsclient';
@@ -31,6 +31,8 @@ import {
 } from '@/components/ui/dialog';
 
 // 模拟孩子数据（studentId 对齐联调种子 ParentStudentRelations：10003 家长 → 10001 小明）
+// 注：children_Execute → ChildItemDto.studentUid(string) 与 dashboardReport.studentId(number) 契约不直通
+// （Oracle V0.6.7 P1-5 前置阻塞，登记后端配合项），本次保留 mock 孩子 + 真实报告消费
 const MOCK_CHILDREN = [
   { id: 'child-1', name: '小明', grade: '初二(3)班', streakDays: 7, todayTaskCompleted: true, studentId: 10001 },
 ];
@@ -48,6 +50,12 @@ function ParentDashboardPage() {
   const [trialDaysLeft, setTrialDaysLeft] = useState(7);
   const [masteryLoading, setMasteryLoading] = useState(true);
   const [subjectMastery, setSubjectMastery] = useState<SubjectMasteryDto[]>([]);
+  // P1-5：消费 dashboardReport 已返回字段（替代硬编码/未消费值）
+  const [streakDays, setStreakDays] = useState(0);
+  const [todayCompleted, setTodayCompleted] = useState(false);
+  const [weekLearned, setWeekLearned] = useState(0);
+  const [weekAccuracy, setWeekAccuracy] = useState<number | null>(null);
+  const [locked, setLocked] = useState(false);
   
   // 检查登录状态
   useEffect(() => {
@@ -57,6 +65,7 @@ function ParentDashboardPage() {
   }, [isLoggedIn, navigate]);
   
   // 加载各学科掌握度（dashboardReport_Execute → subjectsMastery 真实契约；V0.6.3 接线，替换原硬编码 MOCK_SUBJECT_MASTERY）
+  // P1-5（Oracle V0.6.7）：同时消费已返回但未使用的 streakDays/weekProgress/todayCompleted/subscription/locked
   useEffect(() => {
     if (!isLoggedIn) return;
     let cancelled = false;
@@ -69,6 +78,14 @@ function ParentDashboardPage() {
         if (cancelled) return;
         if (res.success) {
           setSubjectMastery(res.subjectsMastery ?? []);
+          // P1-5：已返回字段消费——连续天数 / 今日完成 / 订阅状态 / 锁态
+          setStreakDays(res.streakDays ?? 0);
+          setTodayCompleted(!!res.todayCompleted);
+          setWeekLearned(res.weekProgress?.learnedCount ?? 0);
+          setWeekAccuracy(res.weekProgress?.accuracy ?? null);
+          setIsSubscribed((res.subscription?.status ?? '') === 'Active' || (res.subscription?.status ?? '') === 'Trial');
+          // locked=true 时订阅不受约（此处仅记录，付费流程保留 mock 占位——另立迭代）
+          setLocked(res.locked ?? false);
         } else {
           setSubjectMastery([]);
         }
@@ -81,8 +98,6 @@ function ParentDashboardPage() {
     void loadMastery();
     return () => { cancelled = true; };
   }, [isLoggedIn, selectedChild.studentId]);
-  
-  const weeklyProgress = { current: 5, total: 10 };
   
   return (
     <div className="min-h-screen bg-background">
@@ -137,11 +152,13 @@ function ParentDashboardPage() {
               <h2 className="font-semibold text-lg">{selectedChild.name}</h2>
               <p className="text-sm text-muted-foreground">{selectedChild.grade}</p>
             </div>
-            <StreakBadge days={selectedChild.streakDays} size="lg" />
+            {/* P1-5：streakDays 改用 dashboardReport 真实值（替代 mock selectedChild.streakDays） */}
+            <StreakBadge days={streakDays} size="lg" />
           </div>
           
           <div className="flex items-center gap-2">
-            {selectedChild.todayTaskCompleted ? (
+            {/* P1-5：todayCompleted 改用 dashboardReport 真实值（替代 mock selectedChild.todayTaskCompleted） */}
+            {todayCompleted ? (
               <span className="flex items-center gap-1 text-sm text-green-600">
                 <CheckCircle2 className="w-4 h-4" />
                 今日任务已完成
@@ -155,19 +172,23 @@ function ParentDashboardPage() {
           </div>
         </Card>
         
-        {/* 本周进度 */}
+        {/* 本周进度（P1-5：weekProgress.learnedCount + accuracy 真实契约；total 用掌握度覆盖学科数兜底） */}
         <Card className="p-4">
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <Clock className="w-4 h-4" />
             本周进度
           </h3>
-          <TaskProgressBar
-            current={weeklyProgress.current}
-            total={weeklyProgress.total}
-            size="md"
-          />
-          <p className="text-sm text-muted-foreground mt-2">
-            已完成 {weeklyProgress.current}/{weeklyProgress.total} 篇
+          <div className="flex items-baseline gap-2 mb-2">
+            <span className="text-2xl font-bold">{weekLearned}</span>
+            <span className="text-sm text-muted-foreground">篇已学</span>
+            {weekAccuracy !== null && (
+              <span className="ml-auto text-sm font-medium text-primary">
+                正确率 {Math.round(weekAccuracy * 100)}%
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-muted-foreground">
+            本周学习 {weekLearned} 篇{weekAccuracy !== null ? `，正确率 ${Math.round(weekAccuracy * 100)}%` : ''}
           </p>
         </Card>
         
@@ -199,7 +220,7 @@ function ParentDashboardPage() {
           )}
         </Card>
         
-        {/* 付费功能入口 */}
+        {/* 付费功能入口（P1-6：/parent/progress 路由不存在——完整报告页待建；订阅后点击提示而非 404 导航） */}
         <Card 
           className={cn(
             'p-4 cursor-pointer transition-all',
@@ -209,7 +230,8 @@ function ParentDashboardPage() {
             if (!isSubscribed) {
               setShowSubscribeDialog(true);
             } else {
-              navigate({ to: '/parent/progress' });
+              // 完整报告页（进度趋势/薄弱知识点）为后续迭代项，路由未建；此处提示避免 404
+              alert('完整报告页将在后续版本上线，敬请期待');
             }
           }}
         >

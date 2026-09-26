@@ -5,6 +5,8 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { EmptyState } from '@/components/EmptyState';
 import { BottomNav } from '@/components/BottomNav';
+import { Tkwf } from '@tkwf/tsclient';
+import type { Banks_ExecuteService } from '@/gql/ts-client.g';
 import { 
   ArrowLeft,
   Lock,
@@ -28,9 +30,66 @@ export const Route = createFileRoute('/student/bank/self')({
 
 function SelfBankPage() {
   const navigate = useNavigate();
-  const { isLoggedIn, subjects } = useAppStore();
+  const { isLoggedIn, subjects, setSubjects } = useAppStore();
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [showLockDialog, setShowLockDialog] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  // 批次三：接 banks_Execute 拉真实题库 → 按科目聚合学科卡（替代纯空 store.subjects）
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    let cancelled = false;
+    const loadBanks = async () => {
+      setLoading(true);
+      try {
+        const res = await Tkwf.User.Use<Banks_ExecuteService>().listBanks_Execute({
+          request: { subject: null, purpose: null, pageIndex: 1, pageSize: 100 },
+        });
+        if (cancelled || !res.success) return;
+        // 按 subject 聚合：subject 值域含中文（"语文"）与英文代码（"chinese"），统一映射
+        const cluster = new Map<string, { label: string; count: number }>();
+        const labelOf = (raw: string | null | undefined): string => {
+          const r = (raw ?? 'All').toLowerCase();
+          const map: Record<string, string> = {
+            '语文': '语文', chinese: '语文',
+            '数学': '数学', math: '数学',
+            '英语': '英语', english: '英语',
+            '物理': '物理', physics: '物理',
+            '化学': '化学', chemistry: '化学',
+            '生物': '生物', biology: '生物',
+            '历史': '历史', history: '历史',
+            '地理': '地理', geography: '地理',
+            '道德与法治': '道德与法治', daodeyufazhi: '道德与法治', politics: '道德与法治',
+          };
+          return map[r] ?? (r === 'all' ? '综合' : (raw ?? '综合'));
+        };
+        for (const it of res.items ?? []) {
+          const label = labelOf(it.bank?.subject);
+          const cur = cluster.get(label) ?? { label, count: 0 };
+          cur.count += (it.questionCount ?? 0);
+          cluster.set(label, cur);
+        }
+        // 组装 Subject[]：isHot 按题库覆盖数 ≥2 或首 3 门；isLocked 统一 false（自由背诵可用）
+        const built = [...cluster.entries()]
+          .sort((a, b) => b[1].count - a[1].count)
+          .map(([label, info], idx) => ({
+            id: label,
+            name: label,
+            icon: '📚',
+            isHot: idx < 3,
+            isLocked: false,
+            knowledgeCount: info.count,
+          }));
+        if (!cancelled) setSubjects(built);
+      } catch {
+        // 加载失败保留空态（走查可见）
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    };
+    void loadBanks();
+    return () => { cancelled = true; };
+  }, [isLoggedIn, setSubjects]);
   
   // 检查登录状态
   useEffect(() => {
