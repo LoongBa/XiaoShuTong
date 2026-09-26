@@ -62,10 +62,15 @@ function StudentHomePage() {
             request: { status: null }
           }),
           Tkwf.User.Use<ReviewQueue_ExecuteService>().reviewQueue_Execute({
-            request: { date: new Date().toISOString().slice(0, 10), pageIndex: 1, pageSize: 20 }
+            // DateTime 标量需完整 ISO（HotChocolate 不接收纯日期串 "2026-09-25" → 400 coerce 失败）
+            request: { date: new Date().toISOString(), pageIndex: 1, pageSize: 20 }
           }),
           Tkwf.User.Use<Heatmap_ExecuteService>().heatmap_Execute({
-            request: { start: '', end: '' }
+            // start/end 必填 DateTime!，空串/纯日期会 coerce 失败；取近 30 天区间
+            request: {
+              start: new Date(Date.now() - 30 * 86400000).toISOString(),
+              end: new Date().toISOString(),
+            }
           }),
           Tkwf.User.Use<Streak_ExecuteService>().streak_Execute(),
         ]);
