@@ -81,11 +81,31 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
             .Where(q => answeredQuestionIds == null || !answeredQuestionIds.Contains(q.QuestionId))
             .ToList();
 
+        // 学习-BR-51（V0.6.14）：错题专练白名单
+        // QuestionIds == null → 全库（既有行为）；[] → 显式空集（BR-18 空结果，会话结束信号）；
+        // [>0] → available ∩ 白名单（错题专练定向出题）
+        var questionIds = request.QuestionIds;
+        if (questionIds != null)
+        {
+            if (questionIds.Length == 0)
+                return new GetNextQuestionResDto { Success = true };
+            available = available.Where(q => questionIds.Contains(q.QuestionId)).ToList();
+        }
+
         // BR-18：题集耗尽 → 空结果（会话结束信号）
         if (available.Count == 0)
             return new GetNextQuestionResDto { Success = true };
 
         var now = DateTime.UtcNow;
+
+        // Oracle M2（V0.6.14）：白名单非空时短路混合比（BR-04）——错题专练=只练错题，
+        // 混合比的 30% 新题违背语义；白名单池内按 BR-20 状态机排序直出
+        if (questionIds != null)
+        {
+            var ordered = await OrderByStatePriorityAsync(available, userId, now, ct);
+            var next = ordered.First();
+            return BuildResponse(next);
+        }
 
         // 无会话/直接 Callee 调用（SessionId 空）：不分池，保持原 BR-20 状态机排序（兼容既有行为）
         if (string.IsNullOrWhiteSpace(request.SessionId))
@@ -274,6 +294,12 @@ public sealed record GetNextQuestionReqDto
 
     /// <summary>知识点过滤</summary>
     public string? KnowledgePoint { get; init; }
+
+    /// <summary>
+    /// 题目白名单（学习-BR-51，V0.6.14 错题专练）：限定出题范围
+    /// null=全库（既有行为）；[]=显式空集（BR-18 空结果）；[>0]=available ∩ 白名单 + 短路混合比
+    /// </summary>
+    public string[]? QuestionIds { get; init; }
 }
 
 /// <summary>取下一题响应 DTO（不含答案与关键词）</summary>

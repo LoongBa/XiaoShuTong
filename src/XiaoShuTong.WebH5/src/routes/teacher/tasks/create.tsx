@@ -170,7 +170,7 @@ function CreateTaskPage() {
           bankId: selectedBankId,
           title: taskName.trim() || `背诵《${selectedBank?.bank?.name ?? ''}》`,
           description: null,
-          questionIds: JSON.stringify([]), // 整库布置，questionIds 空数组 JSON 串
+          questionIds: [], // 整库布置，questionIds 空数组（V0.6.14 codegen 修复：契约 [String!]! 数组，原 JSON.stringify([]) 字符串错配）
           scenario: null,
           sessionType: null,
           allowRedo,

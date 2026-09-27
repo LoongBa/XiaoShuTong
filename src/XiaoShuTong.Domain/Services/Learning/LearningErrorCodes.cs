@@ -37,4 +37,7 @@ public static class LearningErrorCodes
 
     /// <summary>任务已截止/关闭 (5102)</summary>
     public const string TaskClosed = "TASK_CLOSED";
+
+    /// <summary>错题记录不存在 (4007；V0.6.14 MarkMasteredService 新增——当前用户无该题错题记录)</summary>
+    public const string WrongNotFound = "WRONG_NOT_FOUND";
 }

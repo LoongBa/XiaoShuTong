@@ -71,6 +71,8 @@ function TaskStudyPage() {
     startSession,
     recordAnswer,
     nextQuestion,
+    wrongPracticeQuestionIds,
+    setWrongPracticeQuestionIds,
   } = useAppStore();
 
   const { submitAttempt, isSubmitting: isSubmittingAttempt, error: submitError } = useAttemptFlow();
@@ -100,8 +102,11 @@ function TaskStudyPage() {
       });
     } catch {
       // fire-and-forget：失败不阻塞跳转（后端幂等 + BR-05 续做兜底，悬挂会话可继续）
+    } finally {
+      // V0.6.14：错题重练白名单生命周期 = 会话全程，结束时清空（防残留到下次普通会话）
+      setWrongPracticeQuestionIds(null);
     }
-  }, [sessionUid]);
+  }, [sessionUid, setWrongPracticeQuestionIds]);
 
   // 检查登录状态
   useEffect(() => {
@@ -117,14 +122,15 @@ function TaskStudyPage() {
   // 会话初始化（T5）：createStudySession → sessionUid 存 store → 首次 getSessionQuestion 取第 1 题
   // 归口为 useCallback：错误态"重试"直接复调，无需 trigger 计数器（会话重建走 BR-05 幂等）
   const initSession = useCallback(async () => {
-    // 无参数进入（无 taskId / reviewQuestionId / currentTaskId）→ 任务选择引导（验收 B1）
-    if (!search.taskId && !search.reviewQuestionId && !currentTaskId) {
+    // 无参数进入（无 taskId / reviewQuestionId / currentTaskId / 错题重练白名单）→ 任务选择引导（验收 B1）
+    // V0.6.14（Oracle C7）：错题重练经 store（wrongPracticeQuestionIds）而非路由参数进入，规避 URL 长度限制
+    if (!search.taskId && !search.reviewQuestionId && !currentTaskId && !wrongPracticeQuestionIds) {
       setInitStatus('guide');
       return;
     }
     setInitStatus('loading');
     try {
-      const isReview = Boolean(search.reviewQuestionId);
+      const isReview = Boolean(search.reviewQuestionId) || Boolean(wrongPracticeQuestionIds); // 错题重练=复习场景（Assess）
       const bankId = currentTask?.bankId ?? DEFAULT_BANK_ID;
       bankIdRef.current = bankId;
       const result = await startSession(bankId, {
@@ -155,7 +161,7 @@ function TaskStudyPage() {
     } catch {
       setInitStatus('error');
     }
-  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, startSession, navigate, endStudy]);
+  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, wrongPracticeQuestionIds, startSession, navigate, endStudy]);
 
   useEffect(() => {
     void initSession();
@@ -178,8 +184,9 @@ function TaskStudyPage() {
   const fetchNextQuestion = async (): Promise<'ok' | 'exhausted' | 'error'> => {
     if (!sessionUid) return 'error';
     try {
+      // V0.6.14：错题重练白名单持续透传（学习-BR-51；endStudy 时清空）
       const res = await Tkwf.User.Use<SessionQuestion_ExecuteService>().sessionQuestion_Execute({
-        request: { sessionUid, bankId: bankIdRef.current, type: null, knowledgePoint: null },
+        request: { sessionUid, bankId: bankIdRef.current, type: null, knowledgePoint: null, questionIds: wrongPracticeQuestionIds },
       });
       if (!res.success) return 'error';
       // 题集耗尽（BR-18：success=true 无 questionId）= 会话结束信号

@@ -46,12 +46,14 @@ internal class GetSessionQuestionService(DomainUser<XiaoShuTongUserInfo> user)
             return Fail(LearningErrorCodes.SessionEnded);
 
         // 题库-BR-17~20 全由 Callee 承载；SessionId ← SessionUid 转发
+        // V0.6.14（学习-BR-51）：QuestionIds 白名单透传（错题专练定向出题；null=全库）
         return await User.Use<GetNextQuestionService>().ExecuteAsync(new GetNextQuestionReqDto
         {
             SessionId = request.SessionUid,
             BankId = request.BankId,
             Type = request.Type,
             KnowledgePoint = request.KnowledgePoint,
+            QuestionIds = request.QuestionIds,
         }, ct);
     }
 
@@ -73,4 +75,7 @@ public sealed record GetSessionQuestionReqDto
 
     /// <summary>知识点过滤</summary>
     public string? KnowledgePoint { get; init; }
+
+    /// <summary>题目白名单（错题专练，V0.6.14 学习-BR-51；null=全库出题）</summary>
+    public string[]? QuestionIds { get; init; }
 }

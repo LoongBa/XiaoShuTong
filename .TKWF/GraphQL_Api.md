@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-27 03:35:55
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-27 22:00:07
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -18,14 +18,14 @@
 | member | 0 | 1 | 1 | 0 |
 | model | 1 | 3 | 4 | 0 |
 | myTasks_Execute | 1 | 0 | 1 | 0 |
-| other | 49 | 1 | 50 | 0 |
+| other | 50 | 1 | 51 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **64** | **8** | **72** | **0** |
+| **合计** | **65** | **8** | **73** | **0** |
 
 ## 二、按域操作清单
 
@@ -277,6 +277,10 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `items`: `WrongQuestionsDto` | | | | | |
 | | ⤷ `total`: number | | | | | |
+| other | `markMastered_Execute` | Query |  | { request?: MarkMasteredReqDtoInput | null } | `MarkMasteredResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `mastered`: boolean | | | | | |
 | other | `submitAttempt_Execute` | Query |  | { request?: SubmitAttemptReqDtoInput | null } | `SubmitAttemptResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -518,6 +522,7 @@
 | `ListSubscriptionsResDto` | success, errorCode, items → 见 \`SubscriptionItemDto\` |
 | `ListTasksResDto` | success, errorCode, items → 见 \`TaskListItemDto\`, total |
 | `LoginPayload` | success, userName, displayName, sessionKey, accessToken, refreshToken, expiresAt, deviceId, extensions → 见 \`ExtensionEntry\` |
+| `MarkMasteredResDto` | success, errorCode, mastered |
 | `PkPlayerStatsViewAggregate` | count, sum → 见 \`PkPlayerStatsViewSumFields\`, avg → 见 \`PkPlayerStatsViewAvgFields\`, min → 见 \`PkPlayerStatsViewMinFields\`, max → 见 \`PkPlayerStatsViewMaxFields\` |
 | `PkPlayerStatsViewConnection` | pageInfo → 见 \`PageInfo\`, edges → 见 \`PkPlayerStatsViewEdge\`, nodes → 见 \`PkPlayerStatsView\`, totalCount |
 | `PreprocessContentResDto` | success, errorCode, batchId |

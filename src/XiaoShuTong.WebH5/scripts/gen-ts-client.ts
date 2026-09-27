@@ -142,6 +142,7 @@ interface TypeFieldDef {
   name: string;
   gqlType: string;
   optional: boolean;
+  isList: boolean;
 }
 
 // ----- Schema Parsing -----
@@ -469,19 +470,11 @@ function extractTypeFields(schema: string, typeName: string): TypeFieldDef[] {
     const gqlTypeRaw = typeMatch[1];
     const { baseType, isList, optional } = parseGqlType(gqlTypeRaw);
 
-    // Build the TS type string for display (without resolving yet)
-    const scalarMapped = SCALAR_MAP[baseType] || TYPE_OVERRIDES[baseType] || baseType;
-    let tsType: string;
-    if (isList) {
-      tsType = `Array<${scalarMapped}>`;
-    } else {
-      tsType = scalarMapped;
-    }
-
     fields.push({
       name: nameMatch[1],
       gqlType: baseType,
       optional,
+      isList,
     });
   }
 
@@ -569,28 +562,16 @@ function generateInterfaceBody(schema: string, typeName: string, depth: number):
     // Resolve the type
     const resolved = resolveType(schema, f.gqlType, depth + 1);
 
-    // Determine if list
-    const rawMatch = extractTypeBlock(schema, typeName);
-    // We need to check if the original field is a list. 
-    // Re-parse the field line to get isList info
-    const originalBlock = extractTypeBlock(schema, typeName);
-    let isList = false;
-    if (originalBlock) {
-      // Find the field's type in the original schema
-      const lineMatch = originalBlock.split('\n')
-        .find(l => l.trim().startsWith(f.name + ':') || l.trim().startsWith(f.name + '('));
-      if (lineMatch) {
-        const typeRawMatch = lineMatch.match(/:\s*([^\s@]+)/);
-        if (typeRawMatch) {
-          const parsed = parseGqlType(typeRawMatch[1]);
-          isList = parsed.isList;
-        }
-      }
-    }
+    // Determine if list — V0.6.14 修复：优先用 extractTypeFields 已保存的 f.isList
+    // （旧降级用 extractTypeBlock 仅匹配 `type` 不匹配 `input`，input 类型字段 isList 恒丢 → 数组错生成标量）
+    const isList = f.isList;
 
     if (resolved) {
       // Resolved to a known TS type
-      const tsType = isList ? `Array<${resolved}>` : (f.optional ? `${resolved} | null` : resolved);
+      // V0.6.14 修复：isList + optional（可空列表 [T!]）→ `Array<T> | null`（保留 null 语义，区分 null=全库 / [] = 空集）
+      const tsType = isList
+        ? (f.optional ? `Array<${resolved}> | null` : `Array<${resolved}>`)
+        : (f.optional ? `${resolved} | null` : resolved);
       bodyLines.push(`  ${f.name}: ${tsType};`);
     } else {
       // Fallback for unresolvable types

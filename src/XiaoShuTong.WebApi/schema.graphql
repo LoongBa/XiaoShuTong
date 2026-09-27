@@ -74,6 +74,8 @@ type Query {
     @cost(weight: "10")
   wrongQuestions_Execute(request: GetWrongQuestionsReqDtoInput): GetWrongQuestionsResDto
     @cost(weight: "10")
+  markMastered_Execute(request: MarkMasteredReqDtoInput): MarkMasteredResDto
+    @cost(weight: "10")
   submitAttempt_Execute(request: SubmitAttemptReqDtoInput): SubmitAttemptResDto
     @cost(weight: "10")
   cancelSubscription_Execute(request: CancelSubscriptionReqDtoInput): CancelSubscriptionResDto
@@ -1087,6 +1089,16 @@ type LoginPayload {
   expiresAt: DateTime
   deviceId: String
   extensions: [ExtensionEntry!]
+}
+
+"手动标记错题已掌握响应 DTO"
+type MarkMasteredResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "翻转后状态（幂等返回当前值）"
+  mastered: Boolean!
 }
 
 "成员项 DTO"
@@ -2107,6 +2119,8 @@ input GetSessionQuestionReqDtoInput {
   type: String
   "知识点过滤"
   knowledgePoint: String
+  "题目白名单（错题专练，V0.6.14 学习-BR-51；null=全库出题）"
+  questionIds: [String!]
 }
 
 "会话结果请求 DTO"
@@ -2258,6 +2272,14 @@ input LongOperationFilterInput {
   nlt: Long @cost(weight: "10")
   lte: Long @cost(weight: "10")
   nlte: Long @cost(weight: "10")
+}
+
+"手动标记错题已掌握请求 DTO"
+input MarkMasteredReqDtoInput {
+  "题目业务键（当前用户错题记录定位）"
+  questionId: String!
+  "目标状态（true=标记已掌握 / false=移回错题本）"
+  mastered: Boolean!
 }
 
 "PK 战绩视图（每用户一行：Finished 对局聚合）"

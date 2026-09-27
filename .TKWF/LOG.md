@@ -259,3 +259,14 @@
 **决策/修复**：① SQLite 文件库（DomainOptions.FreeSqlDataTypeName 配置键 + Program.cs 显式 UseFreeSqlEntityDAC(DataType,...) 重载——XML 明示无参重载不设 DataType 默认 PG；appsettings.Development 切 SQLite，生产 appsettings.json 保持 PG 不动）；② Domain.csproj 补 FreeSql.Provider.Sqlite + Microsoft.Data.Sqlite（Dll 模式 refs 不传 NuGet 依赖）；③ 登录放行（OnLoginByWeChatAppletAsync 白名单 xiaoming=10001/owner01=10002/parent01=10003 + DomainHost.Options.IsDevelopment 运行时守卫——ServiceProvider 解析 DomainOptions 为 null 的坑，改用 Host.Options 直取）；④ 最小链路种子（OnEnsureDataReadyAsync：Groups/GroupMembers/Banks/Questions/Tasks/TaskAssignments/ParentStudentRelations，UId 显式 UidGenerator.NewId() 赋值，IFreeSql 需 CreateScope 包裹——Scoped 注册 root 解析抛错）；⑤ 前端 authType 'wechat'→'WE_CHAT_APPLET' + loginFrom 'MOBILE_WEB'（合法枚举，schema L2472-2496）；⑥ vite proxy 5157→5020 + mock-server 注释 5156 勘误 + schema-settings 5000→5020。
 
 **避坑指南**：① FreeSqlDataTypeName 配置键仅在显式 UseFreeSqlEntityDAC(DataType,...) 重载生效，无参重载恒默认 PG——切库必须改 Program.cs；② DomainHost.Options 直取 DomainOptions（比 ServiceProvider.GetService 可靠，后者该类型未注册可解析）；③ IFreeSql 是 Scoped，OnEnsureDataReadyAsync 必须 CreateScope 包裹否则 root 解析抛 "Cannot resolve scoped service"；④ 未实现 IEntityTracked 的实体种子必须显式 UId，否则唯一索引冲突；⑤ 起 WebApi 用 Start-Process 后台（dotnet run 会阻塞），停服先杀 5020 占用 PID 再重建（锁 DLL MSB3027）。
+
+### 2026-09-27 — [Rule] — V0.6.14 错题闭环新增 BR-51/52（错题专练 + 手动标记已掌握）
+
+**涉及模块**：Business.md（学习域 BR 表尾部追加 2 条）
+
+**上下文**：V0.6.9 审核报告 §七 登记两项配合项（重练定向出题 / MarkMastered 写服务）落地。Oracle 评审发现学习-BR-47~50 已被 KnowledgeMastery 占用，改用 51/52。
+
+**决策/修复**：① BR-51 错题专练——GetNextQuestionReqDto 加 QuestionIds 白名单；
+ull=全库、[]=显式空集（BR-18 空结果）；白名单非空短路混合比（BR-04）按 BR-20 排序直出（Oracle M2 裁决：错题专练=只练错题，混合比 30% 新题违背语义）；② BR-52 手动标记已掌握——MarkMasteredService 翻转 WrongQuestions.Mastered（学习域，激励-BR-15 域边界）；幂等（User+QuestionId 唯一）；BR-23 作答事件照常驱动不豁免（答错重置）；并发"最后写入胜出 + BR-23 作答权威"。
+
+**避坑指南**：新增 BR 前必须先查 Business.md 现有编号占用（学习域已至 50，47-50 均为 KnowledgeMastery），勿凭印象续号。

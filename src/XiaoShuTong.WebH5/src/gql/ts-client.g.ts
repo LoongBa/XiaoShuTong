@@ -40,6 +40,7 @@ export const Query = {
   sessionQuestion_Execute         : { field: 'sessionQuestion_Execute', type: 'query' } as const,
   sessionResult_Execute           : { field: 'sessionResult_Execute', type: 'query' } as const,
   wrongQuestions_Execute          : { field: 'wrongQuestions_Execute', type: 'query' } as const,
+  markMastered_Execute            : { field: 'markMastered_Execute', type: 'query' } as const,
   submitAttempt_Execute           : { field: 'submitAttempt_Execute', type: 'query' } as const,
   cancelSubscription_Execute      : { field: 'cancelSubscription_Execute', type: 'query' } as const,
   createParentRelation_Execute    : { field: 'createParentRelation_Execute', type: 'query' } as const,
@@ -126,6 +127,7 @@ export const operationSelection: Record<string, string> = {
   'loginByContext': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
   'loginByPassword': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
   'logout': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
+  'markMastered_Execute': 'success errorCode mastered',
   'members': 'success errorCode groupId members { userId nickname role joinedAt progress }',
   'memoryStates_Execute': 'success errorCode items { isFromPersistentSource id uId userId questionId bankId state consecutiveCorrect historyAccuracy easeFactor nextReviewAt lastAttemptId lastHintLevel createTime updateTime } totalCount pageIndex pageSize',
   'myRanking_Execute': 'success errorCode rank value accuracy mastery streak volume pkWins trend rankChange rankEnabled',
@@ -201,6 +203,7 @@ export const operationVariableTypes: Record<string, Record<string, string>> = {
   'loginByContext': { 'input': 'LoginContextInput' },
   'loginByPassword': { 'userName': 'String', 'password': 'String' },
   'logout': { 'broadcast': 'Boolean!' },
+  'markMastered_Execute': { 'request': 'MarkMasteredReqDtoInput' },
   'members': { 'request': 'GetMembersReqDtoInput' },
   'memoryStates_Execute': { 'request': 'GetMemoryStatesReqDtoInput' },
   'myRanking_Execute': { 'request': 'GetMyRankingReqDtoInput' },
@@ -266,7 +269,7 @@ export interface CreateBankReqDtoInput {
   subject: string;
   purpose: string | null;
   privacy: string | null;
-  groupIds: string | null;
+  groupIds: Array<string> | null;
 }
 
 export interface GetBankDetailResDto {
@@ -330,7 +333,7 @@ export interface ImportQuestionsResDto {
 
 export interface ImportQuestionsReqDtoInput {
   bankId: string;
-  file: number | null;
+  file: Array<number> | null;
   rawText: string | null;
   topic: string | null;
 }
@@ -371,7 +374,7 @@ export interface ReviewBackingPointsResDto {
 export interface ReviewBackingPointsReqDtoInput {
   bankId: string;
   batchId: string;
-  items: ReviewItemInputDtoInput;
+  items: Array<ReviewItemInputDtoInput>;
   skipUnreviewed: boolean;
 }
 
@@ -654,6 +657,7 @@ export interface GetSessionQuestionReqDtoInput {
   bankId: string;
   type: string | null;
   knowledgePoint: string | null;
+  questionIds: Array<string> | null;
 }
 
 export interface GetSessionResultResDto {
@@ -682,6 +686,17 @@ export interface GetWrongQuestionsReqDtoInput {
   subject: string | null;
   pageIndex: number;
   pageSize: number;
+}
+
+export interface MarkMasteredResDto {
+  success: boolean;
+  errorCode: string | null;
+  mastered: boolean;
+}
+
+export interface MarkMasteredReqDtoInput {
+  questionId: string;
+  mastered: boolean;
 }
 
 export interface SubmitAttemptResDto {
@@ -972,7 +987,7 @@ export interface CreateTaskReqDtoInput {
   bankId: string | null;
   title: string;
   description: string | null;
-  questionIds: string;
+  questionIds: Array<string>;
   scenario: string | null;
   sessionType: string | null;
   allowRedo: boolean;
@@ -1052,8 +1067,8 @@ export interface ListTasksReqDtoInput {
 export type PkPlayerStatsViewConnection = Connection<PkPlayerStatsView, PkPlayerStatsViewEdge>;
 
 export interface PkPlayerStatsViewFilterInput {
-  and: PkPlayerStatsViewFilterInput | null;
-  or: PkPlayerStatsViewFilterInput | null;
+  and: Array<PkPlayerStatsViewFilterInput> | null;
+  or: Array<PkPlayerStatsViewFilterInput> | null;
   isFromPersistentSource: BooleanOperationFilterInput | null;
   id: LongOperationFilterInput | null;
   userId: LongOperationFilterInput | null;
@@ -1090,7 +1105,7 @@ export interface LoginPayload {
   refreshToken: string | null;
   expiresAt: string | null;
   deviceId: string | null;
-  extensions: Array<ExtensionEntry>;
+  extensions: Array<ExtensionEntry> | null;
 }
 
 export interface LoginContextInput {
@@ -1682,6 +1697,10 @@ export interface WrongQuestions_ExecuteArgs {
   request?: GetWrongQuestionsReqDtoInput;
 }
 
+export interface MarkMastered_ExecuteArgs {
+  request?: MarkMasteredReqDtoInput;
+}
+
 export interface SubmitAttempt_ExecuteArgs {
   request?: SubmitAttemptReqDtoInput;
 }
@@ -1928,6 +1947,10 @@ export interface JoinPkMatch_ExecuteService {
 
 export interface KnowledgeCard_ExecuteService {
   knowledgeCard_Execute(args?: KnowledgeCard_ExecuteArgs): ChainablePromise<GetKnowledgeCardResDto>;
+}
+
+export interface MarkMastered_ExecuteService {
+  markMastered_Execute(args?: MarkMastered_ExecuteArgs): ChainablePromise<MarkMasteredResDto>;
 }
 
 export interface MemberService {

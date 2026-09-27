@@ -236,4 +236,89 @@ public class GetSessionQuestionServiceTests(XiaoShuTongDomainTestFixture fixture
         Assert.False(result.Success);
         Assert.Equal(LearningErrorCodes.SessionEnded, result.ErrorCode);
     }
+
+    /// <summary>学习-BR-51（V0.6.14）：QuestionIds 白名单 → 仅从白名单出题（短路混合比）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WhiteList_ReturnsOnlyWhitelisted()
+    {
+        var userId = SetUser(43911);
+        await SeedBankAsync(null, BankPrivacy.Public, "bank-sq-43911");
+        await SeedQuestionAsync("bank-sq-43911", "Q-43911a"); // 白名单外
+        await SeedQuestionAsync("bank-sq-43911", "Q-43911b"); // 白名单内
+        await SeedQuestionAsync("bank-sq-43911", "Q-43911c"); // 白名单内
+        var session = await SeedSessionAsync(userId, "bank-sq-43911");
+
+        var svc = User.Use<GetSessionQuestionService>();
+        var result = await svc.ExecuteAsync(new GetSessionQuestionReqDto
+        {
+            SessionUid = session.UId,
+            BankId = "bank-sq-43911",
+            QuestionIds = ["Q-43911b", "Q-43911c"],
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        // 白名单外题绝不出（错题专练语义；白名单内按 BR-20 排序直出）
+        Assert.NotEqual("Q-43911a", result.QuestionId);
+        Assert.Contains(result.QuestionId, new[] { "Q-43911b", "Q-43911c" });
+    }
+
+    /// <summary>学习-BR-51（V0.6.14）：QuestionIds 显式空集 → BR-18 空结果（会话结束信号）</summary>
+    [Fact]
+    public async Task ExecuteAsync_EmptyWhiteList_ReturnsEmpty()
+    {
+        var userId = SetUser(43912);
+        await SeedBankAsync(null, BankPrivacy.Public, "bank-sq-43912");
+        await SeedQuestionAsync("bank-sq-43912", "Q-43912a");
+        var session = await SeedSessionAsync(userId, "bank-sq-43912");
+
+        var svc = User.Use<GetSessionQuestionService>();
+        var result = await svc.ExecuteAsync(new GetSessionQuestionReqDto
+        {
+            SessionUid = session.UId,
+            BankId = "bank-sq-43912",
+            QuestionIds = [],
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(string.Empty, result.QuestionId); // 显式空集 = 无题可出
+    }
+
+    /// <summary>学习-BR-51（V0.6.14）：白名单命中 0 题（全部被已答排除）→ 空结果</summary>
+    [Fact]
+    public async Task ExecuteAsync_WhiteListAllAnswered_ReturnsEmpty()
+    {
+        var userId = SetUser(43913);
+        await SeedBankAsync(null, BankPrivacy.Public, "bank-sq-43913");
+        await SeedQuestionAsync("bank-sq-43913", "Q-43913a");
+        var session = await SeedSessionAsync(userId, "bank-sq-43913");
+
+        // 白名单唯一题已答 → available ∩ 白名单 = ∅ → BR-18 空
+        var attemptsDs = User.Use<AttemptsDataService>();
+        await attemptsDs.EntityCreateAsync(new Attempts
+        {
+            UId = UidGenerator.NewId(),
+            UserId = userId,
+            SessionId = session.Id,
+            QuestionId = "Q-43913a",
+            BankId = "bank-sq-43913",
+            Scenario = LearningScenario.Memorize,
+            QType = "R1",
+            PreState = MemoryState.NotMastered,
+            PostState = MemoryState.Fuzzy,
+            Result = JudgmentResult.Correct,
+            HintLevel = HintLevel.None,
+            AnsweredAt = DateTime.UtcNow,
+        }, TestContext.Current.CancellationToken);
+
+        var svc = User.Use<GetSessionQuestionService>();
+        var result = await svc.ExecuteAsync(new GetSessionQuestionReqDto
+        {
+            SessionUid = session.UId,
+            BankId = "bank-sq-43913",
+            QuestionIds = ["Q-43913a"],
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(string.Empty, result.QuestionId);
+    }
 }

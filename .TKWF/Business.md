@@ -115,6 +115,8 @@
 | 学习-BR-48 | 单用户失败不影响整批（Optional） | KnowledgeMastery | UC-4.8 |
 | 学习-BR-49 | 聚合口径：State 取中位/最差、Accuracy 均值、AttemptCount 增量累加 | KnowledgeMastery | UC-4.8 |
 | 学习-BR-50 | 按需触发：家长报告打开时触发掌握度刷新 | KnowledgeMastery | UC-4.8 |
+| 学习-BR-51 | 错题专练：会话带 QuestionIds 白名单时出题范围 = available ∩ 白名单；白名单耗尽即会话结束信号；`null`=全库、`[]`=显式空集（空集返回空）；白名单非空时跳过混合比（BR-04）按 BR-20 排序直出 | Questions, WrongQuestions, StudySessions, Attempts | UC-B.5 / UC-4.7 联动（V0.6.14） |
+| 学习-BR-52 | 手动标记已掌握：MarkMasteredService 翻转 WrongQuestions.Mastered（学习域，激励-BR-15 域边界）；幂等（User+QuestionId 唯一）；BR-23 作答事件照常驱动不豁免（答错重置为 false）；并发以"最后写入胜出 + BR-23 作答事件权威"处置 | WrongQuestions | UC-4.7（V0.6.14） |
 
 ### 2.3 家校任务闭环域（Tasks）
 

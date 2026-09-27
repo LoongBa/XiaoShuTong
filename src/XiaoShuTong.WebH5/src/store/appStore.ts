@@ -58,6 +58,8 @@ interface AppState {
   questionCount: number;
   currentQuestionIndex: number;
   answers: Record<string, ServerAnswerRecord>;
+  /** 错题重练白名单（V0.6.14 学习-BR-51；wrong.tsx 设置 → task.tsx sessionQuestion 消费，会话后清空；不进 persist） */
+  wrongPracticeQuestionIds: string[] | null;
   
   // Actions
   setCurrentUser: (user: User | null) => void;
@@ -78,6 +80,8 @@ interface AppState {
   recordAnswer: (questionId: string, res: SubmitAttemptResDto) => void;
   nextQuestion: () => void;
   completeTask: () => void;
+  /** 设置错题重练白名单（V0.6.14；wrong.tsx 重练入口写入） */
+  setWrongPracticeQuestionIds: (ids: string[] | null) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -99,6 +103,7 @@ export const useAppStore = create<AppState>()(
       questionCount: 0,
       currentQuestionIndex: 0,
       answers: {},
+      wrongPracticeQuestionIds: null,
       
       // Actions
       setCurrentUser: (user) => set({ currentUser: user }),
@@ -131,6 +136,8 @@ export const useAppStore = create<AppState>()(
         currentQuestionIndex: 0,
         answers: {}
       }),
+
+      setWrongPracticeQuestionIds: (ids) => set({ wrongPracticeQuestionIds: ids }),
       
       // 会话初始化归口：createStudySession_Execute → sessionUid 活源 → 首次 getSessionQuestion 取第 1 题
       startSession: async (bankId, opts) => {
@@ -159,8 +166,11 @@ export const useAppStore = create<AppState>()(
         });
         
         // 首次取第 1 题（BR-18 题集耗尽时 questionId 为空，由调用方导航结果页）
+        // V0.6.14（学习-BR-51）：错题重练白名单透传（wrong.tsx 设置 → 首次取题携带）；
+        // 白名单生命周期 = 重练会话全程（后续取题 task.tsx fetchNextQuestion 从 store 读；endStudy 时清空）
+        const practiceIds = get().wrongPracticeQuestionIds;
         const question = await Tkwf.User.Use<SessionQuestion_ExecuteService>().sessionQuestion_Execute({
-          request: { sessionUid, bankId, type: null, knowledgePoint: null },
+          request: { sessionUid, bankId, type: null, knowledgePoint: null, questionIds: practiceIds },
         });
         
         return { sessionUid, question };

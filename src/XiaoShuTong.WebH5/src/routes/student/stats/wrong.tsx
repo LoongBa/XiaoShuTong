@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { EmptyState } from '@/components/EmptyState';
 import { BottomNav } from '@/components/BottomNav';
 import { Tkwf } from '@tkwf/tsclient';
-import type { WrongQuestions_ExecuteService, WrongQuestionsDto } from '@/gql/ts-client.g';
+import type { WrongQuestions_ExecuteService, WrongQuestionsDto, MarkMastered_ExecuteService } from '@/gql/ts-client.g';
 import { 
   ArrowLeft,
   RotateCcw,
@@ -23,7 +23,7 @@ export const Route = createFileRoute('/student/stats/wrong')({
 
 function WrongAnswersPage() {
   const navigate = useNavigate();
-  const { isLoggedIn } = useAppStore();
+  const { isLoggedIn, setWrongPracticeQuestionIds } = useAppStore();
   const [activeTab, setActiveTab] = useState<'wrong' | 'mastered'>('wrong');
   const [wrongItems, setWrongItems] = useState<WrongQuestionsDto[]>([]);
   const [masteredItems, setMasteredItems] = useState<WrongQuestionsDto[]>([]);
@@ -78,9 +78,33 @@ function WrongAnswersPage() {
     return () => { cancelled = true; };
   }, [isLoggedIn, activeTab, reloadKey]);
 
-  const handlePractice = (wrongId: string) => {
-    // 重练入口：进入任务执行页（错题定向出题为后端配合项，登记待实现）
+  const handlePractice = () => {
+    // V0.6.14（Oracle C7）：错题重练白名单经 store 传递（非路由参数）——当前 tab 待掌握错题 QuestionId 集
+    setWrongPracticeQuestionIds(wrongItems.map((item) => item.questionId));
     navigate({ to: '/student/study/task' });
+  };
+
+  // V0.6.14（学习-BR-52）：手动标记已掌握/移回——调 markMastered_Execute + refetch 当前 tab（Oracle C5）
+  const handleMarkMastered = async (questionId: string) => {
+    try {
+      await Tkwf.User.Use<MarkMastered_ExecuteService>().markMastered_Execute({
+        request: { questionId, mastered: true },
+      });
+      setReloadKey((k) => k + 1); // refetch 两 tab（list 重新加载）
+    } catch {
+      // RPC 抛错：页面保留现状（全局 onGlobalError 已记录）
+    }
+  };
+
+  const handleMoveBack = async (questionId: string) => {
+    try {
+      await Tkwf.User.Use<MarkMastered_ExecuteService>().markMastered_Execute({
+        request: { questionId, mastered: false },
+      });
+      setReloadKey((k) => k + 1);
+    } catch {
+      // RPC 抛错：页面保留现状
+    }
   };
 
   const displayItems = activeTab === 'wrong' ? wrongItems : masteredItems;
@@ -201,21 +225,34 @@ function WrongAnswersPage() {
                   <span className="text-xs text-muted-foreground">
                     {lastWrongDate(item.lastWrongAt) && `最近出错 ${lastWrongDate(item.lastWrongAt)}`}
                   </span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handlePractice(item.uId)}
-                  >
-                    <RotateCcw className="w-3 h-3 mr-1" />
-                    重练
-                  </Button>
+                  <div className="flex gap-2">
+                    {/* V0.6.14（BR-51）：重练=整 tab 待掌握错题白名单定向出题 */}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handlePractice}
+                    >
+                      <RotateCcw className="w-3 h-3 mr-1" />
+                      重练
+                    </Button>
+                    {/* V0.6.14（BR-52）：手动标记已掌握（真实后端操作，refetch 刷新） */}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-green-600 border-green-200 hover:bg-green-50"
+                      onClick={() => handleMarkMastered(item.questionId)}
+                    >
+                      <CheckCircle2 className="w-3 h-3 mr-1" />
+                      已掌握
+                    </Button>
+                  </div>
                 </div>
               </Card>
             ))}
           </div>
         )}
 
-        {/* 已掌握列表（无操作按钮；"移回错题本"为后端配合项登记待实现） */}
+        {/* 已掌握列表（V0.6.14 BR-52：补"移回"真实后端操作） */}
         {!isLoading && !loadError && activeTab === 'mastered' && displayItems.length > 0 && (
           <div className="space-y-3">
             {displayItems.map((item) => (
@@ -228,9 +265,19 @@ function WrongAnswersPage() {
                     <CheckCircle2 className="w-4 h-4 text-green-500" />
                     <span className="font-medium">{item.knowledgePoint}</span>
                   </div>
-                  <span className="text-xs text-muted-foreground">
-                    错{item.wrongCount}次
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-muted-foreground">
+                      错{item.wrongCount}次
+                    </span>
+                    {/* V0.6.14（BR-52）：移回错题本（真实后端操作，refetch 刷新） */}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => handleMoveBack(item.questionId)}
+                    >
+                      移回
+                    </Button>
+                  </div>
                 </div>
               </Card>
             ))}
