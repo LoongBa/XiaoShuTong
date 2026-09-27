@@ -24,15 +24,22 @@ import {
 import { cn } from '@/lib/utils';
 import { StudyBuddySection } from '@/components/StudyBuddySection';
 import { Tkwf } from '@tkwf/tsclient';
-import type { Rankings_ExecuteService, MyRanking_ExecuteService, RankingItemDto } from '@/gql/ts-client.g';
+import type { Rankings_ExecuteService, MyRanking_ExecuteService, RankingItemDto, Buddies_ExecuteService, BuddyListItemDto } from '@/gql/ts-client.g';
 import { accuracyToPercent } from '@/lib/accuracy';
 
-// 模拟学习搭子数据（学习搭子组件，V2 独立功能，未接线）
-const MOCK_BUDDIES = [
-  { id: 'b1', name: '小红', streakDays: 12 },
-  { id: 'b2', name: '小刚', streakDays: 10 },
-  { id: 'b3', name: '小丽', streakDays: 8 },
-];
+// 学习搭子本地项（V0.6.10：listBuddies_Execute 真实数据映射；BuddyItemLocal 满足 StudyBuddySection.Buddy 子集）
+interface BuddyItemLocal {
+  id: string;
+  name: string;
+  streakDays: number;
+}
+
+// 后端 BuddyListItemDto → 前端搭子项（nickname 账户域恒空串 → 学生{userId} 兜底，同 parent children 范式）
+const toBuddyLocal = (b: BuddyListItemDto): BuddyItemLocal => ({
+  id: b.buddyId,
+  name: b.nickname || `学生${b.userId}`,
+  streakDays: b.streakDays ?? 0,
+});
 
 // 榜单数据项（对齐真实 RankingItemDto 全单指标：streak/volume/pkWins + accuracy/mastery）
 interface RankItem {
@@ -118,12 +125,43 @@ function RankPage() {
   const [boardLoading, setBoardLoading] = useState<boolean>(false);
   const [boardError, setBoardError] = useState<boolean>(false);
 
+  // 学习搭子真实数据（V0.6.10：listBuddies_Execute 无参查询；空数组=空态 BR-24）
+  const [buddies, setBuddies] = useState<BuddyItemLocal[]>([]);
+  const [buddiesLoading, setBuddiesLoading] = useState<boolean>(true);
+
   // 检查登录状态
   useEffect(() => {
     if (!isLoggedIn) {
       navigate({ to: '/auth/login' });
     }
   }, [isLoggedIn, navigate]);
+
+  // 学习搭子（listBuddies_Execute；Oracle M1/C3：loading 区分 + 登出清空）
+  useEffect(() => {
+    if (!isLoggedIn) {
+      setBuddies([]);
+      return;
+    }
+    let cancelled = false;
+    setBuddiesLoading(true);
+    const loadBuddies = async () => {
+      try {
+        const res = await Tkwf.User.Use<Buddies_ExecuteService>().listBuddies_Execute();
+        if (cancelled) return;
+        if (res.success) {
+          setBuddies((res.items ?? []).map(toBuddyLocal));
+        }
+        // success=false：静默空态（搭子辅助区非阻塞，占位不 setError）
+      } catch (e) {
+        // RPC 抛错：静默降级但保留可观测性（Oracle C2）；搭子区空态不炸页面
+        console.warn('[buddy] listBuddies failed', e);
+      } finally {
+        if (!cancelled) setBuddiesLoading(false);
+      }
+    };
+    void loadBuddies();
+    return () => { cancelled = true; };
+  }, [isLoggedIn]);
 
   const metric: 'Combat' | 'Performance' = activeTab === 'power' ? 'Combat' : 'Performance';
 
@@ -435,8 +473,10 @@ function RankPage() {
           )}
         </Card>
 
-        {/* 学习搭子 */}
-        <StudyBuddySection buddies={MOCK_BUDDIES} onInvite={() => console.log('invite buddy')} />
+        {/* 学习搭子（V0.6.10：listBuddies_Execute 真实数据；加载中占位不闪现空态，Oracle M1） */}
+        {!buddiesLoading && (
+          <StudyBuddySection buddies={buddies} onInvite={() => console.log('invite buddy')} />
+        )}
 
         {/* 激励文案 */}
         <div className="text-center py-4">
