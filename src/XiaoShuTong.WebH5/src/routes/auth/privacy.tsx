@@ -19,38 +19,44 @@ function PrivacyPage() {
   const [isAgreed, setIsAgreed] = useState(false);
   const [showGuardianConfirm, setShowGuardianConfirm] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-  
+
+  // V0.6.11（C3）：同意后按 role 分跳（student→/student/home、teacher→/teacher/dashboard、parent→/parent/dashboard）
+  const homeByRole = () => {
+    const user = useAppStore.getState().currentUser;
+    return user?.role === 'teacher' ? '/teacher/dashboard' : user?.role === 'parent' ? '/parent/dashboard' : '/student/home';
+  };
+
   // 检查是否已同意
   useEffect(() => {
     if (hasAgreedPrivacy) {
-      navigate({ to: '/student/home' });
+      navigate({ to: homeByRole() });
     }
   }, [hasAgreedPrivacy, navigate]);
-  
+
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
     if (scrollTop + clientHeight >= scrollHeight - 20) {
       setIsScrolledToBottom(true);
     }
   };
-  
+
   const handleAgree = () => {
     if (!isAgreed) return;
-    
+
     // 模拟未成年人检查（<14岁）
     const isMinor = false; // 实际应根据用户信息判断
-    
+
     if (isMinor) {
       setShowGuardianConfirm(true);
     } else {
       agreePrivacy();
-      navigate({ to: '/student/home' });
+      navigate({ to: homeByRole() });
     }
   };
-  
+
   const handleGuardianConfirm = () => {
     agreePrivacy();
-    navigate({ to: '/student/home' });
+    navigate({ to: homeByRole() });
   };
   
   return (

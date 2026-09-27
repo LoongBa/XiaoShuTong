@@ -57,7 +57,7 @@ export const Route = createFileRoute('/parent/dashboard')({
 
 function ParentDashboardPage() {
   const navigate = useNavigate();
-  const { isLoggedIn, currentUser } = useAppStore();
+  const { isLoggedIn, currentUser, logout } = useAppStore();
   const [selectedChild, setSelectedChild] = useState<ChildLocal | null>(null);
   const [children, setChildren] = useState<ChildLocal[]>([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -139,14 +139,20 @@ function ParentDashboardPage() {
     <div className="min-h-screen bg-background">
       {/* 顶部导航 */}
       <header className="sticky top-0 z-10 bg-card border-b border-border px-4 py-3">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => navigate({ to: '/student/user/profile' })}
-            className="p-2 -ml-2 rounded-full hover:bg-muted transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-          <h1 className="font-semibold">成长报告</h1>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => navigate({ to: '/student/user/profile' })}
+              className="p-2 -ml-2 rounded-full hover:bg-muted transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <h1 className="font-semibold">成长报告</h1>
+          </div>
+          {/* V0.6.11（C2）：parent 端登出（走查三端切换闭环） */}
+          <Button size="sm" variant="ghost" onClick={() => { logout(); navigate({ to: '/auth/login' }); }}>
+            退出
+          </Button>
         </div>
         
         {/* 孩子切换器（2b：真实 children 列表；单孩子隐藏） */}

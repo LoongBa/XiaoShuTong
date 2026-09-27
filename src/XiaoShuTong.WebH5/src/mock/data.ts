@@ -16,13 +16,35 @@ export const initialData: DatasetSeed = {
   // P0：登录链路（scenarioOverrides 已覆盖，保留兜底）
   // =====================================================================
 
-  // ── 登录 ──
+  // ── 登录（V0.6.11：三端账号，对齐后端白名单 XiaoShuTongUserHelper 10001/10002/10003）──
   loginPayloads: [
     {
       success: true,
       displayName: "小明",
       userName: "xiaoming",
       sessionKey: "mock-session-xiaoming",
+      accessToken: "mock-token",
+      refreshToken: "mock-refresh",
+      expiresAt: new Date(Date.now() + 86400000).toISOString(),
+      deviceId: "web-001",
+      extensions: [],
+    },
+    {
+      success: true,
+      displayName: "群主老师",
+      userName: "owner01",
+      sessionKey: "mock-session-owner01",
+      accessToken: "mock-token",
+      refreshToken: "mock-refresh",
+      expiresAt: new Date(Date.now() + 86400000).toISOString(),
+      deviceId: "web-001",
+      extensions: [],
+    },
+    {
+      success: true,
+      displayName: "家长",
+      userName: "parent01",
+      sessionKey: "mock-session-parent01",
       accessToken: "mock-token",
       refreshToken: "mock-refresh",
       expiresAt: new Date(Date.now() + 86400000).toISOString(),

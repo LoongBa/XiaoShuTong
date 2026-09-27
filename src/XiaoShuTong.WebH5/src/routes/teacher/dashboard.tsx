@@ -30,7 +30,7 @@ export const Route = createFileRoute('/teacher/dashboard')({
 
 function TeacherDashboardPage() {
   const navigate = useNavigate();
-  const { isLoggedIn, currentUser } = useAppStore();
+  const { isLoggedIn, currentUser, logout } = useAppStore();
   
   const [groups, setGroups] = useState<any[]>([]);
   const [selectedGroup, setSelectedGroup] = useState<any>(null);
@@ -136,10 +136,16 @@ function TeacherDashboardPage() {
             </button>
             <h1 className="font-semibold">班级看板</h1>
           </div>
-          <Button size="sm" onClick={() => navigate({ to: '/teacher/tasks/create' })}>
-            <Plus className="w-4 h-4 mr-1" />
-            布置任务
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button size="sm" onClick={() => navigate({ to: '/teacher/tasks/create' })}>
+              <Plus className="w-4 h-4 mr-1" />
+              布置任务
+            </Button>
+            {/* V0.6.11（C2）：teacher 端登出（走查三端切换闭环） */}
+            <Button size="sm" variant="ghost" onClick={() => { logout(); navigate({ to: '/auth/login' }); }}>
+              退出
+            </Button>
+          </div>
         </div>
         
         {/* 班级选择器 */}
