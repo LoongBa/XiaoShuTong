@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
 import { StreakBadge } from '@/components/StreakBadge';
 import { Tkwf } from '@tkwf/tsclient';
-import type { DashboardReport_ExecuteService, SubjectMasteryDto } from '@/gql/ts-client.g';
+import type { DashboardReport_ExecuteService, SubjectMasteryDto, StartTrial_ExecuteService } from '@/gql/ts-client.g';
 import { Children_ExecuteService } from '@/gql/ts-client.g';
 import { accuracyToPercent, accuracyToState } from '@/lib/accuracy';
 import { 
@@ -62,7 +62,9 @@ function ParentDashboardPage() {
   const [children, setChildren] = useState<ChildLocal[]>([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [showSubscribeDialog, setShowSubscribeDialog] = useState(false);
-  const [trialDaysLeft, setTrialDaysLeft] = useState(7);
+  const [trialDaysLeft, setTrialDaysLeft] = useState(0); // V0.6.12：初始 0，由 dashboardReport.trialEndAt 派生
+  const [trialSubmitting, setTrialSubmitting] = useState(false); // V0.6.12：试用提交态
+  const [trialError, setTrialError] = useState(''); // V0.6.12：试用错误提示
   const [masteryLoading, setMasteryLoading] = useState(true);
   const [subjectMastery, setSubjectMastery] = useState<SubjectMasteryDto[]>([]);
   // P1-5：消费 dashboardReport 已返回字段（替代硬编码/未消费值）
@@ -119,8 +121,15 @@ function ParentDashboardPage() {
           setTodayCompleted(!!res.todayCompleted);
           setWeekLearned(res.weekProgress?.learnedCount ?? 0);
           setWeekAccuracy(res.weekProgress?.accuracy ?? null);
-          setIsSubscribed((res.subscription?.status ?? '') === 'Active' || (res.subscription?.status ?? '') === 'Trial');
-          // locked=true 时订阅不受约（此处仅记录，付费流程保留 mock 占位——另立迭代）
+          // V0.6.12：订阅状态从 dashboardReport.subscription 契约派生（T1；修正 V0.6.7 P1-5 遗留契约错配 'Trial'→'Trialing'）
+          // 有效权益 = Active / Trialing / Cancelled 周期内（对齐 ParentReportGate L60）
+          const sub = res.subscription;
+          setIsSubscribed(sub !== null && (sub.status === 'Active' || sub.status === 'Trialing' || sub.status === 'Cancelled'));
+          // 试用剩余天数：从 trialEndAt 计算（替代本地硬编码 7）；Trialing 且已过 → 0（过期态由 locked 表达）
+          setTrialDaysLeft(sub?.status === 'Trialing' && sub.trialEndAt
+            ? Math.max(0, Math.ceil((new Date(sub.trialEndAt).getTime() - Date.now()) / 86400000))
+            : 0);
+          // locked=true 时订阅不受约（预览模式）；试用过期/已过期 → locked=true（ParentReportGate）
           setLocked(res.locked ?? false);
         } else {
           setSubjectMastery([]);
@@ -134,6 +143,41 @@ function ParentDashboardPage() {
     void loadMastery();
     return () => { cancelled = true; };
   }, [isLoggedIn, selectedChild?.studentId]);
+
+  // V0.6.12：免费试用 7 天（T2：startTrial_Execute 真实接线；BR-05 授权链→8002 / BR-06 幂等返回原记录 / BR-07 +7 天）
+  const handleStartTrial = async () => {
+    if (!selectedChild) return;
+    setTrialSubmitting(true);
+    setTrialError('');
+    try {
+      const res = await Tkwf.User.Use<StartTrial_ExecuteService>().startTrial_Execute({
+        request: { studentId: selectedChild.studentId },
+      });
+      if (!res.success) {
+        setTrialError(res.errorCode || '开通试用失败');
+        return;
+      }
+      // 成功（含幂等返回原记录 BR-06）→ 置试用态 + 重拉 dashboardReport（后端权威校正 locked/status/trialEndAt）
+      setTrialError('');
+      setShowSubscribeDialog(false);
+      setMasteryLoading(true);
+      // loadMastery 依赖 selectedChild?.studentId——引用重拉需触发：用与 useEffect 相同的调用路径
+      await Tkwf.User.Use<DashboardReport_ExecuteService>().dashboardReport_Execute({
+        request: { studentId: selectedChild.studentId },
+      }).then((res2) => {
+        const sub = res2.subscription;
+        setIsSubscribed(sub !== null && (sub.status === 'Active' || sub.status === 'Trialing' || sub.status === 'Cancelled'));
+        setTrialDaysLeft(sub?.status === 'Trialing' && sub.trialEndAt
+          ? Math.max(0, Math.ceil((new Date(sub.trialEndAt).getTime() - Date.now()) / 86400000))
+          : 0);
+        setLocked(res2.locked ?? false);
+      }).catch(() => { /* 重拉失败保留本地置态 */ });
+    } catch (err: any) {
+      setTrialError(err?.code || err?.message || '开通试用失败');
+    } finally {
+      setTrialSubmitting(false);
+    }
+  };
   
   return (
     <div className="min-h-screen bg-background">
@@ -177,7 +221,7 @@ function ParentDashboardPage() {
       </header>
       
       <div className="p-4 space-y-4">
-        {/* 试用期提示 */}
+        {/* 试用期提示（V0.6.12：trialDaysLeft 由 dashboardReport.trialEndAt 派生；0 且未订阅则不外显黄条——过期态由 locked 表达） */}
         {!isSubscribed && trialDaysLeft > 0 && (
           <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
             <p className="text-sm text-amber-800 flex items-center gap-2">
@@ -320,12 +364,38 @@ function ParentDashboardPage() {
                     年付¥100省¥20
                   </span>
                 </div>
-                <Button 
-                  className="w-full mt-3"
+                {/* V0.6.12（T2）：未订阅时"免费试用"主 CTA（真实 startTrial_Execute）+ "立即开通"副 CTA（弹窗，支付待基建） */}
+                {trialDaysLeft === 0 && (
+                  <Button
+                    className="w-full mt-3"
+                    onClick={handleStartTrial}
+                    disabled={trialSubmitting}
+                  >
+                    {trialSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        开通中…
+                      </>
+                    ) : (
+                      <>
+                        <Crown className="mr-2 h-4 w-4" />
+                        免费试用 7 天
+                      </>
+                    )}
+                  </Button>
+                )}
+                <Button
+                  variant="outline"
+                  className="w-full mt-2"
                   onClick={() => setShowSubscribeDialog(true)}
                 >
                   立即开通
                 </Button>
+                {trialError && (
+                  <p className="text-sm text-destructive mt-2">
+                    {trialError}
+                  </p>
+                )}
               </div>
             </div>
           </Card>
@@ -376,11 +446,13 @@ function ParentDashboardPage() {
             >
               取消
             </Button>
+            {/* V0.6.12（T3）：支付开通为生产配合项（ActivateSubscriptionService=Callee，微信支付回调未接）——
+                不假 setIsSubscribed(true)，明确提示即将上线；免费试用走 handleStartTrial 真实链路 */}
             <Button
               className="flex-1"
               onClick={() => {
-                setIsSubscribed(true);
                 setShowSubscribeDialog(false);
+                alert('支付功能即将上线，可先免费试用 7 天');
               }}
             >
               确认支付

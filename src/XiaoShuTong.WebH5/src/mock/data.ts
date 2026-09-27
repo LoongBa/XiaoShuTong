@@ -671,9 +671,10 @@ export const initialData: DatasetSeed = {
     },
   ],
 
-  // startTrialResDtos — 1 条
+  // startTrialResDtos — 2 条：成功 + 授权链失败（V0.6.12 错误链路走查）
   startTrialResDtos: [
     { success: true, errorCode: null, status: "Trialing", trialEndAt: new Date(Date.now() + 604800000).toISOString() },
+    { success: false, errorCode: "8002", status: null, trialEndAt: null },
   ],
 
   // listSubscriptionsResDtos — 2 条
@@ -692,13 +693,31 @@ export const initialData: DatasetSeed = {
     { success: true, errorCode: null, cancelled: true },
   ],
 
-  // getDashboardReportResDtos — 2 条，一 locked 一完整
+  // getDashboardReportResDtos — 3 条：无订阅 locked / 试用中 Trialing / 已订阅 Active（V0.6.12 C1 多场景并存）
   getDashboardReportResDtos: [
     {
       success: true, errorCode: null,
       subscription: null, todayCompleted: null, streakDays: null,
       weekProgress: null, subjectsMastery: [],
       locked: true,
+    },
+    {
+      success: true, errorCode: null,
+      subscription: { subscriptionUid: "sub-trial", status: "Trialing", trialEndAt: new Date(Date.now() + 604800000).toISOString() },
+      todayCompleted: true, streakDays: 3,
+      weekProgress: {
+        Mon: { learnedCount: 5, accuracy: 0.72 },
+        Tue: { learnedCount: 6, accuracy: 0.75 },
+        Wed: { learnedCount: 4, accuracy: 0.68 },
+        Thu: { learnedCount: 7, accuracy: 0.77 },
+        Fri: { learnedCount: 3, accuracy: 0.65 },
+        Sat: { learnedCount: 8, accuracy: 0.80 },
+        Sun: { learnedCount: 2, accuracy: 0.60 },
+      },
+      subjectsMastery: [
+        { subject: "语文", accuracy: 0.71, totalQuestions: 40, masteredCount: 18 },
+      ],
+      locked: false,
     },
     {
       success: true, errorCode: null,
