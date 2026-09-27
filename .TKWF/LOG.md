@@ -280,3 +280,13 @@ ull=全库、[]=显式空集（BR-18 空结果）；白名单非空短路混合�
 **决策/修复**：① BR-33 候选列表语义——同群组成员（Role=Student）+ 排除自己/已有搭子（Pending/Accepted）/Parent + GroupMembers.Nickname 展示 + 多群同人去重；② BR-34 候选查询只读权限——当前用户群成员身份即可（非群主专属，区别于 ManageGroupMembersService BR-08）。
 
 **避坑指南**：搭子 BR 编号已至 32，新增从 33 续（Pk 域从 01 独立编号互不干扰）；候选源必须同群（非同群邀请被 BR-16 6006 拒）。
+
+### 2026-09-27 — [Rule] — V0.6.18 搭子待收邀请新增 BR-35/36（待收列表 + 只读/无分页）
+
+**涉及模块**：Business.md（搭子域 BR 表尾部追加 2 条 + 头部上限更新 + §3.4 状态机注）
+
+**上下文**：V0.6.10 审核 §七 / V0.6.16 延续项「待收邀请列表查询（accept/reject UI 前置）」落地。Oracle 评审（V0.6.18 方案）确认：accept/reject Service 已存在（入参 InviteId=邀请 UId），缺待收列表查询；BR-35/36 为下一个可用编号（搭子域已至 34）。
+
+**决策/修复**：① BR-35 待收列表语义——InviteeId=me + Pending + ExpiresAt ≥ now（惰性过期不落库，与 accept/reject 6002 的 `ExpiresAt < now` 互补一致）；② BR-36 只读 + GroupMembers.Nickname（null 兜底 学生{userId}）+ InvitedAt 倒序 + 无分页（量级受 BR-15 ≤10/日 + BR-18 +7 天约束 ≈70 条，与 ListBuddies/ListBuddyCandidates 同范式）；③ §3.4 状态机图注 Expired 惰性语义（枚举存在但不落库）。
+
+**避坑指南**：惰性过期副作用——BR-17 重复邀请判断只看 Status 不看 ExpiresAt，已过期未处理的 Pending 仍命中 →6002 阻塞对方重邀；本轮不修正（待收查询只读不触碰写路径），后续迭代修正 BR-17 查询条件（追加 ExpiresAt >= now）。

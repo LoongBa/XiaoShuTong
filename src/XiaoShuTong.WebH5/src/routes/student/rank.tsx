@@ -136,32 +136,36 @@ function RankPage() {
     }
   }, [isLoggedIn, navigate]);
 
-  // 学习搭子（listBuddies_Execute；Oracle M1/C3：loading 区分 + 登出清空）
+  // 学习搭子（V0.6.10：listBuddies_Execute；V0.6.18 Oracle C2：loadBuddies 提升为组件级 useCallback，
+  // 供 StudyBuddySection onBuddyChanged 回调复用——accept 成功后刷新搭子列表；闭包无法作 prop）
+  const loadBuddies = useCallback(async () => {
+    if (!isLoggedIn) {
+      setBuddies([]);
+      return;
+    }
+    setBuddiesLoading(true);
+    try {
+      const res = await Tkwf.User.Use<Buddies_ExecuteService>().listBuddies_Execute();
+      if (res.success) {
+        setBuddies((res.items ?? []).map(toBuddyLocal));
+      }
+      // success=false：静默空态（搭子辅助区非阻塞，占位不 setError）
+    } catch (e) {
+      // RPC 抛错：静默降级但保留可观测性（Oracle C2）；搭子区空态不炸页面
+      console.warn('[buddy] listBuddies failed', e);
+    } finally {
+      setBuddiesLoading(false);
+    }
+  }, [isLoggedIn]);
+
+  // 挂载加载搭子列表（登出清空；Oracle M1/C3：loading 区分）
   useEffect(() => {
     if (!isLoggedIn) {
       setBuddies([]);
       return;
     }
-    let cancelled = false;
-    setBuddiesLoading(true);
-    const loadBuddies = async () => {
-      try {
-        const res = await Tkwf.User.Use<Buddies_ExecuteService>().listBuddies_Execute();
-        if (cancelled) return;
-        if (res.success) {
-          setBuddies((res.items ?? []).map(toBuddyLocal));
-        }
-        // success=false：静默空态（搭子辅助区非阻塞，占位不 setError）
-      } catch (e) {
-        // RPC 抛错：静默降级但保留可观测性（Oracle C2）；搭子区空态不炸页面
-        console.warn('[buddy] listBuddies failed', e);
-      } finally {
-        if (!cancelled) setBuddiesLoading(false);
-      }
-    };
     void loadBuddies();
-    return () => { cancelled = true; };
-  }, [isLoggedIn]);
+  }, [isLoggedIn, loadBuddies]);
 
   const metric: 'Combat' | 'Performance' = activeTab === 'power' ? 'Combat' : 'Performance';
 
@@ -475,7 +479,7 @@ function RankPage() {
 
         {/* 学习搭子（V0.6.10：listBuddies_Execute 真实数据；加载中占位不闪现空态，Oracle M1） */}
         {!buddiesLoading && (
-          <StudyBuddySection buddies={buddies} onInvite={() => console.log('invite buddy')} />
+              <StudyBuddySection buddies={buddies} onInvite={() => console.log('invite buddy')} onBuddyChanged={loadBuddies} />
         )}
 
         {/* 激励文案 */}

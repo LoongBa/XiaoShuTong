@@ -5,9 +5,9 @@
 > 这些信息无法从代码中自动提取，需要设计者维护。更新频率低，但内容不可替代。
 > **维护方式**：由 `tkwf-business` skill 物化与增量更新，不手动直接编辑。
 
-> **最后更新**：2026-09-11
-> **版本**：v3 | **变更**：任务域补 BR-24（周报口径）/ BR-25（周报 CSV 合规）
-> **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-25 / 题库-39 / 激励-18 / 搭子-32 / Pk-27 / 家长-28 / 平台-04）
+> **最后更新**：2026-09-27
+> **版本**：v4 | **变更**：搭子域补 BR-35/36（待收邀请列表 + 只读/无分页），§3.4 注 Expired 惰性语义
+> **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-25 / 题库-39 / 激励-18 / 搭子-36 / Pk-27 / 家长-28 / 平台-04）
 
 ---
 
@@ -253,6 +253,8 @@
 | 搭子-BR-32 | 重复解除（已 removed）幂等 → 6001 | StudyBuddies | 8.6 |
 | 搭子-BR-33 | 候选列表：同群组成员（Role=Student）+ 排除自己 + 排除已有搭子关系（Pending/Accepted）+ 排除 Parent 角色；展示 GroupMembers.Nickname + Group.Name；多群同人去重 | GroupMembers, StudyBuddies, Groups | 8.1（V0.6.16） |
 | 搭子-BR-34 | 候选查询只读无邀请动作；权限=当前用户群成员身份（非群主专属） | GroupMembers | 8.1（V0.6.16） |
+| 搭子-BR-35 | 待收邀请列表：仅返回当前用户为被邀请人（InviteeId=me）且 Status=Pending 且未过期（ExpiresAt ≥ now）的邀请；已过期惰性过滤不返回（不落库 Expired——与 accept/reject 的 6002 运行时判断 `ExpiresAt < now` 口径互补一致）。**副作用**：惰性过期不落库 Expired，Status 列保留 Pending；BR-17 重复邀请判断只看 Status 不看 ExpiresAt，已过期未处理的 Pending 仍被 BR-17 命中（→6002）阻塞对方重新邀请——本轮不修正（待收查询只读不触碰写路径），后续迭代修正 BR-17 查询条件 | StudyBuddies | 8.2（V0.6.18） |
+| 搭子-BR-36 | 待收邀请查询只读无处理动作；展示邀请人昵称（GroupMembers.Nickname，null 兜底 `学生{userId}`）+ 邀请时间 + 过期时间；按 InvitedAt 倒序（最新优先处理）。**无分页**：量级有限（受 BR-15 发起方当日 ≤10 + BR-18 +7 天过期约束，单用户待收上限 ≈70 条），与 ListBuddies/ListBuddyCandidates 同范式（均无分页全量返回） | StudyBuddies, GroupMembers | 8.2（V0.6.18） |
 
 ### 2.7 搭子PK竞技域（Pk）
 
@@ -379,6 +381,7 @@ stateDiagram-v2
     StudyBuddies: Pending → Accepted / Rejected / Removed
 ```
 - 邀请 ExpiresAt = InvitedAt + 7 天（搭子-BR-18）；排名快照每日 0:00 冻结（SnapshotDate=当日）
+- **Expired 为惰性状态（V0.6.18 注）**：枚举值存在但**不落库**——过期仅查询时按 `ExpiresAt < now` 过滤（搭子-BR-35 待收列表 / accept-reject 6002 判断），Status 列保留 Pending；副作用见 BR-35 备注（BR-17 重复邀请仍命中过期 Pending）
 
 ### 3.5 PK 域状态机
 

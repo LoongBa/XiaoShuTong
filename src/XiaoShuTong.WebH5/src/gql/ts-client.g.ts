@@ -5,72 +5,73 @@ import type { ChainablePromise } from "@tkwf/tsclient";
 
 // ===== Query Operations =====
 export const Query = {
-  requestChallenge                : { field: 'requestChallenge', type: 'query' } as const,
-  registerSecure                  : { field: 'registerSecure', type: 'query' } as const,
-  createBank_Execute              : { field: 'createBank_Execute', type: 'query' } as const,
-  bankDetail_Execute              : { field: 'bankDetail_Execute', type: 'query' } as const,
-  draftBatch_Execute              : { field: 'draftBatch_Execute', type: 'query' } as const,
-  knowledgeCard_Execute           : { field: 'knowledgeCard_Execute', type: 'query' } as const,
-  importBankJson_Execute          : { field: 'importBankJson_Execute', type: 'query' } as const,
-  importQuestions_Execute         : { field: 'importQuestions_Execute', type: 'query' } as const,
-  listBanks_Execute               : { field: 'listBanks_Execute', type: 'query' } as const,
-  preprocessContent_Execute       : { field: 'preprocessContent_Execute', type: 'query' } as const,
-  reviewBackingPoints_Execute     : { field: 'reviewBackingPoints_Execute', type: 'query' } as const,
-  acceptBuddyInvite_Execute       : { field: 'acceptBuddyInvite_Execute', type: 'query' } as const,
-  buddyRank_Execute               : { field: 'buddyRank_Execute', type: 'query' } as const,
-  inviteBuddy_Execute             : { field: 'inviteBuddy_Execute', type: 'query' } as const,
-  listBuddies_Execute             : { field: 'listBuddies_Execute', type: 'query' } as const,
-  listBuddyCandidates_Execute     : { field: 'listBuddyCandidates_Execute', type: 'query' } as const,
-  rejectBuddyInvite_Execute       : { field: 'rejectBuddyInvite_Execute', type: 'query' } as const,
-  removeBuddy_Execute             : { field: 'removeBuddy_Execute', type: 'query' } as const,
-  activateMember_Execute          : { field: 'activateMember_Execute', type: 'query' } as const,
-  createGroup_Execute             : { field: 'createGroup_Execute', type: 'query' } as const,
-  exportRosterCsv_Execute         : { field: 'exportRosterCsv_Execute', type: 'query' } as const,
-  generateInviteCodes_Execute     : { field: 'generateInviteCodes_Execute', type: 'query' } as const,
-  rosterPreview_Execute           : { field: 'rosterPreview_Execute', type: 'query' } as const,
-  importRoster_Execute            : { field: 'importRoster_Execute', type: 'query' } as const,
-  listGroups_Execute              : { field: 'listGroups_Execute', type: 'query' } as const,
-  members                         : { field: 'members', type: 'query' } as const,
-  setRankEnabled_Execute          : { field: 'setRankEnabled_Execute', type: 'query' } as const,
-  submitJudgmentFeedback_Execute  : { field: 'submitJudgmentFeedback_Execute', type: 'query' } as const,
-  createStudySession_Execute      : { field: 'createStudySession_Execute', type: 'query' } as const,
-  endStudySession_Execute         : { field: 'endStudySession_Execute', type: 'query' } as const,
-  hint_Execute                    : { field: 'hint_Execute', type: 'query' } as const,
-  memoryStates_Execute            : { field: 'memoryStates_Execute', type: 'query' } as const,
-  reviewQueue_Execute             : { field: 'reviewQueue_Execute', type: 'query' } as const,
-  sessionQuestion_Execute         : { field: 'sessionQuestion_Execute', type: 'query' } as const,
-  sessionResult_Execute           : { field: 'sessionResult_Execute', type: 'query' } as const,
-  wrongQuestions_Execute          : { field: 'wrongQuestions_Execute', type: 'query' } as const,
-  markMastered_Execute            : { field: 'markMastered_Execute', type: 'query' } as const,
-  submitAttempt_Execute           : { field: 'submitAttempt_Execute', type: 'query' } as const,
-  cancelSubscription_Execute      : { field: 'cancelSubscription_Execute', type: 'query' } as const,
-  createParentRelation_Execute    : { field: 'createParentRelation_Execute', type: 'query' } as const,
-  dashboardReport_Execute         : { field: 'dashboardReport_Execute', type: 'query' } as const,
-  progressReport_Execute          : { field: 'progressReport_Execute', type: 'query' } as const,
-  weaknessReport_Execute          : { field: 'weaknessReport_Execute', type: 'query' } as const,
-  listChildren_Execute            : { field: 'listChildren_Execute', type: 'query' } as const,
-  listSubscriptions_Execute       : { field: 'listSubscriptions_Execute', type: 'query' } as const,
-  startTrial_Execute              : { field: 'startTrial_Execute', type: 'query' } as const,
-  createPkMatch_Execute           : { field: 'createPkMatch_Execute', type: 'query' } as const,
-  pkResult_Execute                : { field: 'pkResult_Execute', type: 'query' } as const,
-  pkStats_Execute                 : { field: 'pkStats_Execute', type: 'query' } as const,
-  joinPkMatch_Execute             : { field: 'joinPkMatch_Execute', type: 'query' } as const,
-  submitPkAnswer_Execute          : { field: 'submitPkAnswer_Execute', type: 'query' } as const,
-  listModels                      : { field: 'listModels', type: 'query' } as const,
-  setEnabled                      : { field: 'setEnabled', type: 'query' } as const,
-  myRanking_Execute               : { field: 'myRanking_Execute', type: 'query' } as const,
-  rankings_Execute                : { field: 'rankings_Execute', type: 'query' } as const,
-  heatmap_Execute                 : { field: 'heatmap_Execute', type: 'query' } as const,
-  periodReport_Execute            : { field: 'periodReport_Execute', type: 'query' } as const,
-  streak_Execute                  : { field: 'streak_Execute', type: 'query' } as const,
-  createTask_Execute              : { field: 'createTask_Execute', type: 'query' } as const,
-  exportWeeklyReport_Execute      : { field: 'exportWeeklyReport_Execute', type: 'query' } as const,
-  ownerDashboard_Execute          : { field: 'ownerDashboard_Execute', type: 'query' } as const,
-  taskDetail_Execute              : { field: 'taskDetail_Execute', type: 'query' } as const,
-  listMyTasks_Execute             : { field: 'listMyTasks_Execute', type: 'query' } as const,
-  listTasks_Execute               : { field: 'listTasks_Execute', type: 'query' } as const,
-  pkPlayerStatsView               : { field: 'pkPlayerStatsView', type: 'query' } as const,
-  PkPlayerStatsView_aggregate     : { field: 'PkPlayerStatsView_aggregate', type: 'query' } as const,
+  requestChallenge                 : { field: 'requestChallenge', type: 'query' } as const,
+  registerSecure                   : { field: 'registerSecure', type: 'query' } as const,
+  createBank_Execute               : { field: 'createBank_Execute', type: 'query' } as const,
+  bankDetail_Execute               : { field: 'bankDetail_Execute', type: 'query' } as const,
+  draftBatch_Execute               : { field: 'draftBatch_Execute', type: 'query' } as const,
+  knowledgeCard_Execute            : { field: 'knowledgeCard_Execute', type: 'query' } as const,
+  importBankJson_Execute           : { field: 'importBankJson_Execute', type: 'query' } as const,
+  importQuestions_Execute          : { field: 'importQuestions_Execute', type: 'query' } as const,
+  listBanks_Execute                : { field: 'listBanks_Execute', type: 'query' } as const,
+  preprocessContent_Execute        : { field: 'preprocessContent_Execute', type: 'query' } as const,
+  reviewBackingPoints_Execute      : { field: 'reviewBackingPoints_Execute', type: 'query' } as const,
+  acceptBuddyInvite_Execute        : { field: 'acceptBuddyInvite_Execute', type: 'query' } as const,
+  buddyRank_Execute                : { field: 'buddyRank_Execute', type: 'query' } as const,
+  inviteBuddy_Execute              : { field: 'inviteBuddy_Execute', type: 'query' } as const,
+  listBuddies_Execute              : { field: 'listBuddies_Execute', type: 'query' } as const,
+  listBuddyCandidates_Execute      : { field: 'listBuddyCandidates_Execute', type: 'query' } as const,
+  listPendingBuddyInvites_Execute  : { field: 'listPendingBuddyInvites_Execute', type: 'query' } as const,
+  rejectBuddyInvite_Execute        : { field: 'rejectBuddyInvite_Execute', type: 'query' } as const,
+  removeBuddy_Execute              : { field: 'removeBuddy_Execute', type: 'query' } as const,
+  activateMember_Execute           : { field: 'activateMember_Execute', type: 'query' } as const,
+  createGroup_Execute              : { field: 'createGroup_Execute', type: 'query' } as const,
+  exportRosterCsv_Execute          : { field: 'exportRosterCsv_Execute', type: 'query' } as const,
+  generateInviteCodes_Execute      : { field: 'generateInviteCodes_Execute', type: 'query' } as const,
+  rosterPreview_Execute            : { field: 'rosterPreview_Execute', type: 'query' } as const,
+  importRoster_Execute             : { field: 'importRoster_Execute', type: 'query' } as const,
+  listGroups_Execute               : { field: 'listGroups_Execute', type: 'query' } as const,
+  members                          : { field: 'members', type: 'query' } as const,
+  setRankEnabled_Execute           : { field: 'setRankEnabled_Execute', type: 'query' } as const,
+  submitJudgmentFeedback_Execute   : { field: 'submitJudgmentFeedback_Execute', type: 'query' } as const,
+  createStudySession_Execute       : { field: 'createStudySession_Execute', type: 'query' } as const,
+  endStudySession_Execute          : { field: 'endStudySession_Execute', type: 'query' } as const,
+  hint_Execute                     : { field: 'hint_Execute', type: 'query' } as const,
+  memoryStates_Execute             : { field: 'memoryStates_Execute', type: 'query' } as const,
+  reviewQueue_Execute              : { field: 'reviewQueue_Execute', type: 'query' } as const,
+  sessionQuestion_Execute          : { field: 'sessionQuestion_Execute', type: 'query' } as const,
+  sessionResult_Execute            : { field: 'sessionResult_Execute', type: 'query' } as const,
+  wrongQuestions_Execute           : { field: 'wrongQuestions_Execute', type: 'query' } as const,
+  markMastered_Execute             : { field: 'markMastered_Execute', type: 'query' } as const,
+  submitAttempt_Execute            : { field: 'submitAttempt_Execute', type: 'query' } as const,
+  cancelSubscription_Execute       : { field: 'cancelSubscription_Execute', type: 'query' } as const,
+  createParentRelation_Execute     : { field: 'createParentRelation_Execute', type: 'query' } as const,
+  dashboardReport_Execute          : { field: 'dashboardReport_Execute', type: 'query' } as const,
+  progressReport_Execute           : { field: 'progressReport_Execute', type: 'query' } as const,
+  weaknessReport_Execute           : { field: 'weaknessReport_Execute', type: 'query' } as const,
+  listChildren_Execute             : { field: 'listChildren_Execute', type: 'query' } as const,
+  listSubscriptions_Execute        : { field: 'listSubscriptions_Execute', type: 'query' } as const,
+  startTrial_Execute               : { field: 'startTrial_Execute', type: 'query' } as const,
+  createPkMatch_Execute            : { field: 'createPkMatch_Execute', type: 'query' } as const,
+  pkResult_Execute                 : { field: 'pkResult_Execute', type: 'query' } as const,
+  pkStats_Execute                  : { field: 'pkStats_Execute', type: 'query' } as const,
+  joinPkMatch_Execute              : { field: 'joinPkMatch_Execute', type: 'query' } as const,
+  submitPkAnswer_Execute           : { field: 'submitPkAnswer_Execute', type: 'query' } as const,
+  listModels                       : { field: 'listModels', type: 'query' } as const,
+  setEnabled                       : { field: 'setEnabled', type: 'query' } as const,
+  myRanking_Execute                : { field: 'myRanking_Execute', type: 'query' } as const,
+  rankings_Execute                 : { field: 'rankings_Execute', type: 'query' } as const,
+  heatmap_Execute                  : { field: 'heatmap_Execute', type: 'query' } as const,
+  periodReport_Execute             : { field: 'periodReport_Execute', type: 'query' } as const,
+  streak_Execute                   : { field: 'streak_Execute', type: 'query' } as const,
+  createTask_Execute               : { field: 'createTask_Execute', type: 'query' } as const,
+  exportWeeklyReport_Execute       : { field: 'exportWeeklyReport_Execute', type: 'query' } as const,
+  ownerDashboard_Execute           : { field: 'ownerDashboard_Execute', type: 'query' } as const,
+  taskDetail_Execute               : { field: 'taskDetail_Execute', type: 'query' } as const,
+  listMyTasks_Execute              : { field: 'listMyTasks_Execute', type: 'query' } as const,
+  listTasks_Execute                : { field: 'listTasks_Execute', type: 'query' } as const,
+  pkPlayerStatsView                : { field: 'pkPlayerStatsView', type: 'query' } as const,
+  PkPlayerStatsView_aggregate      : { field: 'PkPlayerStatsView_aggregate', type: 'query' } as const,
 } as const;
 
 // ===== Mutation Operations =====
@@ -124,6 +125,7 @@ export const operationSelection: Record<string, string> = {
   'listGroups_Execute': 'success errorCode items { groupId groupUid name subject grade memberCount executionRate rankEnabled } pageIndex pageSize totalCount',
   'listModels': 'success errorCode items { isFromPersistentSource id uId name provider baseUrl modelName enabled sortOrder timeoutSeconds remark createTime updateTime } total',
   'listMyTasks_Execute': 'success errorCode items { taskId taskUid title progress deadlineAt status ownerName }',
+  'listPendingBuddyInvites_Execute': 'success errorCode items { inviteId inviterUserId nickname avatarUrl invitedAt expiresAt }',
   'listSubscriptions_Execute': 'success errorCode items { subscriptionUid studentUid studentNickname plan status trialEndAt periodEndAt }',
   'listTasks_Execute': 'success errorCode items { taskUid title deadlineAt status questionCount completionRate } total',
   'loginByContext': 'success userName displayName sessionKey accessToken refreshToken expiresAt deviceId extensions { key value }',
@@ -427,6 +429,12 @@ export interface ListBuddyCandidatesResDto {
   success: boolean;
   errorCode: string | null;
   items: Array<BuddyCandidateItemDto>;
+}
+
+export interface ListPendingBuddyInvitesResDto {
+  success: boolean;
+  errorCode: string | null;
+  items: Array<PendingBuddyInviteItemDto>;
 }
 
 export interface RejectBuddyInviteResDto {
@@ -1272,6 +1280,15 @@ export interface BuddyCandidateItemDto {
   groupName: string;
 }
 
+export interface PendingBuddyInviteItemDto {
+  inviteId: string;
+  inviterUserId: number;
+  nickname: string;
+  avatarUrl: string;
+  invitedAt: string;
+  expiresAt: string;
+}
+
 export interface GroupListItemDto {
   groupId: number;
   groupUid: string;
@@ -2002,6 +2019,10 @@ export interface OwnerDashboard_ExecuteService {
 
 export interface ParentRelation_ExecuteService {
   createParentRelation_Execute(args?: CreateParentRelation_ExecuteArgs): ChainablePromise<CreateParentRelationResDto>;
+}
+
+export interface PendingBuddyInvites_ExecuteService {
+  listPendingBuddyInvites_Execute(args?: Record<string, unknown>): ChainablePromise<ListPendingBuddyInvitesResDto>;
 }
 
 export interface PeriodReport_ExecuteService {

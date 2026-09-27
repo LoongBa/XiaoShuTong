@@ -590,6 +590,18 @@ export const initialData: DatasetSeed = {
     { success: true, errorCode: null, rejected: true },
   ],
 
+  // listPendingBuddyInvitesResDtos — 2 条（V0.6.18 待收邀请：小刚 3 天前 / 小红 1 天前，InvitedAt 倒序验证；expiresAt = invitedAt+7 天）
+  listPendingBuddyInvitesResDtos: [
+    {
+      success: true, errorCode: null,
+      items: [
+        { inviteId: "inv-p2", inviterUserId: 10012, nickname: "小红", avatarUrl: "", invitedAt: new Date(Date.now() - 86400000).toISOString(), expiresAt: new Date(Date.now() + 6 * 86400000).toISOString() },
+        { inviteId: "inv-p1", inviterUserId: 1003, nickname: "小刚", avatarUrl: "", invitedAt: new Date(Date.now() - 3 * 86400000).toISOString(), expiresAt: new Date(Date.now() + 4 * 86400000).toISOString() },
+      ],
+    },
+    { success: true, errorCode: null, items: [] },
+  ],
+
   // listBuddiesResDtos — 2 条，一含搭子 + 一空
   listBuddiesResDtos: [
     {

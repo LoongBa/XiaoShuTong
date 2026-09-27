@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-27 22:28:54
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-28 03:49:57
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -21,12 +21,13 @@
 | myTasks_Execute | 1 | 0 | 1 | 0 |
 | other | 50 | 1 | 51 | 0 |
 | parentRelation_Execute | 1 | 0 | 1 | 0 |
+| pendingBuddyInvites_Execute | 1 | 0 | 1 | 0 |
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **66** | **8** | **74** | **0** |
+| **合计** | **67** | **8** | **75** | **0** |
 
 ## 二、按域操作清单
 
@@ -445,6 +446,10 @@
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `relationUid`: string | | | | | |
+| pendingBuddyInvites_Execute | `listPendingBuddyInvites_Execute` | Query |  | — | `ListPendingBuddyInvitesResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `items`: `PendingBuddyInviteItemDto` | | | | | |
 | pkMatch_Execute | `createPkMatch_Execute` | Query |  | { request?: CreatePkMatchReqDtoInput | null } | `CreatePkMatchResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -525,6 +530,7 @@
 | `ListChildrenResDto` | success, errorCode, items → 见 \`ChildItemDto\` |
 | `ListGroupsResDto` | success, errorCode, items → 见 \`GroupListItemDto\`, pageIndex, pageSize, totalCount |
 | `ListMyTasksResDto` | success, errorCode, items → 见 \`MyTaskItemDto\` |
+| `ListPendingBuddyInvitesResDto` | success, errorCode, items → 见 \`PendingBuddyInviteItemDto\` |
 | `ListSubscriptionsResDto` | success, errorCode, items → 见 \`SubscriptionItemDto\` |
 | `ListTasksResDto` | success, errorCode, items → 见 \`TaskListItemDto\`, total |
 | `LoginPayload` | success, userName, displayName, sessionKey, accessToken, refreshToken, expiresAt, deviceId, extensions → 见 \`ExtensionEntry\` |
@@ -561,4 +567,4 @@
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| v1.0.6 | 09/27/2026 | 自动生成初版 |
+| v1.0.6 | 09/28/2026 | 自动生成初版 |

@@ -8,6 +8,10 @@ import type {
   BuddyCandidates_ExecuteService,
   InviteBuddy_ExecuteService,
   BuddyCandidateItemDto,
+  PendingBuddyInvites_ExecuteService,
+  AcceptBuddyInvite_ExecuteService,
+  RejectBuddyInvite_ExecuteService,
+  PendingBuddyInviteItemDto,
 } from '@/gql/ts-client.g';
 import { Plus, Users, Share2, Download, Loader2 } from 'lucide-react';
 
@@ -21,6 +25,8 @@ interface Buddy {
 interface StudyBuddySectionProps {
   buddies: Buddy[];
   onInvite: () => void;
+  // V0.6.18（Oracle M2）：accept 成功后刷新 rank.tsx 搭子列表（loadBuddies useCallback 复用）
+  onBuddyChanged?: () => void;
 }
 
 const MAX_BUDDIES = 5;
@@ -33,7 +39,22 @@ const INVITE_ERROR_MESSAGES: Record<string, string> = {
   '6002': '已发送过邀请，请等待对方回应',
 };
 
-export function StudyBuddySection({ buddies, onInvite }: StudyBuddySectionProps) {
+// V0.6.18（Oracle C6）：accept/reject 端错误码文案（6001=不存在/非本人权限伪装；6003 仅 accept 端触发）
+const ACCEPT_REJECT_ERROR_MESSAGES: Record<string, string> = {
+  '6001': '邀请已失效',
+  '6002': '邀请已过期或已处理',
+  '6003': '学习搭子已满（最多 5 个）',
+};
+
+// V0.6.18：相对时间"X 天前"（当天显示"今天"）
+function daysAgo(iso: string): string {
+  const diff = Date.now() - new Date(iso).getTime();
+  const days = Math.floor(diff / 86_400_000);
+  if (days <= 0) return '今天';
+  return `${days} 天前`;
+}
+
+export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBuddySectionProps) {
   const [showInviteModal, setShowInviteModal] = useState(false);
   const [showPoster, setShowPoster] = useState(false);
   // V0.6.16：可邀候选（好友发现——同群学生成员；打开弹窗时拉取，Oracle C2 关闭后再开重拉）
@@ -42,7 +63,31 @@ export function StudyBuddySection({ buddies, onInvite }: StudyBuddySectionProps)
   const [invitingId, setInvitingId] = useState<number | null>(null);
   const [inviteError, setInviteError] = useState('');
 
+  // V0.6.18：待收邀请（listPendingBuddyInvites_Execute；挂载拉取 + accept/reject 成功后重拉）
+  const [pendingInvites, setPendingInvites] = useState<PendingBuddyInviteItemDto[]>([]);
+  const [pendingLoading, setPendingLoading] = useState(false);
+  const [processingId, setProcessingId] = useState<string | null>(null);
+  const [pendingError, setPendingError] = useState('');
+
   const emptySlots = MAX_BUDDIES - buddies.length;
+
+  // V0.6.18（F1）：拉取待收邀请（失败静默空态——辅助区非阻塞）
+  const loadPendingInvites = useCallback(async () => {
+    setPendingLoading(true);
+    setPendingError('');
+    try {
+      const res = await Tkwf.User.Use<PendingBuddyInvites_ExecuteService>().listPendingBuddyInvites_Execute();
+      setPendingInvites(res.success ? (res.items ?? []) : []);
+    } catch {
+      setPendingInvites([]);
+    } finally {
+      setPendingLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void loadPendingInvites();
+  }, [loadPendingInvites]);
 
   // V0.6.16（F1）：打开邀请弹窗 → 拉候选（listBuddyCandidates_Execute）
   const loadCandidates = useCallback(async () => {
@@ -79,6 +124,60 @@ export function StudyBuddySection({ buddies, onInvite }: StudyBuddySectionProps)
       setInviteError(err?.code ? (INVITE_ERROR_MESSAGES[err.code] ?? err.message ?? '邀请失败') : '邀请失败，请稍后重试');
     } finally {
       setInvitingId(null);
+    }
+  };
+
+  // V0.6.18（F1）：接受邀请（acceptBuddyInvite_Execute；成功 → 重拉待收 + 刷新搭子列表）
+  const handleAccept = async (inv: PendingBuddyInviteItemDto) => {
+    setProcessingId(inv.inviteId);
+    setPendingError('');
+    try {
+      const res = await Tkwf.User.Use<AcceptBuddyInvite_ExecuteService>().acceptBuddyInvite_Execute({
+        request: { inviteId: inv.inviteId },
+      });
+      if (res.success) {
+        await loadPendingInvites(); // 重拉待收（该邀请移除）
+        onBuddyChanged?.();         // M2：刷新 rank.tsx 搭子列表（accepted 立即可见）
+        return;
+      }
+      const code = res.errorCode ?? '';
+      if (code === '6001' || code === '6002') {
+        setPendingError(ACCEPT_REJECT_ERROR_MESSAGES[code] ?? '邀请已失效');
+        await loadPendingInvites(); // 失效项从列表移除（重拉权威）
+        return;
+      }
+      setPendingError(ACCEPT_REJECT_ERROR_MESSAGES[code] ?? '处理失败，请稍后重试'); // 6003 保留列表（仍可稍后处理）
+    } catch (err: any) {
+      // Oracle C4：网络异常 → 提示 + 不重拉（避免重拉失败雪崩）
+      setPendingError(err?.message ?? '网络错误，请稍后重试');
+    } finally {
+      setProcessingId(null); // Oracle C5：任何分支清空禁点状态
+    }
+  };
+
+  // V0.6.18（F1）：拒绝邀请（rejectBuddyInvite_Execute；成功 → 仅重拉待收，不触发 onBuddyChanged——Oracle C10）
+  const handleReject = async (inv: PendingBuddyInviteItemDto) => {
+    setProcessingId(inv.inviteId);
+    setPendingError('');
+    try {
+      const res = await Tkwf.User.Use<RejectBuddyInvite_ExecuteService>().rejectBuddyInvite_Execute({
+        request: { inviteId: inv.inviteId },
+      });
+      if (res.success) {
+        await loadPendingInvites();
+        return;
+      }
+      const code = res.errorCode ?? '';
+      if (code === '6001' || code === '6002') {
+        setPendingError(ACCEPT_REJECT_ERROR_MESSAGES[code] ?? '邀请已失效');
+        await loadPendingInvites();
+        return;
+      }
+      setPendingError('处理失败，请稍后重试');
+    } catch (err: any) {
+      setPendingError(err?.message ?? '网络错误，请稍后重试');
+    } finally {
+      setProcessingId(null);
     }
   };
 
@@ -141,6 +240,60 @@ export function StudyBuddySection({ buddies, onInvite }: StudyBuddySectionProps)
           <p className="text-sm text-muted-foreground text-center py-2">
             还没有学习搭子，快邀请好友一起学习吧！
           </p>
+        )}
+
+        {/* 待收邀请区块（V0.6.18：listPendingBuddyInvites_Execute + accept/reject 真实接线）
+            Oracle M1：空态隐藏区块；有内容时标题带 N + 红点视觉强调（被动触发，唯一发现入口） */}
+        {!pendingLoading && pendingInvites.length > 0 && (
+          <div className="mt-4 border-t pt-3">
+            <h3 className="text-sm font-semibold flex items-center gap-2 text-primary mb-2">
+              <span className="w-2 h-2 rounded-full bg-red-500" />
+              待处理邀请 ({pendingInvites.length})
+            </h3>
+            <div className="space-y-2">
+              {pendingInvites.map((inv) => (
+                <div
+                  key={inv.inviteId}
+                  className="flex items-center justify-between p-3 rounded-lg bg-muted/50"
+                >
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium truncate">
+                      {inv.nickname || `学生${inv.inviterUserId}`}
+                    </p>
+                    <p className="text-xs text-muted-foreground">{daysAgo(inv.invitedAt)}邀请</p>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <Button
+                      size="sm"
+                      disabled={processingId === inv.inviteId}
+                      onClick={() => handleAccept(inv)}
+                    >
+                      {processingId === inv.inviteId ? (
+                        <Loader2 className="w-3 h-3 animate-spin" />
+                      ) : (
+                        '接受'
+                      )}
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      disabled={processingId === inv.inviteId}
+                      onClick={() => handleReject(inv)}
+                    >
+                      {processingId === inv.inviteId ? (
+                        <Loader2 className="w-3 h-3 animate-spin" />
+                      ) : (
+                        '拒绝'
+                      )}
+                    </Button>
+                  </div>
+                </div>
+              ))}
+              {pendingError && (
+                <p className="text-xs text-destructive text-center pt-1">{pendingError}</p>
+              )}
+            </div>
+          </div>
         )}
       </Card>
 

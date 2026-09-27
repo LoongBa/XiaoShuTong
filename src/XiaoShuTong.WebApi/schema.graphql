@@ -37,6 +37,8 @@ type Query {
     @cost(weight: "10")
   listBuddies_Execute: ListBuddiesResDto @cost(weight: "10")
   listBuddyCandidates_Execute: ListBuddyCandidatesResDto @cost(weight: "10")
+  listPendingBuddyInvites_Execute: ListPendingBuddyInvitesResDto
+    @cost(weight: "10")
   rejectBuddyInvite_Execute(request: RejectBuddyInviteReqDtoInput): RejectBuddyInviteResDto
     @cost(weight: "10")
   removeBuddy_Execute(request: RemoveBuddyReqDtoInput): RemoveBuddyResDto
@@ -1079,6 +1081,16 @@ type ListMyTasksResDto {
   items: [MyTaskItemDto!]!
 }
 
+"待收搭子邀请响应 DTO"
+type ListPendingBuddyInvitesResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "待处理邀请列表（InviteeId=me 的 Pending 未过期邀请，按 InvitedAt 倒序）"
+  items: [PendingBuddyInviteItemDto!]!
+}
+
 "我的订阅列表响应 DTO"
 type ListSubscriptionsResDto {
   "是否成功"
@@ -1211,6 +1223,22 @@ type ParentWeakPointDto {
   accuracy: Float!
   "状态家长端文案（未掌握/模糊/掌握/熟练）"
   stateText: String!
+}
+
+"待收邀请项 DTO"
+type PendingBuddyInviteItemDto {
+  "邀请记录 Uid（accept/reject 入参 InviteId）"
+  inviteId: String!
+  "邀请人用户 Id"
+  inviterUserId: Long!
+  "邀请人昵称（GroupMembers.Nickname；null 兜底 学生{userId}）"
+  nickname: String!
+  "头像 URL（账户域，切片为空串）"
+  avatarUrl: String!
+  "邀请时间"
+  invitedAt: DateTime!
+  "过期时间（InvitedAt + 7 天）"
+  expiresAt: DateTime!
 }
 
 "PK 玩家结果 DTO"
