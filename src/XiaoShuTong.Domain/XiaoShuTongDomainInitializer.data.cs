@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 using System.Threading.Tasks;
 using XiaoShuTong.Entities.Bank;
+using XiaoShuTong.Entities.Buddy;
 using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Entities.Parent;
@@ -435,6 +436,73 @@ public partial class XiaoShuTongDomainInitializer
                 Rank = 3,
                 SnapshotDate = businessDay,
             } as RankSnapshots).ExecuteAffrowsAsync();
+
+            // 6.1 错题本走查数据（V0.6.17：直插 WrongQuestions 供错题本/重练走查——2 未掌握 + 1 已掌握覆盖双 tab；
+            //    ⚠️ 种子直插绕过 BR-23 作答事件派生（C-20 单一事实源），属种子场景豁免（RankSnapshots 直插先例），仅走查注入，非生产路径）
+            await repo.Insert(new WrongQuestions
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,          // 小明
+                QuestionId = SeedQuestionIds[0], // Q-demo-7a-0001
+                BankId = SeedBankId,
+                Subject = Subject.Chinese.ToString(), // "Chinese"（对齐枚举 PascalCase 约定 + Banks 用法；Oracle C1 修正 "chinese" 历史债登记）
+                WrongCount = 2,
+                LastWrongAt = now.AddDays(-1),
+                Mastered = false,
+                CreateTime = now,
+                UpdateTime = now,
+            } as WrongQuestions).ExecuteAffrowsAsync();
+            await repo.Insert(new WrongQuestions
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                QuestionId = SeedQuestionIds[1], // Q-demo-7a-0002
+                BankId = SeedBankId,
+                Subject = Subject.Chinese.ToString(),
+                WrongCount = 3,
+                LastWrongAt = now.AddDays(-2),
+                Mastered = false,
+                CreateTime = now,
+                UpdateTime = now,
+            } as WrongQuestions).ExecuteAffrowsAsync();
+            await repo.Insert(new WrongQuestions
+            {
+                UId = UidGenerator.NewId(),
+                UserId = SeedStudentId,
+                QuestionId = SeedQuestionIds[2], // Q-demo-7a-0003
+                BankId = SeedBankId,
+                Subject = Subject.Chinese.ToString(),
+                WrongCount = 1,
+                LastWrongAt = now.AddDays(-5),
+                Mastered = true, // 已掌握（已转 tab）
+                CreateTime = now,
+                UpdateTime = now,
+            } as WrongQuestions).ExecuteAffrowsAsync();
+
+            // 6.2 学习搭子（V0.6.17：10001-10011 accepted 已成 + 10001-10012 pending 待接受——listBuddies 显示小美 + 候选排除语义验证）
+            await repo.Insert(new StudyBuddies
+            {
+                UId = UidGenerator.NewId(),
+                InviterId = SeedStudentId,  // 小明发出
+                InviteeId = SeedStudentBId, // 小美已接受
+                Status = BuddyStatus.Accepted,
+                InvitedAt = now.AddDays(-3),
+                AcceptedAt = now.AddDays(-2),
+                ExpiresAt = now.AddDays(4),
+                CreateTime = now,
+                UpdateTime = now,
+            } as StudyBuddies).ExecuteAffrowsAsync();
+            await repo.Insert(new StudyBuddies
+            {
+                UId = UidGenerator.NewId(),
+                InviterId = SeedStudentId,  // 小明发出
+                InviteeId = SeedStudentCId, // 小刚待接受
+                Status = BuddyStatus.Pending,
+                InvitedAt = now.AddDays(-1),
+                ExpiresAt = now.AddDays(6),
+                CreateTime = now,
+                UpdateTime = now,
+            } as StudyBuddies).ExecuteAffrowsAsync();
         }
 
         /// <summary>插入 3 道《观沧海》R1 补全题（Keywords 组感知 JSON，对齐 SubmitAttemptServiceTests 范式）</summary>
