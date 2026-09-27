@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { User, Task, ReviewItem, KnowledgePoint, Subject, WrongAnswer, LearningStats } from '@/types';
+import type { User, Task, ReviewItem, KnowledgePoint, Subject, LearningStats } from '@/types';
 import { Tkwf } from '@tkwf/tsclient';
 import type {
   StudySession_ExecuteService,
@@ -50,7 +50,6 @@ interface AppState {
   reviewItems: ReviewItem[];
   subjects: Subject[];
   knowledgePoints: KnowledgePoint[];
-  wrongAnswers: WrongAnswer[];
   learningStats: LearningStats[];
   
   // 当前学习会话（服务端驱动；不进 persist partialize，会话恢复靠 createStudySession BR-05 幂等）
@@ -70,7 +69,6 @@ interface AppState {
   setReviewItems: (items: ReviewItem[]) => void;
   setSubjects: (subjects: Subject[]) => void;
   setKnowledgePoints: (points: KnowledgePoint[]) => void;
-  setWrongAnswers: (wrongs: WrongAnswer[]) => void;
   setLearningStats: (stats: LearningStats[]) => void;
   
   startTask: (taskId: string) => void;
@@ -94,7 +92,6 @@ export const useAppStore = create<AppState>()(
       reviewItems: [],
       subjects: [],
       knowledgePoints: [],
-      wrongAnswers: [],
       learningStats: [],
       
       currentTaskId: null,
@@ -127,7 +124,6 @@ export const useAppStore = create<AppState>()(
       setReviewItems: (items) => set({ reviewItems: items }),
       setSubjects: (subjects) => set({ subjects }),
       setKnowledgePoints: (points) => set({ knowledgePoints: points }),
-      setWrongAnswers: (wrongs) => set({ wrongAnswers: wrongs }),
       setLearningStats: (stats) => set({ learningStats: stats }),
       
       startTask: (taskId) => set({
@@ -227,7 +223,6 @@ export const useAppStore = create<AppState>()(
         hasAgreedPrivacy: state.hasAgreedPrivacy,
         tasks: state.tasks,
         reviewItems: state.reviewItems,
-        wrongAnswers: state.wrongAnswers,
         learningStats: state.learningStats
       })
     }

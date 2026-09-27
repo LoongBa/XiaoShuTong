@@ -117,19 +117,6 @@ export interface StudentProgress {
   starCount: number;
 }
 
-// 错题
-export interface WrongAnswer {
-  id: string;
-  questionId: string;
-  knowledgePointId: string;
-  title: string;
-  wrongAnswer: string;
-  correctAnswer: string;
-  wrongCount: number;
-  isMastered: boolean;
-  createdAt: string;
-}
-
 // 学习统计
 export interface LearningStats {
   date: string;

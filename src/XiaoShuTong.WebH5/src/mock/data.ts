@@ -304,9 +304,9 @@ export const initialData: DatasetSeed = {
     {
       success: true, errorCode: null,
       items: [
-        { id: 1, uId: "wq-001", userId: 1001, questionId: "q-001", bankId: "bank-001", subject: "数学", wrongCount: 3, lastWrongAt: new Date(Date.now() - 86400000).toISOString(), mastered: false, knowledgePoint: "乘法分配律", summary: "注意括号展开", createTime: new Date(Date.now() - 604800000).toISOString(), updateTime: new Date(Date.now() - 86400000).toISOString(), isFromPersistentSource: false },
-        { id: 2, uId: "wq-002", userId: 1001, questionId: "q-002", bankId: "bank-001", subject: "数学", wrongCount: 2, lastWrongAt: new Date(Date.now() - 172800000).toISOString(), mastered: false, knowledgePoint: "分数除法", summary: "除以一个数等于乘以倒数", createTime: new Date(Date.now() - 432000000).toISOString(), updateTime: new Date(Date.now() - 172800000).toISOString(), isFromPersistentSource: false },
-        { id: 3, uId: "wq-003", userId: 1001, questionId: "q-003", bankId: "bank-002", subject: "语文", wrongCount: 1, lastWrongAt: new Date(Date.now() - 259200000).toISOString(), mastered: true, knowledgePoint: "成语运用", summary: "望文生义", createTime: new Date(Date.now() - 604800000).toISOString(), updateTime: new Date(Date.now() - 259200000).toISOString(), isFromPersistentSource: false },
+        { id: 1, uId: "wq-001", userId: 1001, questionId: "q-001", bankId: "bank-001", subject: "数学", wrongCount: 3, lastWrongAt: new Date(Date.now() - 86400000).toISOString(), mastered: false, knowledgePoint: "乘法分配律", summary: "注意括号展开", answer: "a(b+c)=ab+ac", createTime: new Date(Date.now() - 604800000).toISOString(), updateTime: new Date(Date.now() - 86400000).toISOString(), isFromPersistentSource: false },
+        { id: 2, uId: "wq-002", userId: 1001, questionId: "q-002", bankId: "bank-001", subject: "数学", wrongCount: 2, lastWrongAt: new Date(Date.now() - 172800000).toISOString(), mastered: false, knowledgePoint: "分数除法", summary: "除以一个数等于乘以倒数", answer: "除以一个数等于乘它的倒数", createTime: new Date(Date.now() - 432000000).toISOString(), updateTime: new Date(Date.now() - 172800000).toISOString(), isFromPersistentSource: false },
+        { id: 3, uId: "wq-003", userId: 1001, questionId: "q-003", bankId: "bank-002", subject: "语文", wrongCount: 1, lastWrongAt: new Date(Date.now() - 259200000).toISOString(), mastered: true, knowledgePoint: "成语运用", summary: "望文生义", answer: "望文生义，指不懂某一词句的正确意义，只从字面上去附会", createTime: new Date(Date.now() - 604800000).toISOString(), updateTime: new Date(Date.now() - 259200000).toISOString(), isFromPersistentSource: false },
       ],
       total: 3,
     },
