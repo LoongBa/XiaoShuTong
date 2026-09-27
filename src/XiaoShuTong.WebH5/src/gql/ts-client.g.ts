@@ -20,6 +20,7 @@ export const Query = {
   buddyRank_Execute               : { field: 'buddyRank_Execute', type: 'query' } as const,
   inviteBuddy_Execute             : { field: 'inviteBuddy_Execute', type: 'query' } as const,
   listBuddies_Execute             : { field: 'listBuddies_Execute', type: 'query' } as const,
+  listBuddyCandidates_Execute     : { field: 'listBuddyCandidates_Execute', type: 'query' } as const,
   rejectBuddyInvite_Execute       : { field: 'rejectBuddyInvite_Execute', type: 'query' } as const,
   removeBuddy_Execute             : { field: 'removeBuddy_Execute', type: 'query' } as const,
   activateMember_Execute          : { field: 'activateMember_Execute', type: 'query' } as const,
@@ -118,6 +119,7 @@ export const operationSelection: Record<string, string> = {
   'knowledgeCard_Execute': 'success errorCode cardType content',
   'listBanks_Execute': 'success errorCode items { bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topicCount questionCount } total',
   'listBuddies_Execute': 'success errorCode items { buddyId userId nickname avatarUrl streakDays status rank { isFromPersistentSource id uId userId scopeType scopeId subject metricType metricValue rank snapshotDate createTime updateTime } }',
+  'listBuddyCandidates_Execute': 'success errorCode items { userId nickname groupId groupName }',
   'listChildren_Execute': 'success errorCode items { studentId studentUid nickname className hasSubscription }',
   'listGroups_Execute': 'success errorCode items { groupId groupUid name subject grade memberCount executionRate rankEnabled } pageIndex pageSize totalCount',
   'listModels': 'success errorCode items { isFromPersistentSource id uId name provider baseUrl modelName enabled sortOrder timeoutSeconds remark createTime updateTime } total',
@@ -419,6 +421,12 @@ export interface ListBuddiesResDto {
   success: boolean;
   errorCode: string | null;
   items: Array<BuddyListItemDto>;
+}
+
+export interface ListBuddyCandidatesResDto {
+  success: boolean;
+  errorCode: string | null;
+  items: Array<BuddyCandidateItemDto>;
 }
 
 export interface RejectBuddyInviteResDto {
@@ -1257,6 +1265,13 @@ export interface BuddyListItemDto {
   rank: RankSnapshotsDto | null;
 }
 
+export interface BuddyCandidateItemDto {
+  userId: number;
+  nickname: string;
+  groupId: number;
+  groupName: string;
+}
+
 export interface GroupListItemDto {
   groupId: number;
   groupUid: string;
@@ -1867,6 +1882,10 @@ export interface Buddies_ExecuteService {
 
 export interface Buddy_ExecuteService {
   removeBuddy_Execute(args?: RemoveBuddy_ExecuteArgs): ChainablePromise<RemoveBuddyResDto>;
+}
+
+export interface BuddyCandidates_ExecuteService {
+  listBuddyCandidates_Execute(args?: Record<string, unknown>): ChainablePromise<ListBuddyCandidatesResDto>;
 }
 
 export interface BuddyRank_ExecuteService {

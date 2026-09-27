@@ -567,6 +567,19 @@ export const initialData: DatasetSeed = {
     { success: true, errorCode: null, inviteId: "inv-001", expiresAt: new Date(Date.now() + 604800000).toISOString() },
   ],
 
+  // listBuddyCandidatesResDtos — 2 条（V0.6.16 好友发现：同群学生成员候选；一含候选 + 一空）
+  listBuddyCandidatesResDtos: [
+    {
+      success: true, errorCode: null,
+      items: [
+        { userId: 10011, nickname: "小华", groupId: 1, groupName: "七(3)班" },
+        { userId: 10012, nickname: "小丽", groupId: 1, groupName: "七(3)班" },
+        { userId: 10013, nickname: "小明", groupId: 2, groupName: "语文培优班" },
+      ],
+    },
+    { success: true, errorCode: null, items: [] },
+  ],
+
   // acceptBuddyInviteResDtos — 1 条
   acceptBuddyInviteResDtos: [
     { success: true, errorCode: null, buddyId: "buddy-001" },

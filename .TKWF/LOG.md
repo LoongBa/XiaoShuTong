@@ -270,3 +270,13 @@
 ull=全库、[]=显式空集（BR-18 空结果）；白名单非空短路混合比（BR-04）按 BR-20 排序直出（Oracle M2 裁决：错题专练=只练错题，混合比 30% 新题违背语义）；② BR-52 手动标记已掌握——MarkMasteredService 翻转 WrongQuestions.Mastered（学习域，激励-BR-15 域边界）；幂等（User+QuestionId 唯一）；BR-23 作答事件照常驱动不豁免（答错重置）；并发"最后写入胜出 + BR-23 作答权威"。
 
 **避坑指南**：新增 BR 前必须先查 Business.md 现有编号占用（学习域已至 50，47-50 均为 KnowledgeMastery），勿凭印象续号。
+
+### 2026-09-27 — [Rule] — V0.6.16 好友发现新增 BR-33/34（候选列表 + 只读权限）
+
+**涉及模块**：Business.md（搭子域 BR 表尾部追加 2 条）
+
+**上下文**：V0.6.10 审核报告 §七 登记配合项"好友发现服务：inviteBuddy_Execute 接线前置（inviteeUserId 无来源）"落地。Oracle 评审确认：候选源=同群成员（BR-16 同群 OR 同年级语义的充分子集）、后端新增 Service 是唯一正解（members_Execute 群主专属不可复用）。
+
+**决策/修复**：① BR-33 候选列表语义——同群组成员（Role=Student）+ 排除自己/已有搭子（Pending/Accepted）/Parent + GroupMembers.Nickname 展示 + 多群同人去重；② BR-34 候选查询只读权限——当前用户群成员身份即可（非群主专属，区别于 ManageGroupMembersService BR-08）。
+
+**避坑指南**：搭子 BR 编号已至 32，新增从 33 续（Pk 域从 01 独立编号互不干扰）；候选源必须同群（非同群邀请被 BR-16 6006 拒）。

@@ -251,6 +251,8 @@
 | 搭子-BR-30 | 解除搭子：关系不存在/非当事人 → 6001/1004 | StudyBuddies | 8.6 |
 | 搭子-BR-31 | 解除后历史 PK/答题保留 | StudyBuddies | 8.6 |
 | 搭子-BR-32 | 重复解除（已 removed）幂等 → 6001 | StudyBuddies | 8.6 |
+| 搭子-BR-33 | 候选列表：同群组成员（Role=Student）+ 排除自己 + 排除已有搭子关系（Pending/Accepted）+ 排除 Parent 角色；展示 GroupMembers.Nickname + Group.Name；多群同人去重 | GroupMembers, StudyBuddies, Groups | 8.1（V0.6.16） |
+| 搭子-BR-34 | 候选查询只读无邀请动作；权限=当前用户群成员身份（非群主专属） | GroupMembers | 8.1（V0.6.16） |
 
 ### 2.7 搭子PK竞技域（Pk）
 

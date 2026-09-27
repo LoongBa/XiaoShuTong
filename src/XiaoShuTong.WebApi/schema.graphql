@@ -36,6 +36,7 @@ type Query {
   inviteBuddy_Execute(request: InviteBuddyReqDtoInput): InviteBuddyResDto
     @cost(weight: "10")
   listBuddies_Execute: ListBuddiesResDto @cost(weight: "10")
+  listBuddyCandidates_Execute: ListBuddyCandidatesResDto @cost(weight: "10")
   rejectBuddyInvite_Execute(request: RejectBuddyInviteReqDtoInput): RejectBuddyInviteResDto
     @cost(weight: "10")
   removeBuddy_Execute(request: RemoveBuddyReqDtoInput): RemoveBuddyResDto
@@ -280,6 +281,18 @@ type BlockedPointDto {
   knowledgePoint: String!
   "记忆状态"
   state: String!
+}
+
+"候选搭子项 DTO"
+type BuddyCandidateItemDto {
+  "候选用户 Id（inviteBuddy_Execute inviteeUserId 入参）"
+  userId: Long!
+  "群内昵称（GroupMembers.Nickname；空串兜底 学生{userId}）"
+  nickname: String!
+  "所属群 Id"
+  groupId: Long!
+  "群名（Group.Name）"
+  groupName: String!
 }
 
 "搭子列表项 DTO"
@@ -1018,6 +1031,16 @@ type ListBuddiesResDto {
   errorCode: String
   "搭子列表"
   items: [BuddyListItemDto!]!
+}
+
+"可邀搭子候选响应 DTO"
+type ListBuddyCandidatesResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "候选列表（同群学生成员，排除自己/已有搭子/Parent；多群去重）"
+  items: [BuddyCandidateItemDto!]!
 }
 
 "我的孩子列表响应 DTO"

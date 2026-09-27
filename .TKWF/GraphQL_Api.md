@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-27 22:00:07
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-09-27 22:28:54
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -11,6 +11,7 @@
 | bank_Execute | 1 | 0 | 1 | 0 |
 | banks_Execute | 1 | 0 | 1 | 0 |
 | buddies_Execute | 1 | 0 | 1 | 0 |
+| buddyCandidates_Execute | 1 | 0 | 1 | 0 |
 | buddy_Execute | 1 | 0 | 1 | 0 |
 | children_Execute | 1 | 0 | 1 | 0 |
 | group_Execute | 1 | 0 | 1 | 0 |
@@ -25,7 +26,7 @@
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
 | task_Execute | 1 | 0 | 1 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **65** | **8** | **73** | **0** |
+| **合计** | **66** | **8** | **74** | **0** |
 
 ## 二、按域操作清单
 
@@ -75,6 +76,10 @@
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `items`: `BuddyListItemDto` | | | | | |
+| buddyCandidates_Execute | `listBuddyCandidates_Execute` | Query |  | — | `ListBuddyCandidatesResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `items`: `BuddyCandidateItemDto` | | | | | |
 | buddy_Execute | `removeBuddy_Execute` | Query |  | { request?: RemoveBuddyReqDtoInput | null } | `RemoveBuddyResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -516,6 +521,7 @@
 | `ListAiModelConfigResDto` | success, errorCode, items → 见 \`AiModelConfigDto\`, total |
 | `ListBanksResDto` | success, errorCode, items → 见 \`BankListItemDto\`, total |
 | `ListBuddiesResDto` | success, errorCode, items → 见 \`BuddyListItemDto\` |
+| `ListBuddyCandidatesResDto` | success, errorCode, items → 见 \`BuddyCandidateItemDto\` |
 | `ListChildrenResDto` | success, errorCode, items → 见 \`ChildItemDto\` |
 | `ListGroupsResDto` | success, errorCode, items → 见 \`GroupListItemDto\`, pageIndex, pageSize, totalCount |
 | `ListMyTasksResDto` | success, errorCode, items → 见 \`MyTaskItemDto\` |
