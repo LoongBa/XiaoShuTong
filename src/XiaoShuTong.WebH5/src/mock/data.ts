@@ -740,31 +740,31 @@ export const initialData: DatasetSeed = {
     },
   ],
 
-  // getProgressReportResDtos — 1 条
+  // getProgressReportResDtos — 1 条（V0.6.15：字段对齐契约 DailyStatsDto reviewCount/studySeconds + vsLastWeek weaknessShift）
   getProgressReportResDtos: [
     {
       success: true, errorCode: null,
       trend: [
-        { statDate: new Date(Date.now() - 6 * 86400000).toISOString().slice(0, 10), learnedCount: 10, accuracy: 0.80, starredCount: 2, wrongCount: 2, sessionCount: 3 },
-        { statDate: new Date(Date.now() - 5 * 86400000).toISOString().slice(0, 10), learnedCount: 12, accuracy: 0.83, starredCount: 3, wrongCount: 1, sessionCount: 4 },
-        { statDate: new Date(Date.now() - 4 * 86400000).toISOString().slice(0, 10), learnedCount: 8, accuracy: 0.75, starredCount: 1, wrongCount: 3, sessionCount: 2 },
-        { statDate: new Date(Date.now() - 3 * 86400000).toISOString().slice(0, 10), learnedCount: 15, accuracy: 0.87, starredCount: 4, wrongCount: 1, sessionCount: 5 },
-        { statDate: new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10), learnedCount: 11, accuracy: 0.82, starredCount: 2, wrongCount: 2, sessionCount: 3 },
-        { statDate: new Date(Date.now() - 1 * 86400000).toISOString().slice(0, 10), learnedCount: 14, accuracy: 0.86, starredCount: 3, wrongCount: 1, sessionCount: 4 },
-        { statDate: new Date(Date.now()).toISOString().slice(0, 10), learnedCount: 9, accuracy: 0.78, starredCount: 1, wrongCount: 3, sessionCount: 2 },
+        { statDate: new Date(Date.now() - 6 * 86400000).toISOString().slice(0, 10), learnedCount: 10, accuracy: 0.80, starredCount: 2, reviewCount: 3, studySeconds: 1800 },
+        { statDate: new Date(Date.now() - 5 * 86400000).toISOString().slice(0, 10), learnedCount: 12, accuracy: 0.83, starredCount: 3, reviewCount: 4, studySeconds: 2100 },
+        { statDate: new Date(Date.now() - 4 * 86400000).toISOString().slice(0, 10), learnedCount: 8, accuracy: 0.75, starredCount: 1, reviewCount: 2, studySeconds: 1500 },
+        { statDate: new Date(Date.now() - 3 * 86400000).toISOString().slice(0, 10), learnedCount: 15, accuracy: 0.87, starredCount: 4, reviewCount: 5, studySeconds: 2400 },
+        { statDate: new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10), learnedCount: 11, accuracy: 0.82, starredCount: 2, reviewCount: 3, studySeconds: 1900 },
+        { statDate: new Date(Date.now() - 1 * 86400000).toISOString().slice(0, 10), learnedCount: 14, accuracy: 0.86, starredCount: 3, reviewCount: 4, studySeconds: 2200 },
+        { statDate: new Date(Date.now()).toISOString().slice(0, 10), learnedCount: 9, accuracy: 0.78, starredCount: 1, reviewCount: 2, studySeconds: 1600 },
       ],
-      vsLastWeek: { learnedDelta: 5, accuracyDelta: 0.03, starredDelta: 1, wrongDelta: -1 },
+      vsLastWeek: { learnedDelta: 5, weaknessShift: 2 },
     },
   ],
 
-  // getWeaknessReportResDtos — 2 条，一含弱项 + 一空
+  // getWeaknessReportResDtos — 2 条，一含弱项 + 一空（V0.6.15：补 subject + stateText 家长文案）
   getWeaknessReportResDtos: [
     {
       success: true, errorCode: null,
       weakPoints: [
-        { knowledgePoint: "乘法分配律", accuracy: 0.35, stateText: "✕", questionCount: 8 },
-        { knowledgePoint: "分数除法", accuracy: 0.42, stateText: "△", questionCount: 6 },
-        { knowledgePoint: "几何图形", accuracy: 0.55, stateText: "△", questionCount: 5 },
+        { subject: "数学", knowledgePoint: "乘法分配律", accuracy: 0.35, stateText: "未掌握" },
+        { subject: "数学", knowledgePoint: "分数除法", accuracy: 0.42, stateText: "模糊" },
+        { subject: "语文", knowledgePoint: "诗词默写", accuracy: 0.55, stateText: "模糊" },
       ],
     },
     { success: true, errorCode: null, weakPoints: [] },

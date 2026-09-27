@@ -10,6 +10,7 @@ import { Tkwf } from '@tkwf/tsclient';
 import type { DashboardReport_ExecuteService, SubjectMasteryDto, StartTrial_ExecuteService } from '@/gql/ts-client.g';
 import { Children_ExecuteService } from '@/gql/ts-client.g';
 import { accuracyToPercent, accuracyToState } from '@/lib/accuracy';
+import { deriveSubscription } from '@/lib/parent-subscription';
 import { 
   ArrowLeft,
   ChevronRight,
@@ -121,14 +122,11 @@ function ParentDashboardPage() {
           setTodayCompleted(!!res.todayCompleted);
           setWeekLearned(res.weekProgress?.learnedCount ?? 0);
           setWeekAccuracy(res.weekProgress?.accuracy ?? null);
-          // V0.6.12：订阅状态从 dashboardReport.subscription 契约派生（T1；修正 V0.6.7 P1-5 遗留契约错配 'Trial'→'Trialing'）
-          // 有效权益 = Active / Trialing / Cancelled 周期内（对齐 ParentReportGate L60）
+          // V0.6.15（Oracle C2）：订阅派生抽公共函数（lib/parent-subscription.ts）——dashboard/progress/weakness 共用
           const sub = res.subscription;
-          setIsSubscribed(sub !== null && (sub.status === 'Active' || sub.status === 'Trialing' || sub.status === 'Cancelled'));
-          // 试用剩余天数：从 trialEndAt 计算（替代本地硬编码 7）；Trialing 且已过 → 0（过期态由 locked 表达）
-          setTrialDaysLeft(sub?.status === 'Trialing' && sub.trialEndAt
-            ? Math.max(0, Math.ceil((new Date(sub.trialEndAt).getTime() - Date.now()) / 86400000))
-            : 0);
+          const { isSubscribed: subOk, trialDaysLeft: trialLeft } = deriveSubscription(sub);
+          setIsSubscribed(subOk);
+          setTrialDaysLeft(trialLeft);
           // locked=true 时订阅不受约（预览模式）；试用过期/已过期 → locked=true（ParentReportGate）
           setLocked(res.locked ?? false);
         } else {
@@ -306,7 +304,7 @@ function ParentDashboardPage() {
           )}
         </Card>
         
-        {/* 付费功能入口（P1-6：/parent/progress 路由不存在——完整报告页待建；订阅后点击提示而非 404 导航） */}
+        {/* 付费功能入口（V0.6.15：完整报告页已建——/parent/progress + /parent/weakness；订阅后导航，未订阅弹开通） */}
         <Card 
           className={cn(
             'p-4 cursor-pointer transition-all',
@@ -316,8 +314,10 @@ function ParentDashboardPage() {
             if (!isSubscribed) {
               setShowSubscribeDialog(true);
             } else {
-              // 完整报告页（进度趋势/薄弱知识点）为后续迭代项，路由未建；此处提示避免 404
-              alert('完整报告页将在后续版本上线，敬请期待');
+              // V0.6.15 T3：订阅后导航完整报告（?studentId 查询参数，validateSearch 先例）
+              if (selectedChild) {
+                navigate({ to: '/parent/progress', search: { studentId: selectedChild.studentId } });
+              }
             }
           }}
         >

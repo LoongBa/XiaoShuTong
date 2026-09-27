@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthLoginRouteImport } from './routes/auth/login'
 import { Route as AuthPrivacyRouteImport } from './routes/auth/privacy'
 import { Route as ParentDashboardRouteImport } from './routes/parent/dashboard'
+import { Route as ParentProgressRouteImport } from './routes/parent/progress'
+import { Route as ParentWeaknessRouteImport } from './routes/parent/weakness'
 import { Route as StudentHomeRouteImport } from './routes/student/home'
 import { Route as StudentRankRouteImport } from './routes/student/rank'
 import { Route as TeacherDashboardRouteImport } from './routes/teacher/dashboard'
@@ -44,6 +46,16 @@ const AuthPrivacyRoute = AuthPrivacyRouteImport.update({
 const ParentDashboardRoute = ParentDashboardRouteImport.update({
   id: '/parent/dashboard',
   path: '/parent/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParentProgressRoute = ParentProgressRouteImport.update({
+  id: '/parent/progress',
+  path: '/parent/progress',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParentWeaknessRoute = ParentWeaknessRouteImport.update({
+  id: '/parent/weakness',
+  path: '/parent/weakness',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StudentHomeRoute = StudentHomeRouteImport.update({
@@ -112,6 +124,8 @@ export interface FileRoutesByFullPath {
   '/auth/login': typeof AuthLoginRoute
   '/auth/privacy': typeof AuthPrivacyRoute
   '/parent/dashboard': typeof ParentDashboardRoute
+  '/parent/progress': typeof ParentProgressRoute
+  '/parent/weakness': typeof ParentWeaknessRoute
   '/student/home': typeof StudentHomeRoute
   '/student/rank': typeof StudentRankRoute
   '/teacher/dashboard': typeof TeacherDashboardRoute
@@ -130,6 +144,8 @@ export interface FileRoutesByTo {
   '/auth/login': typeof AuthLoginRoute
   '/auth/privacy': typeof AuthPrivacyRoute
   '/parent/dashboard': typeof ParentDashboardRoute
+  '/parent/progress': typeof ParentProgressRoute
+  '/parent/weakness': typeof ParentWeaknessRoute
   '/student/home': typeof StudentHomeRoute
   '/student/rank': typeof StudentRankRoute
   '/teacher/dashboard': typeof TeacherDashboardRoute
@@ -149,6 +165,8 @@ export interface FileRoutesById {
   '/auth/login': typeof AuthLoginRoute
   '/auth/privacy': typeof AuthPrivacyRoute
   '/parent/dashboard': typeof ParentDashboardRoute
+  '/parent/progress': typeof ParentProgressRoute
+  '/parent/weakness': typeof ParentWeaknessRoute
   '/student/home': typeof StudentHomeRoute
   '/student/rank': typeof StudentRankRoute
   '/teacher/dashboard': typeof TeacherDashboardRoute
@@ -169,6 +187,8 @@ export interface FileRouteTypes {
     | '/auth/login'
     | '/auth/privacy'
     | '/parent/dashboard'
+    | '/parent/progress'
+    | '/parent/weakness'
     | '/student/home'
     | '/student/rank'
     | '/teacher/dashboard'
@@ -187,6 +207,8 @@ export interface FileRouteTypes {
     | '/auth/login'
     | '/auth/privacy'
     | '/parent/dashboard'
+    | '/parent/progress'
+    | '/parent/weakness'
     | '/student/home'
     | '/student/rank'
     | '/teacher/dashboard'
@@ -205,6 +227,8 @@ export interface FileRouteTypes {
     | '/auth/login'
     | '/auth/privacy'
     | '/parent/dashboard'
+    | '/parent/progress'
+    | '/parent/weakness'
     | '/student/home'
     | '/student/rank'
     | '/teacher/dashboard'
@@ -224,6 +248,8 @@ export interface RootRouteChildren {
   AuthLoginRoute: typeof AuthLoginRoute
   AuthPrivacyRoute: typeof AuthPrivacyRoute
   ParentDashboardRoute: typeof ParentDashboardRoute
+  ParentProgressRoute: typeof ParentProgressRoute
+  ParentWeaknessRoute: typeof ParentWeaknessRoute
   StudentHomeRoute: typeof StudentHomeRoute
   StudentRankRoute: typeof StudentRankRoute
   TeacherDashboardRoute: typeof TeacherDashboardRoute
@@ -266,6 +292,20 @@ declare module '@tanstack/react-router' {
       path: '/parent/dashboard'
       fullPath: '/parent/dashboard'
       preLoaderRoute: typeof ParentDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parent/progress': {
+      id: '/parent/progress'
+      path: '/parent/progress'
+      fullPath: '/parent/progress'
+      preLoaderRoute: typeof ParentProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parent/weakness': {
+      id: '/parent/weakness'
+      path: '/parent/weakness'
+      fullPath: '/parent/weakness'
+      preLoaderRoute: typeof ParentWeaknessRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/student/home': {
@@ -360,6 +400,8 @@ const rootRouteChildren: RootRouteChildren = {
   AuthLoginRoute: AuthLoginRoute,
   AuthPrivacyRoute: AuthPrivacyRoute,
   ParentDashboardRoute: ParentDashboardRoute,
+  ParentProgressRoute: ParentProgressRoute,
+  ParentWeaknessRoute: ParentWeaknessRoute,
   StudentHomeRoute: StudentHomeRoute,
   StudentRankRoute: StudentRankRoute,
   TeacherDashboardRoute: TeacherDashboardRoute,
