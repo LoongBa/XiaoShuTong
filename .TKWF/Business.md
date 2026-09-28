@@ -235,7 +235,7 @@
 | 搭子-BR-14 | 发起邀请：accepted 搭子数 ≥5 → 6003 | StudyBuddies | 8.1 |
 | 搭子-BR-15 | 当日邀请 >10 → 6005（Redis TTL 24h） | StudyBuddies | 8.1 |
 | 搭子-BR-16 | 非同群组/同年级 → 6006（OR 语义） | StudyBuddies, GroupMembers | 8.1 |
-| 搭子-BR-17 | 重复邀请：accepted 恒阻塞，pending 仅未过期（ExpiresAt ≥ now）阻塞；过期 pending 惰性豁免放行重邀 → 6002（V0.6.19 修订：只看 Status 不看 ExpiresAt 的旧口径导致过期邀请永久阻塞重邀） | StudyBuddies | 8.1 |
+| 搭子-BR-17 | 重复邀请：accepted 恒阻塞，pending 仅未过期（ExpiresAt ≥ now）阻塞；过期 pending 惰性豁免放行重邀 → 6002（V0.6.19 修订：只看 Status 不看 ExpiresAt 的旧口径导致过期邀请永久阻塞重邀）。**（V0.7.0 扩展：Removed 状态复用复活）**——removeBuddy 解除后（Status=Removed）重邀经复用复活原记录（刷新 InvitedAt/ExpiresAt=+7 天 + 状态置 Pending），不新建——StudyBuddies 有 UNIQUE(InviterId,InviteeId) 约束，新建会冲突（走查实证 UNIQUE constraint failed）；V0.6.19 仅修 Pending 过期漏 Removed，V0.7.0 补齐 | StudyBuddies | 8.1 |
 | 搭子-BR-18 | 邀请 ExpiresAt = InvitedAt + 7 天 | StudyBuddies | 8.1 |
 | 搭子-BR-19 | 同意邀请：邀请不存在 → 6001 | StudyBuddies | 8.2 |
 | 搭子-BR-20 | 邀请过期/已处理 → 6002 | StudyBuddies | 8.2 |

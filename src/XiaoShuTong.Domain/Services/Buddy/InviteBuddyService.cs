@@ -72,15 +72,17 @@ internal class InviteBuddyService(DomainUser<XiaoShuTongUserInfo> user)
         if (hasBlocking)
             return new InviteBuddyResDto { Success = false, ErrorCode = BuddyErrorCodes.BuddyInviteExpired };
 
-        // V0.6.19 惰性过期豁免：同方向过期 Pending 复用复活（不再 6002 阻塞重邀）
+        // V0.6.19 惰性过期豁免 + V0.7.0 解除后重邀豁免：同方向过期 Pending 或 Removed 复用复活（不再 6002 阻塞重邀）
         // StudyBuddies 有 UNIQUE(InviterId, InviteeId) 约束，同方向仅一条记录——重邀 = 刷新时间戳复用，不新建
+        // Pending 到此处必为过期（未过期已被 hasBlocking 拦截）；Removed 为解除后状态（BR-31 历史保留，重邀复用复活不新建避免 UNIQUE 冲突）
         var staleSameDirection = existing.FirstOrDefault(
             b => b.InviterId == userId && b.InviteeId == request.InviteeUserId
-                 && b.Status == BuddyStatus.Pending); // 到此处必为过期 Pending（未过期已被 hasBlocking 拦截）
+                 && b.Status is BuddyStatus.Pending or BuddyStatus.Removed);
         if (staleSameDirection != null)
         {
             staleSameDirection.InvitedAt = now;
             staleSameDirection.ExpiresAt = now.AddDays(7);
+            staleSameDirection.Status = BuddyStatus.Pending;
             await BuddiesDs.EntityUpdateAsync(staleSameDirection, ct);
             return new InviteBuddyResDto { Success = true, InviteId = staleSameDirection.UId, ExpiresAt = staleSameDirection.ExpiresAt };
         }

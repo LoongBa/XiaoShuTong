@@ -255,4 +255,36 @@ public class InviteBuddyServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         Assert.False(result.Success);
         Assert.Equal(BuddyErrorCodes.BuddyInviteExpired, result.ErrorCode); // accepted 恒阻塞（跨方向过期不影响）
     }
+
+    /// <summary>V0.7.0 走查发现（走查日志实证）: Removed（解除后）记录复用复活——removeBuddy 解除后重邀不再撞 UNIQUE(InviterId,InviteeId)（V0.6.19 仅修 Pending 过期，漏 Removed）</summary>
+    [Fact]
+    public async Task ExecuteAsync_RemovedRow_ReinviteReusesSameRow()
+    {
+        var userId = SetUser(81010);
+        await SeedGroupAsync($"group-buddy-{81010}", "七年级", userId, 81704);
+        var buddiesDs = User.Use<StudyBuddiesDataService>();
+        var removedUid = UidGenerator.NewId();
+        await buddiesDs.EntityCreateAsync(new StudyBuddies
+        {
+            UId = removedUid,
+            InviterId = userId,
+            InviteeId = 81704,
+            Status = BuddyStatus.Removed, // removeBuddy 解除后状态
+            InvitedAt = DateTime.UtcNow.AddDays(-3),
+            ExpiresAt = DateTime.UtcNow.AddDays(4),
+        }, TestContext.Current.CancellationToken);
+        var svc = User.Use<InviteBuddyService>();
+        var before = DateTime.UtcNow;
+
+        var result = await svc.ExecuteAsync(new InviteBuddyReqDto { InviteeUserId = 81704 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success); // 解除后可重邀（不撞 UNIQUE）
+        Assert.Equal(removedUid, result.InviteId); // 复用原记录 UId（非新建——避免 UNIQUE 冲突）
+        Assert.Equal(BuddyStatus.Pending, (await buddiesDs.EntityGetAsync(x => x.UId == removedUid, ct: TestContext.Current.CancellationToken)).Status); // 状态复活为 Pending
+        Assert.InRange(result.ExpiresAt, before.AddDays(6.9), before.AddDays(7.1)); // ExpiresAt 刷新 +7 天（BR-18）
+
+        // 同方向仍只有一条记录（UNIQUE 约束未被破坏）
+        var rows = await buddiesDs.EntitySelectAsync(x => x.InviterId == userId && x.InviteeId == 81704, ct: TestContext.Current.CancellationToken);
+        Assert.Single(rows);
+    }
 }

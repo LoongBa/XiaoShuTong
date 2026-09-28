@@ -28,6 +28,25 @@
 
 ---
 
+## 2026-09-29 — [Rule] — 搭子-BR-17 扩展：Removed 状态复用复活（解除后重邀不撞 UNIQUE）
+
+**类别标签**：`Rule`
+
+**涉及模块**：`.TKWF/Business.md`（搭子-BR-17 追加 "V0.7.0 扩展" 段）+ `XiaoShuTong.Services.Buddy.InviteBuddyService`（staleSameDirection 复用分支状态匹配扩展）+ `tests/XiaoShuTong.Tests/Buddy/InviteBuddyServiceTests.cs`（新增 `ExecuteAsync_RemovedRow_ReinviteReusesSameRow`）
+
+**上下文**：
+> V0.7.0 浏览器走查（API 级契约实证）发现：removeBuddy 解除搭子后（关系 Status=Removed），再次邀请同一人时 **INTERNAL_ERROR（UNIQUE constraint failed: StudyBuddies.InviterId, StudyBuddies.InviteeId）**。根因：V0.6.19 复用复活分支仅匹配 `Status == Pending`（过期 Pending 豁免），**漏了 Removed 状态**——Removed 记录经 `hasBlocking` 不拦截（解除后可重邀语义正确），但 `staleSameDirection` 匹配 Pending 不命中 → 落入 BR-18 `EntityCreateAsync` 新建 → 同方向已有记录（UNIQUE 约束）→ SQLite constraint failed → INTERNAL_ERROR。
+
+**决策/修复**：
+> 复用复活分支的状态匹配由 `Pending` 扩展为 `Pending or Removed`：Removed 记录重邀时**复用原记录**（刷新 InvitedAt/ExpiresAt=+7天 + **Status 置 Pending**），返回原 UId——同方向恒单记录（UNIQUE 不破坏）；语义 = 解除后重新邀请为全新邀请计时（BR-17/18 同口径）。新增测试锁定：Removed 重邀 Success=true + 复用原 UId + Status 复活 Pending + ExpiresAt +7 天 + 单记录断言。
+
+**避坑指南**：
+> - **复用复活的状态匹配必须含 Removed**——只匹配 Pending 时解除后重邀会撞 UNIQUE（走查实证的缺陷）；
+> - Status 复位为 Pending 是复用复活关键步骤（勿忘）；
+> - V0.6.19 修复锁定的是"过期 Pending"，V0.7.0 走查补充"Removed"——覆盖解除语义的完整重邀路径。
+
+---
+
 ## 2026-09-29 — [Rule] — 搭子-BR-33 候选列表扩展：同群组 或 同年级（OR 语义对齐 BR-16）
 
 **类别标签**：`Rule`
