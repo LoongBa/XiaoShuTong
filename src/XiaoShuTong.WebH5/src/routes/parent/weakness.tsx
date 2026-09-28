@@ -12,6 +12,8 @@ import {
   AlertCircle,
   Lock,
   Target,
+  BookOpen,
+  ChevronDown,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -41,6 +43,8 @@ function ParentWeaknessPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [errorCode, setErrorCode] = useState<string | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
+  // 下钻展开：记录当前展开的薄弱点卡（key = subject::knowledgePoint::idx，同一时刻仅展开一张）
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
   // 检查登录状态
   useEffect(() => {
@@ -179,22 +183,80 @@ function ParentWeaknessPage() {
                   <span className="text-xs text-muted-foreground">{points.length} 个薄弱点</span>
                 </h3>
                 <div className="space-y-2">
-                  {points.map((wp) => (
-                    <div
-                      key={wp.knowledgePoint}
-                      className="flex items-center justify-between p-2 rounded-lg bg-muted/50"
-                    >
-                      <span className="text-sm font-medium">{wp.knowledgePoint}</span>
-                      <div className="flex items-center gap-2">
-                        <span className={cn('text-xs px-2 py-0.5 rounded-full border', stateBadgeClass(wp.stateText))}>
-                          {wp.stateText}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {Math.round(wp.accuracy * 100)}%
-                        </span>
+                  {points.map((wp, idx) => {
+                    const rowKey = `${subject}::${wp.knowledgePoint}::${idx}`;
+                    const isExpanded = expandedKey === rowKey;
+                    // 篇目下钻：后端透出 ChapterId（null = 无篇目维度），QuestionIds 为关联题
+                    const hasChapter = wp.chapterId != null && wp.chapterId.trim().length > 0;
+                    const qCount = wp.questionIds?.length ?? 0;
+                    return (
+                      <div
+                        key={rowKey}
+                        className={cn('rounded-lg bg-muted/50', isExpanded && 'ring-1 ring-primary/20')}
+                      >
+                        <button
+                          type="button"
+                          onClick={() => setExpandedKey((prev) => (prev === rowKey ? null : rowKey))}
+                          className="w-full flex items-center justify-between gap-2 p-2 text-left"
+                          aria-expanded={isExpanded}
+                        >
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-sm font-medium">{wp.knowledgePoint}</span>
+                              <div className="flex items-center gap-2 shrink-0">
+                                <span className={cn('text-xs px-2 py-0.5 rounded-full border', stateBadgeClass(wp.stateText))}>
+                                  {wp.stateText}
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                  {Math.round(wp.accuracy * 100)}%
+                                </span>
+                              </div>
+                            </div>
+                            {/* 篇目下钻标识：仅当有 ChapterId 时显示（无则不显示下钻层级） */}
+                            {hasChapter && (
+                              <div className="mt-1 flex items-center gap-1.5">
+                                <span className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full border border-primary/20 bg-primary/5 text-primary">
+                                  <BookOpen className="w-3 h-3" />
+                                  章节 {wp.chapterId}
+                                </span>
+                                {qCount > 0 && (
+                                  <span className="text-[11px] text-muted-foreground">{qCount} 题</span>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                          <ChevronDown
+                            className={cn(
+                              'w-4 h-4 text-muted-foreground shrink-0 transition-transform',
+                              isExpanded && 'rotate-180',
+                            )}
+                          />
+                        </button>
+
+                        {/* 展开详情（轻量：章节提示 + 关联题列表；不跳转新路由，保留下钻扩展点） */}
+                        {isExpanded && (
+                          <div className="mx-2 mb-2 px-3 py-2 rounded-md bg-background border border-border text-xs">
+                            {hasChapter ? (
+                              <p className="text-muted-foreground">
+                                关联篇目/章节：
+                                <span className="text-foreground font-medium">{wp.chapterId}</span>
+                                {qCount > 0 && <>（{qCount} 道关联题）</>}
+                              </p>
+                            ) : (
+                              <p className="text-muted-foreground">暂无篇目维度数据</p>
+                            )}
+                            {qCount > 0 && wp.questionIds != null && (
+                              <ul className="mt-1 space-y-0.5 list-disc list-inside text-muted-foreground">
+                                {wp.questionIds.map((qid) => (
+                                  <li key={qid} className="truncate">{qid}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </Card>
             ))}

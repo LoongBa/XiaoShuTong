@@ -567,7 +567,9 @@ export const GetWeaknessReportResDtoSchema = {
       subject: { kind: "string" },
       knowledgePoint: { kind: "string" },
       accuracy: { kind: "number" },
-      stateText: { kind: "string" }
+      stateText: { kind: "string" },
+      chapterId: { kind: "string" },
+      questionIds: { kind: "array", element: { kind: "string" } }
   } } }
 } as const;
 export const ListChildrenResDtoSchema = {
@@ -1135,7 +1137,9 @@ export const ParentWeakPointDtoSchema = {
     subject: { kind: "string" },
     knowledgePoint: { kind: "string" },
     accuracy: { kind: "number" },
-    stateText: { kind: "string" }
+    stateText: { kind: "string" },
+    chapterId: { kind: "string" },
+    questionIds: { kind: "array", element: { kind: "string" } }
 } as const;
 export const ChildItemDtoSchema = {
     studentId: { kind: "number" },

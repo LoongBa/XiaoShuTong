@@ -1,5 +1,7 @@
+using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.DataServices.Parent;
+using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Entities.Parent;
 using XiaoShuTong.Services.Parent;
@@ -66,6 +68,42 @@ public class GetWeaknessReportServiceTests(XiaoShuTongDomainTestFixture fixture,
         }, TestContext.Current.CancellationToken);
     }
 
+    private async Task<Banks> SeedBankAsync(string bankId, Subject subject)
+    {
+        var ds = User.Use<BanksDataService>();
+        return await ds.EntityCreateAsync(new Banks
+        {
+            UId = UidGenerator.NewId(),
+            BankId = bankId,
+            Name = $"题库-{bankId}",
+            Subject = subject,
+            Purpose = BankPurpose.Memorize,
+            Privacy = BankPrivacy.Public,
+            OwnerId = null,
+            JsonPath = $"bank.{bankId}.json",
+            Tags = [],
+            Status = BankStatus.Active,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task SeedQuestionAsync(string questionId, string bankId, string? chapterId, string[] knowledgePoints)
+    {
+        var ds = User.Use<QuestionsDataService>();
+        await ds.EntityCreateAsync(new Questions
+        {
+            UId = UidGenerator.NewId(),
+            QuestionId = questionId,
+            BankId = bankId,
+            ChapterId = chapterId,
+            QType = QuestionType.R1,
+            Content = $"{{\"questionId\":\"{questionId}\"}}",
+            Keywords = "[]",
+            KnowledgePoints = knowledgePoints,
+            Difficulty = 0,
+            Status = QuestionStatus.Active,
+        }, TestContext.Current.CancellationToken);
+    }
+
     /// <summary>主流程 + BR-27：薄弱点按正确率升序 + 状态映射</summary>
     [Fact]
     public async Task ExecuteAsync_Subscribed_ReturnsWeakPointsAsc()
@@ -113,5 +151,101 @@ public class GetWeaknessReportServiceTests(XiaoShuTongDomainTestFixture fixture,
 
         Assert.False(result.Success);
         Assert.Equal(ParentErrorCodes.NoStatsData, result.ErrorCode);
+    }
+
+    /// <summary>C3 主路径：薄弱点反查得 ChapterId + QuestionIds（Subject → Banks → Questions → 内存 kp 过滤）</summary>
+    [Fact]
+    public async Task ExecuteAsync_WithQuestions_DrillsChapterAndQuestionIds()
+    {
+        var parentId = SetUser(11001);
+        await SeedRelationAsync(parentId, 19051);
+        await SeedSubscriptionAsync(parentId, 19051);
+        await SeedMasteryAsync(19051, "岳阳楼记", 0.3, MemoryState.NotMastered);
+        await SeedMasteryAsync(19051, "观沧海", 0.9, MemoryState.Proficient);
+        await SeedBankAsync("chinese-7to9", Subject.Chinese);
+        await SeedQuestionAsync("Q-ch-7a-0001", "chinese-7to9", "7a", ["岳阳楼记"]);
+        await SeedQuestionAsync("Q-ch-7a-0002", "chinese-7to9", "7b", ["观沧海"]);
+        var svc = User.Use<GetWeaknessReportService>();
+
+        var result = await svc.ExecuteAsync(new GetWeaknessReportReqDto { StudentId = 19051 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(2, result.WeakPoints.Count);
+        var weakest = result.WeakPoints[0]; // 岳阳楼记 0.3 最薄弱在前
+        Assert.Equal("岳阳楼记", weakest.KnowledgePoint);
+        Assert.Equal("7a", weakest.ChapterId);
+        Assert.Equal(new[] { "Q-ch-7a-0001" }, weakest.QuestionIds);
+        var second = result.WeakPoints[1];
+        Assert.Equal("观沧海", second.KnowledgePoint);
+        Assert.Equal("7b", second.ChapterId);
+        Assert.Equal(new[] { "Q-ch-7a-0002" }, second.QuestionIds);
+    }
+
+    /// <summary>C3：某知识点无关联题 → ChapterId=null + QuestionIds 空（不报错）</summary>
+    [Fact]
+    public async Task ExecuteAsync_PointWithoutQuestions_ReturnsEmptyDrill()
+    {
+        var parentId = SetUser(11002);
+        await SeedRelationAsync(parentId, 19052);
+        await SeedSubscriptionAsync(parentId, 19052);
+        await SeedMasteryAsync(19052, "岳阳楼记", 0.3, MemoryState.NotMastered);
+        await SeedMasteryAsync(19052, "滕王阁序", 0.8, MemoryState.Mastered);
+        await SeedBankAsync("chinese-7to9", Subject.Chinese);
+        await SeedQuestionAsync("Q-ch-7a-0001", "chinese-7to9", "7a", ["岳阳楼记"]);
+        var svc = User.Use<GetWeaknessReportService>();
+
+        var result = await svc.ExecuteAsync(new GetWeaknessReportReqDto { StudentId = 19052 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        var withQuestion = result.WeakPoints.Single(w => w.KnowledgePoint == "岳阳楼记");
+        Assert.Equal("7a", withQuestion.ChapterId);
+        Assert.Equal(new[] { "Q-ch-7a-0001" }, withQuestion.QuestionIds);
+        var withoutQuestion = result.WeakPoints.Single(w => w.KnowledgePoint == "滕王阁序");
+        Assert.Null(withoutQuestion.ChapterId);
+        Assert.Empty(withoutQuestion.QuestionIds);
+    }
+
+    /// <summary>C3：多题不同 ChapterId → 取首个非空（按 QuestionId 序，最小编号题目章节优先）</summary>
+    [Fact]
+    public async Task ExecuteAsync_MultipleChapters_TakesFirstNonNull()
+    {
+        var parentId = SetUser(11003);
+        await SeedRelationAsync(parentId, 19053);
+        await SeedSubscriptionAsync(parentId, 19053);
+        await SeedMasteryAsync(19053, "岳阳楼记", 0.3, MemoryState.NotMastered);
+        await SeedBankAsync("chinese-7to9", Subject.Chinese);
+        await SeedQuestionAsync("Q-ch-7a-0002", "chinese-7to9", "7b", ["岳阳楼记"]);
+        await SeedQuestionAsync("Q-ch-7a-0001", "chinese-7to9", "7a", ["岳阳楼记"]);
+        var svc = User.Use<GetWeaknessReportService>();
+
+        var result = await svc.ExecuteAsync(new GetWeaknessReportReqDto { StudentId = 19053 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        var weak = Assert.Single(result.WeakPoints);
+        Assert.Equal("7a", weak.ChapterId); // 首个非空（按 QuestionId 序）
+        Assert.Equal(new[] { "Q-ch-7a-0001", "Q-ch-7a-0002" }, weak.QuestionIds.OrderBy(q => q));
+    }
+
+    /// <summary>C3 RLS：他人（非本学生薄弱知识点/他学科题库）的题目不混入</summary>
+    [Fact]
+    public async Task ExecuteAsync_OtherQuestions_NotMixedIn()
+    {
+        var parentId = SetUser(11004);
+        await SeedRelationAsync(parentId, 19054);
+        await SeedSubscriptionAsync(parentId, 19054);
+        await SeedMasteryAsync(19054, "岳阳楼记", 0.3, MemoryState.NotMastered);
+        await SeedBankAsync("chinese-7to9", Subject.Chinese);
+        await SeedQuestionAsync("Q-ch-7a-0001", "chinese-7to9", "7a", ["岳阳楼记"]);  // 本学生薄弱点关联题 → 应包含
+        await SeedQuestionAsync("Q-ch-7a-0002", "chinese-7to9", "7b", ["滕王阁序"]);  // 他人知识点 → 不混入（内存 kp 过滤）
+        await SeedBankAsync("math-7to9", Subject.Math);
+        await SeedQuestionAsync("Q-ma-7a-0001", "math-7to9", "7a", ["岳阳楼记"]);     // 他学科题库同 kp → 不混入（题库收窄排除）
+        var svc = User.Use<GetWeaknessReportService>();
+
+        var result = await svc.ExecuteAsync(new GetWeaknessReportReqDto { StudentId = 19054 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        var weak = Assert.Single(result.WeakPoints);
+        Assert.Equal("岳阳楼记", weak.KnowledgePoint);
+        Assert.Equal(new[] { "Q-ch-7a-0001" }, weak.QuestionIds); // 仅本学生薄弱点关联题
     }
 }

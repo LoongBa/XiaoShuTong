@@ -291,7 +291,7 @@ type BuddyCandidateItemDto {
   userId: Long!
   "群内昵称（GroupMembers.Nickname；空串兜底 学生{userId}）"
   nickname: String!
-  "所属群 Id"
+  "所属群 Id（同群/同年级候选均天然携带来源群）"
   groupId: Long!
   "群名（Group.Name）"
   groupName: String!
@@ -1041,7 +1041,7 @@ type ListBuddyCandidatesResDto {
   success: Boolean!
   "错误码（失败时）"
   errorCode: String
-  "候选列表（同群学生成员，排除自己/已有搭子/Parent；多群去重）"
+  "候选列表（同群/同年级学生成员，排除自己/已有搭子/Parent；多群去重）"
   items: [BuddyCandidateItemDto!]!
 }
 
@@ -1223,6 +1223,10 @@ type ParentWeakPointDto {
   accuracy: Float!
   "状态家长端文案（未掌握/模糊/掌握/熟练）"
   stateText: String!
+  "章节/单元（该知识点关联题目的 Questions.ChapterId，多题不同章节取首个非空；无关联题 null）"
+  chapterId: String
+  "该知识点下关联题目 QuestionId 列表（无关联题空列表）"
+  questionIds: [String!]!
 }
 
 "待收邀请项 DTO"

@@ -163,7 +163,7 @@ export const operationSelection: Record<string, string> = {
   'submitPkAnswer_Execute': 'success errorCode isCorrect result confidence score',
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
   'updateModel': 'success errorCode uId',
-  'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText }',
+  'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText chapterId questionIds }',
   'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary answer isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
 } as const;
 
@@ -1390,6 +1390,8 @@ export interface ParentWeakPointDto {
   knowledgePoint: string;
   accuracy: number;
   stateText: string;
+  chapterId: string | null;
+  questionIds: Array<string>;
 }
 
 export interface ChildItemDto {
