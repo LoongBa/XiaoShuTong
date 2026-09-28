@@ -14,7 +14,7 @@ namespace XiaoShuTong.Services.Buddy;
 /// </summary>
 /// <remarks>
 /// BR-14 accepted 搭子数 ≥5 → 6003 | BR-15 当日邀请 >10 → 6005 | BR-16 同群组/同年级（OR）→ 6006
-/// BR-17 重复邀请（pending/accepted）→ 6002 | BR-18 ExpiresAt = +7 天
+/// BR-17 重复邀请（accepted 恒阻塞 / pending 仅未过期阻塞；过期 pending 豁免重邀）→ 6002 | BR-18 ExpiresAt = +7 天
 /// 同年级经 GroupMembers → Groups.Grade 交集推导（已决策）；账户域 Uid→Id 映射未实施，InviteeUserId 直接为 long Id。
 /// </remarks>
 [GenerateController]
@@ -63,12 +63,27 @@ internal class InviteBuddyService(DomainUser<XiaoShuTongUserInfo> user)
         if (!await IsSameGroupOrGradeAsync(userId, request.InviteeUserId, ct))
             return new InviteBuddyResDto { Success = false, ErrorCode = BuddyErrorCodes.BuddyGroupGradeRequired };
 
-        // BR-17：重复邀请（存在 pending/accepted 关系）→ 6002
-        var existing = await BuddiesDs.EntityGetAsync(
+        // BR-17：重复邀请（accepted 恒阻塞 / pending 仅未过期阻塞；过期 pending 惰性豁免）→ 6002
+        var existing = await BuddiesDs.EntitySelectAsync(
             x => (x.InviterId == userId && x.InviteeId == request.InviteeUserId)
-                 || (x.InviterId == request.InviteeUserId && x.InviteeId == userId), ct);
-        if (existing is { Status: BuddyStatus.Pending or BuddyStatus.Accepted })
+                 || (x.InviterId == request.InviteeUserId && x.InviteeId == userId), ct: ct);
+        var hasBlocking = existing.Any(b => b.Status == BuddyStatus.Accepted
+            || (b.Status == BuddyStatus.Pending && b.ExpiresAt >= now));
+        if (hasBlocking)
             return new InviteBuddyResDto { Success = false, ErrorCode = BuddyErrorCodes.BuddyInviteExpired };
+
+        // V0.6.19 惰性过期豁免：同方向过期 Pending 复用复活（不再 6002 阻塞重邀）
+        // StudyBuddies 有 UNIQUE(InviterId, InviteeId) 约束，同方向仅一条记录——重邀 = 刷新时间戳复用，不新建
+        var staleSameDirection = existing.FirstOrDefault(
+            b => b.InviterId == userId && b.InviteeId == request.InviteeUserId
+                 && b.Status == BuddyStatus.Pending); // 到此处必为过期 Pending（未过期已被 hasBlocking 拦截）
+        if (staleSameDirection != null)
+        {
+            staleSameDirection.InvitedAt = now;
+            staleSameDirection.ExpiresAt = now.AddDays(7);
+            await BuddiesDs.EntityUpdateAsync(staleSameDirection, ct);
+            return new InviteBuddyResDto { Success = true, InviteId = staleSameDirection.UId, ExpiresAt = staleSameDirection.ExpiresAt };
+        }
 
         // BR-18：创建邀请（Pending，ExpiresAt = +7 天）
         var buddy = await BuddiesDs.EntityCreateAsync(new StudyBuddies

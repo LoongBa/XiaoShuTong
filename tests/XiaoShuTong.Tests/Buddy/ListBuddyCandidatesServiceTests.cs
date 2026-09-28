@@ -70,6 +70,21 @@ public class ListBuddyCandidatesServiceTests(XiaoShuTongDomainTestFixture fixtur
         }, TestContext.Current.CancellationToken);
     }
 
+    /// <summary>种子过期 Pending 邀请（ExpiresAt 过去，惰性过期语义——Status 保留 Pending）</summary>
+    private async Task SeedExpiredPendingBuddyAsync(long inviterId, long inviteeId)
+    {
+        var ds = User.Use<StudyBuddiesDataService>();
+        await ds.EntityCreateAsync(new StudyBuddies
+        {
+            UId = UidGenerator.NewId(),
+            InviterId = inviterId,
+            InviteeId = inviteeId,
+            Status = BuddyStatus.Pending,
+            InvitedAt = DateTime.UtcNow.AddDays(-8),
+            ExpiresAt = DateTime.UtcNow.AddDays(-1),
+        }, TestContext.Current.CancellationToken);
+    }
+
     /// <summary>BR-33 主路径：同群学生成员入候选（昵称 + 群名）</summary>
     [Fact]
     public async Task ExecuteAsync_SameGroupStudents_ReturnsCandidates()
@@ -190,5 +205,27 @@ public class ListBuddyCandidatesServiceTests(XiaoShuTongDomainTestFixture fixtur
         Assert.True(result.Success); // 非群主成员身份即可查（BR-34）
         Assert.Single(result.Items);
         Assert.Equal(48161, result.Items[0].UserId);
+    }
+
+    /// <summary>BR-33 修正：过期 Pending 恢复候选（惰性过期豁免，V0.6.19）</summary>
+    [Fact]
+    public async Task ExecuteAsync_ExpiredPending_RestoresCandidate()
+    {
+        var meId = SetUser(48170);
+        var group = await SeedGroupAsync(999989, "七(7)班");
+        await SeedMemberAsync(group.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(group.Id, 48171, MemberRole.Student, "小红");   // 过期 Pending → 恢复候选
+        await SeedMemberAsync(group.Id, 48172, MemberRole.Student, "小刚");   // 未过期 Pending → 仍排除
+        await SeedMemberAsync(group.Id, 48173, MemberRole.Student, "小丽");   // 可邀
+        await SeedExpiredPendingBuddyAsync(meId, 48171); // 过期 Pending（Status 仍 Pending）
+        await SeedBuddyAsync(meId, 48172, BuddyStatus.Pending); // 未过期 Pending
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var candidateIds = result.Items.Select(c => c.UserId).ToArray();
+        Assert.Contains(48171, candidateIds); // 过期 Pending 恢复候选
+        Assert.DoesNotContain(48172, candidateIds); // 未过期 Pending 仍排除
+        Assert.Contains(48173, candidateIds);        // 可邀保留
     }
 }

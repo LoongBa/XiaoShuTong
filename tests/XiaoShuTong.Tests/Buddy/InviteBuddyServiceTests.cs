@@ -70,6 +70,21 @@ public class InviteBuddyServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         }, TestContext.Current.CancellationToken);
     }
 
+    /// <summary>种子过期 Pending 邀请（ExpiresAt 过去，惰性过期语义——Status 保留 Pending）</summary>
+    private async Task SeedExpiredPendingAsync(long inviterId, long inviteeId)
+    {
+        var ds = User.Use<StudyBuddiesDataService>();
+        await ds.EntityCreateAsync(new StudyBuddies
+        {
+            UId = UidGenerator.NewId(),
+            InviterId = inviterId,
+            InviteeId = inviteeId,
+            Status = BuddyStatus.Pending,
+            InvitedAt = DateTime.UtcNow.AddDays(-8),
+            ExpiresAt = DateTime.UtcNow.AddDays(-1),
+        }, TestContext.Current.CancellationToken);
+    }
+
     /// <summary>主流程 + BR-18：同群组邀请成功 + ExpiresAt = +7 天</summary>
     [Fact]
     public async Task ExecuteAsync_SameGroup_CreatesInviteWith7DayExpiry()
@@ -178,5 +193,66 @@ public class InviteBuddyServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
 
         Assert.False(result.Success);
         Assert.Equal(BuddyErrorCodes.BuddyInviteDailyLimit, result.ErrorCode);
+    }
+
+    /// <summary>BR-17 修正：过期 Pending（惰性过期）复用复活——同方向重邀放行且复用原记录（维持 UNIQUE(InviterId,InviteeId) 单记录约束）（V0.6.19）</summary>
+    [Fact]
+    public async Task ExecuteAsync_ExpiredPending_ReinviteReusesSameRow()
+    {
+        var userId = SetUser(81007);
+        await SeedGroupAsync($"group-buddy-{81007}", "七年级", userId, 81701);
+        var buddiesDs = User.Use<StudyBuddiesDataService>();
+        var staleUid = UidGenerator.NewId();
+        await buddiesDs.EntityCreateAsync(new StudyBuddies
+        {
+            UId = staleUid,
+            InviterId = userId,
+            InviteeId = 81701,
+            Status = BuddyStatus.Pending,
+            InvitedAt = DateTime.UtcNow.AddDays(-8),
+            ExpiresAt = DateTime.UtcNow.AddDays(-1), // 过期 Pending（Status 仍 Pending）
+        }, TestContext.Current.CancellationToken);
+        var svc = User.Use<InviteBuddyService>();
+        var before = DateTime.UtcNow;
+
+        var result = await svc.ExecuteAsync(new InviteBuddyReqDto { InviteeUserId = 81701 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success); // 过期豁免，放行重邀
+        Assert.Equal(staleUid, result.InviteId); // 复用原记录 UId（非新建）
+        Assert.InRange(result.ExpiresAt, before.AddDays(6.9), before.AddDays(7.1)); // ExpiresAt 刷新 +7 天（BR-18）
+
+        // 同方向仍只有一条记录（UNIQUE 约束未被破坏）
+        var rows = await buddiesDs.EntitySelectAsync(x => x.InviterId == userId && x.InviteeId == 81701, ct: TestContext.Current.CancellationToken);
+        Assert.Single(rows);
+    }
+
+    /// <summary>BR-17 修正（Oracle C3）：过期 Pending 反向豁免——收到过对方过期邀请的人可反向邀请对方（V0.6.19）</summary>
+    [Fact]
+    public async Task ExecuteAsync_ExpiredPending_ReverseDirectionAllowsInvite()
+    {
+        var userId = SetUser(81008); // 我是被邀请方（历史上收到过 81702 的过期邀请）
+        await SeedGroupAsync($"group-buddy-{81008}", "七年级", userId, 81702);
+        await SeedExpiredPendingAsync(81702, userId); // 反向：81702 曾邀请我，已过期
+        var svc = User.Use<InviteBuddyService>();
+
+        var result = await svc.ExecuteAsync(new InviteBuddyReqDto { InviteeUserId = 81702 }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success); // 反向过期也豁免
+    }
+
+    /// <summary>BR-17 修正（Oracle M2）：跨方向并存（对方过期邀请 + 我已接受）仍阻塞——EntitySelectAsync 全量判定防误放行（V0.6.19）</summary>
+    [Fact]
+    public async Task ExecuteAsync_OtherDirectionExpired_ButAcceptedExists_StillReturns6002()
+    {
+        var userId = SetUser(81009);
+        await SeedGroupAsync($"group-buddy-{81009}", "七年级", userId, 81703);
+        await SeedExpiredPendingAsync(81703, userId); // 对方 → 我（过期 Pending，跨方向）
+        await SeedAcceptedAsync(userId, 81703);       // 我 → 对方（已 accepted）
+        var svc = User.Use<InviteBuddyService>();
+
+        var result = await svc.ExecuteAsync(new InviteBuddyReqDto { InviteeUserId = 81703 }, TestContext.Current.CancellationToken);
+
+        Assert.False(result.Success);
+        Assert.Equal(BuddyErrorCodes.BuddyInviteExpired, result.ErrorCode); // accepted 恒阻塞（跨方向过期不影响）
     }
 }

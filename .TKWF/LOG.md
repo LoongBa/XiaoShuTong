@@ -290,3 +290,13 @@ ull=全库、[]=显式空集（BR-18 空结果）；白名单非空短路混合�
 **决策/修复**：① BR-35 待收列表语义——InviteeId=me + Pending + ExpiresAt ≥ now（惰性过期不落库，与 accept/reject 6002 的 `ExpiresAt < now` 互补一致）；② BR-36 只读 + GroupMembers.Nickname（null 兜底 学生{userId}）+ InvitedAt 倒序 + 无分页（量级受 BR-15 ≤10/日 + BR-18 +7 天约束 ≈70 条，与 ListBuddies/ListBuddyCandidates 同范式）；③ §3.4 状态机图注 Expired 惰性语义（枚举存在但不落库）。
 
 **避坑指南**：惰性过期副作用——BR-17 重复邀请判断只看 Status 不看 ExpiresAt，已过期未处理的 Pending 仍命中 →6002 阻塞对方重邀；本轮不修正（待收查询只读不触碰写路径），后续迭代修正 BR-17 查询条件（追加 ExpiresAt >= now）。
+
+### 2026-09-28 — [Rule] — V0.6.19 修订搭子-BR-17/BR-33（过期 Pending 惰性豁免）
+
+**涉及模块**：Business.md（搭子域 BR-17/BR-33 修订 + BR-35 副作用段更新 + §3.4 注同步 + 头部 v4→v5）
+
+**上下文**：V0.6.18 审核报告 §八 遗留项 #1「BR-17 惰性过期副作用修正（建议 V0.6.19+）」。Oracle 评审（V0.6.19 方案，bg_50cd05d5 附条件通过 M1-M3/C1-C3 全闭环）确认：过期豁免口径 accepted 恒阻塞 / pending 未过期阻塞 / 过期豁免；EntityGetAsync→EntitySelectAsync 全量判定必要（防同对多记录误放行）；BR-33 同步是 BR-17 修正生效的前端可达前置。
+
+**决策/修复**：① BR-17 修订——重复邀请判定由"存在 pending/accepted → 6002"改为"accepted 恒阻塞 / pending 仅未过期（ExpiresAt ≥ now）阻塞；过期 pending 豁免放行重邀"；② BR-33 候选排除同步同口径（过期 pending 恢复候选）；③ BR-35 副作用段由"本轮不修正，后续迭代修正"更新为"V0.6.19 已修正"；④ §3.4 状态机注同步副作用状态。
+
+**避坑指南**：accepted 恒阻塞是关系已建立语义（重邀应走 removeBuddy 后）；不能无脑在查询条件加 `ExpiresAt >= now` 过滤（会漏掉 ExpiresAt 已过的 accepted 关系而错误放行）——必须全量取回后按"accepted ∥ (pending && ExpiresAt≥now)"内存判定。

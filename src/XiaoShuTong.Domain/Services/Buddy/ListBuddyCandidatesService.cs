@@ -51,7 +51,7 @@ internal class ListBuddyCandidatesService(DomainUser<XiaoShuTongUserInfo> user)
         if (sameGroupMembers.Count == 0)
             return new ListBuddyCandidatesResDto { Success = true, Items = [] };
 
-        // BR-33 Step3：排除已有搭子关系（Pending/Accepted，双向）
+        // BR-33 Step3：排除已有搭子关系（accepted 恒排 / pending 仅未过期排；过期 pending 惰性豁免恢复候选，双向）
         var candidateUserIds = sameGroupMembers
             .Select(m => m.UserId)
             .Distinct()
@@ -62,7 +62,8 @@ internal class ListBuddyCandidatesService(DomainUser<XiaoShuTongUserInfo> user)
                  || (candidateUserIds.Contains(x.InviterId) && x.InviteeId == meId),
             ct: ct);
         var excludedIds = existingPairs
-            .Where(b => b.Status is BuddyStatus.Pending or BuddyStatus.Accepted)
+            .Where(b => b.Status == BuddyStatus.Accepted
+                || (b.Status == BuddyStatus.Pending && b.ExpiresAt >= DateTime.UtcNow))
             .Select(b => b.InviterId == meId ? b.InviteeId : b.InviterId)
             .ToHashSet();
 
