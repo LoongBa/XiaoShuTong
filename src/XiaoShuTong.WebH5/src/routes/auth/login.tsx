@@ -7,6 +7,7 @@ import { MessageSquare, Loader2 } from 'lucide-react';
 import { Tkwf } from '@tkwf/tsclient';
 import { APP_NAME } from '@/config/app';
 import type { User, UserRole } from '@/types';
+import type { ExtensionEntry } from '@/gql/ts-client.g';
 import { cn } from '@/lib/utils';
 
 // ── 联调账号（V0.6.11：三端走查解锁；生产走真实微信授权由后端判身份，此区块废弃移除）──
@@ -20,10 +21,39 @@ const DEV_ACCOUNTS: DevAccount[] = [
   { userName: 'parent01', label: '家长 · 家长' },
 ];
 
-// role 映射（M1：后端业务身份 → 前端路由语义的永久适配层；生产 extensions 透出后输入源改 extensions.role，映射逻辑保留）
+// role 映射（M1：后端业务身份 → 前端路由语义的永久适配层）
+// 输入源优先级：extensions.role（生产透出）→ userName 白名单映射（联调 fallback）
 // 对齐后端白名单 Roles（XiaoShuTongUserHelper.cs:46-76）：xiaoming→student / owner01→owner / parent01→parent
 // owner→teacher：前端 UserRole 无 owner，owner01="群主老师" 语义即 teacher 端（路由 /teacher/dashboard）
-function resolveRole(userName: string): UserRole {
+
+// 提取约定键 role 的扩展值（兼容 null/undefined/空数组/缺失键/空串）
+function extractRoleFromExtensions(extensions: Array<ExtensionEntry> | null | undefined): string | null {
+  if (!extensions || extensions.length === 0) return null;
+  const value = extensions.find((e) => e.key === 'role')?.value ?? null;
+  return value && value.trim() !== '' ? value.trim() : null;
+}
+
+// 归一 exposed role → 前端三态：owner→teacher（V0.6.11 M1 语义：前端 UserRole 无 owner）；未知值返回 null 走 userName fallback
+function normalizeExposedRole(value: string): UserRole | null {
+  switch (value) {
+    case 'owner':
+    case 'teacher': return 'teacher';
+    case 'parent': return 'parent';
+    case 'student': return 'student';
+    default: return null;
+  }
+}
+
+function resolveRole(
+  userName: string | null | undefined,
+  extensions: Array<ExtensionEntry> | null | undefined,
+): UserRole {
+  // 优先消费 extensions.role（生产透出）；缺失/空/未知 → fallback userName 白名单映射（映射逻辑完整保留）
+  const exposed = extractRoleFromExtensions(extensions);
+  if (exposed) {
+    const normalized = normalizeExposedRole(exposed);
+    if (normalized) return normalized;
+  }
   switch (userName) {
     case 'owner01': return 'teacher';
     case 'parent01': return 'parent';
@@ -77,8 +107,12 @@ function LoginPage() {
       if (payload.success) {
         // session 已由 SDK 持久化到 localStorage（Tkwf.User 后续可用）
 
-        // 创建本地用户对象（M2：id mock 占位，注释标注非对齐后端 userId；role 由 userName 映射）
-        const role = resolveRole(payload.userName ?? devUser);
+        // 创建本地用户对象（M2：id mock 占位，注释标注非对齐后端 userId；role 由 extensions.role（生产透出）优先、userName 白名单降级）
+        // SDK loginByContext 返回 SDK 平铺 LoginPayload（类型缺 extensions，运行时 MockTransport/后端均透传 extensions），以 gql 契约扩展类型读取
+        const role = resolveRole(
+          payload.userName ?? devUser,
+          (payload as typeof payload & { extensions?: Array<ExtensionEntry> | null }).extensions ?? [],
+        );
         const mockUser: User = {
           id: role === 'teacher' ? 'owner-1' : role === 'parent' ? 'parent-1' : 'student-1', // mock 占位，非后端 userId(10001/2/3)
           name: payload.displayName || DEV_ACCOUNTS.find(a => a.userName === (payload.userName ?? devUser))?.label.split(' · ')[1] || '用户',
