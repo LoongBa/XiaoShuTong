@@ -503,6 +503,20 @@ public partial class XiaoShuTongDomainInitializer
                 CreateTime = now,
                 UpdateTime = now,
             } as StudyBuddies).ExecuteAffrowsAsync();
+            // V0.7.0 走查可达性修复：小刚回邀小明（10012→10001 Pending）——白名单仅 xiaoming(10001)/owner01/parent01 可登录，
+            // 原 10001→10012 为小明已发送（待收需登录者为 InviteeId），小刚不可登录 → 小明待收恒空无法实证待收区块。
+            // 补反向邀请使小明（可登录）可见待收，实证 accept/reject/removeBuddy 链路（UId 独立，与已发送方向无歧义）。
+            await repo.Insert(new StudyBuddies
+            {
+                UId = UidGenerator.NewId(),
+                InviterId = SeedStudentCId, // 小刚发出
+                InviteeId = SeedStudentId,  // 小明待接受
+                Status = BuddyStatus.Pending,
+                InvitedAt = now.AddDays(-1),
+                ExpiresAt = now.AddDays(6),
+                CreateTime = now,
+                UpdateTime = now,
+            } as StudyBuddies).ExecuteAffrowsAsync();
         }
 
         /// <summary>插入 3 道《观沧海》R1 补全题（Keywords 组感知 JSON，对齐 SubmitAttemptServiceTests 范式）</summary>
