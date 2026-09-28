@@ -28,6 +28,31 @@
 
 ---
 
+## 2026-09-29 — [Rule] — 搭子-BR-33 候选列表扩展：同群组 或 同年级（OR 语义对齐 BR-16）
+
+**类别标签**：`Rule`
+
+**涉及模块**：`.TKWF/Business.md`（搭子-BR-33，头部 meta v5→v6）+ `XiaoShuTong.Services.Buddy.ListBuddyCandidatesService`（ExecuteAsync Step2-7 重写）
+
+**上下文**：
+> 候选列表（UC-8.1 好友发现前置）原仅返回**同群组**学生成员；而可邀资格（邀请服务 BR-16）是**同群组 或 同年级**（OR）。两者集合不一致导致"可邀但候选列表看不到"的漏斗缺口（如跨群同年级同学只能靠邀请码/间接方式触达）。Oracle M-5/M-6 采纳：候选列表扩展为与 BR-16 同口径的 OR 语义。
+
+**决策/修复**：
+> 修订搭子-BR-33：`同群组成员` → `同群组 或 同年级成员（Role=Student，OR 语义对齐 BR-16）`；展示/排除/去重语义不变（多群去重明确为跨群合并）。实现为**批量推导**（非逐个调 IsSameGroupOrGradeAsync）：
+> 1. 我的群 `myGroupIds`（GroupMembers 反查）→ 我的年级 `myGrades`（Groups.Grade 去重）
+> 2. 先 `Groups(Grade ∈ myGrades)` 收窄同年级群集（避免全库 GroupMembers 扫描）
+> 3. 候选群集 = `gradeGroupIds ∪ myGroupIds`，一次批量 Query 学生成员（Role=Student 且非自己）
+> 4. 排除已有关系（V0.6.19 惰性过期口径不变）+ 群名映射（myGroups ∪ gradeGroups 一次覆盖，防 N+1）+ 多群同人 GroupBy 去重（OrderBy GroupId 稳定取首行）
+> GroupMembers 无 ByGrade 条件方法，Groups 亦无按 Grade 查询条件——同年级收窄经 `myGrades.Contains(x.Grade)` 谓词翻译为 SQL IN，表达式树可翻译（与既有 ID 过滤/ Role 相等同型）。
+
+**避坑指南**：
+> - **候选集合必须与邀请资格集合口径一致**（BR-16 OR 语义）——否则"可邀却不可见"漏斗缺口；
+> - 批量候选场景禁止逐人调用邀请服务的 private 校验（会 N+1）——群集 IN 一次推导；
+> - 群未设年级（Grade=null）时该项不参与同年级推导，但**同群路径仍须保留**（`gradeGroupIds ∪ myGroupIds` 而非仅 gradeGroupIds，否则 null 年级群成员漏出）；
+> - 委托 subagent 前确认候选 GroupBy 的取行确定性（OrderBy GroupId 后再 First()），避免同人多群时输出不稳定。
+
+---
+
 ## 2026-09-09 — [Refactor] — GetWrongQuestionsService 跨域同名合并（Stats 版并入 Learning 版）
 
 **类别标签**：`Refactor`

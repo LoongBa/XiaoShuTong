@@ -1,6 +1,7 @@
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
+using TKW.Framework.Domain.Transactions;
 using XiaoShuTong.DataServices.Buddy;
 using XiaoShuTong.Entities.Buddy;
 
@@ -14,6 +15,8 @@ namespace XiaoShuTong.Services.Buddy;
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
+// V0.7.0（M-1）：对齐 AcceptBuddyInviteService 加 [Transactional]——单表单行写入，收益为对称性+维护一致性（非并发安全）
+[Transactional]
 internal class RejectBuddyInviteService(DomainUser<XiaoShuTongUserInfo> user)
     : DomainServiceBase<XiaoShuTongUserInfo>(user)
 {

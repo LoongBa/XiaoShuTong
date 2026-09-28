@@ -479,7 +479,7 @@ function RankPage() {
 
         {/* 学习搭子（V0.6.10：listBuddies_Execute 真实数据；加载中占位不闪现空态，Oracle M1） */}
         {!buddiesLoading && (
-              <StudyBuddySection buddies={buddies} onInvite={() => console.log('invite buddy')} onBuddyChanged={loadBuddies} />
+              <StudyBuddySection buddies={buddies} onBuddyChanged={loadBuddies} />
         )}
 
         {/* 激励文案 */}

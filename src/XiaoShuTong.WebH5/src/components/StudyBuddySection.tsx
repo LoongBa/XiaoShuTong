@@ -3,8 +3,9 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
-import { Tkwf } from '@tkwf/tsclient';
+import { DomainClientError, Tkwf } from '@tkwf/tsclient';
 import type {
+  Buddy_ExecuteService,
   BuddyCandidates_ExecuteService,
   InviteBuddy_ExecuteService,
   BuddyCandidateItemDto,
@@ -24,7 +25,6 @@ interface Buddy {
 
 interface StudyBuddySectionProps {
   buddies: Buddy[];
-  onInvite: () => void;
   // V0.6.18（Oracle M2）：accept 成功后刷新 rank.tsx 搭子列表（loadBuddies useCallback 复用）
   onBuddyChanged?: () => void;
 }
@@ -35,7 +35,7 @@ const MAX_BUDDIES = 5;
 const INVITE_ERROR_MESSAGES: Record<string, string> = {
   '6003': '学习搭子已满（最多 5 个）',
   '6005': '今日邀请次数已达上限',
-  '6006': '仅可邀请同班同学',
+  '6006': '仅可邀请同班或同年级同学',
   '6002': '已发送过邀请，请等待对方回应',
 };
 
@@ -46,6 +46,11 @@ const ACCEPT_REJECT_ERROR_MESSAGES: Record<string, string> = {
   '6003': '学习搭子已满（最多 5 个）',
 };
 
+// 任务5：removeBuddy_Execute 端错误码文案（BR-30/31/32 均返 6001=关系不存在/已解除）
+const REMOVE_ERROR_MESSAGES: Record<string, string> = {
+  '6001': '搭子关系不存在或已解除',
+};
+
 // V0.6.18：相对时间"X 天前"（当天显示"今天"）
 function daysAgo(iso: string): string {
   const diff = Date.now() - new Date(iso).getTime();
@@ -54,7 +59,7 @@ function daysAgo(iso: string): string {
   return `${days} 天前`;
 }
 
-export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBuddySectionProps) {
+export function StudyBuddySection({ buddies, onBuddyChanged }: StudyBuddySectionProps) {
   const [showInviteModal, setShowInviteModal] = useState(false);
   const [showPoster, setShowPoster] = useState(false);
   // V0.6.16：可邀候选（好友发现——同群学生成员；打开弹窗时拉取，Oracle C2 关闭后再开重拉）
@@ -68,6 +73,11 @@ export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBu
   const [pendingLoading, setPendingLoading] = useState(false);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [pendingError, setPendingError] = useState('');
+
+  // 任务5：解除搭子（removeBuddy_Execute）——确认弹窗目标 + 处理中禁点 + 错误提示
+  const [removeTarget, setRemoveTarget] = useState<Buddy | null>(null);
+  const [removingId, setRemovingId] = useState<string | null>(null);
+  const [removeError, setRemoveError] = useState('');
 
   const emptySlots = MAX_BUDDIES - buddies.length;
 
@@ -181,6 +191,39 @@ export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBu
     }
   };
 
+  // 任务5（F1）：解除搭子（removeBuddy_Execute；确认弹窗 → 成功关弹窗 + 刷新搭子列表，
+  //  6001 关系不存在/已解除 → 提示 + 列表权威重拉；网络异常 → 提示 + 不重拉）
+  const handleRemove = async (buddy: Buddy) => {
+    setRemovingId(buddy.id);
+    setRemoveError('');
+    try {
+      const res = await Tkwf.User.Use<Buddy_ExecuteService>().removeBuddy_Execute({
+        request: { buddyId: buddy.id },
+      });
+      if (res.success) {
+        setRemoveTarget(null); // 成功关确认弹窗
+        onBuddyChanged?.();    // 刷新 rank.tsx 搭子列表（解除立即可见）
+        return;
+      }
+      const code = res.errorCode ?? '';
+      if (code === '6001') {
+        setRemoveError(REMOVE_ERROR_MESSAGES[code] ?? '搭子关系不存在或已解除');
+        onBuddyChanged?.(); // 列表权威重拉（该搭子可能已被移除）
+        return;
+      }
+      setRemoveError('解除失败，请稍后重试');
+    } catch (err: unknown) {
+      // 网络异常 → 提示 + 不重拉（对齐 V0.6.18 C4，避免重拉失败雪崩）
+      setRemoveError(
+        err instanceof DomainClientError && err.message
+          ? err.message
+          : '网络错误，请稍后重试',
+      );
+    } finally {
+      setRemovingId(null); // 任何分支清空禁点状态
+    }
+  };
+
   const handleGeneratePoster = () => {
     setShowInviteModal(false);
     setShowPoster(true);
@@ -208,12 +251,26 @@ export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBu
         <div className="flex items-center gap-3">
           {buddies.map((buddy) => (
             <div key={buddy.id} className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center text-sm font-medium border-2 border-primary/20">
-                {buddy.avatar ? (
-                  <img src={buddy.avatar} alt={buddy.name} className="w-full h-full rounded-full" />
-                ) : (
-                  buddy.name.charAt(0)
-                )}
+              <div className="relative">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center text-sm font-medium border-2 border-primary/20">
+                  {buddy.avatar ? (
+                    <img src={buddy.avatar} alt={buddy.name} className="w-full h-full rounded-full" />
+                  ) : (
+                    buddy.name.charAt(0)
+                  )}
+                </div>
+                {/* 任务5：解除搭子入口（头像右上小 ×，点击弹确认 Dialog） */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setRemoveTarget(buddy);
+                    setRemoveError('');
+                  }}
+                  aria-label={`解除与 ${buddy.name} 的学习搭子关系`}
+                  className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-destructive text-destructive-foreground text-[10px] leading-none flex items-center justify-center hover:opacity-80 transition-opacity"
+                >
+                  ×
+                </button>
               </div>
               <span className="text-xs text-muted-foreground mt-1 truncate w-12 text-center">
                 {buddy.name}
@@ -305,7 +362,7 @@ export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBu
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground text-center">
-              邀请同班同学成为学习搭子，互相监督共同进步！
+              邀请同班或同年级同学成为学习搭子，互相监督共同进步！
             </p>
 
             {/* 候选列表（好友发现——listBuddyCandidates_Execute） */}
@@ -315,9 +372,9 @@ export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBu
                 加载同学…
               </div>
             ) : candidates.length === 0 ? (
-              // Oracle C1：候选空态——暂无同班同学可邀
+              // Oracle C1：候选空态——暂无同班/同年级同学可邀（V0.7.0 BR-33 同群 OR 同年级）
               <div className="text-center py-6">
-                <p className="text-sm text-muted-foreground mb-3">暂无可邀请的同班同学</p>
+                <p className="text-sm text-muted-foreground mb-3">暂无可邀请的同班或同年级同学</p>
                 <p className="text-xs text-muted-foreground/70 mb-3">
                   也可通过链接或海报邀请好友加入学习
                 </p>
@@ -360,6 +417,43 @@ export function StudyBuddySection({ buddies, onInvite, onBuddyChanged }: StudyBu
                 )}
               </div>
             )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* 解除搭子确认弹窗（任务5：removeBuddy_Execute；Oracle M-4/C4：Dialog 而非原生 confirm） */}
+      <Dialog open={!!removeTarget} onOpenChange={(open) => !open && setRemoveTarget(null)}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="text-center">解除学习搭子</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground text-center">
+              确定解除与 {removeTarget?.name ?? ''} 的学习搭子关系？
+            </p>
+            {removeError && (
+              <p className="text-xs text-destructive text-center">{removeError}</p>
+            )}
+            <div className="flex items-center gap-3">
+              <Button
+                variant="outline"
+                className="flex-1"
+                disabled={removingId !== null}
+                onClick={() => setRemoveTarget(null)}
+              >
+                取消
+              </Button>
+              <Button
+                className="flex-1"
+                disabled={removingId !== null}
+                onClick={() => removeTarget && handleRemove(removeTarget)}
+              >
+                {removingId !== null ? (
+                  <Loader2 className="w-3 h-3 animate-spin mr-1" />
+                ) : null}
+                确认解除
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>

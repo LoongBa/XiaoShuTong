@@ -5,8 +5,8 @@
 > 这些信息无法从代码中自动提取，需要设计者维护。更新频率低，但内容不可替代。
 > **维护方式**：由 `tkwf-business` skill 物化与增量更新，不手动直接编辑。
 
-> **最后更新**：2026-09-28
-> **版本**：v5 | **变更**：修订搭子-BR-17/BR-33（过期 Pending 惰性豁免，与 BR-35 副作用段/§3.4 注同步）；BR 上限不变
+> **最后更新**：2026-09-29
+> **版本**：v6 | **变更**：修订搭子-BR-33（候选列表扩展为同群组 或 同年级成员，OR 语义对齐 BR-16）；BR 上限不变
 > **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-25 / 题库-39 / 激励-18 / 搭子-36 / Pk-27 / 家长-28 / 平台-04）
 
 ---
@@ -251,7 +251,7 @@
 | 搭子-BR-30 | 解除搭子：关系不存在/非当事人 → 6001/1004 | StudyBuddies | 8.6 |
 | 搭子-BR-31 | 解除后历史 PK/答题保留 | StudyBuddies | 8.6 |
 | 搭子-BR-32 | 重复解除（已 removed）幂等 → 6001 | StudyBuddies | 8.6 |
-| 搭子-BR-33 | 候选列表：同群组成员（Role=Student）+ 排除自己 + 排除已有搭子关系（accepted 恒排 / pending 仅未过期排；过期 pending 惰性豁免恢复候选，V0.6.19 与 BR-17 同口径）+ 排除 Parent 角色；展示 GroupMembers.Nickname + Group.Name；多群同人去重 | GroupMembers, StudyBuddies, Groups | 8.1（V0.6.16） |
+| 搭子-BR-33 | 候选列表：同群组 或 同年级成员（Role=Student，OR 语义对齐 BR-16）+ 排除自己 + 排除已有搭子关系（accepted 恒排 / pending 仅未过期排；过期 pending 惰性豁免恢复候选，V0.6.19 与 BR-17 同口径）+ 排除 Parent 角色；展示 GroupMembers.Nickname + Group.Name；多群同人去重（跨群合并） | GroupMembers, StudyBuddies, Groups | 8.1（V0.6.16；2026-09-29 扩展同年级跨群候选） |
 | 搭子-BR-34 | 候选查询只读无邀请动作；权限=当前用户群成员身份（非群主专属） | GroupMembers | 8.1（V0.6.16） |
 | 搭子-BR-35 | 待收邀请列表：仅返回当前用户为被邀请人（InviteeId=me）且 Status=Pending 且未过期（ExpiresAt ≥ now）的邀请；已过期惰性过滤不返回（不落库 Expired——与 accept/reject 的 6002 运行时判断 `ExpiresAt < now` 口径互补一致）。**副作用（V0.6.19 已修正）**：惰性过期不落库 Expired，Status 列保留 Pending；V0.6.18 曾记录"BR-17 重复邀请判断只看 Status 不看 ExpiresAt，已过期未处理的 Pending 仍被命中（→6002）阻塞对方重新邀请"——已由 V0.6.19 修正 BR-17/BR-33 查询条件（追加 `ExpiresAt >= now` 豁免过期 Pending，放行重邀）；BR-35 待收列表自始按 ExpiresAt 过滤不受影响 | StudyBuddies | 8.2（V0.6.18） |
 | 搭子-BR-36 | 待收邀请查询只读无处理动作；展示邀请人昵称（GroupMembers.Nickname，null 兜底 `学生{userId}`）+ 邀请时间 + 过期时间；按 InvitedAt 倒序（最新优先处理）。**无分页**：量级有限（受 BR-15 发起方当日 ≤10 + BR-18 +7 天过期约束，单用户待收上限 ≈70 条），与 ListBuddies/ListBuddyCandidates 同范式（均无分页全量返回） | StudyBuddies, GroupMembers | 8.2（V0.6.18） |

@@ -11,7 +11,7 @@ namespace XiaoShuTong.Tests.Buddy;
 
 /// <summary>
 /// UC-8.1 配合：可邀搭子候选列表（ListBuddyCandidatesService）Contract 测试
-/// 覆盖搭子-BR-33：同群学生成员候选 | 排除自己 | 排除已有搭子（Pending/Accepted）| 排除 Parent | 多群去重
+/// 覆盖搭子-BR-33：同群/同年级（OR）学生成员候选 | 排除自己 | 排除已有搭子（Pending/Accepted）| 排除 Parent | 多群/跨群去重
 /// 搭子-BR-34：只读查询（当前用户群成员身份即可）
 /// </summary>
 [Collection("XiaoShuTongDomain")]
@@ -223,9 +223,189 @@ public class ListBuddyCandidatesServiceTests(XiaoShuTongDomainTestFixture fixtur
 
         var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
 
-        var candidateIds = result.Items.Select(c => c.UserId).ToArray();
+var candidateIds = result.Items.Select(c => c.UserId).ToArray();
         Assert.Contains(48171, candidateIds); // 过期 Pending 恢复候选
         Assert.DoesNotContain(48172, candidateIds); // 未过期 Pending 仍排除
         Assert.Contains(48173, candidateIds);        // 可邀保留
+    }
+
+    /// <summary>BR-33 扩展：同年级跨群候选（OR 对齐 BR-16）——同群回归 + 同年级异群候选带群名 + 非同群非同年级不出现</summary>
+    [Fact]
+    public async Task ExecuteAsync_SameGradeCrossGroup_ReturnsCandidates()
+    {
+        var meId = SetUser(48301);
+        var g1 = await SeedGroupAsync(999901, "七(1)班", "七年级");
+        var g2 = await SeedGroupAsync(999902, "七(2)班", "七年级"); // 同年级异群
+        var g3 = await SeedGroupAsync(999903, "八(1)班", "八年级"); // 非同群非同年级
+        await SeedMemberAsync(g1.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(g1.Id, 48302, MemberRole.Student, "同群小红");
+        await SeedMemberAsync(g2.Id, 48303, MemberRole.Student, "跨群小刚");
+        await SeedMemberAsync(g3.Id, 48304, MemberRole.Student, "跨年级小丽");
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.Contains(result.Items, c => c.UserId == 48302); // 同群候选回归
+        var cross = result.Items.Single(c => c.UserId == 48303); // 同年级跨群候选
+        Assert.Equal("跨群小刚", cross.Nickname);
+        Assert.Equal("七(2)班", cross.GroupName); // 跨群候选带群名
+        Assert.DoesNotContain(result.Items, c => c.UserId == 48304); // 非同群非同年级不出现
+    }
+
+    /// <summary>BR-33 扩展：已有关系排除跨群同样生效（跨群 Accepted 排除，跨群可邀保留，同群回归）</summary>
+    [Fact]
+    public async Task ExecuteAsync_CrossGroupAcceptedRelation_Excluded()
+    {
+        var meId = SetUser(48310);
+        var g1 = await SeedGroupAsync(999904, "七(3)班", "七年级");
+        var g2 = await SeedGroupAsync(999905, "七(4)班", "七年级"); // 同年级异群
+        await SeedMemberAsync(g1.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(g1.Id, 48311, MemberRole.Student, "同群小刚");
+        await SeedMemberAsync(g2.Id, 48312, MemberRole.Student, "跨群小红"); // Accepted → 跨群排除
+        await SeedMemberAsync(g2.Id, 48313, MemberRole.Student, "跨群小丽"); // 可邀保留
+        await SeedBuddyAsync(meId, 48312, BuddyStatus.Accepted);
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var candidateIds = result.Items.Select(c => c.UserId).ToArray();
+        Assert.Contains(48311, candidateIds);        // 同群候选回归
+        Assert.DoesNotContain(48312, candidateIds); // 跨群 Accepted 排除
+        Assert.Contains(48313, candidateIds);        // 跨群可邀保留
+    }
+
+    /// <summary>BR-33 扩展：多群同人去重跨群合并（同人在同群 + 同年级异群 → 单条候选）</summary>
+    [Fact]
+    public async Task ExecuteAsync_UserInOwnAndGradeGroup_Deduplicated()
+    {
+        var meId = SetUser(48320);
+        var g1 = await SeedGroupAsync(999906, "七(5)班", "七年级");
+        var g2 = await SeedGroupAsync(999907, "七(6)班", "七年级"); // 同年级异群
+        await SeedMemberAsync(g1.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(g1.Id, 48321, MemberRole.Student, "小红"); // 同群成员
+        await SeedMemberAsync(g2.Id, 48321, MemberRole.Student, "小红"); // 同人跨群 → 合并去重
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.Single(result.Items); // 跨群同人合并去重
+        Assert.Equal(48321, result.Items[0].UserId);
+    }
+
+    /// <summary>BR-33 修订（2026-09-29）：同年级跨群候选出现在列表（另一群 Grade 相同的学生，含 GroupName）</summary>
+    [Fact]
+    public async Task ExecuteAsync_SameGradeCrossGroup_ReturnsCandidate()
+    {
+        var meId = SetUser(48201);
+        var myGroup = await SeedGroupAsync(999101, "七(1)班");      // 我所在群（七年级）
+        var crossGroup = await SeedGroupAsync(999102, "七(2)班", "七年级"); // 同年级跨群
+        await SeedMemberAsync(myGroup.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(crossGroup.Id, 48202, MemberRole.Student, "小红"); // 跨群同年级
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Single(result.Items);
+        Assert.Equal(48202, result.Items[0].UserId);
+        Assert.Equal("七(2)班", result.Items[0].GroupName); // 跨群候选携带其所在群名
+    }
+
+    /// <summary>BR-33 回归：同群候选仍出现（与同年级候选并存）</summary>
+    [Fact]
+    public async Task ExecuteAsync_SameGroupAndCrossGrade_BothReturned_Regression()
+    {
+        var meId = SetUser(48210);
+        var myGroup = await SeedGroupAsync(999103, "七(3)班");
+        var crossGroup = await SeedGroupAsync(999104, "七(4)班", "七年级");
+        await SeedMemberAsync(myGroup.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(myGroup.Id, 48211, MemberRole.Student, "小刚");       // 同群候选（回归）
+        await SeedMemberAsync(crossGroup.Id, 48212, MemberRole.Student, "小丽");    // 同年级跨群候选
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var candidateIds = result.Items.Select(c => c.UserId).ToArray();
+        Assert.Contains(48211, candidateIds); // 同群候选仍出现
+        Assert.Contains(48212, candidateIds); // 同年级跨群亦出现
+        Assert.Equal(2, result.Items.Count);
+    }
+
+    /// <summary>BR-33：非同群且非同年级不出现</summary>
+    [Fact]
+    public async Task ExecuteAsync_NotSameGroupNotSameGrade_Excluded()
+    {
+        var meId = SetUser(48220);
+        var myGroup = await SeedGroupAsync(999105, "七(5)班");
+        var otherGradeGroup = await SeedGroupAsync(999106, "八(5)班", "八年级");
+        await SeedMemberAsync(myGroup.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(otherGradeGroup.Id, 48221, MemberRole.Student, "小刚"); // 非同群 + 非同年级
+        var emptyGradeGroup = await SeedGroupAsync(999107, "九(1)班", "九年级");
+        await SeedMemberAsync(emptyGradeGroup.Id, 48222, MemberRole.Student, "小丽");
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Empty(result.Items); // 我群内无其他学生成员 → 非同群非同年级者不入列
+    }
+
+    /// <summary>BR-33：已有关系排除跨群同样生效（Accepted 跨群候选被排除）</summary>
+    [Fact]
+    public async Task ExecuteAsync_AcceptedRelation_ExcludesCrossGroupCandidate()
+    {
+        var meId = SetUser(48230);
+        var myGroup = await SeedGroupAsync(999108, "七(6)班");
+        var crossGroup = await SeedGroupAsync(999109, "七(7)班", "七年级");
+        await SeedMemberAsync(myGroup.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(crossGroup.Id, 48231, MemberRole.Student, "小红"); // 跨群同年级
+        await SeedMemberAsync(crossGroup.Id, 48232, MemberRole.Student, "小刚"); // 跨群同年级（可邀）
+        await SeedBuddyAsync(meId, 48231, BuddyStatus.Accepted); // 跨群 Accepted → 排除
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var candidateIds = result.Items.Select(c => c.UserId).ToArray();
+        Assert.DoesNotContain(48231, candidateIds); // Accepted 跨群候选排除
+        Assert.Contains(48232, candidateIds);        // 可邀跨群候选保留
+    }
+
+    /// <summary>BR-33：多群同人去重跨群合并（同人跨多个同年级群仅一条）</summary>
+    [Fact]
+    public async Task ExecuteAsync_CrossGroupSameUser_Deduplicated()
+    {
+        var meId = SetUser(48240);
+        var myGroup = await SeedGroupAsync(999110, "七(8)班");
+        var g1 = await SeedGroupAsync(999111, "语文加强班", "七年级");
+        var g2 = await SeedGroupAsync(999112, "数学加强班", "七年级");
+        await SeedMemberAsync(myGroup.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(g1.Id, 48241, MemberRole.Student, "小红"); // 跨群同人（语文加强班）
+        await SeedMemberAsync(g2.Id, 48241, MemberRole.Student, "小红"); // 跨群同人（数学加强班）
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.Single(result.Items); // 跨群同人去重合并
+        Assert.Equal(48241, result.Items[0].UserId);
+    }
+
+    /// <summary>BR-33：跨群候选的群名/组来源正确标注（GroupId + GroupName 指向其所在同年级群）</summary>
+    [Fact]
+    public async Task ExecuteAsync_CrossGroupCandidate_GroupSourceMarked()
+    {
+        var meId = SetUser(48250);
+        var myGroup = await SeedGroupAsync(999113, "七(9)班");
+        var crossGroup = await SeedGroupAsync(999114, "七(10)班", "七年级");
+        await SeedMemberAsync(myGroup.Id, meId, MemberRole.Student, "小明");
+        await SeedMemberAsync(crossGroup.Id, 48251, MemberRole.Student, "小红"); // 仅在同年级跨群
+        var svc = User.Use<ListBuddyCandidatesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.Single(result.Items);
+        var candidate = result.Items[0];
+        Assert.Equal(48251, candidate.UserId);
+        Assert.Equal(crossGroup.Id, candidate.GroupId);   // 组来源 = 其所在同年级群
+        Assert.Equal("七(10)班", candidate.GroupName);     // 群名 = 其所在同年级群
     }
 }
