@@ -23,6 +23,7 @@
 | ADR-008 | 会话出题契约暴露与判题元数据去桩 | 🟢 活跃 | 2026-09-24 | |
 | ADR-009 | 会话收尾契约与 70/30 混合比出题 | 🟢 活跃 | 2026-09-24 | |
 | ADR-010 | 任务进度联动契约（BR-24 TaskAssignments.Progress） | 🟢 活跃 | 2026-09-24 | |
+| ADR-011 | 微信支付回调基建（选项 A：WebApi 独立回调 Controller + Domain 下单 Service + ActivateSubscription 保持 Callee） | ⚪ 提议（待评审） | 2026-09-29 | |
 
 ---
 
