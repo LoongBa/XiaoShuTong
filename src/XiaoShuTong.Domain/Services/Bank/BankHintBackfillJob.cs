@@ -80,10 +80,10 @@ internal class BankHintBackfillJob(DomainUser<XiaoShuTongUserInfo> user)
 
             if (toUpdate.Count > 0)
             {
-                // N+1 修复（Oracle M2）：批量更新——EntityUpdateColumnsBatchAsync 走 SetSource 支持游离实体，仅更新 Hint 列
-                //（列精度，避免整实体覆盖未改列；审计回调仍触发）。v4.10.38 ADR83 起 EntityUpdateBatchAsync 亦支持游离实体
-                //（G15 已修复），此处仍用列式因仅改 Hint 一列（V0.7.3 实证当时 UpdateRange 要求 attach，已过时）。
-                await QuestionsDs.EntityUpdateColumnsBatchAsync(toUpdate, q => new { q.Hint }, ct);
+                // N+1 修复（Oracle M2）：批量更新——EntityUpdateBatchAsync（v4.10.38 ADR83 起支持游离实体全实体批量更新，
+                // G15 已修复，正式版验收指引改回此路径）；Job 仅改 Hint 列，全实体更新语义等价（toUpdate 为 select 后完整实体快照，
+                // 审计回调仍触发）。V0.7.3 实证 UpdateRange 要求 attach 为修复前行为，已过时。
+                await QuestionsDs.EntityUpdateBatchAsync(toUpdate, ct);
                 filled += toUpdate.Count;
             }
         }

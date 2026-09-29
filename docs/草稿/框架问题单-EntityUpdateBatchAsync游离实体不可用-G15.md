@@ -1,13 +1,15 @@
 ---
 title: 框架问题单——EntityUpdateBatchAsync 游离实体不可用（G15）
-status: ✅ 已修复（框架 v4.10.38 ADR83）——XiaoShuTong refs DLL=4.10.38.0 实证，问题单关闭
+status: ✅ 已修复（框架 v4.10.38 正式发布，NuGet 31 包已推送）——XiaoShuTong refs DLL=4.10.38.0 实证 + 改回验收 PASS，问题单关闭
 date: 2026-09-30
 source: XiaoShuTong V0.7.3 Job 类 N+1 修复（2026-09-30）——BankHintBackfillJob 写侧批量改造实证
 ---
 
 # 框架问题单：EntityUpdateBatchAsync 对游离实体不可用（UpdateRange 要求已跟踪，文档未明示）（G15）
 
-> **✅ 修复确认（2026-09-30）**：框架 **v4.10.38（ADR83）** 已修复——DAC `UpdateBatchAsync` 从 `GetRepo().UpdateAsync`（DbSet.UpdateRange，要求 `_states` 跟踪）改为 `Orm.Update<TEntity>().SetSource(source)`（裸 IUpdate，无跟踪校验），与 `EntityUpdateColumnsBatchAsync` 同路径，游离实体可用。XiaoShuTong refs DLL FileVersion=**4.10.38.0**（`v4.10.38-preview.0.1`）实证已部署。API 参考文档 L55 同步更新："批量整实体更新（全字段，按主键；支持 `EntitySelectAsync`/`EntityGetAsync` 返回的游离实体，V4.10.38 起，ADR83）"。**问题单关闭。**
+> **✅ 修复确认（2026-09-30）**：框架 **v4.10.38（ADR83）** 已修复——DAC `UpdateBatchAsync` 从 `GetRepo().UpdateAsync`（DbSet.UpdateRange，要求 `_states` 跟踪）改为 `Orm.Update<TEntity>().SetSource(source)`（裸 IUpdate，无跟踪校验），与 `EntityUpdateColumnsBatchAsync` 同路径，游离实体可用。API 参考文档 L55 同步更新："批量整实体更新（全字段，按主键；支持 `EntitySelectAsync`/`EntityGetAsync` 返回的游离实体，V4.10.38 起，ADR83）"。**问题单关闭。**
+>
+> **✅ 正式发布验收（2026-09-30）**：框架组推送 **v4.10.38 正式版（NuGet 31 包，含 TKWF.Domain/TKWF.Domain.FreeSql/TKWF.XCodeGen）**。XiaoShuTong 按验收指引执行：① refs DLL FileVersion=**4.10.38.0** 实证已部署（Dll 模式直接引用，无需 CPM 升级）；② **BankHintBackfillJob 改回 `EntityUpdateBatchAsync(toUpdate, ct)`**（原 N+1 修复时改用的 `EntityUpdateColumnsBatchAsync` 保留可用不回归）；③ `ExecuteAsync_EmptyHint_BackfillsFromCard` 全绿（G15 关闭判定）；④ 全套件 **476/0/2** 无回归 + Domain build 0/0。
 >
 > **背景**：G11-G14 问题单见 `docs/草稿/`（G11 SG3 消歧缺口 / G12 会话失效勘误 / G13 固定 sessionKey / G14 DomainErrorFilter）。本问题单为 **2026-09-30 V0.7.3 Job N+1 修复** 新发现：`DomainDataServiceBase.EntityUpdateBatchAsync` 对 `EntitySelectAsync` 返回的**游离实体**批量更新抛"未跟踪"异常，与 API 参考文档描述不符。
 >
