@@ -28,16 +28,22 @@ source: XiaoShuTong 浏览器/API 级走查实证（v4.10.36，2026-09-29）→ 
 ## 二、根因收敛（高置信，待框架组确认注入点）
 
 - **body** 的固定 `sessionKey` 来自 `CreateLoginPayload().SessionKey = User.SessionKey`（`AuthController.cs` L321）。
-- resolver 的 `User` 经 `IDomainUserAccessor<TUserInfo>`（Web 下 `WebDomainUserAccessor` → 读
-  `HttpContext.Items[DomainUserKey]`）获取；`UseWebSession` 的会话解析委托
-  （`WebAppBuilder.InvokeSessionStepAsync`）每请求新建 guest（新 key）并回写 Items/响应头。
-- **矛盾**：中间件 Items 里是当次 guest（新 key），resolver 却拿到固定首客 → **resolver 服务的 DomainUser
-  与当次 Items 的 user 不是同一实例**。
-- **高置信落点**：`DomainServiceCollectionExtensions` 的**服务工厂从 `DomainUserContext.CurrentAopUser`
-  （AsyncLocal）取 DomainUser**；`DomainUser.Use<T>()` 虽 try/finally 设置/恢复（L252-261），但**若 AsyncLocal
-  跨请求页线程被首客冻结泄漏，则所有后续请求的服务解析恒得到首客 DomainUser（SessionKey=首客固定）**。
-  → 高度指向**首客 DomainUser 在 AsyncLocal/线程池间被冻结复用**。
-- 已排除：`DefaultIdGenerator` 非碰撞根因（每次 NewId 时间戳+随机，key 唯一；且中间件每次 Set-Cookie 新 key 佐证）。
+- **SG2 生成 resolver 链路（源码确认 `ApiServiceGenerator.Resolvers.cs` L580-589/L743-787）**：
+  resolver 构造时 `_user = accessor.DomainUser`（`IDomainUserAccessor`，Web 下 `WebDomainUserAccessor` → 读
+  `HttpContext.Items[DomainUserKey]`），方法体 `_user.Use<契约接口>()` → 设 `DomainUserContext.CurrentAopUser
+  = resolver._user` → `AddAopService` 工厂（L94-105）从 AsyncLocal 取该 user 构造 `AuthController`。
+  → **AuthController.User 与中间件按请求写入的 Items user 直串**。
+- **矛盾（决定性）**：中间件（`WebAppBuilder.InvokeSessionStepAsync`）每请求新建 guest（新 key）并
+  `SetSessionKeyToResponse`（响应头 Set-Cookie 每次新实证）且 `Items[DomainUserKey]=user`；但 resolver
+  login 后 body 恒返回首客 SessionKey → **resolver 实际读到的 user ≠ 当次 Items 写入的 user 实例**。
+- **高置信落点（两选一，均属 AsyncLocal 跨请求冻结族）**：
+  1. **`IHttpContextAccessor.HttpContext`（AsyncLocal）在 HC 执行管道中跨请求冻结为首客 HttpContext** →
+     `WebDomainUserAccessor` 每次从冻结 HttpContext 读 Items，得到**首客 user（SessionKey=首客）**；
+     中间件同步管道读的是当次正确 HttpContext（Set-Cookie 新 key）——完美解释"头新/body 固定首客"分离。
+  2. `DomainUserContext.CurrentAopUser`（AsyncLocal）跨请求泄漏冻结首客 user（`DomainUser.Use<T>()`
+     L252-261 try/finally 若在 HC 异步流切换时未正确恢复，首客 user 残留）。
+- 已排除：`DefaultIdGenerator` 非碰撞根因（每次 NewId 时间戳+随机唯一；中间件每次 Set-Cookie 新 key 佐证）；
+  HybridCache key 规范化（不同 sessionKey → 不同 UTF8 bytes → 不同缓存槽，不冲突）。
 
 ## 三、影响
 
