@@ -14,6 +14,11 @@ source: XiaoShuTong 反编译定案 + 运行实证（框架 v4.10.36，2026-09-2
 > → `isDev` 正确 → **Development 下 `extensions.detail` 携带完整堆栈（修复前 detail 死代码）**。
 > XiaoShuTong 重建后验证：触发 INTERNAL_ERROR → 响应 `extensions.detail` **含完整堆栈**，消息 i18n 英文化 +
 > `translationKey` 保留——**修复生效**。
+>
+> **日志侧实证（2026-09-29 11:1x，项目组控制台实录）**：触发 `notexist99` 登录失败时服务端现两条 `fail:` 日志：
+> ① `AuthController'1.LoginByContextAsync()[0] 领域方法执行异常 | 方法: LoginByContextAsync | 用户: Guest`（AOP 拦截器，
+> 含完整堆栈）；② **`DomainErrorFilter[0] GraphQL OnError - code: (null) - path: loginByContext`**（G14 修复的
+> LogError，含完整堆栈，对齐 REST `WebExceptionMiddleware`）——**修复前 GraphQL 通道零异常日志，现异常黑洞已消除**。
 
 > **背景**：排查 G12/G13 过程中，反复受困于 **GraphQL 通道真实异常不可见**——`loginByContext` 首登曾返回
 > INTERNAL_ERROR 但**响应无 detail（即使 Development）、控制台无任何异常日志**。反编译定案：**GraphQL 边界
