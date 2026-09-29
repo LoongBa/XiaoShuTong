@@ -82,9 +82,9 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 |------|---------|------|
 | `docs/变更记录.md` | 任何内容/代码/文档变更 | 增量追加条目（日期/版本/变更内容/关联 ADR），不覆盖历史 |
 | 对应 README / 状态清单 | 该子产品的进度/待办变化 | 如 `题库/各册更新情况清单.md` + `题库/README.md`（素材/复核完成四联同步）、`docs/平台管理系统-迭代计划.md`（页面建成状态） |
-| `docs/AGENTS.md` | 题库素材/复核状态、项目总览变化 | 同步"题库素材与版本状态"节及路由表 |
+| `docs/AGENTS.md` | 题库素材/复核状态、项目总览变化 | 该文件仅存路由级信息（权威在 `题库/各册更新情况清单.md`）——按需微调路由表，不粘贴状态本体 |
 | `PROJECT_STRUCTURE.md` | 目录结构变化（新增/移动项目、文件） | 活文档，结构变化必须同步，见 §8 索引 |
-| 子产品 `AGENTS.md` | 该子产品的规范/架构变化 | AdminWasm / WebH5 / tests / 题库 各自维护
+| 子产品 `AGENTS.md` | 该子产品的规范/架构变化 | 变更记录追加 `docs/AGENTS-变更记录.md`，结构细节移 `docs/AGENTS-参考附录.md` |
 
 ## 4. Tag 纪律
 
@@ -136,17 +136,9 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 
 > 详细决策树与组合模式见 `%TKWFDeployPath%\docs\G00-TKWF.Domain-领域自治框架-V4-使用指南.md` §类型生命周期与 POCO 管控。
 
-### 6.2 建议使用的 Skill
+### 6.2 Skill 使用总纲
 
-| 任务                              | 建议 Skill      |
-| --------------------------------- | --------------- |
-| 物化/维护业务规则（Business.md）  | `tkwf-business` |
-| 编写 Entity                       | `tkwf-entity`   |
-| 编写 Service                      | `tkwf-service`  |
-| 编写测试                          | `tkwf-test`     |
-| 编写 ts-domain-client ts 强类型   | `tkwf-tsclient` |
-
-> 使用对应 Skill 确保框架的代码生成、守卫规则、命名约定等 TKWF 特有机制正确执行，不经过 Skill 直接编写会导致与框架不兼容。
+- 领域开发任务的 **Skill 路由表（建议/强制合一）见 §7**（含 tkwf-tsclient）。使用对应 Skill 确保框架的代码生成、守卫规则、命名约定等 TKWF 特有机制正确执行，不经过 Skill 直接编写会导致与框架不兼容。
 
 ### 6.3 代码纪律
 
@@ -190,6 +182,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 | 领域测试                       | `tkwf-test`         | `{Domain}=域` `{UC}=用况` `{ServiceName}=...` | 禁止手动写测试                                   |
 | 设计文档（需求→方案）          | `tkwf-design`       | `{Domain}=域`                                 | 设计阶段禁止写代码                               |
 | 查询/统计梳理（VEntity 设计）  | `tkwf-ventity-design` | `{Domain}=域` `{切片}=切片名`（触发门槛：含跨表聚合/报表/跨切片消费；UI 定稿后、DS 场景层前） | 设计阶段纯文档产出，不写 ViewSql 实现        |
+| 消费端 TS 前端 RPC 调用（React/SPA） | `tkwf-tsclient`   | `{App}=消费项目名` `{Domain}=业务域名`             | 禁止手写 gql 字符串、禁止手改生成文件（\*.g.ts） |
 
 **前置检查**：接到领域开发任务时，第一步先加载并阅读对应 Skill 全文，按其规范执行，不得凭记忆或通用做法替代。
 
@@ -227,6 +220,8 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 | 文件                   | 查阅时机                          | 更新时机               |
 | ---------------------- | --------------------------------- | ---------------------- |
 | `PROJECT_STRUCTURE.md` | 了解仓库目录结构、新增/移动项目时 | 目录结构变化时同步更新 |
+| `docs/AGENTS-参考附录.md` | 子产品目录结构详表、已闭环框架缺口参考 | 结构变化时同步更新 |
+| `docs/AGENTS-变更记录.md` | AGENTS.md 自身变更史（权威位置） | 任一 AGENTS.md 修订时追加 |
 
 ### 增量开发路由
 

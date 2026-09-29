@@ -31,10 +31,11 @@ XiaoShuTong/
 │   ├── XiaoShuTong.AdminWasm/      ← 管理端 Blazor WASM（TKWFRole=ApiClient，独立版本线 AdminWasm-V，见其 AGENTS.md）
 │   └── XiaoShuTong.WebH5/          ← 学生/家长端 React SPA（非 .NET，pnpm 工程，含子级 AGENTS.md）
 ├── tests/
-│   └── XiaoShuTong.Tests/          ← 唯一测试项目（xunit.v3 + Tier 1.5 SQLite :memory:，68 文件 / 345 用例，见其 AGENTS.md）
+│   └── XiaoShuTong.Tests/          ← 唯一测试项目（xunit.v3 + Tier 1.5 SQLite :memory:，基线见 tests/AGENTS.md）
 ├── 题库/                           ← 官方内容资产（7 学科四件套 + schema + 判题 Prompt，规范见 题库/AGENTS.md 与 题库建设规范.md）
 └── docs/                           ← 项目文档（路由指南见 docs/AGENTS.md）
     ├── AGENTS.md                   ← 文档路由指南（入口总览 + 路由表）
+    ├── AGENTS-参考附录.md / AGENTS-变更记录.md  ← 子产品目录结构详表（不自动装载）/ AGENTS 自身变更史
     ├── 变更记录.md / 目录结构与版本管理规则.md / 平台管理系统-迭代计划.md / 平台管理系统需求方案.md
     ├── D01~D07 设计文档 + V*.0 开发方案/审核报告 + AdminWasm-V*.x 审核报告
     ├── 0-产品规划/ 1-需求分析/ 2-架构设计/ adr/ 模板/ 草稿/（含归档/） ...

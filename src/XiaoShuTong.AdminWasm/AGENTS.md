@@ -1,7 +1,6 @@
 # AGENTS.md - 小书童-平台管理系统 AdminWasm
 
-> 本目录为 **Blazor WebAssembly 管理端**（群主/平台侧），`TKWFRole=ApiClient`，纯消费端项目。
-> 后端契约（Domain + WebApi）已就绪，本目录只做前端页面与 SG3 生成的 Api 调用代理调用。
+> 本目录为 **Blazor WebAssembly 管理端**（群主/平台侧），`TKWFRole=ApiClient`，纯消费端项目。后端契约（Domain + WebApi）已就绪，本目录只做前端页面与 SG3 生成的 Api 调用代理调用。
 
 ## 项目定位
 
@@ -29,31 +28,8 @@
 
 ## Architecture
 
-### 项目结构（Pages/，18 个页面文件）
-
-```
-Pages/
-├── Home.razor              # 占位欢迎页
-├── User/Login/Login.razor  # 登录页
-├── Dashboard/Index.razor   # 群主看板
-├── Groups/                 # 群组管理（列表/激活建群/名单导入/CSV导出/详情）
-├── Tasks/                  # 任务管理（创建/详情/周报）
-├── Banks/                  # 题库管理（列表/创建/导入/详情/AI预处理/校验入库）
-└── Platform/AiModels.razor # AI 模型配置
-```
-
-### 页面-路由-Service 映射
-
-**完整清单见 `docs/平台管理系统-迭代计划.md` §〇（页面实际建成清单 13/13 + 4 超计划页）与 §一（后端 Service 映射表）**，此处不重复抄表。关键入口路由统一挂 `/owner/*`：
-
-| 路由 | 页面 | Service（节选） |
-|------|------|----------------|
-| `/owner/dashboard` | Dashboard/Index | `IGetOwnerDashboardService` |
-| `/owner/groups/list` | Groups/GroupList | `IListGroupsService` |
-| `/owner/groups/detail/{id}` | Groups/GroupDetail | `IManageGroupMembersService`（F4 成员管理内嵌） |
-| `/owner/tasks/create` | Tasks/TaskCreate | `ICreateTaskService` + `IListBanksService` |
-| `/owner/banks` | Banks/BankList | `IListBanksService` |
-| `/owner/platform/ai-models` | Platform/AiModels | AI 模型配置（超计划页） |
+- **页面/路由/Service 清单**：完整映射见 `docs/平台管理系统-迭代计划.md` §〇（页面建成状态 13/13 + 4 超计划页）与 §一（后端 Service 映射表）。目录结构细节见 `docs/AGENTS-参考附录.md §1.2`。
+- 关键入口路由统一挂 `/owner/*`（dashboard / groups/list / groups/detail/{id} / tasks/create / banks / platform/ai-models）。
 
 ## 版本纪律
 
@@ -76,13 +52,6 @@ Pages/
 
 ## Lessons
 
-- 页面开发走 AntDesign Pro 组件模式（参考 DMP-Lite.AdminUI），不引入新 UI 库。
-- 调用一律 `DomainUser.Use<TService>()`，不手写传输层；判错统一走 `res.Success` + `ErrorCode`。
 - 页面/路由/Service 清单变更时，同步更新 `docs/平台管理系统-迭代计划.md` §〇 状态表。
-- 版本沿 AdminWasm-V0.1.x 功能线推进，命名带项目前缀（如 `AdminWasm-V0.1.x-xxx-开发方案.md`）。
 
-## 变更记录
-
-| 日期 | 版本 | 变更内容 |
-|------|------|---------|
-| 2026-09-23 | v0.1 | 初始创建：项目定位/调用通道/版本纪律/页面路由映射/生成物禁区/构建验证 |
+> 变更记录见 `docs/AGENTS-变更记录.md`（AGENTS 自身变更史的权威位置）。

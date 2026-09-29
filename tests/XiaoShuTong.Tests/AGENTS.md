@@ -1,7 +1,7 @@
 # AGENTS.md - XiaoShuTong 测试项目
 
 > 本目录为仓库**唯一测试项目**：xunit.v3（net10.0）+ **Tier 1.5（SQLite :memory: 真实内存库 + 真实视图）**领域 Contract 测试。
-> 当前基线（领域-V0.7.1，薄弱点篇目富化）：**445 通过 / 0 失败 / 2 跳过**（相对 V0.7.0 的 443 增长：薄弱点 Topic 富化 +2 新增用例所致）。
+> 当前基线（领域-V0.7.1，薄弱点篇目富化）：**445 通过 / 0 失败 / 2 跳过**。基线变更溯源见 `docs/AGENTS-变更记录.md`。
 
 ## 项目定位
 
@@ -12,19 +12,7 @@
 
 ## 项目结构
 
-```
-tests/XiaoShuTong.Tests/
-├── XiaoShuTongTestBase.cs            # Tier 1.5 中间基类（每 Fact 前 Reset，见契约节）
-├── XiaoShuTongDomainTestFixture.cs   # 集合 Fixture + CollectionDefinition（串行契约）
-├── XiaoShuTongServiceTests.cs        # 测试类模板（2 个 Skip 示例 = 基线 2 跳过）
-├── XiaoShuTong.Tests.csproj
-├── appsettings.Test.json             # DomainOptions 连接串（脚本创建时替换 {ConnectionString}）
-├── Bank/  Buddy/  GroupManagement/  Judging/  Learning/
-├── Parent/  Pk/  Platform/  Rank/  Stats/  TaskManagement/
-└── bin/  obj/                        # 构建产物，禁止改动
-```
-
-UC 目录内测试类命名：`{ServiceName}Tests`（如 `CreatePkMatchServiceTests`）、Job 为 `{JobName}JobTests`（如 `PkForfeitDetectionJobTests`）。
+- 目录结构与 UC 命名规则见 `docs/AGENTS-参考附录.md §1.4`。
 
 ## Tier 1.5 契约（关键）
 
@@ -59,12 +47,5 @@ UC 目录内测试类命名：`{ServiceName}Tests`（如 `CreatePkMatchServiceTe
 - CI 过滤：`dotnet test --filter "Category=Contract"`。
 - 框架同步（版本升级后）：`pwsh %TKWFDeployPath%\build\build-deployment.ps1 -Destination F:\TKWF_FRAMEWORK_PATH -LinkRefs`。
 
-## 已知框架缺口（已闭环参考）
-
-- **G7b**：`DateTimeUtcHandler` 曾未覆盖 `DateTime?`（nullable），导致 nullable 字段往返 +8h（Kind=Unspecified）；已由框架 v4.10.19/21 修复（`SqliteTypeHandlerRegistrar` 追加 `DateTimeNullableUtcHandler`，`PropertyType == typeHandler.Type` 精确匹配触发建 TEXT 列），基线 7 用例清零。新测试涉及 `DateTime?` 断言时注意 UTC Kind 往返。
-
-## 变更记录
-
-- 2026-09-29：基线同步（领域-V0.6.19 429 → V0.7.0 实测 442 通过 / 0 失败 / 2 跳过；+13 = 搭子同年级跨群候选 ListBuddyCandidatesServiceTests +9 + 薄弱点下钻 GetWeaknessReportServiceTests +4）。
-- 2026-09-28：基线同步（V0.1.8 过时值 345 → 领域-V0.6.19 实测 429 通过 / 0 失败 / 2 跳过；V0.6.9~V0.6.19 十二轮迭代新增用例所致）。
-- 2026-09-23：初始创建。基线 AdminWasm-V0.1.8（Tier 1.5 恢复，G7b 由框架 v4.10.21 修复），345 通过 / 0 失败 / 2 跳过。
+> 已闭环框架缺口参考（G7b `DateTime?` UTC）：见 `docs/AGENTS-参考附录.md §2`。
+> 变更记录见 `docs/AGENTS-变更记录.md`（AGENTS 自身变更史的权威位置）。

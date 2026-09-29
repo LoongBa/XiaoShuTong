@@ -14,87 +14,19 @@
 - **@tkwf/tsclient** - TKWF 前端 RPC 客户端（Tkwf.configure + Tkwf.User/Guest）
 - **@tkwf/tsclient-mock** - mock 数据（MockTransport / MockHttpServer）
 
-## Architecture
+## Architecture（摘要）
 
-### 项目结构
-```
-src/
-├── components/          # 通用组件
-│   ├── MemoryStateBadge.tsx   # 记忆状态徽章（✕灰/△黄/○绿/★金）
-│   ├── TaskProgressBar.tsx    # 任务进度条
-│   ├── StreakBadge.tsx        # 连续打卡徽章
-│   ├── Heatmap.tsx            # 学习热力图
-│   ├── EmptyState.tsx         # 空状态组件
-│   ├── BottomNav.tsx          # 底部导航
-│   ├── ShareReportModal.tsx   # 分享战报弹窗（V2新增）
-│   └── StudyBuddySection.tsx  # 学习搭子组件（V2新增）
-├── routes/              # 页面路由
-│   ├── auth/            # 认证相关
-│   │   ├── login.tsx    # 微信登录页
-│   │   └── privacy.tsx  # 隐私协议页
-│   ├── student/         # 学生端
-│   │   ├── home.tsx     # 首页（任务中心）
-│   │   ├── study/
-│   │   │   ├── task.tsx   # 任务执行页（背诵答题）
-│   │   │   ├── result.tsx # 会话结果页
-│   │   │   └── review.tsx # 复习队列页
-│   │   ├── bank/
-│   │   │   └── self.tsx   # 自由背诵入口
-│   │   ├── stats/
-│   │   │   ├── heatmap.tsx # 热力图统计（V2: 分享战报）
-│   │   │   └── wrong.tsx   # 错题本
-│   │   ├── rank.tsx     # 排行榜（V2新增: 学习搭子、趋势箭头）
-│   │   └── user/
-│   │       └── profile.tsx # 个人中心
-│   ├── teacher/         # 老师端
-│   │   ├── dashboard.tsx    # 班级看板
-│   │   └── tasks/
-│   │       ├── create.tsx   # 任务创建
-│   │       └── detail.tsx   # 任务详情
-│   └── parent/          # 家长端
-│       └── dashboard.tsx    # 成长报告
-├── store/
-│   └── appStore.ts      # Zustand状态管理
-└── types/
-    └── index.ts         # TypeScript类型定义
-```
-
-### 状态管理
-使用Zustand进行全局状态管理，包含：
-- 用户状态（currentUser, isLoggedIn, hasAgreedPrivacy）
-- 数据状态（tasks, reviewItems, subjects, knowledgePoints, wrongAnswers, learningStats）
-- 学习会话状态（currentTaskId, currentQuestionIndex, answers）
+- 目录结构（src/ 组件/路由/状态/类型详表）与路由清单见 `docs/AGENTS-参考附录.md §1.3`。
+- 状态管理：Zustand（用户状态 + 数据状态 + 学习会话状态），persist 中间件持久化。
 
 ### 设计系统
-- **颜色**：清爽蓝绿主色调，四阶记忆状态色（灰/黄/绿/金）
+- **颜色**：清爽蓝绿主色调，四阶记忆状态色（灰/黄/绿/金）贯穿全端作为状态标识
 - **字体**：系统字体 + 楷体（题目区）
 - **动画**：star-pop（星星弹出）、float-up（上浮）、pulse-glow（脉冲发光）
 
-### 路由结构
-- `/auth/login` - 登录页
-- `/auth/privacy` - 隐私协议
-- `/student/home` - 学生首页
-- `/student/study/task` - 任务执行
-- `/student/study/result` - 会话结果
-- `/student/study/review` - 复习队列
-- `/student/bank/self` - 自由背诵
-- `/student/stats/heatmap` - 热力图
-- `/student/stats/wrong` - 错题本
-- `/student/user/profile` - 个人中心
-- `/teacher/dashboard` - 老师看板
-- `/teacher/tasks/create` - 创建任务
-- `/teacher/tasks/detail` - 任务详情
-- `/parent/dashboard` - 家长报告
-
 ## Lessons
 
-- 使用Zustand的persist中间件实现数据持久化
-- 移动端H5设计采用底部Tab导航，单列卡片流布局
-- 记忆状态色（✕灰/△黄/○绿/★金）贯穿全端作为状态标识
-- 判题反馈必须有【正确/错误 + 记忆状态变化】的即时视觉反馈
+- 移动端 H5 设计采用底部 Tab 导航，单列卡片流布局。
+- 判题反馈必须有【正确/错误 + 记忆状态变化】的即时视觉反馈。
 
-## 变更记录
-
-| 日期 | 版本 | 变更内容 |
-|------|------|---------|
-| 2026-09-23 | v0.1 | 补「变更记录」节——对齐其余子产品 AGENTS.md（AdminWasm/tests/题库 均有）。文件本体为更早提交创建（含 开发工具/依赖/架构/Lessons），此前无变更记录。 |
+> 变更记录见 `docs/AGENTS-变更记录.md`（AGENTS 自身变更史的权威位置）。
