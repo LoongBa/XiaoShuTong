@@ -3,6 +3,7 @@ using TKW.Framework.Domain.ApiService.Hosting;
 using TKW.Framework.Domain.FreeSql;
 using TKW.Framework.Domain.Hosting;
 using TKW.Framework.Domain.Web.Hosting;
+using TKW.Framework.Localization;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,9 @@ var app = builder.ConfigWebAppDomain<XiaoShuTongUserInfo, XiaoShuTongDomainIniti
     .RegisterServices((services, cfg) =>
     {
         services.AddOpenApi();
+        // v4.10.36 (i18n)：框架 HC 管线硬解析 IFrameworkLocalizer（WebHotChocolateExtensions），
+        // 消费项目须注册多语言基础设施，否则 Hosting failed: No service for IFrameworkLocalizer。
+        services.AddFrameworkLocalization();
         services.AddCors(o =>
         {
             o.AddPolicy("DevelopmentPolicy", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());

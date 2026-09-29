@@ -1,11 +1,17 @@
 ---
 title: 框架问题单——WebSession 固定 SessionKey 复用（身份串号级）（G13）
-status: 待框架组处理
+status: ✅ XiaoShuTong 验证 PASS（框架 v4.10.37 本地修复已部署，待框架组正式提交）
 date: 2026-09-29
 source: XiaoShuTong 浏览器/API 级走查实证（v4.10.36，2026-09-29）→ G12 根因勘误后的核心必现项
 ---
 
 # 框架问题单：WebSession 固定 SessionKey 复用（身份串号级）（G13）
+
+> **✅ 验证通过（2026-09-29 11:06，框架 v4.10.37 本地修复）**：框架组本地 worktree 已修复（未提交 git log，
+> 2026-09-29 10:51 编译推送 refs）：`WebDomainUserAccessor.cs` / `ApiServiceGenerator.Resolvers.cs` /
+> `MutationResolverBase.cs` / `QueryResolverBase.cs`（SG 生成器改动，**须重建触发 .g.cs 重新生成**）。
+> XiaoShuTong WebApi 重建后验证：3 用户轮流 loginByContext 9 次 → **9 个不同 SessionKey（DISTINCT=9）**；
+> 带自定义 X-Session-Key 混合 6 次 → **6 个不同（DISTINCT=6）**——固定 key / 身份串号缺陷**修复生效**。
 
 > **背景**：G12（`WebSession 会话层登录切换用户失效`）根因勘误后，真正的**必现、确定性**核心表现为
 > **固定 SessionKey 复用**——进程内所有登录返回**同一个固定 SessionKey**（首个 guest key），无视请求

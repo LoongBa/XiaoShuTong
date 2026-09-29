@@ -1,11 +1,19 @@
 ---
 title: 框架问题单——GraphQL 通道异常可观测性黑洞（DomainErrorFilter 不记录异常、不透 detail）（G14）
-status: 待框架组处理
+status: ✅ XiaoShuTong 验证 PASS（框架 v4.10.37 本地修复已部署，待框架组正式提交）
 date: 2026-09-29
 source: XiaoShuTong 反编译定案 + 运行实证（框架 v4.10.36，2026-09-29）
 ---
 
 # 框架问题单：GraphQL 通道异常可观测性黑洞（DomainErrorFilter 不记录异常、不透 detail）（G14）
+
+> **✅ 验证通过（2026-09-29 11:06，框架 v4.10.37 本地修复）**：框架组本地 worktree 已修复（未提交 git log，
+> 2026-09-29 10:51 编译推送 refs）：`DomainErrorFilter.cs` 源码注释明写 **v4.10.37 (G14)**——
+> ① 注入 `ILogger<DomainErrorFilter>`，`OnError` 中 `LogError` 完整记录异常（对齐 REST `WebExceptionMiddleware`）；
+> ② `env` 由 `IWebHostEnvironment` 改为 `IHostEnvironment` + `WebHotChocolateExtensions.AddApplicationService<IHostEnvironment>()`
+> → `isDev` 正确 → **Development 下 `extensions.detail` 携带完整堆栈（修复前 detail 死代码）**。
+> XiaoShuTong 重建后验证：触发 INTERNAL_ERROR → 响应 `extensions.detail` **含完整堆栈**，消息 i18n 英文化 +
+> `translationKey` 保留——**修复生效**。
 
 > **背景**：排查 G12/G13 过程中，反复受困于 **GraphQL 通道真实异常不可见**——`loginByContext` 首登曾返回
 > INTERNAL_ERROR 但**响应无 detail（即使 Development）、控制台无任何异常日志**。反编译定案：**GraphQL 边界

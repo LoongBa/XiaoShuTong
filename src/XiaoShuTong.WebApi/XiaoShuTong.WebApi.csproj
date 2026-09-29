@@ -61,6 +61,13 @@
     <ProjectReference Include="..\..\src\XiaoShuTong.Domain\XiaoShuTong.Domain.csproj" />
   </ItemGroup>
 
+  <!-- v4.10.36 (i18n)：TKWF.Domain.targets 的 ApiService 角色 Dll 引用清单未包含
+       TKWF.Framework.Localization（框架侧配置缺口），此处显式补充——
+       Program.cs 的 services.AddFrameworkLocalization() 扩展所在程序集。 -->
+  <ItemGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
+    <Reference Include="TKWF.Framework.Localization" HintPath="$(TKWFDeployPath)build\refs\TKWF.Framework.Localization.dll" />
+  </ItemGroup>
+
   <!--
     NU1510：TKWF.Domain.targets 为所有 Dll 模式项目统一注入 System.Threading.RateLimiting 直接引用
     （类库 Dll 引用不传递 NuGet 依赖所需）。但 Web SDK 项目（Microsoft.NET.Sdk.Web）的共享框架
