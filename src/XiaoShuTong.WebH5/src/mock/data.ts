@@ -702,20 +702,27 @@ export const initialData: DatasetSeed = {
     { success: false, errorCode: "8002", status: null, trialEndAt: null },
   ],
 
-  // listSubscriptionsResDtos — 2 条
+  // listSubscriptionsResDtos — 3 条（V0.7.2：字段对齐契约 studentNickname/plan/periodEndAt；
+  // 含 Cancelled 场景——已取消但周期内仍有权，供 C3 走查）
   listSubscriptionsResDtos: [
     {
       success: true, errorCode: null,
       items: [
-        { subscriptionUid: "sub-001", studentUid: "stu-001", studentName: "小明", status: "Trialing", planType: "Monthly", trialEndAt: new Date(Date.now() + 604800000).toISOString(), expiresAt: null },
-        { subscriptionUid: "sub-002", studentUid: "stu-002", studentName: "小红", status: "Active", planType: "Yearly", trialEndAt: null, expiresAt: new Date(Date.now() + 31536000000).toISOString() },
+        { subscriptionUid: "sub-001", studentUid: "stu-001", studentNickname: "小明", status: "Trialing", plan: "Monthly", trialEndAt: new Date(Date.now() + 604800000).toISOString(), periodEndAt: null },
+        { subscriptionUid: "sub-002", studentUid: "stu-002", studentNickname: "小红", status: "Active", plan: "Yearly", trialEndAt: null, periodEndAt: new Date(Date.now() + 31536000000).toISOString() },
+      ],
+    },
+    {
+      success: true, errorCode: null,
+      items: [
+        { subscriptionUid: "sub-003", studentUid: "stu-001", studentNickname: "小明", status: "Cancelled", plan: "Monthly", trialEndAt: null, periodEndAt: new Date(Date.now() + 2592000000).toISOString() },
       ],
     },
   ],
 
-  // cancelSubscriptionResDtos — 1 条
+  // cancelSubscriptionResDtos — 1 条（V0.7.2：移除 cancelled 字段——契约 CancelSubscriptionResDto 仅 success/errorCode）
   cancelSubscriptionResDtos: [
-    { success: true, errorCode: null, cancelled: true },
+    { success: true, errorCode: null },
   ],
 
   // getDashboardReportResDtos — 3 条：无订阅 locked / 试用中 Trialing / 已订阅 Active（V0.6.12 C1 多场景并存）

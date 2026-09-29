@@ -7,8 +7,13 @@ import { Button } from '@/components/ui/button';
 import { MemoryStateBadge } from '@/components/MemoryStateBadge';
 import { StreakBadge } from '@/components/StreakBadge';
 import { Tkwf } from '@tkwf/tsclient';
-import type { DashboardReport_ExecuteService, SubjectMasteryDto, StartTrial_ExecuteService } from '@/gql/ts-client.g';
-import { Children_ExecuteService } from '@/gql/ts-client.g';
+import type {
+  DashboardReport_ExecuteService,
+  SubjectMasteryDto,
+  StartTrial_ExecuteService,
+  SubscriptionItemDto,
+} from '@/gql/ts-client.g';
+import { Children_ExecuteService, Subscriptions_ExecuteService, CancelSubscription_ExecuteService } from '@/gql/ts-client.g';
 import { accuracyToPercent, accuracyToState } from '@/lib/accuracy';
 import { deriveSubscription } from '@/lib/parent-subscription';
 import { 
@@ -74,6 +79,14 @@ function ParentDashboardPage() {
   const [weekLearned, setWeekLearned] = useState(0);
   const [weekAccuracy, setWeekAccuracy] = useState<number | null>(null);
   const [locked, setLocked] = useState(false);
+  // V0.7.2（T1）：订阅取消 UI——管理订阅 Dialog 状态（页面级 useState，订阅状态保持页面级）
+  const [showManageSubDialog, setShowManageSubDialog] = useState(false);
+  const [subscriptions, setSubscriptions] = useState<SubscriptionItemDto[]>([]);
+  const [subscriptionsLoading, setSubscriptionsLoading] = useState(false);
+  const [subscriptionsError, setSubscriptionsError] = useState('');
+  const [cancelTarget, setCancelTarget] = useState<SubscriptionItemDto | null>(null); // 待确认取消的订阅
+  const [cancelSubmitting, setCancelSubmitting] = useState(false);
+  const [cancelError, setCancelError] = useState('');
   
   // 检查登录状态
   useEffect(() => {
@@ -174,6 +187,79 @@ function ParentDashboardPage() {
       setTrialError(err?.code || err?.message || '开通试用失败');
     } finally {
       setTrialSubmitting(false);
+    }
+  };
+
+  // V0.7.2（T1）：订阅取消 UI——错误码 → 文案映射（对齐 StudyBuddySection ACCEPT_REJECT_ERROR_MESSAGES 模式）
+  const CANCEL_ERROR_MESSAGES: Record<string, string> = {
+    '8001': '订阅不存在或已取消',
+    '8002': '无权操作该订阅',
+  };
+
+  // V0.7.2（T1）：取消成功后重拉 dashboardReport 校正 isSubscribed/trialDaysLeft/locked——
+  // 与 handleStartTrial L163 重拉范式一致（后端权威校正，而非本地置态）
+  const refreshSubscriptionFromReport = async () => {
+    if (!selectedChild) return;
+    try {
+      const res2 = await Tkwf.User.Use<DashboardReport_ExecuteService>().dashboardReport_Execute({
+        request: { studentId: selectedChild.studentId },
+      });
+      const sub = res2.subscription;
+      setIsSubscribed(sub !== null && (sub.status === 'Active' || sub.status === 'Trialing' || sub.status === 'Cancelled'));
+      setTrialDaysLeft(sub?.status === 'Trialing' && sub.trialEndAt
+        ? Math.max(0, Math.ceil((new Date(sub.trialEndAt).getTime() - Date.now()) / 86400000))
+        : 0);
+      setLocked(res2.locked ?? false);
+    } catch {
+      /* 重拉失败保留本地置态 */
+    }
+  };
+
+  // V0.7.2（T1）：打开「管理订阅」→ 拉取订阅列表（listSubscriptions_Execute 无 request 包装）
+  const handleOpenManageSub = async () => {
+    setShowManageSubDialog(true);
+    setSubscriptionsError('');
+    setCancelError('');
+    setSubscriptionsLoading(true);
+    try {
+      const res = await Tkwf.User.Use<Subscriptions_ExecuteService>().listSubscriptions_Execute();
+      if (!res.success) {
+        setSubscriptionsError(res.errorCode || '加载订阅失败');
+        setSubscriptions([]);
+        return;
+      }
+      setSubscriptions(res.items ?? []);
+    } catch (err: any) {
+      setSubscriptionsError(err?.code || err?.message || '加载订阅失败');
+      setSubscriptions([]);
+    } finally {
+      setSubscriptionsLoading(false);
+    }
+  };
+
+  // V0.7.2（T1）：确认取消订阅（cancelSubscription_Execute({request:{subscriptionUid}})）→ 成功重拉校正
+  const handleCancelSubscription = async () => {
+    if (!cancelTarget) return;
+    setCancelSubmitting(true);
+    setCancelError('');
+    try {
+      const res = await Tkwf.User.Use<CancelSubscription_ExecuteService>().cancelSubscription_Execute({
+        request: { subscriptionUid: cancelTarget.subscriptionUid },
+      });
+      if (!res.success) {
+        setCancelError(CANCEL_ERROR_MESSAGES[res.errorCode ?? ''] ?? '取消订阅失败，请稍后重试');
+        return;
+      }
+      // 成功 → 关闭确认框 + 重拉 dashboardReport 校正 isSubscribed/trialDaysLeft/locked（后端权威）
+      setCancelTarget(null);
+      await refreshSubscriptionFromReport();
+      // 同步刷新订阅列表（该行转为 Cancelled，取消按钮置灰）
+      const res2 = await Tkwf.User.Use<Subscriptions_ExecuteService>().listSubscriptions_Execute();
+      if (res2.success) setSubscriptions(res2.items ?? []);
+    } catch (err: any) {
+      setCancelError(err?.code ? (CANCEL_ERROR_MESSAGES[err.code] ?? err.message ?? '取消订阅失败') : '取消订阅失败，请稍后重试');
+    } finally {
+      setCancelSubmitting(false);
     }
   };
   
@@ -343,6 +429,27 @@ function ParentDashboardPage() {
           </div>
         </Card>
         
+        {/* V0.7.2（T1）：管理订阅入口——仅已订阅态显示（Oracle C3：Cancelled 周期内 isSubscribed 保持 true，入口不消失） */}
+        {isSubscribed && (
+          <Card
+            className="p-4 cursor-pointer transition-all"
+            onClick={handleOpenManageSub}
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold flex items-center gap-2">
+                  <Crown className="w-4 h-4 text-amber-500" />
+                  管理订阅
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  查看订阅计划、取消订阅
+                </p>
+              </div>
+              <ChevronRight className="w-5 h-5 text-muted-foreground" />
+            </div>
+          </Card>
+        )}
+        
         {/* 订阅提示 */}
         {!isSubscribed && (
           <Card className="p-4 bg-gradient-to-r from-amber-50 to-orange-50 border-amber-200">
@@ -456,6 +563,140 @@ function ParentDashboardPage() {
               }}
             >
               确认支付
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* V0.7.2（T1）：管理订阅 Dialog——列表/取消/空态/错误映射 */}
+      <Dialog open={showManageSubDialog} onOpenChange={setShowManageSubDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Crown className="w-5 h-5 text-amber-500" />
+              管理订阅
+            </DialogTitle>
+            <DialogDescription>
+              {selectedChild ? `当前孩子：${selectedChild.name}` : '查看订阅计划'}
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-3 mt-4">
+            {subscriptionsLoading ? (
+              <div className="flex items-center gap-2 text-sm text-muted-foreground py-4">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                加载中…
+              </div>
+            ) : subscriptionsError ? (
+              <p className="text-sm text-destructive py-4">{subscriptionsError}</p>
+            ) : (
+              (() => {
+                // V0.7.2（T1）：按 selectedChild.studentUid 过滤当前孩子（键一致：两者均 = StudentId.ToString()）
+                const currentChildSubs = subscriptions.filter((s) => s.studentUid === selectedChild?.id);
+                if (currentChildSubs.length === 0) {
+                  // Oracle C4：空态兜底——无当前孩子订阅时显示"暂无订阅"
+                  return (
+                    <p className="text-sm text-muted-foreground py-4 text-center">
+                      暂无订阅
+                    </p>
+                  );
+                }
+                return currentChildSubs.map((sub) => {
+                  const statusText: Record<string, string> = {
+                    Trialing: '试用中',
+                    Active: '订阅中',
+                    Cancelled: '已取消',
+                    Expired: '已过期',
+                  };
+                  const planText: Record<string, string> = {
+                    Monthly: '月付',
+                    Yearly: '年付',
+                  };
+                  const isCancelled = sub.status === 'Cancelled';
+                  return (
+                    <div key={sub.subscriptionUid} className="p-4 border rounded-lg">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-medium">
+                          {planText[sub.plan] ?? sub.plan}
+                          {children.length > 1 && (
+                            <span className="ml-2 text-xs text-muted-foreground">
+                              {sub.studentNickname}
+                            </span>
+                          )}
+                        </span>
+                        <span className="text-sm text-muted-foreground">
+                          {statusText[sub.status] ?? sub.status}
+                        </span>
+                      </div>
+                      {isCancelled ? (
+                        // Oracle C3：Cancelled 周期内仍有权——显示"已取消（权益至 {periodEndAt} 到期）"，取消按钮置灰/隐藏
+                        <p className="text-xs text-muted-foreground mt-1">
+                          已取消（权益至 {sub.periodEndAt ? new Date(sub.periodEndAt).toLocaleDateString() : '—'} 到期）
+                        </p>
+                      ) : (
+                        <>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            {sub.periodEndAt
+                              ? `权益至 ${new Date(sub.periodEndAt).toLocaleDateString()} 到期`
+                              : sub.trialEndAt
+                                ? `试用至 ${new Date(sub.trialEndAt).toLocaleDateString()}`
+                                : '订阅生效中'}
+                          </p>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="mt-2"
+                            onClick={() => { setCancelTarget(sub); setCancelError(''); }}
+                          >
+                            取消订阅
+                          </Button>
+                        </>
+                      )}
+                    </div>
+                  );
+                });
+              })()
+            )}
+          </div>
+
+          {cancelError && (
+            <p className="text-sm text-destructive mt-2">{cancelError}</p>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* V0.7.2（T1）：取消订阅确认 Dialog */}
+      <Dialog open={cancelTarget !== null} onOpenChange={(open) => { if (!open) setCancelTarget(null); }}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>确认取消订阅？</DialogTitle>
+            <DialogDescription>
+              取消后当前周期内仍可继续使用，到期后不再续费。
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex gap-3 mt-4">
+            <Button
+              variant="outline"
+              className="flex-1"
+              onClick={() => setCancelTarget(null)}
+              disabled={cancelSubmitting}
+            >
+              暂不取消
+            </Button>
+            <Button
+              variant="destructive"
+              className="flex-1"
+              onClick={handleCancelSubscription}
+              disabled={cancelSubmitting}
+            >
+              {cancelSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  取消中…
+                </>
+              ) : (
+                '确认取消'
+              )}
             </Button>
           </div>
         </DialogContent>
