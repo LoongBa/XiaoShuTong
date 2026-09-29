@@ -33,12 +33,22 @@ internal class PkForfeitDetectionJob(DomainUser<XiaoShuTongUserInfo> user)
 
         var ongoing = await MatchesDs.EntitySelectAsync(
             x => x.Status == PkMatchStatus.Ongoing, ct: ct);
+        if (ongoing.Count == 0)
+            return; // BR-22：空批跳过（幂等）
+
+        // N+1 修复：一次 IN 查全部 ongoing 对局的 players → 内存按 MatchId 分组（替代 foreach 逐对局查）
+        var matchIds = ongoing.Select(m => m.Id).ToArray();
+        var allPlayers = await PlayersDs.EntitySelectAsync(
+            x => matchIds.Contains(x.MatchId), ct: ct);
+        var playersByMatch = allPlayers
+            .GroupBy(p => p.MatchId)
+            .ToDictionary(g => g.Key, g => g.ToList());
 
         foreach (var match in ongoing)
         {
             try
             {
-                var players = await PlayersDs.EntitySelectAsync(x => x.MatchId == match.Id, ct: ct);
+                var players = playersByMatch.GetValueOrDefault(match.Id) ?? [];
                 foreach (var player in players)
                 {
                     // BR-21：30s 内重连（未在追踪器或已取消）→ 跳过

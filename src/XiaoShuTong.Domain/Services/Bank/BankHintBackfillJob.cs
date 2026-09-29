@@ -45,6 +45,8 @@ internal class BankHintBackfillJob(DomainUser<XiaoShuTongUserInfo> user)
         var unmatched = 0;
         foreach (var chunk in emptyRows.Chunk(BatchSize))
         {
+            // N+1 修复（Oracle C2）：每 chunk 独立 toUpdate → EntityUpdateBatchAsync 批量提交（替代逐行 EntityUpdateAsync）
+            var toUpdate = new List<Questions>(BatchSize);
             foreach (var question in chunk)
             {
                 // (a) 精确匹配卡片 id（若题目 KnowledgePoints[0] 与卡片 id/title 精确一致）
@@ -73,8 +75,16 @@ internal class BankHintBackfillJob(DomainUser<XiaoShuTongUserInfo> user)
                 }
 
                 question.Hint = hint;
-                await QuestionsDs.EntityUpdateAsync(question, ct);
-                filled++;
+                toUpdate.Add(question);
+            }
+
+            if (toUpdate.Count > 0)
+            {
+                // N+1 修复（Oracle M2）：批量更新——EntityUpdateColumnsBatchAsync 走 SetSource（支持游离实体，
+                // 无需 attach）；EntityUpdateBatchAsync（UpdateRange）要求实体已跟踪，EntitySelectAsync 返回的游离实体不可用
+                //（框架批量更新 API 边界，2026-09-30 实证）。仅更新 Hint 列（Job 场景恰当，审计回调仍触发）。
+                await QuestionsDs.EntityUpdateColumnsBatchAsync(toUpdate, q => new { q.Hint }, ct);
+                filled += toUpdate.Count;
             }
         }
 

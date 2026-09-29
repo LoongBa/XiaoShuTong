@@ -88,4 +88,31 @@ public class PkForfeitDetectionJobTests(XiaoShuTongDomainTestFixture fixture, IT
         Assert.Equal(PkMatchStatus.Ongoing, updated.Status); // 重连后不判弃权
         Assert.Null(updated.WinnerId);
     }
+
+    /// <summary>N+1 修复：多 ongoing 对局同时扫描——一次 IN 取全部 players，逐对局独立结算（互不干扰）</summary>
+    [Fact]
+    public async Task ExecuteAsync_MultipleOngoingMatches_EachSettledIndependently()
+    {
+        // 对局 A：离线超时 → 应判弃权
+        var (matchA, onlineA, offlineA) = await SeedOngoingMatchAsync(95004, 95401);
+        PkDisconnectTracker.Track(matchA.Id, offlineA, DateTime.UtcNow.AddSeconds(-31));
+        // 对局 B：双方在线 → 不应判弃权
+        var (matchB, onlineB, offlineB) = await SeedOngoingMatchAsync(95005, 95402);
+        PkDisconnectTracker.Track(matchB.Id, offlineB, DateTime.UtcNow.AddSeconds(-10)); // 仅 10s 未超时
+        var job = User.Use<PkForfeitDetectionJob>();
+
+        await job.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var matchesDs = User.Use<PkMatchesDataService>();
+        var updatedA = await matchesDs.EntityGetAsync(x => x.Id == matchA.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updatedA);
+        Assert.Equal(PkMatchStatus.Finished, updatedA.Status);
+        Assert.Equal(PkFinishReason.Forfeit, updatedA.FinishReason);
+        Assert.Equal(onlineA, updatedA.WinnerId);
+
+        var updatedB = await matchesDs.EntityGetAsync(x => x.Id == matchB.Id, TestContext.Current.CancellationToken);
+        Assert.NotNull(updatedB);
+        Assert.Equal(PkMatchStatus.Ongoing, updatedB.Status); // 对局 B 不受影响
+        Assert.Null(updatedB.WinnerId);
+    }
 }

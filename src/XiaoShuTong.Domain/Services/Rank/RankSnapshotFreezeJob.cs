@@ -70,17 +70,23 @@ internal class RankSnapshotFreezeJob(DomainUser<XiaoShuTongUserInfo> user)
         if (memberIds.Length == 0)
             return;
 
+        // N+1 修复：一次 IN 取全部成员的 DailyStats/Mastery → 内存按 UserId 分组（替代 foreach 逐成员 2 次查询）
+        var allDaily = await DailyDs.EntitySelectAsync(
+            x => memberIds.Contains(x.UserId), ct: ct);
+        var allMastery = await MasteryDs.EntitySelectAsync(
+            x => memberIds.Contains(x.UserId), ct: ct);
+        var dailyByUser = allDaily.GroupBy(d => d.UserId).ToDictionary(g => g.Key, g => g.ToList());
+        var masteryByUser = allMastery.GroupBy(m => m.UserId).ToDictionary(g => g.Key, g => g.ToList());
+
         // 逐用户聚合指标
         var userMetrics = new Dictionary<long, Dictionary<RankMetricType, decimal>>();
         var today = snapshotDate;
 
         foreach (var memberId in memberIds)
         {
-            var dailyStats = await DailyDs.EntitySelectAsync(
-                x => x.UserId == memberId, ct: ct);
+            var dailyStats = dailyByUser.GetValueOrDefault(memberId) ?? [];
             var dates = dailyStats.Select(d => d.StatDate).ToList();
-            var mastery = await MasteryDs.EntitySelectAsync(
-                x => x.UserId == memberId, ct: ct);
+            var mastery = masteryByUser.GetValueOrDefault(memberId) ?? [];
 
             // streak = 当前连击（BR-11 战力组成）
             var streak = (decimal)StreakCalculator.CalcCurrentStreak(dates, today);
@@ -108,6 +114,14 @@ internal class RankSnapshotFreezeJob(DomainUser<XiaoShuTongUserInfo> user)
         if (userMetrics.All(kv => kv.Value.Values.All(v => v == 0m)))
             return;
 
+        // N+1 修复：一次 IN 取该组已有快照（Scope/Subject/Date 外提过滤）→ 全键 map（BR-13 幂等键，Oracle M1）
+        var existingSnapshots = await SnapshotsDs.EntitySelectAsync(
+            x => memberIds.Contains(x.UserId)
+                 && x.ScopeType == RankScopeType.Group && x.ScopeId == group.UId
+                 && x.Subject == "All" && x.SnapshotDate == snapshotDate, ct: ct);
+        var snapByKey = existingSnapshots.ToDictionary(
+            s => (s.UserId, s.ScopeType, s.ScopeId, s.Subject, s.MetricType, s.SnapshotDate), s => s);
+
         // 逐指标排名 + 幂等 upsert（BR-13）
         foreach (var metric in new[] { RankMetricType.Streak, RankMetricType.Volume, RankMetricType.PkWins, RankMetricType.Accuracy, RankMetricType.Mastery })
         {
@@ -119,20 +133,18 @@ internal class RankSnapshotFreezeJob(DomainUser<XiaoShuTongUserInfo> user)
             for (var i = 0; i < ordered.Count; i++)
             {
                 var row = ordered[i];
-                await UpsertSnapshotAsync(group.UId, row.Key, metric, row.Value, i + 1, snapshotDate, ct);
+                await UpsertSnapshotAsync(snapByKey, group.UId, row.Key, metric, row.Value, i + 1, snapshotDate, ct);
             }
         }
     }
 
-    /// <summary>BR-13：同一 (User,Scope,Subject,Metric,Date) 幂等 upsert</summary>
+    /// <summary>BR-13：同一 (User,Scope,Subject,Metric,Date) 幂等 upsert（N+1 修复：内存查 map，替代逐条 EntityGetAsync）</summary>
     private async Task UpsertSnapshotAsync(
+        Dictionary<(long UserId, RankScopeType ScopeType, string? ScopeId, string Subject, RankMetricType MetricType, DateOnly SnapshotDate), RankSnapshots> snapByKey,
         string groupUid, long userId, RankMetricType metric, decimal value, int rank, DateOnly date, CancellationToken ct)
     {
-        var existing = await SnapshotsDs.EntityGetAsync(
-            x => x.UserId == userId && x.ScopeType == RankScopeType.Group && x.ScopeId == groupUid
-                 && x.Subject == "All" && x.MetricType == metric && x.SnapshotDate == date, ct);
-
-        if (existing == null)
+        var key = (userId, RankScopeType.Group, groupUid, "All", metric, date);
+        if (!snapByKey.TryGetValue(key, out var existing))
         {
             await SnapshotsDs.EntityCreateAsync(new RankSnapshots
             {

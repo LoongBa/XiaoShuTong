@@ -173,4 +173,29 @@ public class KnowledgeMasteryAggregationJobTests(XiaoShuTongDomainTestFixture fi
         var userA = await masteryDs.EntitySelectAsync(x => x.UserId == 48004, ct: TestContext.Current.CancellationToken);
         Assert.Empty(userA); // 用户 A 未产生写入
     }
+
+    /// <summary>N+1 修复（Oracle C1）：多用户同时聚合——外层一次 IN 全用户 mastery（每用户独立聚合，互不干扰）</summary>
+    [Fact]
+    public async Task ExecuteAsync_MultipleUsers_EachAggregatedIndependently()
+    {
+        await SeedQuestionAsync("Q-48006a", kp: "岳阳楼记-背诵");
+        await SeedQuestionAsync("Q-48006b", kp: "观沧海-背诵"); // 不同知识点
+        // 用户 A：题目 A（Correct）→ 一条 mastery
+        await SeedAttemptAsync(48006, "Q-48006a", JudgmentResult.Correct);
+        // 用户 B：题目 B（Correct）→ 另一知识点一条 mastery（题目独立、不共享）
+        await SeedAttemptAsync(48007, "Q-48006b", JudgmentResult.Correct);
+        var job = User.Use<KnowledgeMasteryAggregationJob>();
+
+        await job.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var masteryDs = User.Use<KnowledgeMasteryDataService>();
+        // 用户 A：岳阳楼记 Accuracy=1.0
+        var userA = await masteryDs.EntityGetAsync(x => x.UserId == 48006 && x.KnowledgePoint == "岳阳楼记-背诵", TestContext.Current.CancellationToken);
+        Assert.NotNull(userA);
+        Assert.Equal(1.0, userA.Accuracy);
+        // 用户 B：观沧海 Accuracy=1.0——不被用户 A 影响
+        var userB = await masteryDs.EntityGetAsync(x => x.UserId == 48007 && x.KnowledgePoint == "观沧海-背诵", TestContext.Current.CancellationToken);
+        Assert.NotNull(userB);
+        Assert.Equal(1.0, userB.Accuracy);
+    }
 }
