@@ -7,6 +7,16 @@ source: XiaoShuTong V0.7.0 浏览器走查（API 级契约实证 + 多进程复�
 
 # 框架问题单：WebSession 会话层登录切换用户失效（进程污染态）（G12）
 
+> **🔧 更新（2026-09-29 晚，框架 v4.10.36）——根因勘误 + 新实证**：
+> 1. **原根因「会话 key 时钟回拨竞态抛 `InvalidOperationException("时钟回拨异常")`」需修正**。框架源码
+>    `TKWF/Utility/IdGenerator/DefaultIdGenerator.cs`（v4.10.36 实际代码）**已自愈修复**：
+>    `if (timestamp < last)` 分支走 `timestamp = WaitNextMillis(last)`（回退自旋等待），**不抛异常**；
+>    且源码注释明写「G12 根因定位…修复：改为回退…而抛异常」——XML 注释（G1-G11 时代）已过时，与实际代码不符。
+> 2. **真正必现、确定性核心表现 = 固定 session key 复用**（本更新核心）：进程内**所有登录返回同一个固定
+>    SessionKey**（首个 guest key），无视请求 header/cookie、无视用户名——**身份串号级严重性**。详见新问题单
+>    **G13**（`框架问题单-WebSession固定sessionKey复用身份串号-G13.md`），本单保留为 G13 的现象/触发背景。
+> 3. **GraphQL 可观测性黑洞独立成单**：详见 **G14**（`框架问题单-GraphQL-DomainErrorFilter不记录异常不透detail-G14.md`）。
+
 > **背景**：G1-G11 问题单已闭环（Tier1.5 系列 + xCodeGen 活态文档 + SG3 契约缺口，见
 > `docs/草稿/归档/` 与 `docs/草稿/框架问题单-SG3*G11.md`）。本问题单为 **V0.7.0 走查期间发现的
 > 框架 WebSession 会话层缺陷**——经根因收敛，已高度指向**会话 key 生成器竞选态**，转交框架组处理。
