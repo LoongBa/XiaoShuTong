@@ -52,7 +52,7 @@ internal class KnowledgeMasteryAggregationJob(DomainUser<XiaoShuTongUserInfo> us
                 await AggregateUserAsync(userGroup.Key, userGroup.ToList(),
                     masteryByUser.GetValueOrDefault(userGroup.Key) ?? [], ct);
             }
-            catch (Exception ex)
+            catch
             {
                 // BR-48：单用户失败记录日志（切片：吞异常继续），不中断整批
             }
