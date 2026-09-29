@@ -782,14 +782,14 @@ export const initialData: DatasetSeed = {
     },
   ],
 
-  // getWeaknessReportResDtos — 2 条，一含弱项 + 一空（V0.6.15：补 subject + stateText 家长文案；V0.6.x：补 chapterId + questionIds 下钻字段）
+  // getWeaknessReportResDtos — 2 条，一含弱项 + 一空（V0.6.15：补 subject + stateText 家长文案；V0.7.0：补 chapterId + questionIds 下钻字段；V0.7.1：topic 篇目富化）
   getWeaknessReportResDtos: [
     {
       success: true, errorCode: null,
       weakPoints: [
-        { subject: "数学", knowledgePoint: "乘法分配律", accuracy: 0.35, stateText: "未掌握", chapterId: "上-第1章", questionIds: ["Q-math-b1-0001", "Q-math-b1-0002", "Q-math-b1-0003"] },
-        { subject: "数学", knowledgePoint: "分数除法", accuracy: 0.42, stateText: "模糊", chapterId: "上-第2章", questionIds: ["Q-math-b2-0001", "Q-math-b2-0002"] },
-        { subject: "语文", knowledgePoint: "诗词默写", accuracy: 0.55, stateText: "模糊", chapterId: "7a", questionIds: ["Q-ch-7a-0001", "Q-ch-7a-0004", "Q-ch-7a-0012"] },
+        { subject: "数学", knowledgePoint: "乘法分配律", accuracy: 0.35, stateText: "未掌握", chapterId: "上-第1章", topic: "七年级上册", questionIds: ["Q-math-b1-0001", "Q-math-b1-0002", "Q-math-b1-0003"] },
+        { subject: "数学", knowledgePoint: "分数除法", accuracy: 0.42, stateText: "模糊", chapterId: "上-第2章", topic: "七年级上册", questionIds: ["Q-math-b2-0001", "Q-math-b2-0002"] },
+        { subject: "语文", knowledgePoint: "诗词默写", accuracy: 0.55, stateText: "模糊", chapterId: "7a", topic: null, questionIds: ["Q-ch-7a-0001", "Q-ch-7a-0004", "Q-ch-7a-0012"] },
       ],
     },
     { success: true, errorCode: null, weakPoints: [] },

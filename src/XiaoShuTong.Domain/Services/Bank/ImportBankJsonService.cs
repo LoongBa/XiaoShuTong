@@ -125,6 +125,7 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
                     QuestionId = q.QuestionId,
                     BankId = bank.BankId,
                     ChapterId = q.ChapterId,
+                    Topic = q.Topic,
                     QType = q.QType,
                     Content = JsonSerializer.Serialize(contentMirror),
                     Keywords = JsonSerializer.Serialize(keywordGroups),
@@ -139,6 +140,7 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
                 existing.Content = JsonSerializer.Serialize(contentMirror);
                 existing.Keywords = JsonSerializer.Serialize(keywordGroups);
                 existing.KnowledgePoints = q.KnowledgePoints;
+                existing.Topic = q.Topic;
                 existing.Hint = hint;
                 await QuestionsDs.EntityUpdateAsync(existing, ct);
             }
@@ -160,7 +162,7 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
 
     /// <summary>背诵内容 JSON 题目结构</summary>
     internal sealed record JsonQuestion(
-        string QuestionId, string BankId, string Stem, string Answer, string? ChapterId,
+        string QuestionId, string BankId, string Stem, string Answer, string? ChapterId, string? Topic,
         QuestionType QType, string[] KnowledgePoints, int Difficulty, string? KnowledgeCardId);
 
     /// <summary>解析背诵内容 JSON（id/bank_id/subject/type/content/meta.knowledge_card_id）</summary>
@@ -191,6 +193,7 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
 
             result.Add(new JsonQuestion(
                 questionId, bankId, stem, answer, obj["chapter_id"]?.GetValue<string>(),
+                obj["topic"]?.GetValue<string>(),
                 ParseQType(type), ParseKnowledgePoints(content), difficulty, cardId));
         }
         return result;

@@ -66,6 +66,14 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 
 - **关闭编译服务器用 `dotnet build-server shutdown`**：需要停止编译服务器（VBCSCompiler/MSBuild 节点）时，使用 `dotnet build-server shutdown` 优雅关闭，**不得强杀进程**——强杀可能导致锁文件残留、增量构建缓存损坏、后续编译异常或需手工清理 obj/bin 才能恢复。
 
+### 运行纪律（WebApi 由项目组运行，Agent 禁止擅自启动）
+
+- **WebApi 进程（`XiaoShuTong.WebApi`，端口 5020）由项目组/人工负责启动与停止**，Agent **禁止自行启动、停止、后台 spawn 或占用**——包括"临时诊断启动""导出 schema 后即停"等任何形式的自行启动。
+- **需要 WebApi 重启 / schema 刷新 / 运行验证** → 明确告知项目组并等待其操作，Agent 只做编译与验证编排。
+- **禁止抢占端口 5020**：Agent 即使"临时"启动诊断实例，也会与项目组已启动实例争端口，导致其 `Hosting failed to start`（2026-09-29 实证教训：Agent 擅启实例与项目组实例端口冲突）。
+- 例外：Agent 可通过**只读**方式获取运行态信息（HTTP GET / schema 文件读取），不发起进程级操作（Start-Process / Stop-Process 一律禁止针对 WebApi）。
+- 构建类操作（`dotnet build`）在**进程已停止**时执行；运行中会因 DLL 文件锁报 MSB3021/MSB3027，属预期——请求项目组配合停启即可。
+
 ### 进度同步纪律（通用）
 
 任何功能/内容迭代完成后，**检查并更新受影响的状态文档**，防止状态过期（四类文档联动，具体触发范围随迭代内容而定）：

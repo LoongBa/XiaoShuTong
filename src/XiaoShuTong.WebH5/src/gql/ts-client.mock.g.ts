@@ -140,7 +140,8 @@ export const GetBankDetailResDtoSchema = {
       supersededBy: { kind: "string" },
       createTime: { kind: "date" },
       updateTime: { kind: "date" },
-      hint: { kind: "string" }
+      hint: { kind: "string" },
+      topic: { kind: "string" }
   } } }
 } as const;
 export const GetDraftBatchResDtoSchema = {
@@ -569,6 +570,7 @@ export const GetWeaknessReportResDtoSchema = {
       accuracy: { kind: "number" },
       stateText: { kind: "string" },
       chapterId: { kind: "string" },
+      topic: { kind: "string" },
       questionIds: { kind: "array", element: { kind: "string" } }
   } } }
 } as const;
@@ -978,7 +980,8 @@ export const QuestionsDtoSchema = {
     supersededBy: { kind: "string" },
     createTime: { kind: "date" },
     updateTime: { kind: "date" },
-    hint: { kind: "string" }
+    hint: { kind: "string" },
+    topic: { kind: "string" }
 } as const;
 export const DraftItemDtoSchema = {
     questionId: { kind: "string" },
@@ -1139,6 +1142,7 @@ export const ParentWeakPointDtoSchema = {
     accuracy: { kind: "number" },
     stateText: { kind: "string" },
     chapterId: { kind: "string" },
+    topic: { kind: "string" },
     questionIds: { kind: "array", element: { kind: "string" } }
 } as const;
 export const ChildItemDtoSchema = {

@@ -77,6 +77,7 @@ internal class GetWeaknessReportService(DomainUser<XiaoShuTongUserInfo> user)
                     Accuracy = r.Accuracy,
                     StateText = MapStateText(r.State),
                     ChapterId = drill.ChapterId,
+                    Topic = drill.Topic,
                     QuestionIds = drill.QuestionIds ?? [],
                 };
             })
@@ -91,10 +92,10 @@ internal class GetWeaknessReportService(DomainUser<XiaoShuTongUserInfo> user)
     /// （G8：string[] 列严禁写入表达式树——SQLite 无法翻译，先取全量再内存过滤）
     /// 批量处理防 N+1：一次取相关 Banks（Subject IN）+ 一次取相关 Questions（BankId IN）。
     /// </summary>
-    private async Task<Dictionary<(string Subject, string KnowledgePoint), (string? ChapterId, List<string> QuestionIds)>> LoadDrillMapAsync(
+    private async Task<Dictionary<(string Subject, string KnowledgePoint), (string? ChapterId, string? Topic, List<string> QuestionIds)>> LoadDrillMapAsync(
         List<KnowledgeMastery> rows, CancellationToken ct)
     {
-        var map = new Dictionary<(string Subject, string KnowledgePoint), (string? ChapterId, List<string> QuestionIds)>();
+        var map = new Dictionary<(string Subject, string KnowledgePoint), (string? ChapterId, string? Topic, List<string> QuestionIds)>();
         if (rows.Count == 0) return map;
 
         // 该学生薄弱知识点集合（RLS 基准：仅本学生 mastery 行内的 (subject,kp) 才可富化）
@@ -133,10 +134,12 @@ internal class GetWeaknessReportService(DomainUser<XiaoShuTongUserInfo> user)
                 var key = (subjectKey, kp);
                 if (!validPoints.Contains(key)) continue; // 非本学生薄弱知识点 → 不混入（RLS）
                 if (!map.TryGetValue(key, out var acc))
-                    acc = (ChapterId: null, QuestionIds: new List<string>());
+                    acc = (ChapterId: null, Topic: null, QuestionIds: new List<string>());
                 // 多题不同章节：取首个非空
                 if (acc.ChapterId is null && !string.IsNullOrWhiteSpace(question.ChapterId))
                     acc.ChapterId = question.ChapterId;
+                if (acc.Topic is null && !string.IsNullOrWhiteSpace(question.Topic))
+                    acc.Topic = question.Topic;
                 if (!acc.QuestionIds.Contains(question.QuestionId))
                     acc.QuestionIds.Add(question.QuestionId);
                 map[key] = acc;
@@ -194,6 +197,9 @@ public sealed record ParentWeakPointDto
 
     /// <summary>章节/单元（该知识点关联题目的 Questions.ChapterId，多题不同章节取首个非空；无关联题 null）</summary>
     public string? ChapterId { get; init; }
+
+    /// <summary>章节/单元路径（该知识点关联题目的 Questions.Topic 友好名称，多题不同章节取首个非空；无关联题 null）</summary>
+    public string? Topic { get; init; }
 
     /// <summary>该知识点下关联题目 QuestionId 列表（无关联题空列表）</summary>
     public List<string> QuestionIds { get; init; } = [];

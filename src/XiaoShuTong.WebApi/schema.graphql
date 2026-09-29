@@ -1225,6 +1225,8 @@ type ParentWeakPointDto {
   stateText: String!
   "章节/单元（该知识点关联题目的 Questions.ChapterId，多题不同章节取首个非空；无关联题 null）"
   chapterId: String
+  "章节/单元路径（该知识点关联题目的 Questions.Topic 友好名称，多题不同章节取首个非空；无关联题 null）"
+  topic: String
   "该知识点下关联题目 QuestionId 列表（无关联题空列表）"
   questionIds: [String!]!
 }
@@ -1399,6 +1401,8 @@ type QuestionsDto {
   updateTime: DateTime!
   "背景钩子提示（可空，来源 bank.v1.json；API 侧 BR-29 截断 ≤20 字）"
   hint: String
+  "章节/单元路径（来源题库 JSON topic，如 七年级上册-古诗文；ChapterId 的友好名称，用于薄弱点篇目富化）"
+  topic: String
 }
 
 "排名项 DTO"

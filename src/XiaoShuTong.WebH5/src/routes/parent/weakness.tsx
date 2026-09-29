@@ -43,7 +43,7 @@ function ParentWeaknessPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [errorCode, setErrorCode] = useState<string | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
-  // 下钻展开：记录当前展开的薄弱点卡（key = subject::knowledgePoint::idx，同一时刻仅展开一张）
+  // 下钻展开（V0.7.0）：记录当前展开的薄弱点卡（key = subject::knowledgePoint::idx，同一时刻仅展开一张）
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
   // 检查登录状态
@@ -186,8 +186,11 @@ function ParentWeaknessPage() {
                   {points.map((wp, idx) => {
                     const rowKey = `${subject}::${wp.knowledgePoint}::${idx}`;
                     const isExpanded = expandedKey === rowKey;
-                    // 篇目下钻：后端透出 ChapterId（null = 无篇目维度），QuestionIds 为关联题
-                    const hasChapter = wp.chapterId != null && wp.chapterId.trim().length > 0;
+                    // 篇目下钻（V0.7.0 + V0.7.1 topic 富化）：后端透出 ChapterId/Topic（null = 无篇目维度），QuestionIds 为关联题
+                    const hasChapter = (wp.chapterId != null && wp.chapterId.trim().length > 0)
+                      || (wp.topic != null && wp.topic.trim().length > 0);
+                    // 章节/篇目显示：优先 topic（友好名称，如 七年级上册），无则回退 chapterId（如 7a）
+                    const chapterLabel = wp.topic != null && wp.topic.trim().length > 0 ? wp.topic : wp.chapterId;
                     const qCount = wp.questionIds?.length ?? 0;
                     return (
                       <div
@@ -212,12 +215,12 @@ function ParentWeaknessPage() {
                                 </span>
                               </div>
                             </div>
-                            {/* 篇目下钻标识：仅当有 ChapterId 时显示（无则不显示下钻层级） */}
+                            {/* 篇目下钻标识（V0.7.0 + V0.7.1 topic 富化）：有 ChapterId/Topic 时显示（无则不显示下钻层级） */}
                             {hasChapter && (
                               <div className="mt-1 flex items-center gap-1.5">
                                 <span className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full border border-primary/20 bg-primary/5 text-primary">
                                   <BookOpen className="w-3 h-3" />
-                                  章节 {wp.chapterId}
+                                  章节 {chapterLabel}
                                 </span>
                                 {qCount > 0 && (
                                   <span className="text-[11px] text-muted-foreground">{qCount} 题</span>
@@ -239,7 +242,7 @@ function ParentWeaknessPage() {
                             {hasChapter ? (
                               <p className="text-muted-foreground">
                                 关联篇目/章节：
-                                <span className="text-foreground font-medium">{wp.chapterId}</span>
+                                <span className="text-foreground font-medium">{chapterLabel}</span>
                                 {qCount > 0 && <>（{qCount} 道关联题）</>}
                               </p>
                             ) : (

@@ -92,7 +92,7 @@ export const Mutation = {
 export const operationSelection: Record<string, string> = {
   'acceptBuddyInvite_Execute': 'success errorCode buddyId',
   'activateMember_Execute': 'success errorCode groupId groupName role memberId',
-  'bankDetail_Execute': 'success errorCode bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topics { chapterId title subTopics questionIds } previewQuestions { isFromPersistentSource id uId questionId bankId chapterId qType content knowledgePoints difficulty status supersededBy createTime updateTime hint }',
+  'bankDetail_Execute': 'success errorCode bank { isFromPersistentSource id uId bankId name subject version purpose privacy ownerId jsonPath tags status createTime updateTime } topics { chapterId title subTopics questionIds } previewQuestions { isFromPersistentSource id uId questionId bankId chapterId qType content knowledgePoints difficulty status supersededBy createTime updateTime hint topic }',
   'buddyRank_Execute': 'success errorCode rank metricValue trend snapshotDate',
   'cancelSubscription_Execute': 'success errorCode',
   'changePasswordSecure': 'success message',
@@ -163,7 +163,7 @@ export const operationSelection: Record<string, string> = {
   'submitPkAnswer_Execute': 'success errorCode isCorrect result confidence score',
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
   'updateModel': 'success errorCode uId',
-  'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText chapterId questionIds }',
+  'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText chapterId topic questionIds }',
   'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary answer isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
 } as const;
 
@@ -1239,6 +1239,7 @@ export interface QuestionsDto {
   createTime: string;
   updateTime: string;
   hint: string | null;
+  topic: string | null;
 }
 
 export interface DraftItemDto {
@@ -1391,6 +1392,7 @@ export interface ParentWeakPointDto {
   accuracy: number;
   stateText: string;
   chapterId: string | null;
+  topic: string | null;
   questionIds: Array<string>;
 }
 
