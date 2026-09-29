@@ -1,7 +1,9 @@
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Parent;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Parent;
 
 namespace XiaoShuTong.Services.Parent;
@@ -11,7 +13,7 @@ namespace XiaoShuTong.Services.Parent;
 /// </summary>
 /// <remarks>
 /// BR-03 无关联孩子空列表 | BR-04 仅当前家长的孩子（RLS）
-/// 全量返回（决策：数据量小不分页）；昵称/班级依赖账户域（切片为空串）；HasSubscription 由订阅状态派生。
+/// 全量返回（决策：数据量小不分页）；昵称 = GroupMembers.Nickname（Role=Student 过滤，null 兜底 学生{userId}）；班级 = Groups.Name（无群空串）；HasSubscription 由订阅状态派生。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -23,6 +25,12 @@ internal class ListChildrenService(DomainUser<XiaoShuTongUserInfo> user)
 
     private SubscriptionsDataService? _subscriptionsDs;
     private SubscriptionsDataService SubscriptionsDs => _subscriptionsDs ??= User.Use<SubscriptionsDataService>();
+
+    private GroupMembersDataService? _membersDs;
+    private GroupMembersDataService MembersDs => _membersDs ??= User.Use<GroupMembersDataService>();
+
+    private GroupsDataService? _groupsDs;
+    private GroupsDataService GroupsDs => _groupsDs ??= User.Use<GroupsDataService>();
 
     /// <summary>
     /// 当前家长的孩子列表（含订阅状态）
@@ -45,12 +53,33 @@ internal class ListChildrenService(DomainUser<XiaoShuTongUserInfo> user)
                      && studentIds.Contains(x.StudentId), ct: ct);
         var subscribedStudentIds = subscriptions.Select(s => s.StudentId).ToHashSet();
 
+        // 昵称富化（GroupMembers.Nickname，Role=Student 过滤防 Role 歧义；一次 IN 查询防 N+1）
+        var memberRows = studentIds.Length == 0
+            ? new List<GroupMembers>()
+            : await MembersDs.EntitySelectAsync(
+                x => studentIds.Contains(x.UserId) && x.Role == MemberRole.Student, ct: ct);
+        var nicknameByUser = memberRows
+            .GroupBy(m => m.UserId)
+            .ToDictionary(g => g.Key, g => g.First().Nickname);
+        var groupIdByUser = memberRows
+            .GroupBy(m => m.UserId)
+            .ToDictionary(g => g.Key, g => g.First().GroupId);
+
+        // 班级富化（Groups.Name，一次 IN 查询防 N+1）
+        var groupIds = groupIdByUser.Values.Distinct().ToArray();
+        var groupRows = groupIds.Length == 0
+            ? new List<Groups>()
+            : await GroupsDs.EntitySelectAsync(x => groupIds.Contains(x.Id), ct: ct);
+        var nameByGroup = groupRows.ToDictionary(g => g.Id, g => g.Name);
+
         var items = relations.Select(relation => new ChildItemDto
         {
             StudentId = relation.StudentId, // 数值主键直通（dashboardReport.studentId 同源，V0.6.7 登记配合项）
             StudentUid = relation.StudentId.ToString(), // 账户域 Uid 未实施，透传 Id
-            Nickname = string.Empty, // 账户域（跨模块），切片为空串
-            ClassName = string.Empty,
+            Nickname = nicknameByUser.GetValueOrDefault(relation.StudentId) ?? $"学生{relation.StudentId}",
+            ClassName = groupIdByUser.TryGetValue(relation.StudentId, out var gid)
+                ? nameByGroup.GetValueOrDefault(gid) ?? string.Empty
+                : string.Empty,
             HasSubscription = subscribedStudentIds.Contains(relation.StudentId),
         }).ToList();
 
@@ -81,10 +110,10 @@ public sealed record ChildItemDto
     /// <summary>孩子外部键（账户域 Uid 未实施，透传 Id）</summary>
     public string StudentUid { get; init; } = string.Empty;
 
-    /// <summary>昵称（账户域，切片为空）</summary>
+    /// <summary>昵称（GroupMembers.Nickname；null 兜底 学生{userId}）</summary>
     public string Nickname { get; init; } = string.Empty;
 
-    /// <summary>班级（账户域/群组域，切片为空）</summary>
+    /// <summary>班级（Groups.Name；无群空串）</summary>
     public string ClassName { get; init; } = string.Empty;
 
     /// <summary>是否有订阅</summary>

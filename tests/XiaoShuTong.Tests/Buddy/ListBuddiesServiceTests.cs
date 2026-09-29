@@ -1,7 +1,9 @@
 using XiaoShuTong.DataServices.Buddy;
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.DataServices.Rank;
 using XiaoShuTong.Entities.Buddy;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Entities.Rank;
 using XiaoShuTong.Services.Buddy;
@@ -72,6 +74,20 @@ public class ListBuddiesServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         }, TestContext.Current.CancellationToken);
     }
 
+    private async Task SeedMemberAsync(long groupId, long userId, MemberRole role, string? nickname)
+    {
+        var ds = User.Use<GroupMembersDataService>();
+        await ds.EntityCreateAsync(new GroupMembers
+        {
+            UId = UidGenerator.NewId(),
+            GroupId = groupId,
+            UserId = userId,
+            Role = role,
+            Nickname = nickname,
+            JoinedAt = DateTime.UtcNow,
+        }, TestContext.Current.CancellationToken);
+    }
+
     /// <summary>主流程 + BR-25：UNION 双向（我邀请 + 我受邀）+ 仅 accepted</summary>
     [Fact]
     public async Task ExecuteAsync_BothDirections_OnlyAccepted()
@@ -126,5 +142,52 @@ public class ListBuddiesServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         Assert.Equal(6m, item.Rank!.MetricValue);
         var json = System.Text.Json.JsonSerializer.Serialize(result);
         Assert.DoesNotContain("answer", json, StringComparison.OrdinalIgnoreCase); // 不暴露答题明细
+    }
+
+    /// <summary>昵称富化：搭子有 GroupMembers 记录（Role=Student）→ 富化昵称</summary>
+    [Fact]
+    public async Task ExecuteAsync_NicknameEnriched_FromStudentMember()
+    {
+        var userId = SetUser(84004);
+        await SeedBuddyAsync(userId, 84401, BuddyStatus.Accepted);
+        await SeedMemberAsync(1, 84401, MemberRole.Student, "小明");
+        var svc = User.Use<ListBuddiesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("小明", item.Nickname);
+    }
+
+    /// <summary>昵称兜底：搭子无 GroupMembers 记录 / Nickname=null → 学生{userId}</summary>
+    [Fact]
+    public async Task ExecuteAsync_NicknameFallback_WhenNoStudentMember()
+    {
+        var userId = SetUser(84005);
+        await SeedBuddyAsync(userId, 84501, BuddyStatus.Accepted); // 无 GroupMembers 记录
+        await SeedBuddyAsync(userId, 84502, BuddyStatus.Accepted); // Nickname=null
+        await SeedMemberAsync(1, 84502, MemberRole.Student, null);
+        var svc = User.Use<ListBuddiesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.Equal(2, result.Items.Count);
+        Assert.Contains(result.Items, i => i.UserId == 84501 && i.Nickname == "学生84501");
+        Assert.Contains(result.Items, i => i.UserId == 84502 && i.Nickname == "学生84502");
+    }
+
+    /// <summary>Oracle C1：Role=Parent 的 GroupMembers 记录不参与昵称富化（防 Role 歧义）</summary>
+    [Fact]
+    public async Task ExecuteAsync_Nickname_IgnoresParentRole()
+    {
+        var userId = SetUser(84006);
+        await SeedBuddyAsync(userId, 84601, BuddyStatus.Accepted);
+        await SeedMemberAsync(1, 84601, MemberRole.Parent, "家长昵称"); // 仅 Parent 角色
+        var svc = User.Use<ListBuddiesService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("学生84601", item.Nickname); // Parent 角色不富化 → 兜底
     }
 }

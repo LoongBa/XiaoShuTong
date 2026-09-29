@@ -1,4 +1,6 @@
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Parent;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Parent;
 using XiaoShuTong.Services.Parent;
 using XiaoShuTong.Tools;
@@ -47,6 +49,34 @@ public class ListChildrenServiceTests(XiaoShuTongDomainTestFixture fixture, ITes
             Status = status,
             TrialEndAt = null,
             PeriodEndAt = DateTime.UtcNow.AddDays(30),
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task<Groups> SeedGroupAsync(string name)
+    {
+        var ds = User.Use<GroupsDataService>();
+        return await ds.EntityCreateAsync(new Groups
+        {
+            UId = UidGenerator.NewId(),
+            OwnerId = 48400,
+            Name = name,
+            Subject = "chinese",
+            Status = GroupStatus.Active,
+            RankEnabled = true,
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task SeedMemberAsync(long groupId, long userId, MemberRole role, string? nickname)
+    {
+        var ds = User.Use<GroupMembersDataService>();
+        await ds.EntityCreateAsync(new GroupMembers
+        {
+            UId = UidGenerator.NewId(),
+            GroupId = groupId,
+            UserId = userId,
+            Role = role,
+            Nickname = nickname,
+            JoinedAt = DateTime.UtcNow,
         }, TestContext.Current.CancellationToken);
     }
 
@@ -108,5 +138,54 @@ public class ListChildrenServiceTests(XiaoShuTongDomainTestFixture fixture, ITes
 
         var item = Assert.Single(result.Items);
         Assert.False(item.HasSubscription);
+    }
+
+    /// <summary>昵称 + 班级富化：孩子有 GroupMembers（Role=Student）+ 群组 → 富化昵称与班级</summary>
+    [Fact]
+    public async Task Execute_NicknameAndClassName_Enriched()
+    {
+        var parentId = SetUser(48405);
+        await SeedRelationAsync(parentId, 48541);
+        var group = await SeedGroupAsync("七(3)班");
+        await SeedMemberAsync(group.Id, 48541, MemberRole.Student, "小明");
+        var svc = User.Use<ListChildrenService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("小明", item.Nickname);
+        Assert.Equal("七(3)班", item.ClassName);
+    }
+
+    /// <summary>昵称/班级兜底：孩子无 GroupMembers 记录 → 学生{userId} + 空班级</summary>
+    [Fact]
+    public async Task Execute_NicknameAndClassName_FallbackWhenNoMember()
+    {
+        var parentId = SetUser(48406);
+        await SeedRelationAsync(parentId, 48551); // 无 GroupMembers 记录
+        var svc = User.Use<ListChildrenService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("学生48551", item.Nickname);
+        Assert.Equal(string.Empty, item.ClassName);
+    }
+
+    /// <summary>Oracle C1：Role=Parent 的 GroupMembers 记录不参与昵称/班级富化（防 Role 歧义）</summary>
+    [Fact]
+    public async Task Execute_NicknameAndClassName_IgnoresParentRole()
+    {
+        var parentId = SetUser(48407);
+        await SeedRelationAsync(parentId, 48561);
+        var group = await SeedGroupAsync("七(3)班");
+        await SeedMemberAsync(group.Id, 48561, MemberRole.Parent, "家长昵称"); // 仅 Parent 角色
+        var svc = User.Use<ListChildrenService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("学生48561", item.Nickname); // Parent 角色不富化 → 兜底
+        Assert.Equal(string.Empty, item.ClassName);
     }
 }

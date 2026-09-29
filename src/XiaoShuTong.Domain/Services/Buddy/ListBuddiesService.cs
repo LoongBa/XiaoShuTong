@@ -2,9 +2,11 @@ using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
 using XiaoShuTong.DataServices.Buddy;
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Learning;
 using XiaoShuTong.DataServices.Rank;
 using XiaoShuTong.Entities.Buddy;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Learning;
 using XiaoShuTong.Entities.Rank;
 using XiaoShuTong.Entities.Rank.DTOs;
@@ -17,7 +19,7 @@ namespace XiaoShuTong.Services.Buddy;
 /// </summary>
 /// <remarks>
 /// BR-24 无搭子空列表 | BR-25 仅 accepted（UNION 双向）| BR-26 rank = 对方最新快照（仅排名与数值）| BR-27 不暴露答题明细
-/// 连续打卡天数 = DailyStats 当前连击（跨模块）；昵称/头像依赖账户域（桩为空串）。
+/// 连续打卡天数 = DailyStats 当前连击（跨模块）；昵称 = GroupMembers.Nickname（Role=Student 过滤，null 兜底 学生{userId}）；头像依赖账户域（桩为空串）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -26,6 +28,9 @@ internal class ListBuddiesService(DomainUser<XiaoShuTongUserInfo> user)
 {
     private StudyBuddiesDataService? _buddiesDs;
     private StudyBuddiesDataService BuddiesDs => _buddiesDs ??= User.Use<StudyBuddiesDataService>();
+
+    private GroupMembersDataService? _membersDs;
+    private GroupMembersDataService MembersDs => _membersDs ??= User.Use<GroupMembersDataService>();
 
     private DailyStatsDataService? _dailyDs;
     private DailyStatsDataService DailyDs => _dailyDs ??= User.Use<DailyStatsDataService>();
@@ -50,6 +55,15 @@ internal class ListBuddiesService(DomainUser<XiaoShuTongUserInfo> user)
             .Select(b => b.InviterId == userId ? b.InviteeId : b.InviterId)
             .Distinct()
             .ToArray();
+
+        // 昵称富化（账户域 GroupMembers，Role=Student 过滤 + null 兜底）——一次 IN 查询防 N+1（Oracle C1）
+        var memberRows = otherIds.Length == 0
+            ? new List<GroupMembers>()
+            : await MembersDs.EntitySelectAsync(
+                x => otherIds.Contains(x.UserId) && x.Role == MemberRole.Student, ct: ct);
+        var nicknameByUser = memberRows
+            .GroupBy(m => m.UserId)
+            .ToDictionary(g => g.Key, g => g.First().Nickname);
 
         // 连续打卡天数（跨模块）——一次 IN 查询替代 foreach N+1
         var dailyRows = otherIds.Length == 0
@@ -85,8 +99,8 @@ internal class ListBuddiesService(DomainUser<XiaoShuTongUserInfo> user)
             {
                 BuddyId = buddy.UId,
                 UserId = otherId,
-                Nickname = string.Empty, // 账户域（跨模块），切片为空串
-                AvatarUrl = string.Empty,
+                Nickname = nicknameByUser.GetValueOrDefault(otherId) ?? $"学生{otherId}",
+                AvatarUrl = string.Empty, // 头像档 C 降级 P1（本轮不做），保留空串
                 StreakDays = streakDays,
                 Status = buddy.Status.ToString(),
                 Rank = rankSnapshot,
@@ -120,10 +134,10 @@ public sealed record BuddyListItemDto
     /// <summary>搭子用户 Id</summary>
     public long UserId { get; init; }
 
-    /// <summary>昵称（账户域，切片为空）</summary>
+    /// <summary>昵称（GroupMembers.Nickname；null 兜底 学生{userId}）</summary>
     public string Nickname { get; init; } = string.Empty;
 
-    /// <summary>头像 URL（账户域，切片为空）</summary>
+    /// <summary>头像 URL（账户域，切片为空串）</summary>
     public string AvatarUrl { get; init; } = string.Empty;
 
     /// <summary>连续打卡天数</summary>

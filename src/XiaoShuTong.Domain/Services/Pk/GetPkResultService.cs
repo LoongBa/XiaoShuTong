@@ -1,7 +1,9 @@
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Pk;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Pk;
 using XiaoShuTong.Services.Platform;
 
@@ -13,6 +15,7 @@ namespace XiaoShuTong.Services.Pk;
 /// <remarks>
 /// BR-17 对局不存在 → 2001 | BR-18 AI 点评失败留空 + 兜底文案 | BR-19 合规：无正确率对比榜 | BR-20 胜负由 WinnerId 判定（NULL=平局）
 /// 平台-BR-02/03/04：AI 点评走统一网关，网关失败/降级 → 兜底文案。
+/// 昵称 = GroupMembers.Nickname（Role=Student 过滤，null 兜底 学生{userId}）。
 /// 知识彩蛋（knowledgeEggs）响应态展示不落库（切片返回空数组）。
 /// </remarks>
 [GenerateController]
@@ -30,6 +33,9 @@ internal class GetPkResultService(DomainUser<XiaoShuTongUserInfo> user)
 
     private LlmGateway? _llmGateway;
     private LlmGateway LlmGateway => _llmGateway ??= User.Use<LlmGateway>();
+
+    private GroupMembersDataService? _membersDs;
+    private GroupMembersDataService MembersDs => _membersDs ??= User.Use<GroupMembersDataService>();
 
     /// <summary>
     /// PK 结果（胜负 + 双方得分/用时/点评）
@@ -65,10 +71,20 @@ internal class GetPkResultService(DomainUser<XiaoShuTongUserInfo> user)
         // BR-18：AI 点评 → 统一网关生成；网关失败/降级 → 兜底文案
         var aiComment = await BuildAiCommentAsync(match, players, ct);
 
+        // 昵称富化（GroupMembers.Nickname，Role=Student 过滤防 Role 歧义；一次 IN 查询防 N+1）
+        var playerUserIds = players.Select(p => p.UserId).ToArray();
+        var memberRows = playerUserIds.Length == 0
+            ? new List<GroupMembers>()
+            : await MembersDs.EntitySelectAsync(
+                x => playerUserIds.Contains(x.UserId) && x.Role == MemberRole.Student, ct: ct);
+        var nicknameByUser = memberRows
+            .GroupBy(m => m.UserId)
+            .ToDictionary(g => g.Key, g => g.First().Nickname);
+
         var playerItems = players.Select(p => new PkPlayerResultDto
         {
             UserId = p.UserId,
-            Nickname = string.Empty, // 账户域（跨模块），切片为空串
+            Nickname = nicknameByUser.GetValueOrDefault(p.UserId) ?? $"学生{p.UserId}",
             Score = p.Score,
             TotalTimeMs = p.TotalTimeMs,
             AiComment = aiComment,
@@ -159,7 +175,7 @@ public sealed record PkPlayerResultDto
     /// <summary>用户 Id</summary>
     public long UserId { get; init; }
 
-    /// <summary>昵称（账户域，切片为空）</summary>
+    /// <summary>昵称（GroupMembers.Nickname；null 兜底 学生{userId}）</summary>
     public string Nickname { get; init; } = string.Empty;
 
     /// <summary>得分</summary>

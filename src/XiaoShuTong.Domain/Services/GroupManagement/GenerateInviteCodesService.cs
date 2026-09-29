@@ -59,20 +59,50 @@ internal class GenerateInviteCodesService(DomainUser<XiaoShuTongUserInfo> user)
         var now = DateTime.UtcNow;
         var generatedCount = 0;
 
+        // BR-20：每个有效手机号一个码（RawPhonesJson 为 Agent 清洗后的有效列表）
+        // BR-21：码 8 位全局唯一——生成一批码后一次 IN 批量验重（Oracle C2：码随机生成不可预 IN 查），冲突重新生成（最多 MaxCodeAttempts 轮）
+        var codesByPhone = new Dictionary<string, string>(phones.Count);
+        for (var attempt = 0; attempt < MaxCodeAttempts; attempt++)
+        {
+            // 为尚未分配唯一码的手机号生成候选码
+            var pendingPhones = phones.Where(p => !codesByPhone.ContainsKey(p)).ToList();
+            if (pendingPhones.Count == 0)
+                break;
+
+            var candidates = pendingPhones.ToDictionary(p => p, _ => InviteCodeGenerator.Generate(CodeLength));
+            var candidateCodes = candidates.Values.ToArray();
+
+            // 一次 IN 批量验重（含本批已生成候选，防批内重复）
+            var existingCodes = await CodesDs.EntitySelectAsync(
+                x => candidateCodes.Contains(x.Code), ct: ct);
+            // 已占用码（DB）+ 本批已定稿码（跨轮防批内重复）
+            var usedCodes = existingCodes.Select(c => c.Code)
+                .Concat(codesByPhone.Values)
+                .ToHashSet(StringComparer.Ordinal);
+
+            foreach (var phone in pendingPhones)
+            {
+                var code = candidates[phone];
+                if (usedCodes.Contains(code))
+                    continue; // 冲突，下一轮重新生成
+                codesByPhone[phone] = code;
+                usedCodes.Add(code); // 批内防重
+            }
+        }
+
+        // 仍有手机号未分配到唯一码（MaxCodeAttempts 轮后仍冲突）→ 内部错误
+        if (codesByPhone.Count != phones.Count)
+            return new GenerateInviteCodesResDto { Success = false, ErrorCode = GroupErrorCodes.InternalError };
+
+        // 批量创建（BR-20/21/22）
         foreach (var phone in phones)
         {
             var last4 = phone.Length >= 4 ? phone[^4..] : phone;
-
-            // BR-21：码 8 位全局唯一（冲突重试）
-            var code = await GenerateUniqueCode(ct);
-            if (code == null)
-                return new GenerateInviteCodesResDto { Success = false, ErrorCode = GroupErrorCodes.InternalError };
-
             await CodesDs.EntityCreateAsync(new OneTimeInviteCodes
             {
                 UId = UidGenerator.NewId(),
                 GroupId = request.GroupId,
-                Code = code,
+                Code = codesByPhone[phone],
                 PhoneLast4 = last4,
                 Status = OneTimeCodeStatus.Unused,
                 GeneratedBy = ownerId,
@@ -88,21 +118,6 @@ internal class GenerateInviteCodesService(DomainUser<XiaoShuTongUserInfo> user)
         await ImportsDs.EntityUpdateAsync(batch, ct);
 
         return new GenerateInviteCodesResDto { Success = true, GeneratedCount = generatedCount };
-    }
-
-    /// <summary>
-    /// 生成全局唯一的 8 位码（冲突时重试，最多 MaxCodeAttempts 次）
-    /// </summary>
-    private async Task<string?> GenerateUniqueCode(CancellationToken ct)
-    {
-        for (var attempt = 0; attempt < MaxCodeAttempts; attempt++)
-        {
-            var code = InviteCodeGenerator.Generate(CodeLength);
-            var exists = await CodesDs.EntityGetAsync(x => x.Code == code, ct);
-            if (exists == null)
-                return code;
-        }
-        return null;
     }
 
     /// <summary>

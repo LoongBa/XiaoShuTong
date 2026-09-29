@@ -104,12 +104,18 @@ internal class CreateTaskService(DomainUser<XiaoShuTongUserInfo> user)
 
         // BR-05：批量创建全组学生分配（Pending，TaskId+UserId 唯一）
         var now = DateTime.UtcNow;
+        // 一次 IN 查询取该任务已有分配（替代 foreach N+1 判重），内存 HashSet 判重
+        var studentIds = students.Select(s => s.UserId).ToArray();
+        var existingAssignments = studentIds.Length == 0
+            ? new List<TaskAssignments>()
+            : await AssignmentsDs.EntitySelectAsync(
+                x => x.TaskId == task.Id && studentIds.Contains(x.UserId), ct: ct);
+        var existingUserIds = existingAssignments.Select(a => a.UserId).ToHashSet();
+
         var assignedCount = 0;
         foreach (var student in students)
         {
-            var existing = await AssignmentsDs.EntityGetAsync(
-                x => x.TaskId == task.Id && x.UserId == student.UserId, ct);
-            if (existing != null)
+            if (existingUserIds.Contains(student.UserId))
                 continue; // UNIQUE 防重
             await AssignmentsDs.EntityCreateAsync(new TaskAssignments
             {

@@ -33,15 +33,23 @@ internal class TaskOverdueScanJob(DomainUser<XiaoShuTongUserInfo> user)
         if (overdueTasks.Count == 0)
             return;
 
+        // BR-22：一次 IN 查询取全部到期任务的 Pending/InProgress 分配（替代 foreach N+1）
+        var taskIds = overdueTasks.Select(t => t.Id).ToArray();
+        var pendingAssignments = await AssignmentsDs.EntitySelectAsync(
+            x => taskIds.Contains(x.TaskId)
+                 && (x.Status == AssignmentStatus.Pending || x.Status == AssignmentStatus.InProgress),
+            ct: ct);
+        var pendingByTask = pendingAssignments
+            .GroupBy(a => a.TaskId)
+            .ToDictionary(g => g.Key, g => g.ToList());
+
         foreach (var task in overdueTasks)
         {
             try
             {
                 // BR-22：Pending/InProgress 分配置 Overdue（Completed 不变）
-                var pending = await AssignmentsDs.EntitySelectAsync(
-                    x => x.TaskId == task.Id
-                         && (x.Status == AssignmentStatus.Pending || x.Status == AssignmentStatus.InProgress),
-                    ct: ct);
+                if (!pendingByTask.TryGetValue(task.Id, out var pending))
+                    continue;
                 foreach (var assignment in pending)
                 {
                     assignment.Status = AssignmentStatus.Overdue;

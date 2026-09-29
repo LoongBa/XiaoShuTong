@@ -14,7 +14,7 @@ namespace XiaoShuTong.Services.Rank;
 /// <remarks>
 /// BR-01 无数据空列表 | BR-02 战绩榜 RankEnabled 门控（false → 7001）| BR-03 参数校验
 /// BR-04 战力榜不受 RankEnabled 影响 | BR-05 趋势 = 今日 vs 昨日快照（持平=flat）
-/// 战力 = streak+volume+pk_wins；战绩 = accuracy+mastery（简单求和）；昵称/头像依赖账户域（桩为空串）。
+/// 战力 = streak+volume+pk_wins；战绩 = accuracy+mastery（简单求和）；昵称 = GroupMembers.Nickname（Role=Student 过滤，null 兜底 学生{userId}）；头像依赖账户域（桩为空串）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -26,6 +26,9 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
 
     private GroupsDataService? _groupsDs;
     private GroupsDataService GroupsDs => _groupsDs ??= User.Use<GroupsDataService>();
+
+    private GroupMembersDataService? _membersDs;
+    private GroupMembersDataService MembersDs => _membersDs ??= User.Use<GroupMembersDataService>();
 
     /// <summary>
     /// 榜单查询（组合指标求和 + 趋势箭头）
@@ -115,7 +118,18 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
             .GroupBy(r => r.UserId)
             .ToDictionary(g => g.Key, g => g.Min(r => r.Rank));
 
+        // V0.7.2（T2）：昵称富化（GroupMembers.Nickname，Role=Student 过滤防 Role 歧义；一次 IN 查询防 N+1）
+        var rankedUserIds = combined.Select(x => x.UserId).ToArray();
+        var memberRows = rankedUserIds.Length == 0
+            ? new List<GroupMembers>()
+            : await MembersDs.EntitySelectAsync(
+                x => rankedUserIds.Contains(x.UserId) && x.Role == MemberRole.Student, ct: ct);
+        var nicknameByUser = memberRows
+            .GroupBy(m => m.UserId)
+            .ToDictionary(g => g.Key, g => g.First().Nickname);
+
         var meId = User.UserInfo?.Id ?? 0;
+
         var items = combined.Select((x, index) =>
         {
             var rank = index + 1;
@@ -125,8 +139,8 @@ internal class GetRankingsService(DomainUser<XiaoShuTongUserInfo> user)
             {
                 Rank = rank,
                 UserId = x.UserId,
-                Nickname = string.Empty, // 账户域（跨模块），切片为空串
-                AvatarUrl = string.Empty,
+                Nickname = nicknameByUser.GetValueOrDefault(x.UserId) ?? $"学生{x.UserId}",
+                AvatarUrl = string.Empty, // 头像档 C 降级 P1（本轮不做），保留空串
                 Value = x.Value,
                 Accuracy = x.Accuracy,
                 Mastery = x.Mastery,
@@ -215,10 +229,10 @@ public sealed record RankingItemDto
     /// <summary>用户 Id</summary>
     public long UserId { get; init; }
 
-    /// <summary>昵称（账户域，切片为空）</summary>
+    /// <summary>昵称（GroupMembers.Nickname；null 兜底 学生{userId}）</summary>
     public string Nickname { get; init; } = string.Empty;
 
-    /// <summary>头像 URL（账户域，切片为空）</summary>
+    /// <summary>头像 URL（账户域，切片为空串）</summary>
     public string AvatarUrl { get; init; } = string.Empty;
 
     /// <summary>指标值（组合求和）</summary>

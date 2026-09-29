@@ -115,4 +115,27 @@ public class TaskOverdueScanJobTests(XiaoShuTongDomainTestFixture fixture, ITest
         Assert.NotNull(assignment);
         Assert.Equal(AssignmentStatus.Overdue, assignment.Status); // 仍为 Overdue，无副作用
     }
+
+    /// <summary>BR-22 IN 语义：多个到期任务各自 Pending/InProgress 分配均置 Overdue（一次 IN 查询等价原逐条）</summary>
+    [Fact]
+    public async Task ExecuteAsync_MultipleOverdueTasks_AllMarked()
+    {
+        var taskA = await SeedTaskAsync("到期任务A", TaskStatus.Active, DateTime.UtcNow.AddHours(-1));
+        var taskB = await SeedTaskAsync("到期任务B", TaskStatus.Active, DateTime.UtcNow.AddHours(-2));
+        await SeedAssignmentAsync(taskA.Id, 25041, AssignmentStatus.Pending);
+        await SeedAssignmentAsync(taskA.Id, 25042, AssignmentStatus.InProgress);
+        await SeedAssignmentAsync(taskB.Id, 25043, AssignmentStatus.Pending);
+        await SeedAssignmentAsync(taskB.Id, 25044, AssignmentStatus.Completed); // 已完成不变
+        var job = User.Use<TaskOverdueScanJob>();
+
+        await job.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var ds = User.Use<TaskAssignmentsDataService>();
+        var all = await ds.EntitySelectAsync(
+            x => x.TaskId == taskA.Id || x.TaskId == taskB.Id, ct: TestContext.Current.CancellationToken);
+        Assert.Equal(AssignmentStatus.Overdue, all.Single(a => a.UserId == 25041).Status);
+        Assert.Equal(AssignmentStatus.Overdue, all.Single(a => a.UserId == 25042).Status);
+        Assert.Equal(AssignmentStatus.Overdue, all.Single(a => a.UserId == 25043).Status);
+        Assert.Equal(AssignmentStatus.Completed, all.Single(a => a.UserId == 25044).Status); // 已完成不变
+    }
 }

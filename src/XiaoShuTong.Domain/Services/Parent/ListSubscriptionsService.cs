@@ -1,7 +1,9 @@
 using TKW.Framework.CodeGeneration;
 using TKW.Framework.Domain;
 using TKW.Framework.Domain.Interception.Filters;
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Parent;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Parent;
 
 namespace XiaoShuTong.Services.Parent;
@@ -11,6 +13,7 @@ namespace XiaoShuTong.Services.Parent;
 /// </summary>
 /// <remarks>
 /// BR-11 无订阅空列表 | BR-12 仅当前家长（RLS）；全量返回（决策）。
+/// 孩子昵称 = GroupMembers.Nickname（Role=Student 过滤，null 兜底 学生{userId}）。
 /// </remarks>
 [GenerateController]
 [AuthorityFilter<XiaoShuTongUserInfo>]
@@ -19,6 +22,9 @@ internal class ListSubscriptionsService(DomainUser<XiaoShuTongUserInfo> user)
 {
     private SubscriptionsDataService? _subscriptionsDs;
     private SubscriptionsDataService SubscriptionsDs => _subscriptionsDs ??= User.Use<SubscriptionsDataService>();
+
+    private GroupMembersDataService? _membersDs;
+    private GroupMembersDataService MembersDs => _membersDs ??= User.Use<GroupMembersDataService>();
 
     /// <summary>
     /// 当前家长的各孩子订阅列表
@@ -31,6 +37,16 @@ internal class ListSubscriptionsService(DomainUser<XiaoShuTongUserInfo> user)
         var subscriptions = await SubscriptionsDs.EntitySelectAsync(
             x => x.ParentId == parentId, ct: ct);
 
+        // 孩子昵称富化（GroupMembers.Nickname，Role=Student 过滤防 Role 歧义；一次 IN 查询防 N+1）
+        var studentIds = subscriptions.Select(s => s.StudentId).Distinct().ToArray();
+        var memberRows = studentIds.Length == 0
+            ? new List<GroupMembers>()
+            : await MembersDs.EntitySelectAsync(
+                x => studentIds.Contains(x.UserId) && x.Role == MemberRole.Student, ct: ct);
+        var nicknameByUser = memberRows
+            .GroupBy(m => m.UserId)
+            .ToDictionary(g => g.Key, g => g.First().Nickname);
+
         // BR-11：无订阅空列表
         return new ListSubscriptionsResDto
         {
@@ -39,7 +55,7 @@ internal class ListSubscriptionsService(DomainUser<XiaoShuTongUserInfo> user)
             {
                 SubscriptionUid = s.UId,
                 StudentUid = s.StudentId.ToString(), // 账户域 Uid 未实施，透传 Id
-                StudentNickname = string.Empty,
+                StudentNickname = nicknameByUser.GetValueOrDefault(s.StudentId) ?? $"学生{s.StudentId}",
                 Plan = s.Plan.ToString(),
                 Status = s.Status.ToString(),
                 TrialEndAt = s.TrialEndAt,
@@ -71,7 +87,7 @@ public sealed record SubscriptionItemDto
     /// <summary>孩子外部键</summary>
     public string StudentUid { get; init; } = string.Empty;
 
-    /// <summary>孩子昵称（账户域，切片为空）</summary>
+    /// <summary>孩子昵称（GroupMembers.Nickname；null 兜底 学生{userId}）</summary>
     public string StudentNickname { get; init; } = string.Empty;
 
     /// <summary>方案（Month/Year）</summary>

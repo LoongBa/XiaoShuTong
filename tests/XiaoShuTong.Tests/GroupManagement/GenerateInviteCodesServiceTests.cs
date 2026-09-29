@@ -2,6 +2,7 @@ using System.Text.Json;
 using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Services.GroupManagement;
+using XiaoShuTong.Tools;
 using TKW.Framework.Domain.Testing.xUnit;
 using Xunit;
 
@@ -161,5 +162,48 @@ public class GenerateInviteCodesServiceTests(XiaoShuTongDomainTestFixture fixtur
         Assert.False(result.Success);
         Assert.Equal(GroupErrorCodes.GroupNotFound, result.ErrorCode);
         Assert.Equal(68004, ownerId);
+    }
+
+    /// <summary>BR-21 冲突规避：已存在码不重复生成（一次 IN 批量验重，新码不与存量码冲突）</summary>
+    [Fact]
+    public async Task ExecuteAsync_ExistingCodes_NewCodesDoNotCollide()
+    {
+        var ownerId = SetUser(68005);
+        var group = await SeedGroupAsync(ownerId, $"群组{68005}");
+        var phones = new[] { "13800138041", "13800138042" };
+        var batch = await SeedBatchAsync(group.Id, ownerId, RosterImportStatus.Ready, phones);
+
+        // 预置一个存量码（模拟历史已生成码，8 位）
+        var codesDs = User.Use<OneTimeInviteCodesDataService>();
+        await codesDs.EntityCreateAsync(new OneTimeInviteCodes
+        {
+            UId = UidGenerator.NewId(),
+            GroupId = group.Id,
+            Code = "EXISTING",
+            PhoneLast4 = "9999",
+            Status = OneTimeCodeStatus.Unused,
+            GeneratedBy = ownerId,
+            GeneratedAt = DateTime.UtcNow,
+            ExpiresAt = DateTime.UtcNow.AddDays(30),
+        }, TestContext.Current.CancellationToken);
+
+        var svc = User.Use<GenerateInviteCodesService>();
+        var result = await svc.ExecuteAsync(new GenerateInviteCodesReqDto
+        {
+            GroupId = group.Id,
+            ImportId = batch.Id,
+            Confirm = true,
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(phones.Length, result.GeneratedCount);
+
+        var codes = await codesDs.EntitySelectAsync(
+            x => x.RosterImportId == batch.Id, ct: TestContext.Current.CancellationToken);
+        Assert.Equal(phones.Length, codes.Count);
+        // 新码不与存量码冲突（BR-21 全局唯一）
+        Assert.DoesNotContain(codes, c => c.Code == "EXISTING");
+        // 新码彼此唯一
+        Assert.Equal(codes.Count, codes.Select(c => c.Code).Distinct().Count());
     }
 }

@@ -59,6 +59,20 @@ public class GetRankingsServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
 
     private static DateOnly Today() => DateOnly.FromDateTime(DateTime.UtcNow.AddHours(8));
 
+    private async Task SeedMemberAsync(long groupId, long userId, MemberRole role, string? nickname)
+    {
+        var ds = User.Use<GroupMembersDataService>();
+        await ds.EntityCreateAsync(new GroupMembers
+        {
+            UId = UidGenerator.NewId(),
+            GroupId = groupId,
+            UserId = userId,
+            Role = role,
+            Nickname = nickname,
+            JoinedAt = DateTime.UtcNow,
+        }, TestContext.Current.CancellationToken);
+    }
+
     /// <summary>主流程 + BR-11/12：战力榜组合求和排序（streak+volume+pk_wins）</summary>
     [Fact]
     public async Task ExecuteAsync_CombatRanking_SumsMetricsAndSorts()
@@ -281,5 +295,67 @@ public class GetRankingsServiceTests(XiaoShuTongDomainTestFixture fixture, ITest
         Assert.Equal(7, result.Items[0].Streak);
         Assert.Equal(0, result.Items[0].Volume); // 缺失 → 默认 0
         Assert.Equal(0, result.Items[0].PkWins);
+    }
+
+    /// <summary>昵称富化：榜上用户有 GroupMembers 记录（Role=Student）→ 富化昵称</summary>
+    [Fact]
+    public async Task ExecuteAsync_NicknameEnriched_FromStudentMember()
+    {
+        SetUser(71011);
+        var group = await SeedGroupAsync("group-rank-71071", rankEnabled: true);
+        var today = Today();
+        await SeedSnapshotAsync(71071, group.UId, RankMetricType.Streak, 2, 1, today);
+        await SeedMemberAsync(1, 71071, MemberRole.Student, "小明");
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Combat",
+        }, TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("小明", item.Nickname);
+    }
+
+    /// <summary>昵称兜底：榜上用户无 GroupMembers 记录 / Nickname=null → 学生{userId}</summary>
+    [Fact]
+    public async Task ExecuteAsync_NicknameFallback_WhenNoStudentMember()
+    {
+        SetUser(71012);
+        var group = await SeedGroupAsync("group-rank-71081", rankEnabled: true);
+        var today = Today();
+        await SeedSnapshotAsync(71081, group.UId, RankMetricType.Streak, 2, 1, today);
+        await SeedSnapshotAsync(71082, group.UId, RankMetricType.Streak, 1, 2, today);
+        await SeedMemberAsync(1, 71082, MemberRole.Student, null); // Nickname=null
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Combat",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.Equal(2, result.Items.Count);
+        Assert.Contains(result.Items, i => i.UserId == 71081 && i.Nickname == "学生71081");
+        Assert.Contains(result.Items, i => i.UserId == 71082 && i.Nickname == "学生71082");
+    }
+
+    /// <summary>Oracle C1：Role=Parent 的 GroupMembers 记录不参与昵称富化（防 Role 歧义）</summary>
+    [Fact]
+    public async Task ExecuteAsync_Nickname_IgnoresParentRole()
+    {
+        SetUser(71013);
+        var group = await SeedGroupAsync("group-rank-71091", rankEnabled: true);
+        var today = Today();
+        await SeedSnapshotAsync(71091, group.UId, RankMetricType.Streak, 2, 1, today);
+        await SeedMemberAsync(1, 71091, MemberRole.Parent, "家长昵称"); // 仅 Parent 角色
+        var svc = User.Use<GetRankingsService>();
+
+        var result = await svc.ExecuteAsync(new GetRankingsReqDto
+        {
+            ScopeType = "Group", ScopeId = group.UId, Metric = "Combat",
+        }, TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("学生71091", item.Nickname); // Parent 角色不富化 → 兜底
     }
 }

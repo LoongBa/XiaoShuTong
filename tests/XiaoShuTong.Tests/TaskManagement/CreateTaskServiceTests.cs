@@ -226,4 +226,36 @@ public class CreateTaskServiceTests(XiaoShuTongDomainTestFixture fixture, ITestO
         Assert.False(result.Success);
         Assert.Equal(TaskErrorCodes.ParamInvalid, result.ErrorCode);
     }
+
+    /// <summary>BR-05 UNIQUE 防重语义：每 (TaskId, UserId) 仅一条分配（N+1 修复后不产生重复分配）</summary>
+    [Fact]
+    public async Task ExecuteAsync_Assignments_AreUniquePerTaskAndUser()
+    {
+        var ownerId = SetUser(21007);
+        var group = await SeedGroupAsync(ownerId, $"group-{21007}", 21071, 21072, 21073);
+        var (_, questionIds) = await SeedBankWithQuestionsAsync("bank-task-21007");
+        var svc = User.Use<CreateTaskService>();
+
+        var result = await svc.ExecuteAsync(new CreateTaskReqDto
+        {
+            GroupUid = group.UId,
+            BankId = "bank-task-21007",
+            Title = "任务",
+            QuestionIds = questionIds.ToArray(),
+            Scenario = "Memorize",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(3, result.AssignedCount); // 3 名学生 → 3 条分配
+
+        var tasksDs = User.Use<TasksDataService>();
+        var task = await tasksDs.EntityGetAsync(x => x.UId == result.TaskUid, TestContext.Current.CancellationToken);
+        Assert.NotNull(task);
+        var assignmentsDs = User.Use<TaskAssignmentsDataService>();
+        var assignments = await assignmentsDs.EntitySelectAsync(
+            x => x.TaskId == task.Id, ct: TestContext.Current.CancellationToken);
+        Assert.Equal(3, assignments.Count);
+        // 每 (TaskId, UserId) 唯一（UNIQUE 防重语义保持）
+        Assert.Equal(assignments.Count, assignments.Select(a => a.UserId).Distinct().Count());
+    }
 }

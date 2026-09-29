@@ -1,4 +1,6 @@
+using XiaoShuTong.DataServices.GroupManagement;
 using XiaoShuTong.DataServices.Parent;
+using XiaoShuTong.Entities.GroupManagement;
 using XiaoShuTong.Entities.Parent;
 using XiaoShuTong.Services.Parent;
 using XiaoShuTong.Tools;
@@ -35,6 +37,20 @@ public class ListSubscriptionsServiceTests(XiaoShuTongDomainTestFixture fixture,
             Status = status,
             TrialEndAt = trialEndAt,
             PeriodEndAt = status == SubscriptionStatus.Trialing ? null : DateTime.UtcNow.AddDays(30),
+        }, TestContext.Current.CancellationToken);
+    }
+
+    private async Task SeedMemberAsync(long groupId, long userId, MemberRole role, string? nickname)
+    {
+        var ds = User.Use<GroupMembersDataService>();
+        await ds.EntityCreateAsync(new GroupMembers
+        {
+            UId = UidGenerator.NewId(),
+            GroupId = groupId,
+            UserId = userId,
+            Role = role,
+            Nickname = nickname,
+            JoinedAt = DateTime.UtcNow,
         }, TestContext.Current.CancellationToken);
     }
 
@@ -83,5 +99,52 @@ public class ListSubscriptionsServiceTests(XiaoShuTongDomainTestFixture fixture,
         var item = Assert.Single(result.Items);
         Assert.Equal("Trialing", item.Status);
         Assert.Equal(trialEnd, item.TrialEndAt);
+    }
+
+    /// <summary>孩子昵称富化：孩子有 GroupMembers 记录（Role=Student）→ 富化昵称</summary>
+    [Fact]
+    public async Task Execute_StudentNickname_Enriched()
+    {
+        var parentId = SetUser(48604);
+        await SeedSubscriptionAsync(parentId, 48731, SubscriptionPlan.Month, SubscriptionStatus.Active);
+        await SeedMemberAsync(1, 48731, MemberRole.Student, "小明");
+        var svc = User.Use<ListSubscriptionsService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("小明", item.StudentNickname);
+    }
+
+    /// <summary>孩子昵称兜底：孩子无 GroupMembers 记录 / Nickname=null → 学生{userId}</summary>
+    [Fact]
+    public async Task Execute_StudentNickname_FallbackWhenNoMember()
+    {
+        var parentId = SetUser(48605);
+        await SeedSubscriptionAsync(parentId, 48741, SubscriptionPlan.Month, SubscriptionStatus.Active); // 无 GroupMembers 记录
+        await SeedSubscriptionAsync(parentId, 48742, SubscriptionPlan.Month, SubscriptionStatus.Active); // Nickname=null
+        await SeedMemberAsync(1, 48742, MemberRole.Student, null);
+        var svc = User.Use<ListSubscriptionsService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        Assert.Equal(2, result.Items.Count);
+        Assert.Contains(result.Items, i => i.StudentUid == "48741" && i.StudentNickname == "学生48741");
+        Assert.Contains(result.Items, i => i.StudentUid == "48742" && i.StudentNickname == "学生48742");
+    }
+
+    /// <summary>Oracle C1：Role=Parent 的 GroupMembers 记录不参与昵称富化（防 Role 歧义）</summary>
+    [Fact]
+    public async Task Execute_StudentNickname_IgnoresParentRole()
+    {
+        var parentId = SetUser(48606);
+        await SeedSubscriptionAsync(parentId, 48751, SubscriptionPlan.Month, SubscriptionStatus.Active);
+        await SeedMemberAsync(1, 48751, MemberRole.Parent, "家长昵称"); // 仅 Parent 角色
+        var svc = User.Use<ListSubscriptionsService>();
+
+        var result = await svc.ExecuteAsync(TestContext.Current.CancellationToken);
+
+        var item = Assert.Single(result.Items);
+        Assert.Equal("学生48751", item.StudentNickname); // Parent 角色不富化 → 兜底
     }
 }
