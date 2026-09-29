@@ -11,7 +11,12 @@ source: XiaoShuTong V0.7.0 浏览器走查（API 级契约实证 + 多进程复�
 > 1. **原根因「会话 key 时钟回拨竞态抛 `InvalidOperationException("时钟回拨异常")`」需修正**。框架源码
 >    `TKWF/Utility/IdGenerator/DefaultIdGenerator.cs`（v4.10.36 实际代码）**已自愈修复**：
 >    `if (timestamp < last)` 分支走 `timestamp = WaitNextMillis(last)`（回退自旋等待），**不抛异常**；
->    且源码注释明写「G12 根因定位…修复：改为回退…而抛异常」——XML 注释（G1-G11 时代）已过时，与实际代码不符。
+> 且源码注释明写「G12 根因定位…修复：改为回退…而抛异常」——XML 注释（G1-G11 时代）已过时，与实际代码不符。
+>    **补充澄清（源码确认，防误导）**：`UseWebSession` 实际注册的默认 ID 生成器为
+>    **`DefaultIdGenerator`**（`DomainWebOptions.IIdGeneratorType` 默认值，`DomainWebOptions.cs` L37 +
+>    `WebAppBuilder.UseWebSession` L190 `TryAddSingleton(IIdGenerator, Options.IIdGeneratorType)`），
+>    **非 G12 原文推断的 `DistributedIdGenerator`**——两者同为时间戳方案但实现不同；排查请以
+>    `DefaultIdGenerator` 为准（其高并发 `_LastTimestamp` 竞争自愈逻辑见源码注释）。
 > 2. **真正必现、确定性核心表现 = 固定 session key 复用**（本更新核心）：进程内**所有登录返回同一个固定
 >    SessionKey**（首个 guest key），无视请求 header/cookie、无视用户名——**身份串号级严重性**。详见新问题单
 >    **G13**（`框架问题单-WebSession固定sessionKey复用身份串号-G13.md`），本单保留为 G13 的现象/触发背景。

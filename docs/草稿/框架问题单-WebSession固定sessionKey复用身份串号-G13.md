@@ -50,6 +50,9 @@ source: XiaoShuTong 浏览器/API 级走查实证（v4.10.36，2026-09-29）→ 
 - **身份隔离完全破坏**：任意用户登录命中同一 SessionKey——会话可被其他用户顶替，认证语义失效。
 - **新建会话永不生效**：login 后返回旧固定 key，客户端无法建立独立会话（多端/多用户无法同时在线）。
 - 与 G12「切换用户/高频登录失效」同源（登录写会话路径异常），本单为**必现**形态。
+- **连带现象（佐证同源）**：`logout` 恒返回 `success=false / userName=Guest`——当前 `context.User`
+  已被冻结为首客 guest（且 `IsAuthenticated` 为 false），`Logout()`（`DomainUser.cs` L475-477）提前返回。
+  即**登录与登出读到的都是冻结首客 guest**，非当次用户。
 
 ## 四、复现路径（框架组可复现）
 
