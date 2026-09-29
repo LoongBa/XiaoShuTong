@@ -1,6 +1,6 @@
 ---
 title: 框架问题单——SG3 GraphQL 字段名重推导不跟随 SG2 消歧（G11）
-status: 待框架组处理
+status: 已关闭（框架 v4.10.36 修复）
 date: 2026-09-27
 source: XiaoShuTong V0.6.18 WARN004 全链路排查（2026-09-27）——SG2/SG3 生成器源码反编译 + schema/运行时实证
 ---
