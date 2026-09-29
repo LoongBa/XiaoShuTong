@@ -204,6 +204,50 @@ public class ImportBankJsonServiceTests(XiaoShuTongDomainTestFixture fixture, IT
         Assert.False(result.Success);
         Assert.Equal(BankErrorCodes.ParamInvalid, result.ErrorCode);
     }
+
+    /// <summary>V0.7.5 C2/C4：同批混合 upsert（存量题走 update 列批量 + 新题走 create 批量）——分列两 List 语义保持</summary>
+    [Fact]
+    public async Task ExecuteAsync_MixedBatch_ExistingUpdates_NewCreates()
+    {
+        var userId = SetUser(45007);
+        await SeedBankAsync("bank-json-45007", ownerId: userId);
+
+        var svc = User.Use<ImportBankJsonService>();
+        // 首次导入 1 题（存量）
+        await svc.ExecuteAsync(new ImportBankJsonReqDto
+        {
+            BankId = "bank-json-45007",
+            JsonContent = JsonFor("bank-json-45007"),
+            KnowledgeCardsJson = SampleCardsJson,
+        }, TestContext.Current.CancellationToken);
+
+        // 同批：存量题（Q-chinese-7to9-9001）+ 新题（Q-chinese-7to9-9002）——一次导入触发 create+update 分列批量
+        const string mixedJson = """
+            [
+              { "id": "Q-chinese-7to9-9001", "bank_id": "bank-json-45007", "subject": "chinese", "type": "R1",
+                "content": { "question": "补全：东临碣石，___", "answer": "以观沧海", "knowledge_points": ["观沧海"] },
+                "meta": { "difficulty": 1, "source": "测试", "knowledge_card_id": "KC-chinese-观沧海" } },
+              { "id": "Q-chinese-7to9-9002", "bank_id": "bank-json-45007", "subject": "chinese", "type": "R1",
+                "content": { "question": "补全：日月之行，___", "answer": "若出其中", "knowledge_points": ["观沧海"] },
+                "meta": { "difficulty": 1, "source": "测试", "knowledge_card_id": "KC-chinese-观沧海" } }
+            ]
+            """;
+        var second = await svc.ExecuteAsync(new ImportBankJsonReqDto
+        {
+            BankId = "bank-json-45007",
+            JsonContent = mixedJson,
+            KnowledgeCardsJson = SampleCardsJson,
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(second.Success);
+        Assert.Equal(2, second.Imported); // 存量 upsert + 新题 create，均计入
+        Assert.Equal(2, second.HintFilled);
+
+        var ds = User.Use<QuestionsDataService>();
+        var all = await ds.EntitySelectAsync(x => x.BankId == "bank-json-45007",
+            ct: TestContext.Current.CancellationToken);
+        Assert.Equal(2, all.Count); // 1 存量（update 列批量未新建）+ 1 新题（create 批量）
+    }
 }
 
 /// <summary>BankHintBackfillJob（UC-B.4c 存量回填）Contract 测试</summary>

@@ -97,29 +97,33 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
         var hintFilled = 0;
         var failures = new List<string>();
 
+        // 幂等键 = QuestionId（upsert：更新 Content/Keywords/Hint，不跳过）——读侧一次 IN + 文件 IO 移出循环 + create/update 分列批量
+        var existingQuestions = await QuestionsDs.EntitySelectAsync(
+            x => x.BankId == bank.BankId, ct: ct);
+        var existingById = existingQuestions.ToDictionary(q => q.QuestionId, StringComparer.Ordinal);
+
+        // BR-15：内容权威文件循环外 Load 一次（循环内仅内存 upsert，循环外 Save 一次）
+        var contentFile = await LoadOrCreateContentFileAsync(bank.JsonPath, ct) ?? new ContentFileRecord("", "V1.0", []);
+        var toCreate = new List<Questions>(questions.Count);
+        var toUpdate = new List<Questions>(questions.Count);
+
         foreach (var q in questions)
         {
-            // 幂等键 = QuestionId（upsert：更新 Content/Keywords/Hint，不跳过）
-            var existing = await QuestionsDs.EntityGetAsync(
-                x => x.BankId == bank.BankId && x.QuestionId == q.QuestionId, ct);
-
             // Hint join：knowledge_card_id → 卡片 fields.记忆钩子（无卡片映射 → 留空）
             var hint = cardMap.GetValueOrDefault(q.KnowledgeCardId ?? string.Empty);
 
             // BR-16：自动提取判题关键词（答案分段 → KeywordGroup[]）
             var keywordGroups = ImportQuestionsService.ExtractKeywordGroups(q.Answer);
 
-            // BR-15：写内容权威文件（含答案，权威源；Hint 是线索可随内容文件登记）
-            var contentFile = await LoadOrCreateContentFileAsync(bank.JsonPath, ct) ?? new ContentFileRecord("", "V1.0", []);
+            // BR-15：写内容权威文件（含答案，权威源；Hint 是线索可随内容文件登记）——内存 upsert（同实例 RemoveAll+Add，无并发）
             contentFile.Questions.RemoveAll(x => x.QuestionId == q.QuestionId); // upsert 语义
             contentFile.Questions.Add(new ContentQuestionRecord(q.QuestionId, q.Stem, q.Answer, keywordGroups, hint));
-            ContentFileStore.Save(bank.JsonPath, SerializeContent(contentFile));
 
-            // upsert 题目索引（Content 镜像不含答案/关键词，防爬 BR-19；补 cardType/card 供 GetKnowledgeCardService）
+            // upsert 题目索引（Content 镜像不含答案/关键词，防爬 BR-19；补 cardType/card 供 GetKnowledgeCardService）——分列批量
             var contentMirror = new { q.QuestionId, q.Stem, q.ChapterId, CardType = "authorCard", Card = hint };
-            if (existing == null)
+            if (!existingById.TryGetValue(q.QuestionId, out var existing))
             {
-                await QuestionsDs.EntityCreateAsync(new Questions
+                toCreate.Add(new Questions
                 {
                     UId = UidGenerator.NewId(),
                     QuestionId = q.QuestionId,
@@ -133,7 +137,7 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
                     Difficulty = q.Difficulty,
                     Status = QuestionStatus.Active,
                     Hint = hint,
-                }, ct);
+                });
             }
             else
             {
@@ -142,13 +146,21 @@ internal class ImportBankJsonService(DomainUser<XiaoShuTongUserInfo> user)
                 existing.KnowledgePoints = q.KnowledgePoints;
                 existing.Topic = q.Topic;
                 existing.Hint = hint;
-                await QuestionsDs.EntityUpdateAsync(existing, ct);
+                toUpdate.Add(existing);
             }
 
             imported++;
             if (!string.IsNullOrWhiteSpace(hint))
                 hintFilled++;
         }
+
+        ContentFileStore.Save(bank.JsonPath, SerializeContent(contentFile)); // 循环外一次
+
+        if (toCreate.Count > 0)
+            await QuestionsDs.EntityCreateBatchAsync(toCreate, ct); // 写侧批量（create）
+        if (toUpdate.Count > 0)
+            await QuestionsDs.EntityUpdateColumnsBatchAsync(
+                toUpdate, q => new { q.Content, q.Keywords, q.KnowledgePoints, q.Topic, q.Hint }, ct); // C4：列表达式指定 5 列（列精度，v4.10.38 起两 API 均可用）
 
         return new ImportBankJsonResDto
         {

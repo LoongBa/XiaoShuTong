@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using XiaoShuTong.DataServices.Bank;
 using XiaoShuTong.Entities.Bank;
 using XiaoShuTong.Services.Bank;
@@ -69,6 +70,9 @@ public class ImportQuestionsServiceTests(XiaoShuTongDomainTestFixture fixture, I
         var fileContent = ContentFileStore.Read(bank.JsonPath);
         Assert.NotNull(fileContent);
         Assert.Contains("若夫淫雨霏霏", fileContent);
+        // C5 三重断言：文件记录数与导入数一致
+        var contentNode = JsonNode.Parse(fileContent);
+        Assert.Equal(2, contentNode!["Questions"]!.AsArray().Count);
 
         // 题目索引已 upsert（Content 镜像不含答案）
         var questionsDs = User.Use<QuestionsDataService>();

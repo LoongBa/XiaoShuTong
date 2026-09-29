@@ -71,12 +71,18 @@ internal class ImportQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
             };
         }
 
-        // 重复题检测（同库内 QuestionId 唯一）+ 关键词提取（BR-16）
+        // 重复题检测（同库内 QuestionId 唯一）+ 关键词提取（BR-16）——读侧一次 IN + 文件 IO 移出循环 + 写侧批量
+        var existingQuestions = await QuestionsDs.EntitySelectAsync(
+            x => x.BankId == bank.BankId, ct: ct);
+        var existingIds = existingQuestions.Select(q => q.QuestionId).ToHashSet(StringComparer.Ordinal);
+
+        // BR-15：内容权威文件循环外 Load 一次（循环内仅内存 Add，循环外 Save 一次）
+        var contentFile = await LoadOrCreateContentFileAsync(bank.JsonPath, ct);
+        var toCreate = new List<Questions>(parsed.Questions.Count);
+
         foreach (var q in parsed.Questions)
         {
-            var exists = await QuestionsDs.EntityGetAsync(
-                x => x.BankId == bank.BankId && x.QuestionId == q.QuestionId, ct);
-            if (exists != null)
+            if (existingIds.Contains(q.QuestionId))
             {
                 failures.Add($"题目 {q.QuestionId} 重复，跳过");
                 continue;
@@ -85,13 +91,11 @@ internal class ImportQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
             // BR-16：自动提取判题关键词（答案分段 → KeywordGroup[]）
             var keywordGroups = ExtractKeywordGroups(q.Answer);
 
-            // BR-15：写内容权威文件（含答案，权威源）
-            var contentFile = await LoadOrCreateContentFileAsync(bank.JsonPath, ct);
+            // BR-15：写内容权威文件（含答案，权威源）——内存 Add，循环外一次 Save
             contentFile.Questions.Add(new ContentQuestionRecord(q.QuestionId, q.Stem, q.Answer, keywordGroups));
-            ContentFileStore.Save(bank.JsonPath, SerializeContent(contentFile));
 
-            // upsert 题目索引（Content 镜像不含答案；Keywords 服务端校验用）
-            await QuestionsDs.EntityCreateAsync(new Questions
+            // 收集题目索引（Content 镜像不含答案；Keywords 服务端校验用）——写侧批量
+            toCreate.Add(new Questions
             {
                 UId = UidGenerator.NewId(),
                 QuestionId = q.QuestionId,
@@ -103,7 +107,13 @@ internal class ImportQuestionsService(DomainUser<XiaoShuTongUserInfo> user)
                 KnowledgePoints = q.KnowledgePoints,
                 Difficulty = 0,
                 Status = QuestionStatus.Active,
-            }, ct);
+            });
+        }
+
+        if (toCreate.Count > 0)
+        {
+            ContentFileStore.Save(bank.JsonPath, SerializeContent(contentFile));
+            await QuestionsDs.EntityCreateBatchAsync(toCreate, ct);
         }
 
         var imported = parsed.Questions.Count - failures.Count(f => f.StartsWith("题目 "));

@@ -121,14 +121,13 @@ internal class InviteBuddyService(DomainUser<XiaoShuTongUserInfo> user)
 
     private async Task<List<string?>> LoadGradesAsync(IEnumerable<long> groupIds, CancellationToken ct)
     {
-        var grades = new List<string?>();
-        foreach (var groupId in groupIds)
-        {
-            var group = await GroupsDs.EntityGetAsync(x => x.Id == groupId, ct);
-            if (group != null)
-                grades.Add(group.Grade);
-        }
-        return grades;
+        var ids = groupIds.ToArray();
+        if (ids.Length == 0)
+            return [];
+
+        // 一次 IN 取全部群组（避免逐组 EntityGetAsync 的 N+1）
+        var groups = await GroupsDs.EntitySelectAsync(x => ids.Contains(x.Id), ct: ct);
+        return groups.Select(g => g.Grade).ToList();
     }
 }
 
