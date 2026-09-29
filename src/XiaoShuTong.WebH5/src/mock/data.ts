@@ -220,6 +220,13 @@ export const initialData: DatasetSeed = {
       knowledgePoint: "登鹳雀楼", knowledgeCardId: "kc-003",
     },
     {
+      // V0.7.6 补：R3b 整篇默写（长文分段语音用例——Oracle C3，验证 R3b 分段渲染分支）
+      success: true, errorCode: null,
+      questionId: "q-3b", type: "R3b",
+      content: '{"question":"请默写《岳阳楼记》全文（整篇默写，可分段背诵）","cardId":"kc-003b"}',
+      knowledgePoint: "岳阳楼记", knowledgeCardId: "kc-003b",
+    },
+    {
       success: true, errorCode: null,
       questionId: "q-4", type: "O1",
       content: '{"question":"《静夜思》中\\"举头望明月\\"的下一句是？","options":["低头思故乡","疑是地上霜","举杯邀明月","对影成三人"],"cardId":"kc-004"}',
