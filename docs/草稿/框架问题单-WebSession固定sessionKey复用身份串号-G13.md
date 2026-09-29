@@ -42,6 +42,13 @@ source: XiaoShuTong 浏览器/API 级走查实证（v4.10.36，2026-09-29）→ 
      中间件同步管道读的是当次正确 HttpContext（Set-Cookie 新 key）——完美解释"头新/body 固定首客"分离。
   2. `DomainUserContext.CurrentAopUser`（AsyncLocal）跨请求泄漏冻结首客 user（`DomainUser.Use<T>()`
      L252-261 try/finally 若在 HC 异步流切换时未正确恢复，首客 user 残留）。
+- **漂移实证修正冻结语义（10:57 同进程）**：同一进程内固定 key 随 **SessionExpiredTimeSpan（15min）过期**
+  而漂移（`10:35:04`→`10:57:38`）——说明冻结的**不是 key 值本身，而是 resolver 复用的同一个
+  DomainUser 实例**：其实例 `SessionKey` 在其缓存会话过期后，经 `LoginAsUserAsync → UpdateAndActiveSessionAsync`
+  （TryGet miss → NewSessionAsync → `BindUser` 回写新 key，`DomainUser.cs` L503-519）刷新为新的"固定 key"。
+  → 冻结=**实例级**（跨请求复用同一 DomainUser 实例），非"一次 key 缓存永久"。
+- 建议框架组核实方向 1 的具体泄漏点：HC `RequestExecutor` 执行异步流是否在**线程池线程切换/fire-and-forget**
+  处丢失 `HttpContext`（`IHttpContextAccessor` AsyncLocal），使后续 resolver 构造拿到前序请求的 HttpContext。
 - 已排除：`DefaultIdGenerator` 非碰撞根因（每次 NewId 时间戳+随机唯一；中间件每次 Set-Cookie 新 key 佐证）；
   HybridCache key 规范化（不同 sessionKey → 不同 UTF8 bytes → 不同缓存槽，不冲突）。
 
@@ -64,11 +71,21 @@ source: XiaoShuTong 浏览器/API 级走查实证（v4.10.36，2026-09-29）→ 
 4. **重启验证（决定性，2026-09-29 10:35 实证）**：重启进程后首登 → **产生新首客 K'**（时间戳=重启后首次调用时刻）；
    之后全部登录固定返回 K'（不再是重启前 K）。证明**固定 key = 进程首客 key，随进程重启 reset**，
    与"AsyncLocal 冻结"方向完全吻合。
+5. **窗口漂移验证（最终精化，2026-09-29 10:57 同进程实证）**：**同一进程（PID 48168，10:34:41 启动，未重启）内**，
+   固定 key 从 `10:35:04` **漂移到 `10:57:38`**——`10:35:04` key 于 `10:50:04`（SessionExpiredTimeSpan=15min）过期后，
+   `10:57:38` 首次请求重建新 key 并继续冻结（后续 9 次全复用）。
+   → **固定 key 非进程级永久，而是"resolver 复用的同一 DomainUser 实例 + 会话 15min 过期后其 SessionKey 随
+   `LoginAsUserAsync → UpdateAndActiveSessionAsync`（TryGet miss → NewSessionAsync → BindUser）更新"**——
+   即**进程内同一个 DomainUser 实例被冻结复用，实例 SessionKey 随过期刷新**，彻底坐实 AsyncLocal 实例冻结。
 
 **实证序列（2026-09-29，10:34:41 启动进程）**：
 首登 owner01 → `session:20260929103504000hybtujd`（10:35:04 首客）；
 xiaoming / parent01 / owner01 / xiaoming → **全部同一 key**（10:35:04）。
 （此前进程固定 key 为 `session:20260929092947...`= 上一进程首客——重启后即替换为新首客。）
+
+**漂移实证序列（2026-09-29，10:57 同一 PID 48168）**：
+owner01/xiaoming/parent01 轮流 9 次 → **全部 `session:20260929105738000wzpq1de`**（10:57:38，DISTINCT=1）；
+对比 10:35 固定 key（`...103504...`）→ 同进程内 key 漂移 = 15min 过期重建冻结。
 
 ## 五、建议框架侧修复（参考，非唯一方案）
 
