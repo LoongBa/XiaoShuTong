@@ -169,6 +169,10 @@ function TaskStudyPage() {
   }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, currentTask?.questionIds, wrongPracticeQuestionIds, startSession, navigate, endStudy]);
 
   useEffect(() => {
+    // 复位取消标记（StrictMode dev 双挂载：cleanup 置 true 后二次 effect 必须复位，
+    // 否则成功路径 line "cancelledRef 早退" 永不 setReady → 卡 loading；
+    // 此前成功路径从未走通（链路断在 PARAM_INVALID 走 error 分支），V0.7.7 首次跑通暴露）
+    cancelledRef.current = false;
     void initSession();
     return () => {
       cancelledRef.current = true;

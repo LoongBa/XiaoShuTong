@@ -857,7 +857,10 @@ export const ListMyTasksResDtoSchema = {
       progress: { kind: "number" },
       deadlineAt: { kind: "date" },
       status: { kind: "string" },
-      ownerName: { kind: "string" }
+      ownerName: { kind: "string" },
+      bankId: { kind: "string" },
+      totalQuestions: { kind: "number" },
+      questionIds: { kind: "array", element: { kind: "string" } }
   } } }
 } as const;
 export const ListTasksResDtoSchema = {
@@ -1274,7 +1277,10 @@ export const MyTaskItemDtoSchema = {
     progress: { kind: "number" },
     deadlineAt: { kind: "date" },
     status: { kind: "string" },
-    ownerName: { kind: "string" }
+    ownerName: { kind: "string" },
+    bankId: { kind: "string" },
+    totalQuestions: { kind: "number" },
+    questionIds: { kind: "array", element: { kind: "string" } }
 } as const;
 export const TaskListItemDtoSchema = {
     taskUid: { kind: "string" },

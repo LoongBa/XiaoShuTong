@@ -551,7 +551,10 @@ public partial class XiaoShuTongDomainInitializer
                     BankId = SeedBankId,
                     ChapterId = "7a",
                     QType = QuestionType.R1,
-                    Content = $"{{\"questionId\":\"{qid}\",\"stem\":\"{stem}\"}}",
+                    // V0.7.7 走查修复：content 键名对齐 question.v1.json 规范（required:["question"]）+
+                    // BR-19 StripAnswerFromContent 白名单（R1 → question/cardId）+ 前端 parsed.question。
+                    // 旧键 questionId/stem 白名单全不匹配 → 下发 "{}" 题面空白（demo 首跑实证）。
+                    Content = JsonSerializer.Serialize(new { question = stem }),
                     Keywords = keywordsJson,
                     KnowledgePoints = ["观沧海-背诵"],
                     Difficulty = 0,

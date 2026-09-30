@@ -124,7 +124,7 @@ export const operationSelection: Record<string, string> = {
   'listChildren_Execute': 'success errorCode items { studentId studentUid nickname className hasSubscription }',
   'listGroups_Execute': 'success errorCode items { groupId groupUid name subject grade memberCount executionRate rankEnabled } pageIndex pageSize totalCount',
   'listModels': 'success errorCode items { isFromPersistentSource id uId name provider baseUrl modelName enabled sortOrder timeoutSeconds remark createTime updateTime } total',
-  'listMyTasks_Execute': 'success errorCode items { taskId taskUid title progress deadlineAt status ownerName }',
+  'listMyTasks_Execute': 'success errorCode items { taskId taskUid title progress deadlineAt status ownerName bankId totalQuestions questionIds }',
   'listPendingBuddyInvites_Execute': 'success errorCode items { inviteId inviterUserId nickname avatarUrl invitedAt expiresAt }',
   'listSubscriptions_Execute': 'success errorCode items { subscriptionUid studentUid studentNickname plan status trialEndAt periodEndAt }',
   'listTasks_Execute': 'success errorCode items { taskUid title deadlineAt status questionCount completionRate } total',
@@ -1517,6 +1517,9 @@ export interface MyTaskItemDto {
   deadlineAt: string | null;
   status: string;
   ownerName: string;
+  bankId: string;
+  totalQuestions: number;
+  questionIds: Array<string>;
 }
 
 export interface TaskListItemDto {

@@ -22,27 +22,36 @@ initRevealEngine();
 // variableTypesMap（V1.0.10）：注册 codegen 产物的 operationVariableTypes——Use<T>() 代理
 // 据此为复杂 DTO 入参声明 GraphQL 变量类型（缺失时 inferGraphQLType 退化为 JSON → 400
 // "The variable ... is not compatible"）。
+// 会话过期统一处理（onUnauthorized + onGlobalError 双路复用）：
+// 1) 先清 tsclient session（不清则过期 sessionKey 残留 localStorage，
+//    跳登录后所有后续请求仍带过期 session → 服务端持续 Guest 拦截 warn，
+//    直到重新登录覆盖为止——V0.7.7 走查实证"多次触发匿名拦截"的根因）。
+//    logout() best-effort：过期时 logout mutation 可能也 401，被内部 catch 忽略，本地状态必清。
+// 2) 再清应用状态并跳登录（已在登录页则不重复跳转，防死循环）。
+// 触发路径说明（tsclient 实测）：
+// - onUnauthorized：仅 Tkwf.User 无本地 session（GetUser 抛错）时触发；
+// - 服务端 AUTH_REQUIRED 响应走 host.handleError → onAuthRequired（per-instance、
+//   configure 无法注入）→ 最终由 onGlobalError 兜底（SDK 文档：返回 401/403 时由
+//   onGlobalError 兜底）。因此 AUTH_REQUIRED 必须在 onGlobalError 分支处理。
+const handleSessionExpired = () => {
+  void Tkwf.User.logout().catch(() => {});
+  const isLoginPage = window.location.pathname.startsWith("/auth/");
+  if (!isLoginPage) {
+    localStorage.removeItem("beishu-app-storage");
+    window.location.href = "/auth/login";
+  }
+};
+
 Tkwf.configure("default", {
   endpoint: "/graphql",
   storage: localStorage,
   selectionMap: operationSelection,
   variableTypesMap: operationVariableTypes,
   retry: { maxAttempts: 3, retryOn: ["NETWORK_ERROR", "SERVER_ERROR"] },
-  onUnauthorized: () => {
-    // 会话过期 → 先清 tsclient session（不清则过期 sessionKey 残留 localStorage，
-    // 跳登录后所有后续请求仍带过期 session → 服务端持续 Guest 拦截 warn，
-    // 直到重新登录覆盖为止——V0.7.7 走查实证"多次触发匿名拦截"的根因）。
-    // logout() best-effort：过期时 logout mutation 可能也 401，被内部 catch 忽略，本地状态必清。
-    void Tkwf.User.logout().catch(() => {});
-    // 再清应用状态并跳登录（已在登录页则不重复跳转，防死循环）
-    const isLoginPage = window.location.pathname.startsWith("/auth/");
-    if (!isLoginPage) {
-      localStorage.removeItem("beishu-app-storage");
-      window.location.href = "/auth/login";
-    }
-  },
+  onUnauthorized: handleSessionExpired,
   onGlobalError: (err) => {
     console.error(`[GlobalError] ${err.code}: ${err.message}`);
+    if (err.code === "AUTH_REQUIRED") handleSessionExpired();
   },
 });
 

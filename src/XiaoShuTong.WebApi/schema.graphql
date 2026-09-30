@@ -1199,6 +1199,12 @@ type MyTaskItemDto {
   status: String!
   "群主名（账户域依赖，切片为空）"
   ownerName: String!
+  "关联题库业务键（createStudySession bankId 入参来源）"
+  bankId: String!
+  "任务题数（createStudySession questionCount 入参来源）"
+  totalQuestions: Int!
+  "任务题集白名单（getSessionQuestion questionIds 入参来源）"
+  questionIds: [String!]!
 }
 
 "Information about pagination in a connection."
