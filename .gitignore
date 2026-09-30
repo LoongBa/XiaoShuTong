@@ -58,3 +58,6 @@ src/**/.xCodeGen/Generated/
 *.dev.db-*
 # V0.6.8：dev.db 手动备份（种子重建前快照，本地保留不入库）
 *.dev.db.bak-*
+
+# playwright-edge MCP 临时工作区（snapshot/network 导出，非仓库资产）
+.playwright-mcp/
