@@ -303,9 +303,9 @@ type BuddyListItemDto {
   buddyId: String!
   "搭子用户 Id"
   userId: Long!
-  "昵称（账户域，切片为空）"
+  "昵称（GroupMembers.Nickname；null 兜底 学生{userId}）"
   nickname: String!
-  "头像 URL（账户域，切片为空）"
+  "头像 URL（账户域，切片为空串）"
   avatarUrl: String!
   "连续打卡天数"
   streakDays: Int!
@@ -336,9 +336,9 @@ type ChildItemDto {
   studentId: Long!
   "孩子外部键（账户域 Uid 未实施，透传 Id）"
   studentUid: String!
-  "昵称（账户域，切片为空）"
+  "昵称（GroupMembers.Nickname；null 兜底 学生{userId}）"
   nickname: String!
-  "班级（账户域/群组域，切片为空）"
+  "班级（Groups.Name；无群空串）"
   className: String!
   "是否有订阅"
   hasSubscription: Boolean!
@@ -1251,7 +1251,7 @@ type PendingBuddyInviteItemDto {
 type PkPlayerResultDto {
   "用户 Id"
   userId: Long!
-  "昵称（账户域，切片为空）"
+  "昵称（GroupMembers.Nickname；null 兜底 学生{userId}）"
   nickname: String!
   "得分"
   score: Int!
@@ -1411,9 +1411,9 @@ type RankingItemDto {
   rank: Int!
   "用户 Id"
   userId: Long!
-  "昵称（账户域，切片为空）"
+  "昵称（GroupMembers.Nickname；null 兜底 学生{userId}）"
   nickname: String!
-  "头像 URL（账户域，切片为空）"
+  "头像 URL（账户域，切片为空串）"
   avatarUrl: String!
   "指标值（组合求和）"
   value: Decimal!
@@ -1652,7 +1652,7 @@ type SubscriptionItemDto {
   subscriptionUid: String!
   "孩子外部键"
   studentUid: String!
-  "孩子昵称（账户域，切片为空）"
+  "孩子昵称（GroupMembers.Nickname；null 兜底 学生{userId}）"
   studentNickname: String!
   "方案（Month/Year）"
   plan: String!
