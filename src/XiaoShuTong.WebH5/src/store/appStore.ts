@@ -32,6 +32,8 @@ export interface StartSessionOptions {
   taskId: number | null;
   /** 期望题数 */
   questionCount: number;
+  /** 任务题集白名单（任务会话首次取题透传；与错题重练 wrongPracticeQuestionIds 互斥，任务场景优先） */
+  questionIds?: string[] | null;
 }
 
 // startSession 结果：sessionUid 活源 + 第 1 题（题集耗尽时 question.questionId 为空）
@@ -170,9 +172,11 @@ export const useAppStore = create<AppState>()(
         // 首次取第 1 题（BR-18 题集耗尽时 questionId 为空，由调用方导航结果页）
         // V0.6.14（学习-BR-51）：错题重练白名单透传（wrong.tsx 设置 → 首次取题携带）；
         // 白名单生命周期 = 重练会话全程（后续取题 task.tsx fetchNextQuestion 从 store 读；endStudy 时清空）
+        // V0.7.8：任务题集白名单优先（task.tsx initSession 传入 → 任务会话全程出题范围约束；与错题重练互斥）
         const practiceIds = get().wrongPracticeQuestionIds;
+        const whiteList = opts.questionIds && opts.questionIds.length > 0 ? opts.questionIds : practiceIds;
         const question = await Tkwf.User.Use<SessionQuestion_ExecuteService>().sessionQuestion_Execute({
-          request: { sessionUid, bankId, type: null, knowledgePoint: null, questionIds: practiceIds },
+          request: { sessionUid, bankId, type: null, knowledgePoint: null, questionIds: whiteList },
         });
         
         return { sessionUid, question };

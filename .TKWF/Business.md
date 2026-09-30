@@ -68,7 +68,7 @@
 | 学习-BR-01 | Scenario/SessionType 必须为合法枚举值 | StudySessions | UC-4.1 |
 | 学习-BR-02 | 任务会话的 taskId 必须指向存在且未截止的任务 | StudySessions, TaskAssignments | UC-4.1 |
 | 学习-BR-03 | 题库必须存在（bankId 校验，跨模块） | StudySessions, Banks | UC-4.1 |
-| 学习-BR-04 | 题量可选 10/20/30/50，默认 20；混合比 30% 新题 + 70% 复习 | StudySessions, MemoryStates | UC-4.1 |
+| 学习-BR-04 | 题量可选 10/20/30/50，默认 20；混合比 30% 新题 + 70% 复习；档位仅适用自由背诵（无 TaskId），任务会话题数=任务实际题数（TaskId>0 豁免档位，>0 校验保留） | StudySessions, MemoryStates | UC-4.1 |
 | 学习-BR-05 | 同一任务续做幂等：已存在进行中会话则复用，不重复建 | StudySessions | UC-4.1 |
 | 学习-BR-06 | 会话必须存在且属于当前用户 | StudySessions | UC-4.2 |
 | 学习-BR-07 | 答案文本必须合法（非空、格式正确） | Attempts | UC-4.2 |

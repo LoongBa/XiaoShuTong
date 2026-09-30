@@ -80,10 +80,16 @@ public partial class XiaoShuTongDomainInitializer
             };
             await repo.Insert(group).ExecuteAffrowsAsync();
 
+            // V0.7.7 走查根因：FreeSql 直插后实体自增 Id 不回填（保持 0；SQLite 侧 INTEGER PK
+            // 显式 0 被转自增 → DB 实际 Id≠0，实体仍 0）→ 后续 GroupId/TaskId 父引用全 0 错位
+            // （实证：GroupMembers.GroupId=0 → CreateTask BR-03 查 0 成员 → PARAM_INVALID）。
+            // 修复：插入后按业务键重查自增 Id，不依赖实体回填。
+            var groupId = (await repo.Select<Groups>().Where(g => g.UId == SeedGroupUid).FirstAsync()).Id;
+
             await repo.Insert(new GroupMembers
             {
                 UId = UidGenerator.NewId(),
-                GroupId = group.Id,
+                GroupId = groupId,
                 UserId = SeedStudentId,
                 Role = MemberRole.Student,
                 Nickname = "小明",
@@ -92,7 +98,7 @@ public partial class XiaoShuTongDomainInitializer
             await repo.Insert(new GroupMembers
             {
                 UId = UidGenerator.NewId(),
-                GroupId = group.Id,
+                GroupId = groupId,
                 UserId = SeedParentId,
                 Role = MemberRole.Parent,
                 Nickname = "小明家长",
@@ -101,7 +107,7 @@ public partial class XiaoShuTongDomainInitializer
             await repo.Insert(new GroupMembers
             {
                 UId = UidGenerator.NewId(),
-                GroupId = group.Id,
+                GroupId = groupId,
                 UserId = SeedStudentBId,
                 Role = MemberRole.Student,
                 Nickname = "小美",
@@ -110,7 +116,7 @@ public partial class XiaoShuTongDomainInitializer
             await repo.Insert(new GroupMembers
             {
                 UId = UidGenerator.NewId(),
-                GroupId = group.Id,
+                GroupId = groupId,
                 UserId = SeedStudentCId,
                 Role = MemberRole.Student,
                 Nickname = "小刚",
@@ -142,7 +148,7 @@ public partial class XiaoShuTongDomainInitializer
             {
                 UId = UidGenerator.NewId(),
                 OwnerId = SeedOwnerId,
-                GroupId = group.Id,
+                GroupId = groupId,
                 BankId = SeedBankId,
                 Title = "《观沧海》背诵（联调）",
                 Description = "V0.6.3 端到端联调任务：3 题",
@@ -159,10 +165,13 @@ public partial class XiaoShuTongDomainInitializer
             };
             await repo.Insert(task).ExecuteAffrowsAsync();
 
+            // 同上：task 自增 Id 不回填 → 重查（防 TaskAssignments.TaskId=0 错位）
+            var taskId = (await repo.Select<Tasks>().Where(t => t.UId == task.UId).FirstAsync()).Id;
+
             await repo.Insert(new TaskAssignments
             {
                 UId = UidGenerator.NewId(),
-                TaskId = task.Id,
+                TaskId = taskId,
                 UserId = SeedStudentId,
                 Status = AssignmentStatus.Pending,
                 Progress = 0,

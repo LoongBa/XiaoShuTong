@@ -29,8 +29,12 @@ Tkwf.configure("default", {
   variableTypesMap: operationVariableTypes,
   retry: { maxAttempts: 3, retryOn: ["NETWORK_ERROR", "SERVER_ERROR"] },
   onUnauthorized: () => {
-    // 会话过期 → 清除本地状态并跳登录
-    // 已在登录页则不重复跳转（防死循环）
+    // 会话过期 → 先清 tsclient session（不清则过期 sessionKey 残留 localStorage，
+    // 跳登录后所有后续请求仍带过期 session → 服务端持续 Guest 拦截 warn，
+    // 直到重新登录覆盖为止——V0.7.7 走查实证"多次触发匿名拦截"的根因）。
+    // logout() best-effort：过期时 logout mutation 可能也 401，被内部 catch 忽略，本地状态必清。
+    void Tkwf.User.logout().catch(() => {});
+    // 再清应用状态并跳登录（已在登录页则不重复跳转，防死循环）
     const isLoginPage = window.location.pathname.startsWith("/auth/");
     if (!isLoginPage) {
       localStorage.removeItem("beishu-app-storage");

@@ -85,7 +85,11 @@ function StudentHomePage() {
             teacherName: item.ownerName || '老师',
             teacherId: '',
             classId: '',
-            totalQuestions: 1,
+            // listMyTasks.bankId 直通（后端可能返回空串→undefined，task.tsx 兜底逻辑可工作）
+            bankId: item.bankId || undefined,
+            totalQuestions: item.totalQuestions || 0,
+            // listMyTasks.questionIds 任务题集白名单（task.tsx 会话全程出题范围约束）
+            questionIds: item.questionIds || [],
             completedQuestions: Math.round((item.progress ?? 0) * 100),
             deadline: item.deadlineAt || new Date().toISOString(),
             status: item.status?.toLowerCase() || 'pending',

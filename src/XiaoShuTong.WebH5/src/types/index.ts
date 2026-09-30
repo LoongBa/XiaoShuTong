@@ -29,6 +29,8 @@ export interface Task {
   /** 关联题库业务键（会话初始化 createStudySession 的 bankId 来源；可空→默认题库） */
   bankId?: string;
   totalQuestions: number;
+  /** 任务题集白名单（getSessionQuestion questionIds 入参来源；任务会话全程出题范围约束） */
+  questionIds?: string[];
   completedQuestions: number;
   deadline: string;
   status: 'pending' | 'in_progress' | 'completed' | 'expired';

@@ -39,10 +39,22 @@ internal class CreateStudySessionService(DomainUser<XiaoShuTongUserInfo> user)
             || !Enum.TryParse<SessionType>(request.SessionType, true, out var sessionType))
             return new CreateStudySessionResDto { Success = false, ErrorCode = LearningErrorCodes.ParamInvalid };
 
-        // BR-04：题量可选 10/20/30/50，默认 20
-        var questionCount = request.QuestionCount <= 0 ? 20 : request.QuestionCount;
-        if (!AllowedQuestionCounts.Contains(questionCount))
-            return new CreateStudySessionResDto { Success = false, ErrorCode = LearningErrorCodes.ParamInvalid };
+        // BR-04：题量可选 10/20/30/50，默认 20；档位仅适用自由背诵（无 TaskId），
+        // 任务会话题数=任务实际题数（TaskId>0 豁免档位白名单，>0 校验保留防脏数据）
+        var isTaskSession = request.TaskId is > 0;
+        int questionCount;
+        if (isTaskSession)
+        {
+            if (request.QuestionCount <= 0)
+                return new CreateStudySessionResDto { Success = false, ErrorCode = LearningErrorCodes.ParamInvalid };
+            questionCount = request.QuestionCount;
+        }
+        else
+        {
+            questionCount = request.QuestionCount <= 0 ? 20 : request.QuestionCount;
+            if (!AllowedQuestionCounts.Contains(questionCount))
+                return new CreateStudySessionResDto { Success = false, ErrorCode = LearningErrorCodes.ParamInvalid };
+        }
 
         // BR-02：任务校验（跨模块：任务域切片 04；本切片桩通过——任务会话仅记录 TaskId）
         // BR-03：题库校验（跨模块：题库域切片 03；本切片按注册表桩校验 BankId 非空）

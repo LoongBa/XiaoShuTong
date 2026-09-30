@@ -61,9 +61,9 @@
     <ProjectReference Include="..\..\src\XiaoShuTong.Domain\XiaoShuTong.Domain.csproj" />
   </ItemGroup>
 
-  <!-- v4.10.36 (i18n)：TKWF.Domain.targets 的 ApiService 角色 Dll 引用清单未包含
-       TKWF.Framework.Localization（框架侧配置缺口），此处显式补充——
-       Program.cs 的 services.AddFrameworkLocalization() 扩展所在程序集。 -->
+  <!-- i18n（ADR82 后果节）：AddFrameworkLocalization() 属主动功能使能——消费端需要本地化
+       应显式引用 TKWF.Framework.Localization（正常依赖，非框架配置缺口）。
+       Dll 模式下框架 targets 不注入该程序集，故此处显式 Reference。 -->
   <ItemGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
     <Reference Include="TKWF.Framework.Localization" HintPath="$(TKWFDeployPath)build\refs\TKWF.Framework.Localization.dll" />
   </ItemGroup>

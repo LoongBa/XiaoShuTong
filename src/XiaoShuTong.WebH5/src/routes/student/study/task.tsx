@@ -88,6 +88,7 @@ function TaskStudyPage() {
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelledRef = useRef(false);
   const bankIdRef = useRef<string>(DEFAULT_BANK_ID);
+  const taskQuestionIdsRef = useRef<string[] | null>(null);
   const questionStartRef = useRef<number>(Date.now());
   const nextTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const endedRef = useRef(false); // 防止 endStudy fire-and-forget 重复调用
@@ -131,8 +132,11 @@ function TaskStudyPage() {
     setInitStatus('loading');
     try {
       const isReview = Boolean(search.reviewQuestionId) || Boolean(wrongPracticeQuestionIds); // 错题重练=复习场景（Assess）
+      // 任务 bankId 缺失时兜底（真实值来自 listMyTasks.bankId，home.tsx 透传；服务端接通后不再命中）
       const bankId = currentTask?.bankId ?? DEFAULT_BANK_ID;
       bankIdRef.current = bankId;
+      // 任务题集白名单（listMyTasks.questionIds 透传；任务会话全程出题范围约束，BR-51）
+      taskQuestionIdsRef.current = currentTask?.questionIds && currentTask.questionIds.length > 0 ? currentTask.questionIds : null;
       const result = await startSession(bankId, {
         scenario: isReview ? 'Assess' : 'Memorize', // 复习=Assess、新学=Memorize
         sessionType: 'Progressive',
@@ -140,6 +144,7 @@ function TaskStudyPage() {
         // 此处消费真实 DB Id（旧 P0-3 防退化 Number(UId)=NaN 恒 null 已解除）；自由/复习模式无任务则 null
         taskId: currentTask?.taskId ?? null,
         questionCount: currentTask?.totalQuestions ?? DEFAULT_QUESTION_COUNT,
+        questionIds: taskQuestionIdsRef.current,
       });
       if (cancelledRef.current) return;
 
@@ -161,7 +166,7 @@ function TaskStudyPage() {
     } catch {
       setInitStatus('error');
     }
-  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, wrongPracticeQuestionIds, startSession, navigate, endStudy]);
+  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, currentTask?.questionIds, wrongPracticeQuestionIds, startSession, navigate, endStudy]);
 
   useEffect(() => {
     void initSession();
@@ -185,8 +190,10 @@ function TaskStudyPage() {
     if (!sessionUid) return 'error';
     try {
       // V0.6.14：错题重练白名单持续透传（学习-BR-51；endStudy 时清空）
+      // 任务题集白名单优先（initSession 设置；任务会话全程出题范围约束，BR-51）
       const res = await Tkwf.User.Use<SessionQuestion_ExecuteService>().sessionQuestion_Execute({
-        request: { sessionUid, bankId: bankIdRef.current, type: null, knowledgePoint: null, questionIds: wrongPracticeQuestionIds },
+        request: { sessionUid, bankId: bankIdRef.current, type: null, knowledgePoint: null,
+          questionIds: (taskQuestionIdsRef.current && taskQuestionIdsRef.current.length > 0 ? taskQuestionIdsRef.current : wrongPracticeQuestionIds) },
       });
       if (!res.success) return 'error';
       // 题集耗尽（BR-18：success=true 无 questionId）= 会话结束信号

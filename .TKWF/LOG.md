@@ -28,6 +28,25 @@
 
 ---
 
+## 2026-10-01 — [Rule] — 学习-BR-04 增量补注：任务会话题量豁免档位白名单（V0.7.x P0 走查）
+
+**类别标签**：`Rule`
+
+**涉及模块**：`.TKWF/Business.md`（学习-BR-04 文字末尾追加限定）+ `XiaoShuTong.Services.Learning.CreateStudySessionService`（任务场景豁免档位白名单）+ `XiaoShuTong.Services.TaskManagement.ListMyTasksService`（MyTaskItemDto 透出 BankId/TotalQuestions/QuestionIds）
+
+**上下文**：
+> V0.7.x P0 走查发现学生任务会话链路两处阻塞级缺陷：① createStudySession 必然 PARAM_INVALID——任务场景 questionCount=任务实际题数（如 3）不在白名单 {10,20,30,50}，而档位语义仅适用自由背诵（用户可选题量），任务会话题数应由任务决定；② 任务列表（MyTaskItemDto）未透出 BankId/任务题数/题集白名单，前端任务点击后无 createStudySession 入参来源。
+
+**决策/修复**：
+> 学习-BR-04 末尾追加限定："档位仅适用自由背诵（无 TaskId），任务会话题数=任务实际题数（TaskId>0 豁免档位，>0 校验保留）"。实现对齐：CreateStudySessionService 任务场景（TaskId>0）豁免档位白名单、仍拒绝 ≤0 防脏数据；非任务场景保持白名单原行为。ListMyTasksService 的 MyTaskItemDto 新增 BankId（Tasks.BankId 可空时填 string.Empty）/ TotalQuestions（Tasks.QuestionCount）/ QuestionIds（任务题集，非空直接赋值）三字段，闭环 createStudySession bankId/questionCount 与 getSessionQuestion questionIds 入参链路。
+
+**避坑指南**：
+> - 档位白名单校验不可无差别施加于任务场景——任务会话题数=任务实际题数（任务决策），自由背诵才走档位选择（10/20/30/50）；
+> - 任务链路入参来源需在任务列表透出（BankId/QuestionCount/QuestionIds），否则消费端 createStudySession/getSessionQuestion 缺入参；
+> - BR 修订保留原编号、不改行内既存语义，以追加限定方式增量记录。
+
+---
+
 ## 2026-09-29 — [Rule] — 搭子-BR-17 扩展：Removed 状态复用复活（解除后重邀不撞 UNIQUE）
 
 **类别标签**：`Rule`

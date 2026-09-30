@@ -150,4 +150,24 @@ public class CreateStudySessionServiceTests(XiaoShuTongDomainTestFixture fixture
         Assert.True(second.Success);
         Assert.Equal(first.SessionUid, second.SessionUid);
     }
+
+    /// <summary>走查 P0 修复：任务会话题量豁免档位白名单——TaskId>0 + QuestionCount=3（任务实际题数）→ 成功</summary>
+    [Fact]
+    public async Task ExecuteAsync_TaskSession_QuestionCountOutsideWhitelist_Succeeds()
+    {
+        SetUser(41007);
+        var svc = User.Use<CreateStudySessionService>();
+
+        var result = await svc.ExecuteAsync(new CreateStudySessionReqDto
+        {
+            Scenario = "Memorize",
+            BankId = "bank-ch-7a",
+            SessionType = "Progressive",
+            TaskId = 40000007,
+            QuestionCount = 3,
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal(3, result.QuestionCount);
+    }
 }

@@ -70,6 +70,9 @@ internal class ListMyTasksService(DomainUser<XiaoShuTongUserInfo> user)
                 DeadlineAt = task.DeadlineAt,
                 Status = effectiveStatus.ToString(),
                 OwnerName = string.Empty, // 依赖账户域（跨模块），切片返回空
+                BankId = task.BankId ?? string.Empty, // 任务无题库时填空串，不参与会话创建
+                TotalQuestions = task.QuestionCount,
+                QuestionIds = task.QuestionIds,
             });
         }
 
@@ -120,4 +123,13 @@ public sealed record MyTaskItemDto
 
     /// <summary>群主名（账户域依赖，切片为空）</summary>
     public string OwnerName { get; init; } = string.Empty;
+
+    /// <summary>关联题库业务键（createStudySession bankId 入参来源）</summary>
+    public string BankId { get; init; } = string.Empty;
+
+    /// <summary>任务题数（createStudySession questionCount 入参来源）</summary>
+    public int TotalQuestions { get; init; }
+
+    /// <summary>任务题集白名单（getSessionQuestion questionIds 入参来源）</summary>
+    public string[] QuestionIds { get; init; } = [];
 }
