@@ -1,5 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "playwright-edge": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp@latest", "--extension", "--browser", "msedge"],
+      "enabled": true,
+      "timeout": 15000
+    }
+  },
   "instructions": [
     "Agents_Use_TKWF.md",
     "src/*/AGENTS.md",
