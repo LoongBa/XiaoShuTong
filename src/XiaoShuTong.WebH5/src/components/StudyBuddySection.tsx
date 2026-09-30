@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
 import { DomainClientError, Tkwf } from '@tkwf/tsclient';
+import { executeQuery } from '@/lib/sdk-bypass';
 import type {
-  Buddy_ExecuteService,
   BuddyCandidates_ExecuteService,
   InviteBuddy_ExecuteService,
   BuddyCandidateItemDto,
@@ -13,6 +13,7 @@ import type {
   AcceptBuddyInvite_ExecuteService,
   RejectBuddyInvite_ExecuteService,
   PendingBuddyInviteItemDto,
+  RemoveBuddyResDto,
 } from '@/gql/ts-client.g';
 import { Plus, Users, Share2, Download, Loader2 } from 'lucide-react';
 
@@ -193,11 +194,12 @@ export function StudyBuddySection({ buddies, onBuddyChanged }: StudyBuddySection
 
   // 任务5（F1）：解除搭子（removeBuddy_Execute；确认弹窗 → 成功关弹窗 + 刷新搭子列表，
   //  6001 关系不存在/已解除 → 提示 + 列表权威重拉；网络异常 → 提示 + 不重拉）
+  //  V0.7.7（G16）：SDK 前缀启发式把 remove* 判 mutation 导致 400 → 走 executeQuery 强制 query（ts-client.g.ts 已标 type:'query'）
   const handleRemove = async (buddy: Buddy) => {
     setRemovingId(buddy.id);
     setRemoveError('');
     try {
-      const res = await Tkwf.User.Use<Buddy_ExecuteService>().removeBuddy_Execute({
+      const res = await executeQuery<RemoveBuddyResDto>('removeBuddy_Execute', {
         request: { buddyId: buddy.id },
       });
       if (res.success) {

@@ -7,10 +7,11 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Tkwf } from '@tkwf/tsclient';
+import { executeQuery } from '@/lib/sdk-bypass';
 import type {
   Banks_ExecuteService,
   Groups_ExecuteService,
-  Task_ExecuteService,
+  CreateTaskResDto,
 } from '@/gql/ts-client.g';
 import {
   ArrowLeft,
@@ -164,7 +165,8 @@ function CreateTaskPage() {
     setPublishError('');
 
     try {
-      const res = await Tkwf.User.Use<Task_ExecuteService>().createTask_Execute({
+      // V0.7.7（G16）：SDK 前缀启发式把 create* 判 mutation 导致 400 → 走 executeQuery 强制 query（ts-client.g.ts 已标 type:'query'）
+      const res = await executeQuery<CreateTaskResDto>('createTask_Execute', {
         request: {
           groupUid: selectedGroupUid,
           bankId: selectedBankId,

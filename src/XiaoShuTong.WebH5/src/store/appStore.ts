@@ -2,11 +2,12 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { User, Task, ReviewItem, KnowledgePoint, Subject, LearningStats } from '@/types';
 import { Tkwf } from '@tkwf/tsclient';
+import { executeQuery } from '@/lib/sdk-bypass';
 import type {
-  StudySession_ExecuteService,
   SessionQuestion_ExecuteService,
   GetNextQuestionResDto,
   SubmitAttemptResDto,
+  CreateStudySessionResDto,
 } from '@/gql/ts-client.g';
 
 // 服务端判题结果记录（替换本地 { answer, isCorrect, usedHint } 推导）
@@ -140,8 +141,9 @@ export const useAppStore = create<AppState>()(
       setWrongPracticeQuestionIds: (ids) => set({ wrongPracticeQuestionIds: ids }),
       
       // 会话初始化归口：createStudySession_Execute → sessionUid 活源 → 首次 getSessionQuestion 取第 1 题
+      // V0.7.7（G16）：SDK 前缀启发式把 create* 判 mutation 导致 400 → 走 executeQuery 强制 query（ts-client.g.ts 已标 type:'query'）
       startSession: async (bankId, opts) => {
-        const res = await Tkwf.User.Use<StudySession_ExecuteService>().createStudySession_Execute({
+        const res = await executeQuery<CreateStudySessionResDto>('createStudySession_Execute', {
           request: {
             scenario: opts.scenario,
             bankId,
