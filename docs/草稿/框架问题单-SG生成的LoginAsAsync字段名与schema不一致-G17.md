@@ -1,7 +1,7 @@
 ---
 title: 框架问题单——SG 生成 LoginAsAsync 的 GraphQL 字段名 loginByContextAsync 与 schema loginByContext 不一致（G17）
-status: 提议（XiaoShuTong V0.7.7 走查已绕行；2026-10-02 核实在 4.10.45 未自动修复，待框架组评估）
-date: 2026-10-01（2026-10-02 核实升级后未修复）
+status: ✅ 已修复（框架侧 v4.10.46；XiaoShuTong 升级后需按 §五 验收）
+date: 2026-10-01（2026-10-02 核实升级后未修复；2026-10-02 框架组修复完成 v4.10.46）
 source: XiaoShuTong P0 浏览器走查（2026-10-01）——AdminWasm 登录页 DomainClientUser.LoginAsAsync 每次登录 HTTP 400 "field not exist"
 ---
 
@@ -83,3 +83,44 @@ schema 实际权威字段为 **`loginByContext`**（`Mutation` 根），二者�
 
 - **已绕行**（2026-10-01，走查会话）：登录改手写 `loginByContext` mutation + sessionStorage 注入，不走 `LoginAsAsync`；后续每次 WebApi 重启后重登走同路径。
 - **待框架修复后**：按 §五 验收 → 还原 `LoginAsAsync` 直调，删除绕行脚本。
+
+## 七、框架组修复完成答复（2026-10-02，v4.10.46）
+
+> **状态：✅ 已修复（框架侧 v4.10.46）**。根因 = 契约源头（SG2 内置控制器 `GraphQLField` 未对齐 HC 运行时 Async 裁剪），非消费端问题。升级 4.10.46 后按 §五 验收。
+
+### 修复实现
+
+- **`TypeNameConvention` 新增 `StripAsyncSuffix`（唯一 Async 剥离权威）**，`ToGraphQLMethodName` 统一先剥 Async（对齐 HotChocolate 运行时命名约定）
+- 内置控制器契约字段名：`loginByContextAsync` → **`loginByContext`**（与 schema 一致）；业务服务幂等零变化（其 `ExtractMethodInfo` 路径本已剥 Async）
+- `ServiceMethodExtractor.StripAsyncSuffix` 委托同源（消除重复实现，全链路单点）
+- Oracle1 方案审核通过（候选 A：单一权威；否决 B 消歧分叉 / C 破坏 REST 路由）
+
+### 验证（框架侧）
+
+- 全量 **1170/1170 用例全绿**（含新增内置控制器契约断言 `FrameworkContractGraphQLFieldAsyncTests` ×2）
+- slnx Release 0 警告 0 错误（编译层）
+- REST 路由 `/auth/login-by-context-async` / ResolverName / 输出类型名 **零变化**（零破坏性变更）
+
+### XiaoShuTong 侧验收动作（升级 4.10.46 后）
+
+1. **主验收**：还原 `User.Use<DomainClientUser>().LoginAsAsync(...)` 直调 → 登录成功（不再 400），删除走查绕行脚本（手写 `loginByContext` mutation + sessionStorage 注入）
+2. **回归**：`loginByPassword` / `logout` / `changePasswordSecure` 不受影响
+3. **实证**：`AdminWasm.dll` 字符串探测不再出现 `loginByContextAsync`（仅 `loginByContext`）
+4. **注意**：本次修复只对齐契约到运行时，**服务端 schema 字段名不变**（`loginByContext`）——无需调整既有 schema 消费
+
+### XiaoShuTong 侧验收状态（2026-10-02，主 Agent 亲测）
+
+**编译层 ✅ 全部通过**（无需代码改动——Login.razor.cs 本就是 `LoginAsAsync` 直调，走查绕行是浏览器会话层手法无脚本残留）：
+
+| 项 | 结果 |
+|---|---|
+| refs 版本 | `TKWF.Domain.ApiClient.dll` = **4.10.46.0**（框架组已部署） |
+| ApiMetadata 契约（`.TKWF/` + `obj/` 双副本） | `GraphQLField = "loginByContext"`（无 Async，10-02 03:08 重建）✅ |
+| AdminWasm 重建（4.10.46 refs） | 0 错误 |
+| DLL 字符串精确探测（大小写敏感） | camelCase `loginByContextAsync` = **0**、`loginByContext`（独立）= 0（字段名经契约常量传递非内联）；PascalCase `LoginByContextAsync` = 3（CLR 方法名，正常）✅ |
+| Domain build | 0 警告 0 错误（契约刷新）✅ |
+| 测试基线 | **477 通过 / 0 失败 / 2 跳过**（无回归）✅ |
+
+> ⚠️ 探测注意：PowerShell `-match` 不区分大小写会误报（PascalCase 方法名 `LoginByContextAsync` 也能命中小写模式）——须用 `[regex]::Matches` 大小写敏感精确计数。
+
+**运行时验收 ⏳ 待服务在线**：主验收项（`LoginAsAsync` 直调登录成功）需 WebApi(5020)+AdminWasm(5000) 运行后浏览器实测；届时一并补 AI 模型页走查 + BankDetail 运行时验证（框架组编译完成、服务重启后）。
