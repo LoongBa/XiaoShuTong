@@ -1,7 +1,7 @@
 ---
 title: 框架问题单——SG 生成 LoginAsAsync 的 GraphQL 字段名 loginByContextAsync 与 schema loginByContext 不一致（G17）
-status: 提议（XiaoShuTong V0.7.7 走查已绕行，待框架组评估）
-date: 2026-10-01
+status: 提议（XiaoShuTong V0.7.7 走查已绕行；2026-10-02 核实在 4.10.45 未自动修复，待框架组评估）
+date: 2026-10-01（2026-10-02 核实升级后未修复）
 source: XiaoShuTong P0 浏览器走查（2026-10-01）——AdminWasm 登录页 DomainClientUser.LoginAsAsync 每次登录 HTTP 400 "field not exist"
 ---
 
@@ -31,6 +31,28 @@ schema 实际权威字段为 **`loginByContext`**（`Mutation` 根），二者�
 
 > 补充：schema.graphql 中其它认证 mutation（`loginByPassword` / `logout` / `changePasswordSecure`）均为无 `Async` 形式，佐证服务端规则"去 Async + 驼峰"；客户端生成器未对齐。
 
+## 二·五、2026-10-02 核实：升级 4.10.36+（G11）后**未自动修复**（refs 4.10.45 实证）
+
+### 核实结论
+
+**G17 在升级到 4.10.36+ 后依旧存在**——当前 refs（`F:\TKWF_FRAMEWORK_PATH\build\refs\`）实际版本 **4.10.45**（FileVersion/Pascal 版本号四层证据），AdminWasm.dll 字符串探测**仅含 `loginByContextAsync`、无独立 `loginByContext`** → SG3 代理依旧发错字段名 → 登录依旧 400。
+
+### 四层证据链（根因精确化）
+
+| 层 | 来源 | 字段名 | 说明 |
+|---|---|---|---|
+| 运行时权威 | `schema.graphql` L166 | `loginByContext` | **无 Async**——HotChocolate 命名约定从方法名 `LoginByContextAsync` **裁剪 Async 后缀**（`loginByPassword`/`logout`/`changePasswordSecure` 同理，佐证系统性命名约定非个案） |
+| SG2 契约 | `WebApi/obj/.../ApiServiceGenerator/ApiMetadata.g.cs` | `loginByContextAsync` | **带 Async**——SG2 写入契约 `GraphQLField` 时未应用 HotChocolate Async 裁剪规则 |
+| 服务端 resolver | `WebApi/obj/.../ApiServiceGenerator/AuthMutation.g.cs` | 方法名 `LoginByContextAsync` | 运行时经 HotChocolate 命名约定裁剪 → 实际注册 `loginByContext`（无 Async） |
+| 客户端代理 | `AdminWasm/bin/.../XiaoShuTong.AdminWasm.dll` 字符串探测 | `loginByContextAsync` | SG3 忠实消费 SG2 契约字段名 → 发错名 → **400** |
+
+### 根因修正（原 §二 推断不完整）
+
+- 原判定侧重"客户端生成器未对齐"；**实际根因在服务端 SG2 契约本身**：SG2 生成 `ApiMetadata.GraphQLField` 时对 AuthController（框架内置控制器）方法直接取方法名 camelCase（`loginByContextAsync`），**未应用与 HotChocolate 运行时一致的 Async 后缀裁剪**（`loginByContext`），契约值与运行时实际注册字段不一致。
+- **关键演化**：G11（v4.10.36）将 SG3 从"本地推导"改为"优先消费 SG2 契约 `GraphQLField`"（解决业务 Service `_Execute` 消歧名 ✓ 已验证）——但 AuthController 的契约值本身就是错的，G11 的契约消费机制**反而把错误固化**：升级后客户端从"独立推导（也错）"变为"消费错误契约（照错）"，**字段名依旧 `loginByContextAsync`，400 依旧发生**。
+- **佐证（REST vs GraphQL 分叉）**：REST 端点 `/auth/login-by-context-async`（**带 Async**，`AuthRestEndpoints.g.cs` 实证）——REST 层无此命名约束故正常；GraphQL 层被 HotChrome 裁剪为 `loginByContext`。**只有 SG2 契约夹在中间既不对齐 GraphQL 运行时、又不走 REST 命名**，两层从此分叉。
+- 修复方向收敛：**SG2 生成 `ApiMetadata.GraphQLField` 时须对 AuthController 方法应用与服务端运行时一致的 Async 裁剪**（或让 G11 的 `ComputeGraphQLFieldDisambiguation`/`ResolveResolverMethodName` 单一权威一并覆盖框架内置控制器，而非仅业务 Service）。
+
 ## 三、影响
 
 | 场景 | 表现 | 严重度 |
@@ -40,19 +62,22 @@ schema 实际权威字段为 **`loginByContext`**（`Mutation` 根），二者�
 
 **XiaoShuTong 走查绕行**：未绕过 `LoginAsAsync`，改为页面层手写 `loginByContext` mutation（与 schema 对齐）并手动写 `sessionStorage["TKWF_SessionKey"]` 注入会话，规避生成代理缺陷（详见走查会话记录）。登录成功实证 `loginByContext` 字段正确。
 
-## 四、建议框架侧（按推荐序）
+## 四、建议框架侧（按推荐序，2026-10-02 按根因修正更新）
+
+> ⚠️ 核实结论（§二·五）：根因在 **SG2 写 ApiMetadata 契约时未对 AuthController 方法应用 HotChocolate Async 裁剪**，SG3 忠实消费错误契约。修复须从**契约源头**对齐运行时命名，而非客户端侧。
 
 | # | 方案 | 说明 |
 |---|------|------|
-| 1 | **客户端生成器对齐服务端命名规则（根治）** | `TKWF.Domain.ApiClient.SG` 对认证类方法生成 GraphQL 字段名时复用服务端 SG2 的命名规则（去 `Async` 后缀 + 首字母小写 + 驼峰），或直接读取服务端 schema/ApiMetadata 中的权威字段名，而非独立推导。 |
-| 2 | **方法名->字段名映射表** | 客户端 `LoginAs` 系列（`LoginAsAsync`/`LoginByContextAsync`/`LoginByPasswordAsync` 等）在生成器中显式映射到 schema 既有字段名，规避推导歧义。 |
-| 3 | **生成后契约校验** | 生成的客户端代理在构建期对比服务端 schema，字段名不一致即告警/报错，防此类静默不匹配上线。 |
+| 1 | **SG2 生成 `GraphQLField` 契约时应用 Async 裁剪（根治）** | `ApiServiceGenerator`（SG2）写 `ApiMetadata.GraphQLField` 时，对方法名应用与服务端运行时 HotChocolate 一致的命名规则（**裁剪 `Async` 后缀 + camelCase**，如 `LoginByContextAsync → loginByContext`）；或让 G11 已建的 `ComputeGraphQLFieldDisambiguation`/`ResolveResolverMethodName` 单一权威**覆盖框架内置控制器**（AuthController/PingService），而非仅业务 Service。SG3 消费修正后契约即自动正确——**改动点收敛到服务端 SG2 一处，客户端零改动**。 |
+| 2 | **契约校验防再犯（护栏）** | SG2/SG3 生成时对比运行时实际注册字段（schema 导出或 HotChocolate 命名约定），`GraphQLField` 与运行时不符即告警/报错，防此类静默不匹配（G17 属 G11 契约消费机制引入前就存在、升级后未察觉的静默缺陷）。 |
+| 3 | ~~客户端生成器映射表~~（已否） | 原方案主攻客户端侧，与根因（契约源头错误）不符——客户端只是忠实消费错误契约，改客户端治标不治本，仅作临时应急。 |
 
 ## 五、验收标准（XiaoShuTong 侧）
 
 框架修复 + 部署后：
 - **主验收**：AdminWasm `User.Use<DomainClientUser>().LoginAsAsync(...)` 直调成功登录（不再 400），可移除走查用的手写 `loginByContext` 登录注入脚本
 - **回归**：`loginByPassword` / `logout` / `changePasswordSecure` 不受影响
+- **实证**：`AdminWasm.dll` 字符串探测不再出现 `loginByContextAsync`（仅 `loginByContext`）
 
 ## 六、XiaoShuTong 侧现状（V0.7.7 走查）
 
