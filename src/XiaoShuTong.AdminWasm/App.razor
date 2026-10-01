@@ -37,6 +37,10 @@
     {
         // 监听会话过期事件 → 显示模态框，不自动跳转
         DomainUser.OnAuthRequired += OnAuthRequiredAsync;
+        // G18 兼容绕行：框架 GraphQLClient.MapGraphQLError 因 STJ JsonElement as string 恒 null，
+        // AUTH_REQUIRED 无法映射为 AuthenticationException → OnAuthRequired 不触发，会话过期走了 OnServiceError。
+        // 此处兜底检测会话过期特征消息 → 与 OnAuthRequired 相同弹窗处理；框架修复（读 JsonElement.GetString）后可还原为纯 OnAuthRequired。
+        DomainUser.OnServiceError += OnServiceErrorAsync;
     }
 
     private async Task OnAuthRequiredAsync()
@@ -46,11 +50,27 @@
         await InvokeAsync(StateHasChanged);
     }
 
+    private Task OnServiceErrorAsync(Exception ex)
+    {
+        // 会话过期特征消息（服务端 / 客户端双形态）：仅 Development 联调白名单生效、
+        // 生产会话过期同样命中——按消息兜底，不依赖错误码映射（G18 修复前）。
+        var msg = ex.Message;
+        if (msg.Contains("Session expired", StringComparison.OrdinalIgnoreCase)
+            || msg.Contains("会话已过期", StringComparison.Ordinal)
+            || msg.Contains("请先登录", StringComparison.Ordinal))
+        {
+            return OnAuthRequiredAsync();
+        }
+        return Task.CompletedTask;
+    }
+
     private void OnSessionExpiredOk()
     {
         _showSessionExpired = false;
         SessionExpiredState.IsExpired = false;
-        NavigationManager.NavigateTo("/user/login", forceLoad: true);
+        // 携带当前地址作为 returnUrl（相对路径，登录页 StartsWith('/') 守卫可通过），登录后转回原页
+        var returnUrl = Uri.EscapeDataString(new Uri(NavigationManager.Uri).PathAndQuery);
+        NavigationManager.NavigateTo($"/user/login?returnUrl={returnUrl}", forceLoad: true);
     }
 
     void Reload()

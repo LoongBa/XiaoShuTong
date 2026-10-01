@@ -12,7 +12,7 @@ namespace XiaoShuTong.AdminWasm.Models
 {
     public class LoginParamsType
     {
-        [Required] public string UserName { get; set; } = "admin";
+        [Required] public string UserName { get; set; } = "owner01";
 
         [Required] public string Password { get; set; } = "123456";
 

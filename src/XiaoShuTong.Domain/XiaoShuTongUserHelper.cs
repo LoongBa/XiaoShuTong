@@ -37,10 +37,31 @@ public class XiaoShuTongUserHelper : DomainUserHelperBase<XiaoShuTongUserInfo>
         string credential,
         string authInfo)
     {
+        return await ResolveWhitelistIdentityAsync(userName);
+    }
+
+    protected override async Task<XiaoShuTongUserInfo> OnLoginByPasswordAsync(
+        DomainUser<XiaoShuTongUserInfo> user,
+        string userName,
+        string credential,
+        EnumLoginFrom loginFrom)
+    {
+        // 联调放行（V0.6.3 同步扩展）：密码登录与微信小程序共用同一白名单映射，
+        // 仅 Development 启用（运行时守卫）；生产环境须由真实密码验证替代（防白名单入生产）。
+        // AdminWasm 管理端登录页走 AuthContext.Password() → loginByContext(authType=Password) → 本方法。
+        return await ResolveWhitelistIdentityAsync(userName);
+    }
+
+    /// <summary>
+    /// 联调白名单身份映射（微信小程序 / 密码登录共用）——与种子身份 Id 对齐（T4）。
+    /// 生产环境严禁携带白名单上线。
+    /// </summary>
+    private async Task<XiaoShuTongUserInfo> ResolveWhitelistIdentityAsync(string userName)
+    {
         // 运行时守卫：非 Development 环境直接拒绝（代码级防线，防白名单入生产）
         // DomainHost.Options 直接暴露 DomainOptions（Host.ServiceProvider 解析 DomainOptions 可能为 null——XML 无注册保证）
         if (Host?.Options is not { IsDevelopment: true })
-            throw new NotSupportedException("联调放行（OnLoginByWeChatAppletAsync 白名单）仅 Development 环境启用");
+            throw new NotSupportedException("联调放行（白名单登录）仅 Development 环境启用");
 
         // 白名单映射：与 XiaoShuTongDomainInitializer.data.cs 种子身份 Id 对齐（T4）
         return (userName) switch
@@ -74,15 +95,5 @@ public class XiaoShuTongUserHelper : DomainUserHelperBase<XiaoShuTongUserInfo>
             },
             _ => throw new NotSupportedException($"联调白名单外账号：{userName}"),
         };
-    }
-
-    protected override async Task<XiaoShuTongUserInfo> OnLoginByPasswordAsync(
-        DomainUser<XiaoShuTongUserInfo> user,
-        string userName,
-        string credential,
-        EnumLoginFrom loginFrom)
-    {
-        // TODO Agent: 实现登录验证逻辑（查数据库、验证密码等）
-        throw new System.NotImplementedException("登录验证逻辑待实现");
     }
 }

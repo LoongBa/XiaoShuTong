@@ -121,6 +121,8 @@ schema 实际权威字段为 **`loginByContext`**（`Mutation` 根），二者�
 | Domain build | 0 警告 0 错误（契约刷新）✅ |
 | 测试基线 | **477 通过 / 0 失败 / 2 跳过**（无回归）✅ |
 
+**运行时验收 ✅ 通过（2026-10-02，主 Agent 实测）**：登录页真实提交（patch fetch 抓请求体）→ **请求体字段名 `loginByContext`（无 Async）**（解码实证 `mutation { loginByContext(input: {userName: "owner01", ...})}`）→ 响应**不再 400 `field not exist`**，转为业务层 `Server internal error`（`OnLoginByPasswordAsync` 未实现 `NotImplementedException`——种子白名单仅微信小程序登录，属既定认证状态非 G17 缺陷）。**判定：LoginAsAsync 直调请求成功抵达服务端业务层，G17 字段名缺陷彻底修复。**
+
 > ⚠️ 探测注意：PowerShell `-match` 不区分大小写会误报（PascalCase 方法名 `LoginByContextAsync` 也能命中小写模式）——须用 `[regex]::Matches` 大小写敏感精确计数。
 
 **运行时验收 ⏳ 待服务在线**：主验收项（`LoginAsAsync` 直调登录成功）需 WebApi(5020)+AdminWasm(5000) 运行后浏览器实测；届时一并补 AI 模型页走查 + BankDetail 运行时验证（框架组编译完成、服务重启后）。
