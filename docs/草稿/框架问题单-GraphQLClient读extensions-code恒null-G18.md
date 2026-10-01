@@ -1,8 +1,9 @@
 ---
 title: 框架问题单——GraphQLClient.MapGraphQLError 读 extensions.code 恒 null（STJ JsonElement as string），业务码映射全失效（G18）
-status: 提议（XiaoShuTong V0.7.7 AdminWasm 走查实证；应用侧已兼容绕行，待框架组评估）
+status: ✅ 已修复（框架 v4.10.48 根治 + 测试护栏已落地；XiaoShuTong 需重建 WASM 消费新 DLL 后按 §五 验收、移除 §六 绕行）
 date: 2026-10-02
 source: XiaoShuTong AdminWasm 会话过期弹窗走查（2026-10-02）——注入无效 SessionKey 后请求 listGroups，服务端返回 AUTH_REQUIRED，但客户端 OnAuthRequired 不触发（Session expired 走了 OnServiceError）
+updated: 2026-10-02（框架侧修复核实回写，见 §七）
 ---
 
 # 框架问题单：GraphQLClient.MapGraphQLError 无法读取 extensions.code（G18）
@@ -75,3 +76,32 @@ private static Exception MapGraphQLError(GraphQLError error)
 
 - **已绕行**（2026-10-02）：App.razor 订阅 `domainUser.OnServiceError`，检测 DomainException 消息含会话过期特征（`Session expired` / `请先登录` / `会话已过期`）→ 与 OnAuthRequired 相同弹窗处理；两事件并存互不冲突（OnAuthRequired 正常触发时按原路径，OnServiceError 兜底）。
 - **待框架修复后**：按 §五 验收 → 移除 OnServiceError 兜底分支，还原纯 OnAuthRequired。
+
+## 七、框架侧修复核实（2026-10-02 回写，G18/BUG006）
+
+### 7.1 框架源码根治（v4.10.48，commit `046b92cd`，2026-10-02 06:10:50）
+
+- `GraphQLClient.cs` 新增私有静态方法 `TryGetExtensionString(Dictionary<string, object?>?, string key)`——统一兼容 **string** 与 **STJ 装箱 JsonElement**（`ValueKind == JsonValueKind.String` → `GetString()`）两种形态；非字符串值保守返回 null（不字符串化，避免误匹配）。
+- `MapGraphQLError` 改为 `var code = TryGetExtensionString(error.Extensions, "code");`——AUTH_REQUIRED/AUTH_FAILED/FORBIDDEN/NOT_FOUND/VALIDATION_ERROR 映射恢复。
+- `detail` 透传（原 L242）同步改走 `TryGetExtensionString(..., "detail")`——G14 服务端写 extensions.detail 的客户端读取路径一并修复。
+- 适用性边界（helper 注释已标注）：仅适用于 `code`/`detail` 等字符串契约 key；`messageArgs`（数组）等非 string 扩展值须独立解析，复用会静默 null。
+
+### 7.2 单元测试护栏（问题单 §四 方案 2 已落地）
+
+`_TKWF\_Tests\Domain.ApiService.HotChocolate.Tests\GraphQLClientTests.cs` 新增 4 用例：
+- `SendQueryAsync_ExtensionsCodeAuthRequired_FiresOnAuthRequired`——`{"extensions":{"code":"AUTH_REQUIRED","detail":"<dev-stack-trace>"}}` → OnAuthRequired 触发 + 内层 `AuthenticationException` + `IsAuthRequiredError()` 识别 + detail 透传断言。
+- `SendQueryAsync_ExtensionsCodeAuthFailed_FiresOnAuthFailed`——AUTH_FAILED → OnAuthFailed + 内层 `UserLogonException`。
+- `SendQueryAsync_NoCode_FallsBackToDomainException`——无 code 回退默认分支（内层 DomainException，OnServiceError）。
+- `SendQueryAsync_ExtensionsCode_MapsToCorrectExceptionType`（Theory）——全 ErrorCodes 码→异常类型映射断言（防常量漂移/switch 误改）。
+
+### 7.3 部署 DLL 实证（XiaoShuTong 实际消费产物）
+
+- XiaoShuTong 为 **DLL 模式**（`TkwfReferenceMode=Dll`，AdminWasm 经 `$(TKWFDeployPath)build\refs\` 引用 `TKWF.Domain.ApiClient.dll`）。
+- 部署根 `F:\TKWF_FRAMEWORK_PATH\build\refs\TKWF.Domain.ApiClient.dll` 构建于 **2026-10-02 07:17:34**（晚于修复提交 06:10:50）；解编译确认含 `TryGetExtensionString` + 新 `MapGraphQLError`——**修复已进入实际消费 DLL**。
+
+### 7.4 XiaoShuTong 侧待办（待执行）
+
+1. **重建 + 重发布 AdminWasm**——捆绑新 `TKWF.Domain.ApiClient.dll`（旧发布产物仍含缺陷 DLL）。
+2. 按 §五 主验收走查：注入无效 SessionKey → 请求受保护接口 → `domainUser.OnAuthRequired` 触发 → App.razor 弹窗 → 「重新登录」跳 `/user/login?returnUrl=...` → 登录 → 回跳原页。
+3. 回归：`loginByPassword`/其他业务错误仍走 OnServiceError，类型/文案不回归。
+4. 验收通过后**移除 §六 OnServiceError 兜底分支**，还原纯 OnAuthRequired 路径。
