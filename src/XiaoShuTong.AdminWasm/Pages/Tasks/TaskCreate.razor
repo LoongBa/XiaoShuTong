@@ -147,13 +147,13 @@
             {
                 <Card Title="@("确认发布")">
                     <Descriptions Column="1" Bordered>
-                        <DescriptionsItem Label="@("群组")">@_SelectedGroupName</DescriptionsItem>
-                        <DescriptionsItem Label="@("任务名称")">@_Title</DescriptionsItem>
-                        <DescriptionsItem Label="@("任务说明")">@(_Description ?? "无")</DescriptionsItem>
-                        <DescriptionsItem Label="@("截止时间")">@(_DeadlineAt?.ToString("yyyy-MM-dd HH:mm") ?? "无")</DescriptionsItem>
-                        <DescriptionsItem Label="@("允许重做")">@(_AllowRedo ? "是" : "否")</DescriptionsItem>
-                        <DescriptionsItem Label="@("题库")">@(string.IsNullOrEmpty(_SelectedBankId) ? "自由编排" : _Banks.FirstOrDefault(b => b.Bank?.BankId == _SelectedBankId)?.Bank?.Name ?? _SelectedBankId)</DescriptionsItem>
-                        <DescriptionsItem Label="@("选题")">@(_SelectedQuestionIds.Length > 0 ? $"{_SelectedQuestionIds.Length} 题" : "未选题（自由编排）")</DescriptionsItem>
+                        <DescriptionsItem Title="@("群组")">@_SelectedGroupName</DescriptionsItem>
+                        <DescriptionsItem Title="@("任务名称")">@_Title</DescriptionsItem>
+                        <DescriptionsItem Title="@("任务说明")">@(_Description ?? "无")</DescriptionsItem>
+                        <DescriptionsItem Title="@("截止时间")">@(_DeadlineAt?.ToString("yyyy-MM-dd HH:mm") ?? "无")</DescriptionsItem>
+                        <DescriptionsItem Title="@("允许重做")">@(_AllowRedo ? "是" : "否")</DescriptionsItem>
+                        <DescriptionsItem Title="@("题库")">@(string.IsNullOrEmpty(_SelectedBankId) ? "自由编排" : _Banks.FirstOrDefault(b => b.Bank?.BankId == _SelectedBankId)?.Bank?.Name ?? _SelectedBankId)</DescriptionsItem>
+                        <DescriptionsItem Title="@("选题")">@(_SelectedQuestionIds.Length > 0 ? $"{_SelectedQuestionIds.Length} 题" : "未选题（自由编排）")</DescriptionsItem>
                     </Descriptions>
                 </Card>
             }

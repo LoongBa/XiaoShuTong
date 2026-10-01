@@ -39,6 +39,11 @@ public partial class Index
                 _Groups = res.Items?.ToArray() ?? [];
                 if (_Groups.Length > 0)
                 {
+                    // 先渲染选项、再写选中值：同帧写入会触发 Select 的 Value/Options 时序竞态——
+                    // 组件经 bind-Value 自清值（绕过 OnGroupChanged），选择器只显示占位符。
+                    // 拆成两帧后时序等同用户手选路径，标签可正确回显。
+                    StateHasChanged();
+                    await Task.Yield();
                     _SelectedGroupUid = _Groups[0].GroupUid;
                     await LoadDashboardAsync();
                 }
@@ -56,13 +61,20 @@ public partial class Index
 
     private async Task OnGroupChanged(object value)
     {
+        // Ant Select 在 Value/Items 绑定时序中会同步回调 null（非用户操作：Select 未开 AllowClear，UI 无清除路径）；
+        // 忽略该时序性 null，避免把已选群组误清空导致看板请求 groupUid 为 null（400）。
+        if (value is null)
+            return;
         _SelectedGroupUid = value?.ToString();
         await LoadDashboardAsync();
     }
 
     private async Task LoadDashboardAsync()
     {
-        if (string.IsNullOrEmpty(_SelectedGroupUid))
+        // 快照局部变量：守卫通过后 StateHasChanged 触发同步渲染，可能经 OnGroupChanged 回调改写
+        // _SelectedGroupUid（TOCTOU），DTO 构造须与守卫读同一值，防止序列化为 null。
+        var groupUid = _SelectedGroupUid;
+        if (string.IsNullOrEmpty(groupUid))
             return;
 
         _Loading = true;
@@ -70,10 +82,14 @@ public partial class Index
         try
         {
             var svc = User.Use<IGetOwnerDashboardService>();
-            var res = await svc.Execute(new GetOwnerDashboardReqDto { GroupUid = _SelectedGroupUid }, CancellationToken.None);
+            var res = await svc.Execute(new GetOwnerDashboardReqDto { GroupUid = groupUid }, CancellationToken.None);
             if (res.Success)
             {
                 _DashboardData = res;
+                // 自动选组路径首渲染时 Select 的 Value/Options 同帧到位，组件可能经 bind-Value 自清字段
+                // （绕过 OnGroupChanged）；数据加载成功后回写快照值，保持选择器显示与看板一致。
+                if (_SelectedGroupUid != groupUid)
+                    _SelectedGroupUid = groupUid;
             }
             else
             {

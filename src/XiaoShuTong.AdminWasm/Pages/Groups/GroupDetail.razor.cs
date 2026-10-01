@@ -38,8 +38,15 @@ public partial class GroupDetail
         StateHasChanged();
         try
         {
-            var svc = User.Use<IManageGroupMembersService>();
-            var res = await svc.GetMembers(new GetMembersReqDto { GroupId = GroupId }, CancellationToken.None);
+            // 并行获取成员与群组信息：深链/SPA 导航时导航状态无 GroupName，需回填
+            var membersTask = User.Use<IManageGroupMembersService>().GetMembers(
+                new GetMembersReqDto { GroupId = GroupId }, CancellationToken.None);
+            var groupsTask = User.Use<IListGroupsService>().Execute(
+                new ListGroupsReqDto { PageIndex = 1, PageSize = 100 }, CancellationToken.None);
+            await Task.WhenAll(membersTask, groupsTask);
+
+            var res = membersTask.Result;
+            var groupsRes = groupsTask.Result;
             if (res.Success)
             {
                 _GroupDetail = new GroupDetailData
@@ -48,6 +55,14 @@ public partial class GroupDetail
                     Members = res.Members?.ToList() ?? []
                 };
                 _RankEnabled = true;
+
+                var group = groupsRes.Items?.FirstOrDefault(g => g.GroupId == GroupId);
+                if (group is not null)
+                {
+                    _GroupDetail.GroupName = group.Name;
+                    _GroupDetail.Subject = group.Subject;
+                    _GroupDetail.Grade = group.Grade;
+                }
             }
             else
             {

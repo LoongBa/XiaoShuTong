@@ -30,13 +30,13 @@
             @* ─ 批次信息 ─ *@
             <Card Style="margin-bottom: 16px;">
                 <Descriptions Column="3" Bordered>
-                    <DescriptionsItem Label="@("批次 ID")">
+                    <DescriptionsItem Title="@("批次 ID")">
                         <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
                             @_Draft.BatchId
                         </span>
                     </DescriptionsItem>
-                    <DescriptionsItem Label="@("题库 ID")">@_Draft.BankId</DescriptionsItem>
-                    <DescriptionsItem Label="@("草稿条数")">@_Draft.Items.Count 条</DescriptionsItem>
+                    <DescriptionsItem Title="@("题库 ID")">@_Draft.BankId</DescriptionsItem>
+                    <DescriptionsItem Title="@("草稿条数")">@_Draft.Items.Count 条</DescriptionsItem>
                 </Descriptions>
                 <div style="margin-top: 16px;">
                     <Button Type="@ButtonType.Primary"
@@ -71,22 +71,22 @@
                         </div>
 
                         <Descriptions Column="2" Bordered Style="margin-top: 12px;">
-                            <DescriptionsItem Label="@("题干")">
+                            <DescriptionsItem Title="@("题干")">
                                 <TextArea @bind-Value="_EditedStems[index]"
                                           Rows="3"
                                           Placeholder="@(item.Stem)" />
                             </DescriptionsItem>
-                            <DescriptionsItem Label="@("答案")">
+                            <DescriptionsItem Title="@("答案")">
                                 <TextArea @bind-Value="_EditedAnswers[index]"
                                           Rows="3"
                                           Placeholder="@(item.Answer)" />
                             </DescriptionsItem>
-                            <DescriptionsItem Label="@("题目 ID")">
+                            <DescriptionsItem Title="@("题目 ID")">
                                 <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
                                     @item.QuestionId
                                 </span>
                             </DescriptionsItem>
-                            <DescriptionsItem Label="@("关键词候选")">
+                            <DescriptionsItem Title="@("关键词候选")">
                                 @string.Join("、", item.Keywords ?? [])
                             </DescriptionsItem>
                         </Descriptions>

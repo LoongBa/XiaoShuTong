@@ -43,13 +43,13 @@
                     </div>
                 </div>
                 <Descriptions Column="3" Bordered Style="margin-top: 16px;">
-                    <DescriptionsItem Label="@("题库ID")">
+                    <DescriptionsItem Title="@("题库ID")">
                         <span style="font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 12px;">
                             @_Detail.Bank.BankId
                         </span>
                     </DescriptionsItem>
-                    <DescriptionsItem Label="@("题量")">@_Detail.PreviewQuestions.Count 条（预览）</DescriptionsItem>
-                    <DescriptionsItem Label="@("创建时间")">@_Detail.Bank.CreateTime.ToString("yyyy-MM-dd HH:mm")</DescriptionsItem>
+                    <DescriptionsItem Title="@("题量")">@_Detail.PreviewQuestions.Count 条（预览）</DescriptionsItem>
+                    <DescriptionsItem Title="@("创建时间")">@_Detail.Bank.CreateTime.ToString("yyyy-MM-dd HH:mm")</DescriptionsItem>
                 </Descriptions>
             </Card>
 
@@ -63,10 +63,10 @@
                             <Panel Header="@topic.Title" Key="@topic.ChapterId">
                                 <div style="margin-bottom: 8px;">
                                     <strong>@("知识点：")</strong>
-                                    @string.Join("、", topic.SubTopics)
+                                    @string.Join("、", topic.SubTopics ?? [])
                                 </div>
                                 <div style="color: #666;">
-                                    @($"共 {topic.QuestionIds.Length} 题")
+                                    @($"共 {(topic.QuestionIds ?? []).Length} 题")
                                 </div>
                             </Panel>
                         }

@@ -35,15 +35,15 @@
             @* ─ 任务头信息 ─ *@
             <Card Style="margin-bottom: 16px;">
                 <Descriptions Column="2" Bordered Title="@(_TaskDetail.Task?.Title ?? "任务详情")">
-                    <DescriptionsItem Label="@("任务名称")">@(_TaskDetail.Task?.Title)</DescriptionsItem>
-                    <DescriptionsItem Label="@("状态")">
+                    <DescriptionsItem Title="@("任务名称")">@(_TaskDetail.Task?.Title)</DescriptionsItem>
+                    <DescriptionsItem Title="@("状态")">
                         <Tag>@(_TaskDetail.Task?.Status ?? "未知")</Tag>
                     </DescriptionsItem>
-                    <DescriptionsItem Label="@("题目数")">@(_TaskDetail.Task?.QuestionCount)</DescriptionsItem>
-                    <DescriptionsItem Label="@("截止时间")">
+                    <DescriptionsItem Title="@("题目数")">@(_TaskDetail.Task?.QuestionCount)</DescriptionsItem>
+                    <DescriptionsItem Title="@("截止时间")">
                         @(_TaskDetail.Task?.DeadlineAt?.ToString("yyyy-MM-dd HH:mm") ?? "无截止时间")
                     </DescriptionsItem>
-                    <DescriptionsItem Label="@("任务说明")" Span="2">
+                    <DescriptionsItem Title="@("任务说明")" Span="2">
                         @(_TaskDetail.Task?.Description ?? "无")
                     </DescriptionsItem>
                 </Descriptions>
