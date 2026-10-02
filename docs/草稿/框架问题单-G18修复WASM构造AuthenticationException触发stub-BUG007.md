@@ -1,9 +1,9 @@
 ---
 title: 框架问题单——G18 修复（v4.10.48）引入 WASM 兼容缺口：MapGraphQLError 构造 AuthenticationException 触发 System.Net.Security stub PlatformNotSupported，会话过期链再次中断（BUG007）
-status: ⚠️ 待框架组确认（XiaoShuTong 已取证 + 实证；应用侧绕行方案 §六 供参考，等待框架组修复方向）
+status: ✅ 框架已修复（v4.10.50，f7e597bc，采纳 §四 方案 1）+ XiaoShuTong 验收通过（2026-10-02，重建消费 4.10.50 → 弹窗/returnUrl/回跳全链 PASS，见 §五）
 date: 2026-10-02
 source: XiaoShuTong AdminWasm G18 验收走查（2026-10-02）——按 G18 §五 验收移除 App.razor OnServiceError 绕行、重建消费 4.10.48 后，注入无效 SessionKey 访问 dashboard，页面显示「加载群组失败: SystemNetSecurity_PlatformNotSupported」且弹窗不触发
-updated: 2026-10-02
+updated: 2026-10-02（框架修复核实 + XiaoShuTong 验收通过回写，见 §五/§八）
 ---
 
 # 框架问题单：G18 修复在 WASM 端构造 AuthenticationException 触发 System.Net.Security stub（BUG007）
@@ -91,13 +91,21 @@ DomainException.ErrorCodes.AuthRequired => OperatingSystem.IsBrowser()
 
 **缺点**：桌面/WASM 行为分叉，测试矩阵扩大；后续框架演进易漏改
 
-## 五、XiaoShuTong 验收建议（框架组修复后）
+## 五、XiaoShuTong 验收结果（✅ 通过，2026-10-02 重建消费 v4.10.50 后）
 
-1. 重建 AdminWasm（消费新 DLL）→ 注入无效 SessionKey 访问 `/owner/dashboard`
-2. 断言：OnAuthRequired 正常触发 → 弹窗「会话已过期」→ 确认 → `/user/login?returnUrl=...` → 登录 → 回跳
-3. 桌面/服务器回归：框架测试 1177 全绿保持
+框架 v4.10.50（commit `f7e597bc`）按 §四 方案 1 落地后，重建 AdminWasm 消费新 DLL（refs `TKWF.Domain.ApiClient.dll` FileVersion 4.10.50.0）执行验收，**三条断言全 PASS**：
 
-## 六、应用侧临时绕行（框架修复前，XiaoShuTong 已具备的兼容手段）
+| # | 验收断言 | 结果 |
+|---|---|---|
+| 1 | 注入无效 SessionKey → OnAuthRequired 正常触发 → 弹窗「会话已过期」 | ✅ 无 session 访问 `/owner/dashboard` → 弹窗出现（不再 `SystemNetSecurity_PlatformNotSupported`，console 0 error） |
+| 2 | 点「重新登录」→ `/user/login?returnUrl={原页}` | ✅ 跳转 `http://localhost:5000/user/login?returnUrl=%2Fowner%2Fdashboard`（returnUrl 正确携带当前页） |
+| 3 | 登录 → 回跳原页 | ✅ owner01 登录 → 自动回跳 `/owner/dashboard`（dashboard 数据正常加载） |
+
+- **验证证据**：走查截图 `docs/走查截图/V0.7.x-P0走查/21-AdminWasm-BUG007验收通过-会话过期弹窗-OAuthRequired触发.png`；浏览器 console 无 error（0 PlatformNotSupported）。
+- **回归**：`loginByPassword`（AUTH_FAILED → UserLogonException，定义于 TKWF.Core 非 stub）不受影响——§四 核查闭环保持。
+- **应用侧闭环**：App.razor 保持绕行移除状态（纯 OnAuthRequired），XiaoShuTong **零代码改动**即恢复会话过期引导链。
+
+## 六、应用侧临时绕行（已归档——框架 v4.10.50 修复后不再需要）
 
 若需临时恢复弹窗：App.razor 恢复 OnServiceError 订阅，检测 `PlatformNotSupportedException` 消息特征（`SystemNetSecurity_PlatformNotSupported`）或任何非 AuthenticationException 的会话过期场景 → 转 OnAuthRequired 弹窗。**注意**：此绕行在 G18 修复后覆盖的是 BUG007 新异常形态，与 G18 时代绕行（消息「Session expired」）不同，需按 §七 触发场景同步更新。
 
@@ -109,3 +117,22 @@ DomainException.ErrorCodes.AuthRequired => OperatingSystem.IsBrowser()
 - **服务端证据**：`webapi.out.log` 两条 `fail: DomainErrorFilter ... AuthenticationException: 用户未登录或会话已过期`（AUTH_REQUIRED 正确）
 - **客户端证据**：WASM 网络清单无 `System.Security.Authentication`；UI 消息 `SystemNetSecurity_PlatformNotSupported`（stub 资源键）
 - **适用边界**：仅 Blazor WASM（浏览器）触发；Blazor Server / MAUI / Console / 桌面测试不触发
+
+## 八、框架侧修复核实（2026-10-02 回写）
+
+框架 v4.10.50（commit `f7e597bc`，**采纳 §四 方案 1**）源码实证：
+
+- `GraphQLClient.cs` `MapGraphQLError`（L434-437）：AUTH_REQUIRED 分支**不再构造 `AuthenticationException`**——
+  ```csharp
+  DomainException.ErrorCodes.AuthRequired => new DomainException(msg, DomainException.ErrorCodes.AuthRequired),
+  ```
+  （`DomainException` 定义于 TKWF.Core，WASM 已加载、无 stub；注释明确标注 BUG007 WASM 兼容意图）
+- `DomainExceptionExtensions.cs` 新增 `IsAuthRequired(Exception? inner)`（L27-30）**双形态识别**：
+  ```csharp
+  => inner is AuthenticationException
+     || (inner is DomainException de
+         && string.Equals(de.ErrorCode, DomainException.ErrorCodes.AuthRequired, StringComparison.Ordinal));
+  ```
+  ——旧形态 `AuthenticationException`（桌面/服务器历史行为）与新形态 `DomainException{AUTH_REQUIRED}`（WASM 兼容）统一判定；`IsAuthRequiredError()`/`IsAuthError()` 均改走该扩展。
+- `GraphQLClient.cs` L252/L277（scope/静态两分支）及 L326 下游判定统一改为 `DomainExceptionExtensions.IsAuthRequired(inner)`——**不再直接 `is AuthenticationException` 判型**（这正是 §二.3 传播路径中断的根因点）。
+- AUTH_FAILED 分支（`UserLogonException`）保持不变——与 §四 核查闭环一致（TKWF.Core 定义，WASM 无 stub）。

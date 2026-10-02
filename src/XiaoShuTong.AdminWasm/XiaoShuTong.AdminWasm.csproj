@@ -6,9 +6,9 @@
   -->
 
   <!-- 路径回退（Directory.Build.props 未覆盖时使用）：
-       TKWFSourceRoot = 源码根（相对路径）；TKWFDeployPath = 部署根（环境变量规范化） -->
+       TKWFDeployPath = 部署根（环境变量规范化）。纯 Dll 引用模式（Agents_Use_TKWF.md §5），
+       不引用框架源码（无 TKWFSourceRoot——源码树路径已移除）。 -->
   <PropertyGroup>
-    <TKWFSourceRoot>$([MSBuild]::EnsureTrailingSlash('$(MSBuildThisFileDirectory)..\..\..\_TKWF\'))</TKWFSourceRoot>
     <TKWFDeployPath Condition="'$(TKWFDeployPath)' == ''">$([MSBuild]::EnsureTrailingSlash('$(TKWFDeployPath)'))</TKWFDeployPath>
     <TkwfReferenceMode>Dll</TkwfReferenceMode>
   </PropertyGroup>
@@ -46,20 +46,11 @@
     <PackageReference Include="AntDesign.ProLayout" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TkwfReferenceMode)' != 'Dll'">
-    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Infrastructure\Blazor\TKWF.Domain.Blazor.csproj" />
-    <ProjectReference Include="$(TKWFSourceRoot)_Domain.SG\ApiService.SG\TKWF.Domain.ApiService.SG.csproj" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
-    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Api\ApiClient\TKWF.Domain.ApiClient.csproj" />
-    <ProjectReference Include="$(TKWFSourceRoot)_Domain.Api\ApiClient.GraphQL\TKWF.Domain.ApiClient.GraphQL.csproj" />
-    <ProjectReference Include="$(TKWFSourceRoot)_Domain.SG\CodeGeneration.Core\TKWF.CodeGeneration.Core.csproj" />
-    <Analyzer Include="$(TKWFDeployPath)build\refs\TKWF.Domain.ApiService.SG.dll" />
-    <Analyzer Include="$(TKWFDeployPath)build\refs\TKWF.CodeGeneration.Abstractions.dll" />
-  </ItemGroup>
-
-  <!-- DLL 模式：核心框架引用由 TKWF.Domain.targets 按 TKWFRole=ApiClient 自动注入（路径 $(TKWFDeployPath)build\refs\），
+  <!-- 纯 DLL 引用模式（TkwfReferenceMode=Dll，全局默认，Agents_Use_TKWF.md §5）：
+       核心框架引用由 TKWF.Domain.targets 按 TKWFRole=ApiClient 自动注入（路径 $(TKWFDeployPath)build\refs\），
        此处仅补充自动注入不包含的 Blazor WASM 宿主 DLL（ConfigWasmClient/UseWasmAuth 扩展所在）。
-       框架引用路径统一使用 $(TKWFDeployPath)build\refs\（Agents_Use_TKWF.md §5），不使用本地 refs/。 -->
-  <ItemGroup Condition="'$(TkwfReferenceMode)' == 'Dll'">
+       框架引用路径统一使用 $(TKWFDeployPath)build\refs\，不引用框架源码（不硬编码源码树路径）。 -->
+  <ItemGroup>
     <Reference Include="TKWF.Domain.Blazor.Wasm" HintPath="$(TKWFDeployPath)build\refs\TKWF.Domain.Blazor.Wasm.dll" />
     <Reference Include="TKWF.Domain.Blazor.Abstractions" HintPath="$(TKWFDeployPath)build\refs\TKWF.Domain.Blazor.Abstractions.dll" />
   </ItemGroup>

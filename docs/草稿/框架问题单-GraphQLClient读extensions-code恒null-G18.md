@@ -1,9 +1,9 @@
 ---
 title: 框架问题单——GraphQLClient.MapGraphQLError 读 extensions.code 恒 null（STJ JsonElement as string），业务码映射全失效（G18）
-status: ✅ 框架已修复（v4.10.48 根治 + 测试护栏）；⚠️ XiaoShuTong 验收执行完毕——WASM 端未通过，发现衍生缺陷 **BUG007**（见 `docs/草稿/框架问题单-G18修复WASM构造AuthenticationException触发stub-BUG007.md`），弹窗链待 BUG007 修复后重建验收
+status: ✅ 框架已修复（v4.10.48 根治 + 测试护栏）；✅ XiaoShuTong 验收通过（2026-10-02 重建消费 v4.10.50，弹窗/returnUrl/回跳全链 PASS——含衍生 BUG007 由框架 v4.10.50 修复后一并闭环，详见 `docs/草稿/框架问题单-G18修复WASM构造AuthenticationException触发stub-BUG007.md`）
 date: 2026-10-02
 source: XiaoShuTong AdminWasm 会话过期弹窗走查（2026-10-02）——注入无效 SessionKey 后请求 listGroups，服务端返回 AUTH_REQUIRED，但客户端 OnAuthRequired 不触发（Session expired 走了 OnServiceError）
-updated: 2026-10-02（框架侧修复核实回写，见 §七）
+updated: 2026-10-02（验收通过回写）
 ---
 
 # 框架问题单：GraphQLClient.MapGraphQLError 无法读取 extensions.code（G18）
@@ -76,7 +76,7 @@ private static Exception MapGraphQLError(GraphQLError error)
 
 - **已绕行**（2026-10-02）：App.razor 订阅 `domainUser.OnServiceError`，检测 DomainException 消息含会话过期特征（`Session expired` / `请先登录` / `会话已过期`）→ 与 OnAuthRequired 相同弹窗处理；两事件并存互不冲突（OnAuthRequired 正常触发时按原路径，OnServiceError 兜底）。
 - **绕行已移除 + 验收执行**（2026-10-02，commit `9fc4f1e`）：按 §五 验收移除 OnServiceError 兜底分支（还原纯 OnAuthRequired）→ 重建 AdminWasm 消费 4.10.48 → 运行时验证——**WASM 端未通过，发现衍生缺陷 BUG007**：`MapGraphQLError` 修复后首次执行 `new AuthenticationException(msg)`（AUTH_REQUIRED 分支），而 `AuthenticationException` 类型 TypeForward 至 `System.Net.Security` 程序集（WASM 为 stub，网络清单无 `System.Security.Authentication.wasm`）→ WASM 上构造即抛 `PlatformNotSupportedException("SystemNetSecurity_PlatformNotSupported")` → OnAuthRequired 链断。**详见 `docs/草稿/框架问题单-G18修复WASM构造AuthenticationException触发stub-BUG007.md`**。
-- **当前状态**：App.razor 保持绕行移除状态（注释标注 BUG007）；待框架修复 BUG007 部署后重建验收弹窗链（届时 XiaoShuTong 零代码改动）。
+- **当前状态**：✅ **验收通过（2026-10-02 重建消费 v4.10.50）**——三条断言（无 session 弹窗触发 / 「重新登录」跳 `/user/login?returnUrl=...` / 登录回跳原页）全 PASS，浏览器 console 0 error；App.razor 保持绕行移除状态（纯 OnAuthRequired），XiaoShuTong 零代码改动即恢复会话过期引导链。验证证据见 BUG007 问题单 §五。
 
 ## 七、框架侧修复核实（2026-10-02 回写，G18/BUG006）
 
