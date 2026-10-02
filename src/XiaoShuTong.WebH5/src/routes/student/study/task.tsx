@@ -72,6 +72,7 @@ function TaskStudyPage() {
     recordAnswer,
     nextQuestion,
     wrongPracticeQuestionIds,
+    wrongPracticeBankId,
     setWrongPracticeQuestionIds,
   } = useAppStore();
 
@@ -133,7 +134,11 @@ function TaskStudyPage() {
     try {
       const isReview = Boolean(search.reviewQuestionId) || Boolean(wrongPracticeQuestionIds); // 错题重练=复习场景（Assess）
       // 任务 bankId 缺失时兜底（真实值来自 listMyTasks.bankId，home.tsx 透传；服务端接通后不再命中）
-      const bankId = currentTask?.bankId ?? DEFAULT_BANK_ID;
+      // P2-3 修复：错题重练优先用来源题库 wrongPracticeBankId（wrong.tsx 携带，契约 WrongQuestionsDto.bankId），
+      // 替代 DEFAULT_BANK_ID 假兜底——否则服务端 GetNextQuestionService BR-17 按假 bankId 查库 BankNotFound 早退
+      const bankId = wrongPracticeQuestionIds && wrongPracticeBankId
+        ? wrongPracticeBankId
+        : (currentTask?.bankId ?? DEFAULT_BANK_ID);
       bankIdRef.current = bankId;
       // 任务题集白名单（listMyTasks.questionIds 透传；任务会话全程出题范围约束，BR-51）
       taskQuestionIdsRef.current = currentTask?.questionIds && currentTask.questionIds.length > 0 ? currentTask.questionIds : null;
@@ -166,7 +171,7 @@ function TaskStudyPage() {
     } catch {
       setInitStatus('error');
     }
-  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, currentTask?.questionIds, wrongPracticeQuestionIds, startSession, navigate, endStudy]);
+  }, [search.taskId, search.reviewQuestionId, currentTaskId, currentTask?.bankId, currentTask?.totalQuestions, currentTask?.questionIds, wrongPracticeQuestionIds, wrongPracticeBankId, startSession, navigate, endStudy]);
 
   useEffect(() => {
     // 复位取消标记（StrictMode dev 双挂载：cleanup 置 true 后二次 effect 必须复位，

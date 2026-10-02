@@ -63,6 +63,8 @@ interface AppState {
   answers: Record<string, ServerAnswerRecord>;
   /** 错题重练白名单（V0.6.14 学习-BR-51；wrong.tsx 设置 → task.tsx sessionQuestion 消费，会话后清空；不进 persist） */
   wrongPracticeQuestionIds: string[] | null;
+  /** 错题重练来源题库（P2-3 修复：与 wrongPracticeQuestionIds 配对——task.tsx 复习路径用真实 bankId，替代 DEFAULT_BANK_ID 假兜底致 BankNotFound；wrong.tsx 携带错题项 bankId，会话后清空；不进 persist） */
+  wrongPracticeBankId: string | null;
   
   // Actions
   setCurrentUser: (user: User | null) => void;
@@ -83,8 +85,8 @@ interface AppState {
   recordAnswer: (questionId: string, res: SubmitAttemptResDto) => void;
   nextQuestion: () => void;
   completeTask: () => void;
-  /** 设置错题重练白名单（V0.6.14；wrong.tsx 重练入口写入） */
-  setWrongPracticeQuestionIds: (ids: string[] | null) => void;
+  /** 设置错题重练白名单 + 来源题库（V0.6.14 + P2-3；wrong.tsx 重练入口写入，bankId 可选兼容旧调用） */
+  setWrongPracticeQuestionIds: (ids: string[] | null, bankId?: string | null) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -107,6 +109,7 @@ export const useAppStore = create<AppState>()(
       currentQuestionIndex: 0,
       answers: {},
       wrongPracticeQuestionIds: null,
+      wrongPracticeBankId: null,
       
       // Actions
       setCurrentUser: (user) => set({ currentUser: user }),
@@ -123,7 +126,9 @@ export const useAppStore = create<AppState>()(
         sessionUid: null,
         questionCount: 0,
         currentQuestionIndex: 0,
-        answers: {}
+        answers: {},
+        wrongPracticeQuestionIds: null,
+        wrongPracticeBankId: null,
       }),
       
       agreePrivacy: () => set({ hasAgreedPrivacy: true }),
@@ -140,7 +145,10 @@ export const useAppStore = create<AppState>()(
         answers: {}
       }),
 
-      setWrongPracticeQuestionIds: (ids) => set({ wrongPracticeQuestionIds: ids }),
+      setWrongPracticeQuestionIds: (ids, bankId) => set({
+        wrongPracticeQuestionIds: ids,
+        wrongPracticeBankId: ids === null ? null : (bankId ?? null),
+      }),
       
       // 会话初始化归口：createStudySession_Execute → sessionUid 活源 → 首次 getSessionQuestion 取第 1 题
       // V0.7.7（G16）：SDK 前缀启发式把 create* 判 mutation 导致 400 → 走 executeQuery 强制 query（ts-client.g.ts 已标 type:'query'）

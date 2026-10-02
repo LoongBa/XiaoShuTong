@@ -80,7 +80,12 @@ function WrongAnswersPage() {
 
   const handlePractice = () => {
     // V0.6.14（Oracle C7）：错题重练白名单经 store 传递（非路由参数）——当前 tab 待掌握错题 QuestionId 集
-    setWrongPracticeQuestionIds(wrongItems.map((item) => item.questionId));
+    // P2-3 修复：同时携带错题来源题库 bankId（WrongQuestionsDto.bankId 契约已有）→ task.tsx 复习路径
+    // 用真实 bankId 替代 DEFAULT_BANK_ID 假兜底（服务端 GetNextQuestionService BR-17 先按 BankId 查库，
+    // 假 bank-001 必 BankNotFound → 错题重练此前不可用）。错题可能跨题库，取首项 bankId 作为会话来源。
+    const ids = wrongItems.map((item) => item.questionId);
+    const bankId = wrongItems[0]?.bankId ?? null;
+    setWrongPracticeQuestionIds(ids, bankId);
     navigate({ to: '/student/study/task' });
   };
 
