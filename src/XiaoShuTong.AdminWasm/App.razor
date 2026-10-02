@@ -37,10 +37,12 @@
     {
         // 监听会话过期事件 → 显示模态框，不自动跳转
         DomainUser.OnAuthRequired += OnAuthRequiredAsync;
-        // G18 兼容绕行：框架 GraphQLClient.MapGraphQLError 因 STJ JsonElement as string 恒 null，
-        // AUTH_REQUIRED 无法映射为 AuthenticationException → OnAuthRequired 不触发，会话过期走了 OnServiceError。
-        // 此处兜底检测会话过期特征消息 → 与 OnAuthRequired 相同弹窗处理；框架修复（读 JsonElement.GetString）后可还原为纯 OnAuthRequired。
-        DomainUser.OnServiceError += OnServiceErrorAsync;
+        // G18 兼容绕行已移除（2026-10-02）：框架 v4.10.48 修复 MapGraphQLError 用
+        // TryGetExtensionString 兼容 JsonElement 读 code → AUTH_REQUIRED 正确映射。
+        // ⚠️ 但 BUG007（WASM stub）：v4.10.48 首次构造 AuthenticationException（TypeForward 至
+        // System.Net.Security，WASM 为 stub）→ WASM 上抛 PlatformNotSupported → OnAuthRequired
+        // 暂不触发（见 docs/草稿/框架问题单-G18修复WASM构造AuthenticationException触发stub-BUG007.md）；
+        // 框架修复后重建验收，届时 OnAuthRequired 正常触发。
     }
 
     private async Task OnAuthRequiredAsync()
@@ -48,20 +50,6 @@
         SessionExpiredState.IsExpired = true;
         _showSessionExpired = true;
         await InvokeAsync(StateHasChanged);
-    }
-
-    private Task OnServiceErrorAsync(Exception ex)
-    {
-        // 会话过期特征消息（服务端 / 客户端双形态）：仅 Development 联调白名单生效、
-        // 生产会话过期同样命中——按消息兜底，不依赖错误码映射（G18 修复前）。
-        var msg = ex.Message;
-        if (msg.Contains("Session expired", StringComparison.OrdinalIgnoreCase)
-            || msg.Contains("会话已过期", StringComparison.Ordinal)
-            || msg.Contains("请先登录", StringComparison.Ordinal))
-        {
-            return OnAuthRequiredAsync();
-        }
-        return Task.CompletedTask;
     }
 
     private void OnSessionExpiredOk()
