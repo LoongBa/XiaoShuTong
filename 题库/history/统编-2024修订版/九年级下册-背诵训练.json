@@ -1,0 +1,4074 @@
+[
+  {
+    "id": "Q-history-7to9-0877",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "第一次工业革命开始的标志是？",
+      "answer": "1765年哈格里夫斯发明珍妮纺纱机",
+      "keywords": [
+        {
+          "aliases": [
+            "1765年哈格里夫斯发明珍妮纺纱机"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0878",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "瓦特改良蒸汽机的影响是？",
+      "answer": "成为主要动力来源，推动机器普及和工厂建立",
+      "keywords": [
+        {
+          "aliases": [
+            "成为主要动力来源",
+            "推动机器普及和工厂建立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0879",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1765年哈格里夫斯发明的是什么？",
+      "answer": "珍妮纺纱机",
+      "keywords": [
+        {
+          "aliases": [
+            "珍妮纺纱机"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0880",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "成为工业革命主要动力来源的是？",
+      "answer": "蒸汽机",
+      "keywords": [
+        {
+          "aliases": [
+            "蒸汽机"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0881",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写工业革命的影响",
+      "answer": "社会面貌发生翻天覆地变化，资本主义战胜封建主义",
+      "keywords": [
+        {
+          "aliases": [
+            "社会面貌发生翻天覆地变化",
+            "资本主义战胜封建主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0882",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写工业革命带来的社会变化",
+      "answer": "社会分裂为两大阶级（工业资产阶级和无产阶级）、城市化",
+      "keywords": [
+        {
+          "aliases": [
+            "社会分裂为两大阶级（工业资产阶级和无产阶级）、城市化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0883",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"工业革命的影响\"",
+      "answer": "社会面貌变化，资本主义战胜封建主义，社会分裂为两大阶级",
+      "keywords": [
+        {
+          "aliases": [
+            "社会面貌变化",
+            "资本主义战胜封建主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0884",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《共产党宣言》发表的时间和意义是？",
+      "answer": "1848年，标志马克思主义诞生",
+      "keywords": [
+        {
+          "aliases": [
+            "1848年",
+            "标志马克思主义诞生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0885",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "马克思主义的组成部分是？",
+      "answer": "马克思主义哲学、政治经济学、科学社会主义",
+      "keywords": [
+        {
+          "aliases": [
+            "马克思主义哲学、政治经济学、科学社会主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0886",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1848年发表的标志马克思主义诞生的文件是？",
+      "answer": "《共产党宣言》",
+      "keywords": [
+        {
+          "aliases": [
+            "《共产党宣言》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0887",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写马克思和恩格斯的贡献",
+      "answer": "创立科学社会主义理论，为无产阶级斗争提供科学理论指导",
+      "keywords": [
+        {
+          "aliases": [
+            "创立科学社会主义理论",
+            "为无产阶级斗争提供科学理论指导"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0888",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"《共产党宣言》的意义\"",
+      "answer": "标志着马克思主义的诞生",
+      "keywords": [
+        {
+          "aliases": [
+            "标志着马克思主义的诞生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0889",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命与国际工人运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "宪章运动的诉求是？",
+      "answer": "工人要求获得普选权，参与国家管理",
+      "keywords": [
+        {
+          "aliases": [
+            "工人要求获得普选权",
+            "参与国家管理"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命与国际工人运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0890",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命与国际工人运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "国际工人运动的意义是？",
+      "answer": "标志着无产阶级作为独立的政治力量登上历史舞台",
+      "keywords": [
+        {
+          "aliases": [
+            "标志着无产阶级作为独立的政治力量登上历史舞台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命与国际工人运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0891",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命与国际工人运动"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "工人要求获得普选权的是什么运动？",
+      "answer": "宪章运动",
+      "keywords": [
+        {
+          "aliases": [
+            "宪章运动"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命与国际工人运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0892",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命与国际工人运动"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写国际工人运动的意义",
+      "answer": "无产阶级作为独立政治力量登上历史舞台",
+      "keywords": [
+        {
+          "aliases": [
+            "无产阶级作为独立政治力量登上历史舞台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命与国际工人运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0893",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命与国际工人运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "工业革命扩展到欧洲大陆的时间是？",
+      "answer": "19世纪初",
+      "keywords": [
+        {
+          "aliases": [
+            "19世纪初"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命与国际工人运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0894",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命与国际工人运动"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "19世纪初工业革命扩展到了哪里？",
+      "answer": "欧洲大陆",
+      "keywords": [
+        {
+          "aliases": [
+            "欧洲大陆"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命与国际工人运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0895",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "美国内战爆发的原因是？",
+      "answer": "南北两种经济制度的矛盾（奴隶制存废问题）",
+      "keywords": [
+        {
+          "aliases": [
+            "南北两种经济制度的矛盾（奴隶制存废问题）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0896",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《解放黑人奴隶宣言》的内容是？",
+      "answer": "1863年元旦起，南方叛乱地区奴隶永远获得自由",
+      "keywords": [
+        {
+          "aliases": [
+            "1863年元旦起",
+            "南方叛乱地区奴隶永远获得自由"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0897",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "南北两种经济制度的矛盾导致了什么？",
+      "answer": "美国内战",
+      "keywords": [
+        {
+          "aliases": [
+            "美国内战"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0898",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1863年元旦起南方叛乱地区奴隶永远获得自由的是？",
+      "answer": "《解放黑人奴隶宣言》",
+      "keywords": [
+        {
+          "aliases": [
+            "《解放黑人奴隶宣言》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0899",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写美国内战的影响",
+      "answer": "废除奴隶制度，维护国家统一，为资本主义发展扫清障碍",
+      "keywords": [
+        {
+          "aliases": [
+            "废除奴隶制度",
+            "维护国家统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0900",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写林肯的贡献",
+      "answer": "领导内战取得胜利，废除奴隶制度",
+      "keywords": [
+        {
+          "aliases": [
+            "领导内战取得胜利",
+            "废除奴隶制度"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0901",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国内战"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"美国内战的影响\"",
+      "answer": "废除奴隶制度，维护国家统一，为资本主义进一步发展扫清障碍",
+      "keywords": [
+        {
+          "aliases": [
+            "废除奴隶制度",
+            "维护国家统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0902",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国的改革"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "彼得一世改革的影响是？",
+      "answer": "开启俄国近代化进程，但农奴制进一步强化",
+      "keywords": [
+        {
+          "aliases": [
+            "开启俄国近代化进程",
+            "但农奴制进一步强化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国的改革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0903",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国的改革"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1861年改革的影响是？",
+      "answer": "俄国历史重要转折点，推动走上资本主义道路",
+      "keywords": [
+        {
+          "aliases": [
+            "俄国历史重要转折点",
+            "推动走上资本主义道路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国的改革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0904",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国的改革"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "开启俄国近代化进程的是？",
+      "answer": "彼得一世改革",
+      "keywords": [
+        {
+          "aliases": [
+            "彼得一世改革"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国的改革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0905",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国的改革"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "俄国历史重要转折点是？",
+      "answer": "1861年改革",
+      "keywords": [
+        {
+          "aliases": [
+            "1861年改革"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国的改革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0906",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国的改革"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写1861年改革的内容",
+      "answer": "废除农奴制，农奴获得人身自由，可赎买土地",
+      "keywords": [
+        {
+          "aliases": [
+            "废除农奴制",
+            "农奴获得人身自由"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国的改革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0907",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国的改革"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"1861年改革的内容\"",
+      "answer": "废除农奴制，农奴获得人身自由，可以赎买一份土地",
+      "keywords": [
+        {
+          "aliases": [
+            "废除农奴制",
+            "农奴获得人身自由"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国的改革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0908",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本明治维新"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "明治维新的内容是？",
+      "answer": "废藩置县、殖产兴业、文明开化、征兵制",
+      "keywords": [
+        {
+          "aliases": [
+            "废藩置县、殖产兴业、文明开化、征兵制"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-日本明治维新"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0909",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本明治维新"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "明治维新的影响是？",
+      "answer": "迅速走上资本主义道路，实现\"富国强兵\"",
+      "keywords": [
+        {
+          "aliases": [
+            "迅速走上资本主义道路",
+            "实现\"富国强兵\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-日本明治维新"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0910",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本明治维新"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "废藩置县、殖产兴业、文明开化，这是什么改革的内容？",
+      "answer": "明治维新",
+      "keywords": [
+        {
+          "aliases": [
+            "明治维新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-日本明治维新"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0911",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本明治维新"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写明治维新的局限",
+      "answer": "保留大量旧制度残余，军国主义色彩浓厚",
+      "keywords": [
+        {
+          "aliases": [
+            "保留大量旧制度残余",
+            "军国主义色彩浓厚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-日本明治维新"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0912",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本明治维新"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"明治维新的影响\"",
+      "answer": "迅速走上资本主义道路，实现富国强兵，跻身资本主义强国",
+      "keywords": [
+        {
+          "aliases": [
+            "迅速走上资本主义道路",
+            "实现富国强兵"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-日本明治维新"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0913",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次工业革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "第二次工业革命的标志是？",
+      "answer": "电力的广泛应用（电气时代）",
+      "keywords": [
+        {
+          "aliases": [
+            "电力的广泛应用（电气时代）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0914",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次工业革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "垄断组织的影响是？",
+      "answer": "资本主义由自由资本主义向垄断资本主义过渡",
+      "keywords": [
+        {
+          "aliases": [
+            "资本主义由自由资本主义向垄断资本主义过渡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0915",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次工业革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "电力广泛应用的时代是？",
+      "answer": "电气时代",
+      "keywords": [
+        {
+          "aliases": [
+            "电气时代"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0916",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次工业革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "生产和资本高度集中产生的是？",
+      "answer": "垄断组织",
+      "keywords": [
+        {
+          "aliases": [
+            "垄断组织"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0917",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次工业革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写第二次工业革命的成就",
+      "answer": "电灯（爱迪生）、汽车（卡尔·本茨）、飞机（莱特兄弟）",
+      "keywords": [
+        {
+          "aliases": [
+            "电灯（爱迪生）、汽车（卡尔·本茨）、飞机（莱特兄弟）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0918",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次工业革命"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"第二次工业革命的成就\"",
+      "answer": "电灯、汽车、飞机，电力广泛应用",
+      "keywords": [
+        {
+          "aliases": [
+            "电灯、汽车、飞机",
+            "电力广泛应用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0919",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "一战爆发的根本原因是？",
+      "answer": "帝国主义国家政治经济发展不平衡",
+      "keywords": [
+        {
+          "aliases": [
+            "帝国主义国家政治经济发展不平衡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0920",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "凡尔登战役的地位是？",
+      "answer": "一战中最残酷的战役，\"凡尔登绞肉机\"",
+      "keywords": [
+        {
+          "aliases": [
+            "一战中最残酷的战役",
+            "\"凡尔登绞肉机\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0921",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "帝国主义国家政治经济发展不平衡导致了什么？",
+      "answer": "第一次世界大战",
+      "keywords": [
+        {
+          "aliases": [
+            "第一次世界大战"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0922",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "一战中最残酷的战役是？",
+      "answer": "凡尔登战役",
+      "keywords": [
+        {
+          "aliases": [
+            "凡尔登战役"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0923",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写萨拉热窝事件",
+      "answer": "成为一战的导火索",
+      "keywords": [
+        {
+          "aliases": [
+            "成为一战的导火索"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0924",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写一战的影响",
+      "answer": "给各国人民带来深重苦难，削弱了帝国主义力量",
+      "keywords": [
+        {
+          "aliases": [
+            "给各国人民带来深重苦难",
+            "削弱了帝国主义力量"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0925",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次世界大战"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"一战爆发的根本原因\"",
+      "answer": "帝国主义国家政治经济发展不平衡",
+      "keywords": [
+        {
+          "aliases": [
+            "帝国主义国家政治经济发展不平衡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0926",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "十月革命的时间和领导者是？",
+      "answer": "1917年11月，列宁",
+      "keywords": [
+        {
+          "aliases": [
+            "1917年11月",
+            "列宁"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0927",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "十月革命的意义是？",
+      "answer": "人类历史上第一次胜利的社会主义革命",
+      "keywords": [
+        {
+          "aliases": [
+            "人类历史上第一次胜利的社会主义革命"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0928",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1917年11月列宁领导的革命是？",
+      "answer": "十月革命",
+      "keywords": [
+        {
+          "aliases": [
+            "十月革命"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0929",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人类历史上第一次胜利的社会主义革命是？",
+      "answer": "十月革命",
+      "keywords": [
+        {
+          "aliases": [
+            "十月革命"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0930",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写十月革命的意义",
+      "answer": "建立了第一个无产阶级专政的国家",
+      "keywords": [
+        {
+          "aliases": [
+            "建立了第一个无产阶级专政的国家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0931",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写十月革命对中国的影响",
+      "answer": "给中国送来了马克思列宁主义",
+      "keywords": [
+        {
+          "aliases": [
+            "给中国送来了马克思列宁主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0932",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄国十月革命"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"十月革命的意义\"",
+      "answer": "人类历史上第一次胜利的社会主义革命，建立了第一个无产阶级专政的国家",
+      "keywords": [
+        {
+          "aliases": [
+            "人类历史上第一次胜利的社会主义革命",
+            "建立了第一个无产阶级专政的国家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-俄国十月革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0933",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凡尔赛—华盛顿体系"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《凡尔赛条约》的内容是？",
+      "answer": "对德国的领土、军事、政治、赔款、殖民地等问题作出规定",
+      "keywords": [
+        {
+          "aliases": [
+            "对德国的领土、军事、政治、赔款、殖民地等问题作出规定"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-凡尔赛—华盛顿体系"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0934",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凡尔赛—华盛顿体系"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《九国公约》的影响是？",
+      "answer": "维持了几个帝国主义国家共同支配中国的局面",
+      "keywords": [
+        {
+          "aliases": [
+            "维持了几个帝国主义国家共同支配中国的局面"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-凡尔赛—华盛顿体系"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0935",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凡尔赛—华盛顿体系"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "对德国领土、军事、赔款等作出规定的是？",
+      "answer": "《凡尔赛条约》",
+      "keywords": [
+        {
+          "aliases": [
+            "《凡尔赛条约》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-凡尔赛—华盛顿体系"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0936",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凡尔赛—华盛顿体系"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "维持几个帝国主义国家共同支配中国的是？",
+      "answer": "《九国公约》",
+      "keywords": [
+        {
+          "aliases": [
+            "《九国公约》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-凡尔赛—华盛顿体系"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0937",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凡尔赛—华盛顿体系"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写凡尔赛—华盛顿体系的实质",
+      "answer": "帝国主义重新瓜分世界的体系",
+      "keywords": [
+        {
+          "aliases": [
+            "帝国主义重新瓜分世界的体系"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-凡尔赛—华盛顿体系"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0938",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凡尔赛—华盛顿体系"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"凡尔赛—华盛顿体系的实质\"",
+      "answer": "帝国主义重新瓜分世界的体系",
+      "keywords": [
+        {
+          "aliases": [
+            "帝国主义重新瓜分世界的体系"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-凡尔赛—华盛顿体系"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0939",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉民族民主运动的高涨"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "甘地的非暴力不合作运动的意义是？",
+      "answer": "动员广大群众，打击英国殖民统治",
+      "keywords": [
+        {
+          "aliases": [
+            "动员广大群众",
+            "打击英国殖民统治"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉民族民主运动的高涨"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0940",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉民族民主运动的高涨"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "非暴力不合作运动的领导者是？",
+      "answer": "甘地",
+      "keywords": [
+        {
+          "aliases": [
+            "甘地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉民族民主运动的高涨"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0941",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉民族民主运动的高涨"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写埃及独立运动的领导者",
+      "answer": "扎格鲁尔",
+      "keywords": [
+        {
+          "aliases": [
+            "扎格鲁尔"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉民族民主运动的高涨"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0942",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉民族民主运动的高涨"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写墨西哥改革的领导者",
+      "answer": "卡德纳斯",
+      "keywords": [
+        {
+          "aliases": [
+            "卡德纳斯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉民族民主运动的高涨"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0943",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1929-1933年经济大危机的特点是？",
+      "answer": "范围广、时间长、破坏性大",
+      "keywords": [
+        {
+          "aliases": [
+            "范围广、时间长、破坏性大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0944",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "罗斯福新政的特点是？",
+      "answer": "采用国家干预手段来扭转经济形势",
+      "keywords": [
+        {
+          "aliases": [
+            "采用国家干预手段来扭转经济形势"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0945",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "范围广、时间长、破坏性大，这是什么的特点？",
+      "answer": "1929-1933年经济大危机",
+      "keywords": [
+        {
+          "aliases": [
+            "1929-1933年经济大危机"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0946",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "采用国家干预手段的是？",
+      "answer": "罗斯福新政",
+      "keywords": [
+        {
+          "aliases": [
+            "罗斯福新政"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0947",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写罗斯福新政的内容",
+      "answer": "整顿金融、加强对工业的计划指导、调整农业政策、推行\"以工代赈\"",
+      "keywords": [
+        {
+          "aliases": [
+            "整顿金融、加强对工业的计划指导、调整农业政策、推行\"以工代赈\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0948",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写罗斯福新政的影响",
+      "answer": "美国经济缓慢复苏，增强政府宏观调控能力",
+      "keywords": [
+        {
+          "aliases": [
+            "美国经济缓慢复苏",
+            "增强政府宏观调控能力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0949",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "经济大危机"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"罗斯福新政的特点\"",
+      "answer": "采用国家干预手段来扭转经济形势",
+      "keywords": [
+        {
+          "aliases": [
+            "采用国家干预手段来扭转经济形势"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-经济大危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0950",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "意大利法西斯建立的时间是？",
+      "answer": "1922年，墨索里尼上台",
+      "keywords": [
+        {
+          "aliases": [
+            "1922年",
+            "墨索里尼上台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0951",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "德国法西斯建立的时间是？",
+      "answer": "1933年，希特勒上台",
+      "keywords": [
+        {
+          "aliases": [
+            "1933年",
+            "希特勒上台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0952",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1922年墨索里尼上台建立的是？",
+      "answer": "意大利法西斯",
+      "keywords": [
+        {
+          "aliases": [
+            "意大利法西斯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0953",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1933年希特勒上台建立的是？",
+      "answer": "德国法西斯",
+      "keywords": [
+        {
+          "aliases": [
+            "德国法西斯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0954",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写日本法西斯建立的标志",
+      "answer": "1936年，受军部控制的广田弘毅上台组阁",
+      "keywords": [
+        {
+          "aliases": [
+            "1936年",
+            "受军部控制的广田弘毅上台组阁"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0955",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写德意日法西斯的共同特点",
+      "answer": "对内独裁，对外侵略扩张",
+      "keywords": [
+        {
+          "aliases": [
+            "对内独裁",
+            "对外侵略扩张"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0956",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法西斯国家的侵略扩张"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"法西斯国家建立的时间\"",
+      "answer": "意大利1922年、德国1933年、日本1936年",
+      "keywords": [
+        {
+          "aliases": [
+            "意大利1922年、德国1933年、日本1936年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法西斯国家的侵略扩张"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0957",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "二战全面爆发的标志是？",
+      "answer": "1939年9月1日，德国突袭波兰",
+      "keywords": [
+        {
+          "aliases": [
+            "1939年9月1日",
+            "德国突袭波兰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0958",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "斯大林格勒战役的地位是？",
+      "answer": "二战的转折点",
+      "keywords": [
+        {
+          "aliases": [
+            "二战的转折点"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0959",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1939年9月1日德国突袭波兰，这是什么事件？",
+      "answer": "二战全面爆发",
+      "keywords": [
+        {
+          "aliases": [
+            "二战全面爆发"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0960",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "二战的转折点是？",
+      "answer": "斯大林格勒战役",
+      "keywords": [
+        {
+          "aliases": [
+            "斯大林格勒战役"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0961",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写诺曼底登陆的意义",
+      "answer": "开辟欧洲第二战场，加速德国法西斯灭亡",
+      "keywords": [
+        {
+          "aliases": [
+            "开辟欧洲第二战场",
+            "加速德国法西斯灭亡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0962",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写二战结束的标志",
+      "answer": "1945年9月2日，日本正式签署投降书",
+      "keywords": [
+        {
+          "aliases": [
+            "1945年9月2日",
+            "日本正式签署投降书"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0963",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"二战全面爆发的标志\"",
+      "answer": "1939年9月1日，德国突袭波兰",
+      "keywords": [
+        {
+          "aliases": [
+            "1939年9月1日",
+            "德国突袭波兰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0964",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "联合国成立的时间是？",
+      "answer": "1945年",
+      "keywords": [
+        {
+          "aliases": [
+            "1945年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0965",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "二战的影响是？",
+      "answer": "给人类社会带来巨大灾难，削弱帝国主义力量，促进民族解放运动",
+      "keywords": [
+        {
+          "aliases": [
+            "给人类社会带来巨大灾难",
+            "削弱帝国主义力量"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0966",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1945年成立的国际组织是？",
+      "answer": "联合国",
+      "keywords": [
+        {
+          "aliases": [
+            "联合国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0967",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第二次世界大战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写二战的影响",
+      "answer": "给人类带来巨大灾难，削弱帝国主义力量，促进民族解放运动",
+      "keywords": [
+        {
+          "aliases": [
+            "给人类带来巨大灾难",
+            "削弱帝国主义力量"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第二次世界大战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0968",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "冷战开始的标志是？",
+      "answer": "1947年杜鲁门主义的出台",
+      "keywords": [
+        {
+          "aliases": [
+            "1947年杜鲁门主义的出台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0969",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "杜鲁门主义的内容是？",
+      "answer": "遏制共产主义，干涉别国内政",
+      "keywords": [
+        {
+          "aliases": [
+            "遏制共产主义",
+            "干涉别国内政"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0970",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1947年杜鲁门主义的出台标志着什么？",
+      "answer": "冷战开始",
+      "keywords": [
+        {
+          "aliases": [
+            "冷战开始"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0971",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "遏制共产主义、干涉别国内政的是？",
+      "answer": "杜鲁门主义",
+      "keywords": [
+        {
+          "aliases": [
+            "杜鲁门主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0972",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写冷战的表现",
+      "answer": "政治杜鲁门主义、经济马歇尔计划、军事北约成立",
+      "keywords": [
+        {
+          "aliases": [
+            "政治杜鲁门主义、经济马歇尔计划、军事北约成立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0973",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写两极格局形成的标志",
+      "answer": "北约和华约的成立",
+      "keywords": [
+        {
+          "aliases": [
+            "北约和华约的成立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0974",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "冷战"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"冷战开始的标志\"",
+      "answer": "1947年杜鲁门主义的出台",
+      "keywords": [
+        {
+          "aliases": [
+            "1947年杜鲁门主义的出台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-冷战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0975",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战后资本主义国家的新变化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "欧洲联合的过程是？",
+      "answer": "欧共体（1967年）→欧盟（1993年）",
+      "keywords": [
+        {
+          "aliases": [
+            "欧共体（1967年）→欧盟（1993年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战后资本主义国家的新变化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0976",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战后资本主义国家的新变化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "日本崛起的原因是？",
+      "answer": "美国扶持、适当经济政策、引进先进技术",
+      "keywords": [
+        {
+          "aliases": [
+            "美国扶持、适当经济政策、引进先进技术"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战后资本主义国家的新变化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0977",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战后资本主义国家的新变化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1967年成立、1993年发展为欧盟的是？",
+      "answer": "欧共体",
+      "keywords": [
+        {
+          "aliases": [
+            "欧共体"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战后资本主义国家的新变化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0978",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战后资本主义国家的新变化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写福利国家的含义",
+      "answer": "国家通过社会保障政策，保证公民基本生活水平",
+      "keywords": [
+        {
+          "aliases": [
+            "国家通过社会保障政策",
+            "保证公民基本生活水平"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战后资本主义国家的新变化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0979",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战后资本主义国家的新变化"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"欧洲联合的过程\"",
+      "answer": "欧共体（1967年）→欧盟（1993年）",
+      "keywords": [
+        {
+          "aliases": [
+            "欧共体（1967年）→欧盟（1993年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战后资本主义国家的新变化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0980",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "赫鲁晓夫改革的内容是？",
+      "answer": "批判斯大林个人崇拜，推行改革",
+      "keywords": [
+        {
+          "aliases": [
+            "批判斯大林个人崇拜",
+            "推行改革"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0981",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "苏联解体的时间是？",
+      "answer": "1991年",
+      "keywords": [
+        {
+          "aliases": [
+            "1991年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0982",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "批判斯大林个人崇拜的是？",
+      "answer": "赫鲁晓夫改革",
+      "keywords": [
+        {
+          "aliases": [
+            "赫鲁晓夫改革"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0983",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1991年发生的重大事件是？",
+      "answer": "苏联解体",
+      "keywords": [
+        {
+          "aliases": [
+            "苏联解体"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0984",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写戈尔巴乔夫改革的影响",
+      "answer": "导致苏联解体",
+      "keywords": [
+        {
+          "aliases": [
+            "导致苏联解体"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0985",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写东欧剧变的时间",
+      "answer": "1989-1991年",
+      "keywords": [
+        {
+          "aliases": [
+            "1989-1991年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0986",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写东欧剧变的影响",
+      "answer": "社会制度变化，冷战结束",
+      "keywords": [
+        {
+          "aliases": [
+            "社会制度变化",
+            "冷战结束"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0987",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义国家的发展与演变"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"苏联解体的时间\"",
+      "answer": "1991年",
+      "keywords": [
+        {
+          "aliases": [
+            "1991年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义国家的发展与演变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0988",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉国家的新发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "万隆会议的意义是？",
+      "answer": "发展中国家作为新兴独立政治力量登上国际舞台",
+      "keywords": [
+        {
+          "aliases": [
+            "发展中国家作为新兴独立政治力量登上国际舞台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉国家的新发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0989",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉国家的新发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "非洲独立运动的高潮是？",
+      "answer": "1960年，17个国家独立，\"非洲年\"",
+      "keywords": [
+        {
+          "aliases": [
+            "1960年",
+            "17个国家独立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉国家的新发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0990",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉国家的新发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "发展中国家作为新兴独立政治力量登上国际舞台的是？",
+      "answer": "万隆会议",
+      "keywords": [
+        {
+          "aliases": [
+            "万隆会议"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉国家的新发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0991",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉国家的新发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1960年被称为\"非洲年\"是因为？",
+      "answer": "17个非洲国家独立",
+      "keywords": [
+        {
+          "aliases": [
+            "17个非洲国家独立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉国家的新发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0992",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉国家的新发展"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写纳米比亚独立的意义",
+      "answer": "标志着帝国主义在非洲的殖民体系最终崩溃",
+      "keywords": [
+        {
+          "aliases": [
+            "标志着帝国主义在非洲的殖民体系最终崩溃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉国家的新发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0993",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "亚非拉国家的新发展"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"万隆会议的意义\"",
+      "answer": "发展中国家作为一支新兴独立的政治力量登上了国际舞台",
+      "keywords": [
+        {
+          "aliases": [
+            "发展中国家作为一支新兴独立的政治力量登上了国际舞台"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-亚非拉国家的新发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0994",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的格局"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "冷战结束后世界格局的特点是？",
+      "answer": "暂时形成\"一超多强\"局面，多极化趋势不可逆转",
+      "keywords": [
+        {
+          "aliases": [
+            "暂时形成\"一超多强\"局面",
+            "多极化趋势不可逆转"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的格局"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0995",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的格局"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "多极化趋势的表现是？",
+      "answer": "欧盟、日本、中国、俄罗斯等力量不断增强",
+      "keywords": [
+        {
+          "aliases": [
+            "欧盟、日本、中国、俄罗斯等力量不断增强"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的格局"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0996",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的格局"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"一超多强\"是冷战结束后世界格局的什么特点？",
+      "answer": "暂时状态",
+      "keywords": [
+        {
+          "aliases": [
+            "暂时状态"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的格局"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0997",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的格局"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写多极化趋势的表现",
+      "answer": "欧盟、日本、中国、俄罗斯等国家和联盟力量增强",
+      "keywords": [
+        {
+          "aliases": [
+            "欧盟、日本、中国、俄罗斯等国家和联盟力量增强"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的格局"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0998",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的主题"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "当今世界的两大主题是？",
+      "answer": "和平与发展",
+      "keywords": [
+        {
+          "aliases": [
+            "和平与发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的主题"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0999",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的主题"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人类面临的共同问题有？",
+      "answer": "恐怖主义、环境问题、能源问题、人口问题",
+      "keywords": [
+        {
+          "aliases": [
+            "恐怖主义、环境问题、能源问题、人口问题"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的主题"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1000",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的主题"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "当今世界的两大主题是？",
+      "answer": "和平与发展",
+      "keywords": [
+        {
+          "aliases": [
+            "和平与发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的主题"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1001",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的主题"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写经济全球化的表现",
+      "answer": "商品、劳务、技术、资金在全球范围内流动和配置",
+      "keywords": [
+        {
+          "aliases": [
+            "商品、劳务、技术、资金在全球范围内流动和配置"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的主题"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1002",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "当今世界的主题"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"当今世界的两大主题\"",
+      "answer": "和平与发展",
+      "keywords": [
+        {
+          "aliases": [
+            "和平与发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-当今世界的主题"
+    }
+  }
+]

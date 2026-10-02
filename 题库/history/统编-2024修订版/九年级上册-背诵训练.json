@@ -1,0 +1,4599 @@
+[
+  {
+    "id": "Q-history-7to9-0662",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人类是由什么演化而来的？",
+      "answer": "古猿",
+      "keywords": [
+        {
+          "aliases": [
+            "古猿"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0663",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "旧石器时代人类使用什么石器？",
+      "answer": "打制石器",
+      "keywords": [
+        {
+          "aliases": [
+            "打制石器"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0664",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "解放上肢、开阔视野、有助于大脑发育的是？",
+      "answer": "直立行走",
+      "keywords": [
+        {
+          "aliases": [
+            "直立行走"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0665",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "使用磨制石器、农业和畜牧业起源的时代是？",
+      "answer": "新石器时代",
+      "keywords": [
+        {
+          "aliases": [
+            "新石器时代"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0666",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写旧石器时代和新石器时代的区别",
+      "answer": "旧石器时代：打制石器、渔猎采集、从人类形成至农业起源；新石器时代：磨制石器、农业和畜牧业起源、定居生活、陶器广泛使用",
+      "keywords": [
+        {
+          "aliases": [
+            "旧石器时代：打制石器、渔猎采集、从人类形成至农业起源",
+            "新石器时代：磨制石器、农业和畜牧业起源、定居生活、陶器广泛使用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0667",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写阶级和国家是怎样产生的",
+      "answer": "农业和畜牧业发展→生产力提高→社会分工细化→剩余产品出现→一部分人占有剩余产品→阶级出现→阶级矛盾不可调和→奴隶制国家产生",
+      "keywords": [
+        {
+          "aliases": [
+            "农业和畜牧业发展→生产力提高→社会分工细化→剩余产品出现→一部分人占有剩余产品→阶级出现→阶级矛盾不可调和→奴隶制国家产生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0668",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "从原始社会到奴隶社会"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"人类的形成过程\"",
+      "answer": "古猿→约300万年前直立行走→结成群体共同劳动→约5万年前\"现代人\"形成",
+      "keywords": [
+        {
+          "aliases": [
+            "古猿→约300万年前直立行走→结成群体共同劳动→约5万年前\"现代人\"形成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-从原始社会到奴隶社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0669",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "两河流域指什么？",
+      "answer": "幼发拉底河与底格里斯河流域",
+      "keywords": [
+        {
+          "aliases": [
+            "幼发拉底河与底格里斯河流域"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0670",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《汉谟拉比法典》的地位是？",
+      "answer": "迄今已知世界上第一部较为完整的成文法典",
+      "keywords": [
+        {
+          "aliases": [
+            "迄今已知世界上第一部较为完整的成文法典"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0671",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "幼发拉底河与底格里斯河流域孕育了什么文明？",
+      "answer": "古代两河流域文明",
+      "keywords": [
+        {
+          "aliases": [
+            "古代两河流域文明"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0672",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世界上第一部较为完整的成文法典是？",
+      "answer": "《汉谟拉比法典》",
+      "keywords": [
+        {
+          "aliases": [
+            "《汉谟拉比法典》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0673",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写楔形文字的特点",
+      "answer": "用削尖的芦苇秆在泥板上刻画，形似楔子",
+      "keywords": [
+        {
+          "aliases": [
+            "用削尖的芦苇秆在泥板上刻画",
+            "形似楔子"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0674",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《汉谟拉比法典》的内容反映",
+      "answer": "严格保护奴隶主的利益，比较全面地反映了古巴比伦社会的情况",
+      "keywords": [
+        {
+          "aliases": [
+            "严格保护奴隶主的利益",
+            "比较全面地反映了古巴比伦社会的情况"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0675",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代两河流域"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"古代两河流域文明的发展线索\"",
+      "answer": "约公元前3500年城市国家兴起→阿卡德王国初步统一→古巴比伦王国→《汉谟拉比法典》→楔形文字",
+      "keywords": [
+        {
+          "aliases": [
+            "约公元前3500年城市国家兴起→阿卡德王国初步统一→古巴比伦王国→《汉谟拉比法典》→楔形文字"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代两河流域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0676",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "古代埃及文明发源于哪里？",
+      "answer": "尼罗河流域",
+      "keywords": [
+        {
+          "aliases": [
+            "尼罗河流域"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0677",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "金字塔的作用是？",
+      "answer": "古埃及法老的陵墓，象征法老的权力和地位",
+      "keywords": [
+        {
+          "aliases": [
+            "古埃及法老的陵墓",
+            "象征法老的权力和地位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0678",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"尼罗河的赠礼\"指哪个文明？",
+      "answer": "古代埃及文明",
+      "keywords": [
+        {
+          "aliases": [
+            "古代埃及文明"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0679",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "古埃及法老的陵墓、象征法老权力的是什么？",
+      "answer": "金字塔",
+      "keywords": [
+        {
+          "aliases": [
+            "金字塔"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0680",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写古代埃及统一与鼎盛的时间",
+      "answer": "约公元前3100年初步统一；图特摩斯三世时期（公元前15世纪）达鼎盛",
+      "keywords": [
+        {
+          "aliases": [
+            "约公元前3100年初步统一",
+            "图特摩斯三世时期（公元前15世纪）达鼎盛"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0681",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写象形文字的特点",
+      "answer": "用图形表示事物，是世界上最早的文字之一",
+      "keywords": [
+        {
+          "aliases": [
+            "用图形表示事物",
+            "是世界上最早的文字之一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0682",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代埃及"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"古埃及文明的成就\"",
+      "answer": "金字塔、象形文字、木乃伊制作",
+      "keywords": [
+        {
+          "aliases": [
+            "金字塔、象形文字、木乃伊制作"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代埃及"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0683",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "种姓制度的四个等级是？",
+      "answer": "婆罗门、刹帝利、吠舍、首陀罗",
+      "keywords": [
+        {
+          "aliases": [
+            "婆罗门、刹帝利、吠舍、首陀罗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0684",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "佛教的创始人是？",
+      "answer": "乔达摩·悉达多（释迦牟尼）",
+      "keywords": [
+        {
+          "aliases": [
+            "乔达摩·悉达多（释迦牟尼）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0685",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "婆罗门、刹帝利、吠舍、首陀罗，这是什么制度？",
+      "answer": "种姓制度",
+      "keywords": [
+        {
+          "aliases": [
+            "种姓制度"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0686",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "释迦牟尼创立的宗教是？",
+      "answer": "佛教",
+      "keywords": [
+        {
+          "aliases": [
+            "佛教"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0687",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写印度河流域文明的代表性城市",
+      "answer": "哈拉帕和摩亨佐·达罗（约公元前25世纪出现，公元前18世纪衰亡）",
+      "keywords": [
+        {
+          "aliases": [
+            "哈拉帕和摩亨佐·达罗（约公元前25世纪出现",
+            "公元前18世纪衰亡）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0688",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写佛教的核心教义",
+      "answer": "众生平等，反对婆罗门的特权地位",
+      "keywords": [
+        {
+          "aliases": [
+            "众生平等",
+            "反对婆罗门的特权地位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0689",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代印度"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"种姓制度的四个等级及其职责\"",
+      "answer": "婆罗门（祭司）、刹帝利（武士/贵族）、吠舍（农民/商人）、首陀罗（被征服者/奴隶）",
+      "keywords": [
+        {
+          "aliases": [
+            "婆罗门（祭司）、刹帝利（武士/贵族）、吠舍（农民/商人）、首陀罗（被征服者/奴隶）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代印度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0690",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "希腊城邦的突出特点是？",
+      "answer": "\"小国寡民\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"小国寡民\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0691",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "雅典民主政治的鼎盛时期是？",
+      "answer": "伯里克利主政时期（公元前5世纪中期）",
+      "keywords": [
+        {
+          "aliases": [
+            "伯里克利主政时期（公元前5世纪中期）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0692",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"小国寡民\"形容的是什么？",
+      "answer": "希腊城邦",
+      "keywords": [
+        {
+          "aliases": [
+            "希腊城邦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0693",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "大部分公职人员从全体公民中抽签产生，这是哪个城邦的制度？",
+      "answer": "雅典",
+      "keywords": [
+        {
+          "aliases": [
+            "雅典"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0694",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写伯里克利时期民主政治的表现",
+      "answer": "扩大公民权利；公职人员从公民中抽签产生；为贫穷公民提供参政津贴；公民大会是最高权力机关",
+      "keywords": [
+        {
+          "aliases": [
+            "扩大公民权利",
+            "公职人员从公民中抽签产生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0695",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写雅典民主政治的局限",
+      "answer": "公民仅占总人口的小部分，妇女、外邦人、奴隶没有政治权利",
+      "keywords": [
+        {
+          "aliases": [
+            "公民仅占总人口的小部分",
+            "妇女、外邦人、奴隶没有政治权利"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0696",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代希腊"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"亚历山大东征的影响\"",
+      "answer": "促进东西方文化大交汇，加强经济联系和贸易往来",
+      "keywords": [
+        {
+          "aliases": [
+            "促进东西方文化大交汇",
+            "加强经济联系和贸易往来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代希腊"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0697",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《十二铜表法》的地位是？",
+      "answer": "罗马法制建设的第一步，后世罗马法典乃至欧洲法学的渊源",
+      "keywords": [
+        {
+          "aliases": [
+            "罗马法制建设的第一步",
+            "后世罗马法典乃至欧洲法学的渊源"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0698",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "罗马帝国建立的时间和建立者是？",
+      "answer": "公元前27年，屋大维",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前27年",
+            "屋大维"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0699",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "罗马法制建设的第一步是？",
+      "answer": "《十二铜表法》",
+      "keywords": [
+        {
+          "aliases": [
+            "《十二铜表法》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0700",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "公元前27年建立罗马帝国、创立元首制的是？",
+      "answer": "屋大维",
+      "keywords": [
+        {
+          "aliases": [
+            "屋大维"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0701",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写罗马共和国的权力机构",
+      "answer": "元老院（掌握实际权力）、执政官（主持日常政务）、公民大会（选举立法）",
+      "keywords": [
+        {
+          "aliases": [
+            "元老院（掌握实际权力）、执政官（主持日常政务）、公民大会（选举立法）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0702",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写布匿战争",
+      "answer": "罗马与迦太基争夺西地中海霸权，三次战争（公元前264—前146年）",
+      "keywords": [
+        {
+          "aliases": [
+            "罗马与迦太基争夺西地中海霸权",
+            "三次战争（公元前264—前146年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0703",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "古代罗马"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"罗马从共和国到帝国的历程\"",
+      "answer": "公元前509年建立共和国→扩张征服地中海→斯巴达克起义→恺撒独裁→屋大维元首制→罗马帝国",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前509年建立共和国→扩张征服地中海→斯巴达克起义→恺撒独裁→屋大维元首制→罗马帝国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-古代罗马"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0704",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "法兰克王国的建立者是？",
+      "answer": "克洛维（481年建立）",
+      "keywords": [
+        {
+          "aliases": [
+            "克洛维（481年建立）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0705",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "封君封臣制度的纽带是？",
+      "answer": "以土地的封赐为纽带",
+      "keywords": [
+        {
+          "aliases": [
+            "以土地的封赐为纽带"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0706",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "481年建立法兰克王国的是？",
+      "answer": "克洛维",
+      "keywords": [
+        {
+          "aliases": [
+            "克洛维"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0707",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "843年查理曼帝国一分为三，形成哪三国雏形？",
+      "answer": "德意志、法兰西、意大利",
+      "keywords": [
+        {
+          "aliases": [
+            "德意志、法兰西、意大利"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0708",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写查理曼的主要活动",
+      "answer": "四处征伐扩张版图；划分教区征收什一税；800年教皇为其加冕称\"罗马人的皇帝\"",
+      "keywords": [
+        {
+          "aliases": [
+            "四处征伐扩张版图",
+            "划分教区征收什一税"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0709",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写封君封臣制度的特点",
+      "answer": "以土地封赐为纽带，有严格的等级性，权利和义务交织，具有契约意义",
+      "keywords": [
+        {
+          "aliases": [
+            "以土地封赐为纽带",
+            "有严格的等级性"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0710",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法兰克王国和西欧封建制度"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"法兰克王国的发展线索\"",
+      "answer": "481年克洛维建法兰克王国→皈依基督教→768年查理→800年加冕查理曼帝国→843年分裂为德法意雏形",
+      "keywords": [
+        {
+          "aliases": [
+            "481年克洛维建法兰克王国→皈依基督教→768年查理→800年加冕查理曼帝国→843年分裂为德法意雏形"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法兰克王国和西欧封建制度"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0711",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧的城市和大学"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "城市居民争取城市自治的方式有？",
+      "answer": "金钱赎买或武力斗争",
+      "keywords": [
+        {
+          "aliases": [
+            "金钱赎买或武力斗争"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧的城市和大学"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0712",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧的城市和大学"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中世纪大学享有哪些特权？",
+      "answer": "免赋税特权、司法特权、教育自主权",
+      "keywords": [
+        {
+          "aliases": [
+            "免赋税特权、司法特权、教育自主权"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧的城市和大学"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0713",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧的城市和大学"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"城市的空气使人自由\"反映了什么？",
+      "answer": "城市市民有人身自由，享有财产权",
+      "keywords": [
+        {
+          "aliases": [
+            "城市市民有人身自由",
+            "享有财产权"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧的城市和大学"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0714",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧的城市和大学"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "从10世纪起开始复苏的是什么？",
+      "answer": "西欧城市",
+      "keywords": [
+        {
+          "aliases": [
+            "西欧城市"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧的城市和大学"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0715",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧的城市和大学"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写西欧城市兴起的条件",
+      "answer": "农业技术提高、农业剩余产品增加、商业贸易发展、人口增长；分布在道路交会处、港口、主教驻地等交通便利处",
+      "keywords": [
+        {
+          "aliases": [
+            "农业技术提高、农业剩余产品增加、商业贸易发展、人口增长",
+            "分布在道路交会处、港口、主教驻地等交通便利处"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧的城市和大学"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0716",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧的城市和大学"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"中世纪城市与大学的关系\"",
+      "answer": "城市发展→市民阶层需要→大学兴起；大学是城市发展的产物，享有自治特权",
+      "keywords": [
+        {
+          "aliases": [
+            "城市发展→市民阶层需要→大学兴起",
+            "大学是城市发展的产物"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧的城市和大学"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0717",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "拜占庭帝国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "拜占庭帝国又称什么？",
+      "answer": "东罗马帝国",
+      "keywords": [
+        {
+          "aliases": [
+            "东罗马帝国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-拜占庭帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0718",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "拜占庭帝国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "拜占庭帝国何时灭亡？",
+      "answer": "1453年被奥斯曼帝国攻灭",
+      "keywords": [
+        {
+          "aliases": [
+            "1453年被奥斯曼帝国攻灭"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-拜占庭帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0719",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "拜占庭帝国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "395年罗马分裂后，东部帝国因君士坦丁堡旧称被称为什么？",
+      "answer": "拜占庭帝国（东罗马帝国）",
+      "keywords": [
+        {
+          "aliases": [
+            "拜占庭帝国（东罗马帝国）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-拜占庭帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0720",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "拜占庭帝国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "奠定欧洲民法基础的法典是？",
+      "answer": "《罗马民法大全》",
+      "keywords": [
+        {
+          "aliases": [
+            "《罗马民法大全》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-拜占庭帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0721",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "拜占庭帝国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写查士丁尼的功绩",
+      "answer": "整饬吏治、加强中央集权；组织编纂《罗马民法大全》；对外征服意大利半岛、西班牙东南部，扩大北非领土",
+      "keywords": [
+        {
+          "aliases": [
+            "整饬吏治、加强中央集权",
+            "组织编纂《罗马民法大全》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-拜占庭帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0722",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "拜占庭帝国"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"拜占庭帝国的历史地位\"",
+      "answer": "保存和传播希腊罗马古典文化，对基督教发展和东西方文化交流作出贡献",
+      "keywords": [
+        {
+          "aliases": [
+            "保存和传播希腊罗马古典文化",
+            "对基督教发展和东西方文化交流作出贡献"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-拜占庭帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0723",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "封建时代的日本"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "大化改新的时间是？",
+      "answer": "646年",
+      "keywords": [
+        {
+          "aliases": [
+            "646年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-封建时代的日本"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0724",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "封建时代的日本"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "大化改新仿效了哪个国家的制度？",
+      "answer": "中国唐朝典章制度",
+      "keywords": [
+        {
+          "aliases": [
+            "中国唐朝典章制度"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-封建时代的日本"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0725",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "封建时代的日本"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "646年日本仿唐进行的改革是？",
+      "answer": "大化改新",
+      "keywords": [
+        {
+          "aliases": [
+            "大化改新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-封建时代的日本"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0726",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "封建时代的日本"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "使日本从奴隶社会进入封建社会的是？",
+      "answer": "大化改新",
+      "keywords": [
+        {
+          "aliases": [
+            "大化改新"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-封建时代的日本"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0727",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "封建时代的日本"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写大化改新的内容",
+      "answer": "政治上建立以天皇为中心的中央集权制度，地方设国、郡、里三级；经济上土地部民收归国有，国家将土地分给公民，每隔六年授田一次",
+      "keywords": [
+        {
+          "aliases": [
+            "政治上建立以天皇为中心的中央集权制度",
+            "地方设国、郡、里三级"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-封建时代的日本"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0728",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "封建时代的日本"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"大化改新的影响\"",
+      "answer": "削弱旧贵族势力，确立国家对农民的剥削关系，日本正式改称日本国，从此进入封建社会",
+      "keywords": [
+        {
+          "aliases": [
+            "削弱旧贵族势力",
+            "确立国家对农民的剥削关系"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-封建时代的日本"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0729",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "伊斯兰教的创始人是？",
+      "answer": "穆罕默德（7世纪初）",
+      "keywords": [
+        {
+          "aliases": [
+            "穆罕默德（7世纪初）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0730",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "伊斯兰教的经典是？",
+      "answer": "《古兰经》",
+      "keywords": [
+        {
+          "aliases": [
+            "《古兰经》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0731",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "622年穆罕默德迁居麦地那的意义？",
+      "answer": "在那里创建了阿拉伯国家的雏形",
+      "keywords": [
+        {
+          "aliases": [
+            "在那里创建了阿拉伯国家的雏形"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0732",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "8世纪中期横跨亚非欧三洲的大帝国是？",
+      "answer": "阿拉伯帝国",
+      "keywords": [
+        {
+          "aliases": [
+            "阿拉伯帝国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0733",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写阿拉伯文化的成就",
+      "answer": "数学（传播阿拉伯数字）、医学（《医学集成》《医典》）、文学（《天方夜谭》）",
+      "keywords": [
+        {
+          "aliases": [
+            "数学（传播阿拉伯数字）、医学（《医学集成》《医典》）、文学（《天方夜谭》）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0734",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写阿拉伯人的历史贡献",
+      "answer": "担当沟通东西方文化的角色，为世界文化发展作出卓越贡献",
+      "keywords": [
+        {
+          "aliases": [
+            "担当沟通东西方文化的角色",
+            "为世界文化发展作出卓越贡献"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0735",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "阿拉伯帝国"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"伊斯兰教的创立与阿拉伯统一\"",
+      "answer": "7世纪初穆罕默德创立伊斯兰教→麦加传教遭反对→622年迁居麦地那→630年占领麦加→半岛基本统一",
+      "keywords": [
+        {
+          "aliases": [
+            "7世纪初穆罕默德创立伊斯兰教→麦加传教遭反对→622年迁居麦地那→630年占领麦加→半岛基本统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-阿拉伯帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0736",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中古时期的非洲和美洲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "西非先后兴起的三个帝国是？",
+      "answer": "加纳、马里和桑海",
+      "keywords": [
+        {
+          "aliases": [
+            "加纳、马里和桑海"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中古时期的非洲和美洲"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0737",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中古时期的非洲和美洲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "美洲三大古代文明是？",
+      "answer": "玛雅、阿兹特克和印加",
+      "keywords": [
+        {
+          "aliases": [
+            "玛雅、阿兹特克和印加"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中古时期的非洲和美洲"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0738",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中古时期的非洲和美洲"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1324年前往麦加朝觐、以富有闻名的马里国王是？",
+      "answer": "曼萨·穆萨",
+      "keywords": [
+        {
+          "aliases": [
+            "曼萨·穆萨"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中古时期的非洲和美洲"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0739",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中古时期的非洲和美洲"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "培育玉米、马铃薯等作物的古代文明是？",
+      "answer": "美洲文明（玛雅、阿兹特克、印加）",
+      "keywords": [
+        {
+          "aliases": [
+            "美洲文明（玛雅、阿兹特克、印加）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中古时期的非洲和美洲"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0740",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中古时期的非洲和美洲"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写西非三帝国兴起的条件",
+      "answer": "黄金资源丰富+北非食盐需求→穿越撒哈拉沙漠的贸易→农业发展和商业贸易影响下兴起",
+      "keywords": [
+        {
+          "aliases": [
+            "黄金资源丰富+北非食盐需求→穿越撒哈拉沙漠的贸易→农业发展和商业贸易影响下兴起"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中古时期的非洲和美洲"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0741",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中古时期的非洲和美洲"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"中古时期非洲和美洲文明的特点\"",
+      "answer": "非洲：加纳马里桑海因贸易兴起；美洲：玛雅阿兹特克印加培育玉米马铃薯，创造独特文明",
+      "keywords": [
+        {
+          "aliases": [
+            "非洲：加纳马里桑海因贸易兴起",
+            "美洲：玛雅阿兹特克印加培育玉米马铃薯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中古时期的非洲和美洲"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0742",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "文艺复兴运动的指导思想是？",
+      "answer": "人文主义",
+      "keywords": [
+        {
+          "aliases": [
+            "人文主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0743",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "文艺复兴运动的先驱是？",
+      "answer": "但丁（代表作《神曲》）",
+      "keywords": [
+        {
+          "aliases": [
+            "但丁（代表作《神曲》）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0744",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "以人为中心而不是以神为中心的思想是？",
+      "answer": "人文主义",
+      "keywords": [
+        {
+          "aliases": [
+            "人文主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0745",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "租地农场和手工工场的出现产生了什么影响？",
+      "answer": "推动农业和手工业逐渐资本主义化，新兴资产阶级开始形成",
+      "keywords": [
+        {
+          "aliases": [
+            "推动农业和手工业逐渐资本主义化",
+            "新兴资产阶级开始形成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0746",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写文艺复兴\"文学三杰\"和\"美术三杰\"",
+      "answer": "文学三杰：但丁、彼特拉克、薄伽丘；美术三杰：达·芬奇、拉斐尔、米开朗琪罗",
+      "keywords": [
+        {
+          "aliases": [
+            "文学三杰：但丁、彼特拉克、薄伽丘",
+            "美术三杰：达·芬奇、拉斐尔、米开朗琪罗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0747",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写人文主义的内涵",
+      "answer": "以人为中心而不是以神为中心，尊重人的需要、发扬人的个性",
+      "keywords": [
+        {
+          "aliases": [
+            "以人为中心而不是以神为中心",
+            "尊重人的需要、发扬人的个性"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0748",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西欧经济社会发展与文艺复兴运动"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"文艺复兴运动的实质和影响\"",
+      "answer": "实质：新兴资产阶级反封建的思想解放运动；影响：促进思想解放，推动欧洲文化和思想繁荣",
+      "keywords": [
+        {
+          "aliases": [
+            "实质：新兴资产阶级反封建的思想解放运动",
+            "影响：促进思想解放"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西欧经济社会发展与文艺复兴运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0749",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "最先支持探寻新航路的两个国家是？",
+      "answer": "葡萄牙和西班牙",
+      "keywords": [
+        {
+          "aliases": [
+            "葡萄牙和西班牙"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0750",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "哥伦布的成就是？",
+      "answer": "1492年横渡大西洋，到达美洲",
+      "keywords": [
+        {
+          "aliases": [
+            "1492年横渡大西洋",
+            "到达美洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0751",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "完成人类历史上第一次环球航行的是？",
+      "answer": "麦哲伦船队",
+      "keywords": [
+        {
+          "aliases": [
+            "麦哲伦船队"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0752",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "奥斯曼帝国控制传统商路对欧洲产生了什么影响？",
+      "answer": "促使欧洲人迫切希望开辟前往东方的新商路",
+      "keywords": [
+        {
+          "aliases": [
+            "促使欧洲人迫切希望开辟前往东方的新商路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0753",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新航路开辟的四位航海家及成就",
+      "answer": "迪亚士（到达好望角）、达·伽马（到达印度）、哥伦布（到达美洲）、麦哲伦船队（环球航行）",
+      "keywords": [
+        {
+          "aliases": [
+            "迪亚士（到达好望角）、达·伽马（到达印度）、哥伦布（到达美洲）、麦哲伦船队（环球航行）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0754",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写开辟新航路的条件",
+      "answer": "罗盘导航技术、造船技术进步、大地是球体学说普及",
+      "keywords": [
+        {
+          "aliases": [
+            "罗盘导航技术、造船技术进步、大地是球体学说普及"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0755",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "探寻新航路"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"新航路开辟的影响\"",
+      "answer": "世界开始连为一个整体，世界的观念逐步确立；促进世界各地的经济文化交流，也带来殖民掠夺",
+      "keywords": [
+        {
+          "aliases": [
+            "世界开始连为一个整体",
+            "世界的观念逐步确立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-探寻新航路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0756",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "早期殖民掠夺"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "最先开始殖民掠夺的国家是？",
+      "answer": "葡萄牙和西班牙",
+      "keywords": [
+        {
+          "aliases": [
+            "葡萄牙和西班牙"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-早期殖民掠夺"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0757",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "早期殖民掠夺"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "荷兰为什么被称为\"海上马车夫\"？",
+      "answer": "拥有世界上最庞大的商船队，几乎垄断从欧洲到世界各地的海上贸易",
+      "keywords": [
+        {
+          "aliases": [
+            "拥有世界上最庞大的商船队",
+            "几乎垄断从欧洲到世界各地的海上贸易"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-早期殖民掠夺"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0758",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "早期殖民掠夺"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1588年击败西班牙\"无敌舰队\"的是？",
+      "answer": "英国",
+      "keywords": [
+        {
+          "aliases": [
+            "英国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-早期殖民掠夺"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0759",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "早期殖民掠夺"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "英国何时开始建立世界殖民霸权？",
+      "answer": "18世纪中后期（打败荷兰和法国后）",
+      "keywords": [
+        {
+          "aliases": [
+            "18世纪中后期（打败荷兰和法国后）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-早期殖民掠夺"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0760",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "早期殖民掠夺"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写葡萄牙和西班牙的殖民掠夺方式",
+      "answer": "葡萄牙：建立殖民据点/商站、掠夺式贸易、贩卖奴隶、在巴西建立殖民地；西班牙：无敌舰队、强迫印第安人开采金银、兴办种植园",
+      "keywords": [
+        {
+          "aliases": [
+            "葡萄牙：建立殖民据点/商站、掠夺式贸易、贩卖奴隶、在巴西建立殖民地",
+            "西班牙：无敌舰队、强迫印第安人开采金银、兴办种植园"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-早期殖民掠夺"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0761",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "早期殖民掠夺"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"早期殖民掠夺的影响\"",
+      "answer": "殖民者掠夺财富、奴役当地人民；加速了欧洲资本原始积累；造成亚非拉落后；世界市场进一步拓展",
+      "keywords": [
+        {
+          "aliases": [
+            "殖民者掠夺财富、奴役当地人民",
+            "加速了欧洲资本原始积累"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-早期殖民掠夺"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0762",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "英国资产阶级革命爆发的标志是？",
+      "answer": "1640年议会召开",
+      "keywords": [
+        {
+          "aliases": [
+            "1640年议会召开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0763",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"光荣革命\"的时间是？",
+      "answer": "1688年",
+      "keywords": [
+        {
+          "aliases": [
+            "1688年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0764",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1640年重新召开议会标志着什么？",
+      "answer": "英国资产阶级革命爆发",
+      "keywords": [
+        {
+          "aliases": [
+            "英国资产阶级革命爆发"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0765",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1689年限制国王权力、确立议会最高地位的文件是？",
+      "answer": "《权利法案》",
+      "keywords": [
+        {
+          "aliases": [
+            "《权利法案》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0766",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《权利法案》的核心内容",
+      "answer": "限制国王权力（征税、立法等须经议会同意），确立了议会在国家政治生活中的最高地位",
+      "keywords": [
+        {
+          "aliases": [
+            "限制国王权力（征税、立法等须经议会同意）",
+            "确立了议会在国家政治生活中的最高地位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0767",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写克伦威尔的贡献",
+      "answer": "领导议会军打败王军，1649年处死查理一世后成立共和国，独揽大权",
+      "keywords": [
+        {
+          "aliases": [
+            "领导议会军打败王军",
+            "1649年处死查理一世后成立共和国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0768",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "英国资产阶级革命"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"英国资产阶级革命的过程与结果\"",
+      "answer": "1640年爆发→内战→1649年处死查理一世、成立共和国→克伦威尔独裁→1688年光荣革命→1689年《权利法案》→君主立宪制确立",
+      "keywords": [
+        {
+          "aliases": [
+            "1640年爆发→内战→1649年处死查理一世、成立共和国→克伦威尔独裁→1688年光荣革命→1689年《权利法案》→君主立宪制确立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-英国资产阶级革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0769",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "独立战争爆发的标志是？",
+      "answer": "1775年4月19日，来克星顿的枪声",
+      "keywords": [
+        {
+          "aliases": [
+            "1775年4月19日",
+            "来克星顿的枪声"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0770",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《独立宣言》发表的时间和意义？",
+      "answer": "1776年7月4日，宣告北美13个殖民地独立，标志美国诞生",
+      "keywords": [
+        {
+          "aliases": [
+            "1776年7月4日",
+            "宣告北美13个殖民地独立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0771",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "波士顿倾茶事件发生在何时？",
+      "answer": "1773年12月16日",
+      "keywords": [
+        {
+          "aliases": [
+            "1773年12月16日"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0772",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "确立三权分立联邦制共和国的是？",
+      "answer": "1787年宪法",
+      "keywords": [
+        {
+          "aliases": [
+            "1787年宪法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0773",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写华盛顿的贡献",
+      "answer": "领导独立战争取得胜利；主持制定1787年宪法；当选美国第一任总统",
+      "keywords": [
+        {
+          "aliases": [
+            "领导独立战争取得胜利",
+            "主持制定1787年宪法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0774",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写1787年宪法的内容",
+      "answer": "确立三权分立的联邦制共和国（立法、行政、司法三权分立，相互制衡）",
+      "keywords": [
+        {
+          "aliases": [
+            "确立三权分立的联邦制共和国（立法、行政、司法三权分立",
+            "相互制衡）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0775",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国的独立"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"美国独立战争的过程\"",
+      "answer": "1773年波士顿倾茶事件→1774年第一届大陆会议→1775年来克星顿枪声→1776年《独立宣言》→1783年英国承认独立→1787年宪法→1789年华盛顿就任总统",
+      "keywords": [
+        {
+          "aliases": [
+            "1773年波士顿倾茶事件→1774年第一届大陆会议→1775年来克星顿枪声→1776年《独立宣言》→1783年英国承认独立→1787年宪法→1789年华盛顿就任总统"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-美国的独立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0776",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "法国大革命爆发的标志是？",
+      "answer": "1789年7月14日，巴黎民众攻占巴士底狱",
+      "keywords": [
+        {
+          "aliases": [
+            "1789年7月14日",
+            "巴黎民众攻占巴士底狱"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0777",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《人权宣言》的内容？",
+      "answer": "宣告人权、法治、自由、平等和保护私有财产等基本原则",
+      "keywords": [
+        {
+          "aliases": [
+            "宣告人权、法治、自由、平等和保护私有财产等基本原则"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0778",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1789年7月14日攻占巴士底狱，这是什么事件？",
+      "answer": "法国大革命爆发",
+      "keywords": [
+        {
+          "aliases": [
+            "法国大革命爆发"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0779",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "法国启蒙运动的旗手是？",
+      "answer": "伏尔泰",
+      "keywords": [
+        {
+          "aliases": [
+            "伏尔泰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0780",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写法国大革命前三个等级的状况",
+      "answer": "第一等级教士、第二等级贵族是统治阶级，占人口不到2%不用纳税；第三等级（农民、手工业者、资产阶级）承担赋税、受压迫",
+      "keywords": [
+        {
+          "aliases": [
+            "第一等级教士、第二等级贵族是统治阶级",
+            "占人口不到2%不用纳税"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0781",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《拿破仑法典》的作用",
+      "answer": "巩固法国大革命成果，成为资本主义社会的立法规范",
+      "keywords": [
+        {
+          "aliases": [
+            "巩固法国大革命成果",
+            "成为资本主义社会的立法规范"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0782",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "法国大革命和拿破仑帝国"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"法国大革命的历程\"",
+      "answer": "旧制度危机（启蒙运动思想准备）→1789年三级会议→攻占巴士底狱→《人权宣言》→1792年废除君主制、建共和国→1793年处死路易十六→拿破仑执政→1804年称帝→1815年滑铁卢覆灭",
+      "keywords": [
+        {
+          "aliases": [
+            "旧制度危机（启蒙运动思想准备）→1789年三级会议→攻占巴士底狱→《人权宣言》→1792年废除君主制、建共和国→1793年处死路易十六→拿破仑执政→1804年称帝→1815年滑铁卢覆灭"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-法国大革命和拿破仑帝国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0783",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "第一次工业革命首先发生在哪个国家？",
+      "answer": "英国",
+      "keywords": [
+        {
+          "aliases": [
+            "英国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0784",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "珍妮纺纱机的发明者是？",
+      "answer": "哈格里夫斯",
+      "keywords": [
+        {
+          "aliases": [
+            "哈格里夫斯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0785",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1785年在纺织领域投入使用的改良蒸汽机是谁改进的？",
+      "answer": "瓦特",
+      "keywords": [
+        {
+          "aliases": [
+            "瓦特"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0786",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人类进入\"蒸汽时代\"的标志是？",
+      "answer": "蒸汽机的广泛应用",
+      "keywords": [
+        {
+          "aliases": [
+            "蒸汽机的广泛应用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0787",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写第一次工业革命的重要发明",
+      "answer": "珍妮纺纱机（哈格里夫斯）、水力纺纱机（阿克莱特）、骡机、动力织布机、瓦特改良蒸汽机、蒸汽机车（斯蒂芬森）",
+      "keywords": [
+        {
+          "aliases": [
+            "珍妮纺纱机（哈格里夫斯）、水力纺纱机（阿克莱特）、骡机、动力织布机、瓦特改良蒸汽机、蒸汽机车（斯蒂芬森）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0788",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写工厂制度的确立",
+      "answer": "瓦特蒸汽机使工厂突破自然条件束缚；工厂制度确立（工人集中劳动、分工协作、严苛规章管理）",
+      "keywords": [
+        {
+          "aliases": [
+            "瓦特蒸汽机使工厂突破自然条件束缚",
+            "工厂制度确立（工人集中劳动、分工协作、严苛规章管理）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0789",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一次工业革命"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"第一次工业革命的影响\"",
+      "answer": "极大提高生产力，进入\"蒸汽时代\"；工厂制度确立；铁路交通发展；形成工业资产阶级和无产阶级两大对立阶级；改变世界面貌",
+      "keywords": [
+        {
+          "aliases": [
+            "极大提高生产力",
+            "进入\"蒸汽时代\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一次工业革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0790",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《共产党宣言》发表的时间和作者？",
+      "answer": "1848年，马克思、恩格斯起草",
+      "keywords": [
+        {
+          "aliases": [
+            "1848年",
+            "马克思、恩格斯起草"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0791",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《共产党宣言》发表的意义？",
+      "answer": "标志着马克思主义的诞生",
+      "keywords": [
+        {
+          "aliases": [
+            "标志着马克思主义的诞生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0792",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "19世纪三四十年代三大工人运动是？",
+      "answer": "法国里昂工人起义、英国宪章运动、德意志西里西亚织工起义",
+      "keywords": [
+        {
+          "aliases": [
+            "法国里昂工人起义、英国宪章运动、德意志西里西亚织工起义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0793",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "标志着工人阶级作为独立政治力量登上历史舞台的是？",
+      "answer": "三大工人运动",
+      "keywords": [
+        {
+          "aliases": [
+            "三大工人运动"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0794",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《共产党宣言》的主要内容",
+      "answer": "指出全部历史都是阶级斗争的历史；号召工人阶级组织起来建立无产阶级政党，用暴力推翻资产阶级统治；资本主义必将被共产主义取代",
+      "keywords": [
+        {
+          "aliases": [
+            "指出全部历史都是阶级斗争的历史",
+            "号召工人阶级组织起来建立无产阶级政党"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0795",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写空想社会主义者的主张及局限",
+      "answer": "批判资本主义，但轻视工人阶级力量、反对阶级斗争、寄托统治阶级，构想不切实际",
+      "keywords": [
+        {
+          "aliases": [
+            "批判资本主义",
+            "但轻视工人阶级力量、反对阶级斗争、寄托统治阶级"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0796",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "马克思主义的诞生"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"马克思主义诞生的历史条件\"",
+      "answer": "工业革命暴露资本主义弊端→工人运动发展（三大运动）→缺乏科学理论指导→马克思恩格斯总结实践创立科学理论→1848年《共产党宣言》发表",
+      "keywords": [
+        {
+          "aliases": [
+            "工业革命暴露资本主义弊端→工人运动发展（三大运动）→缺乏科学理论指导→马克思恩格斯总结实践创立科学理论→1848年《共产党宣言》发表"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-马克思主义的诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0797",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "第一国际成立的时间和地点？",
+      "answer": "1864年9月，伦敦",
+      "keywords": [
+        {
+          "aliases": [
+            "1864年9月",
+            "伦敦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0798",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "巴黎公社建立的时间和性质？",
+      "answer": "1871年3月28日，世界上第一个无产阶级政权",
+      "keywords": [
+        {
+          "aliases": [
+            "1871年3月28日",
+            "世界上第一个无产阶级政权"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0799",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"国际工人协会\"史称？",
+      "answer": "第一国际",
+      "keywords": [
+        {
+          "aliases": [
+            "第一国际"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0800",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1871年巴黎人民建立的第一个无产阶级政权是？",
+      "answer": "巴黎公社",
+      "keywords": [
+        {
+          "aliases": [
+            "巴黎公社"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0801",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写第一国际的历史作用",
+      "answer": "欧洲工人阶级斗争的领导中心，在各国的支部指导工人运动，传播马克思主义",
+      "keywords": [
+        {
+          "aliases": [
+            "欧洲工人阶级斗争的领导中心",
+            "在各国的支部指导工人运动"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0802",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《国际歌》的词曲作者",
+      "answer": "词：欧仁·鲍狄埃；曲：狄盖特",
+      "keywords": [
+        {
+          "aliases": [
+            "词：欧仁·鲍狄埃",
+            "曲：狄盖特"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0803",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "第一国际和巴黎公社"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"巴黎公社的历史意义\"",
+      "answer": "世界上第一个无产阶级政权，无产阶级建立政权的第一次伟大尝试，为国际社会主义运动提供宝贵经验教训",
+      "keywords": [
+        {
+          "aliases": [
+            "世界上第一个无产阶级政权",
+            "无产阶级建立政权的第一次伟大尝试"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-第一国际和巴黎公社"
+    }
+  }
+]

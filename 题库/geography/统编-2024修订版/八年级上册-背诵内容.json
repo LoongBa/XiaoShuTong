@@ -1,0 +1,4250 @@
+[
+  {
+    "id": "Q-geography-7to9-0277",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国纬度位置的优越性？",
+      "answer": "大部分地区位于北温带，南部部分地区位于热带，没有寒带；光热条件好，适宜多种作物生长",
+      "keywords": [
+        {
+          "aliases": [
+            "大部分地区位于北温带",
+            "南部部分地区位于热带"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0278",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国海陆位置的优越性？",
+      "answer": "位于亚欧大陆东部、太平洋西岸，海陆兼备；西部深入亚欧大陆内部，陆上与许多国家接壤；海岸线曲折漫长",
+      "keywords": [
+        {
+          "aliases": [
+            "位于亚欧大陆东部、太平洋西岸",
+            "海陆兼备"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0279",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国的陆地领土面积约是多少？",
+      "answer": "约960万平方千米，仅次于俄罗斯和加拿大，居世界第三位",
+      "keywords": [
+        {
+          "aliases": [
+            "约960万平方千米",
+            "仅次于俄罗斯和加拿大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0280",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国陆上邻国有多少个？",
+      "answer": "14个",
+      "keywords": [
+        {
+          "aliases": [
+            "14个"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0281",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国隔海相望的国家有多少个？",
+      "answer": "8个（其中与朝鲜、越南既陆上相邻又隔海相望）",
+      "keywords": [
+        {
+          "aliases": [
+            "8个（其中与朝鲜、越南既陆上相邻又隔海相望）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0282",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国大陆濒临的海洋，从北到南依次是？",
+      "answer": "渤海、黄海、东海、南海（渤海、琼州海峡是我国的内海）",
+      "keywords": [
+        {
+          "aliases": [
+            "渤海、黄海、东海、南海（渤海、琼州海峡是我国的内海）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0283",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国大陆海岸线长约？",
+      "answer": "1.8万千米",
+      "keywords": [
+        {
+          "aliases": [
+            "1.8万千米"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0284",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国主张管辖海域面积约？",
+      "answer": "300万平方千米",
+      "keywords": [
+        {
+          "aliases": [
+            "300万平方千米"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0285",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国领土最南端和最北端？",
+      "answer": "最南端：海南省南沙群岛的曾母暗沙附近；最北端：黑龙江省漠河市北端",
+      "keywords": [
+        {
+          "aliases": [
+            "最南端：海南省南沙群岛的曾母暗沙附近",
+            "最北端：黑龙江省漠河市北端"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0286",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国共有多少个省级行政区？",
+      "answer": "34个（23省、5自治区、4直辖市、2特别行政区）",
+      "keywords": [
+        {
+          "aliases": [
+            "34个（23省、5自治区、4直辖市、2特别行政区）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0287",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国四大直辖市是？",
+      "answer": "北京、天津、上海、重庆",
+      "keywords": [
+        {
+          "aliases": [
+            "北京、天津、上海、重庆"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0288",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国两个特别行政区是？",
+      "answer": "香港、澳门",
+      "keywords": [
+        {
+          "aliases": [
+            "香港、澳门"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0289",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "山东省的简称和省会是？",
+      "answer": "鲁，济南",
+      "keywords": [
+        {
+          "aliases": [
+            "鲁",
+            "济南"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0290",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "湖北省的简称和省会是？",
+      "answer": "鄂，武汉",
+      "keywords": [
+        {
+          "aliases": [
+            "鄂",
+            "武汉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0291",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "四川省的简称和省会是？",
+      "answer": "川（蜀），成都",
+      "keywords": [
+        {
+          "aliases": [
+            "川（蜀）",
+            "成都"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0292",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "云南省的简称和省会是？",
+      "answer": "云（滇），昆明",
+      "keywords": [
+        {
+          "aliases": [
+            "云（滇）",
+            "昆明"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0293",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "陕西省的简称和省会是？",
+      "answer": "陕（秦），西安",
+      "keywords": [
+        {
+          "aliases": [
+            "陕（秦）",
+            "西安"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0294",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "广东省的简称和省会是？",
+      "answer": "粤，广州",
+      "keywords": [
+        {
+          "aliases": [
+            "粤",
+            "广州"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0295",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "广西壮族自治区的简称和省会是？",
+      "answer": "桂，南宁",
+      "keywords": [
+        {
+          "aliases": [
+            "桂",
+            "南宁"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0296",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "福建省的简称和省会是？",
+      "answer": "闽，福州",
+      "keywords": [
+        {
+          "aliases": [
+            "闽",
+            "福州"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0297",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国人口总量？",
+      "answer": "世界人口大国，2020年第七次全国人口普查人口超过14亿",
+      "keywords": [
+        {
+          "aliases": [
+            "世界人口大国",
+            "2020年第七次全国人口普查人口超过14亿"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0298",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国人口分界线是？",
+      "answer": "黑河-腾冲线（人口地理分界线）",
+      "keywords": [
+        {
+          "aliases": [
+            "黑河-腾冲线（人口地理分界线）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0299",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国人口分布特点？",
+      "answer": "东密西疏（东南部人口密集，西北部人口稀疏）",
+      "keywords": [
+        {
+          "aliases": [
+            "东密西疏（东南部人口密集",
+            "西北部人口稀疏）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0300",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国人口政策调整方向？",
+      "answer": "从\"一对夫妻生育一个子女\"到\"一对夫妻可以生育三个子女\"，促进人口与社会经济长期均衡发展",
+      "keywords": [
+        {
+          "aliases": [
+            "从\"一对夫妻生育一个子女\"到\"一对夫妻可以生育三个子女\"",
+            "促进人口与社会经济长期均衡发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0301",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国共有多少个民族？",
+      "answer": "56个民族",
+      "keywords": [
+        {
+          "aliases": [
+            "56个民族"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0302",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国人口最多的少数民族是？",
+      "answer": "壮族",
+      "keywords": [
+        {
+          "aliases": [
+            "壮族"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0303",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国民族分布特点是？",
+      "answer": "大散居、小聚居、交错杂居",
+      "keywords": [
+        {
+          "aliases": [
+            "大散居、小聚居、交错杂居"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0304",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国少数民族主要分布地区？",
+      "answer": "西南、西北和东北地区",
+      "keywords": [
+        {
+          "aliases": [
+            "西南、西北和东北地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0305",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国地势的总体特征？",
+      "answer": "西高东低，呈三级阶梯状分布",
+      "keywords": [
+        {
+          "aliases": [
+            "西高东低",
+            "呈三级阶梯状分布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0306",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国第一级阶梯的地形以什么为主？",
+      "answer": "高原（青藏高原，平均海拔4000米以上，被称为\"世界屋脊\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "高原（青藏高原",
+            "平均海拔4000米以上"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0307",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国第二级阶梯的地形以什么为主？",
+      "answer": "高原和盆地（内蒙古高原、黄土高原、云贵高原、塔里木盆地、准噶尔盆地、四川盆地）",
+      "keywords": [
+        {
+          "aliases": [
+            "高原和盆地（内蒙古高原、黄土高原、云贵高原、塔里木盆地、准噶尔盆地、四川盆地）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0308",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国第三级阶梯的地形以什么为主？",
+      "answer": "平原和丘陵（东北平原、华北平原、长江中下游平原、东南丘陵）",
+      "keywords": [
+        {
+          "aliases": [
+            "平原和丘陵（东北平原、华北平原、长江中下游平原、东南丘陵）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0309",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国第一、二级阶梯分界线？",
+      "answer": "昆仑山脉-祁连山脉-横断山脉",
+      "keywords": [
+        {
+          "aliases": [
+            "昆仑山脉-祁连山脉-横断山脉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0310",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国第二、三级阶梯分界线？",
+      "answer": "大兴安岭-太行山脉-巫山-雪峰山",
+      "keywords": [
+        {
+          "aliases": [
+            "大兴安岭-太行山脉-巫山-雪峰山"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0311",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国四大高原及特征？",
+      "answer": "青藏高原（最高，\"世界屋脊\"）、内蒙古高原（平坦开阔）、黄土高原（千沟万壑、水土流失严重）、云贵高原（喀斯特地貌、地面崎岖）",
+      "keywords": [
+        {
+          "aliases": [
+            "青藏高原（最高",
+            "\"世界屋脊\"）、内蒙古高原（平坦开阔）、黄土高原（千沟万壑、水土流失严重）、云贵高原（喀斯特地貌、地面崎岖）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0312",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国四大盆地？",
+      "answer": "塔里木盆地（最大，内有塔克拉玛干沙漠）、准噶尔盆地（纬度最高）、柴达木盆地（\"聚宝盆\"，海拔最高）、四川盆地（\"紫色盆地\"\"天府之国\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "塔里木盆地（最大",
+            "内有塔克拉玛干沙漠）、准噶尔盆地（纬度最高）、柴达木盆地（\"聚宝盆\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0313",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国三大平原？",
+      "answer": "东北平原（最大，黑土地）、华北平原（黄土地）、长江中下游平原（\"鱼米之乡\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "东北平原（最大",
+            "黑土地）、华北平原（黄土地）、长江中下游平原（\"鱼米之乡\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0314",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国山区面积约占总面积的多少？",
+      "answer": "约2/3（山区面积广大）",
+      "keywords": [
+        {
+          "aliases": [
+            "约2/3（山区面积广大）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0315",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国东西走向的主要山脉有？",
+      "answer": "天山-阴山、昆仑山-秦岭、南岭",
+      "keywords": [
+        {
+          "aliases": [
+            "天山-阴山、昆仑山-秦岭、南岭"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0316",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国主要的气候类型有哪些？",
+      "answer": "温带季风气候、亚热带季风气候、热带季风气候、温带大陆性气候、高原山地气候",
+      "keywords": [
+        {
+          "aliases": [
+            "温带季风气候、亚热带季风气候、热带季风气候、温带大陆性气候、高原山地气候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0317",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国气候的主要特征是？",
+      "answer": "气候复杂多样、季风气候显著",
+      "keywords": [
+        {
+          "aliases": [
+            "气候复杂多样、季风气候显著"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0318",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国季风区与非季风区的分界线？",
+      "answer": "大兴安岭-阴山-贺兰山-巴颜喀拉山-冈底斯山",
+      "keywords": [
+        {
+          "aliases": [
+            "大兴安岭-阴山-贺兰山-巴颜喀拉山-冈底斯山"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0319",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "影响我国气候的主要因素？",
+      "answer": "纬度位置、海陆位置、地形",
+      "keywords": [
+        {
+          "aliases": [
+            "纬度位置、海陆位置、地形"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0320",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国划分的温度带有？",
+      "answer": "寒温带、中温带、暖温带、亚热带、热带、高原气候区",
+      "keywords": [
+        {
+          "aliases": [
+            "寒温带、中温带、暖温带、亚热带、热带、高原气候区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0321",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国划分的干湿地区有？",
+      "answer": "湿润区、半湿润区、半干旱区、干旱区",
+      "keywords": [
+        {
+          "aliases": [
+            "湿润区、半湿润区、半干旱区、干旱区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0322",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "秦岭-淮河一线的地理意义？",
+      "answer": "大致与1月0℃等温线、800毫米年等降水量线吻合，是南北方分界线、水田旱地分界线",
+      "keywords": [
+        {
+          "aliases": [
+            "大致与1月0℃等温线、800毫米年等降水量线吻合",
+            "是南北方分界线、水田旱地分界线"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0323",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国冬季气温分布特点？",
+      "answer": "南暖北冷，南北温差大",
+      "keywords": [
+        {
+          "aliases": [
+            "南暖北冷",
+            "南北温差大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0324",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国夏季气温分布特点？",
+      "answer": "全国普遍高温（青藏高原除外）",
+      "keywords": [
+        {
+          "aliases": [
+            "全国普遍高温（青藏高原除外）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0325",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国年降水量分布总趋势？",
+      "answer": "从东南沿海向西北内陆递减",
+      "keywords": [
+        {
+          "aliases": [
+            "从东南沿海向西北内陆递减"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0326",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国河流分为哪两类？",
+      "answer": "外流河（最终流入海洋）和内流河（最终未流入海洋）",
+      "keywords": [
+        {
+          "aliases": [
+            "外流河（最终流入海洋）和内流河（最终未流入海洋）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0327",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "外流河主要分布在哪里？",
+      "answer": "东部季风区",
+      "keywords": [
+        {
+          "aliases": [
+            "东部季风区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0328",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "内流河主要分布在哪里？",
+      "answer": "西北内陆地区（最大内流河是塔里木河）",
+      "keywords": [
+        {
+          "aliases": [
+            "西北内陆地区（最大内流河是塔里木河）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0329",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国最长的河流是？",
+      "answer": "长江（6300多千米，发源于青藏高原唐古拉山脉，注入东海）",
+      "keywords": [
+        {
+          "aliases": [
+            "长江（6300多千米",
+            "发源于青藏高原唐古拉山脉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0330",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "长江上中下游分界点？",
+      "answer": "宜昌（上中游）、湖口（中下游）",
+      "keywords": [
+        {
+          "aliases": [
+            "宜昌（上中游）、湖口（中下游）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0331",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "长江被称为\"黄金水道\"的原因是？",
+      "answer": "航运价值高，干支流通航里程长",
+      "keywords": [
+        {
+          "aliases": [
+            "航运价值高",
+            "干支流通航里程长"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0332",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "长江流域可持续发展原则？",
+      "answer": "\"生态优先，绿色发展\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"生态优先",
+            "绿色发展\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0333",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国含沙量最大的河流是？",
+      "answer": "黄河",
+      "keywords": [
+        {
+          "aliases": [
+            "黄河"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0334",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "黄河发源于？",
+      "answer": "青藏高原巴颜喀拉山脉，注入渤海",
+      "keywords": [
+        {
+          "aliases": [
+            "青藏高原巴颜喀拉山脉",
+            "注入渤海"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0335",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "黄河\"地上河\"出现在哪个河段？",
+      "answer": "下游（华北平原段，因泥沙淤积河床抬高）",
+      "keywords": [
+        {
+          "aliases": [
+            "下游（华北平原段",
+            "因泥沙淤积河床抬高）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0336",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "黄河的治理措施？",
+      "answer": "上中游保持水土（植树造林、退耕还林还草），下游加固堤坝、疏浚河道",
+      "keywords": [
+        {
+          "aliases": [
+            "上中游保持水土（植树造林、退耕还林还草）",
+            "下游加固堤坝、疏浚河道"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0337",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国汛期最长的河流是？",
+      "answer": "珠江",
+      "keywords": [
+        {
+          "aliases": [
+            "珠江"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0338",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国最长的人工河是？",
+      "answer": "京杭运河",
+      "keywords": [
+        {
+          "aliases": [
+            "京杭运河"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0339",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国主要的淡水湖？",
+      "answer": "鄱阳湖（最大淡水湖）、洞庭湖等",
+      "keywords": [
+        {
+          "aliases": [
+            "鄱阳湖（最大淡水湖）、洞庭湖等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0340",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国最大的咸水湖？",
+      "answer": "青海湖",
+      "keywords": [
+        {
+          "aliases": [
+            "青海湖"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0341",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国自然灾害的特点是？",
+      "answer": "灾害种类多、发生频率高、分布广，是世界上自然灾害较为严重的国家之一",
+      "keywords": [
+        {
+          "aliases": [
+            "灾害种类多、发生频率高、分布广",
+            "是世界上自然灾害较为严重的国家之一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0342",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国常见的气象灾害有？",
+      "answer": "旱灾、洪涝、台风、寒潮",
+      "keywords": [
+        {
+          "aliases": [
+            "旱灾、洪涝、台风、寒潮"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0343",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "旱灾、洪涝灾害主要分布在哪里？",
+      "answer": "东部季风区（东部平原和沿海地区洪涝多发；秦岭-淮河一线以北旱灾多发）",
+      "keywords": [
+        {
+          "aliases": [
+            "东部季风区（东部平原和沿海地区洪涝多发",
+            "秦岭-淮河一线以北旱灾多发）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0344",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "台风灾害主要分布在哪里？",
+      "answer": "东南沿海地区",
+      "keywords": [
+        {
+          "aliases": [
+            "东南沿海地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0345",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "寒潮灾害主要影响？",
+      "answer": "北方地区（大风降温、雨雪冰冻）",
+      "keywords": [
+        {
+          "aliases": [
+            "北方地区（大风降温、雨雪冰冻）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0346",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国常见的地质灾害有？",
+      "answer": "地震、滑坡、泥石流",
+      "keywords": [
+        {
+          "aliases": [
+            "地震、滑坡、泥石流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0347",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国地跨哪两条地震带？",
+      "answer": "环太平洋地震带与地中海-喜马拉雅地震带",
+      "keywords": [
+        {
+          "aliases": [
+            "环太平洋地震带与地中海-喜马拉雅地震带"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0348",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "滑坡、泥石流多发区？",
+      "answer": "山区（西南地区等）",
+      "keywords": [
+        {
+          "aliases": [
+            "山区（西南地区等）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0349",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "什么是可再生资源？",
+      "answer": "可以在较短时间内更新、再生，或可以循环使用的资源（如土地、水、森林、太阳能）",
+      "keywords": [
+        {
+          "aliases": [
+            "可以在较短时间内更新、再生",
+            "或可以循环使用的资源（如土地、水、森林、太阳能）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0350",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "什么是非可再生资源？",
+      "answer": "用一点就少一点，短时间内不能再生或循环使用的资源（如矿产）",
+      "keywords": [
+        {
+          "aliases": [
+            "用一点就少一点",
+            "短时间内不能再生或循环使用的资源（如矿产）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0351",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国土地资源的主要特征？",
+      "answer": "土地资源总量丰富、类型多样，但人均土地资源远低于世界人均水平；分布不均、区域差异明显",
+      "keywords": [
+        {
+          "aliases": [
+            "土地资源总量丰富、类型多样",
+            "但人均土地资源远低于世界人均水平"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0352",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国耕地主要分布在哪里？",
+      "answer": "东部湿润、半湿润区的平原和低山丘陵区",
+      "keywords": [
+        {
+          "aliases": [
+            "东部湿润、半湿润区的平原和低山丘陵区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0353",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国林地主要分布在哪里？",
+      "answer": "山区（东北、西南、东南）",
+      "keywords": [
+        {
+          "aliases": [
+            "山区（东北、西南、东南）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0354",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国草地主要分布在哪里？",
+      "answer": "西部干旱、半干旱区（用于牧业）",
+      "keywords": [
+        {
+          "aliases": [
+            "西部干旱、半干旱区（用于牧业）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0355",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国耕地紧缺到什么程度？",
+      "answer": "人均耕地面积不到0.1公顷（约1/4的耕地是梯田）",
+      "keywords": [
+        {
+          "aliases": [
+            "人均耕地面积不到0.1公顷（约1/4的耕地是梯田）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0356",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "合理利用土地资源的原则？",
+      "answer": "尊重自然规律，因地制宜地统筹安排各类用地",
+      "keywords": [
+        {
+          "aliases": [
+            "尊重自然规律",
+            "因地制宜地统筹安排各类用地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0357",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国水资源的时空分布特点？",
+      "answer": "空间上南多北少（东多西少）；时间上夏秋多、冬春少，年际变化大",
+      "keywords": [
+        {
+          "aliases": [
+            "空间上南多北少（东多西少）",
+            "时间上夏秋多、冬春少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0358",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "解决水资源空间分布不均的措施？",
+      "answer": "跨流域调水（南水北调工程）",
+      "keywords": [
+        {
+          "aliases": [
+            "跨流域调水（南水北调工程）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0359",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "解决水资源时间分配不均的措施？",
+      "answer": "修建水库（调节径流）",
+      "keywords": [
+        {
+          "aliases": [
+            "修建水库（调节径流）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0360",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "南水北调工程？",
+      "answer": "把长江流域的水调往华北、西北地区，缓解北方缺水",
+      "keywords": [
+        {
+          "aliases": [
+            "把长江流域的水调往华北、西北地区",
+            "缓解北方缺水"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0361",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国矿产资源的总特点？",
+      "answer": "世界矿产资源种类齐全、储量丰富的国家之一；已探明矿产资源储量大、居世界前列；但人均矿产资源储量低于世界人均水平",
+      "keywords": [
+        {
+          "aliases": [
+            "世界矿产资源种类齐全、储量丰富的国家之一",
+            "已探明矿产资源储量大、居世界前列"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0362",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国能源矿产（煤炭、石油、天然气）的分布特点？",
+      "answer": "多煤少油气，总体北多南少、西多东少；近海地区油气储量不断增长",
+      "keywords": [
+        {
+          "aliases": [
+            "多煤少油气",
+            "总体北多南少、西多东少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0363",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国煤炭储量主要分布在？",
+      "answer": "山西、内蒙古、新疆等（可开采储量占比大）",
+      "keywords": [
+        {
+          "aliases": [
+            "山西、内蒙古、新疆等（可开采储量占比大）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0364",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国已探明大型油气田盆地主要分布在？",
+      "answer": "东北、华北、西北（新疆、陕西、内蒙古、四川等）",
+      "keywords": [
+        {
+          "aliases": [
+            "东北、华北、西北（新疆、陕西、内蒙古、四川等）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0365",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国铁矿资源特点？",
+      "answer": "储量排世界第四位，但贫矿多、富矿少",
+      "keywords": [
+        {
+          "aliases": [
+            "储量排世界第四位",
+            "但贫矿多、富矿少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0366",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国储量居世界首位的矿产？",
+      "answer": "钨、锡、锑；稀土、锂、镓、铟等三稀矿产储量居世界首位",
+      "keywords": [
+        {
+          "aliases": [
+            "钨、锡、锑",
+            "稀土、锂、镓、铟等三稀矿产储量居世界首位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0367",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国矿产资源供需矛盾？",
+      "answer": "\"有而不够、有而不优\"——作为世界最大制造业国家，多数矿产需要从国外进口（石油、铜、铁、铝土、锂等）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"有而不够、有而不优\"——作为世界最大制造业国家",
+            "多数矿产需要从国外进口（石油、铜、铁、铝土、锂等）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0368",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国铁矿石进口主要来自？",
+      "answer": "澳大利亚、巴西等",
+      "keywords": [
+        {
+          "aliases": [
+            "澳大利亚、巴西等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0369",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "保障矿产资源供给的措施？",
+      "answer": "加强国内勘探、提高利用效率、发展循环利用（如废钢铁回收）、保障战略资源安全",
+      "keywords": [
+        {
+          "aliases": [
+            "加强国内勘探、提高利用效率、发展循环利用（如废钢铁回收）、保障战略资源安全"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0370",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国海洋资源特点？",
+      "answer": "海域辽阔、自然条件优越，是世界最大的海鱼、海盐生产国",
+      "keywords": [
+        {
+          "aliases": [
+            "海域辽阔、自然条件优越",
+            "是世界最大的海鱼、海盐生产国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0371",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国主要的渔场？",
+      "answer": "舟山渔场等（众多优质渔场）；海洋渔业中海水养殖量已超过海洋捕捞量",
+      "keywords": [
+        {
+          "aliases": [
+            "舟山渔场等（众多优质渔场）",
+            "海洋渔业中海水养殖量已超过海洋捕捞量"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0372",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国最大的盐场？",
+      "answer": "长芦盐场（渤海沿岸，我国最大海盐盐场）",
+      "keywords": [
+        {
+          "aliases": [
+            "长芦盐场（渤海沿岸",
+            "我国最大海盐盐场）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0373",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国海洋石油和天然气主要分布？",
+      "answer": "渤海和南海北部的大陆架",
+      "keywords": [
+        {
+          "aliases": [
+            "渤海和南海北部的大陆架"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0374",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国海洋清洁能源？",
+      "answer": "海上风电、潮汐能等",
+      "keywords": [
+        {
+          "aliases": [
+            "海上风电、潮汐能等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0375",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国沿海港口群？",
+      "answer": "环渤海、长三角、东南沿海、珠三角、西南沿海五大港口群",
+      "keywords": [
+        {
+          "aliases": [
+            "环渤海、长三角、东南沿海、珠三角、西南沿海五大港口群"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0376",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国海洋资源开发原则？",
+      "answer": "优化近海综合利用，大力发展生态友好型\"海洋牧场\"，保护海洋生态",
+      "keywords": [
+        {
+          "aliases": [
+            "优化近海综合利用",
+            "大力发展生态友好型\"海洋牧场\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0377",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "农业包括哪些部门？",
+      "answer": "种植业、畜牧业、林业、渔业",
+      "keywords": [
+        {
+          "aliases": [
+            "种植业、畜牧业、林业、渔业"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0378",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国农业生产的区域差异（东西）？",
+      "answer": "东部农区水热条件优越，以种植业、林业、渔业为主；西部牧区降水较少，畜牧业地位重要，种植业分布在有灌溉条件的绿洲",
+      "keywords": [
+        {
+          "aliases": [
+            "东部农区水热条件优越",
+            "以种植业、林业、渔业为主"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0379",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国农业生产的区域差异（南北）？",
+      "answer": "秦岭-淮河以北以旱地为主（小麦、玉米），以南多水田（水稻）；长城沿线以北一年一熟，以南两年三熟或一年两熟",
+      "keywords": [
+        {
+          "aliases": [
+            "秦岭-淮河以北以旱地为主（小麦、玉米）",
+            "以南多水田（水稻）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0380",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国三大主粮是？",
+      "answer": "水稻（长江中下游平原和东北平原）、小麦（华北平原产量最大）、玉米（东北平原和华北平原）",
+      "keywords": [
+        {
+          "aliases": [
+            "水稻（长江中下游平原和东北平原）、小麦（华北平原产量最大）、玉米（东北平原和华北平原）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0381",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国棉花主要产自哪里？",
+      "answer": "新疆（超过80%的棉花产自新疆）",
+      "keywords": [
+        {
+          "aliases": [
+            "新疆（超过80%的棉花产自新疆）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0382",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国糖料作物分布？",
+      "answer": "南方甘蔗、北方甜菜（甜菜主要分布在北方）",
+      "keywords": [
+        {
+          "aliases": [
+            "南方甘蔗、北方甜菜（甜菜主要分布在北方）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0383",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "高标准农田的特点？",
+      "answer": "集中连片、旱涝保收",
+      "keywords": [
+        {
+          "aliases": [
+            "集中连片、旱涝保收"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0384",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国工业的现状？",
+      "answer": "门类齐全的工业大国：世界唯一拥有联合国产业分类中全部工业门类的国家；2010年以后成为世界第一工业制造大国",
+      "keywords": [
+        {
+          "aliases": [
+            "门类齐全的工业大国：世界唯一拥有联合国产业分类中全部工业门类的国家",
+            "2010年以后成为世界第一工业制造大国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0385",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国工业的分布特点？",
+      "answer": "自然资源开采、原材料加工多集中在中西部资源丰富地区；机械设备、电子产品生产多集中在东部沿海地区；工业增加值看，东部沿海地区和长江沿线地区集中了我国重要的工业城市",
+      "keywords": [
+        {
+          "aliases": [
+            "自然资源开采、原材料加工多集中在中西部资源丰富地区",
+            "机械设备、电子产品生产多集中在东部沿海地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0386",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国高新技术产业？",
+      "answer": "信息通信网络覆盖全国；\"东数西算\"工程（把东部数据传输到西部处理，发挥西部能源优势）",
+      "keywords": [
+        {
+          "aliases": [
+            "信息通信网络覆盖全国",
+            "\"东数西算\"工程（把东部数据传输到西部处理"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0387",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "工业绿色转型方向？",
+      "answer": "发展低碳工业、新能源汽车、资源循环利用",
+      "keywords": [
+        {
+          "aliases": [
+            "发展低碳工业、新能源汽车、资源循环利用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0388",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国交通运输现状？",
+      "answer": "已形成由公路、铁路、航空、内河航道等组成的庞大交通网；拥有世界最大的高速铁路网、高速公路网和世界级港口群、机场群",
+      "keywords": [
+        {
+          "aliases": [
+            "已形成由公路、铁路、航空、内河航道等组成的庞大交通网",
+            "拥有世界最大的高速铁路网、高速公路网和世界级港口群、机场群"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0389",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国交通线分布格局？",
+      "answer": "东密西疏（受自然环境、人口分布、经济发展影响；地形平坦、人口密集地区交通线稠密）",
+      "keywords": [
+        {
+          "aliases": [
+            "东密西疏（受自然环境、人口分布、经济发展影响",
+            "地形平坦、人口密集地区交通线稠密）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0390",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国高速公路网？",
+      "answer": "首都放射线、南北纵线、东西横线组成的高速公路网",
+      "keywords": [
+        {
+          "aliases": [
+            "首都放射线、南北纵线、东西横线组成的高速公路网"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0391",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国高速铁路网？",
+      "answer": "\"四纵四横\"为主骨架，连接直辖市、省会城市及其他大中城市",
+      "keywords": [
+        {
+          "aliases": [
+            "\"四纵四横\"为主骨架",
+            "连接直辖市、省会城市及其他大中城市"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0392",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "陇海-兰新铁路？",
+      "answer": "东起江苏连云港，西至新疆阿拉山口，出境后成为新亚欧大陆桥的重要通道",
+      "keywords": [
+        {
+          "aliases": [
+            "东起江苏连云港",
+            "西至新疆阿拉山口"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0393",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "防灾减灾的重要意义？",
+      "answer": "防灾减灾是建设美丽中国的基本保障",
+      "keywords": [
+        {
+          "aliases": [
+            "防灾减灾是建设美丽中国的基本保障"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0394",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国主要气象灾害的分布？",
+      "answer": "旱灾洪涝（东部季风区）、台风（东南沿海）、寒潮（北方及全国大部）",
+      "keywords": [
+        {
+          "aliases": [
+            "旱灾洪涝（东部季风区）、台风（东南沿海）、寒潮（北方及全国大部）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0395",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国主要地质灾害的分布？",
+      "answer": "地震（环太平洋地震带与地中海-喜马拉雅地震带）、滑坡泥石流（山区）",
+      "keywords": [
+        {
+          "aliases": [
+            "地震（环太平洋地震带与地中海-喜马拉雅地震带）、滑坡泥石流（山区）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0396",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "防灾减灾的主要措施？",
+      "answer": "建立灾害监测预警系统、加强防灾工程、提高公众防灾意识、制定应急预案",
+      "keywords": [
+        {
+          "aliases": [
+            "建立灾害监测预警系统、加强防灾工程、提高公众防灾意识、制定应急预案"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0397",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "遇到地震如何自救互救？",
+      "answer": "躲在坚固物体旁、护住头部；震后有序撤离到空旷地带",
+      "keywords": [
+        {
+          "aliases": [
+            "躲在坚固物体旁、护住头部",
+            "震后有序撤离到空旷地带"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0398",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "洪水来袭如何自救？",
+      "answer": "向高处转移、避开电线杆和危房、不涉水强行通过",
+      "keywords": [
+        {
+          "aliases": [
+            "向高处转移、避开电线杆和危房、不涉水强行通过"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0399",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国面临的主要环境问题？",
+      "answer": "大气污染、水污染、土壤污染、水土流失、土地荒漠化等",
+      "keywords": [
+        {
+          "aliases": [
+            "大气污染、水污染、土壤污染、水土流失、土地荒漠化等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0400",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"两山\"理念？",
+      "answer": "\"绿水青山就是金山银山\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"绿水青山就是金山银山\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0401",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "生态文明建设的要求？",
+      "answer": "坚持人与自然和谐共生；加快发展科技含量高、资源消耗低、环境污染少的产业",
+      "keywords": [
+        {
+          "aliases": [
+            "坚持人与自然和谐共生",
+            "加快发展科技含量高、资源消耗低、环境污染少的产业"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0402",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "建设美丽中国的内涵？",
+      "answer": "青山就是美丽，蓝天也是幸福，良好生态环境是建设美丽中国的重要基础",
+      "keywords": [
+        {
+          "aliases": [
+            "青山就是美丽",
+            "蓝天也是幸福"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0403",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "绿色发展的重要途径？",
+      "answer": "碳中和（节能减排）、绿色能源、循环经济、生态保护与修复",
+      "keywords": [
+        {
+          "aliases": [
+            "碳中和（节能减排）、绿色能源、循环经济、生态保护与修复"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  }
+]

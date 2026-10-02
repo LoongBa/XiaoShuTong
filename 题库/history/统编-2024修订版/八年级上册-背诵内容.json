@@ -1,0 +1,3434 @@
+[
+  {
+    "id": "Q-history-7to9-1003",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "鸦片战争前英国向中国走私鸦片的原因和影响是？",
+      "answer": "原因：英国工业品在中国滞销，为开辟海外市场掠夺原料；影响：白银大量外流威胁清政府财政，官员士兵吸食鸦片导致政治腐败和军队战斗力削弱",
+      "keywords": [
+        {
+          "aliases": [
+            "原因：英国工业品在中国滞销",
+            "为开辟海外市场掠夺原料"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1004",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "虎门销烟的时间、主持人和意义是？",
+      "answer": "1839年6月3日至25日，林则徐主持在虎门海滩当众销毁鸦片（110多万千克）；是中国人民禁烟斗争的伟大胜利，显示了中华民族反抗外来侵略的坚强意志",
+      "keywords": [
+        {
+          "aliases": [
+            "1839年6月3日至25日",
+            "林则徐主持在虎门海滩当众销毁鸦片（110多万千克）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1005",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "鸦片战争爆发的时间和经过是？",
+      "answer": "1840年6月英国舰队封锁广东珠江口，鸦片战争爆发；英军攻陷定海、进抵大沽口威胁清廷，后转攻东南沿海，1842年8月初到达南京下关江面，清政府屈服",
+      "keywords": [
+        {
+          "aliases": [
+            "1840年6月英国舰队封锁广东珠江口",
+            "鸦片战争爆发"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1006",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《南京条约》的主要内容是？",
+      "answer": "开放广州、福州、厦门、宁波、上海五处为通商口岸；割香港岛给英国；赔偿英国2100万银元；英商进出口货物应纳的税款必须经过双方协议",
+      "keywords": [
+        {
+          "aliases": [
+            "开放广州、福州、厦门、宁波、上海五处为通商口岸",
+            "割香港岛给英国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1007",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "鸦片战争对中国社会的影响是？",
+      "answer": "改变了中国历史发展的进程；中国独立主权的完整性遭到破坏，传统的小农经济逐步瓦解，中国开始沦为半殖民地半封建社会；鸦片战争成为中国近代史的开端",
+      "keywords": [
+        {
+          "aliases": [
+            "改变了中国历史发展的进程",
+            "中国独立主权的完整性遭到破坏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1008",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "第二次鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "第二次鸦片战争的时间、借口和发动者是？",
+      "answer": "1856年10月至1860年；英法在俄美两国支持下，分别以\"亚罗号事件\"和\"马神甫事件\"为借口对中国发动",
+      "keywords": [
+        {
+          "aliases": [
+            "1856年10月至1860年",
+            "英法在俄美两国支持下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-第二次鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1009",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "第二次鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《天津条约》的主要内容是？",
+      "answer": "外国公使进驻北京；增开汉口、南京等十处通商口岸；外国商船和军舰可以在长江各口岸自由航行；英法获巨额赔款",
+      "keywords": [
+        {
+          "aliases": [
+            "外国公使进驻北京",
+            "增开汉口、南京等十处通商口岸"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-第二次鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1010",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "第二次鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "火烧圆明园的时间及《北京条约》的主要内容是？",
+      "answer": "1860年10月英法联军大肆抢劫并火烧圆明园；《北京条约》承认《天津条约》有效，增开天津为通商口岸，割九龙半岛南端给英国，赔款额大幅增加",
+      "keywords": [
+        {
+          "aliases": [
+            "1860年10月英法联军大肆抢劫并火烧圆明园",
+            "《北京条约》承认《天津条约》有效"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-第二次鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1011",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "第二次鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "第二次鸦片战争期间俄国侵占中国北方领土的情况是？",
+      "answer": "沙俄先后割占中国东北100多万平方千米、西北44万多平方千米领土，从19世纪50年代到80年代共割占150多万平方千米",
+      "keywords": [
+        {
+          "aliases": [
+            "沙俄先后割占中国东北100多万平方千米、西北44万多平方千米领土",
+            "从19世纪50年代到80年代共割占150多万平方千米"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-第二次鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1012",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "第二次鸦片战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "第二次鸦片战争的影响是？",
+      "answer": "中国丧失更多主权，西方侵略势力由东南沿海一带深入长江中下游地区，俄国侵占中国北方大片领土，中国的半殖民地化程度进一步加深",
+      "keywords": [
+        {
+          "aliases": [
+            "中国丧失更多主权",
+            "西方侵略势力由东南沿海一带深入长江中下游地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-第二次鸦片战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1013",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "太平天国运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "太平天国运动爆发的标志是？",
+      "answer": "1851年1月11日，洪秀全在广西桂平金田村发动武装起义，建号太平天国，起义军称太平军",
+      "keywords": [
+        {
+          "aliases": [
+            "1851年1月11日",
+            "洪秀全在广西桂平金田村发动武装起义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-太平天国运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1014",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "太平天国运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "太平天国定都天京的时间和《天朝田亩制度》的内容是？",
+      "answer": "1853年3月太平军攻占南京并将南京改名天京作为都城；《天朝田亩制度》规定不分男女按人口和年龄平均分配土地，反映了农民要求得到土地的强烈愿望，但带有浓厚空想色彩未能推行",
+      "keywords": [
+        {
+          "aliases": [
+            "1853年3月太平军攻占南京并将南京改名天京作为都城",
+            "《天朝田亩制度》规定不分男女按人口和年龄平均分配土地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-太平天国运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1015",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "太平天国运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "太平天国由盛转衰的标志和原因是？",
+      "answer": "1856年秋的天京事变；东王杨秀清逼封\"万岁\"意图篡位引发内斗，杨秀清被杀、韦昌辉被处死、石达开率部出走，太平军损失惨重",
+      "keywords": [
+        {
+          "aliases": [
+            "1856年秋的天京事变",
+            "东王杨秀清逼封\"万岁\"意图篡位引发内斗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-太平天国运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1016",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "太平天国运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "太平天国运动失败的时间和标志是？",
+      "answer": "1864年夏天京陷落，标志着太平天国运动失败；运动坚持14年，转战大半个中国，沉重打击了清朝的统治和外国侵略势力",
+      "keywords": [
+        {
+          "aliases": [
+            "1864年夏天京陷落",
+            "标志着太平天国运动失败"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-太平天国运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1017",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "太平天国运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "太平天国运动失败的原因是？",
+      "answer": "农民阶级的局限性：无法提出切合实际的革命纲领，无法制止和克服领导集团的腐败，无法长期保持领导集团的团结；在中外反动势力联合镇压下最终失败",
+      "keywords": [
+        {
+          "aliases": [
+            "农民阶级的局限性：无法提出切合实际的革命纲领",
+            "无法制止和克服领导集团的腐败"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-太平天国运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1018",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "洋务运动和边疆危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "洋务运动的时间、口号和代表人物是？",
+      "answer": "从19世纪60年代到90年代中期；以\"自强\"\"求富\"为口号；中央以恭亲王奕䜣为代表，地方以曾国藩、李鸿章、左宗棠、张之洞为代表",
+      "keywords": [
+        {
+          "aliases": [
+            "从19世纪60年代到90年代中期",
+            "以\"自强\"\"求富\"为口号"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-洋务运动和边疆危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1019",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "洋务运动和边疆危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "洋务派创办的军事工业和民用企业各有哪些？",
+      "answer": "军事工业：江南机器制造总局、福州船政局等；民用企业：轮船招商局、开平煤矿、汉阳铁厂、湖北织布局等",
+      "keywords": [
+        {
+          "aliases": [
+            "军事工业：江南机器制造总局、福州船政局等",
+            "民用企业：轮船招商局、开平煤矿、汉阳铁厂、湖北织布局等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-洋务运动和边疆危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1020",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "洋务运动和边疆危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "洋务运动的结果和客观作用是？",
+      "answer": "求强求富的目标没有实现（清朝政治的腐败和外国势力的挤压）；在客观上促进了中国民族资本主义的产生，是中国早期现代化的初步探索",
+      "keywords": [
+        {
+          "aliases": [
+            "求强求富的目标没有实现（清朝政治的腐败和外国势力的挤压）",
+            "在客观上促进了中国民族资本主义的产生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-洋务运动和边疆危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1021",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "洋务运动和边疆危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "左宗棠收复新疆的经过是？",
+      "answer": "1875年清政府任命左宗棠督办新疆军务，采取先北后南、缓进急战的策略，1878年消灭阿古柏侵略势力，收复除伊犁地区以外的新疆领土",
+      "keywords": [
+        {
+          "aliases": [
+            "1875年清政府任命左宗棠督办新疆军务",
+            "采取先北后南、缓进急战的策略"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-洋务运动和边疆危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1022",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "洋务运动和边疆危机"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中法战争中的重要战役和结果是？",
+      "answer": "1884年马尾海战福建水师大部被击沉；1885年冯子材取得镇南关大捷，扭转战局；此后清政府签订《越南条款》，承认越南受法国\"保护\"，法国的势力侵入中国云南、广西",
+      "keywords": [
+        {
+          "aliases": [
+            "1884年马尾海战福建水师大部被击沉",
+            "1885年冯子材取得镇南关大捷"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-洋务运动和边疆危机"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1023",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "甲午中日战争与列强瓜分中国狂潮"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "甲午中日战争的导火索和标志性战役是？",
+      "answer": "1894年朝鲜东学党起义，日本乘机出兵蓄意挑起战争（1894年为农历甲午年）；黄海海战中邓世昌、林永升壮烈殉国；1895年初威海卫之战北洋舰队全军覆没",
+      "keywords": [
+        {
+          "aliases": [
+            "1894年朝鲜东学党起义",
+            "日本乘机出兵蓄意挑起战争（1894年为农历甲午年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-甲午中日战争与列强瓜分中国狂潮"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1024",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "甲午中日战争与列强瓜分中国狂潮"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《马关条约》签订的时间和主要内容是？",
+      "answer": "1895年清政府被迫与日本签订；规定割辽东半岛、台湾全岛及所有附属各岛屿、澎湖列岛给日本；赔偿日本军费白银2亿两；开放沙市、重庆、苏州、杭州为通商口岸；日本可在中国通商口岸开设工厂",
+      "keywords": [
+        {
+          "aliases": [
+            "1895年清政府被迫与日本签订",
+            "规定割辽东半岛、台湾全岛及所有附属各岛屿、澎湖列岛给日本"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-甲午中日战争与列强瓜分中国狂潮"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1025",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "甲午中日战争与列强瓜分中国狂潮"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《马关条约》的影响是？",
+      "answer": "使中国的领土主权遭到严重破坏；巨额赔款迫使清政府大举外债；外国侵略势力深入中国腹地，通过投资办厂加紧对华资本输出；中国的半殖民地化程度大大加深",
+      "keywords": [
+        {
+          "aliases": [
+            "使中国的领土主权遭到严重破坏",
+            "巨额赔款迫使清政府大举外债"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-甲午中日战争与列强瓜分中国狂潮"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1026",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "甲午中日战争与列强瓜分中国狂潮"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "列强瓜分中国狂潮的表现是？",
+      "answer": "三国干涉还辽后，列强以\"赎辽费\"为契机，在中国掀起抢夺路矿利权、强租租借地、划分\"势力范围\"的瓜分狂潮；1899年美国提出\"门户开放\"照会",
+      "keywords": [
+        {
+          "aliases": [
+            "三国干涉还辽后",
+            "列强以\"赎辽费\"为契机"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-甲午中日战争与列强瓜分中国狂潮"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1027",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "甲午中日战争与列强瓜分中国狂潮"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "民族资本主义初步发展的表现是？",
+      "answer": "甲午中日战争后清政府放松了对民间设厂的限制，民族资本主义得到初步发展；状元实业家张謇创办大生纱厂，带动很多人走上\"实业救国\"道路",
+      "keywords": [
+        {
+          "aliases": [
+            "甲午中日战争后清政府放松了对民间设厂的限制",
+            "民族资本主义得到初步发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-甲午中日战争与列强瓜分中国狂潮"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1028",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "戊戌变法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "公车上书的时间和意义是？",
+      "answer": "1895年春《马关条约》签订消息传出后，康有为、梁启超联合各省应试举人上书光绪帝，请求拒和、迁都、变法；拉开了维新运动的序幕",
+      "keywords": [
+        {
+          "aliases": [
+            "1895年春《马关条约》签订消息传出后",
+            "康有为、梁启超联合各省应试举人上书光绪帝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-戊戌变法"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1029",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "戊戌变法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "维新运动中影响较大的报刊和著作是？",
+      "answer": "上海《时务报》（梁启超发表《变法通议》）、天津《国闻报》（严复主持）；严复翻译《天演论》，宣传\"物竞天择\"\"适者生存\"",
+      "keywords": [
+        {
+          "aliases": [
+            "上海《时务报》（梁启超发表《变法通议》）、天津《国闻报》（严复主持）",
+            "严复翻译《天演论》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-戊戌变法"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1030",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "戊戌变法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "百日维新开始的时间和主要措施是？",
+      "answer": "1898年6月11日光绪帝颁布\"明定国是\"诏书宣布变法；政治（裁撤冗官冗员、允许士民上书言事）、经济（鼓励私人兴办工矿企业、改革财政编制国家预算）、教育（废除八股文改试策论、创办京师大学堂）、军事（裁减绿营、训练新式军队）",
+      "keywords": [
+        {
+          "aliases": [
+            "1898年6月11日光绪帝颁布\"明定国是\"诏书宣布变法",
+            "政治（裁撤冗官冗员、允许士民上书言事）、经济（鼓励私人兴办工矿企业、改革财政编制国家预算）、教育（废除八股文改试策论、创办京师大学堂）、军事（裁减绿营、训练新式军队）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-戊戌变法"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1031",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "戊戌变法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "戊戌政变和\"戊戌六君子\"是？",
+      "answer": "1898年9月21日慈禧太后发动政变，软禁光绪帝，搜捕维新人士，废除变法诏令；谭嗣同、刘光第、林旭、杨锐、杨深秀、康广仁六人被捕遇害，史称\"戊戌六君子\"",
+      "keywords": [
+        {
+          "aliases": [
+            "1898年9月21日慈禧太后发动政变",
+            "软禁光绪帝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-戊戌变法"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1032",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "戊戌变法"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "戊戌变法的历史意义是？",
+      "answer": "是中国近代第一次思想解放运动，也是资产阶级改良运动；促进了思想启蒙和民族意识的觉醒，对近代教育和报刊事业的发展产生长远影响",
+      "keywords": [
+        {
+          "aliases": [
+            "是中国近代第一次思想解放运动",
+            "也是资产阶级改良运动"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-戊戌变法"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1033",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "义和团运动和八国联军侵华"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "义和团运动的兴起和口号是？",
+      "answer": "由山东、直隶一带的义和拳、民间秘密结社和练拳习武组织发展而来，主要成员是农民，1898年10月冠县起义揭开序幕；提出\"扶清灭洋\"口号",
+      "keywords": [
+        {
+          "aliases": [
+            "由山东、直隶一带的义和拳、民间秘密结社和练拳习武组织发展而来",
+            "主要成员是农民"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-义和团运动和八国联军侵华"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1034",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "义和团运动和八国联军侵华"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"扶清灭洋\"口号的评价是？",
+      "answer": "\"灭洋\"鲜明表达了中国人民反对帝国主义的斗争意志，但具有盲目排外的落后性；\"扶清\"反映出义和团对清政府本质认识不清",
+      "keywords": [
+        {
+          "aliases": [
+            "\"灭洋\"鲜明表达了中国人民反对帝国主义的斗争意志",
+            "但具有盲目排外的落后性"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-义和团运动和八国联军侵华"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1035",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "义和团运动和八国联军侵华"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "八国联军侵华的时间和义和团抗击的情况是？",
+      "answer": "1900年6月，英、美、法、德、俄、日、奥匈、意八国组织联军2000多人进犯北京；义和团在廊坊一带阻击联军，后在天津保卫战中直隶提督聂士成殉国；1900年8月14日八国联军攻陷北京",
+      "keywords": [
+        {
+          "aliases": [
+            "1900年6月",
+            "英、美、法、德、俄、日、奥匈、意八国组织联军2000多人进犯北京"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-义和团运动和八国联军侵华"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1036",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "义和团运动和八国联军侵华"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《辛丑条约》签订的时间和主要内容是？",
+      "answer": "1901年9月清政府与英、美、法、德、俄、日、奥匈、意、西、荷、比11国签订；主要内容：惩办\"首祸诸臣\"、停止科举考试5年；赔款白银4.5亿两，分39年还清；划定东交民巷为使馆界；拆毁大沽炮台、允许外国军队驻扎北京到山海关铁路沿线要地；严禁人民参加反帝活动；改总理衙门为外务部",
+      "keywords": [
+        {
+          "aliases": [
+            "1901年9月清政府与英、美、法、德、俄、日、奥匈、意、西、荷、比11国签订",
+            "主要内容：惩办\"首祸诸臣\"、停止科举考试5年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-义和团运动和八国联军侵华"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1037",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "义和团运动和八国联军侵华"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《辛丑条约》的影响是？",
+      "answer": "是中国近代史上赔款数目最庞大、主权丧失最严重的不平等条约；清政府成为帝国主义列强统治中国的工具，中国完全陷入半殖民地半封建社会的深渊",
+      "keywords": [
+        {
+          "aliases": [
+            "是中国近代史上赔款数目最庞大、主权丧失最严重的不平等条约",
+            "清政府成为帝国主义列强统治中国的工具"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-义和团运动和八国联军侵华"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1038",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国同盟会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "兴中会成立的时间和纲领是？",
+      "answer": "1894年11月，孙中山在檀香山联合华侨成立兴中会，提出\"振兴中华\"，号召\"驱除鞑虏，恢复中国，创立合众政府\"；是中国第一个资产阶级革命团体",
+      "keywords": [
+        {
+          "aliases": [
+            "1894年11月",
+            "孙中山在檀香山联合华侨成立兴中会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国同盟会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1039",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国同盟会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "宣传资产阶级革命思想的著作有？",
+      "answer": "章炳麟《驳康有为论革命书》、邹容《革命军》、陈天华《猛回头》和《警世钟》",
+      "keywords": [
+        {
+          "aliases": [
+            "章炳麟《驳康有为论革命书》、邹容《革命军》、陈天华《猛回头》和《警世钟》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国同盟会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1040",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国同盟会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中国同盟会成立的时间、纲领和意义是？",
+      "answer": "1905年8月，孙中山联合兴中会、华兴会、光复会等在日本东京成立中国同盟会；政治纲领为\"驱除鞑虏，恢复中华，创立民国，平均地权\"；是第一个全国规模的、统一的资产阶级革命政党",
+      "keywords": [
+        {
+          "aliases": [
+            "1905年8月",
+            "孙中山联合兴中会、华兴会、光复会等在日本东京成立中国同盟会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国同盟会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1041",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国同盟会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "三民主义的内容是？",
+      "answer": "孙中山在《民报》发刊词中将同盟会政治纲领阐发为民族主义（推翻清王朝统治、反对民族压迫）、民权主义（推翻君主专制政体、建立资产阶级民主共和国）、民生主义（平均地权），是为\"三民主义\"，是孙中山领导资产阶级革命的指导思想",
+      "keywords": [
+        {
+          "aliases": [
+            "孙中山在《民报》发刊词中将同盟会政治纲领阐发为民族主义（推翻清王朝统治、反对民族压迫）、民权主义（推翻君主专制政体、建立资产阶级民主共和国）、民生主义（平均地权）",
+            "是为\"三民主义\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国同盟会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1042",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国同盟会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "革命党人发动的武装起义有？",
+      "answer": "1906年萍浏醴起义（同盟会成立后领导的第一次武装起义）、1907年徐锡麟安庆起义和秋瑾就义、1911年4月黄花岗起义（黄兴领导，收殓烈士遗骸72具合葬于黄花岗）",
+      "keywords": [
+        {
+          "aliases": [
+            "1906年萍浏醴起义（同盟会成立后领导的第一次武装起义）、1907年徐锡麟安庆起义和秋瑾就义、1911年4月黄花岗起义（黄兴领导",
+            "收殓烈士遗骸72具合葬于黄花岗）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国同盟会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1043",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "辛亥革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "武昌起义的时间和结果是？",
+      "answer": "1911年10月10日晚，武昌城内新军工程营的革命党人首先起义，一夜之间占领武昌，汉阳、汉口的新军起义响应；10月11日成立湖北军政府，推举黎元洪为都督；各省纷纷响应，一半以上省份宣布独立",
+      "keywords": [
+        {
+          "aliases": [
+            "1911年10月10日晚",
+            "武昌城内新军工程营的革命党人首先起义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-辛亥革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1044",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "辛亥革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "辛亥革命名称的由来是？",
+      "answer": "1911年是农历辛亥年，历史上称这次革命为\"辛亥革命\"",
+      "keywords": [
+        {
+          "aliases": [
+            "1911年是农历辛亥年",
+            "历史上称这次革命为\"辛亥革命\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-辛亥革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1045",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "辛亥革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中华民国建立的时间和标志是？",
+      "answer": "1912年1月1日，孙中山在南京宣誓就任中华民国临时大总统，宣告中华民国临时政府成立，以1912年为中华民国元年，改用阳历",
+      "keywords": [
+        {
+          "aliases": [
+            "1912年1月1日",
+            "孙中山在南京宣誓就任中华民国临时大总统"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-辛亥革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1046",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "辛亥革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《中华民国临时约法》的主要内容和地位是？",
+      "answer": "规定中华民国的主权属于全体国民；国民不分种族、阶级、宗教信仰一律平等，享有人身、言论、出版、集会、结社等自由和权利；参议院行使立法权，法院行使司法权、司法独立；是中国历史上第一部具有资产阶级共和国宪法性质的重要文件",
+      "keywords": [
+        {
+          "aliases": [
+            "规定中华民国的主权属于全体国民",
+            "国民不分种族、阶级、宗教信仰一律平等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-辛亥革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1047",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "辛亥革命"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "辛亥革命的历史意义和局限性是？",
+      "answer": "意义：推翻了清王朝的统治，宣告了中国两千多年君主专制制度的终结，拉开了中国完全意义上的近代民族民主革命的序幕，极大推动了中华民族的思想解放；局限性：没有解决近代中国社会的主要矛盾，没有完成民族独立、人民解放的历史任务，中国半殖民地半封建的社会性质没有改变",
+      "keywords": [
+        {
+          "aliases": [
+            "意义：推翻了清王朝的统治",
+            "宣告了中国两千多年君主专制制度的终结"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-辛亥革命"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1048",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "帝制复辟与军阀割据"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "袁世凯复辟帝制的步骤有？",
+      "answer": "强迫国会选举他为正式大总统、解散国民党、解散国会、废除《中华民国临时约法》颁布《中华民国约法》改内阁制为总统制；1915年接受日本\"二十一条\"的大部分内容；1915年底下令改中华民国为中华帝国，年号\"洪宪\"",
+      "keywords": [
+        {
+          "aliases": [
+            "强迫国会选举他为正式大总统、解散国民党、解散国会、废除《中华民国临时约法》颁布《中华民国约法》改内阁制为总统制",
+            "1915年接受日本\"二十一条\"的大部分内容"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-帝制复辟与军阀割据"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1049",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "帝制复辟与军阀割据"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "护国战争的过程和结果是？",
+      "answer": "1915年底，唐继尧、蔡锷、李烈钧在云南宣告独立，组织护国军北上讨袁；袁世凯众叛亲离，1916年3月被迫宣布取消帝制，6月在绝望中死去",
+      "keywords": [
+        {
+          "aliases": [
+            "1915年底",
+            "唐继尧、蔡锷、李烈钧在云南宣告独立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-帝制复辟与军阀割据"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1050",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "帝制复辟与军阀割据"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "袁世凯死后军阀割据的局面是？",
+      "answer": "以冯国璋、曹锟为首的直系控制直隶、江苏、江西、湖北等省；以段祺瑞为首的皖系掌握北京政府；奉系军阀张作霖盘踞东北；滇系唐继尧、桂系陆荣廷等盘踞南方各省",
+      "keywords": [
+        {
+          "aliases": [
+            "以冯国璋、曹锟为首的直系控制直隶、江苏、江西、湖北等省",
+            "以段祺瑞为首的皖系掌握北京政府"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-帝制复辟与军阀割据"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1051",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "帝制复辟与军阀割据"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "军阀割据的危害是？",
+      "answer": "各派军阀为争夺地盘不惜出卖国家利益、依附帝国主义，大小军阀连年混战，中国陷入军阀割据纷争的动乱之中",
+      "keywords": [
+        {
+          "aliases": [
+            "各派军阀为争夺地盘不惜出卖国家利益、依附帝国主义",
+            "大小军阀连年混战"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-帝制复辟与军阀割据"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1052",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "五四运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "新文化运动兴起的时间、标志和口号是？",
+      "answer": "1915年，陈独秀在上海创办《青年杂志》（后改名《新青年》），新文化运动由此发端；基本口号是提倡民主和科学（\"德先生\"和\"赛先生\"），抨击旧道德和旧文化",
+      "keywords": [
+        {
+          "aliases": [
+            "1915年",
+            "陈独秀在上海创办《青年杂志》（后改名《新青年》）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-五四运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1053",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "五四运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "新文化运动的主要阵地和代表作品是？",
+      "answer": "北京大学和《新青年》编辑部成为主要阵地；李大钊《孔子与宪法》、鲁迅《狂人日记》、胡适《文学改良刍议》、陈独秀《文学革命论》",
+      "keywords": [
+        {
+          "aliases": [
+            "北京大学和《新青年》编辑部成为主要阵地",
+            "李大钊《孔子与宪法》、鲁迅《狂人日记》、胡适《文学改良刍议》、陈独秀《文学革命论》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-五四运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1054",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "五四运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "五四运动的导火索是？",
+      "answer": "1919年巴黎和会上中国外交失败：列强操纵会议，将德国在中国山东的特权全部转让给日本",
+      "keywords": [
+        {
+          "aliases": [
+            "1919年巴黎和会上中国外交失败：列强操纵会议",
+            "将德国在中国山东的特权全部转让给日本"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-五四运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1055",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "五四运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "五四运动的经过和口号是？",
+      "answer": "1919年5月4日，北京大学等校3000多名学生汇集天安门前示威游行，提出\"外争主权、内除国贼\"\"誓死力争、还我青岛\"\"取消二十一条\"等口号；6月5日后上海工人罢工、商人罢市，工人阶级成为运动主力，运动中心由北京转移到上海",
+      "keywords": [
+        {
+          "aliases": [
+            "1919年5月4日",
+            "北京大学等校3000多名学生汇集天安门前示威游行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-五四运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1056",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "五四运动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "五四运动的历史意义是？",
+      "answer": "是一场以先进青年知识分子为先锋、广大人民群众参加的彻底反帝反封建的伟大爱国革命运动；促进了马克思主义在中国的传播及其与中国工人运动的结合，为中国共产党成立做了思想上干部上的准备；是中国旧民主主义革命走向新民主主义革命的转折点；五四精神的核心是爱国主义精神",
+      "keywords": [
+        {
+          "aliases": [
+            "是一场以先进青年知识分子为先锋、广大人民群众参加的彻底反帝反封建的伟大爱国革命运动",
+            "促进了马克思主义在中国的传播及其与中国工人运动的结合"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-五四运动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1057",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国共产党诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "马克思主义在中国传播的代表人物是？",
+      "answer": "李大钊发表《庶民的胜利》《我的马克思主义观》等文章，系统介绍马克思主义；1920年8月陈望道翻译的《共产党宣言》中文全译本在上海出版",
+      "keywords": [
+        {
+          "aliases": [
+            "李大钊发表《庶民的胜利》《我的马克思主义观》等文章",
+            "系统介绍马克思主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国共产党诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1058",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国共产党诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中国共产党第一次全国代表大会的时间和内容是？",
+      "answer": "1921年7月23日在上海开幕（后转移到浙江嘉兴南湖游船举行）；确定党的名称为\"中国共产党\"，通过第一个纲领，明确党的奋斗目标是推翻资产阶级政权、建立无产阶级专政、实现共产主义；确定党的中心工作是领导和组织工人运动，成立中央局，陈独秀当选为中央局书记",
+      "keywords": [
+        {
+          "aliases": [
+            "1921年7月23日在上海开幕（后转移到浙江嘉兴南湖游船举行）",
+            "确定党的名称为\"中国共产党\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国共产党诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1059",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国共产党诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中国共产党诞生的历史意义是？",
+      "answer": "是中国历史上开天辟地的大事变；自从有了中国共产党，中国革命的面貌就焕然一新了；中国共产党的创建形成了伟大建党精神",
+      "keywords": [
+        {
+          "aliases": [
+            "是中国历史上开天辟地的大事变",
+            "自从有了中国共产党"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国共产党诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1060",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国共产党诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中共二大的内容和意义是？",
+      "answer": "1922年7月在北京（上海）举行，制定党的最低纲领：在民主革命阶段打倒军阀，推翻帝国主义的压迫，将中国统一为真正的民主共和国；是中国历史上第一次提出明确的反帝反封建的民主革命纲领",
+      "keywords": [
+        {
+          "aliases": [
+            "1922年7月在北京（上海）举行",
+            "制定党的最低纲领：在民主革命阶段打倒军阀"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国共产党诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1061",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国共产党诞生"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "京汉铁路工人大罢工的时间和影响是？",
+      "answer": "1923年2月，京汉铁路工人举行大罢工，将第一次全国工人运动高潮推向顶峰；遭到帝国主义和直系军阀吴佩孚的血腥镇压（二七惨案），此后全国工人运动暂时转入低潮",
+      "keywords": [
+        {
+          "aliases": [
+            "1923年2月",
+            "京汉铁路工人举行大罢工"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国共产党诞生"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1062",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国共合作与北伐战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "国共合作正式建立的标志和基础是？",
+      "answer": "1924年1月，中国国民党第一次全国代表大会在广州召开，对三民主义作出新解释，确立联俄、联共、扶助农工三大政策，成为国共合作的政治基础；标志着国共两党合作的正式建立，国民革命由此开始",
+      "keywords": [
+        {
+          "aliases": [
+            "1924年1月",
+            "中国国民党第一次全国代表大会在广州召开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国共合作与北伐战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1063",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国共合作与北伐战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "黄埔军校的创办和特点是？",
+      "answer": "1924年5月孙中山在苏联和中国共产党的帮助下创办于广州黄埔；孙中山兼任军校总理、廖仲恺任党代表、蒋介石任校长、周恩来任政治部主任；培养出大批军事和政治人才，为北伐战争作了准备",
+      "keywords": [
+        {
+          "aliases": [
+            "1924年5月孙中山在苏联和中国共产党的帮助下创办于广州黄埔",
+            "孙中山兼任军校总理、廖仲恺任党代表、蒋介石任校长、周恩来任政治部主任"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国共合作与北伐战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1064",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国共合作与北伐战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "北伐战争的时间、对象和结果是？",
+      "answer": "1926年7月国民革命军誓师北伐，蒋介石任北伐军总司令；对象是吴佩孚、孙传芳、张作霖；以叶挺领导的第四军独立团为先锋连克汀泗桥、贺胜桥，北伐军从珠江流域打到长江流域，1927年1月国民政府从广州迁到武汉",
+      "keywords": [
+        {
+          "aliases": [
+            "1926年7月国民革命军誓师北伐",
+            "蒋介石任北伐军总司令"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国共合作与北伐战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1065",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国共合作与北伐战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "国民党内反动集团背叛革命的表现是？",
+      "answer": "1927年4月蒋介石在上海发动四一二反革命政变，在南京另立国民政府；1927年7月汪精卫在武汉召开会议决定\"分共\"，大肆屠杀共产党人和工农群众，轰轰烈烈的国民革命失败",
+      "keywords": [
+        {
+          "aliases": [
+            "1927年4月蒋介石在上海发动四一二反革命政变",
+            "在南京另立国民政府"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国共合作与北伐战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1066",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国共合作与北伐战争"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "南京国民政府形式上统一全国的标志是？",
+      "answer": "1928年底，张作霖之子张学良发表通告宣布\"服从国民政府，改易旗帜\"，史称东北易帜，南京国民政府在形式上统一全国",
+      "keywords": [
+        {
+          "aliases": [
+            "1928年底",
+            "张作霖之子张学良发表通告宣布\"服从国民政府"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国共合作与北伐战争"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1067",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "毛泽东开辟井冈山道路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "南昌起义的时间、领导人和意义是？",
+      "answer": "1927年8月1日，周恩来、贺龙、叶挺、朱德、刘伯承等领导武装起义，占领南昌城；打响武装反抗国民党反动派的第一枪，标志着中国共产党独立领导革命战争、创建人民军队和武装夺取政权的开端",
+      "keywords": [
+        {
+          "aliases": [
+            "1927年8月1日",
+            "周恩来、贺龙、叶挺、朱德、刘伯承等领导武装起义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-毛泽东开辟井冈山道路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1068",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "毛泽东开辟井冈山道路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "八七会议的时间和内容是？",
+      "answer": "1927年8月7日，中共中央在汉口召开紧急会议；确定实行土地革命和武装起义的方针；毛泽东提出\"政权是由枪杆子中取得的\"论断",
+      "keywords": [
+        {
+          "aliases": [
+            "1927年8月7日",
+            "中共中央在汉口召开紧急会议"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-毛泽东开辟井冈山道路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1069",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "毛泽东开辟井冈山道路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "秋收起义、三湾改编和井冈山会师是？",
+      "answer": "1927年9月毛泽东在湘赣边界发动秋收起义，打出\"工农革命军\"旗帜，后改向敌人统治力量薄弱的山区进军；三湾改编把党支部建立在连队上，从组织上确立了党对军队的领导；1927年10月毛泽东率部到达井冈山地区，创建中国第一个农村革命根据地；1928年4月朱德、陈毅与毛泽东会师，合编为中国工农红军第四军",
+      "keywords": [
+        {
+          "aliases": [
+            "1927年9月毛泽东在湘赣边界发动秋收起义",
+            "打出\"工农革命军\"旗帜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-毛泽东开辟井冈山道路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1070",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "毛泽东开辟井冈山道路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "工农武装割据的内容和古田会议的原则是？",
+      "answer": "在井冈山打土豪、分田地，开展土地革命，建立工农民主政权，坚持游击战争；1929年12月古田会议确立思想建党、政治建军的原则",
+      "keywords": [
+        {
+          "aliases": [
+            "在井冈山打土豪、分田地",
+            "开展土地革命"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-毛泽东开辟井冈山道路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1071",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "毛泽东开辟井冈山道路"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "1931年中华苏维埃共和国临时中央政府的情况是？",
+      "answer": "1931年冬，中华苏维埃第一次全国代表大会在江西瑞金召开，宣布成立中华苏维埃共和国临时中央政府，定都瑞金，毛泽东当选为中央执行委员会主席",
+      "keywords": [
+        {
+          "aliases": [
+            "1931年冬",
+            "中华苏维埃第一次全国代表大会在江西瑞金召开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-毛泽东开辟井冈山道路"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1072",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国工农红军长征与遵义会议"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "红军长征开始的时间和原因是？",
+      "answer": "1934年10月，中共中央率领中央红军8万多人突围西进开始长征；原因是第五次反\"围剿\"失败，博古、李德在军事指挥上犯了\"左\"的错误，红军被迫进行战略转移",
+      "keywords": [
+        {
+          "aliases": [
+            "1934年10月",
+            "中共中央率领中央红军8万多人突围西进开始长征"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国工农红军长征与遵义会议"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1073",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国工农红军长征与遵义会议"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "遵义会议的内容和意义是？",
+      "answer": "1935年1月中共中央在遵义召开政治局扩大会议；集中全力解决博古等人在军事上和组织上\"左\"的错误，肯定毛泽东的正确军事主张，增选毛泽东为中央政治局常委，取消博古、李德的军事最高指挥权；开始确立以毛泽东为主要代表的马克思主义正确路线在中共中央的领导地位，挽救了党、挽救了红军、挽救了中国革命，是中国共产党历史上一个生死攸关的转折点",
+      "keywords": [
+        {
+          "aliases": [
+            "1935年1月中共中央在遵义召开政治局扩大会议",
+            "集中全力解决博古等人在军事上和组织上\"左\"的错误"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国工农红军长征与遵义会议"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1074",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国工农红军长征与遵义会议"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "长征中的重大事件是？",
+      "answer": "四渡赤水、渡过金沙江跳出包围圈、强渡大渡河、飞夺泸定桥、翻雪山、过草地、突破天险腊子口",
+      "keywords": [
+        {
+          "aliases": [
+            "四渡赤水、渡过金沙江跳出包围圈、强渡大渡河、飞夺泸定桥、翻雪山、过草地、突破天险腊子口"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国工农红军长征与遵义会议"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1075",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "中国工农红军长征与遵义会议"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "长征胜利结束的标志和意义是？",
+      "answer": "1935年10月中央红军到达陕甘革命根据地吴起镇与陕北红军会师；1936年10月红二、红四方面军与红一方面军在甘肃会宁、将台堡会师，长征胜利结束；意义：粉碎了国民党反动派消灭红军的企图，保存了党和红军的基干力量，使中国革命转危为安，铸就了伟大的长征精神，打开了中国革命的新局面",
+      "keywords": [
+        {
+          "aliases": [
+            "1935年10月中央红军到达陕甘革命根据地吴起镇与陕北红军会师",
+            "1936年10月红二、红四方面军与红一方面军在甘肃会宁、将台堡会师"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-中国工农红军长征与遵义会议"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1076",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "从九一八事变到西安事变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "九一八事变的经过和影响是？",
+      "answer": "1931年9月18日夜，日本关东军炸毁沈阳北郊柳条湖附近南满铁路的一段路轨，反诬中国军队破坏，以此为借口袭击中国东北军驻地北大营，炮轰沈阳城；张学良执行不抵抗政策，短短四个多月东北三省全部沦陷；1932年日本扶植溥仪建立伪满洲国",
+      "keywords": [
+        {
+          "aliases": [
+            "1931年9月18日夜",
+            "日本关东军炸毁沈阳北郊柳条湖附近南满铁路的一段路轨"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-从九一八事变到西安事变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1077",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "从九一八事变到西安事变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "九一八事变的意义是？",
+      "answer": "九一八事变是中国人民抗日战争的起点，东北各族民众组织抗日义勇军抵抗日军侵略，揭开了世界反法西斯战争的序幕",
+      "keywords": [
+        {
+          "aliases": [
+            "九一八事变是中国人民抗日战争的起点",
+            "东北各族民众组织抗日义勇军抵抗日军侵略"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-从九一八事变到西安事变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1078",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "从九一八事变到西安事变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "一二·九运动的时间和意义是？",
+      "answer": "1935年12月9日，在中国共产党领导下，北平学生向国民党当局请愿并举行示威游行，高呼\"打倒日本帝国主义\"\"反对华北自治\"\"停止内战，一致对外\"；揭露了日本侵略者企图吞并华北的阴谋，极大促进了中华民族的觉醒，标志着中国人民抗日救亡民主运动新高潮的到来",
+      "keywords": [
+        {
+          "aliases": [
+            "1935年12月9日",
+            "在中国共产党领导下"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-从九一八事变到西安事变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1079",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "从九一八事变到西安事变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "西安事变的经过是？",
+      "answer": "1936年12月12日，张学良、杨虎城扣押蒋介石，实行\"兵谏\"，通电全国要求停止内战、一致抗日；中国共产党从全民族利益出发主张和平解决，联蒋抗日，派周恩来到西安参加谈判",
+      "keywords": [
+        {
+          "aliases": [
+            "1936年12月12日",
+            "张学良、杨虎城扣押蒋介石"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-从九一八事变到西安事变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1080",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "从九一八事变到西安事变"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "西安事变和平解决的意义是？",
+      "answer": "揭开了国共两党由内战到联合抗日的序幕，成为时局转换的枢纽；从此十年内战基本结束，在抗日的前提下国共两党实行第二次合作已成为不可抗拒的大势",
+      "keywords": [
+        {
+          "aliases": [
+            "揭开了国共两党由内战到联合抗日的序幕",
+            "成为时局转换的枢纽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-从九一八事变到西安事变"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1081",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "七七事变与全民族抗战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "七七事变的时间和意义是？",
+      "answer": "1937年7月7日，日军以士兵失踪为借口要求进入宛平城搜查，遭拒绝后炮轰我军防地，中国守军奋起抵抗；七七事变标志着中国全民族抗战的开始",
+      "keywords": [
+        {
+          "aliases": [
+            "1937年7月7日",
+            "日军以士兵失踪为借口要求进入宛平城搜查"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-七七事变与全民族抗战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1082",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "七七事变与全民族抗战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "第二次国共合作实现的过程是？",
+      "answer": "中国工农红军主力改编为国民革命军第八路军（朱德任总指挥、彭德怀任副总指挥），南方八省游击队改编为国民革命军陆军新编第四军（叶挺任军长）；1937年9月国民党中央通讯社公开发表国共合作宣言，蒋介石发表谈话实际承认中国共产党在全国的合法地位，以国共合作为主体的抗日民族统一战线正式建立",
+      "keywords": [
+        {
+          "aliases": [
+            "中国工农红军主力改编为国民革命军第八路军（朱德任总指挥、彭德怀任副总指挥）",
+            "南方八省游击队改编为国民革命军陆军新编第四军（叶挺任军长）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-七七事变与全民族抗战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1083",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "七七事变与全民族抗战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "淞沪会战的时间和意义是？",
+      "answer": "1937年8月爆发，中国军队先后出动70余万兵力，姚子青全营守卫宝山壮烈牺牲，谢晋元率部坚守四行仓库；持续三个月毙伤日军4万多人，打破了日本三个月灭亡中国的迷梦，国民政府迁往重庆作为战时陪都",
+      "keywords": [
+        {
+          "aliases": [
+            "1937年8月爆发",
+            "中国军队先后出动70余万兵力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-七七事变与全民族抗战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1084",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "七七事变与全民族抗战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "南京大屠杀的时间和遇难人数是？",
+      "answer": "1937年12月13日，日军攻陷南京后进行持续六周的血腥大屠杀，屠杀中国居民和放下武器的士兵达30万人以上",
+      "keywords": [
+        {
+          "aliases": [
+            "1937年12月13日",
+            "日军攻陷南京后进行持续六周的血腥大屠杀"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-七七事变与全民族抗战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1085",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "七七事变与全民族抗战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "抗日民族统一战线建立的标志和意义是？",
+      "answer": "以国共合作为主体的抗日民族统一战线正式建立；国共团结御侮、全民族抗战的局面形成，为全民族抗战奠定了坚实基础",
+      "keywords": [
+        {
+          "aliases": [
+            "以国共合作为主体的抗日民族统一战线正式建立",
+            "国共团结御侮、全民族抗战的局面形成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-七七事变与全民族抗战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1086",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "全民族抗战中的正面战场和敌后战场"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "正面战场的重要战役有？",
+      "answer": "平型关大捷（1937年9月，八路军第一一五师歼灭日军1000余人，是全民族抗战爆发后中国军队主动对日作战取得的第一个重大胜利，粉碎了日军\"不可战胜\"的神话）；台儿庄大捷（1938年3月，李宗仁指挥，歼敌1万余人，是抗战以来中国正面战场取得的最大胜仗）；武汉会战（1938年6-10月，历时四个多月，日本迅速灭亡中国的既定战略彻底破灭）",
+      "keywords": [
+        {
+          "aliases": [
+            "平型关大捷（1937年9月",
+            "八路军第一一五师歼灭日军1000余人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-全民族抗战中的正面战场和敌后战场"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1087",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "全民族抗战中的正面战场和敌后战场"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "百团大战的时间、指挥和意义是？",
+      "answer": "1940年8月至次年1月，彭德怀指挥八路军100多个团，在华北广阔地域对日军发起主动进攻；毙伤俘日、伪军4万多人，破坏敌方交通线近2000千米，拔掉据点近3000个；有力打击了日军侵略气焰，提高了共产党和八路军的威望",
+      "keywords": [
+        {
+          "aliases": [
+            "1940年8月至次年1月",
+            "彭德怀指挥八路军100多个团"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-全民族抗战中的正面战场和敌后战场"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1088",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "全民族抗战中的正面战场和敌后战场"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "敌后战场的重要战果是？",
+      "answer": "到1940年在华北、华中、华南创建16块根据地；游击战争取得神头岭、响堂铺、黄土岭等伏击战胜利（黄土岭击毙日军中将阿部规秀）；敌后战场逐渐成为中国抗日战争的主战场",
+      "keywords": [
+        {
+          "aliases": [
+            "到1940年在华北、华中、华南创建16块根据地",
+            "游击战争取得神头岭、响堂铺、黄土岭等伏击战胜利（黄土岭击毙日军中将阿部规秀）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-全民族抗战中的正面战场和敌后战场"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1089",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "全民族抗战中的正面战场和敌后战场"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "皖南事变的时间和影响是？",
+      "answer": "1941年1月，国民党顽固派伏击新四军制造皖南事变；中国共产党在政治上坚决回击并重建新四军军部，皖南事变的政治解决维护了抗日民族统一战线",
+      "keywords": [
+        {
+          "aliases": [
+            "1941年1月",
+            "国民党顽固派伏击新四军制造皖南事变"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-全民族抗战中的正面战场和敌后战场"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1090",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "全民族抗战中的正面战场和敌后战场"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中国战场在世界反法西斯战争中的地位是？",
+      "answer": "1942年1月，中国与美、英、苏等26国签署《联合国家宣言》；中国远征军入缅甸作战，取得仁安羌战役胜利；中国战场抗击和牵制日本三分之二以上的陆军和部分海空军事力量，是世界反法西斯战争的东方主战场",
+      "keywords": [
+        {
+          "aliases": [
+            "1942年1月",
+            "中国与美、英、苏等26国签署《联合国家宣言》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-全民族抗战中的正面战场和敌后战场"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1091",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "抗日战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中国共产党在全民族抗战中的中流砥柱作用表现在？",
+      "answer": "中国共产党是全民族抗战和抗日民族统一战线的倡导者、组织者和推动者；1938年5月毛泽东发表《论持久战》，阐明中国共产党抗日持久战战略总方针；在抗日根据地按\"三三制\"原则实行民主建政，推行精兵简政、大生产运动、减租减息等建设，为抗战胜利奠定坚实基础",
+      "keywords": [
+        {
+          "aliases": [
+            "中国共产党是全民族抗战和抗日民族统一战线的倡导者、组织者和推动者",
+            "1938年5月毛泽东发表《论持久战》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-抗日战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1092",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "抗日战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中共七大的时间和内容是？",
+      "answer": "1945年4月至6月在延安举行；制定了党的政治路线（放手发动群众，壮大人民力量，在中国共产党领导下，打败日本侵略者，解放全国人民，建立新民主主义的中国）；确立毛泽东思想为中国共产党的指导思想并写入党章",
+      "keywords": [
+        {
+          "aliases": [
+            "1945年4月至6月在延安举行",
+            "制定了党的政治路线（放手发动群众"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-抗日战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1093",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "抗日战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "抗日战争胜利的进程是？",
+      "answer": "1945年7月，中、美、英发表《波茨坦公告》敦促日本无条件投降；8月6日和9日美国向广岛和长崎投掷原子弹，8月8日苏联对日宣战出兵中国东北；毛泽东发表《对日寇的最后一战》；8月15日日本天皇宣布无条件投降，9月2日日本政府正式签署投降书",
+      "keywords": [
+        {
+          "aliases": [
+            "1945年7月",
+            "中、美、英发表《波茨坦公告》敦促日本无条件投降"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-抗日战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1094",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "抗日战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "抗日战争胜利的历史意义是？",
+      "answer": "是近代以来中国人民反抗外敌入侵第一次取得完全胜利的民族解放斗争；铸就了伟大抗战精神，成为中华民族走向复兴的历史转折点；促进了中华民族的觉醒，实现了中华民族的大团结，为中国共产党带领中国人民实现彻底的民族独立和人民解放奠定重要基础；中国战场为世界反法西斯战争的胜利和维护世界和平作出重大贡献，提高了中国的国际地位",
+      "keywords": [
+        {
+          "aliases": [
+            "是近代以来中国人民反抗外敌入侵第一次取得完全胜利的民族解放斗争",
+            "铸就了伟大抗战精神"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-抗日战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1095",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国民党挑起内战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "重庆谈判的时间和结果是？",
+      "answer": "1945年8月，毛泽东赴重庆同国民党进行谈判；10月10日国共双方签署《政府与中共代表会谈纪要》即\"双十协定\"，双方同意以和平、民主、团结、统一为基础，坚决避免内战，召开政治协商会议",
+      "keywords": [
+        {
+          "aliases": [
+            "1945年8月",
+            "毛泽东赴重庆同国民党进行谈判"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国民党挑起内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1096",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国民党挑起内战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "全面内战爆发的时间和标志是？",
+      "answer": "1946年6月，蒋介石公开撕毁政协协议，命令国民党军队全力围攻中原解放区，发动全面内战",
+      "keywords": [
+        {
+          "aliases": [
+            "1946年6月",
+            "蒋介石公开撕毁政协协议"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国民党挑起内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1097",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国民党挑起内战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "人民解放军粉碎国民党军进攻的作战原则和方针是？",
+      "answer": "集中优势兵力、各个歼灭敌人的作战原则；实施积极防御的作战方针，以运动战为主要方式，以歼灭敌人有生力量为主要目标",
+      "keywords": [
+        {
+          "aliases": [
+            "集中优势兵力、各个歼灭敌人的作战原则",
+            "实施积极防御的作战方针"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国民党挑起内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1098",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "国民党挑起内战"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "粉碎国民党军重点进攻的战役有？",
+      "answer": "1947年3月国民党军队重点进攻陕北和山东解放区；彭德怀指挥西北野战军取得青化砭、沙家店等战役胜利，粉碎对陕北的重点进攻；华东野战军在孟良崮战役中歼灭国民党军整编第七十四师，打退对山东解放区的重点进攻",
+      "keywords": [
+        {
+          "aliases": [
+            "1947年3月国民党军队重点进攻陕北和山东解放区",
+            "彭德怀指挥西北野战军取得青化砭、沙家店等战役胜利"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-国民党挑起内战"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1099",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人民解放战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "《中国土地法大纲》的时间和内容是？",
+      "answer": "1947年中国共产党召开全国土地会议颁布；规定没收地主土地，废除封建剥削的土地制度，实行耕者有其田，按乡村全部人口平均分配土地",
+      "keywords": [
+        {
+          "aliases": [
+            "1947年中国共产党召开全国土地会议颁布",
+            "规定没收地主土地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-人民解放战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1100",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人民解放战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "解放区土地改革的作用是？",
+      "answer": "使农村阶级关系和土地占有状况发生根本性变化，激发了农民革命和生产的积极性；翻身农民踊跃参军参战，为人民解放战争的胜利提供了重要的人力、物力保障",
+      "keywords": [
+        {
+          "aliases": [
+            "使农村阶级关系和土地占有状况发生根本性变化",
+            "激发了农民革命和生产的积极性"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-人民解放战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1101",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人民解放战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "人民解放军战略进攻开始的标志是？",
+      "answer": "1947年夏，刘伯承、邓小平率领晋冀鲁豫野战军主力强渡黄河，千里跃进大别山，直接威胁南京、武汉，揭开人民解放军战略进攻的序幕",
+      "keywords": [
+        {
+          "aliases": [
+            "1947年夏",
+            "刘伯承、邓小平率领晋冀鲁豫野战军主力强渡黄河"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-人民解放战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1102",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人民解放战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "三大战役的时间、概况和意义是？",
+      "answer": "1948年9月辽沈战役开始（东北野战军攻占锦州，解放东北全境）；随后华东野战军与中原野战军发起以徐州为中心的淮海战役（1949年1月结束）；东北野战军入关与华北军区部队发起平津战役（傅作义接受和平改编，北平和平解放）；三大战役共歼灭和改编国民党军队150多万人，国民党军队主力基本被消灭，大大加速了人民解放战争在全国的胜利",
+      "keywords": [
+        {
+          "aliases": [
+            "1948年9月辽沈战役开始（东北野战军攻占锦州",
+            "解放东北全境）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-人民解放战争的胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1103",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "8年级a册",
+    "knowledge_points": [
+      "人民解放战争的胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "渡江战役和中共七届二中全会的情况是？",
+      "answer": "1949年4月人民解放军百万雄师横渡长江，解放南京，宣告国民党反动统治覆灭；1949年3月中共七届二中全会在河北西柏坡召开，确定党的工作重心由乡村转向城市，党的奋斗目标是把中国逐渐由落后的农业国转变为先进的工业国，毛泽东提出\"两个务必\"",
+      "keywords": [
+        {
+          "aliases": [
+            "1949年4月人民解放军百万雄师横渡长江",
+            "解放南京"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-history-人民解放战争的胜利"
+    }
+  }
+]

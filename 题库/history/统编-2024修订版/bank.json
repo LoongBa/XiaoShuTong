@@ -1,0 +1,23 @@
+{
+  "bank_id": "history-7to9-2024r",
+  "subject": "history",
+  "name": "历史",
+  "version": "V1.0",
+  "source": "人教社统编版 2024 修订",
+  "purpose_tags": [
+    "memorize",
+    "assess",
+    "play"
+  ],
+  "supported_types": [
+    "R1",
+    "R2",
+    "R3a",
+    "R3b"
+  ],
+  "knowledge_card_template": "event_card",
+  "grading_preference": "exact",
+  "default_prompt": "通用判题",
+  "privacy": "private",
+  "owner": "system"
+}

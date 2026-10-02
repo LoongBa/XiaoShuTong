@@ -1,0 +1,2826 @@
+[
+  {
+    "id": "Q-geography-7to9-0190",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "亚洲的面积是多少？",
+      "answer": "约4400万平方千米，是世界面积最大的大洲",
+      "keywords": [
+        {
+          "aliases": [
+            "约4400万平方千米",
+            "是世界面积最大的大洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0191",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "亚洲的地势特点是？",
+      "answer": "中部高、四周低",
+      "keywords": [
+        {
+          "aliases": [
+            "中部高、四周低"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0192",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "北、东、南三面依次濒临北冰洋、太平洋、印度洋的大洲是？",
+      "answer": "亚洲",
+      "keywords": [
+        {
+          "aliases": [
+            "亚洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0193",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "季风气候显著、大陆性气候分布广、气候类型多样，这是哪个大洲的气候特点？",
+      "answer": "亚洲",
+      "keywords": [
+        {
+          "aliases": [
+            "亚洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0194",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写亚洲大河分布特点",
+      "answer": "多发源于中部山地、高原，呈放射状流向周边的海洋",
+      "keywords": [
+        {
+          "aliases": [
+            "多发源于中部山地、高原",
+            "呈放射状流向周边的海洋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0195",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写亚洲气候三大特点",
+      "answer": "季风气候显著；大陆性气候分布广；气候类型多样",
+      "keywords": [
+        {
+          "aliases": [
+            "季风气候显著",
+            "大陆性气候分布广"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0196",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然环境"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"亚洲的自然环境特征\"",
+      "answer": "面积最大（约4400万km²）；地势中部高四周低；大河呈放射状；气候季风显著+大陆性广+类型多样",
+      "keywords": [
+        {
+          "aliases": [
+            "面积最大（约4400万km²）",
+            "地势中部高四周低"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0197",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人文环境"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "亚洲人口稠密的地区有？",
+      "answer": "东亚、东南亚和南亚",
+      "keywords": [
+        {
+          "aliases": [
+            "东亚、东南亚和南亚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人文环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0198",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人文环境"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2020年亚洲人口约多少？",
+      "answer": "46.4亿（世界人口最多的大洲）",
+      "keywords": [
+        {
+          "aliases": [
+            "46.4亿（世界人口最多的大洲）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人文环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0199",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人文环境"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "以占世界1/3的陆地养活了占世界3/5的人口的是？",
+      "answer": "亚洲",
+      "keywords": [
+        {
+          "aliases": [
+            "亚洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人文环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0200",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人文环境"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写亚洲季风气候区和热带雨林气候区人口稠密的原因",
+      "answer": "地处中低纬度，气候适宜，离海洋较近，平均海拔较低，河流多；自然条件优越适宜农耕，农业开发历史悠久",
+      "keywords": [
+        {
+          "aliases": [
+            "地处中低纬度",
+            "气候适宜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人文环境"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0201",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "日本多火山地震的原因是？",
+      "answer": "位于亚欧板块与太平洋板块交界地带，地壳活跃",
+      "keywords": [
+        {
+          "aliases": [
+            "位于亚欧板块与太平洋板块交界地带",
+            "地壳活跃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0202",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "日本工业的主要分布地区？",
+      "answer": "太平洋沿岸和濑户内海沿岸",
+      "keywords": [
+        {
+          "aliases": [
+            "太平洋沿岸和濑户内海沿岸"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0203",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "由北海道、本州、四国、九州四个大岛组成的国家是？",
+      "answer": "日本",
+      "keywords": [
+        {
+          "aliases": [
+            "日本"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0204",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "进口原料、出口产品的加工贸易型经济是哪个国家的经济特点？",
+      "answer": "日本",
+      "keywords": [
+        {
+          "aliases": [
+            "日本"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0205",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写日本工业集中分布太平洋沿岸的原因",
+      "answer": "原料燃料依靠进口；产品主要用于出口；城市和人口集中、是国内最大消费地；海岸线曲折多优良港湾",
+      "keywords": [
+        {
+          "aliases": [
+            "原料燃料依靠进口",
+            "产品主要用于出口"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0206",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写日本应对地震的措施",
+      "answer": "建筑采用轻质材料；定期举行防震演练；普及抗震知识",
+      "keywords": [
+        {
+          "aliases": [
+            "建筑采用轻质材料",
+            "定期举行防震演练"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0207",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "日本"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"日本的地理特征\"",
+      "answer": "岛国（四大岛）；多火山地震（板块交界）；山地丘陵为主；海洋性季风气候；加工贸易型经济、工业沿太平洋沿岸分布",
+      "keywords": [
+        {
+          "aliases": [
+            "岛国（四大岛）",
+            "多火山地震（板块交界）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-日本"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0208",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "马六甲海峡的重要性是？",
+      "answer": "西亚、非洲石油运输到东亚的重要通道，被称为\"海上生命线\"",
+      "keywords": [
+        {
+          "aliases": [
+            "西亚、非洲石油运输到东亚的重要通道",
+            "被称为\"海上生命线\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0209",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "东南亚主要的气候类型有？",
+      "answer": "热带雨林气候（马来群岛）和热带季风气候（中南半岛）",
+      "keywords": [
+        {
+          "aliases": [
+            "热带雨林气候（马来群岛）和热带季风气候（中南半岛）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0210",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"十字路口\"位置指哪个地区？",
+      "answer": "东南亚（亚洲与大洋洲、太平洋与印度洋之间）",
+      "keywords": [
+        {
+          "aliases": [
+            "东南亚（亚洲与大洋洲、太平洋与印度洋之间）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0211",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "山河相间、纵列分布的地形是哪个地区的特征？",
+      "answer": "中南半岛",
+      "keywords": [
+        {
+          "aliases": [
+            "中南半岛"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0212",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写东南亚成为世界重要稻米出口地的原因",
+      "answer": "热带气候，水热充足；种植历史悠久；平原面积较大（河口三角洲）",
+      "keywords": [
+        {
+          "aliases": [
+            "热带气候",
+            "水热充足"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0213",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中南半岛大城市沿河分布的原因",
+      "answer": "河流沿岸地形平坦、土壤肥沃、水源充足、交通便利",
+      "keywords": [
+        {
+          "aliases": [
+            "河流沿岸地形平坦、土壤肥沃、水源充足、交通便利"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0214",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东南亚"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"东南亚的地理位置与农业\"",
+      "answer": "十字路口（马六甲海峡）；中南半岛+马来群岛；热带雨林/季风气候；水稻+天然橡胶/油棕/蕉麻/椰子",
+      "keywords": [
+        {
+          "aliases": [
+            "十字路口（马六甲海峡）",
+            "中南半岛+马来群岛"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-东南亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0215",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "印度水旱灾害频繁的原因是？",
+      "answer": "西南季风不稳定",
+      "keywords": [
+        {
+          "aliases": [
+            "西南季风不稳定"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0216",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "印度被称为\"世界办公室\"的原因是？",
+      "answer": "服务外包产业迅速发展",
+      "keywords": [
+        {
+          "aliases": [
+            "服务外包产业迅速发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0217",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "南亚面积最大的国家是？",
+      "answer": "印度",
+      "keywords": [
+        {
+          "aliases": [
+            "印度"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0218",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "改进农业技术、推广高产良种以提高粮食产量，这是印度的？",
+      "answer": "\"绿色革命\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"绿色革命\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0219",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写印度主要粮食作物的分布",
+      "answer": "水稻：东北部和沿海平原（降水多）；小麦：德干高原西北部（降水较少）",
+      "keywords": [
+        {
+          "aliases": [
+            "水稻：东北部和沿海平原（降水多）",
+            "小麦：德干高原西北部（降水较少）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0220",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写印度服务外包产业的特点",
+      "answer": "信息技术含量高、利润大、资源消耗少；中心是班加罗尔",
+      "keywords": [
+        {
+          "aliases": [
+            "信息技术含量高、利润大、资源消耗少",
+            "中心是班加罗尔"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0221",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "印度"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"印度农业与气候的关系\"",
+      "answer": "热带季风气候（全年高温、分旱雨两季）；西南季风不稳定→水旱灾害频繁→影响农业；绿色革命提高产量",
+      "keywords": [
+        {
+          "aliases": [
+            "热带季风气候（全年高温、分旱雨两季）",
+            "西南季风不稳定→水旱灾害频繁→影响农业"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-印度"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0222",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "俄罗斯的主要气候类型是？",
+      "answer": "温带大陆性气候",
+      "keywords": [
+        {
+          "aliases": [
+            "温带大陆性气候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0223",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "西伯利亚大铁路的地位是？",
+      "answer": "世界最长的铁路",
+      "keywords": [
+        {
+          "aliases": [
+            "世界最长的铁路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0224",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世界上面积最大的国家是？",
+      "answer": "俄罗斯",
+      "keywords": [
+        {
+          "aliases": [
+            "俄罗斯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0225",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "以铁路运输为主、重工业发达、资源基本自给的国家是？",
+      "answer": "俄罗斯",
+      "keywords": [
+        {
+          "aliases": [
+            "俄罗斯"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0226",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写俄罗斯被认为是欧洲国家的原因",
+      "answer": "欧洲部分面积仅占1/4，却集中全国约3/4的人口；一直是全国政治、经济和文化的中心地区；起源于欧洲",
+      "keywords": [
+        {
+          "aliases": [
+            "欧洲部分面积仅占1/4",
+            "却集中全国约3/4的人口"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0227",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写俄罗斯的自然资源特点",
+      "answer": "十分丰富，种类多、储量大，是世界少数几个资源基本自给的大国之一",
+      "keywords": [
+        {
+          "aliases": [
+            "十分丰富",
+            "种类多、储量大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0228",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "俄罗斯"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"俄罗斯的经济发展特点\"",
+      "answer": "重工业发达、轻工业相对薄弱；石油天然气出口收入比重大；航天核技术先进；铁路运输为主（西伯利亚大铁路世界最长）",
+      "keywords": [
+        {
+          "aliases": [
+            "重工业发达、轻工业相对薄弱",
+            "石油天然气出口收入比重大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-俄罗斯"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0229",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "西亚石油主要分布在？",
+      "answer": "波斯湾及其沿岸地区",
+      "keywords": [
+        {
+          "aliases": [
+            "波斯湾及其沿岸地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0230",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "霍尔木兹海峡的地位？",
+      "answer": "波斯湾沿岸地区唯一的出海通道，全球约1/3海上石油运输经过",
+      "keywords": [
+        {
+          "aliases": [
+            "波斯湾沿岸地区唯一的出海通道",
+            "全球约1/3海上石油运输经过"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0231",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"三洲五海\"之地指？",
+      "answer": "西亚（亚欧非三洲之间，阿拉伯海、红海、地中海、黑海、里海之间）",
+      "keywords": [
+        {
+          "aliases": [
+            "西亚（亚欧非三洲之间",
+            "阿拉伯海、红海、地中海、黑海、里海之间）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0232",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "波斯湾沿岸地区唯一的出海通道是？",
+      "answer": "霍尔木兹海峡",
+      "keywords": [
+        {
+          "aliases": [
+            "霍尔木兹海峡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0233",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写西亚水资源匮乏的原因及对策",
+      "answer": "气候干旱、降水稀少；发展节水农业（以色列滴灌喷灌）、海水淡化",
+      "keywords": [
+        {
+          "aliases": [
+            "气候干旱、降水稀少",
+            "发展节水农业（以色列滴灌喷灌）、海水淡化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0234",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写西亚成为热点地区的原因",
+      "answer": "地理位置重要、石油资源丰富、水资源匮乏、宗教文化差异大",
+      "keywords": [
+        {
+          "aliases": [
+            "地理位置重要、石油资源丰富、水资源匮乏、宗教文化差异大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0235",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西亚"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"西亚的自然环境与石油经济\"",
+      "answer": "三洲五海之地；热带沙漠气候为主、水资源匮乏；石油分布在波斯湾沿岸、出口东亚/欧洲西部/北美；霍尔木兹海峡是唯一出海通道",
+      "keywords": [
+        {
+          "aliases": [
+            "三洲五海之地",
+            "热带沙漠气候为主、水资源匮乏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-西亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0236",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "欧洲西部"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "欧洲西部畜牧业发达的原因是？",
+      "answer": "温带海洋性气候，全年温和湿润，适合多汁牧草生长",
+      "keywords": [
+        {
+          "aliases": [
+            "温带海洋性气候",
+            "全年温和湿润"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-欧洲西部"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0237",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "欧洲西部"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "欧洲西部主要的气候类型有？",
+      "answer": "温带海洋性气候和地中海气候",
+      "keywords": [
+        {
+          "aliases": [
+            "温带海洋性气候和地中海气候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-欧洲西部"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0238",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "欧洲西部"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "牧草被称为\"绿色金子\"的地区是？",
+      "answer": "欧洲西部",
+      "keywords": [
+        {
+          "aliases": [
+            "欧洲西部"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-欧洲西部"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0239",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "欧洲西部"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "发达国家集中的地区是？",
+      "answer": "欧洲西部",
+      "keywords": [
+        {
+          "aliases": [
+            "欧洲西部"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-欧洲西部"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0240",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "欧洲西部"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写温带海洋性气候的特点",
+      "answer": "全年温和湿润，降水均匀，适合多汁牧草生长",
+      "keywords": [
+        {
+          "aliases": [
+            "全年温和湿润",
+            "降水均匀"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-欧洲西部"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0241",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "欧洲西部"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"欧洲西部的经济特点\"",
+      "answer": "发达国家集中；工业中心多、工艺水平高；农业机械化程度高；畜牧业发达（温带海洋性气候）；旅游业发达",
+      "keywords": [
+        {
+          "aliases": [
+            "发达国家集中",
+            "工业中心多、工艺水平高"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-欧洲西部"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0242",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "撒哈拉以南非洲的人种特点是？",
+      "answer": "黑种人的故乡（90%以上是黑种人）",
+      "keywords": [
+        {
+          "aliases": [
+            "黑种人的故乡（90%以上是黑种人）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0243",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "撒哈拉以南非洲的经济特点？",
+      "answer": "历史上形成单一商品经济，近年来快速发展、走向多样化",
+      "keywords": [
+        {
+          "aliases": [
+            "历史上形成单一商品经济",
+            "近年来快速发展、走向多样化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0244",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "被称为\"高原大陆\"、气候以赤道为中心南北对称分布的地区是？",
+      "answer": "撒哈拉以南非洲",
+      "keywords": [
+        {
+          "aliases": [
+            "撒哈拉以南非洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0245",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "黑种人的故乡是？",
+      "answer": "撒哈拉以南非洲",
+      "keywords": [
+        {
+          "aliases": [
+            "撒哈拉以南非洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0246",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写撒哈拉以南非洲面临的主要问题",
+      "answer": "人口增长过快、粮食供应不足、环境恶化（三大问题）",
+      "keywords": [
+        {
+          "aliases": [
+            "人口增长过快、粮食供应不足、环境恶化（三大问题）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0247",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写单一商品经济的弊端",
+      "answer": "出口初级产品、进口工业制成品，在国际贸易中处于不利地位",
+      "keywords": [
+        {
+          "aliases": [
+            "出口初级产品、进口工业制成品",
+            "在国际贸易中处于不利地位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0248",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "撒哈拉以南非洲"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"撒哈拉以南非洲的自然与人文特征\"",
+      "answer": "高原大陆；气候对称分布；黑种人故乡；单一商品经济→多样化发展；人口粮食环境问题突出",
+      "keywords": [
+        {
+          "aliases": [
+            "高原大陆",
+            "气候对称分布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-撒哈拉以南非洲"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0249",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "澳大利亚被称为\"骑在羊背上的国家\"的原因是？",
+      "answer": "养羊业发达，羊毛产量和出口量居世界前列",
+      "keywords": [
+        {
+          "aliases": [
+            "养羊业发达",
+            "羊毛产量和出口量居世界前列"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0250",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "澳大利亚被称为\"坐在矿车上的国家\"的原因是？",
+      "answer": "煤炭和铁矿石产量、出口量居世界前列",
+      "keywords": [
+        {
+          "aliases": [
+            "煤炭和铁矿石产量、出口量居世界前列"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0251",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世界上唯一独占一块大陆的国家是？",
+      "answer": "澳大利亚",
+      "keywords": [
+        {
+          "aliases": [
+            "澳大利亚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0252",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "有袋鼠、考拉、鸭嘴兽等特有动物的国家是？",
+      "answer": "澳大利亚",
+      "keywords": [
+        {
+          "aliases": [
+            "澳大利亚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0253",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写澳大利亚特有动物多的原因",
+      "answer": "长期孤立于其他大陆，缺少大型食肉动物，演化出独特动植物",
+      "keywords": [
+        {
+          "aliases": [
+            "长期孤立于其他大陆",
+            "缺少大型食肉动物"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0254",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写澳大利亚成为我国最大铁矿石进口国的原因",
+      "answer": "铁矿石储量全球首位、品质优、埋藏浅、开采成本低；距离我国最近、运输成本低",
+      "keywords": [
+        {
+          "aliases": [
+            "铁矿石储量全球首位、品质优、埋藏浅、开采成本低",
+            "距离我国最近、运输成本低"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0255",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "澳大利亚"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"澳大利亚的农牧业与矿业\"",
+      "answer": "骑在羊背上的国家（养羊业）+坐在矿车上的国家（煤铁出口）；气候半环状分布；人口集中在东南沿海",
+      "keywords": [
+        {
+          "aliases": [
+            "骑在羊背上的国家（养羊业）+坐在矿车上的国家（煤铁出口）",
+            "气候半环状分布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-澳大利亚"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0256",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "美国的农业特点是？",
+      "answer": "地区生产专业化，形成传统农业带（区）",
+      "keywords": [
+        {
+          "aliases": [
+            "地区生产专业化",
+            "形成传统农业带（区）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0257",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "美国高新技术产业中心是？",
+      "answer": "旧金山东南的\"硅谷\"",
+      "keywords": [
+        {
+          "aliases": [
+            "旧金山东南的\"硅谷\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0258",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世界第三人口大国、接收移民数量最多的国家是？",
+      "answer": "美国",
+      "keywords": [
+        {
+          "aliases": [
+            "美国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0259",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "综合地形、气候、水源、市场等条件形成的生产区域是？",
+      "answer": "美国的农业带（区）",
+      "keywords": [
+        {
+          "aliases": [
+            "美国的农业带（区）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0260",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写美国的地形特点",
+      "answer": "西部高大的科迪勒拉山系；中部广阔的中央平原；东部低缓的阿巴拉契亚山地",
+      "keywords": [
+        {
+          "aliases": [
+            "西部高大的科迪勒拉山系",
+            "中部广阔的中央平原"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0261",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写美国农业带形成的条件",
+      "answer": "综合地形、气候、水源、市场等多种条件逐渐形成",
+      "keywords": [
+        {
+          "aliases": [
+            "综合地形、气候、水源、市场等多种条件逐渐形成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0262",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "美国"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"美国的经济地理特征\"",
+      "answer": "移民国家（人口超3亿）；农业地区专业化（农业带）；世界最发达工业国家；硅谷高新技术产业",
+      "keywords": [
+        {
+          "aliases": [
+            "移民国家（人口超3亿）",
+            "农业地区专业化（农业带）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-美国"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0263",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "亚马孙热带雨林被称为？",
+      "answer": "\"地球之肺\"（地球上面积最大的热带雨林，60%在巴西境内）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"地球之肺\"（地球上面积最大的热带雨林",
+            "60%在巴西境内）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0264",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "巴西的主要农产品有？",
+      "answer": "咖啡、蔗糖（甘蔗）、柑橘等产量和出口量居世界前列",
+      "keywords": [
+        {
+          "aliases": [
+            "咖啡、蔗糖（甘蔗）、柑橘等产量和出口量居世界前列"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0265",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世界流域面积最广、水量最大的河流是？",
+      "answer": "亚马孙河",
+      "keywords": [
+        {
+          "aliases": [
+            "亚马孙河"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0266",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "南美洲人口最多、混血种人约占总人口45%的国家是？",
+      "answer": "巴西",
+      "keywords": [
+        {
+          "aliases": [
+            "巴西"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0267",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写巴西地形特点",
+      "answer": "以平原和高原为主：西北部亚马孙平原、东南部巴西高原",
+      "keywords": [
+        {
+          "aliases": [
+            "以平原和高原为主：西北部亚马孙平原、东南部巴西高原"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0268",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写热带雨林遭受破坏的原因及影响",
+      "answer": "大规模开发（修路、开矿、伐木、开辟农场）→水土流失加剧、生物多样性减少、影响全球气候",
+      "keywords": [
+        {
+          "aliases": [
+            "大规模开发（修路、开矿、伐木、开辟农场）→水土流失加剧、生物多样性减少、影响全球气候"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0269",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巴西"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"巴西的自然与经济发展\"",
+      "answer": "热带大国（大部分位于热带）；亚马孙平原+巴西高原；混血种人社会；咖啡蔗糖柑橘出口前列；铁矿石储量大；生物燃料（甘蔗乙醇）发展迅速；热带雨林保护与开发矛盾",
+      "keywords": [
+        {
+          "aliases": [
+            "热带大国（大部分位于热带）",
+            "亚马孙平原+巴西高原"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-巴西"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0270",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "南极地区的气候特点是？",
+      "answer": "酷寒、多狂风、降水稀少（\"冰雪高原\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "酷寒、多狂风、降水稀少（\"冰雪高原\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0271",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "南极地区的代表性动物是？",
+      "answer": "企鹅；北极地区是北极熊",
+      "keywords": [
+        {
+          "aliases": [
+            "企鹅",
+            "北极地区是北极熊"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0272",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "覆盖2000多米厚冰层、被称为\"冰雪高原\"的是？",
+      "answer": "南极大陆",
+      "keywords": [
+        {
+          "aliases": [
+            "南极大陆"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0273",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "主体是北冰洋、年平均气温约-10℃、比南极温暖的是？",
+      "answer": "北极地区",
+      "keywords": [
+        {
+          "aliases": [
+            "北极地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0274",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写南极比北极冷得多的原因",
+      "answer": "南极主体是大陆、平均海拔超2300米、被冰冷海水环绕；北极近2/3是海洋、海拔低、有温暖海水流入",
+      "keywords": [
+        {
+          "aliases": [
+            "南极主体是大陆、平均海拔超2300米、被冰冷海水环绕",
+            "北极近2/3是海洋、海拔低、有温暖海水流入"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0275",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国在南极的科考站",
+      "answer": "长城站、中山站、昆仑站、泰山站等",
+      "keywords": [
+        {
+          "aliases": [
+            "长城站、中山站、昆仑站、泰山站等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0276",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "极地地区"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"极地地区的自然与科考\"",
+      "answer": "南极（大陆、酷寒、冰雪高原、企鹅）；北极（海洋、较温暖、北极熊）；科考意义重大；《南极条约》规定只用于和平目的",
+      "keywords": [
+        {
+          "aliases": [
+            "南极（大陆、酷寒、冰雪高原、企鹅）",
+            "北极（海洋、较温暖、北极熊）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-极地地区"
+    }
+  }
+]

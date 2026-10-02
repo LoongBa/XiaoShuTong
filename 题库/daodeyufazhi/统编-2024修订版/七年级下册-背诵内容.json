@@ -1,0 +1,1698 @@
+[
+  {
+    "id": "Q-daodeyufazhi-7to9-0157",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "青春正当时"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "青春期生理变化表现在哪些方面？怎样正确对待？",
+      "answer": "身体外形的变化、体内机能的增强、性的发育和成熟；身体发育的节奏各有不同，我们既不要因自己的生理变化而焦虑或自卑，也不应嘲弄他人的生理变化",
+      "keywords": [
+        {
+          "aliases": [
+            "身体外形的变化、体内机能的增强、性的发育和成熟",
+            "身体发育的节奏各有不同"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-青春正当时"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0158",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "青春正当时"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "青春期心理变化的特点和矛盾性表现是什么？",
+      "answer": "认知能力得到提高、自我意识不断增强、情感世界愈加丰富；身体发育迅速而心理发展相对缓慢，身心处于不平衡状态，在心理上表现出一定的矛盾性，如独立与依赖、闭锁与开放、勇敢与怯懦",
+      "keywords": [
+        {
+          "aliases": [
+            "认知能力得到提高、自我意识不断增强、情感世界愈加丰富",
+            "身体发育迅速而心理发展相对缓慢"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-青春正当时"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0159",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "青春正当时"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样积极面对青春期的心理矛盾和困惑？",
+      "answer": "参加集体活动，在集体的温暖中接纳和调整自己；求助老师、家长和心理医生，化解烦恼、解决问题；学会自我调节，成为自己的\"心理保健医生\"",
+      "keywords": [
+        {
+          "aliases": [
+            "参加集体活动",
+            "在集体的温暖中接纳和调整自己"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-青春正当时"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0160",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "青春正当时"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "与异性交往有什么积极作用？应把握什么尺度？",
+      "answer": "积极作用：增进对异性的了解、消除神秘感，扩大交往范围、提高交往能力，有助于完善自身；尺度：注意交往的方式、场合、时间和频率，既要热情大方，又要掌握分寸，做到言谈得当、举止得体；面对对异性的朦胧情感，应慎重对待、理智处理",
+      "keywords": [
+        {
+          "aliases": [
+            "积极作用：增进对异性的了解、消除神秘感",
+            "扩大交往范围、提高交往能力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-青春正当时"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0161",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "青春正当时"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "面对性骚扰、性侵害，我们应该怎样学会自我保护？",
+      "answer": "树立正确的道德观念和牢固的法律意识，遵守中学生日常行为规范，触碰道德底线的事情坚决不做、违反法律的事情坚决不做；增强自我保护意识，提高预防和应对性骚扰、性侵害的能力，学会辨别并抵制性骚扰、性侵害等行为，学会运用法律武器维护自己的合法权益",
+      "keywords": [
+        {
+          "aliases": [
+            "树立正确的道德观念和牢固的法律意识",
+            "遵守中学生日常行为规范"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-青春正当时"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0162",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "做情绪情感的主人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "人的情绪有什么特点？",
+      "answer": "人的情绪是复杂多样的，除了常见的喜、怒、哀、惧，还有自豪、感激、焦虑、厌恶、内疚等；情绪是人的内心世界的重要组成部分，是主观体验，常常伴随着生理感受，并通过语言、表情和行为等表现出来，是人的内心世界的\"晴雨表\"",
+      "keywords": [
+        {
+          "aliases": [
+            "人的情绪是复杂多样的",
+            "除了常见的喜、怒、哀、惧"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-做情绪情感的主人"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0163",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "做情绪情感的主人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "情绪对人的观念和行动有什么影响？",
+      "answer": "情绪会影响人的观念和行动：快乐、自豪、满足等积极情绪通常伴随愉悦的体验，可以提高人的积极性和活动能力；愤怒、焦虑、恐惧等消极情绪通常带来不良体验、产生负面影响；在一定条件下，消极情绪也会有积极作用，如适度的焦虑情绪可以把压力转化为动力",
+      "keywords": [
+        {
+          "aliases": [
+            "情绪会影响人的观念和行动：快乐、自豪、满足等积极情绪通常伴随愉悦的体验",
+            "可以提高人的积极性和活动能力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-做情绪情感的主人"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0164",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "做情绪情感的主人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "管理情绪的方法有哪些？",
+      "answer": "学会认识自己的情绪（觉察情绪、明确情绪背后的真实需要和现实原因）；学会调节情绪（注意转移、合理宣泄、认知调节、放松训练等方法）；学会合理表达情绪（选择合适场合、用合理方式表达，注意关照他人的感受）；学会在帮助他人、奉献社会中培养积极健康的情绪",
+      "keywords": [
+        {
+          "aliases": [
+            "学会认识自己的情绪（觉察情绪、明确情绪背后的真实需要和现实原因）",
+            "学会调节情绪（注意转移、合理宣泄、认知调节、放松训练等方法）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-做情绪情感的主人"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0165",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "做情绪情感的主人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "情感与情绪有什么关系？情感有什么作用？",
+      "answer": "情感是比情绪更为深刻、稳定的内心体验，是人基本的精神需求；情感反映着我们对人对事的态度、观念，影响我们的判断和选择，促使我们作出行动；情感能够提升我们的想象力、创造力，丰富、深刻的情感有助于我们更全面地观察事物、探索未知；情感的发展体现我们的生命成长，使我们的情怀更宽广、博大",
+      "keywords": [
+        {
+          "aliases": [
+            "情感是比情绪更为深刻、稳定的内心体验",
+            "是人基本的精神需求"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-做情绪情感的主人"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0166",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "做情绪情感的主人"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样获得积极情感体验、对待消极情感？",
+      "answer": "通过与人交往、积极参与有意义的社会活动等方式有意识地增加积极情感体验；学会承受和转化消极情感（体验消极情感未必是坏事，接受挫折的考验、学会转化消极情感，可以让我们感受到生活的美好，不断成长）；在实践中提升情感境界，从做好小事、管好小节开始，在长期实践和奉献社会中提升内在修养，让情感升华为高尚情操",
+      "keywords": [
+        {
+          "aliases": [
+            "通过与人交往、积极参与有意义的社会活动等方式有意识地增加积极情感体验",
+            "学会承受和转化消极情感（体验消极情感未必是坏事"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-做情绪情感的主人"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0167",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人贵自尊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "什么是自尊？自尊的人有哪些表现？",
+      "answer": "自尊是对自我价值的肯定，包括自我尊重和赢得他人的尊重；自尊的人能认可自己（了解自己的优点和长处，肯定自己的价值，积极表现自己）；自尊的人知廉耻、明是非（有羞耻心，做到行己有耻，自觉约束自己的行为）；自尊的人不爱慕虚荣（不为名利所惑，不过分追求表面上的荣耀）",
+      "keywords": [
+        {
+          "aliases": [
+            "自尊是对自我价值的肯定",
+            "包括自我尊重和赢得他人的尊重"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人贵自尊"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0168",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人贵自尊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"行己有耻\"的含义是什么？",
+      "answer": "对自己不善的动机和行为有羞耻心，能够以羞耻心约束自己的行为，凡自己认为可耻的事就不去做",
+      "keywords": [
+        {
+          "aliases": [
+            "对自己不善的动机和行为有羞耻心",
+            "能够以羞耻心约束自己的行为"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人贵自尊"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0169",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人贵自尊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样维护自己的人格尊严？",
+      "answer": "恪守为人之德，坚持人格独立，不做有损人格的事；面对他人的议论或批评，要有平和、豁达的心态，做到\"有则改之，无则加勉\"；面对他人的侮辱和诋毁，应当予以回击，必要时运用法律武器保护自己",
+      "keywords": [
+        {
+          "aliases": [
+            "恪守为人之德",
+            "坚持人格独立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人贵自尊"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0170",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人贵自尊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样做自尊的人？",
+      "answer": "学会维护自己的人格尊严；学会不断提升自己（真正的自尊，来自一个人的努力、拼搏和进取）；学会尊重他人（尊重他人的隐私和人格，不取笑、歧视他人，更不能侮辱他人；接纳他人不同的个性和处世风格，尊重他人不同的生活习惯，珍视他人的劳动和付出）",
+      "keywords": [
+        {
+          "aliases": [
+            "学会维护自己的人格尊严",
+            "学会不断提升自己（真正的自尊"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人贵自尊"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0171",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "自信给人力量"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "什么是自信？",
+      "answer": "自信就是相信自己，是一个人对自身能力的肯定，是一个人自身能力的彰显，是一个人精神风貌的体现",
+      "keywords": [
+        {
+          "aliases": [
+            "自信就是相信自己",
+            "是一个人对自身能力的肯定"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-自信给人力量"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0172",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "自信给人力量"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "自信、自负、自卑有什么区别？",
+      "answer": "自负表现为过高地估计自己、自以为是、好高骛远；自卑表现为轻视自己、认为自己不如别人、低估自己的能力、不敢尝试；自信表现为能够实事求是地看待自己，坦然面对真实的自己，从容应对学习和生活中的各种问题",
+      "keywords": [
+        {
+          "aliases": [
+            "自负表现为过高地估计自己、自以为是、好高骛远",
+            "自卑表现为轻视自己、认为自己不如别人、低估自己的能力、不敢尝试"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-自信给人力量"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0173",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "自信给人力量"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "自信有什么作用？自信从何而来？",
+      "answer": "自信让人远离自负与自卑；自信让人乐观坚定，自信是\"我能行\"的信念，让我们充满希望和力量，面对困难和失败不轻言放弃，朝着既定目标勇毅前行；自信源于成长过程中积累的实力，源于在和他人交往中获得的肯定，源于从社会稳定发展、国家繁荣富强中获得的安全感、成就感和自豪感",
+      "keywords": [
+        {
+          "aliases": [
+            "自信让人远离自负与自卑",
+            "自信让人乐观坚定"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-自信给人力量"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0174",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "自信给人力量"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样做自信的人？",
+      "answer": "找准定位、扬长避短（客观认识自己、准确定位自己，充分发挥优势、认清不足，避免盲目自信）；专注当下、积极行动（明确目标，心无旁骛，全力以赴，不惧失败）；勇于探索、增强底气（有直面挑战的勇气，大胆应对学习和生活中的新问题，在解决问题中展现实力、提升能力）",
+      "keywords": [
+        {
+          "aliases": [
+            "找准定位、扬长避短（客观认识自己、准确定位自己",
+            "充分发挥优势、认清不足"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-自信给人力量"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0175",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人生当自强"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "什么是自强？自强与个人、民族、国家有什么关系？",
+      "answer": "自强是自我勉励、发愤图强，是一种奋发进取的精神状态，是一种不断完善自我、超越自我的人生追求；自强不仅关系个人的成长，而且关系民族的命运和国家的未来",
+      "keywords": [
+        {
+          "aliases": [
+            "自强是自我勉励、发愤图强",
+            "是一种奋发进取的精神状态"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人生当自强"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0176",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人生当自强"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"天行健，君子以自强不息\"说明了什么？",
+      "answer": "自强不息是中华民族几千年文化传承和社会实践沉淀出的优良传统；正是一代又一代中国人自强不息地接力传承，中华民族才历经沧桑而不衰、饱经磨难而更强，自立于世界民族之林",
+      "keywords": [
+        {
+          "aliases": [
+            "自强不息是中华民族几千年文化传承和社会实践沉淀出的优良传统",
+            "正是一代又一代中国人自强不息地接力传承"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人生当自强"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0177",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人生当自强"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "自强使人自主自立、奋发向上表现在哪里？",
+      "answer": "自强使人自主自立：自强的人能够\"克己\"\"自胜\"，主动发掘自身力量，依靠自己的努力拼搏勇敢面对生活，获得生存和发展的机会；自强使人奋发向上：自强的人有锲而不舍的坚毅品格，积极进取，知不足而奋进、望远山而力行，不断挑战自我、超越自我",
+      "keywords": [
+        {
+          "aliases": [
+            "自强使人自主自立：自强的人能够\"克己\"\"自胜\"",
+            "主动发掘自身力量"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人生当自强"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0178",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "人生当自强"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样做自强不息的中国人？",
+      "answer": "树立远大理想，怀有拳拳爱国之心、立下报国之志，把个人命运与祖国发展结合起来；求得真学问、练就真本领，认真对待各门课程、勤学好问、夯实基础，提高解决问题的能力；在苦干实干中磨砺成长、砥砺前行，学会依靠自己、对自己负责，不怕吃苦、努力耕耘，才能有所收获、有所成就",
+      "keywords": [
+        {
+          "aliases": [
+            "树立远大理想",
+            "怀有拳拳爱国之心、立下报国之志"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-人生当自强"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0179",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "传承核心思想理念"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中华优秀传统文化有哪些重要的思想理念？",
+      "answer": "道法自然、天人合一的思想；脚踏实地、实事求是的思想；革故鼎新、与时俱进的思想；惠民利民、安民富民的思想",
+      "keywords": [
+        {
+          "aliases": [
+            "道法自然、天人合一的思想",
+            "脚踏实地、实事求是的思想"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-传承核心思想理念"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0180",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "传承核心思想理念"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"道法自然、天人合一\"的思想内容是什么？",
+      "answer": "主张尊重、顺应大自然运行的规律，与天地万物和谐共生，即\"天地与我并生，而万物与我为一\"",
+      "keywords": [
+        {
+          "aliases": [
+            "主张尊重、顺应大自然运行的规律",
+            "与天地万物和谐共生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-传承核心思想理念"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0181",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "传承核心思想理念"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "今天传承中华优秀传统文化要弘扬哪些核心思想理念？",
+      "answer": "讲仁爱、重民本、守诚信、崇正义、尚和合、求大同等核心思想理念",
+      "keywords": [
+        {
+          "aliases": [
+            "讲仁爱、重民本、守诚信、崇正义、尚和合、求大同等核心思想理念"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-传承核心思想理念"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0182",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "传承核心思想理念"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"讲仁爱\"\"重民本\"\"守诚信\"分别要求我们怎么做？",
+      "answer": "讲仁爱：要求\"亲亲\"\"仁民\"\"爱物\"，即爱自己的亲人、爱全社会的人、爱天地万物，关爱亲人、友善待人、爱惜万物；重民本：遵循\"民惟邦本，本固邦宁\"的古训，充分认识人民在国家中的地位和作用，站稳人民立场，不断增强为人民服务的本领；守诚信：做到真实无欺、言行一致，树立诚信意识，做诚实守信的人",
+      "keywords": [
+        {
+          "aliases": [
+            "讲仁爱：要求\"亲亲\"\"仁民\"\"爱物\"",
+            "即爱自己的亲人、爱全社会的人、爱天地万物"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-传承核心思想理念"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0183",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "传承核心思想理念"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"崇正义\"\"尚和合\"\"求大同\"分别要求我们怎么做？",
+      "answer": "崇正义：坚持做正确的事、做符合道义的事，将道义置于优先位置，让言行合乎道义，弘扬社会正气；尚和合：追求和谐、强调多样性统一，正确看待差异与矛盾，坚持多样性统一，构建人与人、人与社会、人与自然之间的和谐关系；求大同：胸怀天下，牢记\"大道之行也，天下为公\"的古训，热爱祖国和人民，积极为人类的发展和进步作贡献",
+      "keywords": [
+        {
+          "aliases": [
+            "崇正义：坚持做正确的事、做符合道义的事",
+            "将道义置于优先位置"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-传承核心思想理念"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0184",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "弘扬中华人文精神"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中华人文精神主要体现在哪些方面？",
+      "answer": "处世方法、教化思想、美学追求、生活理念等诸多方面",
+      "keywords": [
+        {
+          "aliases": [
+            "处世方法、教化思想、美学追求、生活理念等诸多方面"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-弘扬中华人文精神"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0185",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "弘扬中华人文精神"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"求同存异、和而不同\"的处世方法是什么？有什么意义？",
+      "answer": "求同存异：既找出共同点、找到最大公约数，又保留不同点、尊重不同意见；和而不同：倡导和谐相处、协调不同意见，但不盲从苟同；这种处世方法有助于解决人际矛盾，为化解当代社会冲突提供重要启示",
+      "keywords": [
+        {
+          "aliases": [
+            "求同存异：既找出共同点、找到最大公约数",
+            "又保留不同点、尊重不同意见"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-弘扬中华人文精神"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0186",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "弘扬中华人文精神"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"文以载道、以文化人\"\"形神兼备、情景交融\"\"俭约自守、中和泰和\"分别指什么？",
+      "answer": "文以载道、以文化人：文化表现形式承载着做人做事的道理，可以教育人、感化人、成就理想人格；形神兼备、情景交融：文艺作品不但具有美妙形态，而且富有独特神韵，人们追求立象尽意，主张将人的思想情感与外界景物融为一体；俭约自守、中和泰和：倡导俭朴、简约的生活方式，强调不为物役，追求人与自身、人与人、人与世界的和谐统一",
+      "keywords": [
+        {
+          "aliases": [
+            "文以载道、以文化人：文化表现形式承载着做人做事的道理",
+            "可以教育人、感化人、成就理想人格"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-弘扬中华人文精神"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0187",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "弘扬中华人文精神"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样弘扬中华人文精神？",
+      "answer": "弘扬促进社会和谐的思想文化（推崇\"万物并育而不相害，道并行而不相悖\"，正确运用求同存异、和而不同的方法，为促进社会和谐贡献力量）；弘扬向上向善的思想文化（立己达人、兼善天下，积极进取、爱人利人、择善而行，向榜样学习、勇担使命，争做向上向善的好少年）",
+      "keywords": [
+        {
+          "aliases": [
+            "弘扬促进社会和谐的思想文化（推崇\"万物并育而不相害",
+            "道并行而不相悖\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-弘扬中华人文精神"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0188",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "践行中华传统美德"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中华传统美德具有怎样的地位？",
+      "answer": "中华传统美德是中华优秀传统文化的精髓，是世代相传的民族智慧，是中华民族走向未来的宝贵精神财富",
+      "keywords": [
+        {
+          "aliases": [
+            "中华传统美德是中华优秀传统文化的精髓",
+            "是世代相传的民族智慧"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-践行中华传统美德"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0189",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "践行中华传统美德"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "\"孝悌忠信、礼义廉耻\"分别指什么？",
+      "answer": "孝：对父母长辈的尊重和爱戴；悌：对兄长的敬爱和恭顺，也泛指对同辈和朋友的尊敬和友善；忠：尽心竭力、尽职尽责，常指为国尽忠；信：讲诚信；礼：为人处世懂礼貌、讲规矩；义：做事情符合道义；廉：廉洁奉公；耻：自尊自重，有羞耻之心",
+      "keywords": [
+        {
+          "aliases": [
+            "孝：对父母长辈的尊重和爱戴",
+            "悌：对兄长的敬爱和恭顺"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-践行中华传统美德"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0190",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "践行中华传统美德"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中华传统美德包括哪些主要内容？",
+      "answer": "孝悌忠信、礼义廉耻的荣辱观念；崇德向善、见贤思齐的社会风尚；精忠报国、振兴中华的爱国情怀；天下兴亡、匹夫有责的担当意识",
+      "keywords": [
+        {
+          "aliases": [
+            "孝悌忠信、礼义廉耻的荣辱观念",
+            "崇德向善、见贤思齐的社会风尚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-践行中华传统美德"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0191",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "践行中华传统美德"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "在生活中有哪些需要大力弘扬和践行的中华传统美德？",
+      "answer": "自强不息、敬业乐群、扶危济困、见义勇为、孝老爱亲等中华传统美德",
+      "keywords": [
+        {
+          "aliases": [
+            "自强不息、敬业乐群、扶危济困、见义勇为、孝老爱亲等中华传统美德"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-践行中华传统美德"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0192",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "践行中华传统美德"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样做中华传统美德的践行者？",
+      "answer": "做自强不息的人（自立自强、刚健有为，以顽强的意志和不屈的精神不断开辟人生的新天地）；做敬业乐群的人（专心致志、爱岗敬业、尽职尽责，在集体中与人和睦相处、团结协作）；做扶危济困的人（当他人身处困境时主动伸出援助之手）；做见义勇为的人（当国家利益和社会公共利益受到侵害、他人遇到危难时敢于挺身而出）；做孝老爱亲的人（孝敬老人、爱护亲人，将爱的情感和责任扩展到全社会）；传承中华传统美德，关键在于践行",
+      "keywords": [
+        {
+          "aliases": [
+            "做自强不息的人（自立自强、刚健有为",
+            "以顽强的意志和不屈的精神不断开辟人生的新天地）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-践行中华传统美德"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0193",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "法律为我们护航"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "我国法律的性质和我国法律体系的特征是什么？",
+      "answer": "我国是人民当家作主的社会主义国家，我国法律体现广大人民的根本利益和共同意志，我国的法律体系必然是中国特色社会主义性质的法律体系；我国形成并不断完善以宪法为核心的中国特色社会主义法律体系，国家生活和社会生活各方面总体上实现了有法可依",
+      "keywords": [
+        {
+          "aliases": [
+            "我国是人民当家作主的社会主义国家",
+            "我国法律体现广大人民的根本利益和共同意志"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-法律为我们护航"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0194",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "法律为我们护航"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "中国特色社会主义法律体系的构成是怎样的？",
+      "answer": "以宪法为统帅，以法律为主干，以行政法规、地方性法规为重要组成部分，由宪法相关法、民法商法、行政法、经济法、社会法、刑法、诉讼与非诉讼程序法等多个法律部门组成的有机统一整体",
+      "keywords": [
+        {
+          "aliases": [
+            "以宪法为统帅",
+            "以法律为主干"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-法律为我们护航"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0195",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "法律为我们护航"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "法律保障生活体现在哪些方面？",
+      "answer": "法律保护社会公共利益（社会公共利益蕴含每个人的根本利益和长远利益，法律通过设定个人权利的界限平衡个人利益与社会公共利益）；法律维护社会秩序（规范全体社会成员的行为、建立实行各种社会制度、调解纠纷和制裁违法犯罪，促进公平正义、保障安居乐业）；法律促进社会发展（为促进各行业各领域事业发展提供方向指引和有力保障）",
+      "keywords": [
+        {
+          "aliases": [
+            "法律保护社会公共利益（社会公共利益蕴含每个人的根本利益和长远利益",
+            "法律通过设定个人权利的界限平衡个人利益与社会公共利益）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-法律为我们护航"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0196",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "法律为我们护航"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "为什么说法律的生命力在于实施？",
+      "answer": "\"天下之事，不难于立法，而难于法之必行\"，如果有了法律而不实施，制定再多法律也无济于事；我们要从内心深处拥护法律，信仰法律的力量和价值，做到崇尚法律、遵守法律、捍卫法律，让法治成为社会共识和基本准则",
+      "keywords": [
+        {
+          "aliases": [
+            "\"天下之事",
+            "不难于立法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-法律为我们护航"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0197",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "走近民法典"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "民法典是一部什么样的法律？",
+      "answer": "民法典是新中国第一部以\"法典\"命名的法律，是\"社会生活的百科全书\"；是一部调整平等主体之间的人身关系和财产关系，体现对生命健康、财产安全、交易便利、生活幸福、人格尊严等各方面权利平等保护的法律",
+      "keywords": [
+        {
+          "aliases": [
+            "民法典是新中国第一部以\"法典\"命名的法律",
+            "是\"社会生活的百科全书\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-走近民法典"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0198",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "走近民法典"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "民法典确立了哪些基本原则？",
+      "answer": "平等、自愿、公平、诚信、守法和公序良俗、绿色等基本原则",
+      "keywords": [
+        {
+          "aliases": [
+            "平等、自愿、公平、诚信、守法和公序良俗、绿色等基本原则"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-走近民法典"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0199",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "走近民法典"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "人身权包括哪些权利？法律如何保护人身权？",
+      "answer": "人身权包括生命权、健康权、肖像权、隐私权等；法律保护生命权和健康权（生命和健康是参加一切社会活动、享有其他一切权利的基础，受到非法侵害时有权依法自卫和请求法律保护）；法律保护肖像权（任何组织或者个人不得以丑化、污损，或者利用信息技术手段伪造等方式侵害他人的肖像权，未经肖像权人同意不得制作、使用、公开其肖像）；法律保护隐私权（隐私是私人生活安宁和不愿为他人知晓的私密空间、私密活动、私密信息，尊重和保护隐私权既是法律规定，也是道德要求）",
+      "keywords": [
+        {
+          "aliases": [
+            "人身权包括生命权、健康权、肖像权、隐私权等",
+            "法律保护生命权和健康权（生命和健康是参加一切社会活动、享有其他一切权利的基础"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-走近民法典"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0200",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "走近民法典"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "法律保护财产权包括哪些方面？",
+      "answer": "保护合法财产的所有权（财产所有权是指所有权人对自己的财产依法享有占有、使用、收益、处分的权利）；保护合同当事人的合法权益（依法成立的合同受法律保护，遵循诚信原则、依法履行合同）；保护知识产权（知识产权包括著作权、专利权、商标权等，保护知识产权就是尊重劳动、保护创新）；保护继承权（继承有法定继承和遗嘱继承两种方式，遗嘱继承优先于法定继承）",
+      "keywords": [
+        {
+          "aliases": [
+            "保护合法财产的所有权（财产所有权是指所有权人对自己的财产依法享有占有、使用、收益、处分的权利）",
+            "保护合同当事人的合法权益（依法成立的合同受法律保护"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-走近民法典"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0201",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "走近民法典"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "作为新时代青少年，我们应该怎样对待民法典？",
+      "answer": "民法典既是保障人民群众合法权益的法典，也是全体社会成员都必须遵循的规范；我们要学习、遵守、维护、宣传民法典，做民法典的主动学习者和积极践行者",
+      "keywords": [
+        {
+          "aliases": [
+            "民法典既是保障人民群众合法权益的法典",
+            "也是全体社会成员都必须遵循的规范"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-走近民法典"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0202",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "远离违法犯罪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "法律为人们的行为提供了怎样的指引？",
+      "answer": "法律作为一种行为规范，明确告知人们哪些行为是合法的、哪些行为是违法的，为人们是否实施某种行为提供了方向指引；不违法是人们行为的底线",
+      "keywords": [
+        {
+          "aliases": [
+            "法律作为一种行为规范",
+            "明确告知人们哪些行为是合法的、哪些行为是违法的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-远离违法犯罪"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0203",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "远离违法犯罪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "违法行为的概念和分类是什么？",
+      "answer": "违法行为是指违反法律、法规、规章，应受惩罚的行为；违法行为通常分为民事违法行为、行政违法行为和刑事违法行为；违反民事法律规范、应当承担民事责任的是民事违法行为，违反行政法律规范、应当承担行政责任的是行政违法行为，违反刑事法律规范、应当承担刑事责任的是刑事违法行为（即犯罪）；民事违法行为和行政违法行为对社会的危害相对轻微，称为一般违法行为",
+      "keywords": [
+        {
+          "aliases": [
+            "违法行为是指违反法律、法规、规章",
+            "应受惩罚的行为"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-远离违法犯罪"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0204",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "远离违法犯罪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "犯罪具有哪些特征？",
+      "answer": "犯罪是具有严重社会危害性的行为（严重社会危害性是犯罪的最本质特征）；犯罪是具有刑事违法性的行为（刑事违法性是区分犯罪与其他违法行为的法律分界线）；犯罪是应当受到刑罚处罚的行为",
+      "keywords": [
+        {
+          "aliases": [
+            "犯罪是具有严重社会危害性的行为（严重社会危害性是犯罪的最本质特征）",
+            "犯罪是具有刑事违法性的行为（刑事违法性是区分犯罪与其他违法行为的法律分界线）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-远离违法犯罪"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0205",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "远离违法犯罪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "什么是刑罚？我国的刑罚分为哪几类？",
+      "answer": "刑罚是指审判机关依法对犯罪人所适用的、最严厉的强制性法律制裁，以限制或剥夺犯罪人权利为主要内容；我国的刑罚分为主刑和附加刑，主刑包括管制、拘役、有期徒刑、无期徒刑、死刑，附加刑包括罚金、剥夺政治权利、没收财产、驱逐出境",
+      "keywords": [
+        {
+          "aliases": [
+            "刑罚是指审判机关依法对犯罪人所适用的、最严厉的强制性法律制裁",
+            "以限制或剥夺犯罪人权利为主要内容"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-远离违法犯罪"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0206",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "7年级b册",
+    "knowledge_points": [
+      "远离违法犯罪"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "怎样严于律己、远离违法犯罪？",
+      "answer": "珍惜美好生活，认清违法犯罪的危害，依法自律，做自觉遵纪守法的人；认清危害、增强法治观念（认为自己年龄小与违法犯罪无关、年龄小犯罪不受处罚的想法是非常错误的）；明辨是非、杜绝不良行为（很多犯罪都有一条从不良行为到一般违法行为，再到犯罪的变化轨迹）；树立正确的是非观念，增强自控力，严于律己，积极抵制不良心理和行为，防患于未然",
+      "keywords": [
+        {
+          "aliases": [
+            "珍惜美好生活",
+            "认清违法犯罪的危害"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教社统编版 2024 修订（背诵内容）",
+      "knowledge_card_id": "KC-daodeyufazhi-远离违法犯罪"
+    }
+  }
+]

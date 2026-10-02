@@ -1,0 +1,5366 @@
+[
+  {
+    "id": "Q-history-7to9-1361",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国人民政治协商会议第一届全体会议召开的时间和地点？",
+      "answer": "1949年9月，在北平召开",
+      "keywords": [
+        {
+          "aliases": [
+            "1949年9月",
+            "在北平召开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1362",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《共同纲领》的历史地位是？",
+      "answer": "新中国的建国纲领，具有临时宪法的作用",
+      "keywords": [
+        {
+          "aliases": [
+            "新中国的建国纲领",
+            "具有临时宪法的作用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1363",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1949年10月1日下午3时在天安门广场举行的盛典是？",
+      "answer": "开国大典（毛泽东宣告\"中华人民共和国中央人民政府今天成立了\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "开国大典（毛泽东宣告\"中华人民共和国中央人民政府今天成立了\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1364",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1951年10月人民解放军进驻拉萨，标志什么？",
+      "answer": "西藏和平解放，祖国大陆获得完全统一",
+      "keywords": [
+        {
+          "aliases": [
+            "西藏和平解放",
+            "祖国大陆获得完全统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1365",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新中国成立的历史意义",
+      "answer": "彻底结束了旧中国半殖民地半封建社会的历史，彻底废除了列强强加给中国的不平等条约和帝国主义在中国的一切特权，实现了中国从几千年封建专制政治向人民民主的伟大飞跃；中国人民从此站起来了，中国发展从此开启了新纪元",
+      "keywords": [
+        {
+          "aliases": [
+            "彻底结束了旧中国半殖民地半封建社会的历史",
+            "彻底废除了列强强加给中国的不平等条约和帝国主义在中国的一切特权"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1366",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写政协一届全体会议的重要决定",
+      "answer": "定都北平并改名为北京；采用公元纪年；以《义勇军进行曲》为国歌；以五星红旗为国旗；选举中央人民政府委员会（毛泽东为主席）；建立人民英雄纪念碑",
+      "keywords": [
+        {
+          "aliases": [
+            "定都北平并改名为北京",
+            "采用公元纪年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1367",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华人民共和国成立"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"中华人民共和国成立的过程\"",
+      "answer": "1949年9月政协一届全体会议筹备（通过《共同纲领》、定都改名、国歌国旗）→1949年10月1日开国大典宣告成立→成立意义（四个彻底/新纪元/改变世界政治格局）→1951年西藏和平解放实现祖国大陆完全统一",
+      "keywords": [
+        {
+          "aliases": [
+            "1949年9月政协一届全体会议筹备（通过《共同纲领》、定都改名、国歌国旗）→1949年10月1日开国大典宣告成立→成立意义（四个彻底/新纪元/改变世界政治格局）→1951年西藏和平解放实现祖国大陆完全统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华人民共和国成立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1368",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《中华人民共和国土地改革法》颁布的时间和内容是？",
+      "answer": "1950年；废除地主阶级封建剥削的土地所有制，实行农民的土地所有制",
+      "keywords": [
+        {
+          "aliases": [
+            "1950年",
+            "废除地主阶级封建剥削的土地所有制"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1369",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "抗美援朝战争的司令员和政治委员是？",
+      "answer": "彭德怀",
+      "keywords": [
+        {
+          "aliases": [
+            "彭德怀"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1370",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1950年10月应朝鲜党和政府请求入朝作战的部队是？",
+      "answer": "中国人民志愿军（抗美援朝、保家卫国）",
+      "keywords": [
+        {
+          "aliases": [
+            "中国人民志愿军（抗美援朝、保家卫国）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1371",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "彻底摧毁我国存在2000多年封建土地制度的运动是？",
+      "answer": "土地改革（1950—1952年底全国大陆基本完成）",
+      "keywords": [
+        {
+          "aliases": [
+            "土地改革（1950—1952年底全国大陆基本完成）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1372",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写土地改革的意义",
+      "answer": "彻底摧毁了我国存在2000多年的封建土地制度，消灭了地主阶级；农民翻了身，得到土地，成为土地的主人；解放了农村生产力，为国家的工业化建设准备了条件",
+      "keywords": [
+        {
+          "aliases": [
+            "彻底摧毁了我国存在2000多年的封建土地制度",
+            "消灭了地主阶级"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1373",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写抗美援朝战争的伟大意义",
+      "answer": "抵御了帝国主义侵略扩张，捍卫了新中国安全，保卫了中国人民和平生活；稳定了朝鲜半岛局势，维护了亚洲和世界和平，彰显了新中国的大国地位；是中国人民站起来后屹立于世界东方的宣言书，是中华民族走向伟大复兴的重要里程碑",
+      "keywords": [
+        {
+          "aliases": [
+            "抵御了帝国主义侵略扩张",
+            "捍卫了新中国安全"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1374",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写抗美援朝英雄人物",
+      "answer": "杨根思、黄继光、邱少云、罗盛教等30多万名英雄功臣和近6000个功臣集体；他们被誉为\"最可爱的人\"",
+      "keywords": [
+        {
+          "aliases": [
+            "杨根思、黄继光、邱少云、罗盛教等30多万名英雄功臣和近6000个功臣集体",
+            "他们被誉为\"最可爱的人\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1375",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "巩固人民民主政权"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"巩固人民民主政权的三大措施\"",
+      "answer": "土地改革（1950年《土地改革法》，1952年底完成，废除封建土地制度）+镇压反革命（1950—1951年扫除反革命残余）+抗美援朝（1950年10月—1953年7月，彭德怀指挥，打败侵略者）",
+      "keywords": [
+        {
+          "aliases": [
+            "土地改革（1950年《土地改革法》",
+            "1952年底完成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-巩固人民民主政权"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1376",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "第一个五年计划的基本任务是？",
+      "answer": "集中主要力量发展重工业，建立国家工业化和国防现代化的初步基础；相应发展交通运输业、轻工业、农业和商业，相应培养建设人才",
+      "keywords": [
+        {
+          "aliases": [
+            "集中主要力量发展重工业",
+            "建立国家工业化和国防现代化的初步基础"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1377",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "赎买政策的意义是？",
+      "answer": "实现了和平过渡，是中国社会主义改造的创举",
+      "keywords": [
+        {
+          "aliases": [
+            "实现了和平过渡",
+            "是中国社会主义改造的创举"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1378",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1957年建成、结束长江\"有舟无桥\"历史的大桥是？",
+      "answer": "武汉长江大桥",
+      "keywords": [
+        {
+          "aliases": [
+            "武汉长江大桥"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1379",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1954年9月通过《中华人民共和国宪法》的会议是？",
+      "answer": "第一届全国人民代表大会第一次会议",
+      "keywords": [
+        {
+          "aliases": [
+            "第一届全国人民代表大会第一次会议"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1380",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写一五计划的重大成就",
+      "answer": "鞍山钢铁公司三大工程、长春第一汽车制造厂、沈阳第一机床厂和飞机制造厂；新建宝成、鹰厦铁路，川藏、青藏、新藏公路；1957年武汉长江大桥建成；到1957年底超额完成，初步奠定社会主义工业化基础",
+      "keywords": [
+        {
+          "aliases": [
+            "鞍山钢铁公司三大工程、长春第一汽车制造厂、沈阳第一机床厂和飞机制造厂",
+            "新建宝成、鹰厦铁路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1381",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写三大改造的方式",
+      "answer": "农业参加农业生产合作社；手工业参加手工业生产合作社；资本主义工商业实行加工订货和公私合营，国家对资本家占有的生产资料实行赎买政策",
+      "keywords": [
+        {
+          "aliases": [
+            "农业参加农业生产合作社",
+            "手工业参加手工业生产合作社"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1382",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写1954年宪法确立的政治制度",
+      "answer": "以国家根本法的形式确立人民代表大会制度（根本政治制度）；人民政协制度、民族区域自治制度（基本政治制度）为人民当家作主提供制度保证",
+      "keywords": [
+        {
+          "aliases": [
+            "以国家根本法的形式确立人民代表大会制度（根本政治制度）",
+            "人民政协制度、民族区域自治制度（基本政治制度）为人民当家作主提供制度保证"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1383",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义制度建立"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"社会主义制度建立的三条线索\"",
+      "answer": "一五计划（1953—1957年，重工业，奠定工业化基础）→三大改造（1956年基本完成，社会主义经济制度建立）→1954年宪法与三大政治制度确立（社会主义政治制度）；1956年社会主义制度在我国建立起来，是历史上最为广泛而深刻的社会变革",
+      "keywords": [
+        {
+          "aliases": [
+            "一五计划（1953—1957年",
+            "重工业"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义制度建立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1384",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "和平共处五项原则是哪一年提出的？内容？",
+      "answer": "1953年底周恩来在接见印度代表团时首次提出；互相尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处",
+      "keywords": [
+        {
+          "aliases": [
+            "1953年底周恩来在接见印度代表团时首次提出",
+            "互相尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1385",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"求同存异\"方针是在哪次国际会议上提出的？",
+      "answer": "1955年印度尼西亚万隆会议（亚非会议）",
+      "keywords": [
+        {
+          "aliases": [
+            "1955年印度尼西亚万隆会议（亚非会议）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1386",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新中国\"站在社会主义和世界和平民主阵营一边\"的外交方针是？",
+      "answer": "\"一边倒\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"一边倒\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1387",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "第一个宣布承认中华人民共和国并与我国建交的国家是？",
+      "answer": "苏联（1949年10月）",
+      "keywords": [
+        {
+          "aliases": [
+            "苏联（1949年10月）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1388",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新中国三条外交方针",
+      "answer": "\"另起炉灶\"——不承认国民党政府同各国建立的旧的外交关系，取消帝国主义在华特权；\"打扫干净屋子再请客\"——把帝国主义在中国的残余势力清除干净之后再考虑建交；\"一边倒\"——明确宣布新中国站在社会主义和世界和平民主阵营一边",
+      "keywords": [
+        {
+          "aliases": [
+            "\"另起炉灶\"——不承认国民党政府同各国建立的旧的外交关系",
+            "取消帝国主义在华特权"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1389",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写和平共处五项原则的意义",
+      "answer": "成为中国对外政策的基石，是国际关系史上的重大创举，为推动建立公正合理的国际政治经济秩序作出了历史性贡献",
+      "keywords": [
+        {
+          "aliases": [
+            "成为中国对外政策的基石",
+            "是国际关系史上的重大创举"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1390",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "独立自主的和平外交"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"新中国成立初期外交成就\"",
+      "answer": "第一条建交高潮（同苏联等十几个国家建交，粉碎孤立封锁）→1950年《中苏友好同盟互助条约》→1953年底和平共处五项原则→1954年日内瓦会议（五大国身份）→1955年万隆会议\"求同存异\"",
+      "keywords": [
+        {
+          "aliases": [
+            "第一条建交高潮（同苏联等十几个国家建交",
+            "粉碎孤立封锁）→1950年《中苏友好同盟互助条约》→1953年底和平共处五项原则→1954年日内瓦会议（五大国身份）→1955年万隆会议\"求同存异\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-独立自主的和平外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1391",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共八大召开的时间和主要任务是？",
+      "answer": "1956年；集中力量把我国尽快从落后的农业国变为先进的工业国",
+      "keywords": [
+        {
+          "aliases": [
+            "1956年",
+            "集中力量把我国尽快从落后的农业国变为先进的工业国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1392",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"调整、巩固、充实、提高\"八字方针是什么时候开始实行的？",
+      "answer": "1961年1月",
+      "keywords": [
+        {
+          "aliases": [
+            "1961年1月"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1393",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1956年毛泽东作的、提出调动一切积极因素的报告是？",
+      "answer": "《论十大关系》",
+      "keywords": [
+        {
+          "aliases": [
+            "《论十大关系》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1394",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1971年9月13日林彪等人机毁人亡的事件是？",
+      "answer": "\"九一三事件\"（林彪反革命集团被粉碎）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"九一三事件\"（林彪反革命集团被粉碎）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1395",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"文化大革命\"的概况",
+      "answer": "1966年夏全面发动；\"中央文革小组\"成为实际指挥部；刘少奇成为最大冤案；1971年九一三事件粉碎林彪集团；1976年10月粉碎江青反革命集团，结束长达十年之久的\"文化大革命\"",
+      "keywords": [
+        {
+          "aliases": [
+            "1966年夏全面发动",
+            "\"中央文革小组\"成为实际指挥部"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1396",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中共八大的主要贡献",
+      "answer": "正确分析了国内主要矛盾；提出既反保守又反冒进、在综合平衡中稳步前进的经济建设方针；是探索符合中国国情的社会主义建设道路的重要尝试",
+      "keywords": [
+        {
+          "aliases": [
+            "正确分析了国内主要矛盾",
+            "提出既反保守又反冒进、在综合平衡中稳步前进的经济建设方针"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1397",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "艰辛探索与曲折发展"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"社会主义道路的艰辛探索过程\"",
+      "answer": "良好开端（《论十大关系》+中共八大1956年+双百方针）→失误（1958年总路线、大跃进、人民公社化，1959—1961年国民经济困难）→调整（1961年八字方针，1965年调整基本完成）→挫折（1966—1976年文化大革命）→教训：对什么是社会主义、怎样建设社会主义没有完全搞清楚",
+      "keywords": [
+        {
+          "aliases": [
+            "良好开端（《论十大关系》+中共八大1956年+双百方针）→失误（1958年总路线、大跃进、人民公社化",
+            "1959—1961年国民经济困难）→调整（1961年八字方针"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-艰辛探索与曲折发展"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1398",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国第一颗原子弹爆炸成功的时间和意义是？",
+      "answer": "1964年10月16日；\"两弹一星\"打破了当时有核大国的核垄断和核讹诈，增强了我国的国防实力，大大提高了我国的国际地位",
+      "keywords": [
+        {
+          "aliases": [
+            "1964年10月16日",
+            "\"两弹一星\"打破了当时有核大国的核垄断和核讹诈"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1399",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"铁人\"王进喜为代表的石油工人建成了哪个油田？",
+      "answer": "大庆油田（铸就大庆精神、铁人精神）",
+      "keywords": [
+        {
+          "aliases": [
+            "大庆油田（铸就大庆精神、铁人精神）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1400",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1970年用长征一号运载火箭发射的第一颗人造地球卫星是？",
+      "answer": "东方红一号（我国成为世界上第五个能独立发射人造地球卫星的国家）",
+      "keywords": [
+        {
+          "aliases": [
+            "东方红一号（我国成为世界上第五个能独立发射人造地球卫星的国家）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1401",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1965年实现原油和石油产品全部自给的油田建设是？",
+      "answer": "大庆油田、胜利油田和大港油田的开发建设",
+      "keywords": [
+        {
+          "aliases": [
+            "大庆油田、胜利油田和大港油田的开发建设"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1402",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"两弹一星\"的历程",
+      "answer": "1964年第一颗原子弹爆炸成功→1966年第一次成功进行发射导弹核武器试验→1967年第一颗氢弹爆炸成功→1970年东方红一号发射成功",
+      "keywords": [
+        {
+          "aliases": [
+            "1964年第一颗原子弹爆炸成功→1966年第一次成功进行发射导弹核武器试验→1967年第一颗氢弹爆炸成功→1970年东方红一号发射成功"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1403",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写这一时期的先锋模范与精神",
+      "answer": "钱学森、邓稼先、郭永怀（\"两弹一星\"精神，干惊天动地事做隐姓埋名人）；王进喜（大庆精神铁人精神）；红旗渠精神；焦裕禄（焦裕禄精神）；雷锋（雷锋精神，1963年毛泽东号召\"向雷锋同志学习\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "钱学森、邓稼先、郭永怀（\"两弹一星\"精神",
+            "干惊天动地事做隐姓埋名人）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1404",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写民族地区进步与发展的成就",
+      "answer": "民族区域自治制度（自治区/自治州/自治县）；内蒙古1947年成立、新疆1955.10、广西1958.3、宁夏1958.10、西藏1965.9先后成立5个自治区；少数民族三大英雄史诗（《格萨尔王传》《江格尔》《玛纳斯》）",
+      "keywords": [
+        {
+          "aliases": [
+            "民族区域自治制度（自治区/自治州/自治县）",
+            "内蒙古1947年成立、新疆1955.10、广西1958.3、宁夏1958.10、西藏1965.9先后成立5个自治区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1405",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义建设的巨大成就和先锋模范"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"社会主义建设的巨大成就\"",
+      "answer": "工农业（两钢基地、大庆油田、1965年石油自给、兰新兰青成昆铁路、独立完整工业体系）+科技文化（两弹一星、东方红一号、人工合成结晶牛胰岛素、屠呦呦青蒿素、袁隆平杂交水稻、文革前优秀文艺作品）+民族地区进步发展+先锋模范精神",
+      "keywords": [
+        {
+          "aliases": [
+            "工农业（两钢基地、大庆油田、1965年石油自给、兰新兰青成昆铁路、独立完整工业体系）+科技文化（两弹一星、东方红一号、人工合成结晶牛胰岛素、屠呦呦青蒿素、袁隆平杂交水稻、文革前优秀文艺作品）+民族地区进步发展+先锋模范精神"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义建设的巨大成就和先锋模范"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1406",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国人民解放军第一支海军部队是？",
+      "answer": "华东军区海军（1949年4月建立）",
+      "keywords": [
+        {
+          "aliases": [
+            "华东军区海军（1949年4月建立）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1407",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1971年10月恢复中国在联合国合法席位的会议和决议是？",
+      "answer": "第26届联合国大会，2758号决议",
+      "keywords": [
+        {
+          "aliases": [
+            "第26届联合国大会",
+            "2758号决议"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1408",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1966年组建、实施战略威慑核心力量的部队是？",
+      "answer": "第二炮兵部队（导弹部队）",
+      "keywords": [
+        {
+          "aliases": [
+            "第二炮兵部队（导弹部队）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1409",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"小球转动大球\"的\"乒乓外交\"是指什么？",
+      "answer": "1971年美国乒乓球代表团访问中国，是新中国成立以来第一个美国代表团访华",
+      "keywords": [
+        {
+          "aliases": [
+            "1971年美国乒乓球代表团访问中国",
+            "是新中国成立以来第一个美国代表团访华"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1410",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中美关系走向正常化的过程",
+      "answer": "1971年7月基辛格秘密访问中国→1972年美国总统尼克松访华、毛泽东会见→双方2月28日在上海发表《中美联合公报》，两国关系开始走向正常化",
+      "keywords": [
+        {
+          "aliases": [
+            "1971年7月基辛格秘密访问中国→1972年美国总统尼克松访华、毛泽东会见→双方2月28日在上海发表《中美联合公报》",
+            "两国关系开始走向正常化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1411",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中国恢复联合国合法席位的意义",
+      "answer": "是中国外交的重大胜利；为推动形成国际社会坚持一个中国原则的格局创造了条件；为中国在国际舞台上促进世界和平与发展创造了条件",
+      "keywords": [
+        {
+          "aliases": [
+            "是中国外交的重大胜利",
+            "为推动形成国际社会坚持一个中国原则的格局创造了条件"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1412",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防现代化起步和外交工作新突破"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"国防现代化起步与外交新突破\"",
+      "answer": "国防：陆军多兵种现代化、海军（华东军区海军/舰队/导弹驱逐舰/核潜艇）、空军（抗美援朝中成长，1954年初3000多架）、第二炮兵（1966年）；外交：1971年恢复联合国合法席位→1972年中美关系走向正常化→1972年中日恢复邦交→建交国家达111个",
+      "keywords": [
+        {
+          "aliases": [
+            "国防：陆军多兵种现代化、海军（华东军区海军/舰队/导弹驱逐舰/核潜艇）、空军（抗美援朝中成长",
+            "1954年初3000多架）、第二炮兵（1966年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防现代化起步和外交工作新突破"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1413",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "真理标准问题大讨论的作用是？",
+      "answer": "是一场深刻而广泛的思想解放运动，使人们认识到只有实践才是检验真理的唯一标准；成为正本清源、拨乱反正和改革开放的思想先导",
+      "keywords": [
+        {
+          "aliases": [
+            "是一场深刻而广泛的思想解放运动",
+            "使人们认识到只有实践才是检验真理的唯一标准"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1414",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共十一届三中全会召开的时间和作出的历史性决策是？",
+      "answer": "1978年12月；把全党工作重点转移到社会主义现代化建设上来、实行改革开放",
+      "keywords": [
+        {
+          "aliases": [
+            "1978年12月",
+            "把全党工作重点转移到社会主义现代化建设上来、实行改革开放"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1415",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1978年5月《光明日报》发表的文章是？",
+      "answer": "《实践是检验真理的唯一标准》",
+      "keywords": [
+        {
+          "aliases": [
+            "《实践是检验真理的唯一标准》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1416",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"两个凡是\"方针的实质问题是什么？",
+      "answer": "凡是毛主席作出的决策、凡是毛主席的指示都必须维护遵循，其推行引起普遍不满",
+      "keywords": [
+        {
+          "aliases": [
+            "凡是毛主席作出的决策、凡是毛主席的指示都必须维护遵循",
+            "其推行引起普遍不满"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1417",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中共十一届三中全会的内容",
+      "answer": "思想上冲破长期\"左\"的错误的严重束缚，彻底否定\"两个凡是\"；政治上果断结束\"以阶级斗争为纲\"；重新确立马克思主义的思想路线、政治路线、组织路线；作出把工作重点转移到社会主义现代化建设上来、实行改革开放的历史性决策",
+      "keywords": [
+        {
+          "aliases": [
+            "思想上冲破长期\"左\"的错误的严重束缚",
+            "彻底否定\"两个凡是\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1418",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写拨乱反正的成果",
+      "answer": "平反冤假错案全面推开（到1982年底300多万名干部冤假错案得到平反）；1980年彻底推翻强加给刘少奇的种种罪名；1981年《关于建国以来党的若干历史问题的决议》标志指导思想上的拨乱反正胜利完成",
+      "keywords": [
+        {
+          "aliases": [
+            "平反冤假错案全面推开（到1982年底300多万名干部冤假错案得到平反）",
+            "1980年彻底推翻强加给刘少奇的种种罪名"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1419",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "伟大的历史转折"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"伟大的历史转折\"",
+      "answer": "背景（文化大革命后百废待兴、\"两个凡是\"束缚）→思想先导（真理标准问题大讨论1978年5月）→转折（十一届三中全会1978年12月：工作重心转移+改革开放）→拨乱反正（平反冤假错案+历史问题决议）→新时期（改革开放和社会主义现代化建设新时期开启）",
+      "keywords": [
+        {
+          "aliases": [
+            "背景（文化大革命后百废待兴、\"两个凡是\"束缚）→思想先导（真理标准问题大讨论1978年5月）→转折（十一届三中全会1978年12月：工作重心转移+改革开放）→拨乱反正（平反冤假错案+历史问题决议）→新时期（改革开放和社会主义现代化建设新时期开启）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-伟大的历史转折"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1420",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "农村家庭联产承包责任制的主要形式是？",
+      "answer": "包产到户、包干到户（到1983年在农村普遍实行）",
+      "keywords": [
+        {
+          "aliases": [
+            "包产到户、包干到户（到1983年在农村普遍实行）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1421",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1980年兴办的四个经济特区是？",
+      "answer": "深圳、珠海、汕头、厦门（在广东、福建两省兴办）",
+      "keywords": [
+        {
+          "aliases": [
+            "深圳、珠海、汕头、厦门（在广东、福建两省兴办）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1422",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1978年率先实行包干到户、自负盈亏的村庄是？",
+      "answer": "安徽凤阳小岗村",
+      "keywords": [
+        {
+          "aliases": [
+            "安徽凤阳小岗村"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1423",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "克服吃\"大锅饭\"弊病、扩大企业自主权的城市改革是什么？",
+      "answer": "城市经济体制改革初步展开（1979年首都钢铁公司等8家大型企业试点）",
+      "keywords": [
+        {
+          "aliases": [
+            "城市经济体制改革初步展开（1979年首都钢铁公司等8家大型企业试点）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1424",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写家庭联产承包责任制的内容和意义",
+      "answer": "在土地公有制基础上，把集体所有的土地长期包给各家各户使用，分户经营、自负盈亏（\"保证国家的，留足集体的，剩下都是自己的\"）；激发农民生产积极性，带来农村生产力大解放；乡镇企业异军突起，为农民致富和实现现代化开辟新路",
+      "keywords": [
+        {
+          "aliases": [
+            "在土地公有制基础上",
+            "把集体所有的土地长期包给各家各户使用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1425",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写经济特区的地位",
+      "answer": "兴办经济特区是党和国家为推进改革开放和社会主义现代化建设进行的伟大创举；敢闯敢试、敢为人先、埋头苦干的特区精神彰显",
+      "keywords": [
+        {
+          "aliases": [
+            "兴办经济特区是党和国家为推进改革开放和社会主义现代化建设进行的伟大创举",
+            "敢闯敢试、敢为人先、埋头苦干的特区精神彰显"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1426",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放的起步"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"改革开放的起步\"",
+      "answer": "农村改革（1978年小岗村包干到户→1983年全国推开家庭联产承包责任制→乡镇企业异军突起）→城市改革（1979年扩大企业自主权试点）→对外开放（1980年四个经济特区）→外交政策调整（1978年中日和平友好条约、1979年中美建交、1985年和平和发展是当代世界两大问题）",
+      "keywords": [
+        {
+          "aliases": [
+            "农村改革（1978年小岗村包干到户→1983年全国推开家庭联产承包责任制→乡镇企业异军突起）→城市改革（1979年扩大企业自主权试点）→对外开放（1980年四个经济特区）→外交政策调整（1978年中日和平友好条约、1979年中美建交、1985年和平和发展是当代世界两大问题）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放的起步"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1427",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共十二大召开的时间和邓小平提出的重大命题是？",
+      "answer": "1982年；建设有中国特色的社会主义",
+      "keywords": [
+        {
+          "aliases": [
+            "1982年",
+            "建设有中国特色的社会主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1428",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"一国两制\"科学构想的内涵是？",
+      "answer": "在一个中国的前提下，国家的主体坚持社会主义制度，香港、澳门、台湾保持原有的资本主义制度长期不变",
+      "keywords": [
+        {
+          "aliases": [
+            "在一个中国的前提下",
+            "国家的主体坚持社会主义制度"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1429",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1979年12月邓小平会见日本首相大平正芳时使用的概念是？",
+      "answer": "\"小康\"（用传统文化中的小康概念描述20世纪末中国现代化图景）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"小康\"（用传统文化中的小康概念描述20世纪末中国现代化图景）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1430",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "确认1999年12月20日对澳门恢复行使主权的文件是？",
+      "answer": "1987年中葡两国政府签署的联合声明",
+      "keywords": [
+        {
+          "aliases": [
+            "1987年中葡两国政府签署的联合声明"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1431",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"一国两制\"构想的运用",
+      "answer": "最早为解决台湾问题提出，首先被运用于解决香港、澳门问题；1984年中英签署联合声明（1997年7月1日恢复对香港行使主权）；1987年中葡签署联合声明（1999年12月20日恢复对澳门行使主权）",
+      "keywords": [
+        {
+          "aliases": [
+            "最早为解决台湾问题提出",
+            "首先被运用于解决香港、澳门问题"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1432",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写社会主义民主法制和精神文明建设的成就",
+      "answer": "1982年五届全国人大五次会议通过新修改的《宪法》；1984年《民族区域自治法》颁布；\"五讲四美三热爱\"活动；中国女排五连冠和女排精神",
+      "keywords": [
+        {
+          "aliases": [
+            "1982年五届全国人大五次会议通过新修改的《宪法》",
+            "1984年《民族区域自治法》颁布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1433",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "改革开放和社会主义现代化建设的全面展开"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"改革开放和社会主义现代化建设的全面展开\"",
+      "answer": "十二大（1982年建设有中国特色的社会主义+小康目标）→经济体制改革全面展开（1984年城市改革中心环节增强企业活力）→沿海开放（1984年14个港口城市+1985年沿海经济开放区）→民主法制与精神文明建设→\"一国两制\"科学构想（1984/1987声明）→国防军队现代化（百万大裁军、新军衔制）",
+      "keywords": [
+        {
+          "aliases": [
+            "十二大（1982年建设有中国特色的社会主义+小康目标）→经济体制改革全面展开（1984年城市改革中心环节增强企业活力）→沿海开放（1984年14个港口城市+1985年沿海经济开放区）→民主法制与精神文明建设→\"一国两制\"科学构想（1984/1987声明）→国防军队现代化（百万大裁军、新军衔制）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-改革开放和社会主义现代化建设的全面展开"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1434",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共十三大召开的时间和确立的基本路线是？",
+      "answer": "1987年；\"一个中心、两个基本点\"（以经济建设为中心，坚持四项基本原则，坚持改革开放）",
+      "keywords": [
+        {
+          "aliases": [
+            "1987年",
+            "\"一个中心、两个基本点\"（以经济建设为中心"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1435",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "社会主义初级阶段我国面临的主要矛盾是？",
+      "answer": "人民日益增长的物质文化需要同落后的社会生产之间的矛盾",
+      "keywords": [
+        {
+          "aliases": [
+            "人民日益增长的物质文化需要同落后的社会生产之间的矛盾"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1436",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1992年初邓小平到南方视察发表的重要谈话是？",
+      "answer": "邓小平南方谈话（把改革开放和社会主义现代化建设推向新阶段的宣言书）",
+      "keywords": [
+        {
+          "aliases": [
+            "邓小平南方谈话（把改革开放和社会主义现代化建设推向新阶段的宣言书）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1437",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1990年中共中央作出的重大开放决策是？",
+      "answer": "开发开放上海浦东",
+      "keywords": [
+        {
+          "aliases": [
+            "开发开放上海浦东"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1438",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"三步走\"发展战略",
+      "answer": "第一步实现国民生产总值比1980年翻一番，解决人民的温饱问题（已基本实现）；第二步到20世纪末使国民生产总值再增长一倍，人民生活达到小康水平；第三步到21世纪中叶人均国民生产总值达到中等发达国家水平，人民生活比较富裕，基本实现现代化",
+      "keywords": [
+        {
+          "aliases": [
+            "第一步实现国民生产总值比1980年翻一番",
+            "解决人民的温饱问题（已基本实现）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1439",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写邓小平南方谈话的主要内容",
+      "answer": "党的基本路线要管一百年，动摇不得；要抓住时机，发展才是硬道理；计划和市场都是经济手段，不是社会主义与资本主义的本质区别；社会主义的本质是解放生产力、发展生产力、消灭剥削、消除两极分化、最终达到共同富裕",
+      "keywords": [
+        {
+          "aliases": [
+            "党的基本路线要管一百年",
+            "动摇不得"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1440",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "社会主义初级阶段基本路线"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"社会主义初级阶段基本路线的形成\"",
+      "answer": "社会主义初级阶段理论（1987年十三大）→基本路线（一个中心两个基本点）→\"三步走\"发展战略→深化改革扩大开放（1988年海南特区、1990年浦东）→南方谈话（1992年发展才是硬道理/计划和市场都是手段）",
+      "keywords": [
+        {
+          "aliases": [
+            "社会主义初级阶段理论（1987年十三大）→基本路线（一个中心两个基本点）→\"三步走\"发展战略→深化改革扩大开放（1988年海南特区、1990年浦东）→南方谈话（1992年发展才是硬道理/计划和市场都是手段）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-社会主义初级阶段基本路线"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1441",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共十四大确立的我国经济体制改革目标是？",
+      "answer": "建立社会主义市场经济体制（1992年）",
+      "keywords": [
+        {
+          "aliases": [
+            "建立社会主义市场经济体制（1992年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1442",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国正式成为世界贸易组织成员的时间和意义是？",
+      "answer": "2001年12月；是中国对外开放的里程碑，使中国在经济全球化进程中获得参与制定规则和竞争的有利位置",
+      "keywords": [
+        {
+          "aliases": [
+            "2001年12月",
+            "是中国对外开放的里程碑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1443",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1997年把邓小平理论确立为党的指导思想并写入党章的会议是？",
+      "answer": "中共十五大",
+      "keywords": [
+        {
+          "aliases": [
+            "中共十五大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1444",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1999年中共中央决定实施、2000年全面启动的战略是？",
+      "answer": "西部大开发战略",
+      "keywords": [
+        {
+          "aliases": [
+            "西部大开发战略"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1445",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写社会主义市场经济体制的建立过程",
+      "answer": "1992年中共十四大提出改革目标→1993年十四届三中全会通过建立社会主义市场经济体制若干问题的决定、勾画基本框架→2000年实现由计划经济体制向社会主义市场经济体制的转变",
+      "keywords": [
+        {
+          "aliases": [
+            "1992年中共十四大提出改革目标→1993年十四届三中全会通过建立社会主义市场经济体制若干问题的决定、勾画基本框架→2000年实现由计划经济体制向社会主义市场经济体制的转变"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1446",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写跨世纪发展战略",
+      "answer": "科教兴国战略（1995年，全面落实科学技术是第一生产力）；可持续发展战略；西部大开发战略（2000年全面启动，西电东送、青藏铁路、西气东输）；\"引进来\"和\"走出去\"相结合的开放战略",
+      "keywords": [
+        {
+          "aliases": [
+            "科教兴国战略（1995年",
+            "全面落实科学技术是第一生产力）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1447",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "加快改革开放和社会主义现代化建设步伐"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"加快改革开放和现代化建设步伐\"",
+      "answer": "1992年十四大建立社会主义市场经济体制→1997年十五大确立邓小平理论为指导思想、新三步走→扩大开放（沿江沿边内陆→全方位多层次宽领域格局；2001年加入世贸）→跨世纪发展战略（科教兴国/可持续发展/西部大开发/引进来走出去）",
+      "keywords": [
+        {
+          "aliases": [
+            "1992年十四大建立社会主义市场经济体制→1997年十五大确立邓小平理论为指导思想、新三步走→扩大开放（沿江沿边内陆→全方位多层次宽领域格局",
+            "2001年加入世贸）→跨世纪发展战略（科教兴国/可持续发展/西部大开发/引进来走出去）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-加快改革开放和社会主义现代化建设步伐"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1448",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "香港、澳门回归祖国的具体时间是？",
+      "answer": "1997年7月1日香港回归；1999年12月20日澳门回归",
+      "keywords": [
+        {
+          "aliases": [
+            "1997年7月1日香港回归",
+            "1999年12月20日澳门回归"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1449",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "依法治国基本方略是什么时候确立的？",
+      "answer": "1997年中共十五大把依法治国确立为党领导人民治理国家的基本方略；1999年载入宪法",
+      "keywords": [
+        {
+          "aliases": [
+            "1997年中共十五大把依法治国确立为党领导人民治理国家的基本方略",
+            "1999年载入宪法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1450",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "使人民生活总体上达到小康水平的时间是？",
+      "answer": "2000年（我国实现社会主义现代化建设第二步战略目标）",
+      "keywords": [
+        {
+          "aliases": [
+            "2000年（我国实现社会主义现代化建设第二步战略目标）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1451",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1993年在新加坡举行的两岸对话是？",
+      "answer": "\"汪辜会谈\"（海协会会长汪道涵与海基会董事长辜振甫）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"汪辜会谈\"（海协会会长汪道涵与海基会董事长辜振甫）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1452",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写港澳回归的历史意义",
+      "answer": "洗雪了中华民族百年耻辱，完成了实现祖国完全统一的重要一步；香港、澳门作为直辖于中央政府的特别行政区，重新纳入国家治理体系",
+      "keywords": [
+        {
+          "aliases": [
+            "洗雪了中华民族百年耻辱",
+            "完成了实现祖国完全统一的重要一步"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1453",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"九二共识\"的内容",
+      "answer": "1992年海协会与海基会达成\"海峡两岸均坚持一个中国原则\"的\"九二共识\"；核心要义是\"海峡两岸同属一个中国，共同努力谋求国家统一\"",
+      "keywords": [
+        {
+          "aliases": [
+            "1992年海协会与海基会达成\"海峡两岸均坚持一个中国原则\"的\"九二共识\"",
+            "核心要义是\"海峡两岸同属一个中国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1454",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国特色社会主义事业取得新成就"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"中国特色社会主义事业取得新成就\"",
+      "answer": "人民生活总体达到小康（2000年GDP超10万亿、1997年提前3年翻两番）→依法治国与先进文化建设→香港1997.7.1、澳门1999.12.20回归祖国→海峡两岸交流扩大（1987年开放探亲打破38年隔绝、九二共识1992年、汪辜会谈1993年）",
+      "keywords": [
+        {
+          "aliases": [
+            "人民生活总体达到小康（2000年GDP超10万亿、1997年提前3年翻两番）→依法治国与先进文化建设→香港1997.7.1、澳门1999.12.20回归祖国→海峡两岸交流扩大（1987年开放探亲打破38年隔绝、九二共识1992年、汪辜会谈1993年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中国特色社会主义事业取得新成就"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1455",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新时期军队建设的总要求是？",
+      "answer": "\"政治合格、军事过硬、作风优良、纪律严明、保障有力\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"政治合格、军事过硬、作风优良、纪律严明、保障有力\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1456",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2001年6月成立的、第一个由中国参与推动建立并以中国城市命名的国际组织是？",
+      "answer": "上海合作组织",
+      "keywords": [
+        {
+          "aliases": [
+            "上海合作组织"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1457",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "把军事斗争准备基点放在打赢高技术条件下局部战争上的课题是？",
+      "answer": "\"打得赢\"\"不变质\"两大历史性课题",
+      "keywords": [
+        {
+          "aliases": [
+            "\"打得赢\"\"不变质\"两大历史性课题"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1458",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1993年底中国外交取得的重大成果是？",
+      "answer": "成功打破西方\"制裁\"",
+      "keywords": [
+        {
+          "aliases": [
+            "成功打破西方\"制裁\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1459",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写推进中国特色军事变革的内容",
+      "answer": "确立新时期军事战略方针；把基点放在打赢现代技术特别是高技术条件下的局部战争上；抓住\"打得赢\"\"不变质\"两大课题；积极推进以信息化为核心的中国特色军事变革；实施科技强军战略，\"九五\"期间裁减员额50万",
+      "keywords": [
+        {
+          "aliases": [
+            "确立新时期军事战略方针",
+            "把基点放在打赢现代技术特别是高技术条件下的局部战争上"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1460",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写2001年中国外交的三件大事",
+      "answer": "博鳌亚洲论坛成立（2月，第一个永久会址设在中国）；上海合作组织成立（6月）；中国在上海成功举办亚太经合组织第九次领导人非正式会议（10月）",
+      "keywords": [
+        {
+          "aliases": [
+            "博鳌亚洲论坛成立（2月",
+            "第一个永久会址设在中国）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1461",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "国防和外交工作新局面"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"国防和外交工作新局面\"",
+      "answer": "军事变革（信息化为核心、裁军50万、科技强军）→应对国际风云变幻（1993年底打破西方制裁、建交154国）→全方位外交（新型大国关系不结盟不对抗不针对第三方、1996年东盟全面对话伙伴国、2001年博鳌/上合/APEC）",
+      "keywords": [
+        {
+          "aliases": [
+            "军事变革（信息化为核心、裁军50万、科技强军）→应对国际风云变幻（1993年底打破西方制裁、建交154国）→全方位外交（新型大国关系不结盟不对抗不针对第三方、1996年东盟全面对话伙伴国、2001年博鳌/上合/APEC）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-国防和外交工作新局面"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1462",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"三个代表\"重要思想的核心内容是？",
+      "answer": "中国共产党要始终代表中国先进生产力的发展要求，代表中国先进文化的前进方向，代表中国最广大人民的根本利益",
+      "keywords": [
+        {
+          "aliases": [
+            "中国共产党要始终代表中国先进生产力的发展要求",
+            "代表中国先进文化的前进方向"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1463",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2002年把\"三个代表\"重要思想写入党章的会议是？",
+      "answer": "中共十六大",
+      "keywords": [
+        {
+          "aliases": [
+            "中共十六大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1464",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2003年提出、坚持以人为本、全面协调可持续的发展观是？",
+      "answer": "科学发展观（中共十六届三中全会明确提出）",
+      "keywords": [
+        {
+          "aliases": [
+            "科学发展观（中共十六届三中全会明确提出）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1465",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2006年1月1日起废止、存在2600年的古老税种是？",
+      "answer": "农业税",
+      "keywords": [
+        {
+          "aliases": [
+            "农业税"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1466",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写全面建设小康社会的目标",
+      "answer": "21世纪头20年是重要战略机遇期；集中力量全面建设惠及十几亿人口的更高水平的小康社会，使经济更加发展、民主更加健全、科教更加进步、文化更加繁荣、社会更加和谐、人民生活更加殷实；国内生产总值到2020年力争比2000年翻两番",
+      "keywords": [
+        {
+          "aliases": [
+            "21世纪头20年是重要战略机遇期",
+            "集中力量全面建设惠及十几亿人口的更高水平的小康社会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1467",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写科学发展观与和谐社会建设",
+      "answer": "2003年十六届三中全会提出科学发展观（以人为本、全面协调可持续）；2005年十六届五中全会提出建设社会主义新农村（生产发展、生活宽裕、乡风文明、村容整洁、管理民主）；2006年十六届六中全会提出构建社会主义和谐社会（社会和谐是中国特色社会主义的本质属性）",
+      "keywords": [
+        {
+          "aliases": [
+            "2003年十六届三中全会提出科学发展观（以人为本、全面协调可持续）",
+            "2005年十六届五中全会提出建设社会主义新农村（生产发展、生活宽裕、乡风文明、村容整洁、管理民主）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1468",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开始全面建设小康社会"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"全面建设小康社会的开局\"",
+      "answer": "2002年十六大确立\"三个代表\"为指导思想、提出全面建设小康社会目标→2003年抗击非典、提出科学发展观→2005年社会主义新农村、2006年取消农业税（2600年税种终结）→构建社会主义和谐社会",
+      "keywords": [
+        {
+          "aliases": [
+            "2002年十六大确立\"三个代表\"为指导思想、提出全面建设小康社会目标→2003年抗击非典、提出科学发展观→2005年社会主义新农村、2006年取消农业税（2600年税种终结）→构建社会主义和谐社会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开始全面建设小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1469",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共十七大首次提出并写入党章的重大理论是？",
+      "answer": "中国特色社会主义理论体系（包括邓小平理论、\"三个代表\"重要思想以及科学发展观）；将理论体系和科学发展观写入党章",
+      "keywords": [
+        {
+          "aliases": [
+            "中国特色社会主义理论体系（包括邓小平理论、\"三个代表\"重要思想以及科学发展观）",
+            "将理论体系和科学发展观写入党章"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1470",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2010年我国成为世界第二大经济体的标志是？",
+      "answer": "经济总量超过40万亿元",
+      "keywords": [
+        {
+          "aliases": [
+            "经济总量超过40万亿元"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1471",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2005年十届全国人大三次会议通过的维护祖国统一的法律是？",
+      "answer": "《反分裂国家法》",
+      "keywords": [
+        {
+          "aliases": [
+            "《反分裂国家法》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1472",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2008年两岸达成空运直航、海运直航、邮政合作协议后启动的\"三通\"是？",
+      "answer": "两岸\"三通\"（通邮、通航、通商）",
+      "keywords": [
+        {
+          "aliases": [
+            "两岸\"三通\"（通邮、通航、通商）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1473",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写科学发展观的内涵",
+      "answer": "第一要义是发展，核心是以人为本，基本要求是全面协调可持续，根本方法是统筹兼顾；2012年在中共十八大上被确立为党的指导思想",
+      "keywords": [
+        {
+          "aliases": [
+            "第一要义是发展",
+            "核心是以人为本"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1474",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写综合国力显著提升的表现",
+      "answer": "经济实力大幅提升（2010年世界第二大经济体）；人民生活明显改善（免费义务教育、新型农村合作医疗、世界上覆盖人口最多的社会保障网）；载人航天、探月工程、超级计算机实现重大突破；2008年北京奥运会、2010年上海世博会成功举办",
+      "keywords": [
+        {
+          "aliases": [
+            "经济实力大幅提升（2010年世界第二大经济体）",
+            "人民生活明显改善（免费义务教育、新型农村合作医疗、世界上覆盖人口最多的社会保障网）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1475",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夺取全面建设小康社会新胜利"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"夺取全面建设小康社会新胜利\"",
+      "answer": "十七大（2007年理论体系+科学发展观）→综合国力显著提升（2010年世界第二大经济体）→支持港澳经济社会发展（更紧密经贸关系安排）→推动两岸关系和平发展（反分裂国家法2005年、胡锦涛会见连战2005年、两岸三通2008年、ECFA 2010年）→社会主义文化大发展大繁荣",
+      "keywords": [
+        {
+          "aliases": [
+            "十七大（2007年理论体系+科学发展观）→综合国力显著提升（2010年世界第二大经济体）→支持港澳经济社会发展（更紧密经贸关系安排）→推动两岸关系和平发展（反分裂国家法2005年、胡锦涛会见连战2005年、两岸三通2008年、ECFA 2010年）→社会主义文化大发展大繁荣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夺取全面建设小康社会新胜利"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1476",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新世纪新阶段的军事战略方针是？",
+      "answer": "把军事斗争准备的基点放在打赢信息化条件下的局部战争上（2004年中央军委完善）",
+      "keywords": [
+        {
+          "aliases": [
+            "把军事斗争准备的基点放在打赢信息化条件下的局部战争上（2004年中央军委完善）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1477",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国第一艘航空母舰是？",
+      "answer": "\"辽宁舰\"",
+      "keywords": [
+        {
+          "aliases": [
+            "\"辽宁舰\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1478",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2003年至2005年人民解放军裁减的员额是？",
+      "answer": "20万",
+      "keywords": [
+        {
+          "aliases": [
+            "20万"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1479",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2006年11月在北京峰会上宣布建立的、中国与非洲国家的新型关系是？",
+      "answer": "中非新型战略伙伴关系",
+      "keywords": [
+        {
+          "aliases": [
+            "中非新型战略伙伴关系"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1480",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写和平发展合作的外交布局",
+      "answer": "大国是关键、周边是首要、发展中国家是基础、多边是重要舞台；2006年中非合作论坛北京峰会建立中非新型战略伙伴关系；2010年中国—东盟自由贸易区正式启动；2011年利比亚撤侨（新中国成立以来最大规模撤离海外公民行动）",
+      "keywords": [
+        {
+          "aliases": [
+            "大国是关键、周边是首要、发展中国家是基础、多边是重要舞台",
+            "2006年中非合作论坛北京峰会建立中非新型战略伙伴关系"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1481",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新世纪军队现代化成就",
+      "answer": "围绕建设信息化军队、打赢信息化战争目标推进军事训练改革创新；加强国防科技和武器装备自主创新能力；全面建设现代后勤；2003—2005年裁减员额20万；辽宁舰列装",
+      "keywords": [
+        {
+          "aliases": [
+            "围绕建设信息化军队、打赢信息化战争目标推进军事训练改革创新",
+            "加强国防科技和武器装备自主创新能力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1482",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "推进国防军队建设和外交工作"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"推进国防军队建设和外交工作\"",
+      "answer": "军事（2004年信息化条件下局部战争方针、裁军20万、辽宁舰、和平方舟号医院船亚丁湾护航）→外交（和平发展合作：中非合作论坛2006、中国东盟自贸区2010、钓鱼岛主权捍卫2012）",
+      "keywords": [
+        {
+          "aliases": [
+            "军事（2004年信息化条件下局部战争方针、裁军20万、辽宁舰、和平方舟号医院船亚丁湾护航）→外交（和平发展合作：中非合作论坛2006、中国东盟自贸区2010、钓鱼岛主权捍卫2012）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-推进国防军队建设和外交工作"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1483",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"两个一百年\"奋斗目标的内容是？",
+      "answer": "到中国共产党成立100年时全面建成小康社会；到新中国成立100年时建成社会主义现代化国家",
+      "keywords": [
+        {
+          "aliases": [
+            "到中国共产党成立100年时全面建成小康社会",
+            "到新中国成立100年时建成社会主义现代化国家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1484",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"中国梦\"的本质是？",
+      "answer": "实现国家富强、民族振兴、人民幸福",
+      "keywords": [
+        {
+          "aliases": [
+            "实现国家富强、民族振兴、人民幸福"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1485",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2012年11月29日习近平参观《复兴之路》展览时首次提出的重要理念是？",
+      "answer": "\"中国梦\"（实现中华民族伟大复兴是中华民族近代以来最伟大的梦想）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"中国梦\"（实现中华民族伟大复兴是中华民族近代以来最伟大的梦想）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1486",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2015年中共十八届五中全会提出的新发展理念是？",
+      "answer": "创新、协调、绿色、开放、共享",
+      "keywords": [
+        {
+          "aliases": [
+            "创新、协调、绿色、开放、共享"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1487",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"五位一体\"总体布局",
+      "answer": "经济建设、政治建设、文化建设、社会建设、生态文明建设；中共十八大将生态文明建设纳入总体布局，提出建设美丽中国；坚持绿水青山就是金山银山的理念",
+      "keywords": [
+        {
+          "aliases": [
+            "经济建设、政治建设、文化建设、社会建设、生态文明建设",
+            "中共十八大将生态文明建设纳入总体布局"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1488",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"四个全面\"战略布局",
+      "answer": "全面建成小康社会、全面深化改革、全面依法治国、全面从严治党；全面建成小康社会居于引领地位；任务如期完成后，内涵演化为全面建设社会主义现代化国家、全面深化改革、全面依法治国、全面从严治党",
+      "keywords": [
+        {
+          "aliases": [
+            "全面建成小康社会、全面深化改革、全面依法治国、全面从严治党",
+            "全面建成小康社会居于引领地位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1489",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画中国梦宏伟蓝图"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"擘画中国梦宏伟蓝图\"",
+      "answer": "2012年中共十八大（两个一百年、进入新时代）→2012年11月中国梦首次提出（国家富强民族振兴人民幸福）→五位一体总体布局+新发展理念→四个全面战略布局（全面深化改革/依法治国/从严治党保障全面小康）→中国特色社会主义进入新时代",
+      "keywords": [
+        {
+          "aliases": [
+            "2012年中共十八大（两个一百年、进入新时代）→2012年11月中国梦首次提出（国家富强民族振兴人民幸福）→五位一体总体布局+新发展理念→四个全面战略布局（全面深化改革/依法治国/从严治党保障全面小康）→中国特色社会主义进入新时代"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-擘画中国梦宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1490",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中共十九大召开的时间和对社会主要矛盾的新判断是？",
+      "answer": "2017年；我国社会主要矛盾转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾",
+      "keywords": [
+        {
+          "aliases": [
+            "2017年",
+            "我国社会主要矛盾转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1491",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"精准扶贫\"理念是怎么提出的？",
+      "answer": "2013年11月习近平在湖南花垣县十八洞村考察时首次提出",
+      "keywords": [
+        {
+          "aliases": [
+            "2013年11月习近平在湖南花垣县十八洞村考察时首次提出"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1492",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "习近平新时代中国特色社会主义思想是什么时候写入党章、载入宪法的？",
+      "answer": "2017年中共十九大写入党章；2018年《宪法修正案》载入宪法",
+      "keywords": [
+        {
+          "aliases": [
+            "2017年中共十九大写入党章",
+            "2018年《宪法修正案》载入宪法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1493",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2020年通过的新中国成立以来第一部以\"法典\"命名的法律是？",
+      "answer": "《中华人民共和国民法典》",
+      "keywords": [
+        {
+          "aliases": [
+            "《中华人民共和国民法典》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1494",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写脱贫攻坚战的成果",
+      "answer": "2021年宣布我国现行标准下9899万农村贫困人口全部脱贫，832个贫困县全部摘帽，12.8万个贫困村全部出列，区域性整体贫困得到解决；提前10年实现联合国2030年可持续发展议程减贫目标；历史性地解决绝对贫困问题，创造人类减贫史上的奇迹",
+      "keywords": [
+        {
+          "aliases": [
+            "2021年宣布我国现行标准下9899万农村贫困人口全部脱贫",
+            "832个贫困县全部摘帽"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1495",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写精准扶贫方略",
+      "answer": "\"六个精准\"（扶持对象、项目安排、资金使用、措施到户、因村派人、脱贫成效精准）；\"五个一批\"（发展生产、易地搬迁、生态补偿、发展教育、社会保障兜底）；\"两不愁三保障\"（不愁吃、不愁穿，义务教育、基本医疗、住房安全有保障）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"六个精准\"（扶持对象、项目安排、资金使用、措施到户、因村派人、脱贫成效精准）",
+            "\"五个一批\"（发展生产、易地搬迁、生态补偿、发展教育、社会保障兜底）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1496",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "决胜全面建成小康社会"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"决胜全面建成小康社会\"",
+      "answer": "十九大（2017年，进入新时代、主要矛盾转化、确立习近平新时代中国特色社会主义思想）→坚持和完善中国特色社会主义制度（十九届四中全会2019年总体谋划、民法典2020年）→打赢脱贫攻坚战（精准扶贫2013年提出→9899万人脱贫、832县摘帽2021年，人类减贫奇迹）",
+      "keywords": [
+        {
+          "aliases": [
+            "十九大（2017年",
+            "进入新时代、主要矛盾转化、确立习近平新时代中国特色社会主义思想）→坚持和完善中国特色社会主义制度（十九届四中全会2019年总体谋划、民法典2020年）→打赢脱贫攻坚战（精准扶贫2013年提出→9899万人脱贫、832县摘帽2021年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-决胜全面建成小康社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1497",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "总体国家安全观是什么时候、由谁首次提出的？",
+      "answer": "2014年，习近平首次提出（关键在总体，以人民安全为宗旨）",
+      "keywords": [
+        {
+          "aliases": [
+            "2014年",
+            "习近平首次提出（关键在总体"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1498",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新时代强军目标是什么？",
+      "answer": "听党指挥、能打胜仗、作风优良（2013年习近平提出）",
+      "keywords": [
+        {
+          "aliases": [
+            "听党指挥、能打胜仗、作风优良（2013年习近平提出）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1499",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2015年国防和军队改革中由第二炮兵部队更名而来的是？",
+      "answer": "火箭军",
+      "keywords": [
+        {
+          "aliases": [
+            "火箭军"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1500",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2015年习近平同台湾方面领导人马英九会面的地点是？",
+      "answer": "新加坡（1949年以来两岸领导人首次会面）",
+      "keywords": [
+        {
+          "aliases": [
+            "新加坡（1949年以来两岸领导人首次会面）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1501",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新时代国防和军队改革的内容",
+      "answer": "成立东部、南部、西部、北部、中部五大战区；形成陆军、海军、空军、火箭军等军种和军事航天部队、网络空间部队、信息支援部队、联勤保障部队等兵种的新型军兵种结构布局；2017年中共十九大提出到21世纪中叶把人民军队全面建成世界一流军队",
+      "keywords": [
+        {
+          "aliases": [
+            "成立东部、南部、西部、北部、中部五大战区",
+            "形成陆军、海军、空军、火箭军等军种和军事航天部队、网络空间部队、信息支援部队、联勤保障部队等兵种的新型军兵种结构布局"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1502",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写维护香港、澳门长期繁荣稳定的举措",
+      "answer": "落实\"爱国者治港\"\"爱国者治澳\"原则；2020年通过《中华人民共和国香港特别行政区维护国家安全法》，推动香港由乱到治、由治及兴；高质量建设粤港澳大湾区，建成港珠澳大桥",
+      "keywords": [
+        {
+          "aliases": [
+            "落实\"爱国者治港\"\"爱国者治澳\"原则",
+            "2020年通过《中华人民共和国香港特别行政区维护国家安全法》"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1503",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "维护国家安全和推进祖国统一"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"维护国家安全和推进祖国统一\"",
+      "answer": "总体国家安全观（2014年提出、2015年国家安全法、4月15日全民国家安全教育日）→新时代强军（强军目标、五大战区、火箭军、世界一流军队）→港澳（爱国者治港治澳、香港国安法、粤港澳大湾区）→台湾（2015年习马会面、2022年白皮书：最大诚意争取和平统一但决不承诺放弃武力）",
+      "keywords": [
+        {
+          "aliases": [
+            "总体国家安全观（2014年提出、2015年国家安全法、4月15日全民国家安全教育日）→新时代强军（强军目标、五大战区、火箭军、世界一流军队）→港澳（爱国者治港治澳、香港国安法、粤港澳大湾区）→台湾（2015年习马会面、2022年白皮书：最大诚意争取和平统一但决不承诺放弃武力）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-维护国家安全和推进祖国统一"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1504",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人类命运共同体理念是什么时候、在哪里首次提出的？",
+      "answer": "2013年3月，习近平在莫斯科首次提出",
+      "keywords": [
+        {
+          "aliases": [
+            "2013年3月",
+            "习近平在莫斯科首次提出"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1505",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "共建\"一带一路\"的内容是？",
+      "answer": "共建\"丝绸之路经济带\"和\"21世纪海上丝绸之路\"（2013年习近平在哈萨克斯坦、印度尼西亚演讲中先后提出）",
+      "keywords": [
+        {
+          "aliases": [
+            "共建\"丝绸之路经济带\"和\"21世纪海上丝绸之路\"（2013年习近平在哈萨克斯坦、印度尼西亚演讲中先后提出）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1506",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2017年被写入联合国安理会决议、2018年载入宪法的理念是？",
+      "answer": "\"构建人类命运共同体\"（\"推动构建人类命运共同体\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "\"构建人类命运共同体\"（\"推动构建人类命运共同体\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1507",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2015年12月成立的、全球首个由中国倡议设立的多边金融机构是？",
+      "answer": "亚洲基础设施投资银行",
+      "keywords": [
+        {
+          "aliases": [
+            "亚洲基础设施投资银行"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1508",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写人类命运共同体的目标与价值",
+      "answer": "提出全球发展倡议、全球安全倡议、全球文明倡议；致力于建设一个持久和平、普遍安全、共同繁荣、开放包容、清洁美丽的世界；得到国际社会广泛认同，提供中国智慧、中国方案、中国力量",
+      "keywords": [
+        {
+          "aliases": [
+            "提出全球发展倡议、全球安全倡议、全球文明倡议",
+            "致力于建设一个持久和平、普遍安全、共同繁荣、开放包容、清洁美丽的世界"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1509",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中国特色大国外交的成就",
+      "answer": "2014年习近平提出推进中国特色大国外交的战略思想；高举和平、发展、合作、共赢的旗帜；成功举办APEC、二十国集团领导人杭州峰会、金砖国家领导人厦门会晤等；截至2024年1月已与183个国家建交",
+      "keywords": [
+        {
+          "aliases": [
+            "2014年习近平提出推进中国特色大国外交的战略思想",
+            "高举和平、发展、合作、共赢的旗帜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1510",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "构建人类命运共同体与中国特色大国外交"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"构建人类命运共同体与中国特色大国外交\"",
+      "answer": "2013年3月人类命运共同体理念提出→三大全球倡议、写入联合国决议和宪法→高质量共建一带一路（丝绸之路经济带+21世纪海上丝绸之路、亚投行2015年、150多国合作文件）→中国特色大国外交（2014年、183国建交、中美贸易摩擦中坚决维护国家核心利益）",
+      "keywords": [
+        {
+          "aliases": [
+            "2013年3月人类命运共同体理念提出→三大全球倡议、写入联合国决议和宪法→高质量共建一带一路（丝绸之路经济带+21世纪海上丝绸之路、亚投行2015年、150多国合作文件）→中国特色大国外交（2014年、183国建交、中美贸易摩擦中坚决维护国家核心利益）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-构建人类命运共同体与中国特色大国外交"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1511",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "习近平宣告全面建成小康社会的时间是？",
+      "answer": "2021年7月1日庆祝中国共产党成立100周年大会",
+      "keywords": [
+        {
+          "aliases": [
+            "2021年7月1日庆祝中国共产党成立100周年大会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1512",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《中共中央关于党的百年奋斗重大成就和历史经验的决议》是哪个会议通过的？",
+      "answer": "2021年11月中共十九届六中全会",
+      "keywords": [
+        {
+          "aliases": [
+            "2021年11月中共十九届六中全会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1513",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2020年提出、以国内大循环为主体、国内国际双循环相互促进的新发展格局是？",
+      "answer": "构建新发展格局",
+      "keywords": [
+        {
+          "aliases": [
+            "构建新发展格局"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1514",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "民族地区全部脱贫的贫困人口数是？",
+      "answer": "3121万贫困人口全部脱贫，实现了全面小康",
+      "keywords": [
+        {
+          "aliases": [
+            "3121万贫困人口全部脱贫",
+            "实现了全面小康"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1515",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中国共产党百年奋斗的历史经验",
+      "answer": "坚持党的领导、坚持人民至上、坚持理论创新、坚持独立自主、坚持中国道路、坚持胸怀天下、坚持开拓创新、坚持敢于斗争、坚持统一战线、坚持自我革命",
+      "keywords": [
+        {
+          "aliases": [
+            "坚持党的领导、坚持人民至上、坚持理论创新、坚持独立自主、坚持中国道路、坚持胸怀天下、坚持开拓创新、坚持敢于斗争、坚持统一战线、坚持自我革命"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1516",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写全面建成小康社会的意义",
+      "answer": "创造了经济快速发展和社会长期稳定两大奇迹；标志着中华民族的千年夙愿变成现实；显著缩小了世界贫困人口的版图，为广大发展中国家解决贫困问题、实现现代化提供了中国智慧和中国方案",
+      "keywords": [
+        {
+          "aliases": [
+            "创造了经济快速发展和社会长期稳定两大奇迹",
+            "标志着中华民族的千年夙愿变成现实"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1517",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现第一个百年奋斗目标"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"实现第一个百年奋斗目标\"",
+      "answer": "2021年7月1日建党百年大会宣告全面建成小康社会、实现第一个百年奋斗目标→2020年构建新发展格局→十九届六中全会（2021年11月）总结百年奋斗重大成就和历史经验（两个确立、十条历史经验）→铸牢中华民族共同体意识（四个与共、3121万民族地区人口脱贫）→向第二个百年奋斗目标迈进",
+      "keywords": [
+        {
+          "aliases": [
+            "2021年7月1日建党百年大会宣告全面建成小康社会、实现第一个百年奋斗目标→2020年构建新发展格局→十九届六中全会（2021年11月）总结百年奋斗重大成就和历史经验（两个确立、十条历史经验）→铸牢中华民族共同体意识（四个与共、3121万民族地区人口脱贫）→向第二个百年奋斗目标迈进"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-实现第一个百年奋斗目标"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1518",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新时代我国经济实力实现历史性跃升的表现是？",
+      "answer": "经济总量稳居世界第二位，谷物总产量稳居世界首位，制造业规模、外汇储备稳居世界第一，建成世界最大的高速铁路网、高速公路网",
+      "keywords": [
+        {
+          "aliases": [
+            "经济总量稳居世界第二位",
+            "谷物总产量稳居世界首位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1519",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "全面建成社会主义现代化强国\"两步走\"战略安排是？",
+      "answer": "从2020年到2035年基本实现社会主义现代化；从2035年到本世纪中叶把我国建成富强民主文明和谐美丽的社会主义现代化强国",
+      "keywords": [
+        {
+          "aliases": [
+            "从2020年到2035年基本实现社会主义现代化",
+            "从2035年到本世纪中叶把我国建成富强民主文明和谐美丽的社会主义现代化强国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1520",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2020年7月23日成功发射、我国首次火星探测任务的探测器是？",
+      "answer": "天问一号（2021年5月15日在火星乌托邦平原成功着陆）",
+      "keywords": [
+        {
+          "aliases": [
+            "天问一号（2021年5月15日在火星乌托邦平原成功着陆）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1521",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2022年提出以中国式现代化全面推进中华民族伟大复兴的会议是？",
+      "answer": "中共二十大",
+      "keywords": [
+        {
+          "aliases": [
+            "中共二十大"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1522",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新时代科技创新的重大成果",
+      "answer": "载人航天、探月探火、卫星导航、新能源技术等取得重大成果；2020年北斗三号全球卫星导航系统正式开通；嫦娥五号完成月球采样返回（探月\"绕、落、回\"三步走完成）；天问一号首次火星探测着陆成功；C919大型客机",
+      "keywords": [
+        {
+          "aliases": [
+            "载人航天、探月探火、卫星导航、新能源技术等取得重大成果",
+            "2020年北斗三号全球卫星导航系统正式开通"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1523",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中共二十大提出的三件大事",
+      "answer": "迎来中国共产党成立一百周年；中国特色社会主义进入新时代；完成脱贫攻坚、全面建成小康社会的历史任务，实现第一个百年奋斗目标",
+      "keywords": [
+        {
+          "aliases": [
+            "迎来中国共产党成立一百周年",
+            "中国特色社会主义进入新时代"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1524",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中国式现代化的重要特征",
+      "answer": "人口规模巨大的现代化、全体人民共同富裕的现代化、物质文明和精神文明相协调的现代化、人与自然和谐共生的现代化、走和平发展道路的现代化",
+      "keywords": [
+        {
+          "aliases": [
+            "人口规模巨大的现代化、全体人民共同富裕的现代化、物质文明和精神文明相协调的现代化、人与自然和谐共生的现代化、走和平发展道路的现代化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  },
+  {
+    "id": "Q-history-7to9-1525",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "开启全面建设社会主义现代化国家新征程"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"开启全面建设社会主义现代化国家新征程\"",
+      "answer": "新时代伟大成就（经济总量世界第二、创新型国家、北斗/嫦娥/天问、人民生活全方位改善、抗疫精神）→中共二十大（2022年，三件大事、两步走战略安排、中国式现代化五个特征）→以中国式现代化全面推进中华民族伟大复兴",
+      "keywords": [
+        {
+          "aliases": [
+            "新时代伟大成就（经济总量世界第二、创新型国家、北斗/嫦娥/天问、人民生活全方位改善、抗疫精神）→中共二十大（2022年",
+            "三件大事、两步走战略安排、中国式现代化五个特征）→以中国式现代化全面推进中华民族伟大复兴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-开启全面建设社会主义现代化国家新征程"
+    }
+  }
+]

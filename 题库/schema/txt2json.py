@@ -20,6 +20,8 @@
 用法：
   python txt2json.py          # 语文迁移（默认，行为不变）
   python txt2json.py hooks    # 生成 6 学科背景钩子知识卡片 JSON
+  python txt2json.py l12      # 生成历史/地理/道法 L1 背诵内容 + L2 背诵训练 JSON
+                              #   （知识点按 第N课/第N节/第N章/第N单元 标题归属）
 """
 
 import json
@@ -469,9 +471,259 @@ def migrate_range(cfg: dict):
     for k, v in summary.items():
         print(f"  {k}: {v}")
 
+# ============================================================
+# L1/L2 多学科迁移（历史 / 地理 / 道法）——语文（RANGES）不受影响
+# ============================================================
+# 知识点归属：按节/课/章/单元标题（去序号）；L1 题型按题目形态推断，
+# L2 题型按 S1-S4 分阶标记映射。产物结构对齐语文
+# （id/bank_id/subject/topic/knowledge_points/type/purpose_tags/content/meta）。
+
+# 年级前缀（与 RANGES.grades 约定一致）
+GRADE_PREFIX = {"七年级": "7", "八年级": "8", "九年级": "9"}
+
+# 第N课 / 第N节 / 第N章 / 第N单元（中文或阿拉伯数字序号）标题提取
+_ORD_SEC_RE = re.compile(r"^第[一二三四五六七八九十百\d]+(课|节|章|单元)\s*(.*)$")
+# 填空形态：下划线 / 全角括号 / 半角括号留空
+_FILL_BLANK_RE = re.compile(r"_{2,}|（\s*）|\(\s*\)")
+
+# subject -> L1/L2 迁移配置（版本目录 / bank_id / bank_code / 容错度 / 卡片模板）
+L12_SUBJECT_CONFIG = {
+    "history": {
+        "name": "历史",
+        "version_dir": "统编-2024修订版",
+        "bank_id": "history-7to9-2024r",
+        "bank_code": "7to9",
+        "tolerance": "exact",
+        "knowledge_card_template": "event_card",
+        "supported_types": ["R1", "R2", "R3a", "R3b"],
+        "raw_suffix": "背诵内容",
+    },
+    "geography": {
+        "name": "地理",
+        "version_dir": "统编-2024修订版",
+        "bank_id": "geography-7to9-2024r",
+        "bank_code": "7to9",
+        "tolerance": "exact",
+        "knowledge_card_template": "region_card",
+        "supported_types": ["R1", "R2", "R3a", "R3b"],
+        "raw_suffix": "背诵内容",
+    },
+    "daodeyufazhi": {
+        "name": "道德与法治",
+        "version_dir": "统编-2024修订版",
+        "bank_id": "daodeyufazhi-7to9-2024r",
+        "bank_code": "7to9",
+        "tolerance": "semantic_tolerant",
+        "knowledge_card_template": "concept_card",
+        "supported_types": ["R1", "R2", "R3a", "R3b"],
+        "raw_suffix": "背诵内容",
+    },
+}
+
+
+def clean_section_title(line: str):
+    """若行是「第N课/第N节/第N章/第N单元」标题（允许 # / ## / ===== 包裹），
+    返回去序号标题（如『第1课 远古时期的人类活动』→『远古时期的人类活动』）；
+    否则返回 None。用于历史/地理/道法 L1/L2 的知识点归属。"""
+    s = line.strip().lstrip("#").strip()
+    s = s.strip("=").strip()
+    if not s:
+        return None
+    m = _ORD_SEC_RE.match(s)
+    if not m:
+        return None
+    title = m.group(2).strip().strip("=").strip()
+    return title or None
+
+
+def infer_qtype_form(question: str) -> str:
+    """按题目形态兜底推断题型（非语文学科）：填空 → O5，问句 → R1。
+    语文仍走 infer_qtype（中文关键词推断，行为不变）。"""
+    q = question.strip()
+    if _FILL_BLANK_RE.search(q):
+        return "O5"
+    return "R1"
+
+
+def parse_raw_txt_generic(file: Path, subject: str, bank_id: str, bank_code: str,
+                          grade_prefix: str, vol: str, raw_suffix: str,
+                          tolerance: str) -> list:
+    """多学科 L1 背诵内容解析（历史/地理/道法），结构对齐 parse_raw_txt：
+    - knowledge_points = 最近一节标题（去序号）
+    - type = 按题目形态推断（____→O5、问句→R1）
+    - tolerance = 学科注册表 gradingPreference
+    """
+    items = []
+    content = file.read_text(encoding="utf-8-sig")
+    current_kp = None
+    for line in content.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        kp = clean_section_title(line)
+        if kp is not None:
+            current_kp = kp
+            continue
+        if line.startswith("#") or "###" not in line:
+            continue
+        q, a = line.split("###", 1)
+        q, a = q.strip(), a.strip()
+        if not q or not a:
+            continue
+        q, overrides = parse_override_markers(q)
+        qtype = infer_qtype_form(q)
+        seq["n"] += 1
+        content = {
+            "question": q,
+            "answer": a,
+            "keywords": make_keywords(a),
+            "tolerance": tolerance,
+        }
+        content.update(overrides)  # 可选 [js=] [it=] 标记落盘
+        item = {
+            "id": f"Q-{subject}-{bank_code}-{seq['n']:04d}",
+            "bank_id": bank_id,
+            "subject": subject,
+            "topic": f"{grade_prefix}年级{vol}册",
+            "knowledge_points": [current_kp] if current_kp else ["未分类"],
+            "type": qtype,
+            "purpose_tags": ["memorize", "play"],
+            "content": content,
+            "meta": {
+                "difficulty": 1,
+                "source": f"人教社统编版 2024 修订（{raw_suffix}）",
+                "knowledge_card_id": f"KC-{subject}-{current_kp if current_kp else '未分类'}",
+            },
+        }
+        items.append(item)
+    return items
+
+
+def parse_training_txt_generic(file: Path, subject: str, bank_id: str, bank_code: str,
+                               tolerance: str) -> list:
+    """多学科 L2 背诵训练解析（历史/地理/道法），结构对齐 parse_training_txt：
+    - type = S1-S4 分阶标记映射（R1/R2/R3a/R3b），不做语文『默写』关键词覆盖
+    - knowledge_points = 最近一节标题（## 第N课 / ## 第N章 等，去序号）
+    """
+    items = []
+    content = file.read_text(encoding="utf-8-sig")
+    current_type = None
+    current_kp = None
+    for line in content.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        m = re.match(r"^#\s*(S[1-4])\s", line)
+        if m:
+            current_type = S2TYPE[m.group(1)]
+            continue
+        kp = clean_section_title(line)
+        if kp is not None:
+            current_kp = kp
+            continue
+        if line.startswith("#"):
+            continue
+        if "###" not in line:
+            continue
+        q, a = line.split("###", 1)
+        q, a = q.strip(), a.strip()
+        if not q or not a:
+            continue
+        q, overrides = parse_override_markers(q)
+        qtype = current_type or "R1"
+        seq["n"] += 1
+        content = {
+            "question": q,
+            "answer": a,
+            "keywords": make_keywords(a),
+            "tolerance": tolerance,
+        }
+        content.update(overrides)
+        item = {
+            "id": f"Q-{subject}-{bank_code}-{seq['n']:04d}",
+            "bank_id": bank_id,
+            "subject": subject,
+            "topic": "背诵训练",
+            "knowledge_points": [current_kp] if current_kp else ["未分类"],
+            "type": qtype,
+            "purpose_tags": ["memorize"],
+            "content": content,
+            "meta": {
+                "difficulty": 1,
+                "source": "分阶检索训练题库（S1-S4）",
+                "knowledge_card_id": f"KC-{subject}-{current_kp if current_kp else '未分类'}",
+            },
+        }
+        items.append(item)
+    return items
+
+
+def migrate_subject_l12():
+    """生成历史/地理/道法 L1（背诵内容）+ L2（背诵训练）JSON（与语文同构）。
+    语文 RANGES/migrate_range 与 hooks 流程均不受影响。"""
+    global seq
+    for subj, cfg in L12_SUBJECT_CONFIG.items():
+        seq = {"n": 0}
+        ver = cfg["version_dir"]
+        src_dir = BASE / subj / ver
+        trn_dir = BASE / "背诵训练" / subj / ver
+        out_dir = BASE / subj / ver
+        os.makedirs(out_dir, exist_ok=True)
+        summary = {}
+
+        for raw_file in sorted(src_dir.glob(f"*-{cfg['raw_suffix']}.txt")):
+            m = re.match(r"^(.*年级)([上下])册-", raw_file.name)
+            if not m:
+                print(f"  SKIP（文件名无法解析年级/册）: {raw_file.name}")
+                continue
+            grade, vol_key = m.group(1), m.group(2)
+            prefix = GRADE_PREFIX.get(grade, "")
+            vol = VOLUMES[vol_key]
+            items = parse_raw_txt_generic(
+                raw_file, subj, cfg["bank_id"], cfg["bank_code"],
+                prefix, vol, cfg["raw_suffix"], cfg["tolerance"])
+            dest = out_dir / f"{grade}{vol_key}册-背诵内容.json"
+            dest.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+            summary[f"{grade}{vol_key}原始"] = len(items)
+
+            train_file = trn_dir / f"{grade}{vol_key}册-背诵训练.txt"
+            if train_file.exists():
+                items = parse_training_txt_generic(
+                    train_file, subj, cfg["bank_id"], cfg["bank_code"], cfg["tolerance"])
+                (out_dir / f"{grade}{vol_key}册-背诵训练.json").write_text(
+                    json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+                summary[f"{grade}{vol_key}训练"] = len(items)
+
+        bank_meta = {
+            "bank_id": cfg["bank_id"],
+            "subject": subj,
+            "name": cfg["name"],
+            "version": "V1.0",
+            "source": "人教社统编版 2024 修订",
+            "purpose_tags": ["memorize", "assess", "play"],
+            "supported_types": cfg["supported_types"],
+            "knowledge_card_template": cfg["knowledge_card_template"],
+            "grading_preference": cfg["tolerance"],
+            "default_prompt": "通用判题",
+            "privacy": "private",
+            "owner": "system",
+        }
+        (out_dir / "bank.json").write_text(
+            json.dumps(bank_meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        total = sum(summary.values())
+        print(f"\n迁移完成 → {out_dir}")
+        print(f"总条目：{total}")
+        for k, v in summary.items():
+            print(f"  {k}: {v}")
+
+
 def main():
-    if len(sys.argv) > 1 and sys.argv[1] == "hooks":
+    args = sys.argv[1:]
+    if args and args[0] == "hooks":
         migrate_subject_hooks()
+    elif args and args[0] == "l12":
+        migrate_subject_l12()
     else:
         for cfg in RANGES:
             migrate_range(cfg)

@@ -1,0 +1,2206 @@
+[
+  {
+    "id": "Q-daodeyufazhi-7to9-0371",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "党的百年奋斗归结起来的一个主题是？",
+      "answer": "实现中华民族伟大复兴",
+      "keywords": [
+        {
+          "aliases": [
+            "实现中华民族伟大复兴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0372",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "伟大建党精神的内涵？",
+      "answer": "坚持真理、坚守理想，践行初心、担当使命，不怕牺牲、英勇斗争，对党忠诚、不负人民",
+      "keywords": [
+        {
+          "aliases": [
+            "坚持真理、坚守理想",
+            "践行初心、担当使命"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0373",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "1921年召开、宣告中国共产党成立的是？",
+      "answer": "中国共产党第一次全国代表大会",
+      "keywords": [
+        {
+          "aliases": [
+            "中国共产党第一次全国代表大会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0374",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国共产党人精神谱系的源头是？",
+      "answer": "伟大建党精神",
+      "keywords": [
+        {
+          "aliases": [
+            "伟大建党精神"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0375",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写四个时期党创造的伟大成就及意义",
+      "answer": "新民主主义革命→根本社会条件；社会主义革命和建设→根本政治前提和制度基础；改革开放→充满新的活力的体制保证和物质条件；新时代→更为完善的制度保证、物质基础、精神力量",
+      "keywords": [
+        {
+          "aliases": [
+            "新民主主义革命→根本社会条件",
+            "社会主义革命和建设→根本政治前提和制度基础"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0376",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写改革开放的历史地位",
+      "answer": "是决定当代中国前途命运的关键一招",
+      "keywords": [
+        {
+          "aliases": [
+            "是决定当代中国前途命运的关键一招"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0377",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百年大党风华正茂"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"为什么没有中国共产党就没有中华民族的伟大复兴\"",
+      "answer": "党团结带领人民创造丰功伟业；形成伟大建党精神源头的精神谱系；四个时期伟大成就奠定复兴基础；党的领导是历史和人民的选择",
+      "keywords": [
+        {
+          "aliases": [
+            "党团结带领人民创造丰功伟业",
+            "形成伟大建党精神源头的精神谱系"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-百年大党风华正茂"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0378",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国共产党的初心使命？",
+      "answer": "为中国人民谋幸福、为中华民族谋复兴",
+      "keywords": [
+        {
+          "aliases": [
+            "为中国人民谋幸福、为中华民族谋复兴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0379",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国共产党的根本宗旨？",
+      "answer": "全心全意为人民服务",
+      "keywords": [
+        {
+          "aliases": [
+            "全心全意为人民服务"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0380",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"江山就是人民，人民就是江山\"体现的理念？",
+      "answer": "坚持以人民为中心",
+      "keywords": [
+        {
+          "aliases": [
+            "坚持以人民为中心"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0381",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "党的最高理想和最终目标？",
+      "answer": "实现共产主义",
+      "keywords": [
+        {
+          "aliases": [
+            "实现共产主义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0382",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写党的性质与地位",
+      "answer": "中国工人阶级的先锋队、中国人民和中华民族的先锋队；中国特色社会主义事业的领导核心",
+      "keywords": [
+        {
+          "aliases": [
+            "中国工人阶级的先锋队、中国人民和中华民族的先锋队",
+            "中国特色社会主义事业的领导核心"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0383",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写为什么不能忘记人民这个根",
+      "answer": "坚守初心使命才能在困境中发展壮大；忘记初心使命就会改变性质、失去人民、失去未来",
+      "keywords": [
+        {
+          "aliases": [
+            "坚守初心使命才能在困境中发展壮大",
+            "忘记初心使命就会改变性质、失去人民、失去未来"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0384",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "坚持以人民为中心"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"坚持以人民为中心的原因\"",
+      "answer": "党的初心使命所系；人民是党的根基和力量源泉；人民至上；全心全意为人民服务",
+      "keywords": [
+        {
+          "aliases": [
+            "党的初心使命所系",
+            "人民是党的根基和力量源泉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-坚持以人民为中心"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0385",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "党的领导是中国特色社会主义的？",
+      "answer": "最本质的特征",
+      "keywords": [
+        {
+          "aliases": [
+            "最本质的特征"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0386",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "党的领导是中国特色社会主义制度的？",
+      "answer": "最大优势",
+      "keywords": [
+        {
+          "aliases": [
+            "最大优势"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0387",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "党政军民学，东西南北中，什么是最高的？",
+      "answer": "党是领导一切的",
+      "keywords": [
+        {
+          "aliases": [
+            "党是领导一切的"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0388",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "把方向、谋大局、定政策、促改革的是？",
+      "answer": "党的领导",
+      "keywords": [
+        {
+          "aliases": [
+            "党的领导"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0389",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写党的领导核心地位",
+      "answer": "坚强领导核心；最本质特征；最大优势；实现社会主义现代化和民族复兴的最根本保证",
+      "keywords": [
+        {
+          "aliases": [
+            "坚强领导核心",
+            "最本质特征"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0390",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写如何坚持和加强党的全面领导",
+      "answer": "党中央集中统一领导，总揽全局、协调各方；增强\"四个意识\"、坚定\"四个自信\"、做到\"两个维护\"",
+      "keywords": [
+        {
+          "aliases": [
+            "党中央集中统一领导",
+            "总揽全局、协调各方"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0391",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "党是领导一切的"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"为什么坚持党对一切工作的领导\"",
+      "answer": "没有共产党就没有新中国、就没有中国特色社会主义、就没有中华民族伟大复兴；党的领导是根本所在、命脉所在、利益所在、幸福所在",
+      "keywords": [
+        {
+          "aliases": [
+            "没有共产党就没有新中国、就没有中国特色社会主义、就没有中华民族伟大复兴",
+            "党的领导是根本所在、命脉所在、利益所在、幸福所在"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-党是领导一切的"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0392",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新的历史方位"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新时代我国社会主要矛盾？",
+      "answer": "人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾",
+      "keywords": [
+        {
+          "aliases": [
+            "人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新的历史方位"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0393",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新的历史方位"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国特色社会主义进入新时代的时间定位？",
+      "answer": "这是我国发展新的历史方位",
+      "keywords": [
+        {
+          "aliases": [
+            "这是我国发展新的历史方位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新的历史方位"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0394",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新的历史方位"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"两个没有变\"指？",
+      "answer": "我国仍处于并将长期处于社会主义初级阶段的基本国情没有变；我国是世界最大发展中国家的国际地位没有变",
+      "keywords": [
+        {
+          "aliases": [
+            "我国仍处于并将长期处于社会主义初级阶段的基本国情没有变",
+            "我国是世界最大发展中国家的国际地位没有变"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新的历史方位"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0395",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新的历史方位"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写社会主要矛盾变化的背景",
+      "answer": "短缺经济和供给不足状况已根本改变；人民生活全方位改善；对民主法治公平正义安全环境等要求日益增长",
+      "keywords": [
+        {
+          "aliases": [
+            "短缺经济和供给不足状况已根本改变",
+            "人民生活全方位改善"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新的历史方位"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0396",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新的历史方位"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写进入新时代的意义",
+      "answer": "中华民族迎来了从站起来、富起来到强起来的伟大飞跃",
+      "keywords": [
+        {
+          "aliases": [
+            "中华民族迎来了从站起来、富起来到强起来的伟大飞跃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新的历史方位"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0397",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新的历史方位"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"新时代社会主要矛盾（历史对比）\"",
+      "answer": "1956年党的八大：先进工业国要求vs落后农业国；1981年：物质文化需要vs落后社会生产；2017年十九大：美好生活需要vs不平衡不充分发展",
+      "keywords": [
+        {
+          "aliases": [
+            "1956年党的八大：先进工业国要求vs落后农业国",
+            "1981年：物质文化需要vs落后社会生产"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新的历史方位"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0398",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新时代的思想旗帜"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"两个结合\"指？",
+      "answer": "马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合",
+      "keywords": [
+        {
+          "aliases": [
+            "马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新时代的思想旗帜"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0399",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新时代的思想旗帜"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "习近平新时代中国特色社会主义思想的地位？",
+      "answer": "思想旗帜、行动指南、根本遵循",
+      "keywords": [
+        {
+          "aliases": [
+            "思想旗帜、行动指南、根本遵循"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新时代的思想旗帜"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0400",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新时代的思想旗帜"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"十个明确\"\"十四个坚持\"\"十三个方面成就\"概括的是？",
+      "answer": "习近平新时代中国特色社会主义思想的主要内容",
+      "keywords": [
+        {
+          "aliases": [
+            "习近平新时代中国特色社会主义思想的主要内容"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新时代的思想旗帜"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0401",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新时代的思想旗帜"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"六个必须坚持\"是？",
+      "answer": "这一思想的世界观、方法论和贯穿其中的立场观点方法的重要体现",
+      "keywords": [
+        {
+          "aliases": [
+            "这一思想的世界观、方法论和贯穿其中的立场观点方法的重要体现"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新时代的思想旗帜"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0402",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新时代的思想旗帜"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写三个重大时代课题",
+      "answer": "坚持和发展什么样的中国特色社会主义、怎样坚持和发展；建设什么样的社会主义现代化强国、怎样建设；建设什么样的长期执政的马克思主义政党、怎样建设",
+      "keywords": [
+        {
+          "aliases": [
+            "坚持和发展什么样的中国特色社会主义、怎样坚持和发展",
+            "建设什么样的社会主义现代化强国、怎样建设"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新时代的思想旗帜"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0403",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "新时代的思想旗帜"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"习近平新时代中国特色社会主义思想创立的背景与地位\"",
+      "answer": "时代是思想之母、实践是理论之源；两个结合；三个课题；十个明确等；行动指南、根本遵循",
+      "keywords": [
+        {
+          "aliases": [
+            "时代是思想之母、实践是理论之源",
+            "两个结合"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-新时代的思想旗帜"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0404",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新时代我国经济总量居世界第几位？",
+      "answer": "第二位",
+      "keywords": [
+        {
+          "aliases": [
+            "第二位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0405",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国制造业规模居世界第几位？",
+      "answer": "第一（唯一拥有全部工业门类的国家）",
+      "keywords": [
+        {
+          "aliases": [
+            "第一（唯一拥有全部工业门类的国家）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0406",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "全球货物贸易第一大国是？",
+      "answer": "中国",
+      "keywords": [
+        {
+          "aliases": [
+            "中国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0407",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国进入什么国家行列（科技创新）？",
+      "answer": "创新型国家行列",
+      "keywords": [
+        {
+          "aliases": [
+            "创新型国家行列"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0408",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国重大科技创新成果",
+      "answer": "载人航天、探月探火、深海深地探测、超级计算机、卫星导航、量子信息、核电技术、大飞机制造、生物医药",
+      "keywords": [
+        {
+          "aliases": [
+            "载人航天、探月探火、深海深地探测、超级计算机、卫星导航、量子信息、核电技术、大飞机制造、生物医药"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0409",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写经济结构优化举措",
+      "answer": "制造强国战略、新型城镇化战略、乡村振兴战略；\"四大板块\"联动发展",
+      "keywords": [
+        {
+          "aliases": [
+            "制造强国战略、新型城镇化战略、乡村振兴战略",
+            "\"四大板块\"联动发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0410",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中国腾飞谱新篇"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"新时代伟大成就说明了什么\"",
+      "answer": "党的领导的正确性；中国特色社会主义制度的显著优势；集中力量办大事",
+      "keywords": [
+        {
+          "aliases": [
+            "党的领导的正确性",
+            "中国特色社会主义制度的显著优势"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-中国腾飞谱新篇"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0411",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"两步走\"战略安排？",
+      "answer": "2020-2035基本实现社会主义现代化；2035-本世纪中叶建成富强民主文明和谐美丽的社会主义现代化强国",
+      "keywords": [
+        {
+          "aliases": [
+            "2020-2035基本实现社会主义现代化",
+            "2035-本世纪中叶建成富强民主文明和谐美丽的社会主义现代化强国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0412",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "已实现的第一个百年奋斗目标？",
+      "answer": "全面建成小康社会（历史性解决绝对贫困问题）",
+      "keywords": [
+        {
+          "aliases": [
+            "全面建成小康社会（历史性解决绝对贫困问题）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0413",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "到2035年人均国内生产总值达到什么水平？",
+      "answer": "中等发达国家水平",
+      "keywords": [
+        {
+          "aliases": [
+            "中等发达国家水平"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0414",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国式现代化的本质？",
+      "answer": "中国共产党领导的社会主义现代化",
+      "keywords": [
+        {
+          "aliases": [
+            "中国共产党领导的社会主义现代化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0415",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中国式现代化的中国特色",
+      "answer": "人口规模巨大；全体人民共同富裕；物质文明和精神文明相协调；人与自然和谐共生；走和平发展道路",
+      "keywords": [
+        {
+          "aliases": [
+            "人口规模巨大",
+            "全体人民共同富裕"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0416",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写2035年总体目标要点",
+      "answer": "经济科技综合国力大幅跃升；高水平科技自立自强、进入创新型国家前列；基本实现国家治理体系和治理能力现代化；美丽中国目标基本实现",
+      "keywords": [
+        {
+          "aliases": [
+            "经济科技综合国力大幅跃升",
+            "高水平科技自立自强、进入创新型国家前列"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0417",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "擘画宏伟蓝图"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"从三步走到两步走的战略演进\"",
+      "answer": "十三大三步走→十五大两个一百年→十六大全面建设小康→新时代两步走（2035基本实现现代化/本世纪中叶建成现代化强国）",
+      "keywords": [
+        {
+          "aliases": [
+            "十三大三步走→十五大两个一百年→十六大全面建设小康→新时代两步走（2035基本实现现代化/本世纪中叶建成现代化强国）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-擘画宏伟蓝图"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0418",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新发展理念的内容？",
+      "answer": "创新、协调、绿色、开放、共享",
+      "keywords": [
+        {
+          "aliases": [
+            "创新、协调、绿色、开放、共享"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0419",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "新发展格局？",
+      "answer": "以国内大循环为主体、国内国际双循环相互促进",
+      "keywords": [
+        {
+          "aliases": [
+            "以国内大循环为主体、国内国际双循环相互促进"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0420",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "创新是引领发展的？",
+      "answer": "第一动力",
+      "keywords": [
+        {
+          "aliases": [
+            "第一动力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0421",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "注重解决人与自然和谐共生问题的是？",
+      "answer": "绿色发展",
+      "keywords": [
+        {
+          "aliases": [
+            "绿色发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0422",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写新发展理念各解决什么问题",
+      "answer": "创新→动力；协调→不平衡；绿色→人与自然和谐；开放→内外联动；共享→社会公平正义",
+      "keywords": [
+        {
+          "aliases": [
+            "创新→动力",
+            "协调→不平衡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0423",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写构建新发展格局的意义",
+      "answer": "牢牢把握发展主动权；化解外部冲击；保证经济正常运行和社会大局稳定",
+      "keywords": [
+        {
+          "aliases": [
+            "牢牢把握发展主动权",
+            "化解外部冲击"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0424",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现高质量发展"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"新发展理念的地位\"",
+      "answer": "指挥棒、红绿灯；明确现代化建设指导原则；是关系我国发展全局的一场深刻变革",
+      "keywords": [
+        {
+          "aliases": [
+            "指挥棒、红绿灯",
+            "明确现代化建设指导原则"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现高质量发展"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0425",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "铸牢中华民族共同体意识是新时代党的民族工作的？",
+      "answer": "主线",
+      "keywords": [
+        {
+          "aliases": [
+            "主线"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0426",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"三个离不开\"？",
+      "answer": "汉族离不开少数民族、少数民族离不开汉族、各少数民族之间也相互离不开",
+      "keywords": [
+        {
+          "aliases": [
+            "汉族离不开少数民族、少数民族离不开汉族、各少数民族之间也相互离不开"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0427",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"中华民族共同体意识是民族团结之本\"是谁提出的？",
+      "answer": "习近平",
+      "keywords": [
+        {
+          "aliases": [
+            "习近平"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0428",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "处理两岸关系必须坚持的原则？",
+      "answer": "一个中国原则",
+      "keywords": [
+        {
+          "aliases": [
+            "一个中国原则"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0429",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写铸牢中华民族共同体意识的内涵",
+      "answer": "牢固树立休戚与共、荣辱与共、生死与共、命运与共的共同体理念",
+      "keywords": [
+        {
+          "aliases": [
+            "牢固树立休戚与共、荣辱与共、生死与共、命运与共的共同体理念"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0430",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"一国两制\"的含义",
+      "answer": "一个中国前提下，国家主体坚持社会主义制度，港澳台保持资本主义制度长期不变；是中国特色社会主义的伟大创举",
+      "keywords": [
+        {
+          "aliases": [
+            "一个中国前提下",
+            "国家主体坚持社会主义制度"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0431",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "凝聚团结伟力"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"为什么要铸牢中华民族共同体意识\"",
+      "answer": "民族团结之本；夯实平等团结互助和谐的社会主义民族关系思想基础；团结凝聚力量应对风险挑战；推进中华民族共同体建设",
+      "keywords": [
+        {
+          "aliases": [
+            "民族团结之本",
+            "夯实平等团结互助和谐的社会主义民族关系思想基础"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-凝聚团结伟力"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0432",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国梦的内涵？",
+      "answer": "实现中华民族伟大复兴，是近代以来中华民族最伟大的梦想",
+      "keywords": [
+        {
+          "aliases": [
+            "实现中华民族伟大复兴",
+            "是近代以来中华民族最伟大的梦想"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0433",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "中国梦的本质？",
+      "answer": "国家富强、民族振兴、人民幸福",
+      "keywords": [
+        {
+          "aliases": [
+            "国家富强、民族振兴、人民幸福"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0434",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "实现中华民族伟大复兴的必由之路是？",
+      "answer": "中国特色社会主义道路",
+      "keywords": [
+        {
+          "aliases": [
+            "中国特色社会主义道路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0435",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "实现中国梦必须弘扬的中国精神？",
+      "answer": "以爱国主义为核心的民族精神和以改革创新为核心的时代精神",
+      "keywords": [
+        {
+          "aliases": [
+            "以爱国主义为核心的民族精神和以改革创新为核心的时代精神"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0436",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写实现中国梦的四个必须",
+      "answer": "坚持中国共产党的领导；走中国特色社会主义道路；弘扬中国精神；凝聚中国力量（全国各族人民大团结）",
+      "keywords": [
+        {
+          "aliases": [
+            "坚持中国共产党的领导",
+            "走中国特色社会主义道路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0437",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中国梦的特点",
+      "answer": "国家的梦、民族的梦、每个中国人的梦；体现中华民族和中国人民的整体利益",
+      "keywords": [
+        {
+          "aliases": [
+            "国家的梦、民族的梦、每个中国人的梦",
+            "体现中华民族和中国人民的整体利益"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-7to9-0438",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "实现伟大梦想"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"如何将个人梦与中国梦相统一\"",
+      "answer": "把个人梦想融入国家和民族的伟大梦想之中；在实现中国梦的生动实践中放飞青春梦想；在不懈奋斗中书写人生华章",
+      "keywords": [
+        {
+          "aliases": [
+            "把个人梦想融入国家和民族的伟大梦想之中",
+            "在实现中国梦的生动实践中放飞青春梦想"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "semantic_tolerant"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-daodeyufazhi-实现伟大梦想"
+    }
+  }
+]

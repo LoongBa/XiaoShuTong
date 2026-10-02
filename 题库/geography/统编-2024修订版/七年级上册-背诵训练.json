@@ -1,0 +1,939 @@
+[
+  {
+    "id": "Q-geography-7to9-0060",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地球"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "太阳系行星由近及远排序？",
+      "answer": "水金地火木土天海（八颗）",
+      "keywords": [
+        {
+          "aliases": [
+            "水金地火木土天海（八颗）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地球"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0061",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地球"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "地球平均半径与赤道周长？",
+      "answer": "约6371千米；约4万千米",
+      "keywords": [
+        {
+          "aliases": [
+            "约6371千米",
+            "约4万千米"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地球"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0062",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地球"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "两极指？",
+      "answer": "地轴与地球表面的两个交点（北极为地球最北点）",
+      "keywords": [
+        {
+          "aliases": [
+            "地轴与地球表面的两个交点（北极为地球最北点）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地球"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0063",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地球"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写地球表面积及形状？",
+      "answer": "约5.1亿平方千米；两极稍扁、赤道略鼓的不规则球体",
+      "keywords": [
+        {
+          "aliases": [
+            "约5.1亿平方千米",
+            "两极稍扁、赤道略鼓的不规则球体"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地球"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0064",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地球"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写自转/公转？",
+      "answer": "自转自西向东约24h（昼夜交替）；公转自西向东约365天（四季）",
+      "keywords": [
+        {
+          "aliases": [
+            "自转自西向东约24h（昼夜交替）",
+            "公转自西向东约365天（四季）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地球"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0065",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地球"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "说明地球为何是唯一宜居家园？",
+      "answer": "距日远近适中、体积质量适中→适宜温度大气水",
+      "keywords": [
+        {
+          "aliases": [
+            "距日远近适中、体积质量适中→适宜温度大气水"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地球"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0066",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地图"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "比例尺公式？",
+      "answer": "图上距离÷实际距离",
+      "keywords": [
+        {
+          "aliases": [
+            "图上距离÷实际距离"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地图"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0067",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地图"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "等高线密集/稀疏？",
+      "answer": "密集=坡陡；稀疏=坡缓",
+      "keywords": [
+        {
+          "aliases": [
+            "密集=坡陡",
+            "稀疏=坡缓"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地图"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0068",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地图"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "比例尺分母大小与详略？",
+      "answer": "分母越小说比例尺越大、内容越详细",
+      "keywords": [
+        {
+          "aliases": [
+            "分母越小说比例尺越大、内容越详细"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地图"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0069",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地图"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "地图三要素？",
+      "answer": "比例尺、方向、图例",
+      "keywords": [
+        {
+          "aliases": [
+            "比例尺、方向、图例"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地图"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0070",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地图"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "五种地形？",
+      "answer": "高原、山地、盆地、平原、丘陵",
+      "keywords": [
+        {
+          "aliases": [
+            "高原、山地、盆地、平原、丘陵"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地图"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0071",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地图"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "判读地形图的步骤？",
+      "answer": "看比例尺→定向→读海拔及等高线疏密→判断地形",
+      "keywords": [
+        {
+          "aliases": [
+            "看比例尺→定向→读海拔及等高线疏密→判断地形"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地图"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0072",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "陆地和海洋"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "七大洲四大洋？",
+      "answer": "七洲：亚非北美南美南极欧大洋；四洋：太平洋大西洋印度洋北冰洋",
+      "keywords": [
+        {
+          "aliases": [
+            "七洲：亚非北美南美南极欧大洋",
+            "四洋：太平洋大西洋印度洋北冰洋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-陆地和海洋"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0073",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "陆地和海洋"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "面积最大洲与洋？",
+      "answer": "亚洲与太平洋",
+      "keywords": [
+        {
+          "aliases": [
+            "亚洲与太平洋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-陆地和海洋"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0074",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "陆地和海洋"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "海陆变迁原因？",
+      "answer": "地壳运动、海平面升降、人类活动",
+      "keywords": [
+        {
+          "aliases": [
+            "地壳运动、海平面升降、人类活动"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-陆地和海洋"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0075",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "陆地和海洋"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "两大火山地震带？",
+      "answer": "环太平洋、地中海—喜马拉雅",
+      "keywords": [
+        {
+          "aliases": [
+            "环太平洋、地中海—喜马拉雅"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-陆地和海洋"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0076",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "陆地和海洋"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "用板块学说解释地震分布？",
+      "answer": "板块交界处地壳活跃，多火山地震",
+      "keywords": [
+        {
+          "aliases": [
+            "板块交界处地壳活跃",
+            "多火山地震"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-陆地和海洋"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0077",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "天气与气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "天气与气候区别？",
+      "answer": "天气短时多变；气候多年稳定",
+      "keywords": [
+        {
+          "aliases": [
+            "天气短时多变",
+            "气候多年稳定"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-天气与气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0078",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "天气与气候"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "一天最低温时间？",
+      "answer": "日出前后",
+      "keywords": [
+        {
+          "aliases": [
+            "日出前后"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-天气与气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0079",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "天气与气候"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "影响气候三因素？",
+      "answer": "纬度、海陆、地形",
+      "keywords": [
+        {
+          "aliases": [
+            "纬度、海陆、地形"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-天气与气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0080",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "天气与气候"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "说明气候与生活关系？",
+      "answer": "高温多雨区适水稻；地中海气候适橄榄",
+      "keywords": [
+        {
+          "aliases": [
+            "高温多雨区适水稻",
+            "地中海气候适橄榄"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-天气与气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0081",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "居民与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人口稠密区？",
+      "answer": "亚洲东部南部、欧洲、北美东部",
+      "keywords": [
+        {
+          "aliases": [
+            "亚洲东部南部、欧洲、北美东部"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-居民与文化"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0082",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "居民与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "使用最广/人数最多的语言？",
+      "answer": "英语 / 汉语",
+      "keywords": [
+        {
+          "aliases": [
+            "英语 / 汉语"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-居民与文化"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0083",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "居民与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "聚落类型？",
+      "answer": "城市（非农）与乡村（农业）",
+      "keywords": [
+        {
+          "aliases": [
+            "城市（非农）与乡村（农业）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-居民与文化"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0084",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "居民与文化"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人口分布影响因素？",
+      "answer": "气候、地形、水源、经济",
+      "keywords": [
+        {
+          "aliases": [
+            "气候、地形、水源、经济"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-居民与文化"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0085",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "发展与合作"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "发达国家分布？",
+      "answer": "欧洲、北美、大洋洲",
+      "keywords": [
+        {
+          "aliases": [
+            "欧洲、北美、大洋洲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-发展与合作"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0086",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "发展与合作"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"南北对话\"与\"南南合作\"？",
+      "answer": "发展中国家与发达国家对话；发展中国家间合作",
+      "keywords": [
+        {
+          "aliases": [
+            "发展中国家与发达国家对话",
+            "发展中国家间合作"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-发展与合作"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0087",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "发展与合作"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "国际组织促进合作举例？",
+      "answer": "联合国等",
+      "keywords": [
+        {
+          "aliases": [
+            "联合国等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-发展与合作"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0088",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "发展与合作"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "举国际合作实例？",
+      "answer": "全球经济文化交流、应对气候变化等合作",
+      "keywords": [
+        {
+          "aliases": [
+            "全球经济文化交流、应对气候变化等合作"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-发展与合作"
+    }
+  }
+]

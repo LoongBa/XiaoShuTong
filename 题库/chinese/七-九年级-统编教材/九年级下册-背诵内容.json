@@ -2049,5 +2049,128 @@
       "source": "人教社统编版 2024 修订（古诗文）",
       "knowledge_card_id": "KC-chinese-朝天子·咏喇叭"
     }
+  },
+  {
+    "id": "Q-chinese-7to9-1464",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "7年级a册-古诗文作者",
+    "knowledge_points": [
+      "作者与朝代"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "将下列诗人与其所处朝代连线。",
+      "pairs": [
+        {
+          "left": "曹操",
+          "right": "东汉"
+        },
+        {
+          "left": "李白",
+          "right": "唐代"
+        },
+        {
+          "left": "苏轼",
+          "right": "宋代"
+        },
+        {
+          "left": "辛弃疾",
+          "right": "南宋"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教社统编版 2024 修订（古诗文）",
+      "knowledge_card_id": "KC-chinese-作者与朝代"
+    }
+  },
+  {
+    "id": "Q-chinese-7to9-1465",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "7年级a册-古诗文作者",
+    "knowledge_points": [
+      "篇目与作者"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "将下列古诗文篇目与其作者连线。",
+      "pairs": [
+        {
+          "left": "《观沧海》",
+          "right": "曹操"
+        },
+        {
+          "left": "《次北固山下》",
+          "right": "王湾"
+        },
+        {
+          "left": "《天净沙·秋思》",
+          "right": "马致远"
+        },
+        {
+          "left": "《岳阳楼记》",
+          "right": "范仲淹"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教社统编版 2024 修订（古诗文）",
+      "knowledge_card_id": "KC-chinese-篇目与作者"
+    }
+  },
+  {
+    "id": "Q-chinese-7to9-1466",
+    "bank_id": "chinese-7to9-pep",
+    "subject": "chinese",
+    "topic": "7年级a册-古诗文作者",
+    "knowledge_points": [
+      "名句与作者"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "memorize",
+      "play"
+    ],
+    "content": {
+      "question": "将下列名句与其作者连线。",
+      "pairs": [
+        {
+          "left": "日月之行，若出其中",
+          "right": "曹操"
+        },
+        {
+          "left": "举头望明月",
+          "right": "李白"
+        },
+        {
+          "left": "但愿人长久，千里共婵娟",
+          "right": "苏轼"
+        },
+        {
+          "left": "落红不是无情物",
+          "right": "龚自珍"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教社统编版 2024 修订（古诗文）",
+      "knowledge_card_id": "KC-chinese-名句与作者"
+    }
   }
 ]

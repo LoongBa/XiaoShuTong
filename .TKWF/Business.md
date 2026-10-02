@@ -5,9 +5,9 @@
 > 这些信息无法从代码中自动提取，需要设计者维护。更新频率低，但内容不可替代。
 > **维护方式**：由 `tkwf-business` skill 物化与增量更新，不手动直接编辑。
 
-> **最后更新**：2026-09-29
-> **版本**：v6 | **变更**：修订搭子-BR-33（候选列表扩展为同群组 或 同年级成员，OR 语义对齐 BR-16）；BR 上限不变
-> **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-25 / 题库-39 / 激励-18 / 搭子-36 / Pk-27 / 家长-28 / 平台-04）
+> **最后更新**：2026-10-03
+> **版本**：v7 | **变更**：新增任务-BR-26~BR-28（任务编辑 UpdateTask：前置校验 / 题集变更校验 / 题集变更后进度重算对齐学习-BR-24 消费口径）
+> **BR 编号当前上限**：见各域末尾（群组-31 / 学习-50 / 任务-28 / 题库-39 / 激励-18 / 搭子-36 / Pk-27 / 家长-28 / 平台-04）
 
 ---
 
@@ -147,6 +147,9 @@
 | 任务-BR-23 | 允许重做的逾期任务仍可进入复习（不改变 Overdue） | TaskAssignments | UC-2.5 |
 | 任务-BR-24 | 周报口径：执行率 = 周窗口内 Completed / 全部分配（分母含 Overdue，同 BR-17）；平均进度 = 周内分配 Progress 均值；学习量 = 周内 DailyStats.LearnedCount 求和 | Tasks, TaskAssignments, DailyStats | UC-2.4/F9 |
 | 任务-BR-25 | 周报导出 CSV 仅含成员汇总指标（昵称/执行率/平均进度/学习量），不含答题明细与正确率排名 — 合规 | TaskAssignments, DailyStats | F9 |
+| 任务-BR-26 | 任务编辑前置校验：任务必须存在 → 5101（对齐 BR-07）；仅任务 Owner（群主）可编辑 → FORBIDDEN（对齐 BR-01）；关联 BankId 不可变更 | Tasks | UC-2.1（V0.7.x UpdateTask） |
+| 任务-BR-27 | 题集变更校验：新题集非空且 ⊆ 任务关联题库（对齐 BR-04，题集外题目 → QUESTION_NOT_IN_BANK）；题集内容未变更（SetEquals）→ 幂等跳过进度重算（纯更新） | Tasks, Questions | UC-2.1（V0.7.x UpdateTask） |
+| 任务-BR-28 | 题集变更后进度重算：非 Completed 分配以（已消费题集 ∩ 新题集）/ 新题数 × 100 重算 Progress；消费判定对齐 学习-BR-24（Correct 或该题尝试数 ≥ MaxAttempts=2，Attempts 经 StudySessions.TaskId 桥接）；Pending→InProgress（Progress>0）、≥100 → Completed（Completed 幂等不变）；QuestionCount 同步为新题集长度 | Tasks, TaskAssignments, StudySessions, Attempts | UC-2.1（V0.7.x UpdateTask） |
 
 ### 2.4 题库判题域（Bank + Judging）
 

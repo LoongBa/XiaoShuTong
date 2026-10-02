@@ -1,0 +1,23 @@
+{
+  "bank_id": "daodeyufazhi-7to9-2024r",
+  "subject": "daodeyufazhi",
+  "name": "道德与法治",
+  "version": "V1.0",
+  "source": "人教社统编版 2024 修订",
+  "purpose_tags": [
+    "memorize",
+    "assess",
+    "play"
+  ],
+  "supported_types": [
+    "R1",
+    "R2",
+    "R3a",
+    "R3b"
+  ],
+  "knowledge_card_template": "concept_card",
+  "grading_preference": "semantic_tolerant",
+  "default_prompt": "通用判题",
+  "privacy": "private",
+  "owner": "system"
+}

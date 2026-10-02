@@ -1,0 +1,2980 @@
+[
+  {
+    "id": "Q-geography-7to9-0404",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国陆地领土面积约多少？",
+      "answer": "约960万平方千米，居世界第三位",
+      "keywords": [
+        {
+          "aliases": [
+            "约960万平方千米",
+            "居世界第三位"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0405",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国共有多少个省级行政区？",
+      "answer": "34个（23省、5自治区、4直辖市、2特别行政区）",
+      "keywords": [
+        {
+          "aliases": [
+            "34个（23省、5自治区、4直辖市、2特别行政区）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0406",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "居世界第三位、与欧洲面积相当的陆地领土是？",
+      "answer": "我国",
+      "keywords": [
+        {
+          "aliases": [
+            "我国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0407",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "黑河-腾冲线是我国什么的界线？",
+      "answer": "人口分布（人口地理分界线）",
+      "keywords": [
+        {
+          "aliases": [
+            "人口分布（人口地理分界线）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0408",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国海陆位置的优越性",
+      "answer": "位于亚欧大陆东部、太平洋西岸，海陆兼备；西部深入大陆内部与多国接壤；海岸线曲折漫长",
+      "keywords": [
+        {
+          "aliases": [
+            "位于亚欧大陆东部、太平洋西岸",
+            "海陆兼备"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0409",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国四个直辖市和两个特别行政区",
+      "answer": "北京、天津、上海、重庆；香港、澳门",
+      "keywords": [
+        {
+          "aliases": [
+            "北京、天津、上海、重庆",
+            "香港、澳门"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0410",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "疆域"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"我国地理位置的特点\"",
+      "answer": "纬度：北温带为主、南部热带、无寒带；海陆：亚欧大陆东部太平洋西岸、海陆兼备；疆域：960万km²、14陆上邻国、8隔海相望、34省级行政区",
+      "keywords": [
+        {
+          "aliases": [
+            "纬度：北温带为主、南部热带、无寒带",
+            "海陆：亚欧大陆东部太平洋西岸、海陆兼备"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-疆域"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0411",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国人口分布特点？",
+      "answer": "东密西疏（东南密、西北疏）",
+      "keywords": [
+        {
+          "aliases": [
+            "东密西疏（东南密、西北疏）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0412",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国人口分界线是？",
+      "answer": "黑河-腾冲线",
+      "keywords": [
+        {
+          "aliases": [
+            "黑河-腾冲线"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0413",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "从黑龙江黑河到云南腾冲的直线是我国什么界线？",
+      "answer": "人口地理分界线",
+      "keywords": [
+        {
+          "aliases": [
+            "人口地理分界线"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0414",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "人口"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国人口政策的变化",
+      "answer": "从\"一对夫妻生育一个子女\"到\"一对夫妻可以生育三个子女\"，促进人口长期均衡发展",
+      "keywords": [
+        {
+          "aliases": [
+            "从\"一对夫妻生育一个子女\"到\"一对夫妻可以生育三个子女\"",
+            "促进人口长期均衡发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-人口"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0415",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国民族分布特点是？",
+      "answer": "大散居、小聚居、交错杂居",
+      "keywords": [
+        {
+          "aliases": [
+            "大散居、小聚居、交错杂居"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0416",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国人口最多的少数民族是？",
+      "answer": "壮族",
+      "keywords": [
+        {
+          "aliases": [
+            "壮族"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0417",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "大散居、小聚居、交错杂居描述的是我国的什么特点？",
+      "answer": "民族分布",
+      "keywords": [
+        {
+          "aliases": [
+            "民族分布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0418",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "民族"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国少数民族的主要分布地区",
+      "answer": "西南、西北和东北地区",
+      "keywords": [
+        {
+          "aliases": [
+            "西南、西北和东北地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-民族"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0419",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国地势的总体特征？",
+      "answer": "西高东低，呈三级阶梯状分布",
+      "keywords": [
+        {
+          "aliases": [
+            "西高东低",
+            "呈三级阶梯状分布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0420",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国第一、二级阶梯的分界线？",
+      "answer": "昆仑山脉-祁连山脉-横断山脉",
+      "keywords": [
+        {
+          "aliases": [
+            "昆仑山脉-祁连山脉-横断山脉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0421",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "千沟万壑、水土流失严重的高原是？",
+      "answer": "黄土高原",
+      "keywords": [
+        {
+          "aliases": [
+            "黄土高原"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0422",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "被称为\"聚宝盆\"、海拔最高的盆地是？",
+      "answer": "柴达木盆地",
+      "keywords": [
+        {
+          "aliases": [
+            "柴达木盆地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0423",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国四大高原及特征",
+      "answer": "青藏（最高，\"世界屋脊\"）、内蒙古（平坦）、黄土（千沟万壑）、云贵（喀斯特、崎岖）",
+      "keywords": [
+        {
+          "aliases": [
+            "青藏（最高",
+            "\"世界屋脊\"）、内蒙古（平坦）、黄土（千沟万壑）、云贵（喀斯特、崎岖）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0424",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国三大平原",
+      "answer": "东北（最大、黑土）、华北（黄土地）、长江中下游（鱼米之乡）",
+      "keywords": [
+        {
+          "aliases": [
+            "东北（最大、黑土）、华北（黄土地）、长江中下游（鱼米之乡）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0425",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "地形"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"我国地势三级阶梯概况\"",
+      "answer": "第一阶梯：青藏高原（4000米以上）；第二阶梯：高原盆地为主；第三阶梯：平原丘陵为主；分界线：昆仑-祁连-横断 / 大兴安岭-太行-巫山-雪峰山",
+      "keywords": [
+        {
+          "aliases": [
+            "第一阶梯：青藏高原（4000米以上）",
+            "第二阶梯：高原盆地为主"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-地形"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0426",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国主要气候类型有哪些？",
+      "answer": "温带季风、亚热带季风、热带季风、温带大陆性、高原山地",
+      "keywords": [
+        {
+          "aliases": [
+            "温带季风、亚热带季风、热带季风、温带大陆性、高原山地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0427",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "秦岭-淮河一线的地理意义？",
+      "answer": "1月0℃等温线、800mm等降水量线、南北分界、水田旱地分界",
+      "keywords": [
+        {
+          "aliases": [
+            "1月0℃等温线、800mm等降水量线、南北分界、水田旱地分界"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0428",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国气候的两大特征？",
+      "answer": "气候复杂多样、季风气候显著",
+      "keywords": [
+        {
+          "aliases": [
+            "气候复杂多样、季风气候显著"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0429",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "南暖北冷、南北温差大描述的是我国什么季节的气温特点？",
+      "answer": "冬季",
+      "keywords": [
+        {
+          "aliases": [
+            "冬季"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0430",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国温度带和干湿地区",
+      "answer": "温度带：寒温带/中温带/暖温带/亚热带/热带/高原气候区；干湿区：湿润/半湿润/半干旱/干旱",
+      "keywords": [
+        {
+          "aliases": [
+            "温度带：寒温带/中温带/暖温带/亚热带/热带/高原气候区",
+            "干湿区：湿润/半湿润/半干旱/干旱"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0431",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写影响我国气候的主要因素",
+      "answer": "纬度位置、海陆位置、地形",
+      "keywords": [
+        {
+          "aliases": [
+            "纬度位置、海陆位置、地形"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0432",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "气候"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"我国气候的主要特征\"",
+      "answer": "气候复杂多样；季风气候显著；夏季全国普遍高温（青藏高原除外）；冬季南暖北冷；降水从东南沿海向西北内陆递减",
+      "keywords": [
+        {
+          "aliases": [
+            "气候复杂多样",
+            "季风气候显著"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-气候"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0433",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国最长的河流是？",
+      "answer": "长江（6300多千米，注入东海）",
+      "keywords": [
+        {
+          "aliases": [
+            "长江（6300多千米",
+            "注入东海）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0434",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "黄河\"地上河\"出现在哪个河段？",
+      "answer": "下游（华北平原段）",
+      "keywords": [
+        {
+          "aliases": [
+            "下游（华北平原段）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0435",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "发源于唐古拉山脉、注入东海的大河是？",
+      "answer": "长江",
+      "keywords": [
+        {
+          "aliases": [
+            "长江"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0436",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国含沙量最大的河流是？",
+      "answer": "黄河",
+      "keywords": [
+        {
+          "aliases": [
+            "黄河"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0437",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写长江上中下游分界及\"黄金水道\"",
+      "answer": "宜昌（上中游）/湖口（中下游）；航运价值高，称\"黄金水道\"",
+      "keywords": [
+        {
+          "aliases": [
+            "宜昌（上中游）/湖口（中下游）",
+            "航运价值高"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0438",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写黄河的治理措施",
+      "answer": "上中游保持水土（植树造林），下游加固堤坝、疏浚河道",
+      "keywords": [
+        {
+          "aliases": [
+            "上中游保持水土（植树造林）",
+            "下游加固堤坝、疏浚河道"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0439",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "河流与湖泊"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"黄河的忧患与治理\"",
+      "answer": "中游黄土高原水土流失→含沙量大→下游泥沙淤积成\"地上河\"；治理：中游保持水土、下游加固堤坝",
+      "keywords": [
+        {
+          "aliases": [
+            "中游黄土高原水土流失→含沙量大→下游泥沙淤积成\"地上河\"",
+            "治理：中游保持水土、下游加固堤坝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-河流与湖泊"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0440",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国常见气象灾害有？",
+      "answer": "旱灾、洪涝、台风、寒潮",
+      "keywords": [
+        {
+          "aliases": [
+            "旱灾、洪涝、台风、寒潮"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0441",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国常见地质灾害有？",
+      "answer": "地震、滑坡、泥石流",
+      "keywords": [
+        {
+          "aliases": [
+            "地震、滑坡、泥石流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0442",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "台风灾害主要分布在哪里？",
+      "answer": "东南沿海地区",
+      "keywords": [
+        {
+          "aliases": [
+            "东南沿海地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0443",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国地跨哪两条地震带？",
+      "answer": "环太平洋地震带、地中海-喜马拉雅地震带",
+      "keywords": [
+        {
+          "aliases": [
+            "环太平洋地震带、地中海-喜马拉雅地震带"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0444",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国自然灾害的特点",
+      "answer": "种类多、发生频率高、分布广",
+      "keywords": [
+        {
+          "aliases": [
+            "种类多、发生频率高、分布广"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0445",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写旱灾洪涝的分布",
+      "answer": "东部季风区；东部平原和沿海洪涝多发，秦岭-淮河以北旱灾多发",
+      "keywords": [
+        {
+          "aliases": [
+            "东部季风区",
+            "东部平原和沿海洪涝多发"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0446",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "什么是可再生资源？",
+      "answer": "可在较短时间内更新、再生或循环使用的资源",
+      "keywords": [
+        {
+          "aliases": [
+            "可在较短时间内更新、再生或循环使用的资源"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0447",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "什么是非可再生资源？",
+      "answer": "用一点少一点、短时间内不能再生或循环使用的资源",
+      "keywords": [
+        {
+          "aliases": [
+            "用一点少一点、短时间内不能再生或循环使用的资源"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0448",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "土地、水、森林、太阳能属于？",
+      "answer": "可再生资源",
+      "keywords": [
+        {
+          "aliases": [
+            "可再生资源"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0449",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "矿产属于？",
+      "answer": "非可再生资源",
+      "keywords": [
+        {
+          "aliases": [
+            "非可再生资源"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0450",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国耕地主要分布在哪里？",
+      "answer": "东部湿润、半湿润区的平原和低山丘陵区",
+      "keywords": [
+        {
+          "aliases": [
+            "东部湿润、半湿润区的平原和低山丘陵区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0451",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国草地主要分布在哪里？",
+      "answer": "西部干旱、半干旱区",
+      "keywords": [
+        {
+          "aliases": [
+            "西部干旱、半干旱区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0452",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国人均耕地面积不到多少？",
+      "answer": "0.1公顷",
+      "keywords": [
+        {
+          "aliases": [
+            "0.1公顷"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0453",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "梯田约占我国耕地面积的多少？",
+      "answer": "约1/4",
+      "keywords": [
+        {
+          "aliases": [
+            "约1/4"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0454",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国土地资源的特征",
+      "answer": "总量丰富、类型多样；人均远低于世界人均；分布不均、区域差异明显",
+      "keywords": [
+        {
+          "aliases": [
+            "总量丰富、类型多样",
+            "人均远低于世界人均"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0455",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "土地资源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写耕地/林地/草地分布",
+      "answer": "耕地：东部平原低山丘陵；林地：山区（东北西南东南）；草地：西部干旱半干旱区",
+      "keywords": [
+        {
+          "aliases": [
+            "耕地：东部平原低山丘陵",
+            "林地：山区（东北西南东南）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-土地资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0456",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国水资源的时空分布特点？",
+      "answer": "空间南多北少；时间夏秋多、冬春少",
+      "keywords": [
+        {
+          "aliases": [
+            "空间南多北少",
+            "时间夏秋多、冬春少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0457",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "解决水资源空间分布不均的措施？",
+      "answer": "跨流域调水（南水北调）",
+      "keywords": [
+        {
+          "aliases": [
+            "跨流域调水（南水北调）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0458",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "把长江水调往华北西北的工程是？",
+      "answer": "南水北调",
+      "keywords": [
+        {
+          "aliases": [
+            "南水北调"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0459",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "解决水资源时间分配不均的措施是？",
+      "answer": "修建水库",
+      "keywords": [
+        {
+          "aliases": [
+            "修建水库"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0460",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "水资源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写南水北调工程的意义",
+      "answer": "把长江流域的水调往华北、西北，缓解北方缺水",
+      "keywords": [
+        {
+          "aliases": [
+            "把长江流域的水调往华北、西北",
+            "缓解北方缺水"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-水资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0461",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国能源矿产的分布特点？",
+      "answer": "多煤少油气，北多南少、西多东少",
+      "keywords": [
+        {
+          "aliases": [
+            "多煤少油气",
+            "北多南少、西多东少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0462",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国储量居世界首位的矿产？",
+      "answer": "钨、锡、锑；三稀矿产（稀土、锂、镓、铟）",
+      "keywords": [
+        {
+          "aliases": [
+            "钨、锡、锑",
+            "三稀矿产（稀土、锂、镓、铟）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0463",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"有而不够、有而不优\"描述的是我国什么资源状况？",
+      "answer": "矿产资源供需",
+      "keywords": [
+        {
+          "aliases": [
+            "矿产资源供需"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0464",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国最大的盐场是？",
+      "answer": "长芦盐场（渤海沿岸）",
+      "keywords": [
+        {
+          "aliases": [
+            "长芦盐场（渤海沿岸）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0465",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国铁矿资源特点",
+      "answer": "储量排世界第四位，但贫矿多、富矿少；主要进口自澳大利亚、巴西",
+      "keywords": [
+        {
+          "aliases": [
+            "储量排世界第四位",
+            "但贫矿多、富矿少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0466",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国海洋资源概况",
+      "answer": "世界最大海鱼、海盐生产国；舟山渔场；长芦盐场；油气分布在渤海和南海北部大陆架；海水养殖量超过捕捞量",
+      "keywords": [
+        {
+          "aliases": [
+            "世界最大海鱼、海盐生产国",
+            "舟山渔场"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0467",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "矿产资源"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"我国矿产资源的特征与对策\"",
+      "answer": "种类齐全、储量丰富、人均少；多煤少油气、北多南少；有而不够有而不优、多数依赖进口；对策：加强勘探、提高利用率、循环利用、保障战略安全",
+      "keywords": [
+        {
+          "aliases": [
+            "种类齐全、储量丰富、人均少",
+            "多煤少油气、北多南少"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-矿产资源"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0468",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国三大主粮是？",
+      "answer": "水稻、小麦、玉米",
+      "keywords": [
+        {
+          "aliases": [
+            "水稻、小麦、玉米"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0469",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国棉花主要产自哪里？",
+      "answer": "新疆（超80%）",
+      "keywords": [
+        {
+          "aliases": [
+            "新疆（超80%）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0470",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "华北平原产量最大的粮食作物是？",
+      "answer": "小麦",
+      "keywords": [
+        {
+          "aliases": [
+            "小麦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0471",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "长城沿线以北的熟制是？",
+      "answer": "一年一熟",
+      "keywords": [
+        {
+          "aliases": [
+            "一年一熟"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0472",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国农业东西差异",
+      "answer": "东部农区：种植业/林业/渔业为主；西部牧区：畜牧业为主，种植业在绿洲",
+      "keywords": [
+        {
+          "aliases": [
+            "东部农区：种植业/林业/渔业为主",
+            "西部牧区：畜牧业为主"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0473",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国农业南北差异",
+      "answer": "秦岭-淮河以北旱地（小麦玉米），以南水田（水稻）；糖料：北方甜菜、南方甘蔗",
+      "keywords": [
+        {
+          "aliases": [
+            "秦岭-淮河以北旱地（小麦玉米）",
+            "以南水田（水稻）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0474",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "农业"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"因地制宜发展农业\"",
+      "answer": "东西差异（东部种植/西部畜牧）+南北差异（北麦南稻、北甜菜南甘蔗）；三大主粮集中分布；高标准农田保障粮食安全",
+      "keywords": [
+        {
+          "aliases": [
+            "东西差异（东部种植/西部畜牧）+南北差异（北麦南稻、北甜菜南甘蔗）",
+            "三大主粮集中分布"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-农业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0475",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国工业的分布特点？",
+      "answer": "资源开采加工在中西部，机械设备电子产品在东部沿海；东部沿海和长江沿线集中重要工业城市",
+      "keywords": [
+        {
+          "aliases": [
+            "资源开采加工在中西部",
+            "机械设备电子产品在东部沿海"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0476",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国高新技术产业的重要工程？",
+      "answer": "\"东数西算\"工程",
+      "keywords": [
+        {
+          "aliases": [
+            "\"东数西算\"工程"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0477",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "世界唯一拥有联合国产业分类中全部工业门类的国家是？",
+      "answer": "中国",
+      "keywords": [
+        {
+          "aliases": [
+            "中国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0478",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "2010年以后成为世界第一工业制造大国的是？",
+      "answer": "中国",
+      "keywords": [
+        {
+          "aliases": [
+            "中国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0479",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"东数西算\"工程的原理和意义",
+      "answer": "把东部数据传输到西部处理；发挥西部能源优势、东西部优势互补",
+      "keywords": [
+        {
+          "aliases": [
+            "把东部数据传输到西部处理",
+            "发挥西部能源优势、东西部优势互补"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0480",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "工业"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写工业绿色转型方向",
+      "answer": "发展低碳工业、新能源汽车、资源循环利用",
+      "keywords": [
+        {
+          "aliases": [
+            "发展低碳工业、新能源汽车、资源循环利用"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-工业"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0481",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国交通线分布格局？",
+      "answer": "东密西疏",
+      "keywords": [
+        {
+          "aliases": [
+            "东密西疏"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0482",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国高速铁路网格局？",
+      "answer": "\"四纵四横\"为主骨架",
+      "keywords": [
+        {
+          "aliases": [
+            "\"四纵四横\"为主骨架"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0483",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "拥有世界最大高速铁路网、高速公路网的国家是？",
+      "answer": "中国",
+      "keywords": [
+        {
+          "aliases": [
+            "中国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0484",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "东起连云港、西至阿拉山口的铁路是？",
+      "answer": "陇海-兰新铁路",
+      "keywords": [
+        {
+          "aliases": [
+            "陇海-兰新铁路"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0485",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "交通运输"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写我国交通线东密西疏的原因",
+      "answer": "受自然环境、人口分布、经济发展影响；地形平坦、人口密集地区交通线稠密",
+      "keywords": [
+        {
+          "aliases": [
+            "受自然环境、人口分布、经济发展影响",
+            "地形平坦、人口密集地区交通线稠密"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-交通运输"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0486",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国自然灾害的特点？",
+      "answer": "种类多、发生频率高、分布广",
+      "keywords": [
+        {
+          "aliases": [
+            "种类多、发生频率高、分布广"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0487",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "防灾减灾是建设美丽中国的什么？",
+      "answer": "基本保障",
+      "keywords": [
+        {
+          "aliases": [
+            "基本保障"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0488",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"绿水青山就是金山银山\"体现的理念？",
+      "answer": "生态文明/绿色发展",
+      "keywords": [
+        {
+          "aliases": [
+            "生态文明/绿色发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0489",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写主要气象灾害和地质灾害的分布",
+      "answer": "气象：旱涝（东部季风区）、台风（东南沿海）、寒潮（北方）；地质：地震（两大地震带）、滑坡泥石流（山区）",
+      "keywords": [
+        {
+          "aliases": [
+            "气象：旱涝（东部季风区）、台风（东南沿海）、寒潮（北方）",
+            "地质：地震（两大地震带）、滑坡泥石流（山区）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0490",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写防灾减灾的主要措施",
+      "answer": "监测预警系统、防灾工程、公众防灾意识、应急预案",
+      "keywords": [
+        {
+          "aliases": [
+            "监测预警系统、防灾工程、公众防灾意识、应急预案"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0491",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "自然灾害与防灾减灾"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"遇到自然灾害的自救方法\"",
+      "answer": "地震：坚固物旁护头部、震后有序撤离；洪水：向高处转移、避开电线危房",
+      "keywords": [
+        {
+          "aliases": [
+            "地震：坚固物旁护头部、震后有序撤离",
+            "洪水：向高处转移、避开电线危房"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-自然灾害与防灾减灾"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0492",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国面临的主要环境问题？",
+      "answer": "大气、水、土壤污染，水土流失、土地荒漠化",
+      "keywords": [
+        {
+          "aliases": [
+            "大气、水、土壤污染",
+            "水土流失、土地荒漠化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0493",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "建设美丽中国的内涵？",
+      "answer": "青山就是美丽，蓝天也是幸福，良好生态环境是重要基础",
+      "keywords": [
+        {
+          "aliases": [
+            "青山就是美丽",
+            "蓝天也是幸福"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0494",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "加快发展的产业方向是？",
+      "answer": "科技含量高、资源消耗低、环境污染少的产业",
+      "keywords": [
+        {
+          "aliases": [
+            "科技含量高、资源消耗低、环境污染少的产业"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  },
+  {
+    "id": "Q-geography-7to9-0495",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "环境保护与发展"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写绿色发展的主要途径",
+      "answer": "碳中和（节能减排）、绿色能源、循环经济、生态保护与修复",
+      "keywords": [
+        {
+          "aliases": [
+            "碳中和（节能减排）、绿色能源、循环经济、生态保护与修复"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-geography-环境保护与发展"
+    }
+  }
+]

@@ -28,6 +28,25 @@
 
 ---
 
+## 2026-10-03 — [Rule] — 新增任务-BR-26~28：任务编辑（UpdateTaskService）进度重算基准
+
+**类别标签**：`Rule`
+
+**涉及模块**：`.TKWF/Business.md`（§2.3 任务域新增 BR-26~28）+ `XiaoShuTong.Services.TaskManagement.UpdateTaskService`（新建）
+
+**上下文**：
+> 工作计划 P2「任务题集变更后的进度重算基准」悬挂项（ADR-010 后续待办）：此前任务域仅有 CreateTaskService（唯一任务写入 Service），无任务编辑服务。任务题集变更后成员 TaskAssignments.Progress 依赖旧的 QuestionCount/题集口径，产生漂移——题集变更须重算全部成员进度。Business.md 任务域此前缺任务编辑语义 BR（仅 任务-BR-06 提及"已发布任务变更需二次确认"为 UI 层确认，非后端规则）。
+
+**决策/修复**：
+> 新增三条任务域 BR：BR-26 任务编辑前置校验（存在→5101、仅 Owner→FORBIDDEN、BankId 不可变）；BR-27 题集变更校验（⊆ 关联题库、SetEquals 幂等跳过重算）；BR-28 题集变更后进度重算（消费判定对齐 学习-BR-24：Correct 或尝试数 ≥ MaxAttempts=2；数据源与 ProgressDriftAuditJob 一致——Attempts 经 StudySessions.TaskId 桥接；进度 =（已消费 ∩ 新题集）/ 新题数 × 100；Pending→InProgress 当 Progress>0、≥100→Completed，Completed 幂等不变）。更新 Business.md 头块（版本 v6→v7、任务域 BR 上限 25→28）。
+
+**避坑指南**：
+> - 任务进度口径必须全局一致：UpdateTask 题集变更重算复用 ProgressDriftAuditJob/SubmitAttemptService.RebuildIfDriftedAsync 的消费判定与数据源（Attempts 表，经 StudySessions.TaskId 桥接），不可另立口径；
+> - Completed 分配幂等（BR-24 语义）：题集变更不改变已 Completed 成员（AllowRedo 重做亦不改变）；
+> - 题集变更判定用 SetEquals（顺序/重复无关），内容一致仅同步题集与 QuestionCount，不触发重算。
+
+---
+
 ## 2026-10-01 — [Rule] — 学习-BR-04 增量补注：任务会话题量豁免档位白名单（V0.7.x P0 走查）
 
 **类别标签**：`Rule`

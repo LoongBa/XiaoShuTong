@@ -1,0 +1,130 @@
+[
+  {
+    "id": "Q-daodeyufazhi-o4-0001",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "八年级下册-国家机构",
+    "knowledge_points": [
+      "国家权力机关",
+      "国家行政机关",
+      "国家司法机关"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列国家机关与其性质连线。",
+      "pairs": [
+        {
+          "left": "全国人民代表大会",
+          "right": "最高国家权力机关"
+        },
+        {
+          "left": "国务院（中央人民政府）",
+          "right": "最高国家行政机关"
+        },
+        {
+          "left": "人民法院",
+          "right": "国家的审判机关"
+        },
+        {
+          "left": "人民检察院",
+          "right": "国家的法律监督机关"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《道德与法治》八年级下册示例",
+      "knowledge_card_id": "KC-daodeyufazhi-国家权力机关"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-o4-0002",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "八年级下册-公民基本权利",
+    "knowledge_points": [
+      "公民基本权利"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列公民权利与其含义连线。",
+      "pairs": [
+        {
+          "left": "选举权和被选举权",
+          "right": "公民参与管理国家和社会事务的基础"
+        },
+        {
+          "left": "人身自由",
+          "right": "公民参加国家政治、经济与社会生活的基础"
+        },
+        {
+          "left": "平等权",
+          "right": "公民行使其他权利的基础"
+        },
+        {
+          "left": "监督权",
+          "right": "对国家机关及工作人员提出批评、建议、申诉、控告或检举的权利"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《道德与法治》八年级下册示例",
+      "knowledge_card_id": "KC-daodeyufazhi-公民的基本权利和义务"
+    }
+  },
+  {
+    "id": "Q-daodeyufazhi-o4-0003",
+    "bank_id": "daodeyufazhi-7to9-2024r",
+    "subject": "daodeyufazhi",
+    "topic": "七年级上册-基本概念",
+    "knowledge_points": [
+      "家庭",
+      "梦想",
+      "家风",
+      "宪法"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列概念与其含义连线。",
+      "pairs": [
+        {
+          "left": "家庭",
+          "right": "由婚姻关系、血缘关系或收养关系结合成的亲属生活组织"
+        },
+        {
+          "left": "梦想",
+          "right": "对未来美好生活的愿望"
+        },
+        {
+          "left": "家风",
+          "right": "一种无形的力量，潜移默化地影响家庭成员的价值观念和行为习惯"
+        },
+        {
+          "left": "宪法",
+          "right": "国家的根本法"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《道德与法治》七年级上册示例",
+      "knowledge_card_id": "KC-daodeyufazhi-幸福和睦的家庭"
+    }
+  }
+]

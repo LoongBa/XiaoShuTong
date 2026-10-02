@@ -1,0 +1,128 @@
+[
+  {
+    "id": "Q-bio-o4-0001",
+    "bank_id": "biology-7to9-2024r",
+    "subject": "biology",
+    "topic": "模块D-人体生理",
+    "knowledge_points": [
+      "血液循环",
+      "呼吸",
+      "尿的形成",
+      "消化和吸收"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列器官与其主要功能连线。",
+      "pairs": [
+        {
+          "left": "心脏",
+          "right": "泵血，推动血液循环"
+        },
+        {
+          "left": "肺",
+          "right": "气体交换的场所"
+        },
+        {
+          "left": "肾脏",
+          "right": "形成尿液的主要器官"
+        },
+        {
+          "left": "小肠",
+          "right": "消化和吸收的主要场所"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《生物学》模块D-人体生理示例",
+      "knowledge_card_id": "KC-biology-输送血液的泵——心脏"
+    }
+  },
+  {
+    "id": "Q-bio-o4-0002",
+    "bank_id": "biology-7to9-2024r",
+    "subject": "biology",
+    "topic": "模块D-人体生理",
+    "knowledge_points": [
+      "神经调节"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列神经系统的组成部分与其功能连线。",
+      "pairs": [
+        {
+          "left": "大脑",
+          "right": "调节生理活动的最高级中枢"
+        },
+        {
+          "left": "小脑",
+          "right": "协调运动，维持身体平衡"
+        },
+        {
+          "left": "脑干",
+          "right": "调节心跳、呼吸等基本生命活动"
+        },
+        {
+          "left": "神经元",
+          "right": "产生并传导兴奋"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《生物学》模块D-人体生理示例",
+      "knowledge_card_id": "KC-biology-神经系统的组成"
+    }
+  },
+  {
+    "id": "Q-bio-o4-0003",
+    "bank_id": "biology-7to9-2024r",
+    "subject": "biology",
+    "topic": "模块D-人体生理",
+    "knowledge_points": [
+      "尿的形成和排出"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列泌尿系统的结构与其功能连线。",
+      "pairs": [
+        {
+          "left": "肾小球",
+          "right": "滤过作用，形成原尿"
+        },
+        {
+          "left": "肾小管",
+          "right": "重吸收作用，形成尿液"
+        },
+        {
+          "left": "膀胱",
+          "right": "暂时储存尿液"
+        },
+        {
+          "left": "肾脏",
+          "right": "形成尿液的主要器官"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "人教版《生物学》模块D-人体生理示例",
+      "knowledge_card_id": "KC-biology-泌尿系统"
+    }
+  }
+]

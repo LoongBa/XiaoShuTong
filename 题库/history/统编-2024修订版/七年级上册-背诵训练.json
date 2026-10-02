@@ -1,0 +1,4914 @@
+[
+  {
+    "id": "Q-history-7to9-0100",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国境内目前已知最早的古人类之一是？",
+      "answer": "元谋人（距今约170万年）",
+      "keywords": [
+        {
+          "aliases": [
+            "元谋人（距今约170万年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0101",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "北京人的体质特征是？",
+      "answer": "前额低平、眉骨粗大、颧骨突出、吻部前伸，能够直立行走",
+      "keywords": [
+        {
+          "aliases": [
+            "前额低平、眉骨粗大、颧骨突出、吻部前伸",
+            "能够直立行走"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0102",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "距今约170万年的古人类是？",
+      "answer": "元谋人",
+      "keywords": [
+        {
+          "aliases": [
+            "元谋人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0103",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "发现于北京周口店、距今约70万—20万年的直立人是？",
+      "answer": "北京人",
+      "keywords": [
+        {
+          "aliases": [
+            "北京人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0104",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写北京人使用火的证据与意义",
+      "answer": "遗址发现灰烬、烧石、烧骨；学会用火是人类演化史上的里程碑",
+      "keywords": [
+        {
+          "aliases": [
+            "遗址发现灰烬、烧石、烧骨",
+            "学会用火是人类演化史上的里程碑"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0105",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写山顶洞人的进步",
+      "answer": "磨光和钻孔技术、可能已知人工取火、有爱美意识和埋葬行为",
+      "keywords": [
+        {
+          "aliases": [
+            "磨光和钻孔技术、可能已知人工取火、有爱美意识和埋葬行为"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0106",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "远古时期的人类活动"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"我国主要古人类及其年代\"",
+      "answer": "元谋人约170万年、蓝田人约160万年、郧县人约100万年、北京人约70万—20万年、山顶洞人约3万年",
+      "keywords": [
+        {
+          "aliases": [
+            "元谋人约170万年、蓝田人约160万年、郧县人约100万年、北京人约70万—20万年、山顶洞人约3万年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-远古时期的人类活动"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0107",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "最早栽培的水稻、粟和黍发现于哪里？",
+      "answer": "我国（目前已知世界上最早的栽培水稻、粟和黍均发现于我国）",
+      "keywords": [
+        {
+          "aliases": [
+            "我国（目前已知世界上最早的栽培水稻、粟和黍均发现于我国）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0108",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "河姆渡人的生活特征是？",
+      "answer": "长江下游，种植水稻，住干栏式房屋，使用骨耜",
+      "keywords": [
+        {
+          "aliases": [
+            "长江下游",
+            "种植水稻"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0109",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "种植水稻、住干栏式房屋的遗址是？",
+      "answer": "河姆渡遗址（距今约7000年）",
+      "keywords": [
+        {
+          "aliases": [
+            "河姆渡遗址（距今约7000年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0110",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "种植粟和黍、住半地穴式房屋的是？",
+      "answer": "半坡人（距今约6000年）",
+      "keywords": [
+        {
+          "aliases": [
+            "半坡人（距今约6000年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0111",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写仰韶文化的重要特征",
+      "answer": "黄河中游、距今约7000—5000年、彩陶、养蚕缫丝制作丝织品",
+      "keywords": [
+        {
+          "aliases": [
+            "黄河中游、距今约7000—5000年、彩陶、养蚕缫丝制作丝织品"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0112",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写原始农业起源的标志",
+      "answer": "距今约1万年人工栽培农作物出现；水稻、粟、黍人工栽培是祖先为人类文明作出的重要贡献",
+      "keywords": [
+        {
+          "aliases": [
+            "距今约1万年人工栽培农作物出现",
+            "水稻、粟、黍人工栽培是祖先为人类文明作出的重要贡献"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0113",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "原始农业与史前社会"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"河姆渡人与半坡人的生产生活对比\"",
+      "answer": "河姆渡：长江下游/水稻/干栏式房屋/骨耜；半坡：黄河流域/粟黍/半地穴式房屋/彩陶/纺织制衣",
+      "keywords": [
+        {
+          "aliases": [
+            "河姆渡：长江下游/水稻/干栏式房屋/骨耜",
+            "半坡：黄河流域/粟黍/半地穴式房屋/彩陶/纺织制衣"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-原始农业与史前社会"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0114",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "人类进入文明社会的重要标志是？",
+      "answer": "私有制、阶级和国家的产生",
+      "keywords": [
+        {
+          "aliases": [
+            "私有制、阶级和国家的产生"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0115",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "华夏族的由来是？",
+      "answer": "炎帝和黄帝部落联盟逐渐演化而成",
+      "keywords": [
+        {
+          "aliases": [
+            "炎帝和黄帝部落联盟逐渐演化而成"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0116",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "距今约5300—4300年、证明长江下游出现早期国家的古城是？",
+      "answer": "良渚古城",
+      "keywords": [
+        {
+          "aliases": [
+            "良渚古城"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0117",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "距今约4300—4000年、证明黄河中游出现早期国家的古城是？",
+      "answer": "陶寺古城",
+      "keywords": [
+        {
+          "aliases": [
+            "陶寺古城"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0118",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写禅让制的含义",
+      "answer": "将部落首领位置传给贤德之人；相传尧传舜、舜传禹",
+      "keywords": [
+        {
+          "aliases": [
+            "将部落首领位置传给贤德之人",
+            "相传尧传舜、舜传禹"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0119",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写炎黄联盟的形成",
+      "answer": "黄帝联合炎帝在阪泉交战，炎帝归顺；炎黄联盟与蚩尤在涿鹿激战获胜，逐渐演化成华夏族",
+      "keywords": [
+        {
+          "aliases": [
+            "黄帝联合炎帝在阪泉交战",
+            "炎帝归顺"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0120",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "中华文明的起源"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"中华文明起源的特征\"",
+      "answer": "多元一体；距今5000年左右黄河、长江、西辽河流域发展出各具特色的早期文明，距今4000多年中原崛起引领走向一体",
+      "keywords": [
+        {
+          "aliases": [
+            "多元一体",
+            "距今5000年左右黄河、长江、西辽河流域发展出各具特色的早期文明"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-中华文明的起源"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0121",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "夏朝建立的时间和建立者是？",
+      "answer": "约公元前2070年，禹建立我国历史上第一个奴隶制王朝",
+      "keywords": [
+        {
+          "aliases": [
+            "约公元前2070年",
+            "禹建立我国历史上第一个奴隶制王朝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0122",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "分封制的内容是？",
+      "answer": "周王室将宗亲和功臣分封到各地，授予管理土地和民众的权力，建立诸侯国",
+      "keywords": [
+        {
+          "aliases": [
+            "周王室将宗亲和功臣分封到各地",
+            "授予管理土地和民众的权力"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0123",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "约公元前2070年建立夏朝的是？",
+      "answer": "禹",
+      "keywords": [
+        {
+          "aliases": [
+            "禹"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0124",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"家天下\"代替\"公天下\"的标志是？",
+      "answer": "禹死后启取代伯益直接继承王位，世袭制取代禅让制",
+      "keywords": [
+        {
+          "aliases": [
+            "禹死后启取代伯益直接继承王位",
+            "世袭制取代禅让制"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0125",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写商朝的重要史实",
+      "answer": "前1600年商汤灭夏建商；盘庚迁都到殷；末代商王纣统治残暴",
+      "keywords": [
+        {
+          "aliases": [
+            "前1600年商汤灭夏建商",
+            "盘庚迁都到殷"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0126",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写分封制确立的贵族等级",
+      "answer": "天子、诸侯、卿大夫、士",
+      "keywords": [
+        {
+          "aliases": [
+            "天子、诸侯、卿大夫、士"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0127",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商西周王朝的更替"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"夏商西周三朝更替\"",
+      "answer": "夏（前2070年禹建）→商（前1600年商汤灭夏）→西周（前1046年牧野之战周武王灭商）；前771年西周灭亡",
+      "keywords": [
+        {
+          "aliases": [
+            "夏（前2070年禹建）→商（前1600年商汤灭夏）→西周（前1046年牧野之战周武王灭商）",
+            "前771年西周灭亡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商西周王朝的更替"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0128",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "春秋时期开始的标志是？",
+      "answer": "公元前770年周平王东迁洛邑，进入东周（前期为春秋）",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前770年周平王东迁洛邑",
+            "进入东周（前期为春秋）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0129",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "春秋时期的霸主有？",
+      "answer": "齐桓公、晋文公、楚庄王先后称霸",
+      "keywords": [
+        {
+          "aliases": [
+            "齐桓公、晋文公、楚庄王先后称霸"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0130",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "周平王东迁洛邑后进入什么时期？",
+      "answer": "东周（春秋时期）",
+      "keywords": [
+        {
+          "aliases": [
+            "东周（春秋时期）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0131",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "铁制农具和牛耕的出现说明了什么？",
+      "answer": "春秋时期农业生产力水平提高的重要标志",
+      "keywords": [
+        {
+          "aliases": [
+            "春秋时期农业生产力水平提高的重要标志"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0132",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写春秋时期政治格局的变化",
+      "answer": "王室衰微、礼崩乐坏；大国诸侯操控政治、竞相争霸，各诸侯国设置县郡委派官员管理",
+      "keywords": [
+        {
+          "aliases": [
+            "王室衰微、礼崩乐坏",
+            "大国诸侯操控政治、竞相争霸"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0133",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写春秋时期民族关系的发展",
+      "answer": "\"诸夏\"与\"戎\"\"狄\"\"蛮\"\"夷\"长期交往，产生了华夏认同观念",
+      "keywords": [
+        {
+          "aliases": [
+            "\"诸夏\"与\"戎\"\"狄\"\"蛮\"\"夷\"长期交往",
+            "产生了华夏认同观念"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0134",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "动荡变化中的春秋时期"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"春秋争霸的影响\"",
+      "answer": "导致许多中小诸侯国覆灭，少数强大诸侯国疆域扩展；给社会带来灾难，但在客观上促进了民族交融",
+      "keywords": [
+        {
+          "aliases": [
+            "导致许多中小诸侯国覆灭",
+            "少数强大诸侯国疆域扩展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-动荡变化中的春秋时期"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0135",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "战国七雄是？",
+      "answer": "齐、楚、燕、韩、赵、魏、秦",
+      "keywords": [
+        {
+          "aliases": [
+            "齐、楚、燕、韩、赵、魏、秦"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0136",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "商鞅变法的时间和影响是？",
+      "answer": "公元前356年秦孝公任用商鞅变法；使秦国综合国力大为增强，为秦统一中国奠定基础",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前356年秦孝公任用商鞅变法",
+            "使秦国综合国力大为增强"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0137",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "齐、楚、燕、韩、赵、魏、秦并立的时期是？",
+      "answer": "战国时期（战国七雄）",
+      "keywords": [
+        {
+          "aliases": [
+            "战国时期（战国七雄）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0138",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "公元前256年李冰主持修建的水利工程是？",
+      "answer": "都江堰",
+      "keywords": [
+        {
+          "aliases": [
+            "都江堰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0139",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写商鞅变法的政治措施",
+      "answer": "确立县制、废除贵族世袭特权、建立户籍制度、严明法度禁止私斗",
+      "keywords": [
+        {
+          "aliases": [
+            "确立县制、废除贵族世袭特权、建立户籍制度、严明法度禁止私斗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0140",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写商鞅变法的经济军事措施",
+      "answer": "经济：废除旧土地制度、鼓励耕织、统一度量衡；军事：奖励军功授予爵位赏赐土地",
+      "keywords": [
+        {
+          "aliases": [
+            "经济：废除旧土地制度、鼓励耕织、统一度量衡",
+            "军事：奖励军功授予爵位赏赐土地"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0141",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写都江堰的作用",
+      "answer": "防洪、灌溉、水运，使成都平原成为\"天府之国\"",
+      "keywords": [
+        {
+          "aliases": [
+            "防洪、灌溉、水运",
+            "使成都平原成为\"天府之国\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0142",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "战国时期的社会变革"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"商鞅变法的内容与影响\"",
+      "answer": "政治（县制/废世袭/户籍/法度）+经济（废旧制/奖耕织/一度量衡）+军事（奖军功）；影响：国力大增、为统一奠基、中国开始进入封建社会",
+      "keywords": [
+        {
+          "aliases": [
+            "政治（县制/废世袭/户籍/法度）+经济（废旧制/奖耕织/一度量衡）+军事（奖军功）",
+            "影响：国力大增、为统一奠基、中国开始进入封建社会"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-战国时期的社会变革"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0143",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "老子的思想主张是？",
+      "answer": "道家创始人，思想核心是\"道\"，主张无为而治，认为事物都有对立面且能互相转化",
+      "keywords": [
+        {
+          "aliases": [
+            "道家创始人",
+            "思想核心是\"道\""
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0144",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "孔子的思想核心是？",
+      "answer": "\"仁\"，主张\"仁者爱人\"、为政以德，创办私学、有教无类",
+      "keywords": [
+        {
+          "aliases": [
+            "\"仁\"",
+            "主张\"仁者爱人\"、为政以德"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0145",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "主张\"无为而治\"、道家学派创始人是？",
+      "answer": "老子",
+      "keywords": [
+        {
+          "aliases": [
+            "老子"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0146",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "提出\"民为贵，社稷次之，君为轻\"的是？",
+      "answer": "孟子",
+      "keywords": [
+        {
+          "aliases": [
+            "孟子"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0147",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "主张\"兼爱\"\"非攻\"的是？",
+      "answer": "墨子（墨家创始人）",
+      "keywords": [
+        {
+          "aliases": [
+            "墨子（墨家创始人）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0148",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写百家争鸣的主要学派与代表",
+      "answer": "儒家（孔子/孟子/荀子）、道家（老子/庄子）、墨家（墨子）、法家（韩非）、兵家（孙武）",
+      "keywords": [
+        {
+          "aliases": [
+            "儒家（孔子/孟子/荀子）、道家（老子/庄子）、墨家（墨子）、法家（韩非）、兵家（孙武）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0149",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写法家韩非的主张",
+      "answer": "反对空谈仁义，强调以法治国，树立君主权威，建立中央集权专制统治",
+      "keywords": [
+        {
+          "aliases": [
+            "反对空谈仁义",
+            "强调以法治国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0150",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "百家争鸣"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"百家争鸣的历史意义\"",
+      "answer": "促进了思想文化的繁荣，成为我国古代第一次思想文化发展的高峰，为古代思想文化发展奠定基础",
+      "keywords": [
+        {
+          "aliases": [
+            "促进了思想文化的繁荣",
+            "成为我国古代第一次思想文化发展的高峰"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-百家争鸣"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0151",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "甲骨文的历史价值是？",
+      "answer": "已具备汉字基本结构，是我国已发现的古代文字中年代最早、体系较为完整的成熟文字",
+      "keywords": [
+        {
+          "aliases": [
+            "已具备汉字基本结构",
+            "是我国已发现的古代文字中年代最早、体系较为完整的成熟文字"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0152",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "司母戊鼎的地位是？",
+      "answer": "重832.84千克，是世界上出土最重的青铜器之一",
+      "keywords": [
+        {
+          "aliases": [
+            "重832.84千克",
+            "是世界上出土最重的青铜器之一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0153",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国有文字可考的历史始于哪个朝代？",
+      "answer": "商朝",
+      "keywords": [
+        {
+          "aliases": [
+            "商朝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0154",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "传世文献中我国第一次有确切日期的日食记录见于哪里？",
+      "answer": "《诗经》（公元前776年9月6日的日食）",
+      "keywords": [
+        {
+          "aliases": [
+            "《诗经》（公元前776年9月6日的日食）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0155",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写甲骨文的记载内容",
+      "answer": "涉及祭祀、战争、农牧业、官制、刑法、医药、天文历法等",
+      "keywords": [
+        {
+          "aliases": [
+            "涉及祭祀、战争、农牧业、官制、刑法、医药、天文历法等"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0156",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写金文与何尊",
+      "answer": "商朝中晚期青铜器上铸刻的文字称金文；何尊铭文\"宅兹中国\"是\"中国\"一词最早的实物见证",
+      "keywords": [
+        {
+          "aliases": [
+            "商朝中晚期青铜器上铸刻的文字称金文",
+            "何尊铭文\"宅兹中国\"是\"中国\"一词最早的实物见证"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0157",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写战国时期医学成就",
+      "answer": "扁鹊发明切脉诊法，使用望、闻、问、切四诊法；《黄帝内经》是重要的中医理论著作",
+      "keywords": [
+        {
+          "aliases": [
+            "扁鹊发明切脉诊法",
+            "使用望、闻、问、切四诊法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0158",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "夏商周时期的科技与文化"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"《诗经》和楚辞\"",
+      "answer": "《诗经》：我国现存第一部诗歌总集，305篇，分风、雅、颂；楚辞：屈原吸收民歌精华创作，代表作《离骚》；两者是我国古典诗歌的两大源头",
+      "keywords": [
+        {
+          "aliases": [
+            "《诗经》：我国现存第一部诗歌总集",
+            "305篇"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-夏商周时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0159",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "秦灭六国的顺序是？",
+      "answer": "韩→赵→魏→楚→燕→齐（前230—前221年）",
+      "keywords": [
+        {
+          "aliases": [
+            "韩→赵→魏→楚→燕→齐（前230—前221年）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0160",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "秦统一的意义是？",
+      "answer": "结束了春秋战国长期分裂混乱的局面，建立起我国历史上第一个统一多民族的封建国家",
+      "keywords": [
+        {
+          "aliases": [
+            "结束了春秋战国长期分裂混乱的局面",
+            "建立起我国历史上第一个统一多民族的封建国家"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0161",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "我国历史上第一个统一多民族的封建国家是？",
+      "answer": "秦朝",
+      "keywords": [
+        {
+          "aliases": [
+            "秦朝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0162",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "由朝廷直接任免长官、开创地方行政基本模式的制度是？",
+      "answer": "郡县制",
+      "keywords": [
+        {
+          "aliases": [
+            "郡县制"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0163",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写中央集权制度的内容",
+      "answer": "皇帝总揽全国大权；中央设丞相（行政）、太尉（军事）、御史大夫（监察）；地方实行郡县制（36郡）",
+      "keywords": [
+        {
+          "aliases": [
+            "皇帝总揽全国大权",
+            "中央设丞相（行政）、太尉（军事）、御史大夫（监察）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0164",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写秦朝巩固统一的措施",
+      "answer": "统一文字（小篆）、统一货币（圆形方孔半两钱）、统一度量衡、统一车轨道路、开凿灵渠沟通湘江漓江",
+      "keywords": [
+        {
+          "aliases": [
+            "统一文字（小篆）、统一货币（圆形方孔半两钱）、统一度量衡、统一车轨道路、开凿灵渠沟通湘江漓江"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0165",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写秦朝疆域四至",
+      "answer": "东至东海，西到陇西，北至长城一带，南达南海",
+      "keywords": [
+        {
+          "aliases": [
+            "东至东海",
+            "西到陇西"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0166",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦统一中国"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"秦灭六国与统一\"",
+      "answer": "前230年起各个击破，前221年完成统一，定都咸阳；建立皇帝制+三公九卿+郡县制的中央集权制度，推行统一文字货币度量衡等措施",
+      "keywords": [
+        {
+          "aliases": [
+            "前230年起各个击破",
+            "前221年完成统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦统一中国"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0167",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "陈胜吴广起义的时间和意义是？",
+      "answer": "公元前209年大泽乡爆发；是中国历史上第一次农民大起义，建立张楚政权",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前209年大泽乡爆发",
+            "是中国历史上第一次农民大起义"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0168",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "秦朝灭亡的时间是？",
+      "answer": "公元前207年，刘邦率军直抵咸阳，秦朝统治者出城投降",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前207年",
+            "刘邦率军直抵咸阳"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0169",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"王侯将相宁有种乎\"出自哪次起义？",
+      "answer": "陈胜吴广起义（大泽乡起义）",
+      "keywords": [
+        {
+          "aliases": [
+            "陈胜吴广起义（大泽乡起义）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0170",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "争夺国家统治权、最终刘邦获胜的战争是？",
+      "answer": "楚汉之争（垓下之战刘邦胜项羽）",
+      "keywords": [
+        {
+          "aliases": [
+            "楚汉之争（垓下之战刘邦胜项羽）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0171",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写秦朝暴政的表现",
+      "answer": "赋税沉重、徭役兵役繁重、法律严苛刑罚残酷、焚书坑儒禁锢思想",
+      "keywords": [
+        {
+          "aliases": [
+            "赋税沉重、徭役兵役繁重、法律严苛刑罚残酷、焚书坑儒禁锢思想"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0172",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写陈胜吴广起义的直接原因",
+      "answer": "被征发戍守渔阳遇雨误期按律当死，被迫反抗",
+      "keywords": [
+        {
+          "aliases": [
+            "被征发戍守渔阳遇雨误期按律当死",
+            "被迫反抗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0173",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦末农民大起义"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"秦末农民大起义的过程\"",
+      "answer": "前209年大泽乡起义→建立张楚政权→起义军壮大但主力失败→项羽巨鹿之战歼灭秦军主力→前207年刘邦入咸阳秦亡→楚汉之争刘邦获胜",
+      "keywords": [
+        {
+          "aliases": [
+            "前209年大泽乡起义→建立张楚政权→起义军壮大但主力失败→项羽巨鹿之战歼灭秦军主力→前207年刘邦入咸阳秦亡→楚汉之争刘邦获胜"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦末农民大起义"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0174",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "西汉建立的时间和建立者是？",
+      "answer": "公元前202年，刘邦建立汉朝，定都长安",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前202年",
+            "刘邦建立汉朝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0175",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"文景之治\"的表现是？",
+      "answer": "政治清明，经济发展，人口增长，人民生活安定",
+      "keywords": [
+        {
+          "aliases": [
+            "政治清明",
+            "经济发展"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0176",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "汉高祖实行的、把田租定为十五税一的政策是？",
+      "answer": "休养生息政策（轻徭薄赋）",
+      "keywords": [
+        {
+          "aliases": [
+            "休养生息政策（轻徭薄赋）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0177",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "文帝景帝把田租降到什么比例？",
+      "answer": "三十税一",
+      "keywords": [
+        {
+          "aliases": [
+            "三十税一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0178",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写汉高祖休养生息政策的内容",
+      "answer": "士兵还乡务农、释放奴婢为平民、轻徭薄赋（田租十五税一）、对匈奴和亲",
+      "keywords": [
+        {
+          "aliases": [
+            "士兵还乡务农、释放奴婢为平民、轻徭薄赋（田租十五税一）、对匈奴和亲"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0179",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写汉文帝节俭的事迹",
+      "answer": "在位20多年宫室园林车骑没有增加、拒绝接受进献的千里马、陵墓只用瓦器",
+      "keywords": [
+        {
+          "aliases": [
+            "在位20多年宫室园林车骑没有增加、拒绝接受进献的千里马、陵墓只用瓦器"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0180",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西汉建立和\"文景之治\""
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"汉初实行休养生息政策的原因\"",
+      "answer": "吸取秦朝速亡教训；西汉初年社会生产遭严重破坏、百姓流离失所，恢复生产巩固政权成为首要问题",
+      "keywords": [
+        {
+          "aliases": [
+            "吸取秦朝速亡教训",
+            "西汉初年社会生产遭严重破坏、百姓流离失所"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西汉建立和\"文景之治\""
+    }
+  },
+  {
+    "id": "Q-history-7to9-0181",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"推恩令\"的内容和作用是？",
+      "answer": "汉武帝采纳主父偃建议，诸侯王可将封地分封给子弟作为侯国；诸侯王封地势力越来越小，中央加强了对地方的控制",
+      "keywords": [
+        {
+          "aliases": [
+            "汉武帝采纳主父偃建议",
+            "诸侯王可将封地分封给子弟作为侯国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0182",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "汉武帝尊崇儒术的措施是？",
+      "answer": "接受董仲舒建议，把儒家学说立为正统思想；在长安兴办太学",
+      "keywords": [
+        {
+          "aliases": [
+            "接受董仲舒建议",
+            "把儒家学说立为正统思想"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0183",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "提出\"推恩\"建议的大臣是？",
+      "answer": "主父偃",
+      "keywords": [
+        {
+          "aliases": [
+            "主父偃"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0184",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "公元前119年漠北战役中出击匈奴的大将是？",
+      "answer": "卫青、霍去病",
+      "keywords": [
+        {
+          "aliases": [
+            "卫青、霍去病"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0185",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写汉武帝加强经济管控的措施",
+      "answer": "铸币权收归中央统一铸造五铢钱、盐铁和酒官营专卖、统一调配物资平抑物价、对商人征收车船税",
+      "keywords": [
+        {
+          "aliases": [
+            "铸币权收归中央统一铸造五铢钱、盐铁和酒官营专卖、统一调配物资平抑物价、对商人征收车船税"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0186",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写刺史制度",
+      "answer": "把全国划分为13个州部，每州部派刺史一人定期巡视，代表朝廷监察地方官吏、豪强及其子弟",
+      "keywords": [
+        {
+          "aliases": [
+            "把全国划分为13个州部",
+            "每州部派刺史一人定期巡视"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0187",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写河西四郡",
+      "answer": "武威、张掖、酒泉、敦煌（西汉在河西走廊设置）",
+      "keywords": [
+        {
+          "aliases": [
+            "武威、张掖、酒泉、敦煌（西汉在河西走廊设置）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0188",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "大一统王朝的巩固"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"汉武帝巩固大一统的措施\"",
+      "answer": "政治（推恩令/刺史制度）+经济（五铢钱/盐铁官营）+思想（尊崇儒术/太学）+军事（北击匈奴/河西四郡）；影响：西汉进入鼎盛时期",
+      "keywords": [
+        {
+          "aliases": [
+            "政治（推恩令/刺史制度）+经济（五铢钱/盐铁官营）+思想（尊崇儒术/太学）+军事（北击匈奴/河西四郡）",
+            "影响：西汉进入鼎盛时期"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-大一统王朝的巩固"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0189",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "东汉建立的时间和建立者是？",
+      "answer": "25年，刘秀称帝，定都洛阳，史称东汉（光武帝）",
+      "keywords": [
+        {
+          "aliases": [
+            "25年",
+            "刘秀称帝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0190",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"光武中兴\"的措施有？",
+      "answer": "释放奴婢、荒地和山林给予农民耕种减轻田租、减轻刑罚、合并郡县裁减官员",
+      "keywords": [
+        {
+          "aliases": [
+            "释放奴婢、荒地和山林给予农民耕种减轻田租、减轻刑罚、合并郡县裁减官员"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0191",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "东汉中后期交替把持朝政的两股势力是？",
+      "answer": "外戚与宦官（交替专权）",
+      "keywords": [
+        {
+          "aliases": [
+            "外戚与宦官（交替专权）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0192",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "184年领导黄巾起义的是？",
+      "answer": "张角（创立太平道）",
+      "keywords": [
+        {
+          "aliases": [
+            "张角（创立太平道）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0193",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写东汉政局动荡的原因",
+      "answer": "皇帝年幼、外戚宦官交替专权、豪强大族势力膨胀兼并土地拥有私人武装",
+      "keywords": [
+        {
+          "aliases": [
+            "皇帝年幼、外戚宦官交替专权、豪强大族势力膨胀兼并土地拥有私人武装"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0194",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写黄巾起义的口号与影响",
+      "answer": "\"苍天已死，黄天当立，岁在甲子，天下大吉\"；沉重打击东汉统治，使其名存实亡",
+      "keywords": [
+        {
+          "aliases": [
+            "\"苍天已死",
+            "黄天当立"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0195",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东汉的兴衰"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"东汉兴衰过程\"",
+      "answer": "9年王莽代汉→25年刘秀建东汉→光武中兴→中期后外戚宦官交替专权→184年黄巾起义→东汉名存实亡",
+      "keywords": [
+        {
+          "aliases": [
+            "9年王莽代汉→25年刘秀建东汉→光武中兴→中期后外戚宦官交替专权→184年黄巾起义→东汉名存实亡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东汉的兴衰"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0196",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "张骞第一次出使西域的时间和目的是？",
+      "answer": "公元前138年，联络大月氏夹击匈奴；虽未达目的，但了解了西域情况",
+      "keywords": [
+        {
+          "aliases": [
+            "公元前138年",
+            "联络大月氏夹击匈奴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0197",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "丝绸之路的路线是？",
+      "answer": "从长安出发，穿过河西走廊，经西域运往中亚、西亚，再转运到欧洲和北非",
+      "keywords": [
+        {
+          "aliases": [
+            "从长安出发",
+            "穿过河西走廊"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0198",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"凿空\"西域、开辟丝绸之路的人是谁？",
+      "answer": "张骞",
+      "keywords": [
+        {
+          "aliases": [
+            "张骞"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0199",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "公元前60年西汉在乌垒城设置的机构是？",
+      "answer": "西域都护府（标志西域正式归属中央政权）",
+      "keywords": [
+        {
+          "aliases": [
+            "西域都护府（标志西域正式归属中央政权）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0200",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写通过丝绸之路交流的物品",
+      "answer": "汉朝输出丝绸、漆器和开渠凿井铸铁技术；西域传入核桃、葡萄、石榴、苜蓿、良种马、香料、玻璃、宝石",
+      "keywords": [
+        {
+          "aliases": [
+            "汉朝输出丝绸、漆器和开渠凿井铸铁技术",
+            "西域传入核桃、葡萄、石榴、苜蓿、良种马、香料、玻璃、宝石"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0201",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写海上丝绸之路",
+      "answer": "从东南沿海港口出发，经中南半岛南下穿过马六甲海峡，最远抵达印度半岛南端和今斯里兰卡",
+      "keywords": [
+        {
+          "aliases": [
+            "从东南沿海港口出发",
+            "经中南半岛南下穿过马六甲海峡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0202",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写东汉经营西域的史实",
+      "answer": "73年班超出使西域经营30多年；123年东汉改西域都护府为西域长史府",
+      "keywords": [
+        {
+          "aliases": [
+            "73年班超出使西域经营30多年",
+            "123年东汉改西域都护府为西域长史府"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0203",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "丝绸之路的开通与经营西域"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"张骞通西域与丝绸之路的意义\"",
+      "answer": "促进汉朝与西域相互了解往来；丝绸之路成为古代东西方往来的大动脉，促进中外贸易与文化交流",
+      "keywords": [
+        {
+          "aliases": [
+            "促进汉朝与西域相互了解往来",
+            "丝绸之路成为古代东西方往来的大动脉"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-丝绸之路的开通与经营西域"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0204",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "蔡伦改进造纸术的时间和原料是？",
+      "answer": "105年，以树皮、麻头、破布、旧渔网等植物纤维为原料造纸",
+      "keywords": [
+        {
+          "aliases": [
+            "105年",
+            "以树皮、麻头、破布、旧渔网等植物纤维为原料造纸"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0205",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《史记》的历史地位是？",
+      "answer": "司马迁著，我国古代第一部纪传体通史，记述从传说中的黄帝到汉武帝时的史事",
+      "keywords": [
+        {
+          "aliases": [
+            "司马迁著",
+            "我国古代第一部纪传体通史"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0206",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "被后世称为\"医圣\"的是？",
+      "answer": "张仲景（著《伤寒杂病论》）",
+      "keywords": [
+        {
+          "aliases": [
+            "张仲景（著《伤寒杂病论》）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0207",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "发明\"麻沸散\"、创编\"五禽戏\"的是？",
+      "answer": "华佗",
+      "keywords": [
+        {
+          "aliases": [
+            "华佗"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0208",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写张仲景的医学贡献",
+      "answer": "著《伤寒杂病论》，发展中医理论和治疗方法，提出辨证分析对症治疗、提倡\"治未病\"；中医临床理论体系的开创者",
+      "keywords": [
+        {
+          "aliases": [
+            "著《伤寒杂病论》",
+            "发展中医理论和治疗方法"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0209",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写佛教传入中国的情况",
+      "answer": "约公元前6世纪产生于古代印度；两汉之际传入中国；东汉明帝时得到上层扶持逐步传播（白马寺为最早佛教寺院之一）",
+      "keywords": [
+        {
+          "aliases": [
+            "约公元前6世纪产生于古代印度",
+            "两汉之际传入中国"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0210",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写道教起源",
+      "answer": "东汉末年张角创立太平道、张陵创立五斗米道，为早期道教不同派别，为下层民众信奉",
+      "keywords": [
+        {
+          "aliases": [
+            "东汉末年张角创立太平道、张陵创立五斗米道",
+            "为早期道教不同派别"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0211",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "秦汉时期的科技与文化"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"秦汉时期的科技成就\"",
+      "answer": "造纸术（蔡伦改进）、医学（张仲景/华佗）、数学（《九章算术》）、农学（《氾胜之书》）、史学（《史记》/《汉书》）、天文（张衡浑天仪候风地动仪）",
+      "keywords": [
+        {
+          "aliases": [
+            "造纸术（蔡伦改进）、医学（张仲景/华佗）、数学（《九章算术》）、农学（《氾胜之书》）、史学（《史记》/《汉书》）、天文（张衡浑天仪候风地动仪）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-秦汉时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0212",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "官渡之战的时间、双方和结果是？",
+      "answer": "200年，曹操与袁绍；曹操以少胜多，为统一北方打下基础",
+      "keywords": [
+        {
+          "aliases": [
+            "200年",
+            "曹操与袁绍"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0213",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "赤壁之战的时间、双方和结果是？",
+      "answer": "208年，曹操与孙刘联军；孙刘联军以少胜多，为三国鼎立局面形成奠定基础",
+      "keywords": [
+        {
+          "aliases": [
+            "208年",
+            "曹操与孙刘联军"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0214",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "曹操偷袭乌巢、烧毁袁绍军粮的战役是？",
+      "answer": "官渡之战",
+      "keywords": [
+        {
+          "aliases": [
+            "官渡之战"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0215",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "孙权派卫温率万人船队到达的\"夷洲\"是今天的哪里？",
+      "answer": "台湾",
+      "keywords": [
+        {
+          "aliases": [
+            "台湾"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0216",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写三国建立的顺序",
+      "answer": "220年曹丕建魏（洛阳）→221年刘备建蜀汉（成都）→229年孙权建吴（建业）",
+      "keywords": [
+        {
+          "aliases": [
+            "220年曹丕建魏（洛阳）→221年刘备建蜀汉（成都）→229年孙权建吴（建业）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0217",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写曹操统一北方的措施",
+      "answer": "\"挟天子以令诸侯\"取得政治主动权、招揽人才、收编青州黄巾军精锐、实行屯田解决军粮",
+      "keywords": [
+        {
+          "aliases": [
+            "\"挟天子以令诸侯\"取得政治主动权、招揽人才、收编青州黄巾军精锐、实行屯田解决军粮"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0218",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国鼎立"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"三国鼎立的历史意义\"",
+      "answer": "改变了天下分崩的局面，实现了局部统一；魏蜀吴各自发展政治经济军事实力，230年卫温到达夷洲加强大陆与台湾联系",
+      "keywords": [
+        {
+          "aliases": [
+            "改变了天下分崩的局面",
+            "实现了局部统一"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国鼎立"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0219",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "西晋建立和统一全国的时间是？",
+      "answer": "266年司马炎建立西晋（定都洛阳）；280年西晋灭吴，统一全国",
+      "keywords": [
+        {
+          "aliases": [
+            "266年司马炎建立西晋（定都洛阳）",
+            "280年西晋灭吴"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0220",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "八王之乱的影响是？",
+      "answer": "严重削弱西晋国力，成为西晋由盛而衰的转折点；出现我国古代历史上第一次大规模的人口迁徙",
+      "keywords": [
+        {
+          "aliases": [
+            "严重削弱西晋国力",
+            "成为西晋由盛而衰的转折点"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0221",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "263年魏灭蜀、280年西晋灭吴后统一的王朝是？",
+      "answer": "西晋",
+      "keywords": [
+        {
+          "aliases": [
+            "西晋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0222",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "316年攻陷西晋都城的民族是？",
+      "answer": "内迁的匈奴人",
+      "keywords": [
+        {
+          "aliases": [
+            "内迁的匈奴人"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0223",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写西晋灭亡的原因",
+      "answer": "八王之乱内耗国力+内迁各族受重税征兵派役掠卖激起反抗、起兵攻晋；316年匈奴攻陷都城灭亡",
+      "keywords": [
+        {
+          "aliases": [
+            "八王之乱内耗国力+内迁各族受重税征兵派役掠卖激起反抗、起兵攻晋",
+            "316年匈奴攻陷都城灭亡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0224",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写北方各族内迁的概况",
+      "answer": "氐羌由西向东入关中、匈奴羯由北向南迁汾河流域、鲜卑迁辽河流域南部与河套河西走廊一带",
+      "keywords": [
+        {
+          "aliases": [
+            "氐羌由西向东入关中、匈奴羯由北向南迁汾河流域、鲜卑迁辽河流域南部与河套河西走廊一带"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0225",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "西晋的短暂统一和北方各族的内迁"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"西晋从统一到灭亡\"",
+      "answer": "263年魏灭蜀→266年建西晋→280年统一全国→晋惠帝时八王之乱→316年匈奴攻陷都城西晋灭亡",
+      "keywords": [
+        {
+          "aliases": [
+            "263年魏灭蜀→266年建西晋→280年统一全国→晋惠帝时八王之乱→316年匈奴攻陷都城西晋灭亡"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-西晋的短暂统一和北方各族的内迁"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0226",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "东晋建立的时间和建立者是？",
+      "answer": "317年，皇族司马睿在建康重建晋王朝，史称东晋",
+      "keywords": [
+        {
+          "aliases": [
+            "317年",
+            "皇族司马睿在建康重建晋王朝"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0227",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "江南地区开发的原因是？",
+      "answer": "西晋末年起北方人大规模南迁，输送了大量劳动力和中原先进的生产工具与技术",
+      "keywords": [
+        {
+          "aliases": [
+            "西晋末年起北方人大规模南迁",
+            "输送了大量劳动力和中原先进的生产工具与技术"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0228",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"王与马，共天下\"反映的东晋政治格局是？",
+      "answer": "门阀政治（世家大族与皇帝共天下）",
+      "keywords": [
+        {
+          "aliases": [
+            "门阀政治（世家大族与皇帝共天下）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0229",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "420—589年定都建康、相继出现的四个朝代是？",
+      "answer": "宋、齐、梁、陈（统称\"南朝\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "宋、齐、梁、陈（统称\"南朝\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0230",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写江南地区农业开发的成就",
+      "answer": "荒地开垦、兴修水利、水稻育秧移栽、麦稻兼作、五岭以南种双季稻、种桑养蚕多种经营",
+      "keywords": [
+        {
+          "aliases": [
+            "荒地开垦、兴修水利、水稻育秧移栽、麦稻兼作、五岭以南种双季稻、种桑养蚕多种经营"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0231",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写江南地区手工业商业的成就",
+      "answer": "缫丝织布制瓷冶铸造船造纸制盐显著发展；灌钢法推广；建康成为商业活跃的大都市",
+      "keywords": [
+        {
+          "aliases": [
+            "缫丝织布制瓷冶铸造船造纸制盐显著发展",
+            "灌钢法推广"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0232",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写东晋未能恢复中原的原因",
+      "answer": "朝廷对北伐将领心存疑虑多方掣肘、有的统帅利用北伐发展自己势力，内耗导致北伐失败",
+      "keywords": [
+        {
+          "aliases": [
+            "朝廷对北伐将领心存疑虑多方掣肘、有的统帅利用北伐发展自己势力",
+            "内耗导致北伐失败"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0233",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "东晋南朝政治和江南地区开发"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"江南地区开发的表现\"",
+      "answer": "农业（开垦荒地/水利/育秧移栽/麦稻兼作）+手工业（缫丝织布制瓷冶铸造船）+商业（建康大都市）；为后世经济重心南移奠定基础",
+      "keywords": [
+        {
+          "aliases": [
+            "农业（开垦荒地/水利/育秧移栽/麦稻兼作）+手工业（缫丝织布制瓷冶铸造船）+商业（建康大都市）",
+            "为后世经济重心南移奠定基础"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-东晋南朝政治和江南地区开发"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0234",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "淝水之战的时间、双方和结果是？",
+      "answer": "383年，前秦苻坚与东晋；东晋以少胜多，前秦瓦解灭亡",
+      "keywords": [
+        {
+          "aliases": [
+            "383年",
+            "前秦苻坚与东晋"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0235",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "北魏孝文帝改革的措施有？",
+      "answer": "494年迁都洛阳；官员必须说汉语、以汉服代替鲜卑服、改鲜卑姓为汉姓、鼓励鲜卑贵族与汉人贵族通婚",
+      "keywords": [
+        {
+          "aliases": [
+            "494年迁都洛阳",
+            "官员必须说汉语、以汉服代替鲜卑服、改鲜卑姓为汉姓、鼓励鲜卑贵族与汉人贵族通婚"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0236",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "\"草木皆兵\"出自哪场战役？",
+      "answer": "淝水之战（前秦苻坚误把八公山草木当晋兵）",
+      "keywords": [
+        {
+          "aliases": [
+            "淝水之战（前秦苻坚误把八公山草木当晋兵）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0237",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "439年结束十六国分裂、统一北方的是？",
+      "answer": "北魏（鲜卑拓跋部建立）",
+      "keywords": [
+        {
+          "aliases": [
+            "北魏（鲜卑拓跋部建立）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0238",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写北朝政权更替",
+      "answer": "北魏分裂为东魏、西魏；东魏被北齐取代、西魏被北周取代；577年北周灭北齐，北方重归统一",
+      "keywords": [
+        {
+          "aliases": [
+            "北魏分裂为东魏、西魏",
+            "东魏被北齐取代、西魏被北周取代"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0239",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写北方民族交融的表现",
+      "answer": "内迁各族学习农业技艺生产方式由畜牧转农业；汉族学习畜牧经验；汉语成为北方主要通用语言；\"胡\"\"汉\"观念逐渐淡薄",
+      "keywords": [
+        {
+          "aliases": [
+            "内迁各族学习农业技艺生产方式由畜牧转农业",
+            "汉族学习畜牧经验"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0240",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写孝文帝迁都洛阳的目的",
+      "answer": "鲜卑拓跋部内迁较晚仍保持鲜卑习俗，难以治理广大的北方地区；迁都并汉化以改善与汉人关系",
+      "keywords": [
+        {
+          "aliases": [
+            "鲜卑拓跋部内迁较晚仍保持鲜卑习俗",
+            "难以治理广大的北方地区"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0241",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "北朝政治和北方民族大交融"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"民族交融的意义\"",
+      "answer": "为中华民族发展注入新的活力，进一步丰富中华民族的物质文化和精神文化，为隋唐时期统一多民族国家的发展奠定基础",
+      "keywords": [
+        {
+          "aliases": [
+            "为中华民族发展注入新的活力",
+            "进一步丰富中华民族的物质文化和精神文化"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-北朝政治和北方民族大交融"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0242",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "贾思勰的贡献是？",
+      "answer": "北朝贾思勰撰写《齐民要术》，是我国现存最早的一部完整的农书",
+      "keywords": [
+        {
+          "aliases": [
+            "北朝贾思勰撰写《齐民要术》",
+            "是我国现存最早的一部完整的农书"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0243",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R1",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "祖冲之的贡献是？",
+      "answer": "把圆周率精确到小数点以后第七位（3.1415926—3.1415927之间），领先世界近千年",
+      "keywords": [
+        {
+          "aliases": [
+            "把圆周率精确到小数点以后第七位（3.1415926—3.1415927之间）",
+            "领先世界近千年"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0244",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "被称为\"天下第一行书\"的作品是？",
+      "answer": "王羲之《兰亭集序》（王羲之被誉为\"书圣\"）",
+      "keywords": [
+        {
+          "aliases": [
+            "王羲之《兰亭集序》（王羲之被誉为\"书圣\"）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0245",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R2",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "《女史箴图》《洛神赋图》的作者是？",
+      "answer": "东晋顾恺之",
+      "keywords": [
+        {
+          "aliases": [
+            "东晋顾恺之"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0246",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写《齐民要术》的核心主张",
+      "answer": "主张农业生产要遵循自然规律、因地制宜、不误农时；提倡改进生产技术和工具；提出多种经营和商品生产",
+      "keywords": [
+        {
+          "aliases": [
+            "主张农业生产要遵循自然规律、因地制宜、不误农时",
+            "提倡改进生产技术和工具"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0247",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写祖冲之的其他成就",
+      "answer": "创制当时最先进的历法《大明历》；制造指南车、水碓磨、千里船",
+      "keywords": [
+        {
+          "aliases": [
+            "创制当时最先进的历法《大明历》",
+            "制造指南车、水碓磨、千里船"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0248",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写著名的石窟艺术",
+      "answer": "山西大同云冈石窟、河南洛阳龙门石窟；继承秦汉雕塑传统并吸收外来佛教造型艺术特点",
+      "keywords": [
+        {
+          "aliases": [
+            "山西大同云冈石窟、河南洛阳龙门石窟",
+            "继承秦汉雕塑传统并吸收外来佛教造型艺术特点"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0249",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R3a",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写郦道元的贡献",
+      "answer": "著《水经注》，记载1252条河流，综合介绍流经地区的地形、气候、土壤、物产、历史古迹等，是一部综合性的地理学著作",
+      "keywords": [
+        {
+          "aliases": [
+            "著《水经注》",
+            "记载1252条河流"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  },
+  {
+    "id": "Q-history-7to9-0250",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "背诵训练",
+    "knowledge_points": [
+      "三国两晋南北朝时期的科技与文化"
+    ],
+    "type": "R3b",
+    "purpose_tags": [
+      "memorize"
+    ],
+    "content": {
+      "question": "默写\"三国两晋南北朝的科技文化成就\"",
+      "answer": "农学（贾思勰《齐民要术》）+数学（祖冲之圆周率）+书法（王羲之《兰亭集序》）+绘画（顾恺之）+石窟（云冈/龙门）+地理（郦道元《水经注》）+文学（陶渊明田园诗、民歌）",
+      "keywords": [
+        {
+          "aliases": [
+            "农学（贾思勰《齐民要术》）+数学（祖冲之圆周率）+书法（王羲之《兰亭集序》）+绘画（顾恺之）+石窟（云冈/龙门）+地理（郦道元《水经注》）+文学（陶渊明田园诗、民歌）"
+          ],
+          "weight": 2,
+          "required": true
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "分阶检索训练题库（S1-S4）",
+      "knowledge_card_id": "KC-history-三国两晋南北朝时期的科技与文化"
+    }
+  }
+]
