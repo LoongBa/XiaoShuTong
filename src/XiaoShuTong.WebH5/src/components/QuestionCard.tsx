@@ -23,7 +23,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
  * - O3 判断：对/错双键（swipe 手势后置，ADR-009 决策五）
  * - O5 填空：单行输入
  * - R4 知识卡片：纯展示（display_only，无提交按钮）
- * - O4 连线：后置（题库数据不足，展示 question-only）
+ * - O4 连线：双列点击配对（左选中高亮 → 右配对 → 序号徽标连线指示；接线既有状态机渲染）
  */
 export function QuestionCard({
   type,
@@ -71,6 +71,7 @@ export function QuestionCard({
   const isOSelect = type === 'O1' || type === 'O2';
   const isO3 = type === 'O3';
   const isR4 = type === 'R4';
+  const isO4 = type === 'O4';
   const showVoice = isRText || type === 'O5';
 
   // 题型切换时清空本地作答（V0.7.6：R3a/R3b 分段状态一并清空 + currentIndex 归零，Oracle C4）
@@ -130,10 +131,22 @@ export function QuestionCard({
   };
 
   const handleRightClick = (rightIdx: number) => {
-    if (selectedLeft === null) return; // 必须先选左列
+    // 未选中左列且该右项已配对 → 点击移除该对（既有状态机最小扩展，无并行逻辑）
+    if (selectedLeft === null) {
+      setPairMap((prev) => {
+        const has = Object.values(prev).some((v) => v === rightIdx);
+        if (!has) return prev;
+        const next = { ...prev };
+        for (const [left, right] of Object.entries(next)) {
+          if (right === rightIdx) next[Number(left)] = null;
+        }
+        return next;
+      });
+      return;
+    }
+    // 已选中左列：建立/替换配对（同一 right 不能配多个左列）
     setPairMap((prev) => {
       const next = { ...prev };
-      // 该左列已有配对 → 替换；否则建立新配对（同一 right 不能配多个左列）
       next[selectedLeft] = rightIdx;
       return next;
     });
@@ -151,6 +164,16 @@ export function QuestionCard({
       onSubmit(JSON.stringify({ pairs: Object.fromEntries(answered.map((p) => [p.left!, p.right!])) }));
     }
   };
+
+  // O4 连线派生（渲染接线）：已配对列表 + 序号徽标映射（左右同号 = 连线指示）+ 完成判定
+  const o4Pairs = parsed.pairs ?? [];
+  const o4Matched = Object.entries(pairMap)
+    .filter((entry): entry is [string, number] => typeof entry[1] === 'number')
+    .sort(([a], [b]) => Number(a) - Number(b))
+    .map(([left, right]) => ({ left: Number(left), right }));
+  const o4BadgeByLeft = new Map<number, number>(o4Matched.map((m, i) => [m.left, i + 1]));
+  const o4BadgeByRight = new Map<number, number>(o4Matched.map((m, i) => [m.right, i + 1]));
+  const o4AllMatched = o4Pairs.length > 0 && o4Matched.length === o4Pairs.length;
 
   const handleMicClick = () => {
     // 主路径：唤起系统输入法语音（focus+click）；桌面兜底 Web Speech API（R1/R2/O5 单输入路径）
@@ -360,6 +383,103 @@ export function QuestionCard({
               </div>
             </div>
           )}
+
+          {/* O4 连线：双列点击配对（左选中高亮 → 右配对 → 序号徽标连线指示，接线既有状态机） */}
+          {isO4 &&
+            (o4Pairs.length > 0 ? (
+              <div className="space-y-3">
+                <p className="text-xs text-muted-foreground">
+                  先点左侧诗句，再点右侧作者完成配对；已配对的左右项带相同序号
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  {/* 左列（按 pairs 顺序渲染题干项） */}
+                  <div className="space-y-2">
+                    {o4Pairs.map((p, leftIdx) => {
+                      const badge = o4BadgeByLeft.get(leftIdx);
+                      const selected = selectedLeft === leftIdx;
+                      return (
+                        <button
+                          key={`o4-l-${leftIdx}`}
+                          type="button"
+                          onClick={() => handleLeftClick(leftIdx)}
+                          disabled={submitting}
+                          className={cn(
+                            'w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors select-none active:scale-[0.98]',
+                            'bg-card text-foreground',
+                            badge !== undefined && 'border-primary/60 bg-primary/10',
+                            selected && 'border-primary ring-2 ring-primary/25 bg-primary/5',
+                          )}
+                          aria-pressed={selected}
+                        >
+                          <span className="flex items-center gap-2">
+                            {badge !== undefined ? (
+                              <span className="shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                                {badge}
+                              </span>
+                            ) : (
+                              <span className="shrink-0 w-5 h-5 rounded-full border border-border" />
+                            )}
+                            <span className="flex-1 leading-snug">{p.left}</span>
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {/* 右列（连线目标；mock/真实数据未提供乱序则按原序，保持简单） */}
+                  <div className="space-y-2">
+                    {o4Pairs.map((p, rightIdx) => {
+                      const badge = o4BadgeByRight.get(rightIdx);
+                      return (
+                        <button
+                          key={`o4-r-${rightIdx}`}
+                          type="button"
+                          onClick={() => handleRightClick(rightIdx)}
+                          disabled={submitting}
+                          className={cn(
+                            'w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors select-none active:scale-[0.98]',
+                            'bg-card text-foreground',
+                            badge !== undefined ? 'border-primary/60 bg-primary/10' : 'border-border',
+                            badge === undefined && selectedLeft !== null && 'border-primary/40',
+                          )}
+                          aria-pressed={badge !== undefined}
+                        >
+                          <span className="flex items-center gap-2">
+                            {badge !== undefined ? (
+                              <span className="shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                                {badge}
+                              </span>
+                            ) : (
+                              <span className="shrink-0 w-5 h-5 rounded-full border border-border" />
+                            )}
+                            <span className="flex-1 leading-snug">{p.right}</span>
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* 配对进度 + 提交（完整配对才可提交；复用既有 submitPairs 契约） */}
+                <div className="space-y-2 pt-1">
+                  <p className="text-xs text-muted-foreground">
+                    {o4AllMatched
+                      ? '已完成全部配对，可以提交'
+                      : `已配对 ${o4Matched.length} / ${o4Pairs.length}${selectedLeft !== null ? ' · 已选中左侧，请点右侧' : ''}`}
+                  </p>
+                  <Button
+                    type="button"
+                    onClick={submitPairs}
+                    disabled={submitting || !o4AllMatched}
+                    className="w-full h-12 text-base"
+                    size="lg"
+                  >
+                    {submitting ? '判题中…' : '提交'}
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <p className="text-xs text-muted-foreground">此题为连线题，暂无可配对内容</p>
+            ))}
         </div>
       )}
 

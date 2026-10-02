@@ -258,5 +258,140 @@
       "source": "统编《中国历史》七年级示例",
       "knowledge_card_id": "KC-his-keji"
     }
+  },
+
+  {
+    "id": "Q-his-o4-0002",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-朝代更迭",
+    "knowledge_points": [
+      "夏商周王朝建立",
+      "历史人物与朝代"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列历史人物与其建立的王朝连线。",
+      "pairs": [
+        {
+          "left": "禹",
+          "right": "夏朝"
+        },
+        {
+          "left": "商汤",
+          "right": "商朝"
+        },
+        {
+          "left": "周武王（姬发）",
+          "right": "西周"
+        },
+        {
+          "left": "嬴政（秦始皇）",
+          "right": "秦朝"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 2,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-dynasty-order"
+    }
+  },
+
+  {
+    "id": "Q-his-o4-0003",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-明清科技与文化",
+    "knowledge_points": [
+      "明清科技巨著",
+      "李时珍",
+      "徐光启",
+      "宋应星",
+      "徐霞客"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列明清时期的科技巨著与其作者连线。",
+      "pairs": [
+        {
+          "left": "李时珍",
+          "right": "著《本草纲目》"
+        },
+        {
+          "left": "徐光启",
+          "right": "著《农政全书》"
+        },
+        {
+          "left": "宋应星",
+          "right": "著《天工开物》"
+        },
+        {
+          "left": "徐霞客",
+          "right": "著《徐霞客游记》"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 3,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-keji"
+    }
+  },
+
+  {
+    "id": "Q-his-o4-0004",
+    "bank_id": "history-7to9-2024r",
+    "subject": "history",
+    "topic": "七年级-古代科技与医学",
+    "knowledge_points": [
+      "古代科技",
+      "华佗",
+      "孙思邈",
+      "沈括",
+      "郭守敬"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列古代科技成就与其人物连线。",
+      "pairs": [
+        {
+          "left": "华佗",
+          "right": "发明麻沸散、创编五禽戏"
+        },
+        {
+          "left": "孙思邈",
+          "right": "著《千金方》"
+        },
+        {
+          "left": "沈括",
+          "right": "著《梦溪笔谈》"
+        },
+        {
+          "left": "郭守敬",
+          "right": "编制《授时历》"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 3,
+      "source": "统编《中国历史》七年级上册示例",
+      "knowledge_card_id": "KC-his-keji"
+    }
   }
 ]

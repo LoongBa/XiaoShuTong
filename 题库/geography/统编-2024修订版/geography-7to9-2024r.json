@@ -258,5 +258,131 @@
       "source": "人教版《地理》八年级上册示例",
       "knowledge_card_id": "KC-geo-provinces"
     }
+  },
+
+  {
+    "id": "Q-geo-o4-0002",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-省级行政区",
+    "knowledge_points": [
+      "省级行政区简称"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列省级行政区与其简称连线。",
+      "pairs": [
+        {
+          "left": "河南省",
+          "right": "豫"
+        },
+        {
+          "left": "河北省",
+          "right": "冀"
+        },
+        {
+          "left": "湖南省",
+          "right": "湘"
+        },
+        {
+          "left": "江西省",
+          "right": "赣"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-provinces"
+    }
+  },
+
+  {
+    "id": "Q-geo-o4-0003",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-地形",
+    "knowledge_points": [
+      "四大高原特征"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列四大高原与其显著地形特征连线。",
+      "pairs": [
+        {
+          "left": "青藏高原",
+          "right": "世界屋脊"
+        },
+        {
+          "left": "内蒙古高原",
+          "right": "地势平坦开阔"
+        },
+        {
+          "left": "黄土高原",
+          "right": "沟壑纵横（千沟万壑）"
+        },
+        {
+          "left": "云贵高原",
+          "right": "喀斯特地貌广布"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-qingzang"
+    }
+  },
+
+  {
+    "id": "Q-geo-o4-0004",
+    "bank_id": "geography-7to9-2024r",
+    "subject": "geography",
+    "topic": "八年级-地形",
+    "knowledge_points": [
+      "四大盆地特征"
+    ],
+    "type": "O4",
+    "purpose_tags": [
+      "assess",
+      "play"
+    ],
+    "content": {
+      "question": "将下列四大盆地与其特征连线。",
+      "pairs": [
+        {
+          "left": "塔里木盆地",
+          "right": "面积最大"
+        },
+        {
+          "left": "准噶尔盆地",
+          "right": "纬度最高"
+        },
+        {
+          "left": "柴达木盆地",
+          "right": "海拔高（聚宝盆）"
+        },
+        {
+          "left": "四川盆地",
+          "right": "天府之国"
+        }
+      ],
+      "tolerance": "exact"
+    },
+    "meta": {
+      "difficulty": 1,
+      "source": "人教版《地理》八年级上册示例",
+      "knowledge_card_id": "KC-geo-xinjiang"
+    }
   }
 ]

@@ -203,6 +203,50 @@ public class GetNextQuestionServiceTests(XiaoShuTongDomainTestFixture fixture, I
         Assert.Equal(string.Empty, result.QuestionId); // 空结果 = 会话结束信号
     }
 
+    /// <summary>BR-19：O4 连线题下发 Content 含 pairs（展示侧数据，与 question 同层，前端连线展示所需）</summary>
+    [Fact]
+    public async Task ExecuteAsync_O4Question_ContentIncludesPairs()
+    {
+        var userId = SetUser(35008);
+        await SeedBankAsync(ownerId: null, BankPrivacy.Public, "bank-next-35008");
+        var ds = User.Use<QuestionsDataService>();
+        await ds.EntityCreateAsync(new Questions
+        {
+            UId = UidGenerator.NewId(),
+            QuestionId = "Q-35008o4",
+            BankId = "bank-next-35008",
+            ChapterId = "7a",
+            QType = QuestionType.O4,
+            Content = """
+                {"question":"将下列历史人物与其主要成就连线。","pairs":[
+                  {"left":"蔡伦","right":"改进造纸术"},
+                  {"left":"张仲景","right":"著《伤寒杂病论》"}],
+                  "correct_option":"答案侧字段：不应下发"}
+                """,
+            Keywords = "[{\"aliases\":[\"改进造纸术\"]}]",   // 关键词为答案侧，不应下发
+            KnowledgePoints = ["历史人物与成就连线"],
+            Difficulty = 0,
+            Status = QuestionStatus.Active,
+        }, TestContext.Current.CancellationToken);
+        var session = await SeedSessionAsync(userId);
+        var svc = User.Use<GetNextQuestionService>();
+
+        var result = await svc.ExecuteAsync(new GetNextQuestionReqDto
+        {
+            SessionId = session.UId,
+            BankId = "bank-next-35008",
+        }, TestContext.Current.CancellationToken);
+
+        Assert.True(result.Success);
+        Assert.Equal("Q-35008o4", result.QuestionId);
+        Assert.Equal("O4", result.Type);
+        // BR-19 + O4 修复：pairs 必须保留（展示侧，与 options 同性质）；答案侧字段（correct_option）剔除
+        Assert.Contains("pairs", result.Content);
+        Assert.Contains("蔡伦", result.Content);
+        Assert.DoesNotContain("correct_option", result.Content);
+        Assert.DoesNotContain("答案侧字段", result.Content);
+    }
+
     /// <summary>
     /// 学习-BR-04 混合比：14 复习 + 6 新题，逐题取 → 已答序列复习:新题趋近 7:3 且无连续 ≥4 同池题
     /// （ADR-009 决策一 + Oracle 评审闭环：按已答复习占比动态池选择，非窗口交错）

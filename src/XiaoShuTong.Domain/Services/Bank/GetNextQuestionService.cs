@@ -218,7 +218,8 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
     /// <summary>
     /// 题库-BR-19 防爬：按题型白名单保留展示字段、剔除答案侧字段（answer/keywords/correct_option）
     /// R1/R2/R3a/R3b → question+cardId；R4 → question+answer+cardId（answer=卡片正文展示载荷特例）；
-    /// O1/O2/O3 → question+options+cardId；O5/O4 → question；非法 JSON 原样透传（容错）
+    /// O1/O2/O3 → question+options+cardId；O4 → question+pairs+cardId（pairs 为展示侧连线项，与 options 同性质）；
+    /// O5 → question；非法 JSON 原样透传（容错）
     /// </summary>
     private static string StripAnswerFromContent(string content, QuestionType qType)
     {
@@ -234,7 +235,8 @@ internal class GetNextQuestionService(DomainUser<XiaoShuTongUserInfo> user)
             {
                 QuestionType.R4 => new[] { "question", "answer", "cardId" },
                 QuestionType.O1 or QuestionType.O2 or QuestionType.O3 => new[] { "question", "options", "cardId" },
-                QuestionType.O5 or QuestionType.O4 => new[] { "question" },
+                QuestionType.O4 => new[] { "question", "pairs", "cardId" },
+                QuestionType.O5 => new[] { "question" },
                 _ => new[] { "question", "cardId" },   // R1/R2/R3a/R3b 及未知题型默认
             };
 
