@@ -79,7 +79,7 @@ DomainException.ErrorCodes.AuthRequired => new DomainException(msg, DomainExcept
 - `DomainClientUser.cs` L322 / `RestClient.cs` L185 / 事件分支 `inner is AuthenticationException` → 统一走 `ex.IsAuthRequiredError()` 扩展判定（不直接 `is` 判型）
 
 **优点**：跨平台一致（WASM/桌面/服务器同语义），消除对 System.Net.Security 的隐式依赖；`DomainException` 在 TKWF.Core，WASM 已加载（无 stub）
-**注意**：AuthFailed → UserLogonException 是否也在 WASM stub 需同步核查（`System.Security.Authentication` 程序集缺失清单佐证，大概率同受影响）
+**注意**：AuthFailed → UserLogonException 是否也在 WASM stub 需同步核查（`System.Security.Authentication` 程序集缺失清单佐证，大概率同受影响）——**已核查闭环（2026-10-02）**：`UserLogonException` 定义于 `TKWF.Core`（`_Framework\Core\UserLogonException.cs`，编译后 `TKWF.Core.dll` 反射实证 `TKW.Framework.Domain.Exceptions.UserLogonException`），**WASM 已加载 `TKWF.Core` 程序集（无 stub）**，故 **AUTH_FAILED 分支不受 BUG007 影响，无需一并修复**；仅 `AuthenticationException`（AUTH_REQUIRED 分支，TypeForward 至 System.Net.Security stub）受影响
 
 ### 方案 2：条件编译 / 运行时判定（侵入小但两套路径，不推荐长期）
 
