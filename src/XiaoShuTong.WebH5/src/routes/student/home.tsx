@@ -92,7 +92,10 @@ function StudentHomePage() {
             questionIds: item.questionIds || [],
             completedQuestions: Math.round((item.progress ?? 0) * 100),
             deadline: item.deadlineAt || new Date().toISOString(),
-            status: item.status?.toLowerCase() || 'pending',
+            // V0.8.1 修复：服务端返回 PascalCase（InProgress/Overdue）→ lowercase 得 inprogress/overdue，
+            // 与下方过滤条件 snake_case（in_progress）不匹配 → InProgress/Overdue 任务被错误过滤（走查实证：任务卡消失）
+            // 显式映射：InProgress→in_progress（Overdue 保持 overdue 即可，Pending/Completed 拼写天然一致）
+            status: item.status?.toLowerCase() === 'inprogress' ? 'in_progress' : (item.status?.toLowerCase() || 'pending'),
             createdAt: new Date().toISOString(),
             source: 'teacher'
           })));
