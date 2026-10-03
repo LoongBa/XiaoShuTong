@@ -140,7 +140,20 @@ function TaskDetailPage() {
           <>
             {/* 任务信息 */}
             <Card className="p-4">
-              <h2 className="font-semibold text-lg mb-2">{task.title}</h2>
+              <div className="flex items-start justify-between gap-2">
+                <h2 className="font-semibold text-lg mb-2">{task.title}</h2>
+                {/* V0.8.1：任务编辑入口（UpdateTaskService 消费端接入） */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="shrink-0"
+                  onClick={() =>
+                    navigate({ to: '/teacher/tasks/edit', search: { taskUid } })
+                  }
+                >
+                  编辑任务
+                </Button>
+              </div>
               {task.description && (
                 <p className="text-sm text-muted-foreground mb-2">{task.description}</p>
               )}

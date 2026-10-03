@@ -130,6 +130,8 @@ type Query {
     @cost(weight: "10")
   listTasks_Execute(request: ListTasksReqDtoInput): ListTasksResDto
     @cost(weight: "10")
+  updateTask_Execute(request: UpdateTaskReqDtoInput): UpdateTaskResDto
+    @cost(weight: "10")
   pkPlayerStatsView(
     "Returns the first _n_ elements from the list."
     first: Int
@@ -1776,6 +1778,22 @@ type UpdateAiModelConfigResDto {
   uId: String!
 }
 
+"任务编辑响应 DTO"
+type UpdateTaskResDto {
+  "是否成功"
+  success: Boolean!
+  "错误码（失败时）"
+  errorCode: String
+  "任务外部键"
+  taskUid: String!
+  "本次是否发生题集变更（触发进度重算）"
+  questionSetChanged: Boolean!
+  "进度重算的分配数（题集变更时）"
+  recalculatedAssignments: Int!
+  "更新后题数"
+  questionCount: Int!
+}
+
 "相对进步 DTO"
 type VsLastWeekDto {
   "多背 N 篇（本周−上周）"
@@ -2520,6 +2538,20 @@ input UpdateAiModelConfigReqDtoInput {
   timeoutSeconds: Int
   "备注（null = 不改；空串 = 清空）"
   remark: String
+}
+
+"任务编辑请求 DTO（null 字段 = 不修改）"
+input UpdateTaskReqDtoInput {
+  "任务外部键"
+  taskUid: String!
+  "新标题（null = 不修改）"
+  title: String
+  "新说明（null = 不修改；空串 = 清空）"
+  description: String
+  "新截止时间（null = 不修改）"
+  deadlineAt: DateTime
+  "新题集（null = 不修改；非空数组 = 整体替换）"
+  questionIds: [String!]
 }
 
 "AI 模型供应商"

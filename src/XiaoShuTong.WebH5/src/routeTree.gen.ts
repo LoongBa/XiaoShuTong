@@ -27,6 +27,7 @@ import { Route as StudentStudyTaskRouteImport } from './routes/student/study/tas
 import { Route as StudentUserProfileRouteImport } from './routes/student/user/profile'
 import { Route as TeacherTasksCreateRouteImport } from './routes/teacher/tasks/create'
 import { Route as TeacherTasksDetailRouteImport } from './routes/teacher/tasks/detail'
+import { Route as TeacherTasksEditRouteImport } from './routes/teacher/tasks/edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -118,6 +119,11 @@ const TeacherTasksDetailRoute = TeacherTasksDetailRouteImport.update({
   path: '/teacher/tasks/detail',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TeacherTasksEditRoute = TeacherTasksEditRouteImport.update({
+  id: '/teacher/tasks/edit',
+  path: '/teacher/tasks/edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -138,6 +144,7 @@ export interface FileRoutesByFullPath {
   '/student/user/profile': typeof StudentUserProfileRoute
   '/teacher/tasks/create': typeof TeacherTasksCreateRoute
   '/teacher/tasks/detail': typeof TeacherTasksDetailRoute
+  '/teacher/tasks/edit': typeof TeacherTasksEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -158,6 +165,7 @@ export interface FileRoutesByTo {
   '/student/user/profile': typeof StudentUserProfileRoute
   '/teacher/tasks/create': typeof TeacherTasksCreateRoute
   '/teacher/tasks/detail': typeof TeacherTasksDetailRoute
+  '/teacher/tasks/edit': typeof TeacherTasksEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -179,6 +187,7 @@ export interface FileRoutesById {
   '/student/user/profile': typeof StudentUserProfileRoute
   '/teacher/tasks/create': typeof TeacherTasksCreateRoute
   '/teacher/tasks/detail': typeof TeacherTasksDetailRoute
+  '/teacher/tasks/edit': typeof TeacherTasksEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -201,6 +210,7 @@ export interface FileRouteTypes {
     | '/student/user/profile'
     | '/teacher/tasks/create'
     | '/teacher/tasks/detail'
+    | '/teacher/tasks/edit'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -221,6 +231,7 @@ export interface FileRouteTypes {
     | '/student/user/profile'
     | '/teacher/tasks/create'
     | '/teacher/tasks/detail'
+    | '/teacher/tasks/edit'
   id:
     | '__root__'
     | '/'
@@ -241,6 +252,7 @@ export interface FileRouteTypes {
     | '/student/user/profile'
     | '/teacher/tasks/create'
     | '/teacher/tasks/detail'
+    | '/teacher/tasks/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -262,6 +274,7 @@ export interface RootRouteChildren {
   StudentUserProfileRoute: typeof StudentUserProfileRoute
   TeacherTasksCreateRoute: typeof TeacherTasksCreateRoute
   TeacherTasksDetailRoute: typeof TeacherTasksDetailRoute
+  TeacherTasksEditRoute: typeof TeacherTasksEditRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -392,6 +405,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TeacherTasksDetailRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/teacher/tasks/edit': {
+      id: '/teacher/tasks/edit'
+      path: '/teacher/tasks/edit'
+      fullPath: '/teacher/tasks/edit'
+      preLoaderRoute: typeof TeacherTasksEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -414,6 +434,7 @@ const rootRouteChildren: RootRouteChildren = {
   StudentUserProfileRoute: StudentUserProfileRoute,
   TeacherTasksCreateRoute: TeacherTasksCreateRoute,
   TeacherTasksDetailRoute: TeacherTasksDetailRoute,
+  TeacherTasksEditRoute: TeacherTasksEditRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

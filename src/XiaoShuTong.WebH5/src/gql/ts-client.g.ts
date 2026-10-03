@@ -70,6 +70,7 @@ export const Query = {
   taskDetail_Execute               : { field: 'taskDetail_Execute', type: 'query' } as const,
   listMyTasks_Execute              : { field: 'listMyTasks_Execute', type: 'query' } as const,
   listTasks_Execute                : { field: 'listTasks_Execute', type: 'query' } as const,
+  updateTask_Execute               : { field: 'updateTask_Execute', type: 'query' } as const,
   pkPlayerStatsView                : { field: 'pkPlayerStatsView', type: 'query' } as const,
   PkPlayerStatsView_aggregate      : { field: 'PkPlayerStatsView_aggregate', type: 'query' } as const,
 } as const;
@@ -163,6 +164,7 @@ export const operationSelection: Record<string, string> = {
   'submitPkAnswer_Execute': 'success errorCode isCorrect result confidence score',
   'taskDetail_Execute': 'success errorCode task { isFromPersistentSource id uId ownerId groupId bankId title description questionIds questionCount scenario sessionType allowRedo startedAt deadlineAt status createTime updateTime } members { isFromPersistentSource id uId taskId userId status progress sessionId assignedAt startedAt completedAt createTime updateTime }',
   'updateModel': 'success errorCode uId',
+  'updateTask_Execute': 'success errorCode taskUid questionSetChanged recalculatedAssignments questionCount',
   'weaknessReport_Execute': 'success errorCode weakPoints { subject knowledgePoint accuracy stateText chapterId topic questionIds }',
   'wrongQuestions_Execute': 'success errorCode items { knowledgePoint summary answer isFromPersistentSource id uId userId questionId bankId subject wrongCount lastWrongAt mastered createTime updateTime } total',
 } as const;
@@ -238,6 +240,7 @@ export const operationVariableTypes: Record<string, Record<string, string>> = {
   'submitPkAnswer_Execute': { 'request': 'SubmitPkAnswerReqDtoInput' },
   'taskDetail_Execute': { 'request': 'GetTaskDetailReqDtoInput' },
   'updateModel': { 'request': 'UpdateAiModelConfigReqDtoInput' },
+  'updateTask_Execute': { 'request': 'UpdateTaskReqDtoInput' },
   'weaknessReport_Execute': { 'request': 'GetWeaknessReportReqDtoInput' },
   'wrongQuestions_Execute': { 'request': 'GetWrongQuestionsReqDtoInput' },
 } as const;
@@ -1080,6 +1083,23 @@ export interface ListTasksReqDtoInput {
   pageSize: number;
 }
 
+export interface UpdateTaskResDto {
+  success: boolean;
+  errorCode: string | null;
+  taskUid: string;
+  questionSetChanged: boolean;
+  recalculatedAssignments: number;
+  questionCount: number;
+}
+
+export interface UpdateTaskReqDtoInput {
+  taskUid: string;
+  title: string | null;
+  description: string | null;
+  deadlineAt: string | null;
+  questionIds: Array<string> | null;
+}
+
 export type PkPlayerStatsViewConnection = Connection<PkPlayerStatsView, PkPlayerStatsViewEdge>;
 
 export interface PkPlayerStatsViewFilterInput {
@@ -1836,6 +1856,10 @@ export interface ListTasks_ExecuteArgs {
   request?: ListTasksReqDtoInput;
 }
 
+export interface UpdateTask_ExecuteArgs {
+  request?: UpdateTaskReqDtoInput;
+}
+
 export interface PkPlayerStatsViewArgs {
   first?: number;
   after?: string;
@@ -2138,6 +2162,7 @@ export interface Subscriptions_ExecuteService {
 
 export interface Task_ExecuteService {
   createTask_Execute(args?: CreateTask_ExecuteArgs): ChainablePromise<CreateTaskResDto>;
+  updateTask_Execute(args?: UpdateTask_ExecuteArgs): ChainablePromise<UpdateTaskResDto>;
 }
 
 export interface TaskDetail_ExecuteService {

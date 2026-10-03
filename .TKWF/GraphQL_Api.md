@@ -1,6 +1,6 @@
 # XiaoShuTong WebH5 API 契约 — 前端/Agent 消费版
 
-> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-10-01 05:16:50
+> 自动生成（@tkwf/tsclient v1.0.6）｜生成时间：2026-10-03 07:07:49
 > 源：schema.graphql（禁止手改；缺失/过时报告补齐）
 
 ## 一、操作概览（全部域）
@@ -25,9 +25,9 @@
 | pkMatch_Execute | 1 | 0 | 1 | 0 |
 | studySession_Execute | 1 | 0 | 1 | 0 |
 | subscriptions_Execute | 1 | 0 | 1 | 0 |
-| task_Execute | 1 | 0 | 1 | 0 |
+| task_Execute | 2 | 0 | 2 | 0 |
 | tasks_Execute | 1 | 0 | 1 | 0 |
-| **合计** | **67** | **8** | **75** | **0** |
+| **合计** | **68** | **8** | **76** | **0** |
 
 ## 二、按域操作清单
 
@@ -469,6 +469,13 @@
 | | ⤷ `errorCode`: string | null | | | | | |
 | | ⤷ `taskUid`: string | | | | | |
 | | ⤷ `assignedCount`: number | | | | | |
+| task_Execute | `updateTask_Execute` | Query |  | { request?: UpdateTaskReqDtoInput | null } | `UpdateTaskResDto` | ✅ |
+| | ⤷ `success`: boolean | | | | | |
+| | ⤷ `errorCode`: string | null | | | | | |
+| | ⤷ `taskUid`: string | | | | | |
+| | ⤷ `questionSetChanged`: boolean | | | | | |
+| | ⤷ `recalculatedAssignments`: number | | | | | |
+| | ⤷ `questionCount`: number | | | | | |
 | tasks_Execute | `listTasks_Execute` | Query |  | { request?: ListTasksReqDtoInput | null } | `ListTasksResDto` | ✅ |
 | | ⤷ `success`: boolean | | | | | |
 | | ⤷ `errorCode`: string | null | | | | | |
@@ -551,6 +558,7 @@
 | `SubmitJudgmentFeedbackResDto` | success, errorCode, feedbackUid, status |
 | `SubmitPkAnswerResDto` | success, errorCode, isCorrect, result, confidence, score |
 | `UpdateAiModelConfigResDto` | success, errorCode, uId |
+| `UpdateTaskResDto` | success, errorCode, taskUid, questionSetChanged, recalculatedAssignments, questionCount |
 
 ## 四、暴露状态与缺口
 
@@ -567,4 +575,4 @@
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| v1.0.6 | 10/01/2026 | 自动生成初版 |
+| v1.0.6 | 10/03/2026 | 自动生成初版 |

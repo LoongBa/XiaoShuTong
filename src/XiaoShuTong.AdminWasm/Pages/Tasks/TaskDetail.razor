@@ -47,6 +47,12 @@
                         @(_TaskDetail.Task?.Description ?? "无")
                     </DescriptionsItem>
                 </Descriptions>
+                @* V0.8.1：任务编辑入口（Oracle M5：独立工具行——Card 无 Title 时 Extra 不可用） *@
+                <div style="text-align: right; margin-top: 8px;">
+                    <Button Type="@ButtonType.Link" Size="@ButtonSize.Small" OnClick="@ShowEditModalAsync">
+                        @("编辑任务")
+                    </Button>
+                </div>
             </Card>
 
             @* ─ 成员执行状态列表 ─ *@
@@ -97,3 +103,61 @@
 
     </ChildContent>
 </PageContainer>
+
+@* ─ 编辑任务 Modal（V0.8.1：UpdateTaskService 消费端接入，AiModels 蓝本） ─ *@
+<Modal Title="@("编辑任务")"
+       Visible="@_EditVisible"
+       OnOk="@OnEditOkAsync"
+       OnCancel="@OnEditCancel"
+       ConfirmLoading="@_Editing"
+       OkText="@("保存")"
+       CancelText="@("取消")">
+    <Form Model="@_EditForm" Layout="@FormLayout.Vertical">
+        <FormItem Label="@("任务名称")">
+            <Input @bind-Value="@_EditForm.Title" Placeholder="@("任务名称")" MaxLength="128" />
+        </FormItem>
+        <FormItem Label="@("任务说明")">
+            <TextArea @bind-Value="@_EditForm.Description" Placeholder="@("可选，补充说明")" Rows="3" />
+        </FormItem>
+        <FormItem Label="@("截止时间")">
+            <DatePicker @bind-Value="@_EditForm.DeadlineAt" Placeholder="@("请选择截止时间（不选=保持原值）")" Style="width: 100%;" />
+        </FormItem>
+        @* 题集编辑：题库 Disabled（BR-26 关联 BankId 不可变更，Oracle M3）+ CheckboxGroup 题目多选（TaskCreate 模式） *@
+        <FormItem Label="@("题库（关联题库不可变更）")">
+            <Select TItemValue="string" TItem="string" Style="width: 100%;"
+                    Value="@_EditSelectedBankId" Disabled>
+                @if (!string.IsNullOrEmpty(_EditSelectedBankId))
+                {
+                    <SelectOption Value="@_EditSelectedBankId" TItemValue="string" TItem="string"
+                                  Label="@(_EditBankName ?? _EditSelectedBankId)" />
+                }
+            </Select>
+        </FormItem>
+        <FormItem Label="@("题目集（变更后将重算非完成成员进度）")">
+            @if (_LoadingEditBankDetail)
+            {
+                <Spin Tip="@("加载题目列表...")" />
+            }
+            else if (_EditAllQuestionIds.Count == 0)
+            {
+                <span style="color: #999; font-size: 12px;">@("该题库暂无题目或任务为自由编排（无题集）")</span>
+            }
+            else
+            {
+                <CheckboxGroup TValue="string" Value="@_EditSelectedQuestionIds" OnChange="@OnEditQuestionsSelectionChanged">
+                    <div style="max-height: 260px; overflow-y: auto; border: 1px solid #f0f0f0; border-radius: 4px; padding: 8px;">
+                        @foreach (var question in _EditAllQuestionIds)
+                        {
+                            <div style="margin-bottom: 4px;">
+                                <Checkbox Label="@question">@question</Checkbox>
+                            </div>
+                        }
+                    </div>
+                </CheckboxGroup>
+                <div style="margin-top: 4px; color: #666; font-size: 12px;">
+                    @($"已选 {_EditSelectedQuestionIds.Length} 题")
+                </div>
+            }
+        </FormItem>
+    </Form>
+</Modal>
