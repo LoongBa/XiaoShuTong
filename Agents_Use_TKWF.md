@@ -140,7 +140,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 
 ### 6.2 Skill 使用总纲
 
-- 领域开发任务的 **Skill 路由表（建议/强制合一）见 §7**（含 tkwf-tsclient）。使用对应 Skill 确保框架的代码生成、守卫规则、命名约定等 TKWF 特有机制正确执行，不经过 Skill 直接编写会导致与框架不兼容。
+- 领域开发任务的 **Skill 路由表（建议/强制合一）见 §7**（含 tkwf-tsclient / tkwf-use-extension）。使用对应 Skill 确保框架的代码生成、守卫规则、命名约定等 TKWF 特有机制正确执行，不经过 Skill 直接编写会导致与框架不兼容。
 
 ### 6.3 代码纪律
 
@@ -185,6 +185,7 @@ XiaoShuTong 基于 **TKW.Framework 框架**（简称 TKWF）。
 | 设计文档（需求→方案）          | `tkwf-design`       | `{Domain}=域`                                 | 设计阶段禁止写代码                               |
 | 查询/统计梳理（VEntity 设计）  | `tkwf-ventity-design` | `{Domain}=域` `{切片}=切片名`（触发门槛：含跨表聚合/报表/跨切片消费；UI 定稿后、DS 场景层前） | 设计阶段纯文档产出，不写 ViewSql 实现        |
 | 消费端 TS 前端 RPC 调用（React/SPA） | `tkwf-tsclient`   | `{App}=消费项目名` `{Domain}=业务域名`             | 禁止手写 gql 字符串、禁止手改生成文件（\*.g.ts） |
+| 接入/启用/使用扩展（引用→白名单→Web 装配→`User.Use` 门面） | `tkwf-use-extension` | `{Ext}=扩展名` | 禁止绕过白名单/门面 AOP 路径 |
 
 **前置检查**：接到领域开发任务时，第一步先加载并阅读对应 Skill 全文，按其规范执行，不得凭记忆或通用做法替代。
 
